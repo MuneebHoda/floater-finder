@@ -1,0 +1,1 @@
+slide_id,patient_id,project,tissue_source_site,diagnostic_slide,diagnostic_provenance,organ,label,split,slide_path,report_path,report_provenance,tile_manifest,coordinate_units,tile_step_x,tile_step_y,microns_per_unit,magnification,embedding_path

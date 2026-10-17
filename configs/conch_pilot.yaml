@@ -1,0 +1,7 @@
+# Populate only after the one-pair CONCH smoke experiment is validated.
+category: pilot
+split: eval
+text_embeddings: null
+pairs: []
+contamination_percent: [0, 0.5, 1, 2, 5, 10]
+seeds: [0, 1, 2]

@@ -1,0 +1,20 @@
+{
+  "platform": "Darwin",
+  "macos": "26.6.2",
+  "python": "3.11.15",
+  "python_executable": "/Users/muneebhoda/Documents/Masters - Fall 2026/Ashby Hackathon/.venv/bin/python",
+  "repository": "/Users/muneebhoda/Documents/Masters - Fall 2026/Ashby Hackathon",
+  "packages": {
+    "numpy": "2.0.2",
+    "pandas": null,
+    "torch": null,
+    "Pillow": "11.3.0",
+    "pytest": "8.3.5",
+    "PyYAML": "6.0.2",
+    "conch": null,
+    "trident": null
+  },
+  "conch_cache_directories": [],
+  "cache_note": "Directory names only, at most 200 entries; no weights or credential files read.",
+  "ssh_note": "No connection attempted by inspect; this session's single SSH check is recorded separately."
+}

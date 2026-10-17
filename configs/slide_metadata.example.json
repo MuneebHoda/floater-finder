@@ -1,0 +1,14 @@
+{
+  "slide_id": null,
+  "patient_id": null,
+  "project": null,
+  "organ": null,
+  "label": null,
+  "split": null,
+  "coordinate_units": null,
+  "tile_step": null,
+  "microns_per_unit": null,
+  "magnification": null,
+  "coordinate_reference": null,
+  "report_provenance": null
+}

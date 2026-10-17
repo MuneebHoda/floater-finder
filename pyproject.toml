@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools==75.8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "floater-finder"
+version = "0.1.0"
+description = "Reproducible embedding-level tissue contamination experiments"
+requires-python = ">=3.11,<3.13"
+dependencies = ["numpy==2.0.2", "PyYAML==6.0.2", "Pillow==11.3.0"]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.5"]
+plots = ["matplotlib==3.9.4"]
+
+[project.scripts]
+floater-finder = "floater_finder.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
