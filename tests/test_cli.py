@@ -58,10 +58,12 @@ def test_cli_inspect_and_empty_inventory(tmp_path):
     assert json.loads((tmp_path / "inventory/missing_data.json").read_text())["candidate_count"] == 0
 
 
-def test_real_template_and_fixture_plot_are_explicitly_blocked(tmp_path):
+@pytest.mark.parametrize("template", ["configs/conch_smoke.yaml", "configs/pathgen_clip_smoke.yaml"])
+def test_real_templates_and_fixture_plot_are_explicitly_blocked(tmp_path, template):
+    real_output = tmp_path / "real"
     with pytest.raises(SystemExit) as error:
-        main(["stress", "--config", "configs/conch_smoke.yaml", "--output", str(tmp_path / "real")])
-    assert error.value.code == 2 and not (tmp_path / "real").exists()
+        main(["stress", "--config", template, "--output", str(real_output)])
+    assert error.value.code == 2 and not real_output.exists()
     fixtures = tmp_path / "fixture"
     main(["fixture", "--output", str(fixtures)])
     main(["stress", "--config", str(fixtures / "run.yaml"), "--output", str(tmp_path / "run")])

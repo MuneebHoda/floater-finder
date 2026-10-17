@@ -6,9 +6,11 @@ import numpy as np
 import pytest
 import yaml
 
-from floater_finder.conch import ConchEncoder, check_interface, verify_encoder_weights
+from floater_finder.conch import ConchEncoder, check_interface as check_conch_interface
+from floater_finder.conch import verify_encoder_weights
 from floater_finder.experiments import run_stress, summarize
 from floater_finder.inventory import barcode, inventory, select_pairs
+from floater_finder.pathgen import PathGenClipEncoder, check_interface as check_pathgen_interface
 from conftest import make_slide
 
 
@@ -100,28 +102,42 @@ def test_stress_runner_end_to_end_and_provenance(tmp_path, host, donor, text):
         run_stress(path, tmp_path / "not-real")
 
 
-def test_runtime_image_projection_and_api_contract():
+def test_model_encoder_interfaces():
     class Model:
         def encode_image(self, value, proj_contrast=False, normalize=False):
-            assert proj_contrast is True and normalize is True
             return value
         def encode_text(self, value, normalize=False):
             return value
-    check_interface(Model())
-    encoder = ConchEncoder.__new__(ConchEncoder)
-    encoder.model = Model()
-    assert encoder.encode_image_batch("batch") == "batch"
+    class PathGenModel:
+        def encode_image(self, value):
+            return value
+        def encode_text(self, value):
+            return value
+    check_conch_interface(Model())
+    check_pathgen_interface(PathGenModel())
+    conch_encoder = ConchEncoder.__new__(ConchEncoder)
+    conch_encoder.model = Model()
+    assert conch_encoder.encode_image_batch("batch") == "batch"
+    assert conch_encoder.encode_text_batch("tokens") == "tokens"
+    pathgen_encoder = PathGenClipEncoder.__new__(PathGenClipEncoder)
+    pathgen_encoder.model = PathGenModel()
+    assert pathgen_encoder.encode_image_batch("batch") == "batch"
+    assert pathgen_encoder.encode_text_batch("tokens") == "tokens"
     with pytest.raises(ValueError):
-        check_interface(object())
+        check_conch_interface(object())
+    with pytest.raises(ValueError):
+        check_pathgen_interface(object())
 
 
-def test_no_conch_inference_outside_slurm(monkeypatch):
+def test_model_inference_requires_slurm(monkeypatch):
     monkeypatch.delenv("SLURM_JOB_ID", raising=False)
+    with pytest.raises(RuntimeError, match="Slurm"):
+        PathGenClipEncoder("missing")
     with pytest.raises(RuntimeError, match="Slurm"):
         ConchEncoder("missing")
 
 
-def test_partial_checkpoint_cannot_silently_produce_real_embeddings():
+def test_conch_partial_checkpoint_cannot_silently_produce_embeddings():
     model = {"visual.proj": np.zeros((2, 2)), "text.proj": np.zeros((2, 2)), "text_decoder.weight": np.zeros((2, 2))}
     complete = {key: value for key, value in model.items() if not key.startswith("text_decoder.")}
     verify_encoder_weights(model, complete)

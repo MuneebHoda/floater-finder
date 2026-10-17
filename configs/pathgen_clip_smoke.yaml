@@ -1,0 +1,18 @@
+# Real-data template. Null paths must be filled from verified artifacts; no downloads/jobs implied.
+category: smoke
+split: eval
+text_embeddings: null
+pairs: []
+contamination_percent: [0, 0.5, 1, 2, 5, 10]
+seeds: [0]
+prompts:
+  prostate:
+    - "a histopathology image of prostate tissue"
+    - "an H&E stained section of prostate glands"
+    - "microscopic prostate tissue with glandular architecture"
+    - "a histologic section from the prostate"
+  bladder:
+    - "a histopathology image of urinary bladder tissue"
+    - "an H&E stained section of bladder urothelium"
+    - "microscopic urinary bladder tissue with urothelial architecture"
+    - "a histologic section from the urinary bladder"

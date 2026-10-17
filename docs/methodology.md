@@ -1,10 +1,10 @@
 # Floater Finder methodology and contracts
 
-Research prototype: synthetic embedding-level contamination is not verified real contamination, and cosine similarities are not clinical diagnoses. CONCH is the first model. No model is fine-tuned.
+Research prototype: synthetic embedding-level contamination is not verified real contamination, and cosine similarities are not clinical diagnoses. CONCH and PathGen-CLIP are supported as separate model backends. No model is fine-tuned.
 
 ## Inputs and cohorts
 
-The intended first contrast is TCGA-PRAD (prostate) versus TCGA-BLCA (bladder), using diagnostic slides with report linkage when available. TCGA-LUAD/LUSC, same-organ contamination, MUSK and PathGen-CLIP are later work. The currently known shared CRC/PathGen/PathMMU directories do not establish the availability of the intended TCGA cohorts.
+The intended first contrast is TCGA-PRAD (prostate) versus TCGA-BLCA (bladder), using diagnostic slides with report linkage when available. TCGA-LUAD/LUSC, same-organ contamination and MUSK are later work. The currently known shared CRC/PathGen/PathMMU directories do not establish the availability of the intended TCGA cohorts.
 
 `inventory` discovers only filenames in explicitly supplied roots, with bounded depth/count and no hidden-directory or symlink traversal. It opens neither slide pixels nor reports. CSV metadata supplies project, organ, independent class label, split, report link/provenance, tile manifest, coordinate scale and magnification. Every unknown stays blank and appears in `missing_data.json`.
 
@@ -34,24 +34,28 @@ Image and text model records must match exactly: model name, installed package/s
 
 `encode` caps image reads at 128 manifest rows by default and records whether the manifest was truncated. A result on a tile subset is **not** a full-slide result. Reports must retain that distinction. The same artifact can be reused for all contamination levels and seeds without re-encoding.
 
-## CONCH interface and availability
+## Model interfaces and availability
 
 Primary sources inspected on 2026-10-17:
 
+- [PathGen-1.6M official repository](https://github.com/PathFoundation/PathGen-1.6M/tree/308b5a2ccf284fce14bf8bbea48f5d5066613a92), including its [PathGen-CLIP usage guide](https://github.com/PathFoundation/PathGen-1.6M/blob/308b5a2ccf284fce14bf8bbea48f5d5066613a92/Model/README.md).
 - [CONCH source](https://github.com/mahmoodlab/CONCH/tree/141cc09c7d4ff33d8eda562bd75169b457f71a62), particularly `conch/open_clip_custom/coca_model.py` and `factory.py`.
-- [TRIDENT encoder source](https://github.com/mahmoodlab/TRIDENT/blob/bdeeb74b7eaad8d48bda232bde7de66cae980918/trident/patch_encoder_models/load.py).
 
-The inspected TRIDENT `conch_v1` builder accepts `with_proj` and `normalize`; its implementation defaults both to false. The proposal's `encoder_factory("conch_v1", with_proj=True, normalize=True)` explicitly enables both. Neither CONCH nor TRIDENT is installed in the local project environment, and the current remote installation was not inspected because SSH timed out. Source inspection and stub-based interface tests do not establish that an installed real model works.
+`encode --model conch` selects the CONCH adapter; `encode --model pathgen-clip` selects PathGen-CLIP (the default for compatibility with the initial adapter workflow). Both use separate checkpoints and provenance-bearing artifacts. `configs/conch_smoke.yaml` and `configs/pathgen_clip_smoke.yaml` hold model-specific fixed prompts.
 
-The implemented adapter uses official CONCH directly, with `conch_ViT-B-16`, the factory-provided image transform and tokenizer, `encode_image(..., proj_contrast=True, normalize=True)` and `encode_text(..., normalize=True)`. It checks the installed signatures at runtime. It verifies encoder parameter coverage/shapes because upstream loading is non-strict; missing decoder weights are allowed, missing image/text encoder weights are not. This checks checkpoint compatibility, not independent authenticity of the pretrained file.
+The PathGen guide loads a local checkpoint with `open_clip.create_model_and_transforms("ViT-B-16", pretrained=<checkpoint>)`, creates a tokenizer using `open_clip.get_tokenizer("ViT-B-32")`, and calls `encode_image` and `encode_text`, explicitly L2-normalizing both feature matrices. Its adapter follows this API and checks that image/text dimensions agree.
 
-Only an existing local checkpoint path is accepted. Hub/offline settings disable implicit model downloads and implicit credentials. Actual encoding requires a Slurm job and a visible CUDA GPU; there is no login-node, CPU, MPS, fake-model or random-feature fallback. Optional PyTorch/CONCH dependencies were not installed locally. The site guide documents `pytorch-conda/2.8`, but that environment still needs verification.
+The CONCH adapter uses `conch_ViT-B-16`, the factory-provided image transform and tokenizer, `encode_image(..., proj_contrast=True, normalize=True)` and `encode_text(..., normalize=True)`. It checks these method signatures and verifies encoder parameter coverage/shapes because upstream loading is non-strict; decoder weights may be omitted, but active image/text encoder weights may not.
 
-Real encoding records checkpoint/source hashes, exact transforms, tile count, model-load time, image-read/preprocessing/encoding/transfer time and measured tile throughput. No throughput has been measured yet.
+Both encoders require an existing local checkpoint, CUDA and an active Slurm job. They do not download weights or fall back to CPU. CONCH and TRIDENT were not installed in the prior local environment; PathGen-CLIP, `open_clip_torch`, and either model's actual checkpoint/runtime compatibility remain unverified. Source inspection and interface tests do not establish that a real model works.
+
+Each model provenance record includes a model-specific name, revision/source details, checkpoint SHA-256, projection/normalization, preprocessing and runtime metadata. This identifies the input file and software used; it does not independently authenticate the checkpoint's origin. Embedding compatibility checks require exact provenance equality, so do not mix CONCH and PathGen-CLIP artifacts within a run or calibration.
+
+Real encoding records checkpoint/source hashes, preprocessing representation, tile count, model-load time, image-read/preprocessing/encoding/transfer time and measured tile throughput. No throughput has been measured for either model.
 
 ## Prompts, scoring and pooling
 
-The four fixed phrases per class are in `configs/conch_smoke.yaml`; they describe prostate and urinary-bladder tissue. Do not tune them on final evaluation cases. For each class, normalize each prompt vector, take its arithmetic mean, then normalize that class mean again. Store the exact phrases and class order in the text artifact. Calibration fingerprints the vectors and their prompt provenance.
+The model-specific fixed phrases are in `configs/conch_smoke.yaml` and `configs/pathgen_clip_smoke.yaml`; they describe prostate and urinary-bladder tissue. Do not tune them on final evaluation cases. For each class, normalize each prompt vector, take its arithmetic mean, then normalize that class mean again. Store the exact phrases and class order in the text artifact. Calibration fingerprints the vectors and their prompt provenance.
 
 Tile scores are cosine similarities in the shared projected space. Mean pooling averages all tile scores separately for each class. Top-1% and top-5% pooling sort each class's scores independently and average its highest K, with `K=max(1,ceil(fraction*N))`. K is recomputed after injection or removal. Equal tile scores retain artifact order; equal final class scores choose the first class in the stored class order. No logit temperature or clinical probability interpretation is applied.
 

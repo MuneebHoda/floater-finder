@@ -11,11 +11,12 @@ import subprocess
 import numpy as np
 import yaml
 
-from .artifacts import Slide, TextEmbeddings, write_json
+from .artifacts import Slide, TextEmbeddings, check_compatible, write_json
 from .injection import inject, verify_oracle
 from .scoring import POOLING, predictions
 
 CATEGORIES = ("fixture", "smoke", "pilot", "benchmark")
+SUPPORTED_REAL_MODELS = {"conch_v1", "pathgen_clip_v1"}
 
 
 def read_config(path):
@@ -90,8 +91,9 @@ def run_stress(config_path, output):
             expected_kind = "fixture" if category == "fixture" else "real"
             if slide.metadata["source_kind"] != expected_kind:
                 raise ValueError("Output category does not match actual artifact provenance")
-            if category != "fixture" and slide.metadata["model"]["name"] != "conch_v1":
-                raise ValueError("The first real milestone accepts CONCH v1 artifacts only")
+            if category != "fixture" and slide.metadata["model"]["name"] not in SUPPORTED_REAL_MODELS:
+                raise ValueError("Unsupported real model; use CONCH v1 or PathGen-CLIP v1 artifacts")
+            check_compatible(slide, text)
             patient = slide.metadata["patient_id"]
             if patient_splits.setdefault(patient, slide.metadata["split"]) != slide.metadata["split"]:
                 raise ValueError("Patient leakage across development/evaluation splits")

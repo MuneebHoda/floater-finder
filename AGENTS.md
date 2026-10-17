@@ -1,8 +1,8 @@
 # Floater Finder
 
-- The first Ashby Hackathon milestone uses CONCH only. Keep work within this scope.
+- Support both CONCH and PathGen-CLIP model workflows. Keep work within this scope.
 - Access NCSA Delta through the local SSH alias `ncsa-floater`; the supplied login is `mhoda` at `login.delta.ncsa.illinois.edu`. Verify the remote identity after connecting.
-- Run all heavy processing, CONCH inference, whole-slide processing, and GPU workloads through Slurm, never directly on a login node. Login nodes are for lightweight inspection and job preparation.
+- Run all heavy processing, CONCH/PathGen-CLIP inference, whole-slide processing, and GPU workloads through Slurm, never directly on a login node. Login nodes are for lightweight inspection and job preparation.
 - Do not invent Slurm allocations/accounts, model paths, dataset paths, shared repository paths, or output locations. Record verified facts and unresolved inputs in `docs/ncsa_setup.md`.
 - Never fabricate scientific results. Report only observed outputs, and claim GPU access is verified only after a scheduled GPU job succeeds.
 - Ask the user before submitting any job or making a large download. Do not download datasets or model weights during connection setup.

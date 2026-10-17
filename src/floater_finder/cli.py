@@ -2,9 +2,7 @@
 
 import argparse
 import importlib.metadata
-import itertools
 import json
-import os
 from pathlib import Path
 import platform
 import sys
@@ -20,28 +18,22 @@ from .scoring import predictions
 
 def inspect_environment():
     packages = {}
-    for name in ("numpy", "pandas", "torch", "Pillow", "pytest", "PyYAML", "conch", "trident"):
+    for name in ("numpy", "pandas", "torch", "Pillow", "pytest", "PyYAML", "conch", "open_clip_torch", "trident"):
         try:
             packages[name] = importlib.metadata.version(name)
         except importlib.metadata.PackageNotFoundError:
             packages[name] = None
-    cache = Path(os.environ.get("HF_HUB_CACHE", str(Path(os.environ.get("HF_HOME", str(Path.home() / ".cache/huggingface"))) / "hub")))
-    cached = []
-    if cache.is_dir():
-        with os.scandir(cache) as entries:
-            cached = [entry.name for entry in itertools.islice(entries, 200)
-                      if entry.is_dir(follow_symlinks=False) and entry.name.lower().startswith("models--mahmoodlab--conch")]
     return {"platform": platform.system(), "macos": platform.mac_ver()[0] or None,
             "python": platform.python_version(), "python_executable": sys.executable,
-            "repository": str(Path.cwd()), "packages": packages, "conch_cache_directories": cached,
-            "cache_note": "Directory names only, at most 200 entries; no weights or credential files read.",
-            "ssh_note": "No connection attempted by inspect; this session's single SSH check is recorded separately."}
+            "repository": str(Path.cwd()), "packages": packages,
+            "model_note": "Checkpoint paths are supplied explicitly; no model cache or weights are inspected.",
+            "ssh_note": "No connection attempted by inspect; connection status is recorded separately."}
 
 
 def parser():
-    result = argparse.ArgumentParser(prog="floater-finder", description="CONCH-first research tooling. Fixture output is not scientific evidence.")
+    result = argparse.ArgumentParser(prog="floater-finder", description="CONCH and PathGen-CLIP research tooling. Fixture output is not scientific evidence.")
     sub = result.add_subparsers(dest="command", required=True)
-    inspect = sub.add_parser("inspect", help="Inspect local packages and model-cache directory names without SSH")
+    inspect = sub.add_parser("inspect", help="Inspect local package availability without SSH or model-file access")
     inspect.add_argument("--output")
     inv = sub.add_parser("inventory", help="Bounded slide discovery and explicit cohort metadata CSV")
     inv.add_argument("--root", action="append", default=[])
@@ -50,7 +42,7 @@ def parser():
     inv.add_argument("--max-files", type=int, default=1000)
     inv.add_argument("--max-depth", type=int, default=3)
     inv.add_argument("--output", required=True)
-    fixture = sub.add_parser("fixture", help="Create artificial software-check arrays, not CONCH embeddings")
+    fixture = sub.add_parser("fixture", help="Create artificial software-check arrays, not model embeddings")
     fixture.add_argument("--output", required=True)
     for name, help_text in (("validate", "Validate a slide artifact and optional text compatibility"),
                             ("score", "Score an original or contaminated slide")):
@@ -58,7 +50,9 @@ def parser():
         command.add_argument("--slide", required=True)
         command.add_argument("--text", required=name == "score")
         if name == "score": command.add_argument("--output", required=True)
-    encode = sub.add_parser("encode", help="Encode a capped tile manifest using a local CONCH checkpoint inside Slurm/CUDA")
+    encode = sub.add_parser("encode", help="Encode capped tiles using a local CONCH or PathGen-CLIP checkpoint inside Slurm/CUDA")
+    encode.add_argument("--model", choices=("conch", "pathgen-clip"), default="pathgen-clip",
+                        help="Encoder architecture (default: pathgen-clip)")
     for name in ("tile-manifest", "metadata", "prompts", "checkpoint", "output"):
         encode.add_argument("--" + name, required=True)
     encode.add_argument("--max-tiles", type=int, default=128)
@@ -113,7 +107,10 @@ def execute(args):
         write_json(args.output, {"source_kind": slide.metadata["source_kind"], "predictions": scored})
         return {"source_kind": slide.metadata["source_kind"], "output": args.output}
     if args.command == "encode":
-        from .conch import encode_tiles
+        if args.model == "conch":
+            from .conch import encode_tiles
+        else:
+            from .pathgen import encode_tiles
         return encode_tiles(args.tile_manifest, args.metadata, args.prompts, args.checkpoint, args.output, args.max_tiles, args.batch_size)
     if args.command == "inject":
         mixed = inject(Slide.load(args.host), Slide.load(args.donor), args.percent, args.seed)

@@ -1,13 +1,15 @@
 # Floater Finder: NCSA setup
 
-Verified on 2026-10-17 (America/Chicago). First milestone: CONCH only.
+Verified on 2026-10-17 (America/Chicago). Supported model targets: CONCH and PathGen-CLIP.
 No Slurm job, inference, whole-slide processing, or dataset/model download was performed during setup. GPU access is not yet verified.
+
+Both model encoders are implemented locally. No CONCH or PathGen-CLIP checkpoint, compatible package installation, or NCSA model compatibility was verified. No model download or GPU job was attempted.
 
 ## Latest implementation-session status
 
 The single new connection check used `ssh -o BatchMode=yes -o ConnectTimeout=8 ncsa-floater 'whoami && hostname'`, bounded by a 15-second local process timeout. It timed out with no identity output. NCSA is temporarily unavailable for this implementation session; no authentication retry or SSH configuration edit was made. The successful identity/allocation/storage observations below are from the earlier setup session and were not reverified after this timeout.
 
-Local development proceeded independently. A second, unsubmitted draft at [`scripts/slurm/conch_encode.sbatch`](../scripts/slurm/conch_encode.sbatch) requests account `bfqi-delta-gpu`, QoS `bfqi-delta-gpu-mhoda`, partition `gpuA100x4`, one GPU, four CPUs, 16 GB memory and five minutes for at most 128 already-tiled images. It needs a verified remote checkout, checkpoint, tile manifest, slide metadata and new output path. The documented module remains unverified. The existing two-minute driver-visibility smoke test remains separate. Neither draft has been copied, submitted, or run.
+Local development proceeded independently. The unsubmitted drafts at [`scripts/slurm/conch_encode.sbatch`](../scripts/slurm/conch_encode.sbatch) and [`scripts/slurm/pathgen_clip_encode.sbatch`](../scripts/slurm/pathgen_clip_encode.sbatch) each request account `bfqi-delta-gpu`, QoS `bfqi-delta-gpu-mhoda`, partition `gpuA100x4`, one GPU, four CPUs, 16 GB memory and five minutes for at most 128 already-tiled images. Each needs a verified remote checkout, matching local model checkpoint/runtime, tile manifest, slide metadata and new output path. The documented module remains unverified. The existing two-minute driver-visibility smoke test remains separate. No job has been copied or submitted.
 
 ## Local execution and SSH
 
@@ -51,7 +53,7 @@ The [official hackathon compute guide](https://github.com/ncsa/ashby-hackathon-2
 | `gpuMI100x8` | base, `-interactive` | 48 hours; interactive 1 hour |
 | `full` | base | 24 hours |
 
-Listed partitions and account associations do not establish that a particular job can be scheduled, that a GPU has been allocated, or that CUDA/CONCH works.
+Listed partitions and account associations do not establish that a particular job can be scheduled, that a GPU has been allocated, or that CUDA/PathGen-CLIP works.
 
 ## Verified directories and documentation
 
@@ -85,7 +87,7 @@ Verified from that guide and kept distinct from execution checks:
 
 - Use the existing shared datasets in place; use `/work/nvme/bfqi/mhoda` for personal data and outputs. The guide reports filesystem problems with `/work/hdd` this weekend; its existence above is not a recommendation to use it.
 - The documented environment is `pytorch-conda/2.8`, with `open_clip_torch` and CONCH packages for self-hosted inference. Module/package availability was not tested, and nothing was installed.
-- The guide documents individual gated CONCH access and first-use weight downloads. It does not identify a concrete preloaded CONCH checkpoint path. This setup did not inspect credential files, authenticate to Hugging Face, load a model, or download weights.
+- The guide documents individual gated CONCH access and first-use weight downloads. Neither that guide nor local observations establish a concrete CONCH or PathGen-CLIP checkpoint path. This setup did not inspect credential files, authenticate to Hugging Face, load a model, or download weights.
 - Hosted pathology services are described, but no credentials or connection files were read and no service inference request was made.
 
 A bounded, filename-only README search under `/projects/bfqi` stopped at depth three and excluded datasets, model directories, environments, and hidden directories. Some directories were inaccessible; other teams' documents were not opened. No official toolkit checkout or Floater Finder deployment path has been designated for this user, and no remote clone was created.
@@ -101,13 +103,13 @@ Review [`scripts/ncsa_smoke.sbatch`](../scripts/ncsa_smoke.sbatch). It proposes 
 
 The proposed working directory is the verified `/work/nvme/bfqi/mhoda`; the proposed new log file is `floater-smoke-<job-id>.out` there. These are draft job settings, not evidence of a completed write. Obtain explicit user approval before copying/submitting the job. Bash syntax checking passed locally; Slurm scheduling was not tested. No remote copy or submission has been performed.
 
-A successful scheduled run would verify Slurm GPU allocation and driver visibility only. CUDA/PyTorch execution and CONCH inference would still require separate approved checks.
+A successful scheduled run would verify Slurm GPU allocation and driver visibility only. CUDA/PyTorch execution and inference for each selected model would still require separate approved checks.
 
 ## Unresolved inputs
 
 - Intended remote Floater Finder/toolkit checkout path; the official upstream repository is now identified above.
-- Exact existing CONCH checkpoint path/version, if any; actual Python/module availability and individual gated-access status. Do not trigger a download while checking.
-- Which dataset(s) and subset belong to the CONCH milestone, and their verified paths.
+- Exact existing CONCH and/or PathGen-CLIP checkpoint paths/versions and compatible package availability. Do not trigger a download while checking.
+- Which dataset(s) and subset belong to the experiments, and their verified paths.
 - Actual write success/quota on the documented personal NVMe area, plus the persistent Floater Finder output layout and any shared team location.
 - Whether the proposed smoke job is schedulable and runs successfully; GPU access remains unverified.
 

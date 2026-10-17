@@ -12,22 +12,21 @@ import time
 import numpy as np
 from PIL import Image
 
-from .artifacts import Slide, TextEmbeddings, normalize, write_json
-from .experiments import file_sha256, read_config
+from .artifacts import normalize
+from .experiments import file_sha256
 from .scoring import ensemble_prompts
 
 
 def check_interface(model):
-    if not hasattr(model, "encode_image") or not hasattr(model, "encode_text"):
+    if not callable(getattr(model, "encode_image", None)) or not callable(getattr(model, "encode_text", None)):
         raise ValueError("CONCH requires both image and text encoders")
     image_args = inspect.signature(model.encode_image).parameters
     text_args = inspect.signature(model.encode_text).parameters
     if not {"proj_contrast", "normalize"}.issubset(image_args) or "normalize" not in text_args:
-        raise ValueError("Installed CONCH lacks the verified projected, normalized image/text interface")
+        raise ValueError("Installed CONCH lacks the projected, normalized image/text interface")
 
 
 def verify_encoder_weights(model_state, checkpoint_state):
-    """Upstream loads non-strictly; reject a checkpoint missing active encoder weights."""
     if not isinstance(checkpoint_state, dict):
         raise ValueError("Checkpoint must be a state dictionary")
     state = checkpoint_state.get("state_dict", checkpoint_state)
@@ -62,7 +61,8 @@ class ConchEncoder:
             raise RuntimeError("No CUDA GPU visible; do not encode on a login node or CPU fallback")
         started = time.perf_counter()
         self.torch = torch
-        self.model, self.preprocess = create_model_from_pretrained("conch_ViT-B-16", checkpoint_path=str(checkpoint), device="cuda")
+        self.model, self.preprocess = create_model_from_pretrained(
+            "conch_ViT-B-16", checkpoint_path=str(checkpoint), device="cuda")
         self.model.eval()
         check_interface(self.model)
         state = torch.load(checkpoint, map_location="cpu", weights_only=True)
@@ -74,16 +74,24 @@ class ConchEncoder:
             version = importlib.metadata.version("conch")
         except importlib.metadata.PackageNotFoundError:
             version = "source-checkout"
-        source_hash = file_sha256(source_file)
-        self.provenance = {"name": "conch_v1", "revision": f"package:{version};source-sha256:{source_hash}",
-            "checkpoint_sha256": file_sha256(checkpoint), "projection": True, "normalized": True,
-            "preprocessing": repr(self.preprocess), "torch_version": str(torch.__version__),
-            "encoder_weight_coverage_verified": True}
+        self.provenance = {
+            "name": "conch_v1",
+            "revision": f"package:{version};source-sha256:{file_sha256(source_file)}",
+            "checkpoint_sha256": file_sha256(checkpoint),
+            "projection": True,
+            "normalized": True,
+            "preprocessing": repr(self.preprocess),
+            "torch_version": str(torch.__version__),
+            "encoder_weight_coverage_verified": True,
+        }
         torch.cuda.synchronize()
         self.load_seconds = time.perf_counter() - started
 
     def encode_image_batch(self, batch):
         return self.model.encode_image(batch, proj_contrast=True, normalize=True)
+
+    def encode_text_batch(self, batch):
+        return self.model.encode_text(batch, normalize=True)
 
     def images(self, paths, batch_size):
         if not isinstance(batch_size, int) or batch_size < 1:
@@ -98,7 +106,8 @@ class ConchEncoder:
                     with Image.open(path) as image:
                         tensors.append(self.preprocess(image.convert("RGB")))
                 batch = self.torch.stack(tensors).to("cuda")
-                arrays.append(self.encode_image_batch(batch).detach().float().cpu().numpy())
+                values = self.encode_image_batch(batch).detach().float().cpu().numpy()
+                arrays.append(normalize(values))
         self.torch.cuda.synchronize()
         return np.concatenate(arrays), time.perf_counter() - started
 
@@ -106,53 +115,11 @@ class ConchEncoder:
         phrases = [phrase for group in prompts.values() for phrase in group]
         with self.torch.inference_mode():
             tokens = self.tokenize(texts=phrases, tokenizer=self.tokenizer).to("cuda")
-            values = self.model.encode_text(tokens, normalize=True).detach().float().cpu().numpy()
-        return ensemble_prompts(values, prompts)
+            values = self.encode_text_batch(tokens).detach().float().cpu().numpy()
+        return ensemble_prompts(normalize(values), prompts)
 
 
 def encode_tiles(tile_manifest, metadata_path, prompts_path, checkpoint, output, max_tiles=128, batch_size=16):
-    if max_tiles < 1:
-        raise ValueError("A positive explicit tile cap is required")
-    manifest = Path(tile_manifest).resolve()
-    with manifest.open(newline="") as handle:
-        rows = list(itertools.islice(csv.DictReader(handle), max_tiles + 1))
-    truncated = len(rows) > max_tiles
-    rows = rows[:max_tiles]
-    if not rows or not {"tile_id", "path", "x", "y"}.issubset(rows[0]):
-        raise ValueError("Tile manifest requires tile_id,path,x,y and at least one row")
-    ids = np.array([row["tile_id"] for row in rows])
-    if len(set(ids)) != len(ids):
-        raise ValueError("Duplicate tile identifiers")
-    paths = [(manifest.parent / row["path"]).resolve() for row in rows]
-    if not all(path.is_file() for path in paths):
-        raise ValueError("Some tile files are unavailable; no encoding attempted")
-    coords = np.array([[float(row["x"]), float(row["y"])] for row in rows])
-    if not np.isfinite(coords).all():
-        raise ValueError("Nonfinite tile coordinates")
-    metadata = json.loads(Path(metadata_path).read_text())
-    prompts = read_config(prompts_path)["prompts"]
-    if not isinstance(prompts, dict) or len(prompts) < 2 or any(not isinstance(group, list) or not 3 <= len(group) <= 5
-            or any(not isinstance(phrase, str) or not phrase.strip() for phrase in group) for group in prompts.values()):
-        raise ValueError("Define 3-5 fixed nonempty phrases for each of at least two classes")
-    output = Path(output)
-    if output.exists():
-        raise FileExistsError("Choose a new output directory; existing artifacts are preserved")
-    encoder = ConchEncoder(checkpoint)
-    feats, seconds = encoder.images(paths, batch_size)
-    text_feats = encoder.texts(prompts)
-    metadata.update(model=encoder.provenance, source_kind="real",
-                    tile_selection={"method": "first manifest rows", "cap": max_tiles, "truncated": truncated,
-                                    "tile_manifest_sha256": file_sha256(manifest)})
-    slide = Slide(feats, coords, ids, metadata)
-    text = TextEmbeddings(text_feats, list(prompts), prompts, encoder.provenance, "real")
-    if slide.feats.shape[1] != text.feats.shape[1]:
-        raise ValueError("CONCH image/text projection dimensions do not match")
-    output.mkdir(parents=True, exist_ok=False)
-    slide.save(output / "slide.npz")
-    text.save(output / "text.npz")
-    timing = {"category": "real-data encoding", "tiles": len(feats), "image_encoding_seconds": seconds,
-              "model_load_seconds": encoder.load_seconds, "tiles_per_second": len(feats) / seconds,
-              "timing_scope": "image I/O, specified preprocessing, GPU encoding and device transfers; excludes model load/text",
-              "manifest_truncated": truncated, "model": encoder.provenance}
-    write_json(output / "timing.json", timing)
-    return {key: timing[key] for key in ("category", "tiles", "image_encoding_seconds", "tiles_per_second")}
+    from .encoding import encode_tiles
+    return encode_tiles(tile_manifest, metadata_path, prompts_path, checkpoint, output,
+                        ConchEncoder, max_tiles, batch_size)

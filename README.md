@@ -1,8 +1,8 @@
 # Floater Finder
 
-Stress-testing pathology vision-language models against synthetic tissue contamination and detecting suspicious foreign tissue without model fine-tuning. The first milestone is CONCH on TCGA-PRAD versus TCGA-BLCA.
+Stress-testing CONCH and PathGen-CLIP against synthetic tissue contamination and detecting suspicious foreign tissue without model fine-tuning. Both model backends are supported for TCGA-PRAD versus TCGA-BLCA; create separate artifacts and runs for each model.
 
-This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. **No real-data CONCH experiment has run yet.**
+This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. **No real-data CONCH or PathGen-CLIP experiment has run.**
 
 ## Run locally
 
@@ -30,23 +30,23 @@ Supply only relevant accessible roots. If a root is missing, the inventory recor
 
 `configs/cohort_manifest.example.csv` includes participant/project, source site, diagnostic status/provenance, organ, label, split, report linkage and spatial metadata. `configs/institution_map.example.csv` requires verified normalized institution mapping provenance. `configs/tile_manifest.example.csv` expects `tile_id,path,x,y`. Unknown metadata must stay unknown.
 
-## Real CONCH workflow
+## Real model workflows
 
 1. Verify patient-attributed PRAD/BLCA diagnostic slides or existing tile exports, report linkage and coordinate scale. Assign disjoint development/evaluation patients.
-2. Confirm an already-local, authorized CONCH checkpoint and an installed compatible environment. No model downloads or credential reads are performed by this project.
-3. Review the resource request and explicitly approve a Slurm job before submission. Encode tiles with `encode` inside a CUDA allocation. The command requires a tile CSV, slide-metadata JSON, prompt YAML, local checkpoint and new output directory; see `encode --help`.
-4. Validate resulting `slide.npz`/`text.npz`. Populate the null paths and empty pairs in `configs/conch_smoke.yaml`; keep the fixed prompts. Start with one pair before populating `conch_pilot.yaml`.
+2. Choose one model per encoding: `conch` uses an already-local authorized CONCH checkpoint and CONCH runtime; `pathgen-clip` uses a local PathGen-CLIP checkpoint and `open_clip_torch`. The PathGen guide documents `ViT-B-16` with a `ViT-B-32` tokenizer. No model downloads or credential reads are performed by this project.
+3. Review the resource request and explicitly approve a Slurm job before submission. Encode tiles with `encode --model conch` or `encode --model pathgen-clip` inside a CUDA allocation. Both commands require a tile CSV, slide-metadata JSON, matching model prompt YAML, local checkpoint and new output directory; see `encode --help`.
+4. Validate resulting `slide.npz`/`text.npz`. Populate the null paths and empty pairs in the matching smoke template (`configs/conch_smoke.yaml` or `configs/pathgen_clip_smoke.yaml`); keep each model's fixed prompts. Start with one pair before populating its matching pilot template.
 5. Run `stress --config <populated-config> --output <new-results-directory>`. Oracle verification runs for every successful trial. Raw scores, exclusions, denominators, configuration and input/source hashes are saved.
 6. Calibrate on unmodified development artifacts with `calibrate`, then evaluate independent held-out hosts/donors with `detect`. Use `plot` only when sufficient real observations exist; install the locked `plots` extra then.
 
-Raw WSI tiling is a remaining integration task; the current encoder consumes verified pre-extracted tiles. A 128-tile cap is recorded as a subset, not a full-slide experiment. Real checkpoint/model/environment compatibility and throughput remain untested.
+Raw WSI tiling is a remaining integration task; the current encoders consume verified pre-extracted tiles. A 128-tile cap is recorded as a subset, not a full-slide experiment. Real checkpoint/model/environment compatibility and throughput remain untested for both backends.
 
 ## Commands
 
 | Command | Purpose |
 | --- | --- |
-| `inspect`, `inventory` | Local package/cache availability and bounded cohort inventory. |
-| `validate`, `encode` | Artifact checks and optional scheduled real CONCH tile/text encoding. |
+| `inspect`, `inventory` | Local package availability and bounded cohort inventory. |
+| `validate`, `encode` | Artifact checks and optional scheduled real CONCH or PathGen-CLIP tile/text encoding. |
 | `score`, `inject` | Mean/top-1%/top-5% scoring and connected synthetic contamination. |
 | `stress`, `oracle` | Reproducible sweeps, explicit eligibility denominators and mandatory recovery. |
 | `calibrate`, `detect` | Separate-patient clean calibration, organ/visual/combined scores and controls. |
@@ -61,8 +61,9 @@ Use SSH alias `ncsa-floater`. Heavy processing and GPU inference belong in appro
 | --- | --- | --- | --- |
 | [Driver visibility](scripts/ncsa_smoke.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 1 / 2 GB | 2 minutes |
 | [Capped CONCH encoding](scripts/slurm/conch_encode.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 4 / 16 GB | 5 minutes |
+| [Capped PathGen-CLIP encoding](scripts/slurm/pathgen_clip_encode.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 4 / 16 GB | 5 minutes |
 
-Neither job has been submitted. Both use the previously verified GPU sub-allocation QoS; installed GPU/model access remains unverified. Password/Duo prompts belong in your own Terminal. Do not put credentials or private keys in project files or logs.
+No job has been submitted. The encoding drafts reuse previously observed GPU sub-allocation settings, but model packages/checkpoints and actual compatibility are unverified. Keep model artifacts, prompt embeddings, calibrations and experiment runs separate; shared scoring tools reject incompatible provenance. Password/Duo prompts belong in your own Terminal. Do not put credentials or private keys in project files or logs.
 
 ## Evidence and outputs
 
@@ -72,7 +73,7 @@ Neither job has been submitted. Both use the previously verified GPU sub-allocat
 - Local inventory/missing data: `results/inventory/local/`.
 - Validated fixture run: `results/fixtures/final_validation/` (ignored by git).
 
-Real-data smoke, pilot and benchmark results must use separate directories and explicit categories. Requests to relabel fixture artifacts as real results are rejected. No MUSK/PathGen adapter, clinical validation, or real-slide floater claim is included.
+Real-data smoke, pilot and benchmark results must use separate directories, explicit categories and one model per run. Requests to relabel fixture artifacts as real results are rejected. No clinical validation or real-slide floater claim is included.
 
 ## License
 
