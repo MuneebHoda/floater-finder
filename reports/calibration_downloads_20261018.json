@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-10-18T21:53:53.828316+00:00",
+  "files": [
+    {
+      "file_id": "26cceec5-7118-45a5-8c11-8e4a945ef4c1",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs",
+      "status": "verified",
+      "bytes": 2363688671,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "2c1a5ce93579b5e1d48ff8b3f85d222f"
+      },
+      "download_seconds": 30.7242052500078
+    },
+    {
+      "file_id": "30e4624b-6f48-429b-b1d9-6a6bc5c82c5e",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs",
+      "status": "verified",
+      "bytes": 2824992800,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "eb843ea75b45382b88f24b616444915b"
+      },
+      "download_seconds": 37.346553929994116
+    }
+  ],
+  "model_checkpoint_download_attempted": false
+}

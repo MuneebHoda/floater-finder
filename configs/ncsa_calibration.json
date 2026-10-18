@@ -1,0 +1,59 @@
+{
+  "category": "smoke",
+  "slides": [
+    {
+      "role": "dev_prostate",
+      "patient_id": "TCGA-2A-A8VO",
+      "project": "TCGA-PRAD",
+      "bytes": 2363688671,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "2c1a5ce93579b5e1d48ff8b3f85d222f"
+      },
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs",
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.h5",
+      "slide_id": "TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "dev",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/26cceec5-7118-45a5-8c11-8e4a945ef4c1?fields=file_id%2Cfile_name%2Cfile_size%2Cmd5sum%2Caccess%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id",
+      "report_provenance": null
+    },
+    {
+      "role": "dev_bladder",
+      "patient_id": "TCGA-2F-A9KO",
+      "project": "TCGA-BLCA",
+      "bytes": 2824992800,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "eb843ea75b45382b88f24b616444915b"
+      },
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs",
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.h5",
+      "slide_id": "TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "dev",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/30e4624b-6f48-429b-b1d9-6a6bc5c82c5e?fields=file_id%2Cfile_name%2Cfile_size%2Cmd5sum%2Caccess%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id",
+      "report_provenance": null
+    }
+  ],
+  "checkpoint": {
+    "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+    "bytes": 802235437,
+    "checksum": {
+      "algorithm": "sha256",
+      "value": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c"
+    }
+  },
+  "conch_source_revision": "141cc09c7d4ff33d8eda562bd75169b457f71a62",
+  "max_tiles_per_slide": 128,
+  "batch_size": 8,
+  "coordinate_source_note": "Reuse only existing spatial coordinates; never CONCH v1.5 feature values. Re-encode raw pixels with v1.",
+  "institution_match": null,
+  "patient_split_note": "These two patients are development-only; do not use as evaluation hosts or donors.",
+  "field_um": 256,
+  "export_pixels": 512,
+  "physical_resampling_note": "Use measured WSI MPP and fractional source boxes to export a common 256-micron FOV at 512 pixels. Do not force scanner MPP values to match.",
+  "mode": "calibration"
+}

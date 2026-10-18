@@ -1,0 +1,576 @@
+{
+  "status": "passed",
+  "category": "smoke",
+  "slurm_job_id": "22994885",
+  "hostname": "cn004.delta.ncsa.illinois.edu",
+  "settings": {
+    "category": "smoke",
+    "exclusion_mm": 1.0,
+    "smoothing_mm": 0.1,
+    "weight": 0.5,
+    "quantile": 0.99,
+    "chunk_size": 256,
+    "contamination_percent": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "sampling": "128 connected tiles per patient; two clean development and two independent evaluation patients",
+    "scope": "Patient-separated detector smoke, not a population benchmark; parameters frozen before detector evaluation"
+  },
+  "model": {
+    "name": "conch_v1",
+    "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+    "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+    "projection": true,
+    "normalized": true,
+    "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+    "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+    "torch_version": "2.8.0+cu128",
+    "encoder_weight_coverage_verified": true
+  },
+  "development_patients": [
+    "TCGA-2A-A8VO",
+    "TCGA-2F-A9KO"
+  ],
+  "evaluation_patients": [
+    "TCGA-2A-A8VL",
+    "TCGA-2F-A9KP"
+  ],
+  "patient_sets_disjoint": true,
+  "calibration_tiles": 256,
+  "oracle_verified_trials": 60,
+  "variant_rows": 180,
+  "excluded_trials": 0,
+  "frozen_text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+  "unique_clean_host_controls": 2,
+  "clean_controls": [
+    {
+      "host_patient": "TCGA-2A-A8VL",
+      "variant": "organ_only",
+      "auroc": null,
+      "detection_rate": null,
+      "measured_false_alarm_rate": 0.0,
+      "precision": null,
+      "fragment_hit": null,
+      "genuine_host_tiles_removed": 0,
+      "foreign_tiles": 0,
+      "host_tiles": 128,
+      "removed_tiles": 0,
+      "filtered": {
+        "mean": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.3419761061668396,
+            "bladder": 0.312897264957428
+          }
+        },
+        "top1pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.5740663409233093,
+            "bladder": 0.4862487316131592
+          }
+        },
+        "top5pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.54738849401474,
+            "bladder": 0.45932742953300476
+          }
+        }
+      },
+      "random_same_count": {
+        "mean": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.3419761061668396,
+            "bladder": 0.312897264957428
+          }
+        },
+        "top1pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.5740663409233093,
+            "bladder": 0.4862487316131592
+          }
+        },
+        "top5pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.54738849401474,
+            "bladder": 0.45932742953300476
+          }
+        }
+      },
+      "recovered": {
+        "mean": true,
+        "top1pct": true,
+        "top5pct": true
+      },
+      "clean_prediction_changed": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      },
+      "clean_correct_to_wrong": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      }
+    },
+    {
+      "host_patient": "TCGA-2A-A8VL",
+      "variant": "visual_only",
+      "auroc": null,
+      "detection_rate": null,
+      "measured_false_alarm_rate": 0.0,
+      "precision": null,
+      "fragment_hit": null,
+      "genuine_host_tiles_removed": 0,
+      "foreign_tiles": 0,
+      "host_tiles": 128,
+      "removed_tiles": 0,
+      "filtered": {
+        "mean": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.3419761061668396,
+            "bladder": 0.312897264957428
+          }
+        },
+        "top1pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.5740663409233093,
+            "bladder": 0.4862487316131592
+          }
+        },
+        "top5pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.54738849401474,
+            "bladder": 0.45932742953300476
+          }
+        }
+      },
+      "random_same_count": {
+        "mean": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.3419761061668396,
+            "bladder": 0.312897264957428
+          }
+        },
+        "top1pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.5740663409233093,
+            "bladder": 0.4862487316131592
+          }
+        },
+        "top5pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.54738849401474,
+            "bladder": 0.45932742953300476
+          }
+        }
+      },
+      "recovered": {
+        "mean": true,
+        "top1pct": true,
+        "top5pct": true
+      },
+      "clean_prediction_changed": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      },
+      "clean_correct_to_wrong": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      }
+    },
+    {
+      "host_patient": "TCGA-2A-A8VL",
+      "variant": "combined",
+      "auroc": null,
+      "detection_rate": null,
+      "measured_false_alarm_rate": 0.0,
+      "precision": null,
+      "fragment_hit": null,
+      "genuine_host_tiles_removed": 0,
+      "foreign_tiles": 0,
+      "host_tiles": 128,
+      "removed_tiles": 0,
+      "filtered": {
+        "mean": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.3419761061668396,
+            "bladder": 0.312897264957428
+          }
+        },
+        "top1pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.5740663409233093,
+            "bladder": 0.4862487316131592
+          }
+        },
+        "top5pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.54738849401474,
+            "bladder": 0.45932742953300476
+          }
+        }
+      },
+      "random_same_count": {
+        "mean": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.3419761061668396,
+            "bladder": 0.312897264957428
+          }
+        },
+        "top1pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.5740663409233093,
+            "bladder": 0.4862487316131592
+          }
+        },
+        "top5pct": {
+          "prediction": "prostate",
+          "scores": {
+            "prostate": 0.54738849401474,
+            "bladder": 0.45932742953300476
+          }
+        }
+      },
+      "recovered": {
+        "mean": true,
+        "top1pct": true,
+        "top5pct": true
+      },
+      "clean_prediction_changed": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      },
+      "clean_correct_to_wrong": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      }
+    },
+    {
+      "host_patient": "TCGA-2F-A9KP",
+      "variant": "organ_only",
+      "auroc": null,
+      "detection_rate": null,
+      "measured_false_alarm_rate": 0.0234375,
+      "precision": 0.0,
+      "fragment_hit": null,
+      "genuine_host_tiles_removed": 3,
+      "foreign_tiles": 0,
+      "host_tiles": 128,
+      "removed_tiles": 3,
+      "filtered": {
+        "mean": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.029109671711921692,
+            "bladder": 0.07015009224414825
+          }
+        },
+        "top1pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.202971413731575,
+            "bladder": 0.2679555416107178
+          }
+        },
+        "top5pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.1656254380941391,
+            "bladder": 0.24005401134490967
+          }
+        }
+      },
+      "random_same_count": {
+        "mean": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.027367157861590385,
+            "bladder": 0.0643046572804451
+          }
+        },
+        "top1pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.202971413731575,
+            "bladder": 0.2679555416107178
+          }
+        },
+        "top5pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.1656254380941391,
+            "bladder": 0.24005401134490967
+          }
+        }
+      },
+      "recovered": {
+        "mean": true,
+        "top1pct": true,
+        "top5pct": true
+      },
+      "clean_prediction_changed": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      },
+      "clean_correct_to_wrong": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      }
+    },
+    {
+      "host_patient": "TCGA-2F-A9KP",
+      "variant": "visual_only",
+      "auroc": null,
+      "detection_rate": null,
+      "measured_false_alarm_rate": 0.0,
+      "precision": null,
+      "fragment_hit": null,
+      "genuine_host_tiles_removed": 0,
+      "foreign_tiles": 0,
+      "host_tiles": 128,
+      "removed_tiles": 0,
+      "filtered": {
+        "mean": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.0287890937179327,
+            "bladder": 0.066568523645401
+          }
+        },
+        "top1pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.202971413731575,
+            "bladder": 0.2679555416107178
+          }
+        },
+        "top5pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.1656254380941391,
+            "bladder": 0.24005401134490967
+          }
+        }
+      },
+      "random_same_count": {
+        "mean": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.0287890937179327,
+            "bladder": 0.066568523645401
+          }
+        },
+        "top1pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.202971413731575,
+            "bladder": 0.2679555416107178
+          }
+        },
+        "top5pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.1656254380941391,
+            "bladder": 0.24005401134490967
+          }
+        }
+      },
+      "recovered": {
+        "mean": true,
+        "top1pct": true,
+        "top5pct": true
+      },
+      "clean_prediction_changed": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      },
+      "clean_correct_to_wrong": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      }
+    },
+    {
+      "host_patient": "TCGA-2F-A9KP",
+      "variant": "combined",
+      "auroc": null,
+      "detection_rate": null,
+      "measured_false_alarm_rate": 0.0,
+      "precision": null,
+      "fragment_hit": null,
+      "genuine_host_tiles_removed": 0,
+      "foreign_tiles": 0,
+      "host_tiles": 128,
+      "removed_tiles": 0,
+      "filtered": {
+        "mean": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.0287890937179327,
+            "bladder": 0.066568523645401
+          }
+        },
+        "top1pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.202971413731575,
+            "bladder": 0.2679555416107178
+          }
+        },
+        "top5pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.1656254380941391,
+            "bladder": 0.24005401134490967
+          }
+        }
+      },
+      "random_same_count": {
+        "mean": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.0287890937179327,
+            "bladder": 0.066568523645401
+          }
+        },
+        "top1pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.202971413731575,
+            "bladder": 0.2679555416107178
+          }
+        },
+        "top5pct": {
+          "prediction": "bladder",
+          "scores": {
+            "prostate": 0.1656254380941391,
+            "bladder": 0.24005401134490967
+          }
+        }
+      },
+      "recovered": {
+        "mean": true,
+        "top1pct": true,
+        "top5pct": true
+      },
+      "clean_prediction_changed": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      },
+      "clean_correct_to_wrong": {
+        "mean": false,
+        "top1pct": false,
+        "top5pct": false
+      }
+    }
+  ],
+  "input_sha256": {
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/calibration-20261018T215432Z/dev_prostate_encoded/slide.npz": "5cd96c52e47281fe6fdf86b5be438ab1412e82e0d22dc2a4cd13b16801d1ca8f",
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/calibration-20261018T215432Z/dev_bladder_encoded/slide.npz": "3b587f5e2833fd17e39adf37425efe2357505e9ca55ac618121feb23050357d0",
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/one-pair-20261018T214721Z/host_encoded/slide.npz": "913004672c0f3a8b7cdfe7f4667bf073a5fd7132b1b9a5ee3e213f11569c0275",
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/one-pair-20261018T214721Z/donor_encoded/slide.npz": "47d9903bc0a021cb25c7fcbb2e4479ae588085d51d62d545fea0de8367e83d83",
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/one-pair-20261018T214721Z/host_encoded/text.npz": "566a0fc9949133417482d1558c0bcf6a2977c6d871360f6072e38f262112504f",
+    "/u/mhoda/floater-finder/releases/20261018T215641Z/configs/ncsa_detector_smoke.json": "1b7036783fb3d0bd4d116f2d88bd4813d8ccb4409820dc9ae31d4e6760490c8d"
+  },
+  "source_sha256": {
+    "__init__.py": "73801f9e216e3274115b40665dadd7330884f4ad95efe98576564d607327d4e6",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+    "cli.py": "b4d57a3c63d4e375b64e24162995c7c958699dfb7c6255400882e15b58b154d3",
+    "conch.py": "a8647f5fa5c2b5837109bf1858137dc4397b0be67bb749acc571bb02bf666c1d",
+    "detection.py": "4cd353fdce0052d2d2ac4e17fc6e72840afab8f2cfb294072e67b6c442dc6148",
+    "experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+    "fixtures.py": "054d38f95f4e079d901134276a3262533a32ee147156b00ece26859c14bbe868",
+    "injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+    "inventory.py": "93c85975c7149d43b13d3c304894ea87c45bc59c852e152b148efd3d2bd9a4d6",
+    "reporting.py": "01182b210d17c0430eec881103610781a74ff189a412fd9be2af85b4eabbbab2",
+    "scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "tiling.py": "128676385968c6267cf8ea95d79430fad7b31abdfeda99e89f59015b9f338ab2"
+  },
+  "workflow_sha256": "582e40d65a6691b7aab0bcfdeee880796611d29e7e7c6fcc626314483bc9a670",
+  "runtime": {
+    "python": "3.11.13",
+    "numpy": "2.2.6",
+    "matplotlib": "3.10.6"
+  },
+  "interpretation": "Four-patient, connected-subset detector smoke. Clean means no synthetic injection; native contamination is unreviewed. Repeated seeds/percentages are not independent patients. No clinical or population performance claim.",
+  "remote_output": "/work/nvme/bfqi/mhoda/floater-finder/smoke/detector-20261018T215641Z",
+  "local_artifacts": "results/smoke/conch_detector_22994885",
+  "independent_validation": {
+    "artifact_hashes_matched": 184,
+    "oracle_trials_recomputed": 60,
+    "all_variant_flags_and_count_metrics_match": true,
+    "maximum_standardized_score_delta": 1.4678775572818381e-06,
+    "score_tolerance": "atol=1e-5, rtol=1e-5; float32 cross-version calculations",
+    "local_numpy": "2.0.2"
+  },
+  "ten_percent_descriptive_summary": [
+    {
+      "variant": "organ_only",
+      "host_patients": 2,
+      "seeds": 5,
+      "requested_percent": 10,
+      "realized_percent": 10.15625,
+      "mean_auroc": 0.7010817307692309,
+      "mean_detection_rate": 0.23076923076923078,
+      "mean_measured_false_alarm_rate": 0.01171875
+    },
+    {
+      "variant": "visual_only",
+      "host_patients": 2,
+      "seeds": 5,
+      "requested_percent": 10,
+      "realized_percent": 10.15625,
+      "mean_auroc": 0.9204326923076923,
+      "mean_detection_rate": 0.053846153846153856,
+      "mean_measured_false_alarm_rate": 0.0
+    },
+    {
+      "variant": "combined",
+      "host_patients": 2,
+      "seeds": 5,
+      "requested_percent": 10,
+      "realized_percent": 10.15625,
+      "mean_auroc": 0.9489783653846153,
+      "mean_detection_rate": 0.038461538461538464,
+      "mean_measured_false_alarm_rate": 0.0
+    }
+  ]
+}

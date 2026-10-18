@@ -1,0 +1,56 @@
+=====================================================
+Conda-Forge PyTorch 2.8 Environment Loaded Successfully!
+=====================================================
+
+To activate the environment:
+  conda activate base
+
+If 'conda activate' fails, use:
+  source $CONDA_PREFIX/etc/profile.d/conda.sh && conda activate base
+
+To verify PyTorch installation:
+  python -c "import torch; print(f'PyTorch {torch.__version__} CUDA:
+{torch.cuda.is_available()}')"
+
+Environment includes:
+  - PyTorch 2.8 with CUDA 12.8 support
+  - Scientific Python stack (numpy, scipy, pandas)
+  - ML libraries (transformers, lightning, timm)
+  - Cray PE integration with optimized MPI
+
+For Jupyter notebook support:
+  setup-kernel (creates Jupyter kernel for this environment)
+
+For distributed training, load:
+  module load aws-ofi-nccl/1.14.2
+
+Ready for single-node and distributed training!
+=====================================================
+
+Collecting ftfy==6.3.1
+  Downloading ftfy-6.3.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting openslide-python==1.4.6
+  Downloading openslide_python-1.4.6-cp311-abi3-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (5.1 kB)
+Collecting openslide-bin==4.0.1.2
+  Downloading openslide_bin-4.0.1.2-py3-none-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Downloading ftfy-6.3.1-py3-none-any.whl (44 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 10.6 MB/s eta 0:00:00
+Downloading openslide_python-1.4.6-cp311-abi3-manylinux1_x86_64.manylinux_2_5_x86_64.whl (36 kB)
+Downloading openslide_bin-4.0.1.2-py3-none-manylinux_2_28_x86_64.whl (2.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 162.8 MB/s eta 0:00:00
+Installing collected packages: openslide-python, openslide-bin, ftfy
+Successfully installed ftfy-6.3.1 openslide-bin-4.0.1.2 openslide-python-1.4.6
+Processing /u/mhoda/floater-finder/releases/20261018T214122Z/vendor/CONCH-141cc09c7d4ff33d8eda562bd75169b457f71a62
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: conch
+  Building wheel for conch (pyproject.toml): started
+  Building wheel for conch (pyproject.toml): finished with status 'done'
+  Created wheel for conch: filename=conch-0.1.0-py3-none-any.whl size=418151 sha256=6bb5821a0f046ce66876dd8bfe54238b3e10783315f406d8d7814f49b4e8e532
+  Stored in directory: /u/mhoda/.cache/pip/wheels/28/fb/55/54b2f795062f6d601e58aa633161120622a69227712f30321f
+Successfully built conch
+Installing collected packages: conch
+Successfully installed conch-0.1.0
+/sw/rh9.4/user/python/conda-env/pytorch-2.8-cu128/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"status": "passed", "output": "/work/nvme/bfqi/mhoda/floater-finder/runtime-preflight-20261018T214122Z", "model_loaded": false}

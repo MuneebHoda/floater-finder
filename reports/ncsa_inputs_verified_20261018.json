@@ -1,0 +1,51 @@
+{
+  "verified_at_utc": "2026-10-18T21:34:52.917535+00:00",
+  "files": [
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.svs",
+      "bytes": 1713266379,
+      "mode": "0o600",
+      "owned_by_current_user": true
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.svs",
+      "bytes": 2285938440,
+      "mode": "0o600",
+      "owned_by_current_user": true
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+      "bytes": 802235437,
+      "mode": "0o600",
+      "owned_by_current_user": true
+    }
+  ],
+  "directories": [
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs",
+      "mode": "0o2700"
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD",
+      "mode": "0o2700"
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA",
+      "mode": "0o2700"
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models",
+      "mode": "0o2700"
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1",
+      "mode": "0o2700"
+    }
+  ],
+  "plan_snapshot": "/u/mhoda/floater-finder/configs/ncsa_conch_v1_inputs_verified_20261018.json",
+  "plan_sha256": "438bdde620c04b1a0bee1399f5b490d0d9bc21b70dc077d7d5489dc2bdde9681",
+  "downloader_sha256": "a461c7861efc3a051caa9af9221d64f1709dca6fba33161d031b5ffcd82586b3",
+  "downloader_backup": "/u/mhoda/floater-finder/scripts/download_approved_inputs.py.backup-20261018-permissions",
+  "jobs_submitted": false,
+  "permission_note": "Delta inherited group permissions were removed from these new inputs; files are mode 600, directories retain inherited setgid with owner-only access."
+}

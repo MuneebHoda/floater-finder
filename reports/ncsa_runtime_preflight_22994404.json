@@ -1,0 +1,131 @@
+{
+  "slurm_job_id": "22994404",
+  "hostname": "cn004.delta.ncsa.illinois.edu",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "numpy": "2.2.6",
+    "Pillow": "11.3.0",
+    "PyYAML": "6.0.2",
+    "timm": "1.0.19",
+    "transformers": "4.56.1",
+    "conch": "0.1.0",
+    "openslide-python": "1.4.6",
+    "openslide-bin": "4.0.1.2"
+  },
+  "inputs": [
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.svs",
+      "bytes": 1713266379,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "3b0d857552028cb3b6ace58d8f528706"
+      },
+      "dimensions": [
+        109559,
+        81897
+      ],
+      "level_dimensions": [
+        [
+          109559,
+          81897
+        ],
+        [
+          27389,
+          20474
+        ],
+        [
+          6847,
+          5118
+        ],
+        [
+          3423,
+          2559
+        ]
+      ],
+      "level_downsamples": [
+        1.0,
+        4.000079187729257,
+        16.001390422483315,
+        32.00511812547285
+      ],
+      "properties": {
+        "openslide.mpp-x": "0.25269999999999998",
+        "openslide.mpp-y": "0.25269999999999998",
+        "openslide.objective-power": "40",
+        "openslide.vendor": "aperio"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.h5",
+      "coordinate_count": 5529,
+      "coordinate_step": 1024,
+      "source_patch_pixels": 512,
+      "target_magnification": 20.0,
+      "coordinate_sha256": "840e1c9ca7b40b53acb46e9de8877507d67482f35516f89e6f1e9e19999d346e",
+      "feature_values_read": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.svs",
+      "bytes": 2285938440,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "818189a55031640f8d4effb7dbef622e"
+      },
+      "dimensions": [
+        118784,
+        93440
+      ],
+      "level_dimensions": [
+        [
+          118784,
+          93440
+        ],
+        [
+          29696,
+          23360
+        ],
+        [
+          7424,
+          5840
+        ],
+        [
+          3712,
+          2920
+        ]
+      ],
+      "level_downsamples": [
+        1.0,
+        4.0,
+        16.0,
+        32.0
+      ],
+      "properties": {
+        "openslide.mpp-x": "0.22770000000000001",
+        "openslide.mpp-y": "0.22770000000000001",
+        "openslide.objective-power": "40",
+        "openslide.vendor": "aperio"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.h5",
+      "coordinate_count": 8525,
+      "coordinate_step": 1024,
+      "source_patch_pixels": 512,
+      "target_magnification": 20.0,
+      "coordinate_sha256": "c2a4877f6c82e488f426814c328ace0ec3fcf8fa666274455aea13031e34d137",
+      "feature_values_read": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+      "bytes": 802235437,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c"
+      }
+    }
+  ],
+  "tokenizer_shape": [
+    1,
+    128
+  ],
+  "model_loaded": false,
+  "conch_source_revision": "141cc09c7d4ff33d8eda562bd75169b457f71a62",
+  "status": "passed"
+}

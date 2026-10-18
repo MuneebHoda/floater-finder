@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "source_url": "https://api.gdc.cancer.gov/files/26cceec5-7118-45a5-8c11-8e4a945ef4c1?fields=file_id%2Cfile_name%2Cfile_size%2Cmd5sum%2Caccess%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id",
+      "sha256": "c604ce5eefc7f382b1bc9cbc3747ffe7fd94f17e413556b294afa57bdac12a4f",
+      "response": {
+        "cases": [
+          {
+            "submitter_id": "TCGA-2A-A8VO",
+            "project": {
+              "project_id": "TCGA-PRAD"
+            }
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs",
+        "md5sum": "2c1a5ce93579b5e1d48ff8b3f85d222f",
+        "file_id": "26cceec5-7118-45a5-8c11-8e4a945ef4c1",
+        "experimental_strategy": "Diagnostic Slide",
+        "file_size": 2363688671
+      }
+    },
+    {
+      "source_url": "https://api.gdc.cancer.gov/files/30e4624b-6f48-429b-b1d9-6a6bc5c82c5e?fields=file_id%2Cfile_name%2Cfile_size%2Cmd5sum%2Caccess%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id",
+      "sha256": "da8d0ce25d7e79d141d5d8cf176539b49abe5c984d8f1e3d8d330647bfa2b548",
+      "response": {
+        "cases": [
+          {
+            "submitter_id": "TCGA-2F-A9KO",
+            "project": {
+              "project_id": "TCGA-BLCA"
+            }
+          }
+        ],
+        "access": "open",
+        "file_name": "TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs",
+        "md5sum": "eb843ea75b45382b88f24b616444915b",
+        "file_id": "30e4624b-6f48-429b-b1d9-6a6bc5c82c5e",
+        "experimental_strategy": "Diagnostic Slide",
+        "file_size": 2824992800
+      }
+    }
+  ]
+}

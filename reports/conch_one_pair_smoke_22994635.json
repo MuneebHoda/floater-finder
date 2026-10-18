@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "category": "smoke",
+  "slurm_job_id": "22994635",
+  "hostname": "gpua029.delta.ncsa.illinois.edu",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "cuda_version": "12.8",
+  "precision": "float32; TF32 disabled; no autocast",
+  "host_tiles": 128,
+  "donor_tiles": 128,
+  "embedding_dimensions": 512,
+  "checkpoint": {
+    "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+    "bytes": 802235437,
+    "checksum": {
+      "algorithm": "sha256",
+      "value": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c"
+    }
+  },
+  "conch_source_revision": "141cc09c7d4ff33d8eda562bd75169b457f71a62",
+  "input_config_sha256": "8586c344ce19b200b642ffbb8ff6f71d6c19d98801d41dbf8bdfec51ba651a20",
+  "prompts_sha256": "ce1e318dfb56eb66b0aff6ef6716431bb78ee23f3fae945b70849ef4f09417a4",
+  "host_prediction": {
+    "mean": {
+      "prediction": "prostate",
+      "scores": {
+        "prostate": 0.3419761061668396,
+        "bladder": 0.312897264957428
+      }
+    },
+    "top1pct": {
+      "prediction": "prostate",
+      "scores": {
+        "prostate": 0.5740663409233093,
+        "bladder": 0.4862487316131592
+      }
+    },
+    "top5pct": {
+      "prediction": "prostate",
+      "scores": {
+        "prostate": 0.54738849401474,
+        "bladder": 0.45932742953300476
+      }
+    }
+  },
+  "donor_prediction": {
+    "mean": {
+      "prediction": "bladder",
+      "scores": {
+        "prostate": 0.0287890937179327,
+        "bladder": 0.066568523645401
+      }
+    },
+    "top1pct": {
+      "prediction": "bladder",
+      "scores": {
+        "prostate": 0.202971413731575,
+        "bladder": 0.2679555416107178
+      }
+    },
+    "top5pct": {
+      "prediction": "bladder",
+      "scores": {
+        "prostate": 0.1656254380941391,
+        "bladder": 0.24005401134490967
+      }
+    }
+  },
+  "oracle_verified_trials": 6,
+  "stress_rows": 18,
+  "failed_trials": 0,
+  "limitations": [
+    "One pair, connected 128-tile subsets; not full slides or a population benchmark.",
+    "No independent development cohort or detector calibration in this run.",
+    "Synthetic embedding-level contamination, not confirmed real floaters.",
+    "Clinical reports and a verified institution match are unavailable."
+  ],
+  "independent_local_validation": {
+    "artifact_file_hashes_matched": 22,
+    "image_shapes": [
+      [
+        128,
+        512
+      ],
+      [
+        128,
+        512
+      ]
+    ],
+    "text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+    "oracle_trials_recomputed": 6,
+    "raw_pooled_scores_recomputed": 18,
+    "exact_same_vectors_as_22994469": true,
+    "canonical_preprocessing_without_addresses": true,
+    "physical_geometry_matches": true,
+    "contamination_counts": [
+      {
+        "requested_percent": 0,
+        "foreign_tiles": 0,
+        "realized_percent": 0.0
+      },
+      {
+        "requested_percent": 0.5,
+        "foreign_tiles": 1,
+        "realized_percent": 0.78125
+      },
+      {
+        "requested_percent": 1,
+        "foreign_tiles": 2,
+        "realized_percent": 1.5625
+      },
+      {
+        "requested_percent": 2,
+        "foreign_tiles": 3,
+        "realized_percent": 2.34375
+      },
+      {
+        "requested_percent": 5,
+        "foreign_tiles": 7,
+        "realized_percent": 5.46875
+      },
+      {
+        "requested_percent": 10,
+        "foreign_tiles": 13,
+        "realized_percent": 10.15625
+      }
+    ],
+    "observed_prediction_changes": 0
+  },
+  "remote_output": "/work/nvme/bfqi/mhoda/floater-finder/smoke/one-pair-20261018T214721Z",
+  "local_artifact_directory": "results/smoke/conch_one_pair_22994635"
+}

@@ -1,0 +1,45 @@
+{
+  "approved": true,
+  "category": "two independent calibration inputs for the continued CONCH plan",
+  "files": [
+    {
+      "kind": "diagnostic_wsi",
+      "role": "dev_prostate",
+      "patient_id": "TCGA-2A-A8VO",
+      "project": "TCGA-PRAD",
+      "file_id": "26cceec5-7118-45a5-8c11-8e4a945ef4c1",
+      "filename": "TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs",
+      "bytes": 2363688671,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "2c1a5ce93579b5e1d48ff8b3f85d222f"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/26cceec5-7118-45a5-8c11-8e4a945ef4c1",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs",
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs"
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "role": "dev_bladder",
+      "patient_id": "TCGA-2F-A9KO",
+      "project": "TCGA-BLCA",
+      "file_id": "30e4624b-6f48-429b-b1d9-6a6bc5c82c5e",
+      "filename": "TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs",
+      "bytes": 2824992800,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "eb843ea75b45382b88f24b616444915b"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/30e4624b-6f48-429b-b1d9-6a6bc5c82c5e",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs",
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs"
+    }
+  ],
+  "total_input_bytes": 5188681471,
+  "authorization": {
+    "source": "User instructed continuing the plan without further permission requests on 2026-10-18; bounded public calibration inputs are necessary for patient-separated detector smoke.",
+    "scope": "Two additional verified public diagnostic slides, same CONCH model, personal Delta storage."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "category": "smoke",
+  "exclusion_mm": 1.0,
+  "smoothing_mm": 0.1,
+  "weight": 0.5,
+  "quantile": 0.99,
+  "chunk_size": 256,
+  "contamination_percent": [0, 0.5, 1, 2, 5, 10],
+  "seeds": [0, 1, 2, 3, 4],
+  "sampling": "128 connected tiles per patient; two clean development and two independent evaluation patients",
+  "scope": "Patient-separated detector smoke, not a population benchmark; parameters frozen before detector evaluation"
+}

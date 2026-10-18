@@ -1,0 +1,86 @@
+{
+  "category": "approved CONCH v1 one-pair smoke input downloads",
+  "approved": true,
+  "date_local": "2026-10-18",
+  "total_input_bytes": 4801440256,
+  "files": [
+    {
+      "kind": "diagnostic_wsi",
+      "role": "host",
+      "patient_id": "TCGA-2A-A8VL",
+      "project": "TCGA-PRAD",
+      "file_id": "7d71dc8e-8c6b-47ff-8ccc-c940a9bf1490",
+      "filename": "TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.svs",
+      "bytes": 1713266379,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "3b0d857552028cb3b6ace58d8f528706"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/7d71dc8e-8c6b-47ff-8ccc-c940a9bf1490",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.svs",
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.svs",
+      "verification_report": "reports/gdc_downloads_20261018.json"
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "role": "donor",
+      "patient_id": "TCGA-2F-A9KP",
+      "project": "TCGA-BLCA",
+      "file_id": "d8f6e145-eb97-4224-a691-e8ceff2f3885",
+      "filename": "TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.svs",
+      "bytes": 2285938440,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "818189a55031640f8d4effb7dbef622e"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/d8f6e145-eb97-4224-a691-e8ceff2f3885",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.svs",
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.svs",
+      "verification_report": "reports/gdc_downloads_20261018.json"
+    },
+    {
+      "kind": "model_checkpoint",
+      "model": "CONCH v1 / conch_ViT-B-16",
+      "filename": "pytorch_model.bin",
+      "bytes": 802235437,
+      "checksum": {
+        "algorithm": "sha256",
+        "value": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c"
+      },
+      "revision": "f9ca9f877171a28ade80228fb195ac5d79003357",
+      "source_url": "https://huggingface.co/MahmoodLab/CONCH/resolve/f9ca9f877171a28ade80228fb195ac5d79003357/pytorch_model.bin",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+      "requires_user_approved_huggingface_access": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+      "verification_report": "reports/conch_v1_checkpoint_download_20261018.json"
+    }
+  ],
+  "gdc_metadata_source_url": "https://api.gdc.cancer.gov/files?filters=%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22file_id%22%2C+%22value%22%3A+%5B%227d71dc8e-8c6b-47ff-8ccc-c940a9bf1490%22%2C+%22d8f6e145-eb97-4224-a691-e8ceff2f3885%22%5D%7D%7D&fields=file_id%2Cfile_name%2Cfile_size%2Cmd5sum%2Caccess%2Cdata_type%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id%2Ccases.project.primary_site&size=2&format=JSON",
+  "gdc_response_sha256": "553f20ec7ceab84e876f3211ccea2d60b156f006a208a58ba74d999d8ec03600",
+  "purpose": "Re-encode one prostate host and one bladder donor with the same verified CONCH v1 image/text encoders. Existing v1.5 feature values must not be reused as v1 features.",
+  "destination_status": "All three approved inputs exist at their verified destinations on Delta with matching byte counts and source checksums. Files were published without overwriting existing work.",
+  "jobs_submitted": false,
+  "remaining_work_after_approval": [
+    "Inspect WSI header calibration; implement and test tiling, stopping on missing calibration.",
+    "Prepare a compatible CONCH environment and confirm model/preprocessing behavior inside an approved scheduled job.",
+    "Prepare and obtain approval for the concrete Slurm job before WSI processing or model inference.",
+    "Keep one-pair smoke separate from pilot/benchmark and retain exact oracle recovery."
+  ],
+  "no_download_alternative": "Organizer-provided CONCH v1 image/text embeddings with exact matching provenance, or existing raw WSIs/tiles and a verified CONCH v1 checkpoint.",
+  "storage_preflight": {
+    "path": "/work/nvme/bfqi/mhoda",
+    "writable": true,
+    "filesystem_available_bytes": 4121476751360,
+    "scope": "Filesystem-wide available space; not a verified per-user quota."
+  },
+  "approval": {
+    "source": "User explicitly approved the 4.80 GB downloads",
+    "date_local": "2026-10-18",
+    "jobs_authorized": false
+  },
+  "verified_download_bytes": 4801440256,
+  "download_status": "complete_and_checksum_verified"
+}

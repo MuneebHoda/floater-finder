@@ -1,0 +1,32 @@
+=====================================================
+Conda-Forge PyTorch 2.8 Environment Loaded Successfully!
+=====================================================
+
+To activate the environment:
+  conda activate base
+
+If 'conda activate' fails, use:
+  source $CONDA_PREFIX/etc/profile.d/conda.sh && conda activate base
+
+To verify PyTorch installation:
+  python -c "import torch; print(f'PyTorch {torch.__version__} CUDA:
+{torch.cuda.is_available()}')"
+
+Environment includes:
+  - PyTorch 2.8 with CUDA 12.8 support
+  - Scientific Python stack (numpy, scipy, pandas)
+  - ML libraries (transformers, lightning, timm)
+  - Cray PE integration with optimized MPI
+
+For Jupyter notebook support:
+  setup-kernel (creates Jupyter kernel for this environment)
+
+For distributed training, load:
+  module load aws-ofi-nccl/1.14.2
+
+Ready for single-node and distributed training!
+=====================================================
+
+/sw/rh9.4/user/python/conda-env/pytorch-2.8-cu128/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"status": "passed", "category": "smoke", "slurm_job_id": "22994703", "hostname": "cn004.delta.ncsa.illinois.edu", "source_gpu_job": "22994635", "host_slides": 2, "distinct_patients": 2, "seeds": 5, "contamination_levels": 6, "rows": 180, "oracle_verified_trials": 60, "failed_trials": 0, "prediction_changes": 26, "cross_process_preprocessing_verified": true, "plot_matplotlib_version": "3.10.6", "limitations": "Two patients, each a host and reciprocal donor; connected 128-tile subsets; no independent detector calibration.", "interpretation": "Descriptive software/research smoke. Seeds and reciprocal directions are not independent additional patients."}

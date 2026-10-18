@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "category": "smoke",
+  "slurm_job_id": "22994703",
+  "hostname": "cn004.delta.ncsa.illinois.edu",
+  "source_gpu_job": "22994635",
+  "host_slides": 2,
+  "distinct_patients": 2,
+  "seeds": 5,
+  "contamination_levels": 6,
+  "rows": 180,
+  "oracle_verified_trials": 60,
+  "failed_trials": 0,
+  "prediction_changes": 26,
+  "cross_process_preprocessing_verified": true,
+  "plot_matplotlib_version": "3.10.6",
+  "limitations": "Two patients, each a host and reciprocal donor; connected 128-tile subsets; no independent detector calibration.",
+  "interpretation": "Descriptive software/research smoke. Seeds and reciprocal directions are not independent additional patients.",
+  "remote_output": "/work/nvme/bfqi/mhoda/floater-finder/smoke/bidirectional-20261018T214911Z",
+  "local_artifact_directory": "results/smoke/conch_bidirectional_22994703",
+  "independent_local_validation": {
+    "matched_artifact_hashes": 7,
+    "oracle_trials_recomputed": 60,
+    "pooled_scores_and_counts_recomputed": 180,
+    "unique_host_denominator_per_seed": 2,
+    "recomputed_summary_matches": true,
+    "prediction_mismatches": 0,
+    "score_comparison_absolute_tolerance": 1e-07,
+    "maximum_observed_score_difference": 5.960464477539063e-08,
+    "delta_numpy": "2.2.6",
+    "local_numpy": "2.0.2"
+  },
+  "mean_eligible_flip_rates_by_requested_percent": [
+    {
+      "requested_percent": 0,
+      "mean": 0.0,
+      "top1pct": 0.0,
+      "top5pct": 0.0
+    },
+    {
+      "requested_percent": 0.5,
+      "mean": 0.0,
+      "top1pct": 0.2,
+      "top5pct": 0.0
+    },
+    {
+      "requested_percent": 1,
+      "mean": 0.0,
+      "top1pct": 0.4,
+      "top5pct": 0.0
+    },
+    {
+      "requested_percent": 2,
+      "mean": 0.0,
+      "top1pct": 0.4,
+      "top5pct": 0.0
+    },
+    {
+      "requested_percent": 5,
+      "mean": 0.0,
+      "top1pct": 0.4,
+      "top5pct": 0.4
+    },
+    {
+      "requested_percent": 10,
+      "mean": 0.0,
+      "top1pct": 0.4,
+      "top5pct": 0.4
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "run_id": "20261017T223436Z",
+  "category": "hosted CONCH connectivity smoke",
+  "research_result": false,
+  "endpoint": "http://gpub055.delta.ncsa.illinois.edu:8000",
+  "status": "passed",
+  "service_inference_succeeded": true,
+  "observed_cli_result": {
+    "status": "passed",
+    "report": "/work/nvme/bfqi/mhoda/conch-service-smoke-20261017T223436Z/smoke.json",
+    "research_result": false
+  },
+  "validation_contract": {
+    "tile_count": 2,
+    "embedding_dimensions": 512,
+    "finite_values_required": true,
+    "unit_normalization_tolerance": 0.001,
+    "evidence_scope": "Known deployed client returns passed only after validating these conditions; raw vectors have not yet been independently retrieved."
+  },
+  "expected_client_source_sha256": "864495b86c3d2f6290fcd5f15b8aba80526866dd483dcad0e9dabf35c216525c",
+  "remote_report": "/work/nvme/bfqi/mhoda/conch-service-smoke-20261017T223436Z/smoke.json",
+  "remote_embeddings": "/work/nvme/bfqi/mhoda/conch-service-smoke-20261017T223436Z/embeddings.json",
+  "raw_artifacts_retrieved": true,
+  "request_seconds": 0.14646833200094989,
+  "embedding_norms": [
+    0.9999999680936702,
+    1.0000000028404457
+  ],
+  "checkpoint_provenance_verified": false,
+  "full_experiment_compatible": false,
+  "new_slurm_job_submitted": false,
+  "datasets_or_weights_downloaded": false,
+  "credential_handling": "Provided by user; entered through the existing hidden Terminal prompt. No credential value is included in this report.",
+  "followup": {
+    "action": "Retrieve and independently inspect smoke.json and embeddings.json",
+    "status": "complete",
+    "remote_identity": {
+      "username": "mhoda",
+      "hostname": "dt-login04.delta.ncsa.illinois.edu"
+    },
+    "connection_retries_after_error": 0
+  },
+  "limitations": [
+    "This checks hosted image encoding; it is not a contamination or detector experiment.",
+    "Checkpoint hash, text embeddings, preprocessing provenance and complete per-class scores remain unavailable.",
+    "A suitable bladder donor, spatial scale, and independent development/evaluation cases are still needed."
+  ],
+  "retrieved_report": {
+    "category": "hosted CONCH connectivity smoke",
+    "research_result": false,
+    "endpoint": "http://gpub055.delta.ncsa.illinois.edu:8000",
+    "tiles": [
+      {
+        "tile_id": "b8c468ef-48ae-4abd-8590-2c25233c08a7_113920_24256",
+        "path": "/projects/bfqi/shared/datasets/pathgen_dataset/pathgen_2k_output/b8c468ef-48ae-4abd-8590-2c25233c08a7_113920_24256.png",
+        "bytes": 917797,
+        "sha256": "6474fb303b3aed9b606ce59a6d7f1b2ed6b30b5f53da3b2de0c591e8b7739834"
+      },
+      {
+        "tile_id": "b8c468ef-48ae-4abd-8590-2c25233c08a7_113248_18880",
+        "path": "/projects/bfqi/shared/datasets/pathgen_dataset/pathgen_2k_output/b8c468ef-48ae-4abd-8590-2c25233c08a7_113248_18880.png",
+        "bytes": 931657,
+        "sha256": "44d3b583a96d91b2aaa2b019147469f6ef63dddf153fee54d7eaecb60a432b72"
+      }
+    ],
+    "user_confirmed_individual_access": true,
+    "checkpoint_provenance_verified": false,
+    "full_experiment_compatible": false,
+    "new_slurm_job_submitted": false,
+    "service_inference_succeeded": true,
+    "health": {
+      "status": "ok",
+      "model": "conch",
+      "device": "cuda"
+    },
+    "request_seconds": 0.14646833200094989,
+    "status": "passed",
+    "tile_count": 2,
+    "dimensions": 512,
+    "embedding_norms": [
+      0.9999999680936702,
+      1.0000000028404457
+    ],
+    "timing_scope": "HTTP round trip, not GPU throughput"
+  },
+  "remote_embedding_file_sha256": "99302e4b4d1fe8169444ad1161ca40e2723c41b4f8bdbf343b79fc051e6bae63",
+  "local_vectors": "results/smoke/conch_service_20261017T223436Z/embeddings.json"
+}

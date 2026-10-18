@@ -7,6 +7,7 @@ import itertools
 import json
 import os
 from pathlib import Path
+import re
 import time
 
 import numpy as np
@@ -15,6 +16,11 @@ from PIL import Image
 from .artifacts import Slide, TextEmbeddings, normalize, write_json
 from .experiments import file_sha256, read_config
 from .scoring import ensemble_prompts
+
+
+def preprocessing_signature(preprocess):
+    # Callable addresses vary by process, although their transformations do not.
+    return re.sub(r" at 0x[0-9a-fA-F]+(?=>)", "", repr(preprocess))
 
 
 def check_interface(model):
@@ -77,7 +83,10 @@ class ConchEncoder:
         source_hash = file_sha256(source_file)
         self.provenance = {"name": "conch_v1", "revision": f"package:{version};source-sha256:{source_hash}",
             "checkpoint_sha256": file_sha256(checkpoint), "projection": True, "normalized": True,
-            "preprocessing": repr(self.preprocess), "torch_version": str(torch.__version__),
+            "preprocessing": preprocessing_signature(self.preprocess),
+            "preprocessing_source_sha256": file_sha256(Path(inspect.getfile(create_model_from_pretrained)).with_name("transform.py")),
+            "tokenizer_source_sha256": file_sha256(Path(inspect.getfile(get_tokenizer))),
+            "torch_version": str(torch.__version__),
             "encoder_weight_coverage_verified": True}
         torch.cuda.synchronize()
         self.load_seconds = time.perf_counter() - started

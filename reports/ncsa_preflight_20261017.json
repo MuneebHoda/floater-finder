@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-17",
+  "phase": "hosted CONCH smoke passed again; both runs retrieved and independently validated",
+  "individual_conch_access": "confirmed by user; no credentials inspected",
+  "remote_identity": {
+    "username": "mhoda",
+    "hostname": "dt-login04.delta.ncsa.illinois.edu"
+  },
+  "verified_module_environment": {
+    "module": "pytorch-conda/2.8",
+    "python": "3.11.13",
+    "python_executable": "/sw/rh9.4/user/python/conda-env/pytorch-2.8-cu128/bin/python",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "numpy": "2.2.6",
+      "Pillow": "11.3.0",
+      "PyYAML": "6.0.2",
+      "conch": null,
+      "open_clip_torch": null,
+      "trident": null
+    },
+    "scope": "package metadata only; no login-node torch import or computation"
+  },
+  "hosted_service_health": {
+    "kind": "unauthenticated_health_only",
+    "endpoint": "http://gpub055.delta.ncsa.illinois.edu:8000",
+    "inference_performed": false,
+    "http_status": 200,
+    "health": {
+      "status": "ok",
+      "model": "conch",
+      "device": "cuda",
+      "batches_run": 53,
+      "requests_run": 53
+    }
+  },
+  "first_embed_attempt": {
+    "category": "real CONCH service connectivity smoke",
+    "research_result": false,
+    "user_confirmed_individual_access": true,
+    "endpoint": "http://gpub055.delta.ncsa.illinois.edu:8000",
+    "output_directory": "/work/nvme/bfqi/mhoda/floater-conch-service-smoke-20261017T221526Z",
+    "client_role": "lightweight HTTP client; inference executes on the organizers compute-node service",
+    "scheduled_gpu_job_submitted": false,
+    "checkpoint_provenance_verified": false,
+    "full_experiment_compatible": false,
+    "health": {
+      "status": "ok",
+      "model": "conch",
+      "device": "cuda"
+    },
+    "status": "authentication_required",
+    "http_status": 401,
+    "inference_verified": false
+  },
+  "dataset_inventory": {
+    "directory": "/projects/bfqi/shared/datasets/pathgen_dataset/pathgen_2k_output",
+    "source_metadata_path": "/projects/bfqi/shared/datasets/pathgen_dataset/PathGen-2k_samples.json",
+    "source_metadata_sha256": "b8a6e274a9b00fe7a8dd65e2da092e34a008498264b350d682b8218ca671d527",
+    "metadata_records": 2141,
+    "unique_slides": 10,
+    "gdc_matched_files": 10,
+    "projects_by_slide_count": {
+      "TCGA-BRCA": 1,
+      "TCGA-COAD": 2,
+      "TCGA-KIRC": 2,
+      "TCGA-LGG": 1,
+      "TCGA-LUAD": 1,
+      "TCGA-LUSC": 1,
+      "TCGA-PRAD": 1,
+      "TCGA-READ": 1
+    },
+    "prad_cases": [
+      {
+        "file_id": "b8c468ef-48ae-4abd-8590-2c25233c08a7",
+        "slide_id": "TCGA-H9-A6BY-01Z-00-DX1.304BEB19-3F0A-4676-B077-A4650F5C84A5",
+        "patient_id": "TCGA-H9-A6BY",
+        "project": "TCGA-PRAD",
+        "primary_site": "Prostate",
+        "source_metadata_tile_count": 208,
+        "access": "open",
+        "data_type": "Slide Image",
+        "diagnostic_status": "DX naming convention; independent diagnostic status unverified",
+        "microns_per_unit": "",
+        "linked_report_path": "",
+        "source_metadata_path": "/projects/bfqi/shared/datasets/pathgen_dataset/PathGen-2k_samples.json",
+        "source_metadata_sha256": "b8a6e274a9b00fe7a8dd65e2da092e34a008498264b350d682b8218ca671d527",
+        "gdc_file_url": "https://portal.gdc.cancer.gov/files/b8c468ef-48ae-4abd-8590-2c25233c08a7"
+      }
+    ],
+    "blca_cases_in_this_sample": 0,
+    "inventory_csv": "reports/ncsa_pathgen_inventory_20261017.csv",
+    "gdc_metadata_source_url": "https://api.gdc.cancer.gov/files?filters=%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22file_id%22%2C+%22value%22%3A+%5B%2232abfee5-daea-4816-8c24-122dbf593aff%22%2C+%224b2dd194-703b-4c2e-bcbd-39a0e7056834%22%2C+%224cff975b-adbe-4ecf-9be5-365c715e2305%22%2C+%229ae2309d-02ee-42cb-bfa8-5c81ac7ea947%22%2C+%22a7002593-8da9-4d5a-9b66-75a85f3ee466%22%2C+%22b8c468ef-48ae-4abd-8590-2c25233c08a7%22%2C+%22bffacf34-4942-496d-9c5d-d36294d80a9d%22%2C+%22c362b1ce-0af7-43a4-80f5-43d849262abc%22%2C+%22ed7c20f8-e2a0-4a07-baaf-5002433d8c0c%22%2C+%22fc0bea2d-902e-4736-8472-730036043c51%22%5D%7D%7D&fields=file_id%2Cfile_name%2Cdata_type%2Caccess%2Ccases.submitter_id%2Ccases.project.project_id%2Ccases.project.primary_site&size=10&format=JSON",
+    "gdc_response_sha256": "318ea875e7477ed2eb9c67ba55aabefe7e01b44195639e2671440f74f32ea292",
+    "unresolved": [
+      "Physical coordinate scale and magnification",
+      "Independent diagnostic status and report linkage",
+      "An appropriate TCGA-BLCA donor and additional independent development/evaluation patients"
+    ],
+    "note": "No captions or clinical reports copied. Public GDC file metadata only; no WSI or weight downloads. Position fields in source metadata contain numeric strings; their physical units were not inferred."
+  },
+  "checks": {
+    "local_tests_passed": 64,
+    "service_requires_authentication": true,
+    "successful_conch_inference": true,
+    "new_slurm_job_submitted": false,
+    "datasets_or_weights_downloaded": false
+  },
+  "limitations": [
+    "Published service API does not expose text embeddings, checkpoint hashes or full per-class scores; this smoke result cannot become a full research artifact.",
+    "The public metadata sample contains no BLCA case; this does not establish that BLCA data are absent elsewhere."
+  ],
+  "next_command_from_mac_terminal": "cd '/Users/muneebhoda/Documents/Masters - Fall 2026/Ashby Hackathon' && cat reports/conch_service_smoke_20261018T205624Z.json",
+  "smoke_script_deployment": {
+    "deployment_root": "/u/mhoda/floater-finder",
+    "note": "Initial staging snapshot; current client and launcher hashes are recorded in followup_cli_error_fix.",
+    "files": {
+      "/u/mhoda/floater-finder/scripts/conch_service_smoke.py": {
+        "sha256": "90393a6e07bd9a7d17959b51488843eabef3ad96d43fccb2b3e36590ee28a8cf",
+        "mode": "0o600"
+      },
+      "/u/mhoda/floater-finder/configs/ncsa_prad_service_smoke.csv": {
+        "sha256": "cfae711763e20fe59813b0c50060deec265b7601b82dc17c0b61bc5b6688edc8",
+        "mode": "0o600"
+      }
+    },
+    "help_check_passed": true,
+    "authenticated_output_path_available": true
+  },
+  "followup_cli_error_fix": {
+    "backup": "/u/mhoda/floater-finder/scripts/conch_service_smoke.py.backup-20261017T222407Z",
+    "files": {
+      "/u/mhoda/floater-finder/scripts/conch_service_smoke.py": {
+        "sha256": "864495b86c3d2f6290fcd5f15b8aba80526866dd483dcad0e9dabf35c216525c",
+        "mode": "0o600"
+      },
+      "/u/mhoda/floater-finder/scripts/run_ncsa_service_smoke.sh": {
+        "sha256": "b175a4d16167f44484f90c432638f79b2a74da3172d3b6674f335390e0583b89",
+        "mode": "0o600"
+      }
+    },
+    "help_and_bash_syntax_checks_passed": true,
+    "observed_existing_output": "/work/nvme/bfqi/mhoda/conch-service-smoke-authenticated-20261017",
+    "saved_status": "authentication_required",
+    "http_status": 401,
+    "script_tests_passed": 13,
+    "new_inference_attempted": false,
+    "next_command_from_delta_terminal": "bash /u/mhoda/floater-finder/scripts/run_ncsa_service_smoke.sh"
+  },
+  "next_command_from_delta_terminal": "cat /work/nvme/bfqi/mhoda/conch-service-smoke-20261018T205624Z/smoke.json",
+  "latest_service_smoke": {
+    "report": "reports/conch_service_smoke_20261018T205624Z.json",
+    "status": "passed",
+    "remote_report": "/work/nvme/bfqi/mhoda/conch-service-smoke-20261018T205624Z/smoke.json",
+    "raw_artifacts_retrieved": true,
+    "independent_validation": {
+      "rows": 2,
+      "dimensions": 512,
+      "finite": true,
+      "norms": [
+        0.9999999680936702,
+        1.0000000028404457
+      ],
+      "same_vectors_as_previous_run": true
+    },
+    "new_slurm_job_submitted": false
+  },
+  "last_verified_date_local": "2026-10-18",
+  "verified_live_service_interface": {
+    "paths": [
+      "/classify",
+      "/embed",
+      "/health"
+    ],
+    "schema_properties": {
+      "ClassifyRequest": [
+        "images",
+        "prompts"
+      ],
+      "EmbedRequest": [
+        "images"
+      ],
+      "HTTPValidationError": [
+        "detail"
+      ],
+      "ValidationError": [
+        "loc",
+        "msg",
+        "type"
+      ]
+    }
+  }
+}

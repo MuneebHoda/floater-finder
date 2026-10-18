@@ -1,6 +1,6 @@
 # Floater Finder progress
 
-2026-10-17, America/Chicago. No real experimental results yet.
+Initial implementation 2026-10-17; latest verification 2026-10-18, America/Chicago. Real observations are limited to the explicitly labeled smokes below.
 
 ## Environment and sources
 
@@ -19,10 +19,10 @@
 | Pooling and zero-shot scoring | COMPLETE | Hand-computed tests, per-class top 1%/5%, ceil K, deterministic ties. |
 | Connected contamination and oracle recovery | COMPLETE | Repeatability, integer rounding, patient separation, spatial validity and exact host restoration tests. |
 | Data inventory and stress runner | COMPLETE | Bounded discovery, provenance/missing-data report, patient-split checks, raw scores, exclusions, source/input hashes and eligibility metrics; CLI exercised. |
-| Real CONCH inference / PRAD-BLCA pilot | BLOCKED | No real patient-attributed slides/checkpoint/environment; NCSA unavailable this session; job authorization required. |
+| Real CONCH inference / PRAD-BLCA pilot | PARTIAL | Hosted two-real-tile image-encoding tests passed on October 17 and 18; both runs retrieved and independently validated. Two independent diagnostic host/donor WSIs and a pinned v1 checkpoint are now downloaded; full pilot still needs tiles, matching image/text artifacts, spatial scale, runtime validation and independent development/evaluation cases. |
 | Detector and calibration software | COMPLETE | Organ-only, distant-neighbor visual, combined, oracle, no-filter and matched random-removal comparisons; separate-patient calibration and clean-control tests. Fixture validation only. |
-| Real detector evaluation and scientific charts | BLOCKED | No actual target-cohort embeddings or independent real development/evaluation cases. No research chart produced. |
-| Raw WSI tiling integration | NOT STARTED | Current encoder requires pre-extracted tiles with verified positions/scale. TRIDENT installed version/access remains unknown. |
+| Real detector evaluation and scientific charts | SMOKE COMPLETE | Four real patients, separate development/evaluation, 60 oracle trials and verified descriptive figures. Conservative threshold detects few donor tiles; no population or clinical validation. |
+| Raw WSI tiling integration | COMPLETE FOR CAPPED SMOKE | Scheduled raw-pixel extraction using verified spatial masks, measured MPP, common physical resampling and exact provenance. Full-slide segmentation/sampling is separate work. |
 | Additional models and secondary cohorts | NOT STARTED | CONCH-first scope. |
 
 ## Implemented files
@@ -83,9 +83,115 @@ These are software checks only. There are **no real-data smoke, pilot or benchma
 
 ## Remaining inputs and approvals
 
-1. Restore manual NCSA access when ready. This session's one batch-mode SSH check was exhausted; no repeated authentication attempt was made. Earlier CPU/GPU allocation and storage facts remain historical, not newly verified.
+1. Manual NCSA access has now been restored and the approved infrastructure smoke job completed; see the latest session below. CUDA computation, installed CONCH dependencies and target data availability still need verification.
 2. Identify patient-attributed PRAD/BLCA diagnostic slides or existing tile manifests, including project/label/report provenance, split and spatial metadata. The separate updated proposal remains unavailable; the master specification was sufficient for this implementation.
 3. Identify an already-local authorized CONCH checkpoint and verify the installed module/model interface. The upstream source was inspected at CONCH commit `141cc09c7d4ff33d8eda562bd75169b457f71a62` and TRIDENT commit `bdeeb74b7eaad8d48bda232bde7de66cae980918`; those are not claims about a remote installation.
 4. Explicitly approve any Slurm execution before submission. Driver smoke: `bfqi-delta-gpu`, QoS `bfqi-delta-gpu-mhoda`, `gpuA100x4`, 1 GPU, 1 CPU, 2 GB, 2 minutes. Separate CONCH draft: same account/QoS/partition, 1 GPU, 4 CPUs, 16 GB, 5 minutes, at most 128 existing tiles. No reservation name invented.
 
-No credentials were requested, no SSH config was changed, and no job, model/dataset download, remote copy, remote package installation or actual inference was performed. GPU access remains unverified.
+At the end of local implementation, no credentials were requested, no SSH config was changed, and no job, model/dataset download, remote copy, remote package installation or actual inference had been performed. The later approved GPU test is recorded separately below.
+
+## Latest session: approved GPU infrastructure smoke
+
+Status: **COMPLETE**. The user authorized GPU testing and manually restored shared SSH. A single connection check succeeded as `mhoda` on `dt-login01`. Preflight showed an empty queue and the expected GPU allocation. Submitted `scripts/ncsa_smoke.sbatch` once via `ssh -o BatchMode=yes -o ConnectTimeout=8 ncsa-floater 'sbatch --parsable'`, passing the script on stdin.
+
+Job `22957101`: account `bfqi-delta-gpu`, QoS `bfqi-delta-gpu-mhoda`, partition `gpuA100x4`, 1 GPU, 1 CPU, 2 GB memory, two-minute limit. It initially waited for reservation routing, then ran automatically under reservation `sup-30434-17`. Slurm reports **COMPLETED**, exit `0:0`, elapsed **five seconds**, node `gpua038`. Both `srun` steps completed successfully. Output reported **NVIDIA A100-SXM4-40GB**, driver **595.71.05**.
+
+Exact monitoring queries included:
+
+```sh
+ssh -o BatchMode=yes -o ConnectTimeout=8 ncsa-floater 'whoami && hostname'
+ssh -o BatchMode=yes ncsa-floater 'squeue -j 22957101 -h -o "%i|%j|%P|%T|%R"'
+ssh -o BatchMode=yes ncsa-floater 'sacct -j 22957101 -n -P --format=JobID,State,ExitCode,Elapsed,ElapsedRaw,Start,End,NodeList,AllocTRES'
+```
+
+Monitoring was performed through bounded remote Python subprocesses using those Slurm arguments. No job was resubmitted. Evidence is in `reports/gpu_smoke_22957101.json` and `reports/gpu_smoke_22957101.log`; remote stdout is `/work/nvme/bfqi/mhoda/floater-smoke-22957101.out`.
+
+This verifies scheduled GPU allocation, NVIDIA driver visibility and a small log write. It is an infrastructure test, not a real-data research result. CUDA tensor computation, PyTorch/CONCH execution and model throughput remain untested. No model/data download or inference was launched. The CONCH draft remains unsubmitted pending verified inputs.
+
+## Next stage: real CONCH service preflight
+
+The user requested the next stage, confirmed individual Hugging Face CONCH access, and supplied the organizer's host/port. Shared SSH again verified `mhoda` on `dt-login01`. The documented `pytorch-conda/2.8` module loaded successfully; package metadata reports Python 3.11.13, torch 2.8.0+cu128, NumPy 2.2.6, Pillow 11.3.0, PyYAML 6.0.2. CONCH/OpenCLIP/TRIDENT distributions were absent. No login-node torch import, computation, package installation or new Slurm submission occurred.
+
+Verified existing shared data without a WSI download: PathGen metadata has 2,141 records from ten slides, matched by public GDC file IDs to project and patient metadata. The bounded image-directory listing found 2,141 PNG files. One TCGA-PRAD patient has 208 tiles; no TCGA-BLCA case occurs in this small sample. Source position fields are numeric strings; physical units/scale were not inferred. Captions and clinical reports were not copied. Recorded the verified inventory in `reports/ncsa_pathgen_inventory_20261017.csv` and the preflight in `reports/ncsa_preflight_20261017.json`; raw non-secret metadata snapshots remain under ignored `results/inventory/ncsa_20261017T221233Z/`.
+
+The supplied HTTPS URL failed its handshake. The documented HTTP protocol at the same host/port returned health `ok`, model `conch`, device `cuda`. One two-tile `/embed` request without credentials returned 401 and was not retried. No actual embedding result was obtained. The failed attempt's non-secret report is `/work/nvme/bfqi/mhoda/floater-conch-service-smoke-20261017T221526Z/smoke.json`.
+
+Added `scripts/conch_service_smoke.py`, `configs/ncsa_prad_service_smoke.csv`, and ten tests. The standalone standard-library client uses exactly two capped, existing prostate images; checks model/device, response count/dimensions/finiteness/normalization; refuses redirects and existing output; and reports authentication failure once without logging response bodies or exception messages. It prompts for the organizer's service API key only in the user's interactive Terminal and never saves it or accepts it on the command line. The key has not been provided to the agent.
+
+Staged that script and manifest under `/u/mhoda/floater-finder/` with owner-only file permissions, verified matching source hashes, and executed the deployed `--help` successfully. This is not a full remote checkout. `.venv/bin/python -m pytest -q -W error`: **64 passed**. The user's exact next command is in `docs/ncsa_setup.md`, using a hidden API-key prompt and a new output directory. Successful authenticated CONCH inference remains pending that manual authentication step.
+
+The published hosted API does not provide text embeddings, all per-class scores or checkpoint/preprocessing provenance. A successful connectivity smoke must not be promoted into a full scientific artifact. Full PRAD/BLCA experiments also still require a bladder donor, independent development/evaluation patients, verified physical scale and remaining diagnostic/report provenance. No scientific results, model/WSI downloads, or throughput claims were produced.
+
+## Follow-up: pasted-command startup failure
+
+The user's pasted command included a Markdown link in `--endpoint`. A read-only check also found the fixed output directory already present, with a user-run `smoke.json` reporting HTTP 401. The old generic startup message obscured these distinct failures. Added specific pre-key endpoint/output/tile checks and `scripts/run_ncsa_service_smoke.sh`, which supplies the verified plain URL and a timestamped output directory. The user can run one short command from their existing Delta shell, with no URL or line continuations to copy.
+
+`tests/test_service_smoke.py`: **13 passed**, including new regression checks for Markdown URLs, existing-output errors before key entry, and launcher argument construction without contacting the service. Bash syntax passed. Verified the previous deployed source hash, preserved a backup, and staged the corrected client and launcher. No API key was read, no authentication retry or inference request was made, no job was submitted, and existing result directories were preserved. Successful authenticated CONCH inference remains pending the organizer's service key in the user's Terminal.
+
+## Hosted CONCH image-encoding smoke: passed
+
+The user explicitly supplied and authorized use of the organizer's service credential. After one successful shared-connection identity check, ran the existing launcher in an interactive SSH Terminal and supplied the credential only at its hidden prompt. The process exited zero and returned `status=passed`, report `/work/nvme/bfqi/mhoda/conch-service-smoke-20261017T223436Z/smoke.json`, `research_result=false`. No credential value was written to repository files, scripts, command arguments or reports. No new Slurm job, model download or dataset download was performed.
+
+The known deployed client requires two finite, unit-normalized 512-dimensional vectors before returning `passed`. This verifies the authenticated hosted image-encoding request, using two existing TCGA-PRAD images. It does not verify checkpoint hashes, text embeddings, full per-class scores or scientific contamination/detection behavior. Recorded execution evidence and its limits in `reports/conch_service_smoke_20261017T223436Z.json` and updated the preflight status.
+
+The shared SSH session closed after the interactive run. The next attempt to retrieve the exact report/vector files failed with `Permission denied (gssapi-with-mic,password)`; authentication was not retried. Raw artifacts, exact norms and latency are still remote, and the intended live OpenAPI inspection did not execute. Manual `ssh ncsa-floater` plus password/Duo is the next step before retrieving the existing outputs. No code changed after the prior 13 targeted tests, so tests were not repeated for these evidence/documentation updates.
+
+## October 18: retrieved results and fresh authenticated smoke
+
+The user confirmed manual reconnection and explicitly requested another CONCH run. The shared connection verified `mhoda` on `dt-login04.delta.ncsa.illinois.edu`; the deployed client SHA-256 matched the local tested source. Retrieved the previous run's report and vectors first, independently validating two finite 512-dimensional rows and unit norms. Updated `reports/conch_service_smoke_20261017T223436Z.json` to mark retrieval complete; its artifacts are under ignored `results/smoke/conch_service_20261017T223436Z/`.
+
+Ran exactly one fresh two-image request through the hosted CONCH service, entering the authorized credential only at the hidden interactive prompt. The client returned `passed`. Kept the test Terminal open while copying the artifacts, then closed it normally. Fresh remote output is `/work/nvme/bfqi/mhoda/conch-service-smoke-20261018T205624Z/`; local vectors/report are under ignored `results/smoke/conch_service_20261018T205624Z/`, with non-secret evidence in `reports/conch_service_smoke_20261018T205624Z.json`.
+
+Independent validation: two rows, 512 dimensions, finite values, norms `0.9999999680936702` and `1.0000000028404457`; vectors match the previous run exactly on identical inputs. Remote embedding-file SHA-256 verified as `99302e4b4d1fe8169444ad1161ca40e2723c41b4f8bdbf343b79fc051e6bae63`. Fresh HTTP round-trip latency was `0.14031214600254316` seconds for both images, not a GPU throughput benchmark. No new Slurm job or dataset/model download occurred.
+
+The live public OpenAPI schema confirms `/health`, `/embed`, `/classify` only. There is no published text-vector or checkpoint-provenance endpoint; full research artifact compatibility remains unresolved. The bladder donor, additional independent patients and verified physical scale remain missing. This completes the requested real CONCH smoke stage without producing scientific contamination/detector results. No code changed in this run; validation consisted of actual result/schema inspection rather than repeating unchanged software tests.
+
+## Next experiment: cohort discovery and compatible-input plan
+
+On the user's request to advance, a single shared-connection check verified `mhoda` on `dt-login04`. Bounded relevant-root inspection found the previously uninspected `/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5`. Completed filename inventories count 401 PRAD HDF5 files (401 patient barcode prefixes) and 457 BLCA files (386 prefixes). Inspected metadata only for two files per cohort: float32 features `[N,768]`, int64 coordinates `[N,2]`, encoder `conch_v15`, target magnification 20X, patch size 512, level-0 footprint 1,024, overlap zero. No feature arrays were read or processed. Saved metadata evidence in `reports/ncsa_conch_v15_inventory_20261018.json`.
+
+Public GDC metadata independently confirmed the four sampled filenames, patient IDs, projects, organs, open access and `Diagnostic Slide` status; saved in `reports/ncsa_conch_v15_gdc_samples_20261018.json`. This establishes real shared bladder data, but its v1.5/768-dimensional feature space is incompatible with the current v1/512-dimensional dual encoder. No artificial padding, fabricated model provenance, scoring or experimental results were introduced.
+
+Prepared `docs/next_experiment.md`, including a local, unsent organizer request for matching v1 inputs/text/provenance. An alternative `configs/ncsa_conch_v1_download_plan.json` specifies two independent diagnostic WSIs plus the original pinned CONCH v1 checkpoint: 4,801,440,256 bytes total. GDC MD5 checksums and Hugging Face checkpoint size/SHA-256 are verified metadata; no file bodies downloaded. Proposed storage paths are clearly marked as new and uncreated. The verified personal NVMe parent is writable with sufficient filesystem-wide available space; user quota remains unverified. Download approval, observed WSI calibration/tiling work and separate concrete Slurm approval are still required before that route can execute.
+
+No job, large download, array processing, new inference, or scientific experiment was performed during this stage. Existing CONCH v1 artifact/prompt/patient safeguards remain unchanged. Validation was source metadata cross-checking and JSON/plan consistency checks, not repeated software tests.
+
+## Approved input downloads: completed October 18
+
+The user explicitly approved 4,801,440,256 bytes of downloads, with no new Slurm submission. Reconfirmed execution on the local Mac and remote identity `mhoda` on `dt-login04`. Created `scripts/download_approved_inputs.py` to stream only the approved public GDC endpoints, reject oversized or checksum-mismatched responses, preserve existing files and publish validated downloads without overwriting. Four targeted tests passed, including checksum failure and preservation of existing work.
+
+Downloaded both diagnostic WSIs into the verified personal NVMe input root. Host `TCGA-2A-A8VL`: 1,713,266,379 bytes, MD5 `3b0d857552028cb3b6ace58d8f528706`. Donor `TCGA-2F-A9KP`: 2,285,938,440 bytes, MD5 `818189a55031640f8d4effb7dbef622e`. Streaming checksum verification passed for each; evidence is `reports/gdc_downloads_20261018.json`.
+
+The existing Safari session visibly confirmed granted CONCH access. Downloaded the pinned original checkpoint through that session, without extracting browser cookies or credential files. Verified its size and SHA-256 locally, then streamed it to Delta and checked the same size/hash before publishing the final filename: `/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin`, 802,235,437 bytes, SHA-256 `40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c`. Evidence is `reports/conch_v1_checkpoint_download_20261018.json`. Updated the input plan with actual verified destinations and the explicit download-only approval.
+
+All three inputs are now ready in storage. No WSI processing, model load, new inference, Slurm submission or scientific experiment was performed. Physical calibration, tiling and runtime preparation remain before a concrete job can be proposed for approval. No commits or pushes were performed in this download stage.
+
+Final storage checks found that Delta default ACLs override file-creation umask. Restricted the three new input files and their download report to mode `600`, and removed group/other access from the five new input directories while retaining inherited setgid. Updated the downloader to enforce file mode with `fchmod`, verified the behavior in its four passing tests, and backed up the deployed previous script before updating it. Final sizes, ownership, modes, plan snapshot and script hashes are recorded in `reports/ncsa_inputs_verified_20261018.json`.
+
+## Continuous-job authorization, physical tiling and runtime preparation
+
+The user authorized ongoing Delta jobs on October 18 without repeated approval requests; updated `AGENTS.md` to record the scope. Kept existing files and staged new timestamped remote source snapshots with per-file hashes.
+
+Implemented `tiling.py`, `scripts/ncsa_runtime_preflight.py`, `scripts/ncsa_one_pair_smoke.py` and two Slurm scripts. The tiler validates WSI/coordinate identity, requires observed MPP, uses existing coordinates without reading v1.5 feature values, normalizes the physical field through fractional BICUBIC resampling, selects a deterministic connected subset and saves exact spatial provenance plus contact sheets. Added measured-calibration rejection, connectedness/determinism, physical resampling, Slurm-only execution and actual raster-export tests. Full local suite: **76 passed** with warnings treated as errors. Both Slurm scripts pass Bash syntax checks.
+
+CPU job `22994404` completed `0:0` on `cn004`. It installed a private pinned CONCH/OpenSlide environment, rehashed all input bytes, checked actual WSI dimensions and observed MPP, and validated tokenizer output offline without loading a model. The two scanners differ (0.2527 versus 0.2277 microns/pixel), so forcing equal source MPP would be invalid. The common output uses 256-micron fields, 512 pixels and physical-grid coordinates; source MPP remains in provenance. Evidence: `reports/ncsa_runtime_preflight_22994404.json` and its source/resource submission record.
+
+Submitted one GPU smoke job `22994469`, bounded to 128 tiles per slide, fixed prompts, six contamination levels, one seed and mandatory oracle recovery. No further raw input or model download occurred. The GPU outcome is recorded after completion below; submission alone is not a successful model result.
+
+## Real GPU smoke and provenance regression: verified
+
+Initial GPU smoke `22994469` completed `0:0` in 68 seconds on `gpua029`, producing real projected image/text vectors, 18 stress rows and six exact oracle passes. Retrieved and independently validated 22 artifacts. Found and fixed a genuine provenance bug: transform `repr` saved a process-specific function address, making otherwise identical future jobs appear incompatible. Added a regression test, stripped only transient addresses and recorded installed transform/tokenizer source hashes. Preserved the initial legacy artifacts without editing their scientific metadata.
+
+Repeat GPU smoke `22994635` completed `0:0` in 61 seconds on the same A100 node. Both image arrays are `[128,512]`; all values satisfy the normalized real-artifact contract, and repeated text vectors have the same fingerprint within the run. Image/text values exactly reproduce the initial job. Independently recomputed six injections/oracles and all 18 pooled class-score rows. Actual foreign counts for requested 0/0.5/1/2/5/10 percent are 0/1/2/3/7/13; realized counts and raw scores are retained. Both original subsets receive their expected organ labels; the prostate-host direction has no observed prediction changes in this seed. These are one-pair subset observations, not a cohort robustness claim. Canonical evidence: `reports/conch_one_pair_smoke_22994635.json`.
+
+Full suite now **80 passed** with warnings as errors. Added login-node guards for all scheduled scripts and corrected chart labeling to distinguish requested from realized contamination and display host/seed counts. Submitted CPU follow-up `22994703` to reuse these embeddings in both directions across five fixed seeds; no additional GPU inference or input download is involved. Outcome follows after verification.
+
+## Independent calibration and detector smoke: completed
+
+Under the user's instruction to continue the plan without repeated permission requests, staged two additional public, GDC-verified diagnostic WSIs (5,188,681,471 bytes) for development-only calibration. MD5 checks passed for both. The current evaluation pair remains excluded from calibration; no bulk cohort or new checkpoint was downloaded. Total verified inputs are 9,990,121,727 bytes.
+
+GPU job `22994850` completed `0:0` in 71 seconds, producing two additional `[128,512]` clean-development artifacts with canonical v1 provenance, observed MPP and the same physical resampling protocol. Retrieved and hash-verified 15 artifacts and checked patient/model/text separation. CPU detector job `22994885` completed `0:0` in 14 seconds: 60 oracle trials, 180 variant rows, zero exclusions, complete organ/visual/combined, no-filter, oracle and matched random-removal controls. The 1 mm exclusion, 0.1 mm smoothing, equal weighting and 99th-percentile threshold were frozen before detector evaluation.
+
+The result is an honest limitation: at 10% requested contamination, combined mean AUROC is 0.949 but mean injected-tile detection is only 3.85%, with no original-host removal in that stratum. These means describe two evaluation hosts across five seeds; they are not a population estimate. Development thresholds use two other patients. Native contamination has not been reviewed; clean means no synthetic injection. The evaluation cases have not been used to retune the threshold.
+
+Retrieved 184 detector files and independently reproduced all 60 oracle trials, every variant flag and count metric. Standardized scores agree within 1.47e-6 across recorded NumPy versions. Saved validated reports, exact raw metric tables and two descriptive figures under `reports/`; raw tiles, arrays, WSIs and weights remain outside tracked artifacts. All six new jobs completed `0:0`, final queue empty; local **82 tests passed**. Further work needs representative development patients and fresh held-out cases, broader slide sampling, report/institution provenance and clinical review before stronger claims.

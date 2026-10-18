@@ -1,0 +1,36 @@
+{
+  "job_id": "22994703",
+  "release": "/u/mhoda/floater-finder/releases/20261018T214911Z",
+  "environment": "/work/nvme/bfqi/mhoda/floater-finder/envs/conch-v1-20261018T214122Z",
+  "input": "/work/nvme/bfqi/mhoda/floater-finder/smoke/one-pair-20261018T214721Z",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/smoke/bidirectional-20261018T214911Z",
+  "source_gpu_job": "22994635",
+  "category": "bidirectional five-seed smoke; reuse existing vectors",
+  "authorization": "User authorized ongoing Delta jobs on 2026-10-18",
+  "resources": {
+    "account": "bfqi-delta-cpu",
+    "partition": "cpu",
+    "cpus": 2,
+    "memory_gb": 8,
+    "wall_minutes": 5,
+    "gpus": 0
+  },
+  "source_sha256": {
+    "src/floater_finder/injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+    "src/floater_finder/detection.py": "4cd353fdce0052d2d2ac4e17fc6e72840afab8f2cfb294072e67b6c442dc6148",
+    "src/floater_finder/scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "src/floater_finder/__init__.py": "73801f9e216e3274115b40665dadd7330884f4ad95efe98576564d607327d4e6",
+    "src/floater_finder/experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+    "src/floater_finder/cli.py": "b4d57a3c63d4e375b64e24162995c7c958699dfb7c6255400882e15b58b154d3",
+    "src/floater_finder/tiling.py": "128676385968c6267cf8ea95d79430fad7b31abdfeda99e89f59015b9f338ab2",
+    "src/floater_finder/conch.py": "a8647f5fa5c2b5837109bf1858137dc4397b0be67bb749acc571bb02bf666c1d",
+    "src/floater_finder/artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+    "src/floater_finder/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/floater_finder/fixtures.py": "054d38f95f4e079d901134276a3262533a32ee147156b00ece26859c14bbe868",
+    "src/floater_finder/reporting.py": "01182b210d17c0430eec881103610781a74ff189a412fd9be2af85b4eabbbab2",
+    "src/floater_finder/inventory.py": "93c85975c7149d43b13d3c304894ea87c45bc59c852e152b148efd3d2bd9a4d6",
+    "configs/conch_smoke.yaml": "ce1e318dfb56eb66b0aff6ef6716431bb78ee23f3fae945b70849ef4f09417a4",
+    "scripts/ncsa_bidirectional_smoke.py": "cdb8ca29b0225bb93e0b87c71fbc4b3d224a945082bc2bdeebff2bfca375e41d",
+    "scripts/slurm/conch_bidirectional.sbatch": "9a45805c6880b880214c31c2757bffef6a2ba786920299e5490b422e63d3c162"
+  }
+}

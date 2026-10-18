@@ -1,0 +1,170 @@
+{
+  "root": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5",
+  "readme_sha256": "1ea49e62b4a34ea069694e1eaf0d58e1205520a136c9bc51533f30179da1369c",
+  "cohorts": {
+    "TCGA-PRAD": {
+      "h5_files": 401,
+      "unique_patient_prefixes": 401,
+      "truncated": false,
+      "samples": [
+        {
+          "path": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.h5",
+          "bytes": 17604296,
+          "datasets": {
+            "coords": {
+              "shape": [
+                5529,
+                2
+              ],
+              "dtype": "int64",
+              "attributes": {
+                "level0_height": 81897,
+                "level0_magnification": 40,
+                "level0_width": 109559,
+                "name": "TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233",
+                "overlap": 0,
+                "patch_size": 512,
+                "patch_size_level0": 1024,
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/TCGA_conch_v15/20x_512px_0px_overlap",
+                "target_magnification": 20
+              }
+            },
+            "features": {
+              "shape": [
+                5529,
+                768
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "encoder": "conch_v15",
+                "name": "TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233",
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/TCGA_conch_v15/20x_512px_0px_overlap/features_conch_v15"
+              }
+            }
+          },
+          "attributes": {}
+        },
+        {
+          "path": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.h5",
+          "bytes": 23093048,
+          "datasets": {
+            "coords": {
+              "shape": [
+                7252,
+                2
+              ],
+              "dtype": "int64",
+              "attributes": {
+                "level0_height": 92635,
+                "level0_magnification": 40,
+                "level0_width": 145415,
+                "name": "TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7",
+                "overlap": 0,
+                "patch_size": 512,
+                "patch_size_level0": 1024,
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/TCGA_conch_v15/20x_512px_0px_overlap",
+                "target_magnification": 20
+              }
+            },
+            "features": {
+              "shape": [
+                7252,
+                768
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "encoder": "conch_v15",
+                "name": "TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7",
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/TCGA_conch_v15/20x_512px_0px_overlap/features_conch_v15"
+              }
+            }
+          },
+          "attributes": {}
+        }
+      ]
+    },
+    "TCGA-BLCA": {
+      "h5_files": 457,
+      "unique_patient_prefixes": 386,
+      "truncated": false,
+      "samples": [
+        {
+          "path": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.h5",
+          "bytes": 29608696,
+          "datasets": {
+            "coords": {
+              "shape": [
+                9301,
+                2
+              ],
+              "dtype": "int64",
+              "attributes": {
+                "level0_height": 105472,
+                "level0_magnification": 40,
+                "level0_width": 135168,
+                "name": "TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E",
+                "overlap": 0,
+                "patch_size": 512,
+                "patch_size_level0": 1024,
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/BLCA/20x_512px_0px_overlap",
+                "target_magnification": 20
+              }
+            },
+            "features": {
+              "shape": [
+                9301,
+                768
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "encoder": "conch_v15",
+                "name": "TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E",
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/BLCA/20x_512px_0px_overlap/features_conch_v15"
+              }
+            }
+          },
+          "attributes": {}
+        },
+        {
+          "path": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.h5",
+          "bytes": 27139288,
+          "datasets": {
+            "coords": {
+              "shape": [
+                8525,
+                2
+              ],
+              "dtype": "int64",
+              "attributes": {
+                "level0_height": 93440,
+                "level0_magnification": 40,
+                "level0_width": 118784,
+                "name": "TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA",
+                "overlap": 0,
+                "patch_size": 512,
+                "patch_size_level0": 1024,
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/BLCA/20x_512px_0px_overlap",
+                "target_magnification": 20
+              }
+            },
+            "features": {
+              "shape": [
+                8525,
+                768
+              ],
+              "dtype": "float32",
+              "attributes": {
+                "encoder": "conch_v15",
+                "name": "TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA",
+                "savetodir": "/lustre/fsn1/projects/rech/ywz/ucy78gw/TRIDENT_FEATURES/BLCA/20x_512px_0px_overlap/features_conch_v15"
+              }
+            }
+          },
+          "attributes": {}
+        }
+      ]
+    }
+  },
+  "metadata_only": true,
+  "feature_arrays_read": false
+}

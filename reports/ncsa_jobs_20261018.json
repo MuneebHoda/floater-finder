@@ -1,0 +1,74 @@
+{
+  "jobs": [
+    {
+      "JobIDRaw": "22994404",
+      "JobName": "floater-prepare",
+      "Account": "bfqi-delta-cpu",
+      "Partition": "cpu",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "52",
+      "NodeList": "cn004",
+      "AllocTRES": "billing=4096,cpu=2,mem=8G,node=1"
+    },
+    {
+      "JobIDRaw": "22994469",
+      "JobName": "floater-one-pair",
+      "Account": "bfqi-delta-gpu",
+      "Partition": "gpuA100x4",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "68",
+      "NodeList": "gpua029",
+      "AllocTRES": "billing=1000,cpu=4,gres/gpu=1,mem=16G,node=1"
+    },
+    {
+      "JobIDRaw": "22994635",
+      "JobName": "floater-one-pair",
+      "Account": "bfqi-delta-gpu",
+      "Partition": "gpuA100x4",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "61",
+      "NodeList": "gpua029",
+      "AllocTRES": "billing=1000,cpu=4,gres/gpu=1,mem=16G,node=1"
+    },
+    {
+      "JobIDRaw": "22994703",
+      "JobName": "floater-two-way",
+      "Account": "bfqi-delta-cpu",
+      "Partition": "cpu",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "23",
+      "NodeList": "cn004",
+      "AllocTRES": "billing=4096,cpu=2,mem=8G,node=1"
+    },
+    {
+      "JobIDRaw": "22994850",
+      "JobName": "floater-dev-encode",
+      "Account": "bfqi-delta-gpu",
+      "Partition": "gpuA100x4",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "71",
+      "NodeList": "gpua029",
+      "AllocTRES": "billing=1000,cpu=4,gres/gpu=1,mem=16G,node=1"
+    },
+    {
+      "JobIDRaw": "22994885",
+      "JobName": "floater-detector",
+      "Account": "bfqi-delta-cpu",
+      "Partition": "cpu",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "ElapsedRaw": "14",
+      "NodeList": "cn004",
+      "AllocTRES": "billing=2048,cpu=2,mem=4G,node=1"
+    }
+  ],
+  "queue": "",
+  "allocation_snapshot": "Project Summary for User 'mhoda':\n\nAccount                        Balance(Hours)   Deposited(Hours)  Project\n----------------------------  ----------------  ----------------  ----------------------\nbfqi-delta-cpu                            7362             11039  2025 ashby prize in...\n*bfqi-delta-gpu (mhoda)                      9                10  Sub-Allocation\n",
+  "verified_input_bytes": 9990121727,
+  "all_input_files_mode": "600"
+}

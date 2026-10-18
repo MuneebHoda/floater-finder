@@ -1,0 +1,94 @@
+{
+  "retrieved_at_utc": "2026-10-18T21:09:04.545900+00:00",
+  "source_url": "https://api.gdc.cancer.gov/files?filters=%7B%22op%22%3A+%22in%22%2C+%22content%22%3A+%7B%22field%22%3A+%22file_name%22%2C+%22value%22%3A+%5B%22TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.svs%22%2C+%22TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs%22%2C+%22TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs%22%2C+%22TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.svs%22%5D%7D%7D&fields=file_id%2Cfile_name%2Cfile_size%2Caccess%2Cdata_type%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id%2Ccases.project.primary_site&size=4&format=JSON",
+  "response_sha256": "a642b4e4fa5766fd8cba03ddb5406f11819c29063d2d68ea5948d0c64f1d9e18",
+  "response": {
+    "data": {
+      "hits": [
+        {
+          "id": "d8f6e145-eb97-4224-a691-e8ceff2f3885",
+          "cases": [
+            {
+              "submitter_id": "TCGA-2F-A9KP",
+              "project": {
+                "primary_site": "Bladder",
+                "project_id": "TCGA-BLCA"
+              }
+            }
+          ],
+          "access": "open",
+          "file_name": "TCGA-2F-A9KP-01Z-00-DX1.3CDF534E-958F-4467-AA7E-FD3C5A86AAAA.svs",
+          "file_id": "d8f6e145-eb97-4224-a691-e8ceff2f3885",
+          "data_type": "Slide Image",
+          "experimental_strategy": "Diagnostic Slide",
+          "file_size": 2285938440
+        },
+        {
+          "id": "7d71dc8e-8c6b-47ff-8ccc-c940a9bf1490",
+          "cases": [
+            {
+              "submitter_id": "TCGA-2A-A8VL",
+              "project": {
+                "primary_site": "Prostate",
+                "project_id": "TCGA-PRAD"
+              }
+            }
+          ],
+          "access": "open",
+          "file_name": "TCGA-2A-A8VL-01Z-00-DX1.2C2BD6EF-EC17-4117-AE89-A22B67AFB233.svs",
+          "file_id": "7d71dc8e-8c6b-47ff-8ccc-c940a9bf1490",
+          "data_type": "Slide Image",
+          "experimental_strategy": "Diagnostic Slide",
+          "file_size": 1713266379
+        },
+        {
+          "id": "26cceec5-7118-45a5-8c11-8e4a945ef4c1",
+          "cases": [
+            {
+              "submitter_id": "TCGA-2A-A8VO",
+              "project": {
+                "primary_site": "Prostate",
+                "project_id": "TCGA-PRAD"
+              }
+            }
+          ],
+          "access": "open",
+          "file_name": "TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs",
+          "file_id": "26cceec5-7118-45a5-8c11-8e4a945ef4c1",
+          "data_type": "Slide Image",
+          "experimental_strategy": "Diagnostic Slide",
+          "file_size": 2363688671
+        },
+        {
+          "id": "30e4624b-6f48-429b-b1d9-6a6bc5c82c5e",
+          "cases": [
+            {
+              "submitter_id": "TCGA-2F-A9KO",
+              "project": {
+                "primary_site": "Bladder",
+                "project_id": "TCGA-BLCA"
+              }
+            }
+          ],
+          "access": "open",
+          "file_name": "TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs",
+          "file_id": "30e4624b-6f48-429b-b1d9-6a6bc5c82c5e",
+          "data_type": "Slide Image",
+          "experimental_strategy": "Diagnostic Slide",
+          "file_size": 2824992800
+        }
+      ],
+      "pagination": {
+        "count": 4,
+        "total": 4,
+        "size": 4,
+        "from": 0,
+        "sort": "",
+        "page": 1,
+        "pages": 1
+      }
+    },
+    "warnings": {}
+  },
+  "image_data_downloaded": false
+}

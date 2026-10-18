@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "category": "clean calibration encoding",
+  "slurm_job_id": "22994850",
+  "hostname": "gpua029.delta.ncsa.illinois.edu",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "patients": [
+    "TCGA-2A-A8VO",
+    "TCGA-2F-A9KO"
+  ],
+  "roles": [
+    "dev_prostate",
+    "dev_bladder"
+  ],
+  "model_loaded": true,
+  "input_config_sha256": "755d1ef0753fb3c0805260fcf5ef73cba759f1f55a1d3f966b4d9f4fa998a5ad",
+  "prompts_sha256": "ce1e318dfb56eb66b0aff6ef6716431bb78ee23f3fae945b70849ef4f09417a4",
+  "remote_output": "/work/nvme/bfqi/mhoda/floater-finder/smoke/calibration-20261018T215432Z",
+  "local_artifacts": "results/smoke/conch_calibration_22994850",
+  "independent_validation": {
+    "artifact_hashes_matched": 15,
+    "shapes": [
+      [
+        128,
+        512
+      ],
+      [
+        128,
+        512
+      ]
+    ],
+    "patient_sets_disjoint": true,
+    "model_matches_evaluation": true,
+    "text_vectors_match_frozen_ensemble": true,
+    "measured_mpp_xy": [
+      [
+        0.2527,
+        0.2527
+      ],
+      [
+        0.2277,
+        0.2277
+      ]
+    ]
+  }
+}

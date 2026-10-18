@@ -2,7 +2,7 @@
 
 Stress-testing pathology vision-language models against synthetic tissue contamination and detecting suspicious foreign tissue without model fine-tuning. The first milestone is CONCH on TCGA-PRAD versus TCGA-BLCA.
 
-This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. **No real-data CONCH experiment has run yet.**
+This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. **The scheduled CONCH v1 workflow now passes a four-patient smoke through patient-separated detector calibration and evaluation. The fixed detector threshold misses most injected tiles; broader validation remains necessary.**
 
 ## Run locally
 
@@ -33,13 +33,13 @@ Supply only relevant accessible roots. If a root is missing, the inventory recor
 ## Real CONCH workflow
 
 1. Verify patient-attributed PRAD/BLCA diagnostic slides or existing tile exports, report linkage and coordinate scale. Assign disjoint development/evaluation patients.
-2. Confirm an already-local, authorized CONCH checkpoint and an installed compatible environment. No model downloads or credential reads are performed by this project.
-3. Review the resource request and explicitly approve a Slurm job before submission. Encode tiles with `encode` inside a CUDA allocation. The command requires a tile CSV, slide-metadata JSON, prompt YAML, local checkpoint and new output directory; see `encode --help`.
+2. Confirm an already-local, authorized CONCH checkpoint and an installed compatible environment. The encoder uses an existing local checkpoint and performs no automatic model download or credential read.
+3. Review the resource request and use the recorded authorization for bounded CONCH plan jobs. Encode tiles with `encode` inside a CUDA allocation. The command requires a tile CSV, slide-metadata JSON, prompt YAML, local checkpoint and new output directory; see `encode --help`.
 4. Validate resulting `slide.npz`/`text.npz`. Populate the null paths and empty pairs in `configs/conch_smoke.yaml`; keep the fixed prompts. Start with one pair before populating `conch_pilot.yaml`.
 5. Run `stress --config <populated-config> --output <new-results-directory>`. Oracle verification runs for every successful trial. Raw scores, exclusions, denominators, configuration and input/source hashes are saved.
 6. Calibrate on unmodified development artifacts with `calibrate`, then evaluate independent held-out hosts/donors with `detect`. Use `plot` only when sufficient real observations exist; install the locked `plots` extra then.
 
-Raw WSI tiling is a remaining integration task; the current encoder consumes verified pre-extracted tiles. A 128-tile cap is recorded as a subset, not a full-slide experiment. Real checkpoint/model/environment compatibility and throughput remain untested.
+A scheduled one-pair wrapper now extracts raw pixels at verified existing tissue coordinates, resampling both scanners to common 256-micron tiles before encoding. The encoder also accepts pre-extracted tiles. A 128-tile cap is recorded as a subset, not a full-slide experiment. The pinned checkpoint, real image/text encoding and capped throughput are now verified on a scheduled A100. These measurements are not a full-slide throughput benchmark.
 
 ## Commands
 
@@ -55,19 +55,32 @@ Raw WSI tiling is a remaining integration task; the current encoder consumes ver
 
 ## NCSA and resource approval
 
-Use SSH alias `ncsa-floater`. Heavy processing and GPU inference belong in approved Slurm jobs. The latest single SSH check timed out; local development continued. Earlier allocation/path observations and current unknowns are in [NCSA setup](docs/ncsa_setup.md).
+Use SSH alias `ncsa-floater`. Heavy processing and GPU inference belong in approved Slurm jobs. Approved job `22957101` completed on an A100 node with exit code `0:0` in five seconds, verifying scheduled GPU allocation and driver visibility. Hosted two-tile CONCH image-encoding tests passed on October 17 and 18; both runs' saved outputs have now been retrieved and independently validated. See the [GPU smoke evidence](reports/gpu_smoke_22957101.json) and [NCSA setup](docs/ncsa_setup.md).
 
-| Unsubmitted draft | Account / partition | GPU / CPU / memory | Wall time |
+| Job script | Account / partition | GPU / CPU / memory | Wall time |
 | --- | --- | --- | --- |
 | [Driver visibility](scripts/ncsa_smoke.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 1 / 2 GB | 2 minutes |
-| [Capped CONCH encoding](scripts/slurm/conch_encode.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 4 / 16 GB | 5 minutes |
+| [Pre-extracted tile draft](scripts/slurm/conch_encode.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 4 / 16 GB | 5 minutes |
+| [Physical WSI pair encoding](scripts/slurm/conch_one_pair.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 4 / 16 GB | 10 minutes |
+| [Patient-separated detector](scripts/slurm/conch_detector.sbatch) | `bfqi-delta-cpu` / `cpu` | 0 / 2 / 4 GB | 5 minutes |
 
-Neither job has been submitted. Both use the previously verified GPU sub-allocation QoS; installed GPU/model access remains unverified. Password/Duo prompts belong in your own Terminal. Do not put credentials or private keys in project files or logs.
+The driver-visibility script completed as job `22957101`; the CONCH encoding draft remains unsubmitted. Both use the verified GPU sub-allocation QoS. Password/Duo prompts belong in your own Terminal. Do not put credentials or private keys in project files or logs.
+
+The next-stage preflight verified the hosted CONCH service's health and located 208 existing prostate tiles with public GDC project/patient metadata. After initial 401 responses, authenticated tests produced two finite, unit-normalized, 512-dimensional image embeddings, with identical vectors across both runs. The latest two-image HTTP round trip took about 0.14 seconds; this is not a GPU throughput benchmark. See the [latest smoke evidence](reports/conch_service_smoke_20261018T205624Z.json) and [setup notes and limitations](docs/ncsa_setup.md#next-stage-conch-service-preflight). This is a connectivity check; the hosted API does not supply all vectors/provenance required by the full experiment.
+
+A subsequent search found full shared PRAD/BLCA feature cohorts, but their sampled headers identify **CONCH v1.5 / 768 dimensions**. They cannot be mixed with the tested v1 service. The user approved the 4.80 GB CONCH v1 input plan: both diagnostic WSIs and the pinned original checkpoint are now checksum-verified in personal Delta storage. The [next-experiment plan](docs/next_experiment.md) records paths and evidence. CPU job `22994404` prepared the runtime and verified input checksums, measured slide calibration and the tokenizer. GPU smoke `22994635` completed successfully, reproducing the first run after a provenance fix; 128 tiles per slide yield matched 512-dimensional vectors and pass six oracle checks. See the [verified result](reports/conch_one_pair_smoke_22994635.json).
+
+## Real-data smoke outcome
+
+Six new Delta jobs completed successfully. The [contamination results](reports/conch_smoke_results.md) and [detector results](reports/conch_detector_results.md) include verified plots, raw metrics and explicit denominators. There are two development and two evaluation patients, each represented by a connected 128-tile subset; all real-data runs remain labeled `smoke`. The local suite passes **82 tests**.
+
+The combined detector ranks synthetic donor tiles with mean AUROC 0.949 at 10% requested contamination, but its frozen 99th-percentile development threshold detects only 3.85% of donor tiles in that descriptive stratum. The next study needs representative calibration and a fresh held-out cohort. These observations do not establish clinical floater detection or population performance.
 
 ## Evidence and outputs
 
 - [Progress and executed commands](reports/progress.md).
 - [Methodology, schemas, scientific limits and source references](docs/methodology.md).
+- [NCSA CONCH preflight](reports/ncsa_preflight_20261017.json) and [public PathGen metadata inventory](reports/ncsa_pathgen_inventory_20261017.csv).
 - Local environment snapshot: `reports/environment.json`.
 - Local inventory/missing data: `results/inventory/local/`.
 - Validated fixture run: `results/fixtures/final_validation/` (ignored by git).

@@ -1,0 +1,81 @@
+{
+  "remote_directory": "/work/nvme/bfqi/mhoda/conch-service-smoke-20261018T205624Z",
+  "report": {
+    "category": "hosted CONCH connectivity smoke",
+    "research_result": false,
+    "endpoint": "http://gpub055.delta.ncsa.illinois.edu:8000",
+    "tiles": [
+      {
+        "tile_id": "b8c468ef-48ae-4abd-8590-2c25233c08a7_113920_24256",
+        "path": "/projects/bfqi/shared/datasets/pathgen_dataset/pathgen_2k_output/b8c468ef-48ae-4abd-8590-2c25233c08a7_113920_24256.png",
+        "bytes": 917797,
+        "sha256": "6474fb303b3aed9b606ce59a6d7f1b2ed6b30b5f53da3b2de0c591e8b7739834"
+      },
+      {
+        "tile_id": "b8c468ef-48ae-4abd-8590-2c25233c08a7_113248_18880",
+        "path": "/projects/bfqi/shared/datasets/pathgen_dataset/pathgen_2k_output/b8c468ef-48ae-4abd-8590-2c25233c08a7_113248_18880.png",
+        "bytes": 931657,
+        "sha256": "44d3b583a96d91b2aaa2b019147469f6ef63dddf153fee54d7eaecb60a432b72"
+      }
+    ],
+    "user_confirmed_individual_access": true,
+    "checkpoint_provenance_verified": false,
+    "full_experiment_compatible": false,
+    "new_slurm_job_submitted": false,
+    "service_inference_succeeded": true,
+    "health": {
+      "status": "ok",
+      "model": "conch",
+      "device": "cuda"
+    },
+    "request_seconds": 0.14031214600254316,
+    "status": "passed",
+    "tile_count": 2,
+    "dimensions": 512,
+    "embedding_norms": [
+      0.9999999680936702,
+      1.0000000028404457
+    ],
+    "timing_scope": "HTTP round trip, not GPU throughput"
+  },
+  "remote_embedding_file_sha256": "99302e4b4d1fe8169444ad1161ca40e2723c41b4f8bdbf343b79fc051e6bae63",
+  "service_interface": {
+    "paths": [
+      "/classify",
+      "/embed",
+      "/health"
+    ],
+    "schema_properties": {
+      "ClassifyRequest": [
+        "images",
+        "prompts"
+      ],
+      "EmbedRequest": [
+        "images"
+      ],
+      "HTTPValidationError": [
+        "detail"
+      ],
+      "ValidationError": [
+        "loc",
+        "msg",
+        "type"
+      ]
+    }
+  },
+  "raw_artifacts_retrieved": true,
+  "independent_validation": {
+    "rows": 2,
+    "dimensions": 512,
+    "finite": true,
+    "norms": [
+      0.9999999680936702,
+      1.0000000028404457
+    ],
+    "same_vectors_as_previous_run": true
+  },
+  "local_artifacts": "results/smoke/conch_service_20261018T205624Z",
+  "date_local": "2026-10-18",
+  "remote_username": "mhoda",
+  "remote_hostname": "dt-login04.delta.ncsa.illinois.edu"
+}

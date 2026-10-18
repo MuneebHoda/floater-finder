@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 import yaml
 
-from floater_finder.conch import ConchEncoder, check_interface, verify_encoder_weights
+from floater_finder.conch import ConchEncoder, check_interface, preprocessing_signature, verify_encoder_weights
 from floater_finder.experiments import run_stress, summarize
 from floater_finder.inventory import barcode, inventory, select_pairs
 from conftest import make_slide
@@ -113,6 +113,16 @@ def test_runtime_image_projection_and_api_contract():
     assert encoder.encode_image_batch("batch") == "batch"
     with pytest.raises(ValueError):
         check_interface(object())
+
+
+def test_preprocessing_identity_is_stable_across_process_addresses():
+    class Transform:
+        def __init__(self, address, size=448):
+            self.address, self.size = address, size
+        def __repr__(self):
+            return f"Resize(size={self.size}); <function _convert_to_rgb at 0x{self.address}>"
+    assert preprocessing_signature(Transform("ab123")) == preprocessing_signature(Transform("cd456"))
+    assert preprocessing_signature(Transform("ab123")) != preprocessing_signature(Transform("ab123", 224))
 
 
 def test_no_conch_inference_outside_slurm(monkeypatch):

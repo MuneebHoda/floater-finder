@@ -46,8 +46,10 @@ def plot_rates(run, output):
     for rule in sorted({key[0] for key in values}):
         levels = sorted(key[1] for key in values if key[0] == rule)
         ax.plot(levels, [np.mean(values[(rule, percent)]) for percent in levels], marker="o", label=rule)
-    ax.set(xlabel="Synthetic foreign tiles / original host tiles (%)", ylabel="Eligible flip rate (mean over seeds)", ylim=(-.02, 1.02),
-           title=f"CONCH {metadata['category']}: synthetic embedding contamination")
+    hosts = len({row["host_slide_id"] for row in rows})
+    seeds = len({row["seed"] for row in rows})
+    ax.set(xlabel="Requested foreign tiles / original host tiles (%)", ylabel="Eligible flip rate (mean over seeds)", ylim=(-.02, 1.02),
+           title=f"CONCH {metadata['category']}: synthetic embedding contamination\n{hosts} host slides; {seeds} seeds")
     ax.legend()
     output.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(output, dpi=180)
