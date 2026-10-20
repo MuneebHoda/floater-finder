@@ -72,9 +72,15 @@ A subsequent search found full shared PRAD/BLCA feature cohorts, but their sampl
 
 ## Real-data smoke outcome
 
-Six new Delta jobs completed successfully. The [contamination results](reports/conch_smoke_results.md) and [detector results](reports/conch_detector_results.md) include verified plots, raw metrics and explicit denominators. There are two development and two evaluation patients, each represented by a connected 128-tile subset; all real-data runs remain labeled `smoke`. The local suite passes **82 tests**.
+Six initial Delta jobs completed successfully. The [contamination results](reports/conch_smoke_results.md) and [detector results](reports/conch_detector_results.md) include verified plots, raw metrics and explicit denominators. There are two development and two evaluation patients, each represented by a connected 128-tile subset, for **512 real image embeddings with 512 features each**, plus matched text prototypes. The local suite passes **91 tests**.
 
 The combined detector ranks synthetic donor tiles with mean AUROC 0.949 at 10% requested contamination, but its frozen 99th-percentile development threshold detects only 3.85% of donor tiles in that descriptive stratum. The next study needs representative calibration and a fresh held-out cohort. These observations do not establish clinical floater detection or population performance.
+
+A subsequent [development-only cutoff diagnostic](reports/conch_threshold_results.md) completed as CPU job `22995268`, reusing existing vectors with no new inference or download. It reports five cutoff levels, 60 oracle passes and 900 rows. It shows the detection/original-host-removal tradeoff on reused calibration patients; no revised cutoff or new evaluation claim follows from it. [Next study and dependency maintenance](docs/next_experiment.md).
+
+New image work uses Pillow 12.3.0 and records that version in artifact provenance; local tests use pytest 9.0.3. A separate private Delta runtime passed scheduled A100 compatibility job `22995434`: all 256 regenerated development tiles and image/text vectors exactly matched the preserved baseline. The generic pre-extracted-tile wrapper now takes the private environment as its first argument. [Verified setup](docs/ncsa_setup.md).
+
+The [expanded feasibility-pilot plan](docs/expanded_pilot_plan.md) contains 16 new public slides totaling 21.24 GB, separated into eight development and eight fresh evaluation patients. Approved download job `22995933` completed successfully; all 16 files passed size/MD5 checks. CPU preflight `23005299` verified all 18 planned patients (including retained development patients) and the revised four × 96-tile sampler after preserving an initial capacity failure. The [study design is frozen](docs/expanded_pilot_protocol.md); [technical evidence](reports/conch_pilot_preflight_results.md) records 768 development QC tiles and 97 passing tests. The cohort runner and final development calibration remain before held-out scoring; these patients have not been encoded with the new sampler yet.
 
 ## Evidence and outputs
 

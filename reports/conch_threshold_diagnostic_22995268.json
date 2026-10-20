@@ -1,0 +1,818 @@
+{
+  "development_patients": [
+    "TCGA-2A-A8VO",
+    "TCGA-2F-A9KO"
+  ],
+  "calibration_tiles": 256,
+  "oracle_verified_trials": 60,
+  "metric_rows": 900,
+  "excluded_trials": 0,
+  "calibrations": [
+    {
+      "exclusion_mm": 1.0,
+      "smoothing_mm": 0.1,
+      "lambda": 0.5,
+      "quantile": 0.9,
+      "chunk_size": 256,
+      "mean": [
+        -0.2450755772224511,
+        0.0663775698048994
+      ],
+      "scale": [
+        0.14680121555574588,
+        0.08121201185912087
+      ],
+      "scale_floor": 1e-08,
+      "model": {
+        "name": "conch_v1",
+        "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+        "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+        "projection": true,
+        "normalized": true,
+        "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+        "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+        "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+        "torch_version": "2.8.0+cu128",
+        "encoder_weight_coverage_verified": true
+      },
+      "text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+      "source_kind": "real",
+      "development_patients": [
+        "TCGA-2A-A8VO",
+        "TCGA-2F-A9KO"
+      ],
+      "calibration_tile_count": 256,
+      "thresholds": {
+        "organ_only": 1.2405709896433423,
+        "visual_only": 0.8800727222091407,
+        "combined": 0.7470066014747703
+      },
+      "measured_development_false_alarm": {
+        "organ_only": 0.09765625,
+        "visual_only": 0.09765625,
+        "combined": 0.09765625
+      },
+      "interpretation": "Fixed-coefficient training-free scoring with clean-development calibration; no unseen-FPR guarantee."
+    },
+    {
+      "exclusion_mm": 1.0,
+      "smoothing_mm": 0.1,
+      "lambda": 0.5,
+      "quantile": 0.95,
+      "chunk_size": 256,
+      "mean": [
+        -0.2450755772224511,
+        0.0663775698048994
+      ],
+      "scale": [
+        0.14680121555574588,
+        0.08121201185912087
+      ],
+      "scale_floor": 1e-08,
+      "model": {
+        "name": "conch_v1",
+        "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+        "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+        "projection": true,
+        "normalized": true,
+        "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+        "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+        "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+        "torch_version": "2.8.0+cu128",
+        "encoder_weight_coverage_verified": true
+      },
+      "text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+      "source_kind": "real",
+      "development_patients": [
+        "TCGA-2A-A8VO",
+        "TCGA-2F-A9KO"
+      ],
+      "calibration_tile_count": 256,
+      "thresholds": {
+        "organ_only": 1.4897826630845397,
+        "visual_only": 1.6377514843365526,
+        "combined": 1.1239482647589467
+      },
+      "measured_development_false_alarm": {
+        "organ_only": 0.046875,
+        "visual_only": 0.046875,
+        "combined": 0.046875
+      },
+      "interpretation": "Fixed-coefficient training-free scoring with clean-development calibration; no unseen-FPR guarantee."
+    },
+    {
+      "exclusion_mm": 1.0,
+      "smoothing_mm": 0.1,
+      "lambda": 0.5,
+      "quantile": 0.975,
+      "chunk_size": 256,
+      "mean": [
+        -0.2450755772224511,
+        0.0663775698048994
+      ],
+      "scale": [
+        0.14680121555574588,
+        0.08121201185912087
+      ],
+      "scale_floor": 1e-08,
+      "model": {
+        "name": "conch_v1",
+        "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+        "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+        "projection": true,
+        "normalized": true,
+        "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+        "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+        "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+        "torch_version": "2.8.0+cu128",
+        "encoder_weight_coverage_verified": true
+      },
+      "text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+      "source_kind": "real",
+      "development_patients": [
+        "TCGA-2A-A8VO",
+        "TCGA-2F-A9KO"
+      ],
+      "calibration_tile_count": 256,
+      "thresholds": {
+        "organ_only": 1.6459977259340843,
+        "visual_only": 2.462986375260686,
+        "combined": 1.9392642436859697
+      },
+      "measured_development_false_alarm": {
+        "organ_only": 0.0234375,
+        "visual_only": 0.0234375,
+        "combined": 0.0234375
+      },
+      "interpretation": "Fixed-coefficient training-free scoring with clean-development calibration; no unseen-FPR guarantee."
+    },
+    {
+      "exclusion_mm": 1.0,
+      "smoothing_mm": 0.1,
+      "lambda": 0.5,
+      "quantile": 0.99,
+      "chunk_size": 256,
+      "mean": [
+        -0.2450755772224511,
+        0.0663775698048994
+      ],
+      "scale": [
+        0.14680121555574588,
+        0.08121201185912087
+      ],
+      "scale_floor": 1e-08,
+      "model": {
+        "name": "conch_v1",
+        "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+        "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+        "projection": true,
+        "normalized": true,
+        "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+        "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+        "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+        "torch_version": "2.8.0+cu128",
+        "encoder_weight_coverage_verified": true
+      },
+      "text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+      "source_kind": "real",
+      "development_patients": [
+        "TCGA-2A-A8VO",
+        "TCGA-2F-A9KO"
+      ],
+      "calibration_tile_count": 256,
+      "thresholds": {
+        "organ_only": 2.2637434930717464,
+        "visual_only": 6.394224488521645,
+        "combined": 4.355844865693319
+      },
+      "measured_development_false_alarm": {
+        "organ_only": 0.0078125,
+        "visual_only": 0.0078125,
+        "combined": 0.0078125
+      },
+      "interpretation": "Fixed-coefficient training-free scoring with clean-development calibration; no unseen-FPR guarantee."
+    },
+    {
+      "exclusion_mm": 1.0,
+      "smoothing_mm": 0.1,
+      "lambda": 0.5,
+      "quantile": 0.995,
+      "chunk_size": 256,
+      "mean": [
+        -0.2450755772224511,
+        0.0663775698048994
+      ],
+      "scale": [
+        0.14680121555574588,
+        0.08121201185912087
+      ],
+      "scale_floor": 1e-08,
+      "model": {
+        "name": "conch_v1",
+        "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+        "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+        "projection": true,
+        "normalized": true,
+        "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+        "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+        "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+        "torch_version": "2.8.0+cu128",
+        "encoder_weight_coverage_verified": true
+      },
+      "text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+      "source_kind": "real",
+      "development_patients": [
+        "TCGA-2A-A8VO",
+        "TCGA-2F-A9KO"
+      ],
+      "calibration_tile_count": 256,
+      "thresholds": {
+        "organ_only": 2.546038985081818,
+        "visual_only": 6.447946238314892,
+        "combined": 4.470131736801731
+      },
+      "measured_development_false_alarm": {
+        "organ_only": 0.00390625,
+        "visual_only": 0.00390625,
+        "combined": 0.00390625
+      },
+      "interpretation": "Fixed-coefficient training-free scoring with clean-development calibration; no unseen-FPR guarantee."
+    }
+  ],
+  "clean_controls": [
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.2405709896433423,
+      "removed_tiles": 7,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0546875
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.2405709896433423,
+      "removed_tiles": 18,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.140625
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 0.8800727222091407,
+      "removed_tiles": 10,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.078125
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 0.8800727222091407,
+      "removed_tiles": 15,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.1171875
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 0.7470066014747703,
+      "removed_tiles": 10,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.078125
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 0.7470066014747703,
+      "removed_tiles": 15,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.1171875
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.4897826630845397,
+      "removed_tiles": 5,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0390625
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.4897826630845397,
+      "removed_tiles": 7,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0546875
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.6377514843365526,
+      "removed_tiles": 9,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0703125
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.6377514843365526,
+      "removed_tiles": 3,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0234375
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.1239482647589467,
+      "removed_tiles": 9,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0703125
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.1239482647589467,
+      "removed_tiles": 3,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0234375
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.6459977259340843,
+      "removed_tiles": 3,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0234375
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.6459977259340843,
+      "removed_tiles": 3,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0234375
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.462986375260686,
+      "removed_tiles": 5,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0390625
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.462986375260686,
+      "removed_tiles": 1,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0078125
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.9392642436859697,
+      "removed_tiles": 6,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.046875
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.9392642436859697,
+      "removed_tiles": 0,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.2637434930717464,
+      "removed_tiles": 2,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.015625
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.2637434930717464,
+      "removed_tiles": 0,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 6.394224488521645,
+      "removed_tiles": 2,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.015625
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 6.394224488521645,
+      "removed_tiles": 0,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 4.355844865693319,
+      "removed_tiles": 2,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.015625
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 4.355844865693319,
+      "removed_tiles": 0,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.546038985081818,
+      "removed_tiles": 1,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0078125
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.546038985081818,
+      "removed_tiles": 0,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 6.447946238314892,
+      "removed_tiles": 1,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0078125
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 6.447946238314892,
+      "removed_tiles": 0,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0
+    },
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "organ": "prostate",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 4.470131736801731,
+      "removed_tiles": 1,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0078125
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "organ": "bladder",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 4.470131736801731,
+      "removed_tiles": 0,
+      "host_tiles": 128,
+      "measured_false_alarm_rate": 0.0
+    }
+  ],
+  "ten_percent_summary": [
+    {
+      "quantile": 0.9,
+      "variant": "combined",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9885216346153847,
+      "detection_rate": 1.0,
+      "measured_false_alarm_rate": 0.09765625
+    },
+    {
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9816706730769231,
+      "detection_rate": 0.9692307692307693,
+      "measured_false_alarm_rate": 0.09765625
+    },
+    {
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9056490384615383,
+      "detection_rate": 0.776923076923077,
+      "measured_false_alarm_rate": 0.09765625
+    },
+    {
+      "quantile": 0.95,
+      "variant": "combined",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9885216346153847,
+      "detection_rate": 0.9923076923076923,
+      "measured_false_alarm_rate": 0.046875
+    },
+    {
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9816706730769231,
+      "detection_rate": 0.9615384615384617,
+      "measured_false_alarm_rate": 0.046875
+    },
+    {
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9056490384615383,
+      "detection_rate": 0.7153846153846153,
+      "measured_false_alarm_rate": 0.046875
+    },
+    {
+      "quantile": 0.975,
+      "variant": "combined",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9885216346153847,
+      "detection_rate": 0.8923076923076924,
+      "measured_false_alarm_rate": 0.0234375
+    },
+    {
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9816706730769231,
+      "detection_rate": 0.9615384615384617,
+      "measured_false_alarm_rate": 0.0234375
+    },
+    {
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9056490384615383,
+      "detection_rate": 0.6461538461538462,
+      "measured_false_alarm_rate": 0.02265625
+    },
+    {
+      "quantile": 0.99,
+      "variant": "combined",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9885216346153847,
+      "detection_rate": 0.23846153846153845,
+      "measured_false_alarm_rate": 0.00078125
+    },
+    {
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9816706730769231,
+      "detection_rate": 0.7923076923076924,
+      "measured_false_alarm_rate": 0.0078125
+    },
+    {
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9056490384615383,
+      "detection_rate": 0.12307692307692308,
+      "measured_false_alarm_rate": 0.0015625
+    },
+    {
+      "quantile": 0.995,
+      "variant": "combined",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9885216346153847,
+      "detection_rate": 0.21538461538461537,
+      "measured_false_alarm_rate": 0.00078125
+    },
+    {
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9816706730769231,
+      "detection_rate": 0.7076923076923076,
+      "measured_false_alarm_rate": 0.00390625
+    },
+    {
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "requested_percent": 10,
+      "trials": 10,
+      "independent_patients": 2,
+      "auroc": 0.9056490384615383,
+      "detection_rate": 0.10769230769230768,
+      "measured_false_alarm_rate": 0.0
+    }
+  ],
+  "status": "passed",
+  "category": "development_diagnostic",
+  "slurm_job_id": "22995268",
+  "hostname": "cn004.delta.ncsa.illinois.edu",
+  "settings": {
+    "category": "development_diagnostic",
+    "development_patients": [
+      "TCGA-2A-A8VO",
+      "TCGA-2F-A9KO"
+    ],
+    "excluded_evaluation_patients": [
+      "TCGA-2A-A8VL",
+      "TCGA-2F-A9KP"
+    ],
+    "exclusion_mm": 1.0,
+    "smoothing_mm": 0.1,
+    "weight": 0.5,
+    "quantiles": [
+      0.9,
+      0.95,
+      0.975,
+      0.99,
+      0.995
+    ],
+    "reference_quantile": 0.99,
+    "chunk_size": 256,
+    "contamination_percent": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selection_policy": "No cutoff selected by this diagnostic; the existing 1% nominal clean-tile budget remains the reference.",
+    "scope": "Two development patients reused for calibration and synthetic diagnostics. Optimistic resubstitution; no held-out evaluation, new embeddings, or downloads."
+  },
+  "model": {
+    "name": "conch_v1",
+    "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+    "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+    "projection": true,
+    "normalized": true,
+    "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+    "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+    "torch_version": "2.8.0+cu128",
+    "encoder_weight_coverage_verified": true
+  },
+  "frozen_text_fingerprint": "710eda26173d9079ef0237c7ba9ac3957d054e0dcf697d0e21cb80bd9a77ed0c",
+  "input_sha256": {
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/calibration-20261018T215432Z/dev_prostate_encoded/slide.npz": "5cd96c52e47281fe6fdf86b5be438ab1412e82e0d22dc2a4cd13b16801d1ca8f",
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/calibration-20261018T215432Z/dev_bladder_encoded/slide.npz": "3b587f5e2833fd17e39adf37425efe2357505e9ca55ac618121feb23050357d0",
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/calibration-20261018T215432Z/dev_prostate_encoded/text.npz": "566a0fc9949133417482d1558c0bcf6a2977c6d871360f6072e38f262112504f",
+    "/work/nvme/bfqi/mhoda/floater-finder/smoke/calibration-20261018T215432Z/dev_bladder_encoded/text.npz": "566a0fc9949133417482d1558c0bcf6a2977c6d871360f6072e38f262112504f",
+    "/u/mhoda/floater-finder/releases/20261018T222409Z/configs/ncsa_threshold_diagnostic.json": "ec88c5f87659a7e0d608dfa5a7082623db20ff32b183afbf3f035ecd6154a09d"
+  },
+  "source_sha256": {
+    "__init__.py": "73801f9e216e3274115b40665dadd7330884f4ad95efe98576564d607327d4e6",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+    "cli.py": "b4d57a3c63d4e375b64e24162995c7c958699dfb7c6255400882e15b58b154d3",
+    "conch.py": "a8647f5fa5c2b5837109bf1858137dc4397b0be67bb749acc571bb02bf666c1d",
+    "detection.py": "cf092142e711020481ced70894a608512247f149da974750b480477200e72075",
+    "experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+    "fixtures.py": "054d38f95f4e079d901134276a3262533a32ee147156b00ece26859c14bbe868",
+    "injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+    "inventory.py": "93c85975c7149d43b13d3c304894ea87c45bc59c852e152b148efd3d2bd9a4d6",
+    "reporting.py": "01182b210d17c0430eec881103610781a74ff189a412fd9be2af85b4eabbbab2",
+    "scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "tiling.py": "128676385968c6267cf8ea95d79430fad7b31abdfeda99e89f59015b9f338ab2"
+  },
+  "workflow_sha256": "7ca81c3838714076c6bad97c653907b93b83209ba4991f0385207b5630fdc2eb",
+  "runtime": {
+    "python": "3.11.13",
+    "numpy": "2.2.6"
+  },
+  "selected_quantile": null,
+  "evaluation_artifacts_loaded": false,
+  "interpretation": "Development resubstitution diagnostic only. Calibration patients are reused as synthetic hosts/donors. Not independent performance or a 1% unseen-FPR guarantee. Clean means unmodified, not pathologist-reviewed.",
+  "remote_output": "/work/nvme/bfqi/mhoda/floater-finder/diagnostics/threshold-20261018T222409Z",
+  "local_artifacts": "results/development/conch_threshold_22995268",
+  "independent_validation": {
+    "artifact_hashes_matched": 127,
+    "oracle_trials_recomputed": 60,
+    "metric_rows_checked": 900,
+    "all_stored_score_flags_count_metrics_and_auroc_match": true,
+    "maximum_standardized_score_delta": 1.7892500432381553e-06,
+    "score_tolerance": "atol=1e-5, rtol=1e-5; local NumPy 2.0.2",
+    "cross_version_flag_disagreements_using_delta_thresholds": 168,
+    "all_such_disagreements_within_threshold_margin": 1e-05,
+    "cross_version_flag_disagreements_using_native_thresholds": 0,
+    "rounding_interpretation": "Stored Delta arrays and thresholds reproduce all saved metrics exactly. Cross-version scores agree within tolerance; direct comparisons at quantile boundaries can differ. Counts above include repeated threshold/trial checks, not distinct tiles.",
+    "evaluation_inputs_loaded": false
+  },
+  "published_figure": {
+    "path": "reports/figures/conch_threshold_diagnostic.png",
+    "sha256": "f71ab9c440abf5efcc9406ac4dbb92f6529635f7386a01cfeecd455504545252",
+    "renderer": "local Matplotlib 3.9.4",
+    "workflow_sha256": "fc3e3a1534c3a540c9aa2a6af996e3b8ba960453a80261f4086fc83b4abba3f6",
+    "change_from_original": "Axis margins expanded to keep cutoff labels inside the exported figure; same retrieved report values."
+  },
+  "slurm_accounting": {
+    "verified_utc": "2026-10-18T22:26:49.957818+00:00",
+    "job_id": "22995268",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:00:12",
+    "account": "bfqi-delta-cpu",
+    "partition": "cpu",
+    "allocated_cpus": 2,
+    "requested_memory": "4G",
+    "node": "cn004",
+    "queue_empty_after_job": true
+  }
+}

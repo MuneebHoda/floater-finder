@@ -1,0 +1,773 @@
+{
+  "approved": true,
+  "category": "proposed expanded CONCH v1 feasibility pilot",
+  "files": [
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-G9-6379",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "dev",
+      "source_site_prefix": "G9",
+      "file_id": "3eedf78d-8aa7-4b77-a0c0-d14291415e04",
+      "filename": "TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.svs",
+      "bytes": 1214225791,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "60bd3bbef4ce7486b24edbae371d9061"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/3eedf78d-8aa7-4b77-a0c0-d14291415e04",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          89639,
+          83348
+        ],
+        "measured_mpp_xy": [
+          0.2527,
+          0.2527
+        ],
+        "coordinate_sha256": "f378770afa6c743ea9d71bc958cbee62d7d9376d396c5d251c7b94ffbcc1bd01",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 3495
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-FC-A5OB",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "dev",
+      "source_site_prefix": "FC",
+      "file_id": "1a9a1a68-750b-402a-89f2-082b65efa593",
+      "filename": "TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.svs",
+      "bytes": 757580661,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "cb54ba1b1be86ee07988cd0834fce947"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/1a9a1a68-750b-402a-89f2-082b65efa593",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          72352,
+          56168
+        ],
+        "measured_mpp_xy": [
+          0.2456,
+          0.2456
+        ],
+        "coordinate_sha256": "9a1d52854b09d16fd53ca869ad36c4c0d5a725868f9cf0a3450295c1c296336a",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 2284
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-EJ-A46B",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "dev",
+      "source_site_prefix": "EJ",
+      "file_id": "b5d322a2-461f-4549-9e4c-c272b8188c3e",
+      "filename": "TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.svs",
+      "bytes": 1716911159,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "35d1c27d099677b460848d13af74263a"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/b5d322a2-461f-4549-9e4c-c272b8188c3e",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          104720,
+          80734
+        ],
+        "measured_mpp_xy": [
+          0.2456,
+          0.2456
+        ],
+        "coordinate_sha256": "7e5d3ea29d378759e1a8216bf8a2bae89277c260649039ddd2e438e0f7ab2179",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 5296
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-HC-7230",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "dev",
+      "source_site_prefix": "HC",
+      "file_id": "44eb6d7a-a3c2-4023-b068-1c2f50b564db",
+      "filename": "TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.svs",
+      "bytes": 145146489,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "ac57a905cb5d599161c8d574fa3afc8a"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/44eb6d7a-a3c2-4023-b068-1c2f50b564db",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          41247,
+          33964
+        ],
+        "measured_mpp_xy": [
+          0.252,
+          0.252
+        ],
+        "coordinate_sha256": "a2c2d019784e23c737f13fc7f069b9eb9a3a991f75be501c0888c8ab91b5fff4",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 770
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-YL-A8SQ",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "eval",
+      "source_site_prefix": "YL",
+      "file_id": "0591b150-fe51-4844-a979-40d0246de8e9",
+      "filename": "TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.svs",
+      "bytes": 2831374346,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "98ce1548780ff966d6013fa354df01db"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/0591b150-fe51-4844-a979-40d0246de8e9",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          105576,
+          78555
+        ],
+        "measured_mpp_xy": [
+          0.2485,
+          0.2485
+        ],
+        "coordinate_sha256": "4d425787020508843e9c0b37becf1fdcf6f1dc9376d09f8e4ca8884445718cf5",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 4680
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-XK-AAIW",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "eval",
+      "source_site_prefix": "XK",
+      "file_id": "6dbcf931-fe34-41e6-8731-93518818a5a2",
+      "filename": "TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.svs",
+      "bytes": 755782295,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "bc6278b53cd74c960627012988c5740e"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/6dbcf931-fe34-41e6-8731-93518818a5a2",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          113543,
+          46852
+        ],
+        "measured_mpp_xy": [
+          0.2527,
+          0.2527
+        ],
+        "coordinate_sha256": "bbe8c00ea6a1224c81654c419c6a73fc78e9b0abffc7cbef7945fb65b138dc37",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 1518
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-V1-A9ZR",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "eval",
+      "source_site_prefix": "V1",
+      "file_id": "dbda78ed-68ba-4c84-80d8-04f8e422672b",
+      "filename": "TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.svs",
+      "bytes": 720786563,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "7094fe072414cd9416c9ddee5fcd4612"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/dbda78ed-68ba-4c84-80d8-04f8e422672b",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          67728,
+          55351
+        ],
+        "measured_mpp_xy": [
+          0.2525,
+          0.2525
+        ],
+        "coordinate_sha256": "66b15420a1abc96c41a4b48ba12394ed9abc619073bf2ac9d193840f8c2c1551",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 2351
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-KK-A7AW",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "split": "eval",
+      "source_site_prefix": "KK",
+      "file_id": "f50839b2-5846-42e6-b67b-fbc4034d9717",
+      "filename": "TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.svs",
+      "bytes": 497108391,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "0af738b6168ddcc1dfd980b9bc601d03"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/f50839b2-5846-42e6-b67b-fbc4034d9717",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          94247,
+          71538
+        ],
+        "measured_mpp_xy": [
+          0.248,
+          0.248
+        ],
+        "coordinate_sha256": "f962268175f2e72d6924793d231ce6dfb66c4565362a34d44acf82e480752e87",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 3937
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-XF-A9SW",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "dev",
+      "source_site_prefix": "XF",
+      "file_id": "fb291e7d-cc6b-4169-8be8-fec92dc9cb7d",
+      "filename": "TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.svs",
+      "bytes": 1308905865,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "0dc20d965e05aaaad28ee3fc1b0f122c"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/fb291e7d-cc6b-4169-8be8-fec92dc9cb7d",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          93623,
+          75099
+        ],
+        "measured_mpp_xy": [
+          0.2527,
+          0.2527
+        ],
+        "coordinate_sha256": "eff99203b330413a7f662b78f49315cc56518cd654faef05781d39ba1642dbbb",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 3819
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-ZF-A9RN",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "dev",
+      "source_site_prefix": "ZF",
+      "file_id": "ee840357-42d5-4d83-89e7-86869dc9bae4",
+      "filename": "TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.svs",
+      "bytes": 1674407337,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "c085ee766af3f97ed208a9e01f4ae69d"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/ee840357-42d5-4d83-89e7-86869dc9bae4",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          119519,
+          89653
+        ],
+        "measured_mpp_xy": [
+          0.2527,
+          0.2527
+        ],
+        "coordinate_sha256": "488200db8ee7a6fa1d2d876ce817de75942162288624f55c1d6a6a458d927a62",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 7115
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-DK-A1A7",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "dev",
+      "source_site_prefix": "DK",
+      "file_id": "6971ceaf-cb55-42b0-9880-effc1010e4a5",
+      "filename": "TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.svs",
+      "bytes": 1298095525,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "11919d7651152a76f849f04d4076dba7"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/6971ceaf-cb55-42b0-9880-effc1010e4a5",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          93623,
+          63206
+        ],
+        "measured_mpp_xy": [
+          0.2527,
+          0.2527
+        ],
+        "coordinate_sha256": "621ec2b98be27ce222b99f0f3e10143a0c51f5f877da36e773da4a5acdc043d6",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 3272
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-GV-A3QH",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "dev",
+      "source_site_prefix": "GV",
+      "file_id": "8ee271d5-7c0d-4650-965c-e525a6a805f9",
+      "filename": "TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.svs",
+      "bytes": 1261690106,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "96676aaa8452da88922457ba7eba1bb1"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/8ee271d5-7c0d-4650-965c-e525a6a805f9",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          130302,
+          74456
+        ],
+        "measured_mpp_xy": [
+          0.2479,
+          0.2479
+        ],
+        "coordinate_sha256": "85ae8ea11d46df05c29ebf1c1373a475ad3196cbeabf7fdde087e6e45b1944df",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 3377
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-K4-A5RI",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "eval",
+      "source_site_prefix": "K4",
+      "file_id": "227e3588-7740-4941-8966-cd5276564199",
+      "filename": "TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.svs",
+      "bytes": 3070816634,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "b00b13ede3cb20ab169d3de0a2b4ff65"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/227e3588-7740-4941-8966-cd5276564199",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          189602,
+          77847
+        ],
+        "measured_mpp_xy": [
+          0.2485,
+          0.2485
+        ],
+        "coordinate_sha256": "24457dbe80d222f5dcffb14b1974e5bac0259f705069e8552594ac369f4d067d",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 8130
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-FD-A5BU",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "eval",
+      "source_site_prefix": "FD",
+      "file_id": "8a68864a-187e-4425-9565-709e93d4e794",
+      "filename": "TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.svs",
+      "bytes": 1710134657,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "749d80d17d46ddbe3864650ac1d629a4"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/8a68864a-187e-4425-9565-709e93d4e794",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          143423,
+          79002
+        ],
+        "measured_mpp_xy": [
+          0.2527,
+          0.2527
+        ],
+        "coordinate_sha256": "22047ff1db5f7f8222c342591ff7d9a03ff1d569ea63676b758356ad4707816b",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 6125
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-BT-A42F",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "eval",
+      "source_site_prefix": "BT",
+      "file_id": "dade7c04-745f-4b74-9d71-a0ba532db9da",
+      "filename": "TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.svs",
+      "bytes": 1352327011,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "ce956bacef8e46ed84a72ac28ca4556d"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/dade7c04-745f-4b74-9d71-a0ba532db9da",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          118048,
+          92842
+        ],
+        "measured_mpp_xy": [
+          0.2456,
+          0.2456
+        ],
+        "coordinate_sha256": "26739a6732120a3c318cb110b3a889c18c3c297a1a0ad4ef98c0e01ebebc26d6",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 3538
+      }
+    },
+    {
+      "kind": "diagnostic_wsi",
+      "patient_id": "TCGA-CF-A3MH",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "split": "eval",
+      "source_site_prefix": "CF",
+      "file_id": "9fcfdd36-3608-451b-b391-24d9ab48caa6",
+      "filename": "TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.svs",
+      "bytes": 927983855,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "1880060318a3de873c1074c595937805"
+      },
+      "source_url": "https://api.gdc.cancer.gov/data/9fcfdd36-3608-451b-b391-24d9ab48caa6",
+      "proposed_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.svs",
+      "verified_coordinate_filename": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.h5",
+      "raw_wsi_header_verified": true,
+      "downloaded": true,
+      "verified_destination": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.svs",
+      "download_verification": {
+        "job_id": "22995933",
+        "status": "verified",
+        "method": "exact size and streaming MD5 on scheduled CPU node",
+        "report": "reports/pilot_downloads_22995933.json"
+      },
+      "raw_header_verification": {
+        "job_id": "23005299",
+        "report": "reports/ncsa_pilot_preflight_23005299.json",
+        "dimensions": [
+          72352,
+          70208
+        ],
+        "measured_mpp_xy": [
+          0.2456,
+          0.2456
+        ],
+        "coordinate_sha256": "1fbed97305052b37909b9ed8b9030bb45c32f27740fee054c3b780d0f0bc85aa",
+        "coordinate_header_verified": true,
+        "physical_candidate_cells": 2808
+      }
+    }
+  ],
+  "total_input_bytes": 21243276685,
+  "new_patients": 16,
+  "additional_checkpoints": 0,
+  "metadata_source": "reports/gdc_pilot_candidates_20261018.json",
+  "metadata_sha256": "8e427ad43717558b3edbf5226e7c5327e06120ef87f8962a08049db051bcb035",
+  "selection": {
+    "seed": "floater-pilot-20261018",
+    "rank": "SHA256(seed + ':' + patient_id); lexicographic file tie-break",
+    "per_split_per_organ": 4,
+    "source_site_policy": "One new patient per TCGA source-site prefix; no prefix overlap with existing development or between new splits. Prefix is not normalized institution. No outcome/embedding selection."
+  },
+  "retained_development_patients": [
+    "TCGA-2A-A8VO",
+    "TCGA-2F-A9KO"
+  ],
+  "retired_smoke_evaluation_patients": [
+    "TCGA-2A-A8VL",
+    "TCGA-2F-A9KP"
+  ],
+  "proposed_sampling": {
+    "tiles_per_patient_cap": 512,
+    "connected_windows": 4,
+    "tiles_per_window_cap": 128,
+    "field_um": 256,
+    "export_pixels": 512,
+    "status": "Original four x 128 candidate failed one development patient; superseded by verified uniform four x 96 in verified_sampling."
+  },
+  "proposed_clean_removal_target": "At most 1% per unmodified development patient; declare/freeze selection rule before held-out evaluation. No unseen-patient guarantee.",
+  "proposed_resources": {
+    "gpu_partition": "gpuA100x4",
+    "gpu_account": "bfqi-delta-gpu",
+    "gpu_qos": "bfqi-delta-gpu-mhoda",
+    "gpus_at_once": 1,
+    "encoding_wall_minutes_cap": 30,
+    "encoding_cpus": 4,
+    "encoding_memory_gb": 16,
+    "cpu_account": "bfqi-delta-cpu",
+    "cpu_partition": "cpu",
+    "detector_wall_minutes_cap": 30,
+    "status": "Proposed caps, not measured runtime or submitted requests.",
+    "download_cpus": 1,
+    "download_memory_gb": 2,
+    "download_wall_minutes_cap": 30,
+    "detector_cpus": 2,
+    "detector_memory_gb": 8
+  },
+  "unresolved": [
+    "Allocation/project storage quota/headroom",
+    "Cohort encoder/runner and final development-only numerical calibration",
+    "Patient-separated development selection validation",
+    "Normalized institution mapping and report linkage",
+    "Pathologist-confirmed native floater annotations"
+  ],
+  "scientific_limit": "Metadata-selected feasibility pilot, not a representative population or clinically validated cohort.",
+  "authorization": {
+    "approved_utc": "2026-10-18T22:57:54.470318+00:00",
+    "source": "Explicit user reply: Approve the 21.24 GB download",
+    "question_item_id": "call_2b445aabe0a64bfb8aee88d14c2e274f:0",
+    "approved_file_count": 16,
+    "approved_total_bytes": 21243276685,
+    "prior_unapproved_plan_sha256": "45f1ca97b8890c348084744670c33f38656e71b7293ae247c4e67f7238401923",
+    "scope": "Download only the exact 16 listed public diagnostic slides into Delta personal storage. No extra model weights, replacement patients, or expanded-pilot submission. Sampler/preflight/protocol gates remain."
+  },
+  "acquisition": {
+    "state": "completed_and_verified",
+    "job_id": "22995933",
+    "slurm_state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:04:42",
+    "node": "cn096",
+    "verified_files": 16,
+    "failed_files": 0,
+    "total_verified_bytes": 21243276685,
+    "verified_at_utc": "2026-10-19T05:20:25.855770+00:00",
+    "report": "reports/pilot_downloads_22995933.json",
+    "report_sha256": "5333ba5dc21d011f57acb92a88aa059467538ba9d5e2f22c82584f67d0d6c6f4",
+    "verification": "reports/ncsa_pilot_download_verification_20261019.json",
+    "submitted_manifest_sha256": "e6050ccd07784c22cb578a6c564df016e23f33f60cdb76ac90ee37abb5d3161d",
+    "raw_headers_verified": false,
+    "new_embeddings_created": false,
+    "expanded_pilot_submitted": false
+  },
+  "verified_sampling": {
+    "job_id": "23005299",
+    "connected_windows": 4,
+    "tiles_per_window": 96,
+    "tiles_per_patient": 384,
+    "field_um": 256,
+    "export_pixels": 512,
+    "minimum_required_gap_um": 1000,
+    "minimum_observed_gap_um": 1024,
+    "planned_patients_verified": 18,
+    "development_pixels_exported": 768,
+    "report": "reports/ncsa_pilot_preflight_23005299.json"
+  }
+}

@@ -102,10 +102,25 @@ def calibrate(slides, text, exclusion_mm=1.0, smoothing_mm=0.1, weight=0.5, quan
     return config
 
 
-def anomaly_scores(slide, text, calibration):
+def _check_calibration(slide, text, calibration):
     check_compatible(slide, text)
     if calibration["model"] != text.model or calibration["text_fingerprint"] != text.fingerprint() or calibration["source_kind"] != text.source_kind:
         raise ValueError("Calibration model/prompt/source provenance mismatch")
+
+
+def development_anomaly_scores(slide, text, calibration):
+    """Resubstitution diagnostic only; never an independent evaluation result."""
+    _check_calibration(slide, text, calibration)
+    involved = {slide.metadata["patient_id"]}
+    if "injection" in slide.metadata:
+        involved.add(slide.metadata["injection"]["donor_patient_id"])
+    if slide.metadata["split"] != "dev" or not involved <= set(calibration["development_patients"]):
+        raise ValueError("Development diagnostics require calibration patients only, including donors")
+    return _combine(_signals(slide, text, calibration), slide, calibration)
+
+
+def anomaly_scores(slide, text, calibration):
+    _check_calibration(slide, text, calibration)
     involved = {slide.metadata["patient_id"], slide.metadata.get("injection", {}).get("donor_patient_id")}
     if slide.metadata["split"] != "eval" or involved & set(calibration["development_patients"]):
         raise ValueError("Evaluation patients/donors must be independent of calibration")

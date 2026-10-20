@@ -1,0 +1,47 @@
+{
+  "job_id": "22995881",
+  "submitted_utc": "20261018T225831Z",
+  "category": "approved 16-slide acquisition only",
+  "release": "/u/mhoda/floater-finder/releases/20261018T225831Z",
+  "run_directory": "/work/nvme/bfqi/mhoda/floater-finder/acquisitions/expanded-pilot-20261018T225831Z",
+  "download_report": "/work/nvme/bfqi/mhoda/floater-finder/acquisitions/expanded-pilot-20261018T225831Z/downloads.json",
+  "plan": "/u/mhoda/floater-finder/releases/20261018T225831Z/configs/ncsa_expanded_pilot_download_plan.json",
+  "source_sha256": {
+    "configs/ncsa_expanded_pilot_download_plan.json": "e6050ccd07784c22cb578a6c564df016e23f33f60cdb76ac90ee37abb5d3161d",
+    "scripts/download_approved_inputs.py": "a461c7861efc3a051caa9af9221d64f1709dca6fba33161d031b5ffcd82586b3",
+    "scripts/slurm/download_inputs.sbatch": "c3c7ea677c6e46d09174971b08b341407004c481e2c431fb049b50c8bbceec41"
+  },
+  "authorization": {
+    "approved_utc": "2026-10-18T22:57:54.470318+00:00",
+    "source": "Explicit user reply: Approve the 21.24 GB download",
+    "question_item_id": "call_2b445aabe0a64bfb8aee88d14c2e274f:0",
+    "approved_file_count": 16,
+    "approved_total_bytes": 21243276685,
+    "prior_unapproved_plan_sha256": "45f1ca97b8890c348084744670c33f38656e71b7293ae247c4e67f7238401923",
+    "scope": "Download only the exact 16 listed public diagnostic slides into Delta personal storage. No extra model weights, replacement patients, or expanded-pilot submission. Sampler/preflight/protocol gates remain."
+  },
+  "file_count": 16,
+  "expected_input_bytes": 21243276685,
+  "resources": {
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu",
+    "cpus": 1,
+    "memory_gb": 2,
+    "wall_minutes": 30,
+    "gpus": 0
+  },
+  "expanded_pilot_submitted": false,
+  "observed_scheduler_gate": {
+    "state": "PENDING",
+    "reason": "Reservation",
+    "start_time": "Unknown",
+    "inspected_utc": "2026-10-18T23:00:24Z",
+    "reservation_name": "sup-30434-cpu",
+    "reservation_end_local": "2026-10-18T18:00:00 America/Chicago",
+    "reservation_state": "INACTIVE",
+    "input_downloads_started": false
+  },
+  "cancelled_before_download": true,
+  "superseded_by_job": "22995933"
+}

@@ -20,12 +20,26 @@ Inputs live under `/work/nvme/bfqi/mhoda/floater-finder/inputs/`. Development pa
 
 ## Next study
 
-The current frozen-threshold smoke is complete. Before claiming a useful detector, use a larger, representative development cohort and a fresh held-out evaluation cohort. The existing evaluation patients must not drive threshold tuning. Preserve calibration-only threshold selection, fixed prompts, patient separation and exact oracle stopping rules. Broader sampling across each WSI is needed before full-slide robustness or throughput claims. Unknown cohort paths, quota and institution/report metadata remain explicit in [NCSA setup](ncsa_setup.md).
+The current frozen-threshold smoke and **development-only cutoff diagnostic** are complete. CPU job `22995268` reused the already-created `[128,512]` artifacts from each of `TCGA-2A-A8VO` and `TCGA-2F-A9KO`, completing `0:0` in 12 seconds. No new image embeddings, raw slides, checkpoint downloads or GPU allocation were needed. [Observed cutoff tradeoff and validation](../reports/conch_threshold_results.md).
+
+The [frozen diagnostic configuration](../configs/ncsa_threshold_diagnostic.json) compares clean-development quantiles 0.90, 0.95, 0.975, 0.99 and 0.995, retaining the same prompts, 1 mm spatial exclusion, 0.1 mm smoothing and equal organ/visual weights. It uses both development host/donor directions, six contamination levels and five seeds. Every trial must pass exact oracle recovery. Record per-patient clean removal counts, raw tile scores, injection metadata and denominator-bearing metrics. The scheduled request is two CPUs, 4 GB, five minutes and no GPU.
+
+This is **resubstitution**: the two development patients supply both clean calibration and synthetic diagnostic trials. Its estimates are optimistic, and the repeated seeds are not independent patients. The script cannot load evaluation artifacts; neither the current evaluation patients nor their donor identities may influence cutoff selection. No cutoff is automatically selected, and the existing nominal 1% clean-tile budget remains the reference rather than a promise about unseen data.
+
+At the 97.5th-percentile combined cutoff, mean development donor detection at 10% requested contamination was 89.23%, with 2.34% original-host removal. The unmodified prostate subset alone loses 4.69%, illustrating why a pooled clean-removal rate is insufficient. These observations do not establish transfer to unseen patients, and no revised cutoff was selected.
+
+The dependency maintenance step is complete locally and for the new Delta image runtime. Pillow 12.3.0 and optional-test pytest 9.0.3 fall outside every vulnerable range in the [recorded 37-alert/19-advisory inventory](../reports/dependency_alerts_20261018.json). Focused regression probes and 91 local tests pass. CPU preparation `22995419` and A100 compatibility `22995434` completed `0:0`; all 256 development tiles and image/text vectors matched the preserved baseline exactly. New artifacts record Pillow version and are kept distinct from historical artifacts. GitHub alert closure has not been checked after a push, and this is not a whole-dependency audit. [Verified runtime and evidence locations](ncsa_setup.md#patched-image-runtime-verified-on-a-scheduled-a100).
+
+The [expanded-pilot plan](expanded_pilot_plan.md) contains 16 new public diagnostic slides, **21.24 GB**, with verified GDC metadata/checksums and matching shared-coordinate filenames. Eight new development patients and eight fresh evaluation patients are separate by patient and TCGA source-site prefix; prefixes are not verified institutions. The user approved the exact acquisition on 2026-10-18. CPU download job `22995933` completed `0:0` in 4 minutes 42 seconds; all 16 files passed size/streaming MD5 checks with no failures. [Accounting, manifest comparison and storage checks](../reports/ncsa_pilot_download_verification_20261019.json). Raw-header and protocol validation remain separate gates. It is a feasibility sample rather than a representative population cohort.
+
+Raw-header/MPP/coordinate checks and broader sampling now pass for all 18 planned patients. CPU job `23005299` validated four × 96-tile windows per patient after preserving the failed 128-tile-window candidate; 768 development QC tiles decoded successfully. The [study design is frozen](expanded_pilot_protocol.md), including a development-only leave-one-patient-out cutoff-selection rule and 1% original-host removal budget. [Technical evidence](../reports/conch_pilot_preflight_results.md).
+
+Next, implement/validate the patient-separated cohort encoder and runner against that frozen design. Encode development patients through one bounded GPU job at a time, perform the declared clean-development selection, and freeze numerical calibration before held-out scoring. If no candidate meets the declared budget, stop before evaluation. The current stage created no new embeddings. Selected windows remain subsets rather than full slides; institution/report metadata, native pathology review and project storage quota remain unresolved in [NCSA setup](ncsa_setup.md).
 
 The first milestone remains CONCH only. No bulk cohort acquisition or additional model is implied by these results.
 
 Exact next command from this checkout to review the verified detector evidence:
 
 ```sh
-cat reports/conch_detector_smoke_22994885.json
+cat reports/conch_pilot_protocol_freeze_20261019.json
 ```

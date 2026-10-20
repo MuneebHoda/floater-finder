@@ -1,0 +1,463 @@
+{
+  "study_id": "floater-conchv1-pilot-20261019-v1",
+  "status": "study design frozen; cohort runner and final numerical calibration pending",
+  "category": "expanded feasibility pilot; not clinical validation",
+  "slides": [
+    {
+      "role": "dev_prostate",
+      "patient_id": "TCGA-2A-A8VO",
+      "project": "TCGA-PRAD",
+      "bytes": 2363688671,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "2c1a5ce93579b5e1d48ff8b3f85d222f"
+      },
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.svs",
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7.h5",
+      "slide_id": "TCGA-2A-A8VO-01Z-00-DX1.3A69CC37-B066-4529-B1BE-AD155983AAA7",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "dev",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/26cceec5-7118-45a5-8c11-8e4a945ef4c1?fields=file_id%2Cfile_name%2Cfile_size%2Cmd5sum%2Caccess%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id",
+      "report_provenance": null
+    },
+    {
+      "role": "dev_bladder",
+      "patient_id": "TCGA-2F-A9KO",
+      "project": "TCGA-BLCA",
+      "bytes": 2824992800,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "eb843ea75b45382b88f24b616444915b"
+      },
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.svs",
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E.h5",
+      "slide_id": "TCGA-2F-A9KO-01Z-00-DX1.195576CF-B739-4BD9-B15B-4A70AE287D3E",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "dev",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/30e4624b-6f48-429b-b1d9-6a6bc5c82c5e?fields=file_id%2Cfile_name%2Cfile_size%2Cmd5sum%2Caccess%2Cexperimental_strategy%2Ccases.submitter_id%2Ccases.project.project_id",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-G9-6379",
+      "patient_id": "TCGA-G9-6379",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.svs",
+      "slide_id": "TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA",
+      "bytes": 1214225791,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "60bd3bbef4ce7486b24edbae371d9061"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/3eedf78d-8aa7-4b77-a0c0-d14291415e04",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-FC-A5OB",
+      "patient_id": "TCGA-FC-A5OB",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.svs",
+      "slide_id": "TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB",
+      "bytes": 757580661,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "cb54ba1b1be86ee07988cd0834fce947"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/1a9a1a68-750b-402a-89f2-082b65efa593",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-EJ-A46B",
+      "patient_id": "TCGA-EJ-A46B",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.svs",
+      "slide_id": "TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0",
+      "bytes": 1716911159,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "35d1c27d099677b460848d13af74263a"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/b5d322a2-461f-4549-9e4c-c272b8188c3e",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-HC-7230",
+      "patient_id": "TCGA-HC-7230",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.svs",
+      "slide_id": "TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1",
+      "bytes": 145146489,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "ac57a905cb5d599161c8d574fa3afc8a"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/44eb6d7a-a3c2-4023-b068-1c2f50b564db",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-YL-A8SQ",
+      "patient_id": "TCGA-YL-A8SQ",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.svs",
+      "slide_id": "TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236",
+      "bytes": 2831374346,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "98ce1548780ff966d6013fa354df01db"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/0591b150-fe51-4844-a979-40d0246de8e9",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-XK-AAIW",
+      "patient_id": "TCGA-XK-AAIW",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.svs",
+      "slide_id": "TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5",
+      "bytes": 755782295,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "bc6278b53cd74c960627012988c5740e"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/6dbcf931-fe34-41e6-8731-93518818a5a2",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-V1-A9ZR",
+      "patient_id": "TCGA-V1-A9ZR",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.svs",
+      "slide_id": "TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6",
+      "bytes": 720786563,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "7094fe072414cd9416c9ddee5fcd4612"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/dbda78ed-68ba-4c84-80d8-04f8e422672b",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-KK-A7AW",
+      "patient_id": "TCGA-KK-A7AW",
+      "project": "TCGA-PRAD",
+      "organ": "prostate",
+      "label": "prostate",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.svs",
+      "slide_id": "TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7",
+      "bytes": 497108391,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "0af738b6168ddcc1dfd980b9bc601d03"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-PRAD/TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/f50839b2-5846-42e6-b67b-fbc4034d9717",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-XF-A9SW",
+      "patient_id": "TCGA-XF-A9SW",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.svs",
+      "slide_id": "TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0",
+      "bytes": 1308905865,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "0dc20d965e05aaaad28ee3fc1b0f122c"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/fb291e7d-cc6b-4169-8be8-fec92dc9cb7d",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-ZF-A9RN",
+      "patient_id": "TCGA-ZF-A9RN",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.svs",
+      "slide_id": "TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0",
+      "bytes": 1674407337,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "c085ee766af3f97ed208a9e01f4ae69d"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/ee840357-42d5-4d83-89e7-86869dc9bae4",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-DK-A1A7",
+      "patient_id": "TCGA-DK-A1A7",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.svs",
+      "slide_id": "TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62",
+      "bytes": 1298095525,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "11919d7651152a76f849f04d4076dba7"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/6971ceaf-cb55-42b0-9880-effc1010e4a5",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-GV-A3QH",
+      "patient_id": "TCGA-GV-A3QH",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "dev",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.svs",
+      "slide_id": "TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9",
+      "bytes": 1261690106,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "96676aaa8452da88922457ba7eba1bb1"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/8ee271d5-7c0d-4650-965c-e525a6a805f9",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-K4-A5RI",
+      "patient_id": "TCGA-K4-A5RI",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.svs",
+      "slide_id": "TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8",
+      "bytes": 3070816634,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "b00b13ede3cb20ab169d3de0a2b4ff65"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/227e3588-7740-4941-8966-cd5276564199",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-FD-A5BU",
+      "patient_id": "TCGA-FD-A5BU",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.svs",
+      "slide_id": "TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90",
+      "bytes": 1710134657,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "749d80d17d46ddbe3864650ac1d629a4"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/8a68864a-187e-4425-9565-709e93d4e794",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-BT-A42F",
+      "patient_id": "TCGA-BT-A42F",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.svs",
+      "slide_id": "TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F",
+      "bytes": 1352327011,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "ce956bacef8e46ed84a72ac28ca4556d"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/dade7c04-745f-4b74-9d71-a0ba532db9da",
+      "report_provenance": null
+    },
+    {
+      "role": "TCGA-CF-A3MH",
+      "patient_id": "TCGA-CF-A3MH",
+      "project": "TCGA-BLCA",
+      "organ": "bladder",
+      "label": "bladder",
+      "split": "eval",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.svs",
+      "slide_id": "TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC",
+      "bytes": 927983855,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "1880060318a3de873c1074c595937805"
+      },
+      "coordinate_h5": "/work/nvme/bfqi/shared/datasets/tcga_conch_v1.5/TCGA/TCGA-BLCA/TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.h5",
+      "diagnostic_provenance": "https://api.gdc.cancer.gov/files/9fcfdd36-3608-451b-b391-24d9ab48caa6",
+      "report_provenance": null
+    }
+  ],
+  "checkpoint": {
+    "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+    "bytes": 802235437,
+    "checksum": {
+      "algorithm": "sha256",
+      "value": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c"
+    }
+  },
+  "conch_source_revision": "141cc09c7d4ff33d8eda562bd75169b457f71a62",
+  "prompts": {
+    "prostate": [
+      "a histopathology image of prostate tissue",
+      "an H&E stained section of prostate glands",
+      "microscopic prostate tissue with glandular architecture",
+      "a histologic section from the prostate"
+    ],
+    "bladder": [
+      "a histopathology image of urinary bladder tissue",
+      "an H&E stained section of bladder urothelium",
+      "microscopic urinary bladder tissue with urothelial architecture",
+      "a histologic section from the urinary bladder"
+    ]
+  },
+  "sampling": {
+    "window_count": 4,
+    "tiles_per_window": 96,
+    "field_um": 256,
+    "export_pixels": 512,
+    "min_gap_um": 1000,
+    "method": "centroid first; farthest eligible seed thereafter; four-neighbor BFS",
+    "capacity_policy": "Require exactly four disjoint connected windows of 96 for every patient; fail technical gate without replacement or silent cap reduction."
+  },
+  "pixel_qc_patients": [
+    "TCGA-G9-6379",
+    "TCGA-XF-A9SW"
+  ],
+  "detector": {
+    "exclusion_mm": 1.0,
+    "smoothing_mm": 0.1,
+    "weight": 0.5,
+    "chunk_size": 256,
+    "variants": [
+      "organ_only",
+      "visual_only",
+      "combined"
+    ]
+  },
+  "threshold_selection": {
+    "quantiles": [
+      0.9,
+      0.95,
+      0.975,
+      0.99,
+      0.995
+    ],
+    "method": "Leave one development patient out. Fit normalization and threshold on remaining nine unmodified development patients; score the held-out development patient. Do not use synthetic mixtures or evaluation patients to select settings.",
+    "clean_host_removal_budget_per_patient": 0.01,
+    "selection_rule": "Choose the smallest quantile for which every held-out development patient and every variant has original-host removal <=1%. If none passes, stop before evaluation and record no feasible cutoff. Fit final calibration on all ten development patients only after this choice; freeze its hashes and cutoffs before evaluation.",
+    "interpretation": "LOPO is used for selection, not independent performance validation. Original-host tissue is not pathologist-confirmed floater-free; this is not a clinical false-positive guarantee."
+  },
+  "evaluation": {
+    "contamination_percent": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "pairing": "All cross-organ directed held-out host/donor pairs: 4 prostate x 4 bladder in both directions.",
+    "clean_controls": "Once per unique evaluation host; do not repeat zero-contamination controls by donor/seed.",
+    "independent_evaluation_patients": 8,
+    "directed_pairs": 32,
+    "nonzero_trials": 800,
+    "unique_clean_host_controls": 8,
+    "total_trials": 808,
+    "variant_metric_rows": 2424,
+    "controls": [
+      "no_filter",
+      "oracle",
+      "matched_random_removal"
+    ],
+    "oracle_policy": "Any oracle restoration failure is a pipeline defect: stop evaluation; never exclude it to improve results.",
+    "denominators": "Report unique patients, hosts, donors, pairs, requested/realized foreign counts and repeated trials separately. Report per-patient clean controls once.",
+    "retired_evaluation_patients": [
+      "TCGA-2A-A8VL",
+      "TCGA-2F-A9KP"
+    ]
+  },
+  "exclusions": {
+    "policy": "Technical corruption, header/coordinate mismatch or insufficient frozen sampling capacity stops the gate. Record all failures; no automatic replacement or outcome-based exclusion.",
+    "pathology_review": false,
+    "institution_mapping_verified": false,
+    "report_linkage_verified": false
+  },
+  "execution": {
+    "gpus_at_once": 1,
+    "encoding_cpus": 4,
+    "encoding_memory_gb": 16,
+    "encoding_wall_minutes_cap": 30,
+    "cpu_cpus": 2,
+    "cpu_memory_gb": 8,
+    "cpu_wall_minutes_cap": 30,
+    "new_weights_or_datasets": false,
+    "evaluation_gate": "Require passing technical preflight, validated cohort runner, development-only selection, and frozen final calibration before held-out scoring."
+  },
+  "acquisition_manifest_sha256": "1e395e7da4d1e573e64ccd20ed6977ce534be9ca99b10391cc9ba6c87ed53e09",
+  "design_amendments": [
+    {
+      "reason": "Technical geometry only, before any new image embeddings or held-out outcomes: initial job 23005189 verified all 18 checksums/headers but TCGA-HC-7230 could not fit window 4/4 at 128 tiles/window and 1000-micron gap.",
+      "initial_job": "23005189",
+      "initial_tiles_per_window": 128,
+      "revised_tiles_per_window": 96,
+      "policy": "Apply the same reduced size to every patient, retain all original patients and spacing; validate before freezing.",
+      "evidence": "reports/ncsa_pilot_preflight_23005189.json"
+    }
+  ],
+  "frozen_at_utc": "2026-10-19T05:34:40.007423+00:00",
+  "technical_validation": {
+    "job_id": "23005299",
+    "report": "reports/ncsa_pilot_preflight_23005299.json",
+    "report_sha256": "efc5ef8328729186323fbcb093af0ed7bfbfc14cfea0c6631937a266108e111f",
+    "independent_verification": "reports/ncsa_pilot_preflight_verification_20261019.json",
+    "minimum_observed_window_gap_um": 1024
+  }
+}

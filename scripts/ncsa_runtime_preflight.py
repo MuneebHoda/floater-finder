@@ -22,6 +22,9 @@ def main():
     import openslide
     from conch.open_clip_custom import get_tokenizer, tokenize
     from floater_finder.artifacts import write_json
+    from floater_finder.image_runtime import require_image_runtime
+
+    require_image_runtime()
 
     config = json.loads(Path(args.config).read_text())
     output = Path(args.output)

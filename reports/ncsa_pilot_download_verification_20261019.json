@@ -1,0 +1,206 @@
+{
+  "observed_utc": "2026-10-19T05:20:25.855770+00:00",
+  "remote_username": "mhoda",
+  "remote_hostname": "dt-login02.delta.ncsa.illinois.edu",
+  "job_id": "22995933",
+  "report_path": "/work/nvme/bfqi/mhoda/floater-finder/acquisitions/expanded-pilot-20261018T225831Z/downloads.cpu-interactive.json",
+  "report_sha256": "5333ba5dc21d011f57acb92a88aa059467538ba9d5e2f22c82584f67d0d6c6f4",
+  "log_path": "/work/nvme/bfqi/mhoda/floater-download-22995933.out",
+  "log_sha256": "73439f6130bc89c153ee750b36b2a2dcbefadde8210e00eebeb262d4887f5e67",
+  "source_sha256": {
+    "configs/ncsa_expanded_pilot_download_plan.json": "e6050ccd07784c22cb578a6c564df016e23f33f60cdb76ac90ee37abb5d3161d",
+    "scripts/download_approved_inputs.py": "a461c7861efc3a051caa9af9221d64f1709dca6fba33161d031b5ffcd82586b3",
+    "scripts/slurm/download_inputs.sbatch": "c3c7ea677c6e46d09174971b08b341407004c481e2c431fb049b50c8bbceec41"
+  },
+  "file_metadata": [
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.svs",
+      "bytes": 1214225791,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.svs",
+      "bytes": 757580661,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.svs",
+      "bytes": 1716911159,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.svs",
+      "bytes": 145146489,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.svs",
+      "bytes": 2831374346,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.svs",
+      "bytes": 755782295,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.svs",
+      "bytes": 720786563,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.svs",
+      "bytes": 497108391,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.svs",
+      "bytes": 1308905865,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.svs",
+      "bytes": 1674407337,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.svs",
+      "bytes": 1298095525,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.svs",
+      "bytes": 1261690106,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.svs",
+      "bytes": 3070816634,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.svs",
+      "bytes": 1710134657,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.svs",
+      "bytes": 1352327011,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.svs",
+      "bytes": 927983855,
+      "mode": "0o600",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": true,
+      "directory": false
+    }
+  ],
+  "directory_metadata": [
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs",
+      "bytes": 4096,
+      "mode": "0o2700",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA",
+      "bytes": 4096,
+      "mode": "0o2700",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": false,
+      "directory": true
+    },
+    {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD",
+      "bytes": 4096,
+      "mode": "0o2700",
+      "owner": "mhoda",
+      "symlink": false,
+      "regular_file": false,
+      "directory": true
+    }
+  ],
+  "accounting_psv": "22995933|COMPLETED|0:0|00:04:42|2026-10-18T18:04:02|2026-10-18T18:08:44|cn096|bfqi-delta-cpu|cpu-interactive|bfqi-delta-cpu|1|2G|billing=2048,cpu=1,mem=2G,node=1|billing=2048,cpu=1,mem=2G,node=1\n22995933.batch|COMPLETED|0:0|00:04:42|2026-10-18T18:04:02|2026-10-18T18:08:44|cn096|bfqi-delta-cpu|||1|||cpu=1,mem=2G,node=1\n22995933.extern|COMPLETED|0:0|00:04:42|2026-10-18T18:04:02|2026-10-18T18:08:44|cn096|bfqi-delta-cpu|||1|||billing=2048,cpu=1,mem=2G,node=1\n22995933.0|COMPLETED|0:0|00:04:33|2026-10-18T18:04:11|2026-10-18T18:08:44|cn096|bfqi-delta-cpu|||1|||cpu=1,mem=2G,node=1\n",
+  "own_queue_psv": "",
+  "category": "approved 16-slide acquisition verification only",
+  "verified_files": 16,
+  "failed_files": 0,
+  "total_verified_bytes": 21243276685,
+  "approved_manifest_matches_report": true,
+  "immutable_submission_sources_match": true,
+  "retrieved_report_and_log_hashes_match": true,
+  "all_final_files_owner_only": true,
+  "own_queue_empty": true,
+  "integrity_method": "Exact byte count and streaming MD5 in scheduled downloader; retrieved report compared to exact approved manifest; post-download lstat only on login node. No repeated whole-file hashing.",
+  "raw_headers_verified": false,
+  "new_embeddings_created": false,
+  "expanded_pilot_submitted": false,
+  "client_date": "2026-10-19"
+}

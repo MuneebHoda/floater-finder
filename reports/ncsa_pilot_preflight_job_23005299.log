@@ -1,0 +1,48 @@
+=====================================================
+Conda-Forge PyTorch 2.8 Environment Loaded Successfully!
+=====================================================
+
+To activate the environment:
+  conda activate base
+
+If 'conda activate' fails, use:
+  source $CONDA_PREFIX/etc/profile.d/conda.sh && conda activate base
+
+To verify PyTorch installation:
+  python -c "import torch; print(f'PyTorch {torch.__version__} CUDA:
+{torch.cuda.is_available()}')"
+
+Environment includes:
+  - PyTorch 2.8 with CUDA 12.8 support
+  - Scientific Python stack (numpy, scipy, pandas)
+  - ML libraries (transformers, lightning, timm)
+  - Cray PE integration with optimized MPI
+
+For Jupyter notebook support:
+  setup-kernel (creates Jupyter kernel for this environment)
+
+For distributed training, load:
+  module load aws-ofi-nccl/1.14.2
+
+Ready for single-node and distributed training!
+=====================================================
+
+{"patient_id": "TCGA-2A-A8VO", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-2F-A9KO", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-G9-6379", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-FC-A5OB", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-EJ-A46B", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-HC-7230", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-YL-A8SQ", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-XK-AAIW", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-V1-A9ZR", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-KK-A7AW", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-XF-A9SW", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-ZF-A9RN", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-DK-A1A7", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-GV-A3QH", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-K4-A5RI", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-FD-A5BU", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-BT-A42F", "raw_header_verified": true, "sampling_verified": true}
+{"patient_id": "TCGA-CF-A3MH", "raw_header_verified": true, "sampling_verified": true}
+{"status": "passed", "patients": 18, "output": "/work/nvme/bfqi/mhoda/floater-finder/preflights/expanded-20261019T052935Z"}

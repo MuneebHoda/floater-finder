@@ -1,0 +1,20 @@
+{
+  "observed_utc": "2026-10-18T23:31:07.693990+00:00",
+  "job_id": "22995933",
+  "state": "remote_status_unconfirmed_after_shared_ssh_failure",
+  "last_successful_observation": {
+    "observed_utc": "2026-10-18T23:05:02.559260+00:00",
+    "slurm_state": "RUNNING",
+    "node": "cn096",
+    "verified_files": 4,
+    "verified_bytes": 3833864100,
+    "failed_files": 0
+  },
+  "expected_files": 16,
+  "expected_input_bytes": 21243276685,
+  "ssh_error": "Permission denied (gssapi-with-mic,password)",
+  "authentication_retried": false,
+  "manual_next_command": "ssh ncsa-floater",
+  "expanded_pilot_submitted": false,
+  "download_report": "/work/nvme/bfqi/mhoda/floater-finder/acquisitions/expanded-pilot-20261018T225831Z/downloads.cpu-interactive.json"
+}

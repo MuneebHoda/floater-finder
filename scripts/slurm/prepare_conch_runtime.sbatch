@@ -27,10 +27,11 @@ export OMP_NUM_THREADS=2 TOKENIZERS_PARALLELISM=false
 export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_HUB_DISABLE_IMPLICIT_TOKEN=1
 test ! -e "$environment"
 python -m venv --system-site-packages "$environment"
+pillow_requirement=$(python -c 'import sys,tomllib; print(next(v for v in tomllib.load(open(sys.argv[1], "rb"))["project"]["dependencies"] if v.startswith("Pillow==")))' "$project/pyproject.toml")
 "$environment/bin/python" -m pip --isolated --disable-pip-version-check install \
     --no-input --no-cache-dir --no-deps --only-binary=:all: \
     --index-url https://pypi.org/simple \
-    ftfy==6.3.1 openslide-python==1.4.6 openslide-bin==4.0.1.2
+    "$pillow_requirement" ftfy==6.3.1 openslide-python==1.4.6 openslide-bin==4.0.1.2
 "$environment/bin/python" -m pip --isolated --disable-pip-version-check install \
     --no-input --no-deps --no-build-isolation \
     "$project/vendor/CONCH-141cc09c7d4ff33d8eda562bd75169b457f71a62"

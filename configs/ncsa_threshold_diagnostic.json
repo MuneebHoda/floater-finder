@@ -1,0 +1,15 @@
+{
+  "category": "development_diagnostic",
+  "development_patients": ["TCGA-2A-A8VO", "TCGA-2F-A9KO"],
+  "excluded_evaluation_patients": ["TCGA-2A-A8VL", "TCGA-2F-A9KP"],
+  "exclusion_mm": 1.0,
+  "smoothing_mm": 0.1,
+  "weight": 0.5,
+  "quantiles": [0.90, 0.95, 0.975, 0.99, 0.995],
+  "reference_quantile": 0.99,
+  "chunk_size": 256,
+  "contamination_percent": [0, 0.5, 1, 2, 5, 10],
+  "seeds": [0, 1, 2, 3, 4],
+  "selection_policy": "No cutoff selected by this diagnostic; the existing 1% nominal clean-tile budget remains the reference.",
+  "scope": "Two development patients reused for calibration and synthetic diagnostics. Optimistic resubstitution; no held-out evaluation, new embeddings, or downloads."
+}

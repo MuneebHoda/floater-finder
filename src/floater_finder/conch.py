@@ -16,6 +16,7 @@ from PIL import Image
 from .artifacts import Slide, TextEmbeddings, normalize, write_json
 from .experiments import file_sha256, read_config
 from .scoring import ensemble_prompts
+from .image_runtime import require_image_runtime
 
 
 def preprocessing_signature(preprocess):
@@ -55,6 +56,7 @@ class ConchEncoder:
     def __init__(self, checkpoint):
         if not os.environ.get("SLURM_JOB_ID"):
             raise RuntimeError("Real CONCH encoding requires an authorized Slurm GPU job")
+        pillow_version = require_image_runtime()
         checkpoint = Path(checkpoint).resolve()
         if not checkpoint.is_file():
             raise ValueError("Supply a verified, already-local CONCH checkpoint file; downloads are disabled")
@@ -87,6 +89,7 @@ class ConchEncoder:
             "preprocessing_source_sha256": file_sha256(Path(inspect.getfile(create_model_from_pretrained)).with_name("transform.py")),
             "tokenizer_source_sha256": file_sha256(Path(inspect.getfile(get_tokenizer))),
             "torch_version": str(torch.__version__),
+            "pillow_version": pillow_version,
             "encoder_weight_coverage_verified": True}
         torch.cuda.synchronize()
         self.load_seconds = time.perf_counter() - started

@@ -1,0 +1,182 @@
+{
+  "created_at_utc": "2026-10-18T23:08:43.955287+00:00",
+  "files": [
+    {
+      "file_id": "3eedf78d-8aa7-4b77-a0c0-d14291415e04",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-G9-6379-01Z-00-DX1.7EE265D9-72A6-4019-924E-D88C865F66CA.svs",
+      "status": "verified",
+      "bytes": 1214225791,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "60bd3bbef4ce7486b24edbae371d9061"
+      },
+      "download_seconds": 13.747794565977529
+    },
+    {
+      "file_id": "1a9a1a68-750b-402a-89f2-082b65efa593",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-FC-A5OB-01Z-00-DX1.0055A98C-140F-48D0-B4E8-F110BEF2C6BB.svs",
+      "status": "verified",
+      "bytes": 757580661,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "cb54ba1b1be86ee07988cd0834fce947"
+      },
+      "download_seconds": 8.77786405198276
+    },
+    {
+      "file_id": "b5d322a2-461f-4549-9e4c-c272b8188c3e",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-EJ-A46B-01Z-00-DX1.16F1652C-010D-4CDA-A4D7-B32FF09F22B0.svs",
+      "status": "verified",
+      "bytes": 1716911159,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "35d1c27d099677b460848d13af74263a"
+      },
+      "download_seconds": 23.65804844512604
+    },
+    {
+      "file_id": "44eb6d7a-a3c2-4023-b068-1c2f50b564db",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-HC-7230-01Z-00-DX1.da088457-3abd-4943-92e5-4b74d72010f1.svs",
+      "status": "verified",
+      "bytes": 145146489,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "ac57a905cb5d599161c8d574fa3afc8a"
+      },
+      "download_seconds": 2.3991439437959343
+    },
+    {
+      "file_id": "0591b150-fe51-4844-a979-40d0246de8e9",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-YL-A8SQ-01Z-00-DX1.0DFEF9A0-9C25-46F9-8EB4-96844346F236.svs",
+      "status": "verified",
+      "bytes": 2831374346,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "98ce1548780ff966d6013fa354df01db"
+      },
+      "download_seconds": 34.342921875882894
+    },
+    {
+      "file_id": "6dbcf931-fe34-41e6-8731-93518818a5a2",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-XK-AAIW-01Z-00-DX1.31B98849-4AA9-4AC1-A697-A0C4165976B5.svs",
+      "status": "verified",
+      "bytes": 755782295,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "bc6278b53cd74c960627012988c5740e"
+      },
+      "download_seconds": 9.454678423935547
+    },
+    {
+      "file_id": "dbda78ed-68ba-4c84-80d8-04f8e422672b",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-V1-A9ZR-01Z-00-DX1.09668B8E-0AFA-4252-ABF1-BA7BD5D301B6.svs",
+      "status": "verified",
+      "bytes": 720786563,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "7094fe072414cd9416c9ddee5fcd4612"
+      },
+      "download_seconds": 9.3395585489925
+    },
+    {
+      "file_id": "f50839b2-5846-42e6-b67b-fbc4034d9717",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-PRAD/TCGA-KK-A7AW-01Z-00-DX1.F8A3E0D5-AC32-4C57-8AE2-5B98790544E7.svs",
+      "status": "verified",
+      "bytes": 497108391,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "0af738b6168ddcc1dfd980b9bc601d03"
+      },
+      "download_seconds": 6.323877549031749
+    },
+    {
+      "file_id": "fb291e7d-cc6b-4169-8be8-fec92dc9cb7d",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-XF-A9SW-01Z-00-DX1.3FC62DD6-E5D2-4F74-A937-A2A62946E5C0.svs",
+      "status": "verified",
+      "bytes": 1308905865,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "0dc20d965e05aaaad28ee3fc1b0f122c"
+      },
+      "download_seconds": 17.46404640492983
+    },
+    {
+      "file_id": "ee840357-42d5-4d83-89e7-86869dc9bae4",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-ZF-A9RN-01Z-00-DX1.262DCE43-154D-492E-80C3-6F8C8D4058D0.svs",
+      "status": "verified",
+      "bytes": 1674407337,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "c085ee766af3f97ed208a9e01f4ae69d"
+      },
+      "download_seconds": 23.337355639087036
+    },
+    {
+      "file_id": "6971ceaf-cb55-42b0-9880-effc1010e4a5",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-DK-A1A7-01Z-00-DX1.57B1442D-8862-447F-98D4-0D52F7B94E62.svs",
+      "status": "verified",
+      "bytes": 1298095525,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "11919d7651152a76f849f04d4076dba7"
+      },
+      "download_seconds": 17.867241768166423
+    },
+    {
+      "file_id": "8ee271d5-7c0d-4650-965c-e525a6a805f9",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-GV-A3QH-01Z-00-DX1.A87C25E1-8199-4557-944B-9ABD1A70ADE9.svs",
+      "status": "verified",
+      "bytes": 1261690106,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "96676aaa8452da88922457ba7eba1bb1"
+      },
+      "download_seconds": 15.272922707023099
+    },
+    {
+      "file_id": "227e3588-7740-4941-8966-cd5276564199",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-K4-A5RI-01Z-00-DX1.A56C3CF4-543E-46D6-BA50-52A4C790FAE8.svs",
+      "status": "verified",
+      "bytes": 3070816634,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "b00b13ede3cb20ab169d3de0a2b4ff65"
+      },
+      "download_seconds": 39.77656749705784
+    },
+    {
+      "file_id": "8a68864a-187e-4425-9565-709e93d4e794",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-FD-A5BU-01Z-00-DX1.94A8468C-59E7-4185-A877-CC271EA01C90.svs",
+      "status": "verified",
+      "bytes": 1710134657,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "749d80d17d46ddbe3864650ac1d629a4"
+      },
+      "download_seconds": 20.57273939391598
+    },
+    {
+      "file_id": "dade7c04-745f-4b74-9d71-a0ba532db9da",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-BT-A42F-01Z-00-DX1.B934B6A1-C16E-4796-A297-9E92DD74763F.svs",
+      "status": "verified",
+      "bytes": 1352327011,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "ce956bacef8e46ed84a72ac28ca4556d"
+      },
+      "download_seconds": 16.98512130486779
+    },
+    {
+      "file_id": "9fcfdd36-3608-451b-b391-24d9ab48caa6",
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/TCGA-BLCA/TCGA-CF-A3MH-01Z-00-DX1.4A6F7BDC-B7D2-4203-AA8E-7BA5DB8BF3AC.svs",
+      "status": "verified",
+      "bytes": 927983855,
+      "checksum": {
+        "algorithm": "md5",
+        "value": "1880060318a3de873c1074c595937805"
+      },
+      "download_seconds": 12.756412142887712
+    }
+  ],
+  "model_checkpoint_download_attempted": false
+}

@@ -1,0 +1,39 @@
+{
+  "release": "/u/mhoda/floater-finder/releases/20261019T052625Z",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/preflights/expanded-20261019T052625Z",
+  "environment": "/work/nvme/bfqi/mhoda/floater-finder/envs/conch-v1-pillow123-20261018T223113Z",
+  "source_sha256": {
+    "src/floater_finder/__init__.py": "73801f9e216e3274115b40665dadd7330884f4ad95efe98576564d607327d4e6",
+    "src/floater_finder/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/floater_finder/artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+    "src/floater_finder/cli.py": "b4d57a3c63d4e375b64e24162995c7c958699dfb7c6255400882e15b58b154d3",
+    "src/floater_finder/conch.py": "0d1c2b9c1bc5042c5c81b9d2309c78736ed9c8696499e693989b7a13c988f1a0",
+    "src/floater_finder/detection.py": "cf092142e711020481ced70894a608512247f149da974750b480477200e72075",
+    "src/floater_finder/experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+    "src/floater_finder/fixtures.py": "054d38f95f4e079d901134276a3262533a32ee147156b00ece26859c14bbe868",
+    "src/floater_finder/image_runtime.py": "7f76639698d5d1cdafabc0c9bd76774fd60ff69c3f17e2f047edafe5996c64d8",
+    "src/floater_finder/injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+    "src/floater_finder/inventory.py": "93c85975c7149d43b13d3c304894ea87c45bc59c852e152b148efd3d2bd9a4d6",
+    "src/floater_finder/reporting.py": "01182b210d17c0430eec881103610781a74ff189a412fd9be2af85b4eabbbab2",
+    "src/floater_finder/scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "src/floater_finder/tiling.py": "938709c19c8829b18f425f93c4910c97accd5a54b85ccdea28f5a2550a86f6a6",
+    "scripts/ncsa_pilot_preflight.py": "cb20f1f08b83cb4c5cb2beec159fd8b46854f7b1b60ebe5e27485a9a8fa586c3",
+    "scripts/slurm/pilot_preflight.sbatch": "0ee7352be39fd4fad73e3e69792e2b52a6c803731c6bda6e9c616737177dd4c8",
+    "configs/ncsa_expanded_pilot_protocol.json": "35ad9e569afcafc6f2a3e0d057340a7aa12ce659c86fa8614ba4fd8e9e624e17"
+  },
+  "dry_run_returncode": 0,
+  "dry_run_stdout": "",
+  "dry_run_stderr": "sbatch: Job 23005184 to start at 2026-10-19T00:27:28 a using 2 processors on nodes cn001 in partition cpu-interactive\n",
+  "staged_utc": "20261019T052625Z",
+  "authorization": "User requested header/coordinate preflight, broader sampling validation and protocol freezing on 2026-10-19; no held-out performance evaluation in this job.",
+  "local_tests": "97 passed with warnings as errors",
+  "resources": {
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu-interactive",
+    "cpus": 2,
+    "memory_gb": 4,
+    "wall_minutes": 15,
+    "gpus": 0
+  }
+}

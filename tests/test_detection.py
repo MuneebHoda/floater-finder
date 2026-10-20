@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from floater_finder.detection import auroc, calibrate, evaluate, organ_mismatch, visual_inconsistency
+from floater_finder.detection import auroc, calibrate, development_anomaly_scores, evaluate, organ_mismatch, visual_inconsistency
 from floater_finder.injection import inject
 from conftest import make_slide
 
@@ -89,3 +89,20 @@ def test_calibration_prompt_change_rejected(text):
     text.prompts["prostate"] = ["changed after calibration"]
     with pytest.raises(ValueError, match="provenance"):
         evaluate(make_slide(), text, calibration)
+
+
+def test_development_diagnostic_keeps_evaluation_leakage_guard(text):
+    slides = [make_slide("dev", split="dev"), make_slide("dev-donor", split="dev", organ="bladder")]
+    calibration = calibrate(slides, text)
+    mixed = inject(*slides, 10, 0)
+    assert set(development_anomaly_scores(mixed, text, calibration)) == {"organ_only", "visual_only", "combined"}
+    with pytest.raises(ValueError, match="independent"):
+        evaluate(mixed, text, calibration)
+    with pytest.raises(ValueError, match="calibration patients"):
+        development_anomaly_scores(make_slide("dev"), text, calibration)
+    wrong_donor = inject(slides[0], make_slide("other", split="dev", organ="bladder"), 10, 0)
+    with pytest.raises(ValueError, match="including donors"):
+        development_anomaly_scores(wrong_donor, text, calibration)
+    text.prompts["prostate"] = ["changed prompt"]
+    with pytest.raises(ValueError, match="provenance"):
+        development_anomaly_scores(slides[0], text, calibration)

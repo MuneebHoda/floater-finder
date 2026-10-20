@@ -1,0 +1,67 @@
+{
+  "study_id": "floater-conchv1-pilot-20261019-v1",
+  "frozen_utc": "2026-10-19T05:34:40.007423+00:00",
+  "scope": "Study design only; final numerical development calibration must be fitted and frozen before held-out scoring.",
+  "protocol": "configs/ncsa_expanded_pilot_protocol.json",
+  "protocol_sha256": "68455950fec2a427f72aeb6bae218bceeb3f6fa7e8df9f7d488ed8e090442958",
+  "protocol_document": "docs/expanded_pilot_protocol.md",
+  "protocol_document_sha256": "9d66360f208f362b14bc414a7e73bf712d8239a896adb77e8f4600156e339158",
+  "source_sha256": {
+    "src/floater_finder/__init__.py": "73801f9e216e3274115b40665dadd7330884f4ad95efe98576564d607327d4e6",
+    "src/floater_finder/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/floater_finder/artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+    "src/floater_finder/cli.py": "b4d57a3c63d4e375b64e24162995c7c958699dfb7c6255400882e15b58b154d3",
+    "src/floater_finder/conch.py": "0d1c2b9c1bc5042c5c81b9d2309c78736ed9c8696499e693989b7a13c988f1a0",
+    "src/floater_finder/detection.py": "cf092142e711020481ced70894a608512247f149da974750b480477200e72075",
+    "src/floater_finder/experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+    "src/floater_finder/fixtures.py": "054d38f95f4e079d901134276a3262533a32ee147156b00ece26859c14bbe868",
+    "src/floater_finder/image_runtime.py": "7f76639698d5d1cdafabc0c9bd76774fd60ff69c3f17e2f047edafe5996c64d8",
+    "src/floater_finder/injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+    "src/floater_finder/inventory.py": "93c85975c7149d43b13d3c304894ea87c45bc59c852e152b148efd3d2bd9a4d6",
+    "src/floater_finder/reporting.py": "01182b210d17c0430eec881103610781a74ff189a412fd9be2af85b4eabbbab2",
+    "src/floater_finder/scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "src/floater_finder/tiling.py": "938709c19c8829b18f425f93c4910c97accd5a54b85ccdea28f5a2550a86f6a6",
+    "scripts/ncsa_pilot_preflight.py": "cb20f1f08b83cb4c5cb2beec159fd8b46854f7b1b60ebe5e27485a9a8fa586c3",
+    "scripts/slurm/pilot_preflight.sbatch": "0ee7352be39fd4fad73e3e69792e2b52a6c803731c6bda6e9c616737177dd4c8"
+  },
+  "preflight_job": "23005299",
+  "failed_initial_candidate_job": "23005189",
+  "preflight_submitted_protocol_sha256": "8d15d1259aa23a72ebd10c180dda2a0bdfe9d02b1956430f2ed7ea334573f635",
+  "verification": "reports/ncsa_pilot_preflight_verification_20261019.json",
+  "verification_sha256": "05fc63f7cd219630a49ef9cfce6b7dfd0c3b26c204af93fdfee96b53348d7a47",
+  "patient_counts": {
+    "development": 10,
+    "evaluation": 8
+  },
+  "sampling": {
+    "window_count": 4,
+    "tiles_per_window": 96,
+    "field_um": 256,
+    "export_pixels": 512,
+    "min_gap_um": 1000,
+    "method": "centroid first; farthest eligible seed thereafter; four-neighbor BFS",
+    "capacity_policy": "Require exactly four disjoint connected windows of 96 for every patient; fail technical gate without replacement or silent cap reduction."
+  },
+  "threshold_selection": {
+    "quantiles": [
+      0.9,
+      0.95,
+      0.975,
+      0.99,
+      0.995
+    ],
+    "method": "Leave one development patient out. Fit normalization and threshold on remaining nine unmodified development patients; score the held-out development patient. Do not use synthetic mixtures or evaluation patients to select settings.",
+    "clean_host_removal_budget_per_patient": 0.01,
+    "selection_rule": "Choose the smallest quantile for which every held-out development patient and every variant has original-host removal <=1%. If none passes, stop before evaluation and record no feasible cutoff. Fit final calibration on all ten development patients only after this choice; freeze its hashes and cutoffs before evaluation.",
+    "interpretation": "LOPO is used for selection, not independent performance validation. Original-host tissue is not pathologist-confirmed floater-free; this is not a clinical false-positive guarantee."
+  },
+  "new_embeddings_created": false,
+  "held_out_performance_outputs_read": false,
+  "expanded_encoding_submitted": false,
+  "expanded_evaluation_submitted": false,
+  "remaining_gates": [
+    "Validated cohort encoder/runner",
+    "Development-only leave-one-patient-out selection",
+    "Frozen final all-development numerical calibration before held-out scoring"
+  ]
+}

@@ -9,7 +9,7 @@ import numpy as np
 from PIL import Image
 import pytest
 
-from floater_finder.tiling import connected_subset, extract_tiles, physical_grid, physical_metadata, region_geometry
+from floater_finder.tiling import connected_subset, extract_tiles, physical_grid, physical_metadata, region_geometry, spatial_windows
 
 
 def test_calibration_requires_measured_isotropic_mpp():
@@ -36,6 +36,30 @@ def test_subset_is_connected_deterministic_and_uses_largest_component():
     assert reached == selected
     with pytest.raises(ValueError, match="Duplicate"):
         connected_subset(np.array([[0, 0], [0, 0]]), 1024, 2)
+
+
+def test_spatial_windows_are_disjoint_connected_separated_and_order_independent():
+    cells = np.array([[x + dx, y + dy] for dx, dy in [(0, 0), (50, 0), (0, 50), (50, 50)]
+                      for x in range(20) for y in range(20)])
+    indices, summary = spatial_windows(cells)
+    assert len(indices) == len(set(indices)) == 512
+    chosen = cells[indices]
+    for offset in range(0, 512, 128):
+        window = chosen[offset:offset+128]
+        assert connected_subset(window, 1, 128)[1] == 128
+        if offset:
+            minimum = np.sqrt(((window[:, None] - chosen[None, :offset]) ** 2).sum(axis=2).min()) * 256
+            assert minimum >= 1000
+    shuffled = cells[np.random.default_rng(42).permutation(len(cells))]
+    np.testing.assert_array_equal(chosen, shuffled[spatial_windows(shuffled)[0]])
+    assert all(w["tiles"] == 128 for w in summary["windows"])
+
+
+def test_spatial_sampling_refuses_silent_reduction_and_duplicate_positions():
+    with pytest.raises(ValueError, match="capacity"):
+        spatial_windows(np.array([[x, 0] for x in range(128)]))
+    with pytest.raises(ValueError, match="Duplicate"):
+        spatial_windows(np.array([[0, 0], [0, 0]]))
 
 
 def test_tiling_never_runs_outside_slurm(monkeypatch, tmp_path):
@@ -92,7 +116,43 @@ def test_extraction_reads_pixels_and_coordinates_but_never_existing_features(mon
         extract_tiles(item, output)
 
 
+def test_multiwindow_extraction_uses_the_same_selection_and_preserves_existing_output(monkeypatch, tmp_path):
+    cells = np.array([[dx+x, dy+y] for dx, dy in [(0,0),(40,0),(0,40),(40,40)]
+                      for x in range(8) for y in range(8)])
+    class Coordinates:
+        shape = (len(cells), 2)
+        attrs = dict(name="fixture", level0_width=25600, level0_height=25600,
+                     patch_size_level0=512, overlap=0, target_magnification=20)
+        def __getitem__(self, key):
+            return cells * 512
+    class Handle:
+        def __getitem__(self, key):
+            assert key == "coords"
+            return Coordinates()
+    class Raster:
+        dimensions = (25600, 25600)
+        properties = {"openslide.mpp-x":".5", "openslide.mpp-y":".5"}
+        def read_region(self, origin, level, size):
+            return Image.new("RGBA", size, (180,90,120,255))
+    monkeypatch.setenv("SLURM_JOB_ID", "software-fixture")
+    monkeypatch.setitem(sys.modules, "h5py", SimpleNamespace(File=lambda *args: nullcontext(Handle())))
+    monkeypatch.setitem(sys.modules, "openslide", SimpleNamespace(OpenSlide=lambda *args: nullcontext(Raster())))
+    path = tmp_path / "fixture.svs"
+    path.write_bytes(b"artificial software fixture")
+    item = dict(path=str(path), slide_id=path.stem, bytes=path.stat().st_size, coordinate_h5="fixture.h5",
+                patient_id="fixture-patient", project="FIXTURE", organ="prostate", label="prostate", split="dev",
+                diagnostic_provenance="artificial test", report_provenance=None, checksum={"algorithm":"md5","value":"fixture"})
+    output = tmp_path / "tiles"
+    result = extract_tiles(item, output, max_tiles=16, pixels=8, windows=4)
+    extraction = result["metadata"]["extraction"]
+    assert result["tiles"] == 16 and extraction["window_sampling"]["window_count"] == 4
+    np.testing.assert_array_equal(extraction["selected_physical_grid_cells"], cells[spatial_windows(cells, tiles_per_window=4)[0]])
+    with pytest.raises(FileExistsError):
+        extract_tiles(item, output, max_tiles=16, pixels=8, windows=4)
+
+
 @pytest.mark.parametrize("script,arguments", [
+    ("ncsa_pilot_preflight.py", ["--config", "absent", "--output", "absent"]),
     ("ncsa_runtime_preflight.py", ["--config", "absent", "--output", "absent"]),
     ("ncsa_one_pair_smoke.py", ["--config", "absent", "--prompts", "absent", "--output", "absent"]),
     ("ncsa_bidirectional_smoke.py", ["--input", "absent", "--prompts", "absent", "--output", "absent"]),

@@ -13,6 +13,7 @@ from PIL import Image
 from .artifacts import write_json
 from .experiments import file_sha256
 from .injection import grid_neighbors
+from .image_runtime import require_image_runtime
 
 
 def physical_metadata(slide):
@@ -73,6 +74,91 @@ def physical_grid(coords, source_footprint, mpp, field_um, dimensions):
     return cells[inside], int((~inside).sum())
 
 
+def coordinate_candidates(slide, dataset, slide_id, field_um=256):
+    """Validate only the coordinate dataset against the measured raw-slide header."""
+    metadata = physical_metadata(slide)
+    attrs = dataset.attrs
+    if len(dataset.shape) != 2 or not 0 < dataset.shape[0] <= 20000 or dataset.shape[1] != 2:
+        raise ValueError("Unexpected or oversized coordinate source")
+    if attrs["name"] != slide_id or tuple(slide.dimensions) != (int(attrs["level0_width"]), int(attrs["level0_height"])):
+        raise ValueError("Coordinate source does not match raw WSI")
+    footprint = int(attrs["patch_size_level0"])
+    if not 1 <= footprint <= 4096 or attrs["overlap"] != 0:
+        raise ValueError("Unsupported coordinate extraction geometry")
+    coords = dataset[:]
+    if coords.dtype.kind not in "iu" or np.any(coords < 0) or np.any(coords >= np.asarray(slide.dimensions)):
+        raise ValueError("Expected in-bounds integer level-0 coordinate origins")
+    if len(np.unique(coords, axis=0)) != len(coords):
+        raise ValueError("Duplicate source coordinates")
+    cells, excluded = physical_grid(coords, footprint, metadata["microns_per_unit"], field_um, np.asarray(slide.dimensions))
+    if not len(cells):
+        raise ValueError("No in-bounds physical-grid candidates")
+    return metadata, coords, cells, excluded, footprint
+
+
+def spatial_windows(cells, window_count=4, tiles_per_window=128, field_um=256, min_gap_um=1000):
+    """Outcome-blind, disjoint connected windows; fail instead of silently undersampling."""
+    cells = np.asarray(cells)
+    if cells.ndim != 2 or cells.shape[1] != 2 or not len(cells) or cells.dtype.kind not in "iu":
+        raise ValueError("Nonempty integer Nx2 physical-grid cells required")
+    if any(type(v) is not int or v < 1 for v in (window_count, tiles_per_window)) or window_count > 4 or tiles_per_window > 128:
+        raise ValueError("Sampling is bounded to four windows of at most 128 tiles")
+    if not np.isfinite([field_um, min_gap_um]).all() or field_um <= 0 or min_gap_um < 0:
+        raise ValueError("Positive field and nonnegative window gap required")
+    neighbors = grid_neighbors(SimpleNamespace(coords=cells, metadata={"tile_step": [1, 1]}))
+    order = sorted(range(len(cells)), key=lambda i: tuple(cells[i]))
+    selected, windows = [], []
+    largest = 0
+    for window in range(window_count):
+        distance2 = np.full(len(cells), np.inf)
+        if selected:
+            for start in range(0, len(cells), 256):
+                block = cells[start:start + 256].astype(float)
+                distance2[start:start + 256] = ((block[:, None] - cells[selected][None]) ** 2).sum(axis=2).min(axis=1)
+        eligible = set(np.flatnonzero(distance2 * field_um ** 2 >= min_gap_um ** 2)) - set(selected)
+        components = []
+        for start in order:
+            if start not in eligible:
+                continue
+            queue, component = deque([start]), []
+            eligible.remove(start)
+            while queue:
+                node = queue.popleft()
+                component.append(node)
+                for other in neighbors[node]:
+                    if other in eligible:
+                        eligible.remove(other)
+                        queue.append(other)
+            if window == 0:
+                largest = max(largest, len(component))
+            if len(component) >= tiles_per_window:
+                components.append(component)
+        if not components:
+            raise ValueError(f"Insufficient connected capacity for window {window + 1}/{window_count} at the frozen gap")
+        if not selected:
+            component = min(components, key=lambda c: (-len(c), min(tuple(cells[i]) for i in c)))
+            center = cells[component].mean(axis=0)
+            seed = min(component, key=lambda i: (float(((cells[i] - center) ** 2).sum()), tuple(cells[i])))
+        else:
+            seed = min((i for c in components for i in c), key=lambda i: (-distance2[i], tuple(cells[i])))
+        allowed = {i for c in components for i in c}
+        queue, seen, chosen = deque([seed]), {seed}, []
+        while queue and len(chosen) < tiles_per_window:
+            node = queue.popleft()
+            chosen.append(node)
+            for other in neighbors[node]:
+                if other in allowed and other not in seen:
+                    seen.add(other)
+                    queue.append(other)
+        windows.append({"window": window, "start_offset": len(selected), "tiles": len(chosen),
+                        "seed_cell": cells[seed].tolist(),
+                        "minimum_gap_to_previous_um": float(np.sqrt(distance2[chosen].min()) * field_um) if selected else None})
+        selected.extend(chosen)
+    return np.asarray(selected, dtype=int), {"method": "centroid first; farthest eligible seed thereafter; four-neighbor BFS",
+        "window_count": window_count, "tiles_per_window": tiles_per_window, "min_gap_um": min_gap_um,
+        "largest_candidate_component": largest, "windows": windows}
+
+
 def region_geometry(cell, mpp, field_um):
     """Integer read bounds plus fractional crop for the exact requested physical FOV."""
     start = np.asarray(cell) * field_um / mpp
@@ -83,9 +169,10 @@ def region_geometry(cell, mpp, field_um):
     return tuple(map(int, origin)), tuple(map(int, size)), box
 
 
-def extract_tiles(item, output, max_tiles=128, field_um=256, pixels=512):
+def extract_tiles(item, output, max_tiles=128, field_um=256, pixels=512, windows=1):
     if not os.environ.get("SLURM_JOB_ID"):
         raise RuntimeError("WSI extraction requires an authorized Slurm job")
+    pillow_version = require_image_runtime()
     import h5py
     import openslide
 
@@ -95,23 +182,19 @@ def extract_tiles(item, output, max_tiles=128, field_um=256, pixels=512):
     path = Path(item["path"])
     if path.stat().st_size != item["bytes"] or path.stem != item["slide_id"]:
         raise ValueError("WSI identity/size differs from verified input")
+    if type(windows) is not int or windows < 1 or not 1 <= pixels <= 2048 or max_tiles % windows:
+        raise ValueError("Unsupported tile/window export geometry")
     with openslide.OpenSlide(path) as slide, h5py.File(item["coordinate_h5"], "r") as handle:
-        metadata = physical_metadata(slide)
         dataset = handle["coords"]
         attrs = dataset.attrs
-        if dataset.shape[0] > 20000 or dataset.shape[1:] != (2,):
-            raise ValueError("Unexpected or oversized coordinate source")
-        if attrs["name"] != path.stem or tuple(slide.dimensions) != (int(attrs["level0_width"]), int(attrs["level0_height"])):
-            raise ValueError("Coordinate source does not match raw WSI")
-        footprint = int(attrs["patch_size_level0"])
-        if footprint < 1 or footprint > 4096 or pixels < 1 or pixels > 2048 or attrs["overlap"] != 0:
-            raise ValueError("Unsupported coordinate extraction geometry")
-        coords = dataset[:]
-        if coords.dtype.kind not in "iu":
-            raise ValueError("Expected integer level-0 coordinates")
+        metadata, coords, cells, excluded, footprint = coordinate_candidates(slide, dataset, path.stem, field_um)
         coordinate_sha = hashlib.sha256(coords.tobytes()).hexdigest()
-        cells, excluded = physical_grid(coords, footprint, metadata["microns_per_unit"], field_um, np.asarray(slide.dimensions))
-        selected, component_size = connected_subset(cells, 1, max_tiles)
+        sampling = None
+        if windows == 1:
+            selected, component_size = connected_subset(cells, 1, max_tiles)
+        else:
+            selected, sampling = spatial_windows(cells, windows, max_tiles // windows, field_um)
+            component_size = sampling["largest_candidate_component"]
         output.mkdir(parents=True, exist_ok=False)
         rows, regions = [], []
         contact = Image.new("RGB", (8 * 96, ((len(selected) + 7) // 8) * 96), "white")
@@ -153,6 +236,10 @@ def extract_tiles(item, output, max_tiles=128, field_um=256, pixels=512):
                             "source_target_magnification": float(attrs["target_magnification"]),
                             "resampling": "OpenSlide level0 RGBA; require opaque; RGB; fractional physical FOV via Pillow BICUBIC resize box",
                             "color_handling": "Stored RGB values; no ICC conversion or stain normalization"})
+        metadata["extraction"]["pillow_version"] = pillow_version
+        if sampling is not None:
+            metadata["extraction"].update(kind="spatially separated connected windows; not a full slide",
+                                            selection=sampling["method"], window_sampling=sampling)
         metadata["extraction"]["tile_manifest_sha256"] = file_sha256(output / "tiles.csv")
         write_json(output / "regions.json", regions)
         write_json(output / "metadata.json", metadata)

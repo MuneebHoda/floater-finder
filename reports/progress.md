@@ -2,6 +2,30 @@
 
 Initial implementation 2026-10-17; latest verification 2026-10-18, America/Chicago. Real observations are limited to the explicitly labeled smokes below.
 
+## Current state
+
+Real CONCH v1 image embeddings exist for **512 distinct tiles from four patients**, 128 per patient, each with 512 projected, unit-normalized features. Matching fixed prostate/bladder text prototypes are saved. Two patients are development-only; two separate patients supplied the completed evaluation smoke. GPU encoding, physical tiling and exact oracle recovery are verified; a larger cohort and clinical floater detection remain unvalidated.
+
+Development cutoff diagnostic job `22995268` completed successfully in 12 seconds, reusing only the existing development vectors. Five quantiles, three variants, two reciprocal development hosts, six contamination levels and five seeds yield 60 oracle passes and 900 rows. The lower-cutoff sensitivity/removal tradeoff is documented in [the result report](conch_threshold_results.md); no new cutoff was selected. All 127 retrieved file hashes and all saved metrics were verified. Local software checks: **85 passed**. No new GPU inference or raw-data download was needed for this step.
+
+Dependency maintenance is now verified: local Pillow 12.3.0 and optional pytest 9.0.3 are outside all recorded vulnerable ranges. Bounded upstream regression probes reject the old failures while normal controls still pass. A new private Delta runtime passed CPU preparation `22995419` (49 seconds) and A100 compatibility `22995434` (85 seconds), both `0:0`. All 256 regenerated development tiles and image/text vectors exactly matched the old copies. New provenance includes Pillow version; historical artifacts/environment were preserved. Current software suite: **91 passed**. GitHub alert closure after publishing remains unverified, and specific exploitation of every advisory was not demonstrated. Full evidence is retained by the Codex Security managed artifact collection outside this checkout; [NCSA facts](../docs/ncsa_setup.md).
+
+Prepared [an expanded feasibility-pilot plan](../docs/expanded_pilot_plan.md): 16 new metadata-verified public slides totaling 21.24 GB, eight development and eight fresh evaluation patients. The user explicitly approved the acquisition on 2026-10-18; all 16 files are now size/MD5 verified. Header/coordinate preflight, broader sampling/cohort-runner implementation and protocol freezing remain before expanded pilot submission. The sections below retain the earlier execution history.
+
+## Expanded-pilot preflight and design freeze
+
+CPU job `23005299` completed `0:0` on `cn137` in 2 minutes 34 seconds. All 18 raw slide checksums, measured headers, coordinate sources and four × 96-tile selections passed. The first four × 128-tile candidate failed capacity on one development slide; that failure is preserved, and the uniform size was amended using geometry only before new embeddings or held-out outcomes. No patients or spacing requirements were changed.
+
+The two predeclared development patients exported 768 QC tiles. All 45 retrieved hashes match Delta; independent checks confirmed all 6,912 selected physical cells are unique within patient, in bounds, in the saved candidate set and connected within each window, with at least 1,024 microns across windows. Contact sheets were checked for technical extraction only; no pathology labels or image-based exclusions were made. The queue was empty. [Full evidence and limitations](conch_pilot_preflight_results.md).
+
+The [study design is frozen](../docs/expanded_pilot_protocol.md), including the development-only cutoff-selection rule and 1% original-host removal budget. **97 software tests passed** with warnings as errors. The cohort runner and final learned calibration remain unimplemented/unfitted. No new embeddings, GPU job or held-out performance evaluation was run in this stage.
+
+## Approved acquisition execution
+
+After the user manually reconnected, the single shared-connection test confirmed `mhoda` on `dt-login02`. Job `22995933` completed `0:0` on `cn096` in **4 minutes 42 seconds**, ending October 18 at 6:08:44 pm Central. All **16 slides, 21,243,276,685 bytes**, passed exact size/streaming MD5 verification, with zero failures. The report matches the approved manifest exactly; retrieved report/log hashes and staged source hashes match. Final file ownership/mode `600` and owner-only input directories were confirmed with metadata-only checks. The queue was empty. [Per-file evidence](pilot_downloads_22995933.json), [accounting and verification](ncsa_pilot_download_verification_20261019.json).
+
+The untouched reservation-blocked request was cancelled before this replacement. The earlier [4/16 observation and SSH interruption](ncsa_pilot_download_status_20261018.json) remain preserved. No new weights, expanded pilot, GPU job or inference on these new patients was run during acquisition. Headers and coordinates were then unverified and subsequently passed the preflight recorded above. The acquisition update changed status/documentation only; its earlier 91 passing software tests were not rerun at that point.
+
 ## Environment and sources
 
 - Local Mac confirmed: macOS 26.6.2. System Python 3.9.6; isolated project environment uses Python 3.11.15.
@@ -19,8 +43,8 @@ Initial implementation 2026-10-17; latest verification 2026-10-18, America/Chica
 | Pooling and zero-shot scoring | COMPLETE | Hand-computed tests, per-class top 1%/5%, ceil K, deterministic ties. |
 | Connected contamination and oracle recovery | COMPLETE | Repeatability, integer rounding, patient separation, spatial validity and exact host restoration tests. |
 | Data inventory and stress runner | COMPLETE | Bounded discovery, provenance/missing-data report, patient-split checks, raw scores, exclusions, source/input hashes and eligibility metrics; CLI exercised. |
-| Real CONCH inference / PRAD-BLCA pilot | PARTIAL | Hosted two-real-tile image-encoding tests passed on October 17 and 18; both runs retrieved and independently validated. Two independent diagnostic host/donor WSIs and a pinned v1 checkpoint are now downloaded; full pilot still needs tiles, matching image/text artifacts, spatial scale, runtime validation and independent development/evaluation cases. |
-| Detector and calibration software | COMPLETE | Organ-only, distant-neighbor visual, combined, oracle, no-filter and matched random-removal comparisons; separate-patient calibration and clean-control tests. Fixture validation only. |
+| Real CONCH inference / PRAD-BLCA pilot | SMOKE COMPLETE; PILOT PENDING | Scheduled original v1 image/text encoding, verified scale and four separate development/evaluation patients. Larger independent cohort not yet run. |
+| Detector and calibration software | COMPLETE | Organ-only, distant-neighbor visual, combined, oracle, no-filter and matched random-removal comparisons; separate-patient real-data smoke and development cutoff diagnostic. |
 | Real detector evaluation and scientific charts | SMOKE COMPLETE | Four real patients, separate development/evaluation, 60 oracle trials and verified descriptive figures. Conservative threshold detects few donor tiles; no population or clinical validation. |
 | Raw WSI tiling integration | COMPLETE FOR CAPPED SMOKE | Scheduled raw-pixel extraction using verified spatial masks, measured MPP, common physical resampling and exact provenance. Full-slide segmentation/sampling is separate work. |
 | Additional models and secondary cohorts | NOT STARTED | CONCH-first scope. |
@@ -30,11 +54,11 @@ Initial implementation 2026-10-17; latest verification 2026-10-18, America/Chica
 - `src/floater_finder/artifacts.py`: validated image/text artifacts, stable IDs, masks, metadata and pickle-free NPZ I/O.
 - `scoring.py`, `injection.py`, `experiments.py`: fixed prompt ensembling, mean/top-K, deterministic connected fragments, exact oracle recovery, reproducible runs and explicit eligible/raw metrics.
 - `inventory.py`: bounded candidate discovery, TCGA participant/source-site parsing, missingness, report provenance, verified institution mapping and cohort pairing.
-- `conch.py`: lazy optional official-model adapter, installed API checks, encoder-weight coverage, shared-space projection, local-checkpoint-only scheduled CUDA encoding and actual timing hooks. **Not exercised with real CONCH.**
+- `conch.py`: lazy optional official-model adapter, installed API checks, encoder-weight coverage, shared-space projection, local-checkpoint-only scheduled CUDA encoding and actual timing hooks. Exercised successfully with the pinned original CONCH checkpoint on A100.
 - `detection.py`: physical-distance-aware double-blocked reference scoring, clean-development calibration, leakage checks and held-out control evaluation.
 - `cli.py`, `fixtures.py`, `reporting.py`: 13 discoverable commands, isolated fixture generation and a real-observation-gated Matplotlib chart command.
 - `configs/`: fixed four-phrase organ ensembles, incomplete real smoke/pilot templates, empty manifest headers and explicit null metadata template.
-- `tests/`: 54 tests; `scripts/run_fixture_checks.sh`: repeatable installed-CLI integration check; `scripts/inspect_environment.py`: local inventory wrapper.
+- `tests/`: 91 tests; `scripts/run_fixture_checks.sh`: repeatable installed-CLI integration check; `scripts/inspect_environment.py`: local inventory wrapper.
 - `scripts/slurm/conch_encode.sbatch`: new unsubmitted five-minute CONCH draft; earlier driver-only smoke draft preserved.
 - `pyproject.toml`, `.python-version`, `uv.lock`, `.gitignore`: isolated locked environment, Python 3.11/3.12 scope, artifact/build/credential-file exclusions.
 - README, methodology and NCSA setup notes updated; existing AGENTS guidance preserved and extended with scientific safeguards. MIT license and supplied PDF preserved. No commit or push made.

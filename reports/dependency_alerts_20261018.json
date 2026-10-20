@@ -1,0 +1,395 @@
+{
+  "alerts": [
+    {
+      "advisory": "GHSA-9hw9-ch79-4vh6",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 37,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-9hw9-ch79-4vh6"
+    },
+    {
+      "advisory": "GHSA-vjc4-5qp5-m44j",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 36,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 8.2.0, < 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-vjc4-5qp5-m44j"
+    },
+    {
+      "advisory": "GHSA-jjj6-mw9f-p565",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 35,
+      "package": "Pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 5.1.0, < 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-jjj6-mw9f-p565"
+    },
+    {
+      "advisory": "GHSA-6r8x-57c9-28j4",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 34,
+      "package": "Pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-6r8x-57c9-28j4"
+    },
+    {
+      "advisory": "GHSA-fj7v-r99m-22gq",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 33,
+      "package": "Pillow",
+      "severity": "medium",
+      "vulnerable_version_range": ">= 5.2.0, < 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-fj7v-r99m-22gq"
+    },
+    {
+      "advisory": "GHSA-xj96-63gp-2gmr",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 32,
+      "package": "Pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-xj96-63gp-2gmr"
+    },
+    {
+      "advisory": "GHSA-4x4j-2g7c-83w6",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 31,
+      "package": "Pillow",
+      "severity": "medium",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-4x4j-2g7c-83w6"
+    },
+    {
+      "advisory": "GHSA-phj9-mv4w-65pm",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 30,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-phj9-mv4w-65pm"
+    },
+    {
+      "advisory": "GHSA-45hq-cxwh-f6vc",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 29,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-45hq-cxwh-f6vc"
+    },
+    {
+      "advisory": "GHSA-5x94-69rx-g8h2",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 28,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-5x94-69rx-g8h2"
+    },
+    {
+      "advisory": "GHSA-8v84-f9pq-wr9x",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 27,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-8v84-f9pq-wr9x"
+    },
+    {
+      "advisory": "GHSA-62p4-gmf7-7g93",
+      "first_patched_version": "12.3.0",
+      "manifest": "uv.lock",
+      "number": 26,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-62p4-gmf7-7g93"
+    },
+    {
+      "advisory": "GHSA-pwv6-vv43-88gr",
+      "first_patched_version": "12.2.0",
+      "manifest": "uv.lock",
+      "number": 25,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 10.3.0, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-pwv6-vv43-88gr"
+    },
+    {
+      "advisory": "GHSA-r73j-pqj5-w3x7",
+      "first_patched_version": "12.2.0",
+      "manifest": "uv.lock",
+      "number": 24,
+      "package": "pillow",
+      "severity": "medium",
+      "vulnerable_version_range": ">= 4.2.0, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-r73j-pqj5-w3x7"
+    },
+    {
+      "advisory": "GHSA-wjx4-4jcj-g98j",
+      "first_patched_version": "12.2.0",
+      "manifest": "uv.lock",
+      "number": 23,
+      "package": "pillow",
+      "severity": "medium",
+      "vulnerable_version_range": "< 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-wjx4-4jcj-g98j"
+    },
+    {
+      "advisory": "GHSA-5xmw-vc9v-4wf2",
+      "first_patched_version": "12.2.0",
+      "manifest": "uv.lock",
+      "number": 22,
+      "package": "pillow",
+      "severity": "medium",
+      "vulnerable_version_range": ">= 11.2.1, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-5xmw-vc9v-4wf2"
+    },
+    {
+      "advisory": "GHSA-whj4-6x5x-4v2j",
+      "first_patched_version": "12.2.0",
+      "manifest": "uv.lock",
+      "number": 21,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 10.3.0, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-whj4-6x5x-4v2j"
+    },
+    {
+      "advisory": "GHSA-6w46-j5rx-g56g",
+      "first_patched_version": "9.0.3",
+      "manifest": "uv.lock",
+      "number": 20,
+      "package": "pytest",
+      "severity": "medium",
+      "vulnerable_version_range": "< 9.0.3",
+      "advisory_url": "https://github.com/advisories/GHSA-6w46-j5rx-g56g"
+    },
+    {
+      "advisory": "GHSA-cfh3-3jmp-rvhc",
+      "first_patched_version": "12.1.1",
+      "manifest": "uv.lock",
+      "number": 19,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 10.3.0, < 12.1.1",
+      "advisory_url": "https://github.com/advisories/GHSA-cfh3-3jmp-rvhc"
+    },
+    {
+      "advisory": "GHSA-9hw9-ch79-4vh6",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 18,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-9hw9-ch79-4vh6"
+    },
+    {
+      "advisory": "GHSA-vjc4-5qp5-m44j",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 17,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 8.2.0, < 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-vjc4-5qp5-m44j"
+    },
+    {
+      "advisory": "GHSA-jjj6-mw9f-p565",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 16,
+      "package": "Pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 5.1.0, < 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-jjj6-mw9f-p565"
+    },
+    {
+      "advisory": "GHSA-6r8x-57c9-28j4",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 15,
+      "package": "Pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-6r8x-57c9-28j4"
+    },
+    {
+      "advisory": "GHSA-fj7v-r99m-22gq",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 14,
+      "package": "Pillow",
+      "severity": "medium",
+      "vulnerable_version_range": ">= 5.2.0, < 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-fj7v-r99m-22gq"
+    },
+    {
+      "advisory": "GHSA-xj96-63gp-2gmr",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 13,
+      "package": "Pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-xj96-63gp-2gmr"
+    },
+    {
+      "advisory": "GHSA-4x4j-2g7c-83w6",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 12,
+      "package": "Pillow",
+      "severity": "medium",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-4x4j-2g7c-83w6"
+    },
+    {
+      "advisory": "GHSA-phj9-mv4w-65pm",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 11,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-phj9-mv4w-65pm"
+    },
+    {
+      "advisory": "GHSA-45hq-cxwh-f6vc",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 10,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-45hq-cxwh-f6vc"
+    },
+    {
+      "advisory": "GHSA-5x94-69rx-g8h2",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 9,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-5x94-69rx-g8h2"
+    },
+    {
+      "advisory": "GHSA-8v84-f9pq-wr9x",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 8,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-8v84-f9pq-wr9x"
+    },
+    {
+      "advisory": "GHSA-62p4-gmf7-7g93",
+      "first_patched_version": "12.3.0",
+      "manifest": "pyproject.toml",
+      "number": 7,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": "< 12.3.0",
+      "advisory_url": "https://github.com/advisories/GHSA-62p4-gmf7-7g93"
+    },
+    {
+      "advisory": "GHSA-pwv6-vv43-88gr",
+      "first_patched_version": "12.2.0",
+      "manifest": "pyproject.toml",
+      "number": 6,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 10.3.0, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-pwv6-vv43-88gr"
+    },
+    {
+      "advisory": "GHSA-r73j-pqj5-w3x7",
+      "first_patched_version": "12.2.0",
+      "manifest": "pyproject.toml",
+      "number": 5,
+      "package": "pillow",
+      "severity": "medium",
+      "vulnerable_version_range": ">= 4.2.0, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-r73j-pqj5-w3x7"
+    },
+    {
+      "advisory": "GHSA-wjx4-4jcj-g98j",
+      "first_patched_version": "12.2.0",
+      "manifest": "pyproject.toml",
+      "number": 4,
+      "package": "pillow",
+      "severity": "medium",
+      "vulnerable_version_range": "< 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-wjx4-4jcj-g98j"
+    },
+    {
+      "advisory": "GHSA-5xmw-vc9v-4wf2",
+      "first_patched_version": "12.2.0",
+      "manifest": "pyproject.toml",
+      "number": 3,
+      "package": "pillow",
+      "severity": "medium",
+      "vulnerable_version_range": ">= 11.2.1, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-5xmw-vc9v-4wf2"
+    },
+    {
+      "advisory": "GHSA-whj4-6x5x-4v2j",
+      "first_patched_version": "12.2.0",
+      "manifest": "pyproject.toml",
+      "number": 2,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 10.3.0, < 12.2.0",
+      "advisory_url": "https://github.com/advisories/GHSA-whj4-6x5x-4v2j"
+    },
+    {
+      "advisory": "GHSA-cfh3-3jmp-rvhc",
+      "first_patched_version": "12.1.1",
+      "manifest": "pyproject.toml",
+      "number": 1,
+      "package": "pillow",
+      "severity": "high",
+      "vulnerable_version_range": ">= 10.3.0, < 12.1.1",
+      "advisory_url": "https://github.com/advisories/GHSA-cfh3-3jmp-rvhc"
+    }
+  ],
+  "by_package": [
+    {
+      "advisories": 18,
+      "alerts": 36,
+      "package": "pillow"
+    },
+    {
+      "advisories": 1,
+      "alerts": 1,
+      "package": "pytest"
+    }
+  ],
+  "open_alert_count": 37,
+  "unique_advisory_count": 19,
+  "retrieved_utc": "2026-10-18T22:24:57.992112+00:00",
+  "source": "https://api.github.com/repos/MuneebHoda/floater-finder/dependabot/alerts?state=open&per_page=100",
+  "triage_status": "Inventory only; runtime reachability and fixes not yet validated. Dependency versions were not changed for the frozen development diagnostic.",
+  "project_classification": {
+    "Pillow": "Runtime dependency, also present in the isolated Delta inference environment.",
+    "pytest": "Local optional test dependency; not imported by inference scripts."
+  }
+}
