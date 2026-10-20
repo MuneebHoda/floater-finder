@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "category": "development encoding; no detector evaluation",
+  "slurm_job_id": "23028013",
+  "hostname": "gpua038.delta.ncsa.illinois.edu",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "protocol_sha256": "68455950fec2a427f72aeb6bae218bceeb3f6fa7e8df9f7d488ed8e090442958",
+  "patients": [
+    {
+      "patient_id": "TCGA-2A-A8VO",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "1aef6a81ef3604262b27743d4672391a4a164250582953337563805752539a48",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-2F-A9KO",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "0a28dba3aecd9c94b5a405905b9285e6386e10d71b57d8ff7ed040a52a838082",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-G9-6379",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "42909744d13eb20d9ef20ec05d6f23750bcbf93dce0072799aa4d9be16bb5914",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-FC-A5OB",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "02cd55786ced16b77107bfa234647a06c435970372360cb4afd2dde4a43ad4eb",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-EJ-A46B",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "858f35aa504edbfe7150c9435cdb3dac0a2b8473e322662409a2d93f343b52cf",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-HC-7230",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "8e049bb984adbf089d6d33577f6b078ff12016174bf17e55b75a10778f654b36",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-XF-A9SW",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "0f00f5e2ddc12346a51dec027ec0acc27d91dd2041a32b51897799194fb841b1",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-ZF-A9RN",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "d2361505eae3f8a6a2d7bb757450bad104c572a345639dd8b8ef34f647ecd630",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-DK-A1A7",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "6fab743e663e5c466d063c8a8fad04fea5beefd53a206606921616049ebeff43",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    },
+    {
+      "patient_id": "TCGA-GV-A3QH",
+      "tiles": 384,
+      "split": "dev",
+      "slide_sha256": "caa1518d33148dafdcd8cd2fb89f546b457739519914bf6111976e5d9eb6cc5e",
+      "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+      "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"
+    }
+  ],
+  "total_tiles": 3840,
+  "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6",
+  "evaluation_patients_encoded": false,
+  "model": {
+    "name": "conch_v1",
+    "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+    "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+    "projection": true,
+    "normalized": true,
+    "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+    "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+    "torch_version": "2.8.0+cu128",
+    "pillow_version": "12.3.0",
+    "encoder_weight_coverage_verified": true
+  }
+}

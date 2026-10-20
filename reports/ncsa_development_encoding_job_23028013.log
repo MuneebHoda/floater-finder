@@ -1,0 +1,42 @@
+=====================================================
+Conda-Forge PyTorch 2.8 Environment Loaded Successfully!
+=====================================================
+
+To activate the environment:
+  conda activate base
+
+If 'conda activate' fails, use:
+  source $CONDA_PREFIX/etc/profile.d/conda.sh && conda activate base
+
+To verify PyTorch installation:
+  python -c "import torch; print(f'PyTorch {torch.__version__} CUDA:
+{torch.cuda.is_available()}')"
+
+Environment includes:
+  - PyTorch 2.8 with CUDA 12.8 support
+  - Scientific Python stack (numpy, scipy, pandas)
+  - ML libraries (transformers, lightning, timm)
+  - Cray PE integration with optimized MPI
+
+For Jupyter notebook support:
+  setup-kernel (creates Jupyter kernel for this environment)
+
+For distributed training, load:
+  module load aws-ofi-nccl/1.14.2
+
+Ready for single-node and distributed training!
+=====================================================
+
+/sw/rh9.4/user/python/conda-env/pytorch-2.8-cu128/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+{"patient_id": "TCGA-2A-A8VO", "tiles": 384, "split": "dev", "slide_sha256": "1aef6a81ef3604262b27743d4672391a4a164250582953337563805752539a48", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-2F-A9KO", "tiles": 384, "split": "dev", "slide_sha256": "0a28dba3aecd9c94b5a405905b9285e6386e10d71b57d8ff7ed040a52a838082", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-G9-6379", "tiles": 384, "split": "dev", "slide_sha256": "42909744d13eb20d9ef20ec05d6f23750bcbf93dce0072799aa4d9be16bb5914", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-FC-A5OB", "tiles": 384, "split": "dev", "slide_sha256": "02cd55786ced16b77107bfa234647a06c435970372360cb4afd2dde4a43ad4eb", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-EJ-A46B", "tiles": 384, "split": "dev", "slide_sha256": "858f35aa504edbfe7150c9435cdb3dac0a2b8473e322662409a2d93f343b52cf", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-HC-7230", "tiles": 384, "split": "dev", "slide_sha256": "8e049bb984adbf089d6d33577f6b078ff12016174bf17e55b75a10778f654b36", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-XF-A9SW", "tiles": 384, "split": "dev", "slide_sha256": "0f00f5e2ddc12346a51dec027ec0acc27d91dd2041a32b51897799194fb841b1", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-ZF-A9RN", "tiles": 384, "split": "dev", "slide_sha256": "d2361505eae3f8a6a2d7bb757450bad104c572a345639dd8b8ef34f647ecd630", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-DK-A1A7", "tiles": 384, "split": "dev", "slide_sha256": "6fab743e663e5c466d063c8a8fad04fea5beefd53a206606921616049ebeff43", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"patient_id": "TCGA-GV-A3QH", "tiles": 384, "split": "dev", "slide_sha256": "caa1518d33148dafdcd8cd2fb89f546b457739519914bf6111976e5d9eb6cc5e", "text_sha256": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc", "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6"}
+{"status": "passed", "patients": 10, "tiles": 3840}

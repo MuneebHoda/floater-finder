@@ -44,6 +44,21 @@ def test_no_feasible_cutoff_stops_before_final_calibration(text, tmp_path):
     assert all(not row["within_budget"] for row in report["controls"] if row["omitted_patient"] == "patient-dev-0" and row["variant"] == "organ_only")
 
 
+def test_fold_quantiles_match_frozen_calibrator_on_nonconstant_signals(text, tmp_path):
+    rng = np.random.default_rng(92)
+    slides = [make_slide(f"varied-{i}", split="dev", feats=rng.uniform(0.1,1.0,(16,2))) for i in range(4)]
+    report = select_development(slides, text, DETECTOR, POLICY, tmp_path / "selection")
+    for omitted in slides:
+        training = [s for s in slides if s is not omitted]
+        for q in POLICY["quantiles"]:
+            reference = calibrate(training, text, quantile=q, **DETECTOR)
+            scores = omitted_development_scores(omitted, text, reference)
+            rows = [r for r in report["controls"] if r["omitted_patient"] == omitted.metadata["patient_id"] and r["quantile"] == q]
+            for row in rows:
+                assert row["threshold"] == reference["thresholds"][row["variant"]]
+                assert row["removed_tiles"] == int((scores[row["variant"]] > row["threshold"]).sum())
+
+
 def test_omitted_scoring_rejects_calibration_overlap_evaluation_and_injection(text):
     slides = patients()
     calibration = calibrate(slides[:3], text)

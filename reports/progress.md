@@ -12,6 +12,14 @@ Dependency maintenance is now verified: local Pillow 12.3.0 and optional pytest 
 
 Prepared [an expanded feasibility-pilot plan](../docs/expanded_pilot_plan.md): 16 new metadata-verified public slides totaling 21.24 GB, eight development and eight fresh evaluation patients. The user explicitly approved the acquisition on 2026-10-18; all 16 files are now size/MD5 verified. Header/coordinate preflight, broader sampling/cohort-runner implementation and protocol freezing remain before expanded pilot submission. The sections below retain the earlier execution history.
 
+## Development cohort and cutoff-selection gate
+
+Committed the preceding results/protocol as `f0f19a4` and implemented the frozen development-only runner as `a6d826d`. GPU job `23028013` completed `0:0` in 10 minutes 5 seconds on `gpua038`, producing **3,840 normalized 512-dimensional image embeddings** across all ten development patients, with unchanged prompts/checkpoint and exact preflight geometry. All 61 retrieved hashes match. These are the new broader-sampling artifacts; earlier 128-tile smoke artifacts remain separate.
+
+CPU job `23028265` completed `0:0` in 15 seconds on `cn137`. Ten clean leave-one-patient-out folds yielded 150 patient/quantile/variant controls. All 32 retrieved hashes, patient exclusions from fitting, raw-score removal counts and cutoff decisions were independently verified. **No candidate met the frozen 1% original-host removal budget**. At `q=0.995`, the worst combined-score control removed 19/384 tiles (4.95%) versus the allowed three; `selected_quantile` remains null. No final calibration or held-out experiment was created, and the budget/settings were not relaxed. The final queue was empty.
+
+[Full observed results and per-patient counts](conch_development_results.md). Native embeddings/fold scores remain ignored under `results/development/`; their checksums and remote paths are recorded. The local suite passes **105 tests**. The next work is development-only diagnosis of score/fold-normalization shifts before proposing a protocol amendment; eight evaluation patients remain untouched.
+
 ## Expanded-pilot preflight and design freeze
 
 CPU job `23005299` completed `0:0` on `cn137` in 2 minutes 34 seconds. All 18 raw slide checksums, measured headers, coordinate sources and four × 96-tile selections passed. The first four × 128-tile candidate failed capacity on one development slide; that failure is preserved, and the uniform size was amended using geometry only before new embeddings or held-out outcomes. No patients or spacing requirements were changed.

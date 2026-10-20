@@ -1,7 +1,19 @@
 # Floater Finder: NCSA setup
 
 Initial setup verified on 2026-10-17; latest acquisition verification on 2026-10-19 (America/Chicago). First milestone: CONCH only.
-Initial connection setup performed no Slurm job, inference, whole-slide processing, or dataset/model download. The later approved scheduled GPU smoke and hosted two-tile CONCH image-encoding test have now succeeded. Self-hosted CONCH v1 encoding and a capped one-pair synthetic contamination smoke have now passed. Patient-separated detector smoke is now verified as recorded below; larger-cohort and clinical performance remain untested.
+Initial connection setup performed no Slurm job, inference, whole-slide processing, or dataset/model download. The later approved scheduled GPU smoke and hosted two-tile CONCH image-encoding test succeeded. Self-hosted CONCH v1 encoding and patient-separated detector smoke are verified below. The expanded development cohort is now encoded, but its cutoff-retention gate did not pass; expanded held-out and clinical performance remain untested.
+
+## Development cohort encoded; cutoff gate did not pass
+
+The user requested committing the results and moving to development embedding/calibration work. Commits `f0f19a4` and `a6d826d` preserve the prior evidence and implement the development-only runner. After one failed shared-SSH test, remote attempts stopped until the user manually reconnected; the next single BatchMode test confirmed `mhoda` on `dt-login04`. `accounts` then reported 6,915 rounded CPU hours and 9 rounded GPU hours; the queue was empty. These balances are snapshots.
+
+GPU job **`23028013` completed `0:0` on `gpua038` in 10 minutes 5 seconds**, with one A100, four CPUs, 16 GB and a 30-minute cap, account `bfqi-delta-gpu`, QoS `bfqi-delta-gpu-mhoda`, partition `gpuA100x4-interactive`. The documented short queue provided an earlier slot than the normal queue; no duplicate GPU job was submitted. All **ten development patients, 3,840 image embeddings of 512 dimensions**, passed exact frozen geometry, checkpoint, prompt, runtime and normalization checks. All 61 retrieved hashes match. No evaluation patient was encoded or dataset/weight downloaded.
+
+CPU job **`23028265` completed `0:0` on `cn137` in 15 seconds**, with two CPUs, 8 GB and a 30-minute cap under `bfqi-delta-cpu`/`cpu-interactive`. All ten clean leave-one-patient-out folds and 150 patient/quantile/variant rows completed. Native score counts, omitted-patient isolation and every budget decision were independently checked; all 32 retrieved hashes match. **No candidate met the fixed 1% original-host removal budget on every patient and variant.** Even `q=0.995` removed 19/384 tiles (4.95%) on one omitted development patient under the combined score, exceeding the allowed three.
+
+No final numerical calibration was created, and held-out evaluation remains stopped. No patient, budget, prompt, sampling rule or scoring weight was changed in response. The queue was empty after selection. The local suite passes **105 tests**. [Complete results, per-patient controls and next diagnosis](../reports/conch_development_results.md).
+
+Source snapshot: `/u/mhoda/floater-finder/releases/20261020T020759Z`. Remote encoding/selection: `/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/{encoding,selection}`. Retrieved embeddings/native fold scores remain ignored locally under `results/development/cohort_encoding_23028013/` and `results/development/cohort_selection_23028265/`. Frozen base source hashes were preserved. Report linkage, normalized institutions, native floater labels and project storage quota remain unresolved.
 
 ## Expanded-pilot technical gates: passed; study design frozen
 

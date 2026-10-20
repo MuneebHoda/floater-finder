@@ -34,12 +34,14 @@ The [expanded-pilot plan](expanded_pilot_plan.md) contains 16 new public diagnos
 
 Raw-header/MPP/coordinate checks and broader sampling now pass for all 18 planned patients. CPU job `23005299` validated four × 96-tile windows per patient after preserving the failed 128-tile-window candidate; 768 development QC tiles decoded successfully. The [study design is frozen](expanded_pilot_protocol.md), including a development-only leave-one-patient-out cutoff-selection rule and 1% original-host removal budget. [Technical evidence](../reports/conch_pilot_preflight_results.md).
 
-Next, implement/validate the patient-separated cohort encoder and runner against that frozen design. Encode development patients through one bounded GPU job at a time, perform the declared clean-development selection, and freeze numerical calibration before held-out scoring. If no candidate meets the declared budget, stop before evaluation. The current stage created no new embeddings. Selected windows remain subsets rather than full slides; institution/report metadata, native pathology review and project storage quota remain unresolved in [NCSA setup](ncsa_setup.md).
+The development encoder/selection runner is now implemented and tested. GPU job `23028013` produced **3,840 development embeddings**; CPU job `23028265` completed the ten declared clean-development folds. **No candidate met the fixed 1% original-host removal budget**, so no final numerical calibration was frozen and held-out scoring remains stopped. At the most conservative quantile, the worst combined-score control removed 19/384 original-host tiles (4.95%), compared with the allowed three. All patients/settings were retained; this outcome does not establish clinical false-positive performance. [Complete results and verification](../reports/conch_development_results.md).
+
+Next, inspect development-only score distributions by patient/organ and normalization shifts across folds using the existing artifacts. Do not raise the budget, add quantiles, drop patients or alter the frozen rule to manufacture a pass. Any proposed method revision needs a recorded protocol amendment before numerical calibration and held-out evaluation. Selected windows remain subsets rather than full slides; institution/report metadata, native pathology review and project storage quota remain unresolved in [NCSA setup](ncsa_setup.md).
 
 The first milestone remains CONCH only. No bulk cohort acquisition or additional model is implied by these results.
 
 Exact next command from this checkout to review the verified detector evidence:
 
 ```sh
-cat reports/conch_pilot_protocol_freeze_20261019.json
+cat reports/conch_development_results.md
 ```

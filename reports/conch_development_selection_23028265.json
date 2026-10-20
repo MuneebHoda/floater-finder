@@ -1,0 +1,1574 @@
+{
+  "status": "no_feasible_cutoff",
+  "selected_quantile": null,
+  "feasible_quantiles": [],
+  "development_patients": [
+    "TCGA-2A-A8VO",
+    "TCGA-2F-A9KO",
+    "TCGA-DK-A1A7",
+    "TCGA-EJ-A46B",
+    "TCGA-FC-A5OB",
+    "TCGA-G9-6379",
+    "TCGA-GV-A3QH",
+    "TCGA-HC-7230",
+    "TCGA-XF-A9SW",
+    "TCGA-ZF-A9RN"
+  ],
+  "folds": 10,
+  "selection_rows": 150,
+  "controls": [
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3284977829815787,
+      "removed_tiles": 144,
+      "host_tiles": 384,
+      "original_host_removal": 0.375,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.301160099638285,
+      "removed_tiles": 89,
+      "host_tiles": 384,
+      "original_host_removal": 0.23177083333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 0.9989321994720444,
+      "removed_tiles": 158,
+      "host_tiles": 384,
+      "original_host_removal": 0.4114583333333333,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.7024129892524957,
+      "removed_tiles": 86,
+      "host_tiles": 384,
+      "original_host_removal": 0.22395833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.823780548132329,
+      "removed_tiles": 59,
+      "host_tiles": 384,
+      "original_host_removal": 0.15364583333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.3181504781644915,
+      "removed_tiles": 103,
+      "host_tiles": 384,
+      "original_host_removal": 0.2682291666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 2.014884339986667,
+      "removed_tiles": 43,
+      "host_tiles": 384,
+      "original_host_removal": 0.11197916666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.406576254913895,
+      "removed_tiles": 36,
+      "host_tiles": 384,
+      "original_host_removal": 0.09375,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.6914447795587186,
+      "removed_tiles": 68,
+      "host_tiles": 384,
+      "original_host_removal": 0.17708333333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.3412025644213057,
+      "removed_tiles": 20,
+      "host_tiles": 384,
+      "original_host_removal": 0.052083333333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.1243752870019135,
+      "removed_tiles": 14,
+      "host_tiles": 384,
+      "original_host_removal": 0.036458333333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.1407444743371125,
+      "removed_tiles": 25,
+      "host_tiles": 384,
+      "original_host_removal": 0.06510416666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.5392061838672677,
+      "removed_tiles": 11,
+      "host_tiles": 384,
+      "original_host_removal": 0.028645833333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.010138655937713,
+      "removed_tiles": 5,
+      "host_tiles": 384,
+      "original_host_removal": 0.013020833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2A-A8VO",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.341193997099711,
+      "removed_tiles": 19,
+      "host_tiles": 384,
+      "original_host_removal": 0.049479166666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3802951347400287,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.2793862931891802,
+      "removed_tiles": 50,
+      "host_tiles": 384,
+      "original_host_removal": 0.13020833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.073722504161755,
+      "removed_tiles": 13,
+      "host_tiles": 384,
+      "original_host_removal": 0.033854166666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.674223267962291,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.8360400598826954,
+      "removed_tiles": 25,
+      "host_tiles": 384,
+      "original_host_removal": 0.06510416666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.457017432122872,
+      "removed_tiles": 5,
+      "host_tiles": 384,
+      "original_host_removal": 0.013020833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.9147800695285129,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.4111082996037765,
+      "removed_tiles": 11,
+      "host_tiles": 384,
+      "original_host_removal": 0.028645833333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.7650523006323615,
+      "removed_tiles": 4,
+      "host_tiles": 384,
+      "original_host_removal": 0.010416666666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.2163582129481822,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.2412669881854463,
+      "removed_tiles": 5,
+      "host_tiles": 384,
+      "original_host_removal": 0.013020833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.159451077755678,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.392487938221599,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.06678379810729,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-2F-A9KO",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.5880536025939476,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3612887580201873,
+      "removed_tiles": 138,
+      "host_tiles": 384,
+      "original_host_removal": 0.359375,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.2990513427027919,
+      "removed_tiles": 38,
+      "host_tiles": 384,
+      "original_host_removal": 0.09895833333333333,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.0144932704748566,
+      "removed_tiles": 118,
+      "host_tiles": 384,
+      "original_host_removal": 0.3072916666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.7470613415317018,
+      "removed_tiles": 68,
+      "host_tiles": 384,
+      "original_host_removal": 0.17708333333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.8454308585558097,
+      "removed_tiles": 13,
+      "host_tiles": 384,
+      "original_host_removal": 0.033854166666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.4564531340081857,
+      "removed_tiles": 36,
+      "host_tiles": 384,
+      "original_host_removal": 0.09375,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 2.0255192206386514,
+      "removed_tiles": 41,
+      "host_tiles": 384,
+      "original_host_removal": 0.10677083333333333,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.4326868946063005,
+      "removed_tiles": 4,
+      "host_tiles": 384,
+      "original_host_removal": 0.010416666666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.7833124995084897,
+      "removed_tiles": 15,
+      "host_tiles": 384,
+      "original_host_removal": 0.0390625,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.375478962751196,
+      "removed_tiles": 15,
+      "host_tiles": 384,
+      "original_host_removal": 0.0390625,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.3558272237631153,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.259422345159755,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.57896242114345,
+      "removed_tiles": 6,
+      "host_tiles": 384,
+      "original_host_removal": 0.015625,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.1836072354193625,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-G9-6379",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.7113940410682593,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3996464169162952,
+      "removed_tiles": 7,
+      "host_tiles": 384,
+      "original_host_removal": 0.018229166666666668,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.2752407328235982,
+      "removed_tiles": 13,
+      "host_tiles": 384,
+      "original_host_removal": 0.033854166666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.022510381247459,
+      "removed_tiles": 14,
+      "host_tiles": 384,
+      "original_host_removal": 0.036458333333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.7309007003603274,
+      "removed_tiles": 5,
+      "host_tiles": 384,
+      "original_host_removal": 0.013020833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.7952332600111136,
+      "removed_tiles": 7,
+      "host_tiles": 384,
+      "original_host_removal": 0.018229166666666668,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.4308249520412633,
+      "removed_tiles": 9,
+      "host_tiles": 384,
+      "original_host_removal": 0.0234375,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 2.0068126337029675,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.3757416194825143,
+      "removed_tiles": 3,
+      "host_tiles": 384,
+      "original_host_removal": 0.0078125,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.763121097096151,
+      "removed_tiles": 3,
+      "host_tiles": 384,
+      "original_host_removal": 0.0078125,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.358156788909019,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.325231342577344,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.1940704364119545,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.558702249197669,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.187016794519884,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-FC-A5OB",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.630402139304321,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.341172289162117,
+      "removed_tiles": 100,
+      "host_tiles": 384,
+      "original_host_removal": 0.2604166666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.3087478661201721,
+      "removed_tiles": 29,
+      "host_tiles": 384,
+      "original_host_removal": 0.07552083333333333,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.0572815028300941,
+      "removed_tiles": 46,
+      "host_tiles": 384,
+      "original_host_removal": 0.11979166666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.696917140330951,
+      "removed_tiles": 45,
+      "host_tiles": 384,
+      "original_host_removal": 0.1171875,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.8525535549701853,
+      "removed_tiles": 18,
+      "host_tiles": 384,
+      "original_host_removal": 0.046875,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.41105098528918,
+      "removed_tiles": 36,
+      "host_tiles": 384,
+      "original_host_removal": 0.09375,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.972528520218511,
+      "removed_tiles": 21,
+      "host_tiles": 384,
+      "original_host_removal": 0.0546875,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.419838594058857,
+      "removed_tiles": 13,
+      "host_tiles": 384,
+      "original_host_removal": 0.033854166666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.7331428672845122,
+      "removed_tiles": 21,
+      "host_tiles": 384,
+      "original_host_removal": 0.0546875,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.3084542286963017,
+      "removed_tiles": 5,
+      "host_tiles": 384,
+      "original_host_removal": 0.013020833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.0328713033943573,
+      "removed_tiles": 11,
+      "host_tiles": 384,
+      "original_host_removal": 0.028645833333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.1608576653704388,
+      "removed_tiles": 10,
+      "host_tiles": 384,
+      "original_host_removal": 0.026041666666666668,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.4858646677462515,
+      "removed_tiles": 4,
+      "host_tiles": 384,
+      "original_host_removal": 0.010416666666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 3.71479935729452,
+      "removed_tiles": 7,
+      "host_tiles": 384,
+      "original_host_removal": 0.018229166666666668,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-EJ-A46B",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.4110373246093846,
+      "removed_tiles": 8,
+      "host_tiles": 384,
+      "original_host_removal": 0.020833333333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3486088435704624,
+      "removed_tiles": 40,
+      "host_tiles": 384,
+      "original_host_removal": 0.10416666666666667,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.2748669383929572,
+      "removed_tiles": 7,
+      "host_tiles": 384,
+      "original_host_removal": 0.018229166666666668,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.0323495966216512,
+      "removed_tiles": 20,
+      "host_tiles": 384,
+      "original_host_removal": 0.052083333333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.6672573085004054,
+      "removed_tiles": 22,
+      "host_tiles": 384,
+      "original_host_removal": 0.057291666666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.7975630726156115,
+      "removed_tiles": 3,
+      "host_tiles": 384,
+      "original_host_removal": 0.0078125,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.413594871950305,
+      "removed_tiles": 11,
+      "host_tiles": 384,
+      "original_host_removal": 0.028645833333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.909756626336759,
+      "removed_tiles": 13,
+      "host_tiles": 384,
+      "original_host_removal": 0.033854166666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.4174931315906467,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.7491225972075544,
+      "removed_tiles": 3,
+      "host_tiles": 384,
+      "original_host_removal": 0.0078125,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.2226617755147475,
+      "removed_tiles": 4,
+      "host_tiles": 384,
+      "original_host_removal": 0.010416666666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.3070640713037283,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.1425097508710538,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.404815559780159,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.1639854822570985,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-HC-7230",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.555350172023001,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3601185090067647,
+      "removed_tiles": 19,
+      "host_tiles": 384,
+      "original_host_removal": 0.049479166666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.3091221007831644,
+      "removed_tiles": 51,
+      "host_tiles": 384,
+      "original_host_removal": 0.1328125,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.0770406380880466,
+      "removed_tiles": 23,
+      "host_tiles": 384,
+      "original_host_removal": 0.059895833333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.671493805971832,
+      "removed_tiles": 3,
+      "host_tiles": 384,
+      "original_host_removal": 0.0078125,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.86611974575796,
+      "removed_tiles": 22,
+      "host_tiles": 384,
+      "original_host_removal": 0.057291666666666664,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.4699933699249177,
+      "removed_tiles": 7,
+      "host_tiles": 384,
+      "original_host_removal": 0.018229166666666668,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.9129933097847858,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.4378194670149087,
+      "removed_tiles": 11,
+      "host_tiles": 384,
+      "original_host_removal": 0.028645833333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.7725982986608009,
+      "removed_tiles": 6,
+      "host_tiles": 384,
+      "original_host_removal": 0.015625,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.2211893433112904,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.3707362689204614,
+      "removed_tiles": 4,
+      "host_tiles": 384,
+      "original_host_removal": 0.010416666666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.174999190635357,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.363242281665703,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.089070007256453,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-XF-A9SW",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.601425484789921,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3895652305673374,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.2775549248835323,
+      "removed_tiles": 20,
+      "host_tiles": 384,
+      "original_host_removal": 0.052083333333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.0570589290454535,
+      "removed_tiles": 6,
+      "host_tiles": 384,
+      "original_host_removal": 0.015625,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.682346492313278,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.793578074032248,
+      "removed_tiles": 11,
+      "host_tiles": 384,
+      "original_host_removal": 0.028645833333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.4493093533700443,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.9219646707843676,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.3720885960695197,
+      "removed_tiles": 5,
+      "host_tiles": 384,
+      "original_host_removal": 0.013020833333333334,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.768826734573508,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.2223660933274796,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.319288209747508,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.1343626689266353,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.397808582044688,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.169455138354578,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-ZF-A9RN",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.54190893058515,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.3836668298720745,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.3072484647501261,
+      "removed_tiles": 20,
+      "host_tiles": 384,
+      "original_host_removal": 0.052083333333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.0676140305782102,
+      "removed_tiles": 8,
+      "host_tiles": 384,
+      "original_host_removal": 0.020833333333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.677846171803611,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.818742780660022,
+      "removed_tiles": 10,
+      "host_tiles": 384,
+      "original_host_removal": 0.026041666666666668,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.4650032074411918,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.9177802029818636,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.3977977159803765,
+      "removed_tiles": 3,
+      "host_tiles": 384,
+      "original_host_removal": 0.0078125,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.7795695529271098,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.218577599666634,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.3006947256132637,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.1419983362981148,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.3942513479041603,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.161214610017183,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-DK-A1A7",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.544974701863338,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.9,
+      "variant": "organ_only",
+      "threshold": 1.335711984654873,
+      "removed_tiles": 1,
+      "host_tiles": 384,
+      "original_host_removal": 0.0026041666666666665,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.9,
+      "variant": "visual_only",
+      "threshold": 1.3223671844632694,
+      "removed_tiles": 79,
+      "host_tiles": 384,
+      "original_host_removal": 0.20572916666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.9,
+      "variant": "combined",
+      "threshold": 1.0888935132773698,
+      "removed_tiles": 18,
+      "host_tiles": 384,
+      "original_host_removal": 0.046875,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.95,
+      "variant": "organ_only",
+      "threshold": 1.63449336226517,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.95,
+      "variant": "visual_only",
+      "threshold": 1.895001806740853,
+      "removed_tiles": 35,
+      "host_tiles": 384,
+      "original_host_removal": 0.09114583333333333,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.95,
+      "variant": "combined",
+      "threshold": 1.4773249162004825,
+      "removed_tiles": 8,
+      "host_tiles": 384,
+      "original_host_removal": 0.020833333333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.975,
+      "variant": "organ_only",
+      "threshold": 1.8781808350167877,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.975,
+      "variant": "visual_only",
+      "threshold": 2.5134679368281256,
+      "removed_tiles": 14,
+      "host_tiles": 384,
+      "original_host_removal": 0.036458333333333336,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.975,
+      "variant": "combined",
+      "threshold": 1.7957724216499193,
+      "removed_tiles": 4,
+      "host_tiles": 384,
+      "original_host_removal": 0.010416666666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.99,
+      "variant": "organ_only",
+      "threshold": 2.1836837978454366,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.99,
+      "variant": "visual_only",
+      "threshold": 3.1879512624352517,
+      "removed_tiles": 8,
+      "host_tiles": 384,
+      "original_host_removal": 0.020833333333333332,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.99,
+      "variant": "combined",
+      "threshold": 2.1954563485594782,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.995,
+      "variant": "organ_only",
+      "threshold": 2.362105722932848,
+      "removed_tiles": 0,
+      "host_tiles": 384,
+      "original_host_removal": 0.0,
+      "within_budget": true
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.995,
+      "variant": "visual_only",
+      "threshold": 4.0018371034144025,
+      "removed_tiles": 4,
+      "host_tiles": 384,
+      "original_host_removal": 0.010416666666666666,
+      "within_budget": false
+    },
+    {
+      "omitted_patient": "TCGA-GV-A3QH",
+      "quantile": 0.995,
+      "variant": "combined",
+      "threshold": 2.6097380119223796,
+      "removed_tiles": 2,
+      "host_tiles": 384,
+      "original_host_removal": 0.005208333333333333,
+      "within_budget": true
+    }
+  ],
+  "clean_host_removal_budget_per_patient": 0.01,
+  "evaluation_artifacts_loaded": false,
+  "synthetic_trials_used_for_selection": false,
+  "source_kind": "real",
+  "final_calibration_written": false,
+  "interpretation": "LOPO guides cutoff selection; not independent validation or a clinical false-positive guarantee.",
+  "slurm_job_id": "23028265",
+  "hostname": "cn137.delta.ncsa.illinois.edu",
+  "protocol_sha256": "68455950fec2a427f72aeb6bae218bceeb3f6fa7e8df9f7d488ed8e090442958",
+  "input_sha256": {
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-2A-A8VO/encoded/slide.npz": "1aef6a81ef3604262b27743d4672391a4a164250582953337563805752539a48",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-2A-A8VO/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-2F-A9KO/encoded/slide.npz": "0a28dba3aecd9c94b5a405905b9285e6386e10d71b57d8ff7ed040a52a838082",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-2F-A9KO/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-G9-6379/encoded/slide.npz": "42909744d13eb20d9ef20ec05d6f23750bcbf93dce0072799aa4d9be16bb5914",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-G9-6379/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-FC-A5OB/encoded/slide.npz": "02cd55786ced16b77107bfa234647a06c435970372360cb4afd2dde4a43ad4eb",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-FC-A5OB/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-EJ-A46B/encoded/slide.npz": "858f35aa504edbfe7150c9435cdb3dac0a2b8473e322662409a2d93f343b52cf",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-EJ-A46B/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-HC-7230/encoded/slide.npz": "8e049bb984adbf089d6d33577f6b078ff12016174bf17e55b75a10778f654b36",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-HC-7230/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-XF-A9SW/encoded/slide.npz": "0f00f5e2ddc12346a51dec027ec0acc27d91dd2041a32b51897799194fb841b1",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-XF-A9SW/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-ZF-A9RN/encoded/slide.npz": "d2361505eae3f8a6a2d7bb757450bad104c572a345639dd8b8ef34f647ecd630",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-ZF-A9RN/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-DK-A1A7/encoded/slide.npz": "6fab743e663e5c466d063c8a8fad04fea5beefd53a206606921616049ebeff43",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-DK-A1A7/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-GV-A3QH/encoded/slide.npz": "caa1518d33148dafdcd8cd2fb89f546b457739519914bf6111976e5d9eb6cc5e",
+    "/work/nvme/bfqi/mhoda/floater-finder/pilot-development/20261020T020759Z/encoding/TCGA-GV-A3QH/encoded/text.npz": "83700aa778fc2ecd0a0d9ba2a10fcb40199356ec782949f77ff9ab57408c7fcc"
+  },
+  "model": {
+    "name": "conch_v1",
+    "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+    "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+    "projection": true,
+    "normalized": true,
+    "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+    "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+    "torch_version": "2.8.0+cu128",
+    "pillow_version": "12.3.0",
+    "encoder_weight_coverage_verified": true
+  },
+  "text_fingerprint": "0679d07f868c4a3ba9e2c8e03aff4a8e7c23da81fe0ae597e16178f69d8f0fc6",
+  "runtime": {
+    "python": "3.11.13",
+    "numpy": "2.2.6"
+  },
+  "source_sha256": {
+    "scripts/ncsa_cohort_select.py": "196fab91abf6128a769a0dd26d1ef7a3df7ee8978e2b3de01c0fdd87c04f77b7",
+    "src/floater_finder/cohort.py": "adf0d5102226048a9a60f41e5e1f609b01050eec5cdc0bd8e4bb5ea2e1955939"
+  }
+}

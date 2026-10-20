@@ -1,6 +1,6 @@
 # Expanded CONCH v1 feasibility-pilot plan
 
-Acquisition and technical preflight are complete. The [study design is frozen](expanded_pilot_protocol.md) at four × 96-tile windows per patient after an initial 128-tile-window capacity failure. The cohort runner, development calibration and held-out experiment remain later stages; no new embeddings were created by preflight.
+Acquisition and technical preflight are complete. The [study design is frozen](expanded_pilot_protocol.md) at four × 96-tile windows per patient after an initial 128-tile-window capacity failure. The development runner subsequently produced 3,840 embeddings and completed clean leave-one-patient-out selection. No candidate met the 1% original-host removal budget, so final calibration and held-out evaluation remain stopped. [Development results](../reports/conch_development_results.md). Preflight itself created no embeddings.
 
 The acquisition plan contains **16 new public diagnostic slides, 21,243,276,685 bytes (21.24 GB / 19.78 GiB)**. The user explicitly approved this exact acquisition on 2026-10-18; all 16 downloads are now size/MD5 verified, with completion confirmed after manual reconnection on October 19. There are eight new development patients and eight fresh evaluation patients, four per organ in each split. Retaining the existing two development patients would give ten development and eight evaluation patients. The previous two evaluation patients are retired from this pilot and must not guide parameter selection.
 
@@ -43,10 +43,10 @@ Public GDC identity, access, diagnostic-slide status, file size and MD5 are veri
 6. Implement a cohort runner with the [frozen development-only policy](expanded_pilot_protocol.md): leave one of ten development patients out, fit on the other nine, and choose the smallest predeclared quantile satisfying at most 1% original-host removal on every omitted patient and every variant. Do not use synthetic mixtures for selection. If none passes, stop before evaluation. Freeze the final all-development numerical calibration before held-out scoring. This gives no unseen-patient or clinical false-positive guarantee.
 7. Evaluate fresh held-out hosts/donors once with oracle, no-filter and matched random-removal controls. The frozen design has 32 directed pairs × five nonzero levels × five seeds = **800 mixed trials**, plus **eight unique clean-host controls**, 808 trials/2,424 variant rows total. Only eight evaluation patients are independent. Proposed CPU cap: two CPUs, 8 GB, 30 minutes; benchmark before increasing it.
 
-No expanded encoding or detector-evaluation job has been submitted. The subsequently approved technical preflight and study-design freeze are complete; the cohort runner and final numerical calibration remain before held-out scoring. The exact read-only next command is:
+Development encoding and selection have since completed, without a feasible cutoff or final numerical calibration. No held-out encoding/evaluation job has been submitted. The exact read-only next command is:
 
 ```sh
-cat reports/conch_pilot_protocol_freeze_20261019.json
+cat reports/conch_development_results.md
 ```
 
 ## Acquisition execution
