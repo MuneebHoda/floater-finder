@@ -152,6 +152,8 @@ def test_multiwindow_extraction_uses_the_same_selection_and_preserves_existing_o
 
 
 @pytest.mark.parametrize("script,arguments", [
+    ("ncsa_cohort_encode.py", ["--output", "absent"]),
+    ("ncsa_cohort_select.py", ["--development", "absent", "--output", "absent"]),
     ("ncsa_pilot_preflight.py", ["--config", "absent", "--output", "absent"]),
     ("ncsa_runtime_preflight.py", ["--config", "absent", "--output", "absent"]),
     ("ncsa_one_pair_smoke.py", ["--config", "absent", "--prompts", "absent", "--output", "absent"]),
