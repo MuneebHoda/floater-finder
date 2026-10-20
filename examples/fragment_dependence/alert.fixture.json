@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "source_kind": "fixture",
+  "category": "fixture_software_check",
+  "scorer_id": "artificial-max-positive-v1-threshold-0.5",
+  "decision_rule": "prediction_label_changes",
+  "baseline": {
+    "prediction": "cancer",
+    "scores": {
+      "artificial_positive_feature_max": 1.0
+    }
+  },
+  "tile_count": 4,
+  "piece_count": 2,
+  "geometry": {
+    "coordinate_units": "microns",
+    "coordinate_reference": "tile_top_left",
+    "tile_step": [
+      112.0,
+      112.0
+    ],
+    "tile_size": [
+      112.0,
+      112.0
+    ],
+    "microns_per_unit_xy": [
+      1.0,
+      1.0
+    ],
+    "connectivity": 8,
+    "max_gap_tiles": 1,
+    "area_definition": "sum_of_nonoverlapping_occupied_tile_footprints"
+  },
+  "pieces": [
+    {
+      "piece_id": "piece-000",
+      "tile_indices": [
+        0,
+        1,
+        2
+      ],
+      "tile_ids": [
+        "benign-0",
+        "benign-1",
+        "benign-2"
+      ],
+      "tile_count": 3,
+      "bbox_coordinate_units": [
+        0.0,
+        0.0,
+        336.0,
+        112.0
+      ],
+      "area_mm2": 0.037632,
+      "area_fraction": 0.75,
+      "isolation_mm": 1.904,
+      "decision_changing": false,
+      "counterfactual": {
+        "status": "scored",
+        "remaining_tile_count": 1,
+        "result": {
+          "prediction": "cancer",
+          "scores": {
+            "artificial_positive_feature_max": 1.0
+          }
+        }
+      },
+      "review_alert": false
+    },
+    {
+      "piece_id": "piece-001",
+      "tile_indices": [
+        3
+      ],
+      "tile_ids": [
+        "positive-0"
+      ],
+      "tile_count": 1,
+      "bbox_coordinate_units": [
+        2240.0,
+        0.0,
+        2352.0,
+        112.0
+      ],
+      "area_mm2": 0.012544,
+      "area_fraction": 0.25,
+      "isolation_mm": 1.904,
+      "decision_changing": true,
+      "counterfactual": {
+        "status": "scored",
+        "remaining_tile_count": 3,
+        "result": {
+          "prediction": "benign",
+          "scores": {
+            "artificial_positive_feature_max": 0.0
+          }
+        }
+      },
+      "review_alert": true
+    }
+  ],
+  "alerts_evaluated": true,
+  "alert_policy": {
+    "max_area_mm2": 2.0,
+    "min_isolation_mm": 0.5,
+    "validation": "uncalibrated_exploratory_only"
+  },
+  "alerts": [
+    {
+      "type": "fragment_dependence_review",
+      "piece_id": "piece-001",
+      "baseline_prediction": "cancer",
+      "counterfactual_prediction": "benign",
+      "message": "The decision depends on this piece. Review its context; foreign tissue is not established."
+    }
+  ],
+  "tissue_action": "preserve_all_tissue",
+  "limitations": [
+    "Decision dependence does not establish foreign tissue; genuine small positive regions can be decisive.",
+    "Adjacent pieces can merge; no scorer-driven tile-cluster fallback is implemented.",
+    "Sampled windows or missing tissue tiles cannot establish complete biopsy-piece boundaries.",
+    "No calibrated lookalike percentiles or clinically validated alert thresholds are available."
+  ]
+}

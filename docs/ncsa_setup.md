@@ -1,5 +1,23 @@
 # Floater Finder: NCSA setup
 
+## PANDA pilot supplied by the user: adapter prepared, real run pending
+
+The user has now verified `/work/nvme/bfqi/mhoda/panda/` containing original `train.csv`, a 12-Radboud-biopsy `pilot.csv`, `train_images/` and `train_label_masks/`. This personal root was outside the earlier bounded shared-root search. [The implementation status](../reports/panda_implementation_status.md) records the three exact user-verified slide IDs, scale/mask facts, local tests and unsubmitted CPU/GPU resource drafts. These facts came from the user; the new adapter has not independently executed on those Delta files.
+
+The adapter reads physical scale from level-0 TIFF resolution tags and checks it against the user's approximate `.486` microns/pixel within 1%; it does not replace measured scale with an assumed value. Mask absence remains unknown, and original ISUP/Gleason grades are never copied into tile labels. The original checkpoint and verified CONCH runtime paths below remain unchanged. The new optional TIFF dependency must be checked/prepared in an isolated Delta runtime before the CPU stage; no runtime was modified remotely.
+
+No PANDA job, new GPU inference or bulk download was performed for this request. Real TIFF decoder compatibility, spatial QC of extracted tiles and approval of the bounded new scope remain gates. A local uncompressed RGB tiled-TIFF decoder failure is documented in the status report; compressed fixture success is not a real-Delta compatibility claim.
+
+## Prostate-biopsy pivot: read-only availability check
+
+On October 19 (observation timestamp October 20 UTC), the local Mac's shared SSH connection verified `mhoda` on `dt-login04.delta.ncsa.illinois.edu` via `ncsa-floater`. A bounded name/metadata search checked the two documented shared dataset roots, at most two directory levels, 200 entries per directory, 2,000 total entries and 30 seconds. It examined 48 entries, without truncation or reported directory errors, and found no PANDA/prostate/biopsy candidate names. This historical check excluded the personal PANDA root subsequently supplied above. [Exact scope and observed names](../reports/ncsa_panda_availability_20261019.json).
+
+`accounts` returned 6,881 rounded CPU hours on `bfqi-delta-cpu` and 9 rounded GPU hours on the `bfqi-delta-gpu` sub-allocation `mhoda`. Both allocations were previously confirmed for the hackathon. The user's queue was empty; the queried `cpu-interactive` and `gpuA100x4-interactive` partitions were up with one-hour limits. These are snapshots, not guarantees, and this was not a new GPU-access test.
+
+No dataset/weight downloads, image/feature body reads, inference or jobs were started for this pivot. PANDA slide, mask, provider/label metadata and access/license locations remain unverified; no PANDA destination or new Slurm request has been selected. Phase 2 also needs a validated benign/cancer scorer and new-scope execution authorization. [Integration gates and artifact reuse](panda_integration.md) supersede the older “next command” recommendations below for current work. Historical experiment paths, jobs and evidence remain preserved.
+
+## Historical CONCH/TCGA setup and execution
+
 Initial setup verified on 2026-10-17; latest acquisition verification on 2026-10-19 (America/Chicago). First milestone: CONCH only.
 Initial connection setup performed no Slurm job, inference, whole-slide processing, or dataset/model download. The later approved scheduled GPU smoke and hosted two-tile CONCH image-encoding test succeeded. Self-hosted CONCH v1 encoding and patient-separated detector smoke are verified below. The expanded development cohort is now encoded, but its cutoff-retention gate did not pass; expanded held-out and clinical performance remain untested.
 

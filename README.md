@@ -1,8 +1,24 @@
 # Floater Finder
 
-Stress-testing pathology vision-language models against synthetic tissue contamination and detecting suspicious foreign tissue without model fine-tuning. The first milestone is CONCH on TCGA-PRAD versus TCGA-BLCA.
+Floater Finder now targets a CONCH-only **prostate-biopsy fragment-dependence safety check**: identify pieces whose exclusion changes a supplied slide scorer's decision, while preserving all tissue and the original prediction. The immediate target is benign-versus-cancer S1. A decisive piece may be genuine small cancer; this check does not establish foreign tissue.
 
-This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. **The scheduled CONCH v1 workflow now passes a four-patient smoke through patient-separated detector calibration and evaluation. The fixed detector threshold misses most injected tiles; broader validation remains necessary.**
+The new PANDA adapter adds bounded pyramid-region tiling, physical coordinates and native-mask label fractions, plus CPU/GPU smoke drafts that reuse the existing CONCH encoder. The user has now verified a PANDA pilot at `/work/nvme/bfqi/mhoda/panda/`, outside the roots of the earlier negative name search. [Implementation status and next command](reports/panda_implementation_status.md) distinguish tested local fixtures from the unexecuted real Delta run. [Artifact audit and scientific gates](docs/panda_integration.md) remain available. Real cancer scoring and unmodified-slide alert rates have not been evaluated.
+
+```sh
+uv sync --locked --no-editable --reinstall-package floater-finder --extra test
+.venv/bin/python scripts/fragment_dependence_demo.py --output results/fixtures/fragment-dependence/new-run
+```
+
+The demo saves/reloads artificial embeddings and emits baseline/counterfactual predictions, piece geometry and [fixture alert JSON](examples/fragment_dependence/alert.fixture.json). Its scorer and thresholds are artificial and uncalibrated. `analyze_saved_slide()` now accepts saved NPZ artifacts plus a prediction callable and requires recorded physical geometry. Existing CLI commands and the CONCH/NCSA pipeline remain available below; the earlier TCGA experiments are historical **organ-classification evidence only**, not evidence of cancer detection.
+
+For PANDA TIFF integration tests, install the optional region-reader dependencies:
+
+```sh
+uv sync --locked --no-editable --reinstall-package floater-finder --extra test --extra panda
+.venv/bin/python -m pytest tests/test_panda.py tests/test_fragment_dependence.py -q -W error
+```
+
+This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. The historical CONCH v1 organ workflow passed a four-patient smoke through patient-separated detector calibration and evaluation. The fixed detector threshold missed most injected tiles; the subsequent development cutoff gate failed. Those observations are preserved below and in the experiment reports.
 
 ## Run locally
 
