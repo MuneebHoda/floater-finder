@@ -1,0 +1,372 @@
+{
+  "observed_utc": "2026-10-20T17:06:26.852599+00:00",
+  "source_commit": "1598f9b08e625112be7d5bf91a25f82335c962f9",
+  "source": "/u/mhoda/floater-finder/releases/panda-1598f9b-20261020T040441Z/source",
+  "source_files_verified": 172,
+  "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+  "python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "architecture": "x86_64",
+  "packages": {
+    "numpy": "2.0.2",
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.2",
+    "openslide-python": "1.4.6",
+    "openslide-bin": "4.0.1.2",
+    "tifffile": "2025.5.10"
+  },
+  "module_paths": {
+    "numpy": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z/lib/python3.11/site-packages/numpy/__init__.py",
+    "Pillow": "/work/nvme/bfqi/mhoda/floater-finder/envs/conch-v1-pillow123-20261018T223113Z/lib/python3.11/site-packages/PIL/__init__.py",
+    "openslide": "/work/nvme/bfqi/mhoda/floater-finder/envs/conch-v1-pillow123-20261018T223113Z/lib/python3.11/site-packages/openslide/__init__.py",
+    "tifffile": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z/lib/python3.11/site-packages/tifffile/__init__.py"
+  },
+  "openslide_library_version": "4.0.1",
+  "slides": [
+    {
+      "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+      "provider": "radboud",
+      "isup_grade": 0,
+      "gleason_score": "negative",
+      "reader_status": "passed",
+      "metadata": {
+        "pyramid_dimensions": [
+          [
+            6912,
+            4352
+          ],
+          [
+            1728,
+            1088
+          ],
+          [
+            432,
+            272
+          ]
+        ],
+        "pyramid_downsamples": [
+          1.0,
+          4.0,
+          16.0
+        ],
+        "measured_mpp_xy": [
+          0.4861876369654638,
+          0.4861876369654638
+        ],
+        "recorded_mpp_xy": [
+          0.486,
+          0.486
+        ],
+        "scale_provenance": "Level-0 TIFF XResolution/YResolution/ResolutionUnit tags",
+        "image_header": {
+          "dimensions": [
+            6912,
+            4352
+          ],
+          "orientation": 1,
+          "resolution_tags": {
+            "XResolution": [
+              4294967295,
+              208816
+            ],
+            "YResolution": [
+              4294967295,
+              208816
+            ],
+            "ResolutionUnit": 3
+          },
+          "compression": 7,
+          "photometric": 2,
+          "samples_per_pixel": 3,
+          "bits_per_sample": 8
+        },
+        "mask_header": {
+          "dimensions": [
+            6912,
+            4352
+          ],
+          "orientation": 1,
+          "resolution_tags": {
+            "XResolution": [
+              4294967295,
+              206158
+            ],
+            "YResolution": [
+              4294967295,
+              206158
+            ],
+            "ResolutionUnit": 3
+          },
+          "compression": 5,
+          "photometric": 2,
+          "samples_per_pixel": 3,
+          "bits_per_sample": 8
+        },
+        "mask_available": true,
+        "mask_channel": 0,
+        "mask_label_mapping": {
+          "0": "background",
+          "1": "stroma",
+          "2": "benign",
+          "3": "gleason3",
+          "4": "gleason4",
+          "5": "gleason5"
+        },
+        "input_files": {
+          "image": {
+            "path": "/work/nvme/bfqi/mhoda/panda/train_images/afe7eb15c8438861ca43f2b20dccf260.tiff",
+            "bytes": 5655743,
+            "mtime_ns": 1792465505000000000,
+            "full_checksum_verified": false
+          },
+          "mask": {
+            "path": "/work/nvme/bfqi/mhoda/panda/train_label_masks/afe7eb15c8438861ca43f2b20dccf260_mask.tiff",
+            "bytes": 378384,
+            "mtime_ns": 1587433150000000000,
+            "full_checksum_verified": false
+          }
+        },
+        "alignment_check": "matching dimensions/downsamples/orientation; not histological registration proof"
+      },
+      "decoder_probes": [
+        {
+          "role": "image",
+          "status": "passed",
+          "requested_pixels": 1,
+          "native_compressed_tile_dimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "role": "mask",
+          "status": "passed",
+          "requested_pixels": 1,
+          "native_compressed_tile_dimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "55d91c32710982de78a975ed0f45395c",
+      "provider": "radboud",
+      "isup_grade": 1,
+      "gleason_score": "3+3",
+      "reader_status": "passed",
+      "metadata": {
+        "pyramid_dimensions": [
+          [
+            13824,
+            7424
+          ],
+          [
+            3456,
+            1856
+          ],
+          [
+            864,
+            464
+          ]
+        ],
+        "pyramid_downsamples": [
+          1.0,
+          4.0,
+          16.0
+        ],
+        "measured_mpp_xy": [
+          0.4861876369654638,
+          0.4861876369654638
+        ],
+        "recorded_mpp_xy": [
+          0.486,
+          0.486
+        ],
+        "scale_provenance": "Level-0 TIFF XResolution/YResolution/ResolutionUnit tags",
+        "image_header": {
+          "dimensions": [
+            13824,
+            7424
+          ],
+          "orientation": 1,
+          "resolution_tags": {
+            "XResolution": [
+              4294967295,
+              208816
+            ],
+            "YResolution": [
+              4294967295,
+              208816
+            ],
+            "ResolutionUnit": 3
+          },
+          "compression": 7,
+          "photometric": 2,
+          "samples_per_pixel": 3,
+          "bits_per_sample": 8
+        },
+        "mask_header": null,
+        "mask_available": false,
+        "mask_channel": null,
+        "mask_label_mapping": {
+          "0": "background",
+          "1": "stroma",
+          "2": "benign",
+          "3": "gleason3",
+          "4": "gleason4",
+          "5": "gleason5"
+        },
+        "input_files": {
+          "image": {
+            "path": "/work/nvme/bfqi/mhoda/panda/train_images/55d91c32710982de78a975ed0f45395c.tiff",
+            "bytes": 11076229,
+            "mtime_ns": 1792465583000000000,
+            "full_checksum_verified": false
+          }
+        },
+        "alignment_check": "matching dimensions/downsamples/orientation; not histological registration proof"
+      },
+      "decoder_probes": [
+        {
+          "role": "image",
+          "status": "passed",
+          "requested_pixels": 1,
+          "native_compressed_tile_dimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "dd1110c6430e3b1ac732be548a089886",
+      "provider": "radboud",
+      "isup_grade": 4,
+      "gleason_score": "4+4",
+      "reader_status": "passed",
+      "metadata": {
+        "pyramid_dimensions": [
+          [
+            6912,
+            10240
+          ],
+          [
+            1728,
+            2560
+          ],
+          [
+            432,
+            640
+          ]
+        ],
+        "pyramid_downsamples": [
+          1.0,
+          4.0,
+          16.0
+        ],
+        "measured_mpp_xy": [
+          0.4861876369654638,
+          0.4861876369654638
+        ],
+        "recorded_mpp_xy": [
+          0.486,
+          0.486
+        ],
+        "scale_provenance": "Level-0 TIFF XResolution/YResolution/ResolutionUnit tags",
+        "image_header": {
+          "dimensions": [
+            6912,
+            10240
+          ],
+          "orientation": 1,
+          "resolution_tags": {
+            "XResolution": [
+              4294967295,
+              208816
+            ],
+            "YResolution": [
+              4294967295,
+              208816
+            ],
+            "ResolutionUnit": 3
+          },
+          "compression": 7,
+          "photometric": 2,
+          "samples_per_pixel": 3,
+          "bits_per_sample": 8
+        },
+        "mask_header": {
+          "dimensions": [
+            6912,
+            10240
+          ],
+          "orientation": 1,
+          "resolution_tags": {
+            "XResolution": [
+              4294967295,
+              206158
+            ],
+            "YResolution": [
+              4294967295,
+              206158
+            ],
+            "ResolutionUnit": 3
+          },
+          "compression": 5,
+          "photometric": 2,
+          "samples_per_pixel": 3,
+          "bits_per_sample": 8
+        },
+        "mask_available": true,
+        "mask_channel": 0,
+        "mask_label_mapping": {
+          "0": "background",
+          "1": "stroma",
+          "2": "benign",
+          "3": "gleason3",
+          "4": "gleason4",
+          "5": "gleason5"
+        },
+        "input_files": {
+          "image": {
+            "path": "/work/nvme/bfqi/mhoda/panda/train_images/dd1110c6430e3b1ac732be548a089886.tiff",
+            "bytes": 12172165,
+            "mtime_ns": 1792465583000000000,
+            "full_checksum_verified": false
+          },
+          "mask": {
+            "path": "/work/nvme/bfqi/mhoda/panda/train_label_masks/dd1110c6430e3b1ac732be548a089886_mask.tiff",
+            "bytes": 884574,
+            "mtime_ns": 1587433120000000000,
+            "full_checksum_verified": false
+          }
+        },
+        "alignment_check": "matching dimensions/downsamples/orientation; not histological registration proof"
+      },
+      "decoder_probes": [
+        {
+          "role": "image",
+          "status": "passed",
+          "requested_pixels": 1,
+          "native_compressed_tile_dimensions": [
+            512,
+            512
+          ]
+        },
+        {
+          "role": "mask",
+          "status": "passed",
+          "requested_pixels": 1,
+          "native_compressed_tile_dimensions": [
+            512,
+            512
+          ]
+        }
+      ]
+    }
+  ],
+  "full_tiff_arrays_loaded": false,
+  "extraction_run": false,
+  "jobs_submitted": false,
+  "gpu_inference": false
+}

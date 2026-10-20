@@ -1,5 +1,23 @@
 # Floater Finder: NCSA setup
 
+## PANDA CPU smoke completed; cancer capture failed; available cohort is partial
+
+The user explicitly approved the prepared CPU command. It was submitted once as **`23050425`**, completed `0:0` on `cn137` in **9 seconds**, and produced **32 tiles per biopsy / 96 total**. All three CSVs, geometry, mask fractions, PNG dimensions and saved artifact hashes passed remote checks; retrieved CSV/metadata hashes and counts were independently checked locally. High-grade donor `dd1110c6430e3b1ac732be548a089886` had **0/32 tiles with nonzero Gleason 4 and 0/32 with Gleason 5**, so the cancer-positive extraction acceptance gate did not pass. Preserve this outcome; no resubmission, donor enrichment or GPU inference followed. [Observed CPU results](../reports/panda_cpu_smoke_results.md).
+
+At inspection, acquisition `23030528` was still pending for Priority. Its expected log did not exist, and its batch script invokes `/work/nvme/bfqi/mhoda/panda/collect_annotated.py`, which was absent. No larger manifest was generated in the checked locations. The job and script were left unchanged. [Inspection facts](../reports/ncsa_panda_acquisition_inspection_23030528.json).
+
+Under the user's explicit metadata-selection request, created `/work/nvme/bfqi/mhoda/panda/annotated_cohort.csv` with **three verified available Radboud biopsies**, one per requested group, using seed **20261020** and valid-mask-first deterministic selection. All three are training-only; calibration/test are empty. Mask coverage is **2/3**. There is a shortfall of 19 cases per group. The original `pilot.csv` hash is unchanged. The adjacent `.selection_provenance.json` records source metadata hash, selection recipe hash, seed, actual counts and partial status. No patient IDs are supplied, and no 60-slide readiness or patient-disjoint evaluation is claimed. [Selection provenance](../reports/panda_cohort_selection_20261020.json).
+
+## Real PANDA CPU smoke: staged and preflighted; submission awaits approval
+
+After manual reconnection, shared SSH verified `mhoda` on `dt-login04`. Exact pushed commit `1598f9b08e625112be7d5bf91a25f82335c962f9` is staged read-only at `/u/mhoda/floater-finder/releases/panda-1598f9b-20261020T040441Z/source`; all 172 source hashes match before and after preflight. The existing CONCH runtime was preserved. A new CPU runtime at `/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z` imports NumPy 2.0.2, Pillow 12.3.0, PyYAML 6.0.2, OpenSlide Python 1.4.6/binary 4.0.1.2 and tifffile 2025.5.10. Only the new runtime received dependency overrides, installed offline from two staged wheels.
+
+All three real images and both available masks passed the exact reader's header/alignment/calibration checks and five bounded one-pixel decoder probes. Native compressed tiles are 512×512; no complete slide plane or tile collection was processed on the login node. Measured MPP is 0.4861876369654638 in both axes for all three. The GG1 mask remains absent. [Observed reader/runtime facts](../reports/ncsa_panda_reader_preflight_1598f9b_20261020.json), [source hashes](../reports/ncsa_panda_source_manifest_1598f9b_20261020.json).
+
+Acquisition job `23030528` remains pending for Priority at the latest check and was left unchanged; no duplicate was submitted. The site's `accounts` snapshot showed 6,765 rounded CPU hours and 9 GPU hours; `cpu-interactive` was up. A scheduler `--test-only` check accepted the separate two-CPU, 4 GB, ten-minute tiling request without submitting it. The user's explicit step-5 approval is still required. [Exact paths, command, outputs and acceptance checks](../reports/panda_cpu_smoke_preparation.md). No GPU inference was launched. Tile counts and cancer-positive donor counts remain unknown until the actual CPU job runs.
+
+The observed `train.csv` has 10,616 rows and `pilot.csv` still has 12. A local software fixture confirms compatibility with a 60-row Radboud membership CSV, but the actual new cohort manifest has not yet been located; its path was requested. No original manifest was overwritten. The three-slide smoke cap remains in force.
+
 ## PANDA pilot supplied by the user: adapter prepared, real run pending
 
 The user has now verified `/work/nvme/bfqi/mhoda/panda/` containing original `train.csv`, a 12-Radboud-biopsy `pilot.csv`, `train_images/` and `train_label_masks/`. This personal root was outside the earlier bounded shared-root search. [The implementation status](../reports/panda_implementation_status.md) records the three exact user-verified slide IDs, scale/mask facts, local tests and unsubmitted CPU/GPU resource drafts. These facts came from the user; the new adapter has not independently executed on those Delta files.

@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-10-20T17:30:53.211630+00:00",
+  "status": "insufficient_available_cases_partial_manifest",
+  "manifest": "/work/nvme/bfqi/mhoda/panda/annotated_cohort.csv",
+  "manifest_sha256": "9042c167c13a18da999e29a130dffb6495e32d102ade48fb79c28e53a69d00b7",
+  "seed": 20261020,
+  "selection": "Within each group: valid-mask-first, seeded SHA-256 tie order; retain up to 20; independent seeded SHA-256 split order with quotas 12/4/4",
+  "train_csv": "/work/nvme/bfqi/mhoda/panda/train.csv",
+  "train_csv_sha256": "f67935796d8da5ff9dcb27865968e51f24d297fe7f17e69f4af3ca1b3737f45a",
+  "metadata_columns": [
+    "image_id",
+    "data_provider",
+    "isup_grade",
+    "gleason_score"
+  ],
+  "metadata_rows": 10616,
+  "pilot_preserved_sha256": "91713d4f430e53c74e8dee9a7c8aeda8e25781302d05c74d020952a239564c7e",
+  "all_available_tiff_file_count": 3,
+  "groups": {
+    "benign": {
+      "eligible_available": 1,
+      "selected": 1,
+      "with_mask": 1,
+      "splits": {
+        "train": 1
+      },
+      "shortfall": 19
+    },
+    "gg1": {
+      "eligible_available": 1,
+      "selected": 1,
+      "with_mask": 0,
+      "splits": {
+        "train": 1
+      },
+      "shortfall": 19
+    },
+    "high_grade": {
+      "eligible_available": 1,
+      "selected": 1,
+      "with_mask": 1,
+      "splits": {
+        "train": 1
+      },
+      "shortfall": 19
+    }
+  },
+  "selected_total": 3,
+  "mask_coverage": {
+    "with_mask": 2,
+    "total": 3
+  },
+  "patient_ids_available": 0,
+  "patient_leakage_verification": "No patient IDs supplied; biopsy IDs are not patient identities. All currently selected rows are training-only.",
+  "ready_as_60_slide_cohort": false,
+  "individual_inputs_header_validated": true,
+  "embedding_run": false,
+  "new_downloads": false,
+  "jobs_submitted_by_selection": false,
+  "exclusions": [],
+  "candidate_inventory_sha256": "9396da7ad6bf2fa24b56bfb8a99b48f10f0659b596e9db0a60b307a5feb06268",
+  "selector_self_check": "60 artificial records selected with exact 12/4/4 group quotas; determinism passed; no fixture IDs written",
+  "selection_recipe_sha256": "dfb13897f8dd0e03376c1eff383fa8652cc06d3109531482fae309828cc721b5"
+}

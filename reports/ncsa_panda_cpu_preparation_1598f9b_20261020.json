@@ -1,0 +1,71 @@
+{
+  "status": "prepared_awaiting_explicit_submission_approval",
+  "source_commit": "1598f9b08e625112be7d5bf91a25f82335c962f9",
+  "source": "/u/mhoda/floater-finder/releases/panda-1598f9b-20261020T040441Z/source",
+  "source_file_count_verified": 172,
+  "archive_sha256": "8ed3aaa0bcb92b51f654bd4189088032907a875572988809705a3a060dbccdd0",
+  "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+  "parent_runtime_preserved": "/work/nvme/bfqi/mhoda/floater-finder/envs/conch-v1-pillow123-20261018T223113Z",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-smoke/cpu-1598f9b-20261020T040441Z",
+  "reader_observed_utc": "2026-10-20T17:06:26.852599+00:00",
+  "runtime_packages": {
+    "numpy": "2.0.2",
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.2",
+    "openslide-python": "1.4.6",
+    "openslide-bin": "4.0.1.2",
+    "tifffile": "2025.5.10"
+  },
+  "inputs_root": "/work/nvme/bfqi/mhoda/panda",
+  "train_rows_observed": 10616,
+  "pilot_rows_observed": 12,
+  "resources": {
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu-interactive",
+    "cpus": 2,
+    "memory_gb": 4,
+    "wall_minutes": 10,
+    "gpus": 0
+  },
+  "sampling": {
+    "slides": 3,
+    "max_tiles_per_slide": 32,
+    "max_candidates_per_slide": 4096,
+    "requested_field_um": 112,
+    "export_pixels": 224,
+    "method": "first tissue-positive grid cells in row-major order; engineering subset, not unbiased evaluation"
+  },
+  "acquisition_job": {
+    "job_id": "23030528",
+    "observed_state": "PENDING",
+    "reason": "Priority",
+    "modified": false,
+    "duplicate_submitted": false
+  },
+  "scheduler_test_only": {
+    "command": "sbatch --test-only /u/mhoda/floater-finder/releases/panda-1598f9b-20261020T040441Z/source/scripts/slurm/panda_tile_smoke.sbatch /u/mhoda/floater-finder/releases/panda-1598f9b-20261020T040441Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/floater-finder/panda-smoke/cpu-1598f9b-20261020T040441Z",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 23050007 to start at 2026-10-20T12:07:58 a using 2 processors on nodes cn062 in partition cpu-interactive\n",
+    "test_only": true,
+    "job_submitted": false
+  },
+  "cohort_manifest_check": {
+    "actual_60_slide_manifest_located": false,
+    "actual_manifest_path_requested": true,
+    "local_60_row_fixture_passed": true,
+    "reader_requires_pilot_csv": true,
+    "reader_membership_row_limit": 100,
+    "provider_supported": "radboud",
+    "smoke_runner_slide_cap": 3
+  },
+  "cpu_job_submitted": false,
+  "gpu_inference_launched": false,
+  "scientific_results": null,
+  "acceptance_pending": [
+    "all three real tiles.csv outputs inspected",
+    "valid tile spatial metadata/provenance",
+    "at least one high-grade donor tile with Gleason4 or Gleason5 fraction > 0"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "job_id": "23050425",
+  "source_commit": "1598f9b08e625112be7d5bf91a25f82335c962f9",
+  "category": "real_PANDA_CPU_tiling_smoke; no model inference",
+  "status": "verified_completed_outputs",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-smoke/cpu-1598f9b-20261020T040441Z",
+  "slides": [
+    {
+      "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+      "tiles": 32,
+      "mask_available": true,
+      "gleason4_positive_tiles": 0,
+      "gleason5_positive_tiles": 0,
+      "gleason4_or_5_positive_tiles": 0,
+      "positive_tiles": [],
+      "tile_area_mm2": 0.012504418330083459,
+      "spatial_and_fraction_checks_passed": true,
+      "manifest_metadata_png_hashes_verified": true,
+      "isup_grade": 0
+    },
+    {
+      "image_id": "55d91c32710982de78a975ed0f45395c",
+      "tiles": 32,
+      "mask_available": false,
+      "gleason4_positive_tiles": null,
+      "gleason5_positive_tiles": null,
+      "gleason4_or_5_positive_tiles": null,
+      "positive_tiles": [],
+      "tile_area_mm2": 0.012504418330083459,
+      "spatial_and_fraction_checks_passed": true,
+      "manifest_metadata_png_hashes_verified": true,
+      "isup_grade": 1
+    },
+    {
+      "image_id": "dd1110c6430e3b1ac732be548a089886",
+      "tiles": 32,
+      "mask_available": true,
+      "gleason4_positive_tiles": 0,
+      "gleason5_positive_tiles": 0,
+      "gleason4_or_5_positive_tiles": 0,
+      "positive_tiles": [],
+      "tile_area_mm2": 0.012504418330083459,
+      "spatial_and_fraction_checks_passed": true,
+      "manifest_metadata_png_hashes_verified": true,
+      "isup_grade": 4
+    }
+  ],
+  "total_tiles": 96,
+  "high_grade_donor_cancer_capture_passed": false,
+  "gpu_inference": false
+}
