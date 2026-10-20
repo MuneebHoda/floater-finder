@@ -1,0 +1,19 @@
+{
+  "observed_utc": "2026-10-20T20:17:28.265587+00:00",
+  "remote_access": "unavailable; no authentication retry",
+  "error": "mux_client_request_session: read from master failed: Broken pipe; Permission denied (gssapi-with-mic,password). Stopped after this attempt; awaiting manual reconnection.",
+  "gpu_job_id": "23054910",
+  "postencode_job_id": "23055022",
+  "last_verified_progress": {
+    "completed_slides_including_reuse": 54,
+    "new_embeddings": 20687,
+    "gpu_job_state": "RUNNING",
+    "gpu_elapsed": "00:09:27",
+    "cpu_job_state": "PENDING (Dependency)",
+    "gpu_node": "gpua018"
+  },
+  "jobs_cancelled": false,
+  "final_completion_verified": false,
+  "manual_next_command": "ssh ncsa-floater",
+  "credentials_requested": false
+}

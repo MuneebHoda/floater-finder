@@ -1,0 +1,51 @@
+{
+  "status": "prepared; full-cohort GPU approval pending",
+  "slides": 120,
+  "total_tiles": 50729,
+  "new_slides": 117,
+  "new_tiles": 49785,
+  "reused_slides": 3,
+  "reused_embeddings": 944,
+  "model": "CONCH v1",
+  "source_snapshot": "/u/mhoda/floater-finder/releases/panda-full-cohort-20261020-v1/source",
+  "source_archive_sha256": "45c4f88e24c1e489dd0bbfd45d67ac59802f8f4acd36380512d8c11ac7fccce9",
+  "input_directories": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+  "input_directories_sha256": "f6825d19cbf60df9b3daf2d12d47c0b9bbb90a791ee5ccb62157892798e51132",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-full-cohort-20261020-v1/source/scripts/slurm/panda_encode_cohort.sbatch /u/mhoda/floater-finder/releases/panda-full-cohort-20261020-v1/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "resources": {
+    "account": "bfqi-delta-gpu",
+    "qos": "bfqi-delta-gpu-mhoda",
+    "partition": "gpuA100x4-interactive",
+    "gpus": 1,
+    "cpus": 4,
+    "host_memory_gb": 16,
+    "wall_minutes": 45,
+    "max_gpu_hours": 0.75
+  },
+  "estimated_minutes_excluding_other_overhead": 20.807358673382467,
+  "estimated_minutes_including_margin": "25\u201330; queue time excluded",
+  "observed_profile": {
+    "job": "23051673",
+    "node": "gpua089",
+    "elapsed_seconds": 54,
+    "host_peak_rss_kib": 4007116,
+    "slurm_gpu_memory": "3130M",
+    "weighted_image_tiles_per_second": 63.186424479719406,
+    "model_load_seconds_mean": 3.9361960196401924
+  },
+  "scheduler_test_only": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 23053384 to start at 2026-10-20T14:03:45 a using 4 processors on nodes gpua018 in partition gpuA100x4-interactive\n",
+    "submitted": false
+  },
+  "allocation_snapshot": {
+    "cpu_hours_rounded": 5677,
+    "gpu_hours_rounded": 9
+  },
+  "filesystem_available_bytes": 4031514365952,
+  "cohort_tile_storage_bytes": 3777360464,
+  "submitted": false,
+  "cancer_baseline_evaluated": false
+}

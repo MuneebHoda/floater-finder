@@ -1,5 +1,23 @@
 # Floater Finder: NCSA setup
 
+## Latest PANDA scale-up checkpoint
+
+PANDA now has **120 slides / 50,729 verified CONCH embeddings**. The clean development baseline, **192 connected-fragment S1 trials** and **64 calibration piece counterfactuals** are executed. All 192 oracle recoveries pass. Genuine annotated cancer can also be decisive, so no foreignness or calibrated-alert claim follows. The 24 final-test slides remain unscored. [Current results, charts and remaining gates](../reports/panda_s1_and_piece_results_20261020.md).
+
+## Verified PANDA follow-up outputs — October 20
+
+Shared SSH after manual reconnection verified `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. GPU `23054910`, verification/baseline CPU `23055022`, S1 CPU `23065666` and piece-diagnostic CPU `23065744` are all `COMPLETED 0:0`. Own queue is empty at the final check. Latest site `accounts` shows 5,516 rounded CPU hours and 8 rounded GPU hours; these are observed balances, not future availability guarantees.
+
+- Verified cohort: `/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv`.
+- Verified 120-slide embeddings: `/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative`.
+- CPU artifact receipt: `/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json`.
+- Clean development baseline: `/work/nvme/bfqi/mhoda/floater-finder/panda-baselines/dev-zero-shot-v1-23054910`.
+- S1 development outputs: `/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020`.
+- Calibration piece outputs: `/work/nvme/bfqi/mhoda/floater-finder/panda-pieces/calibration-top5pct-v1-20261020`.
+- Immutable S1 source: `/u/mhoda/floater-finder/releases/panda-s1-dev-20261020-v1/source`; piece source: `/u/mhoda/floater-finder/releases/panda-piece-dev-20261020-v1/source`.
+
+Both new diagnostics used CPU only and existing embeddings, with no new data/weight download. Final `train.csv`, `pilot.csv` and original partial `annotated_cohort.csv` hashes still match their recorded originals. The current per-slide ledger is `reports/panda_scale_ledger_current_20261020.json`. Patient identities, complete physical-piece topology, calibrated review-alert thresholds and independent final-test validity remain unresolved. No final-test scoring or additional GPU batch was launched.
+
 ## PANDA CPU smoke completed; cancer capture failed; available cohort is partial
 
 The user explicitly approved the prepared CPU command. It was submitted once as **`23050425`**, completed `0:0` on `cn137` in **9 seconds**, and produced **32 tiles per biopsy / 96 total**. All three CSVs, geometry, mask fractions, PNG dimensions and saved artifact hashes passed remote checks; retrieved CSV/metadata hashes and counts were independently checked locally. High-grade donor `dd1110c6430e3b1ac732be548a089886` had **0/32 tiles with nonzero Gleason 4 and 0/32 with Gleason 5**, so the cancer-positive extraction acceptance gate did not pass. Preserve this outcome; no resubmission, donor enrichment or GPU inference followed. [Observed CPU results](../reports/panda_cpu_smoke_results.md).

@@ -1,0 +1,28 @@
+{
+  "afe7eb15c8438861ca43f2b20dccf260": {
+    "representative": {
+      "gp45_area_mm2_in_exported_tiles": 0.0,
+      "fraction_of_full_native_gp45_area": null,
+      "mask_label_scope": "annotation pixels, not total cancer burden"
+    }
+  },
+  "55d91c32710982de78a975ed0f45395c": {
+    "representative": {
+      "gp45_area_mm2_in_exported_tiles": 0.0,
+      "fraction_of_full_native_gp45_area": null,
+      "mask_label_scope": "annotation pixels, not total cancer burden"
+    }
+  },
+  "dd1110c6430e3b1ac732be548a089886": {
+    "representative": {
+      "gp45_area_mm2_in_exported_tiles": 0.020806028382116187,
+      "fraction_of_full_native_gp45_area": 1.0000000000000002,
+      "mask_label_scope": "annotation pixels, not total cancer burden"
+    },
+    "donor": {
+      "gp45_area_mm2_in_exported_tiles": 0.020375819660740917,
+      "fraction_of_full_native_gp45_area": 0.9793228811633722,
+      "mask_label_scope": "annotation pixels, not total cancer burden"
+    }
+  }
+}

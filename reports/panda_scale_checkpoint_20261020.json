@@ -1,0 +1,35 @@
+{
+  "local_branch": "feature/panda-tiling",
+  "base_commit": "985e646",
+  "source_kind": "real",
+  "stage": "CPU audit/tiling executed; larger acquisition and GPU pending approval",
+  "cpu_job_id": "23051244",
+  "cpu_exit": "0:0",
+  "representative_tiles": 944,
+  "donor_tiles": 19,
+  "gp45_positive_high_grade_masks_verified": 1,
+  "additional_file_bytes_60": 1201123589,
+  "additional_file_bytes_120": 2459351119,
+  "catalog_candidates": {
+    "benign": 967,
+    "gg1": 852,
+    "high_grade": 1741
+  },
+  "old_acquisition_job": {
+    "id": "23030528",
+    "state": "PENDING",
+    "reason": "Priority",
+    "missing_collector": true,
+    "cancelled": false
+  },
+  "proposed_commands": {
+    "60": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/scripts/slurm/panda_acquire.sbatch /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/acquisition_60.json /work/nvme/bfqi/mhoda/panda /work/nvme/bfqi/mhoda/panda/acquisition-receipts/20261020-scale-v1-60 64edc5e4123e1fdaf29d353002fb1f0bb942b05dde21131a66013e5e5a68a0e3",
+    "120": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/scripts/slurm/panda_acquire.sbatch /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/acquisition_120.json /work/nvme/bfqi/mhoda/panda /work/nvme/bfqi/mhoda/panda/acquisition-receipts/20261020-scale-v1-120 198478f7ee73aa9e0b7bd6f676b641805d93ce658e309eb24dd598e70f8484f7",
+    "gpu_profile": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/scripts/slurm/panda_encode_profile.sbatch /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/configs/panda_encode_profile_directories.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/profile-20261020-v1"
+  },
+  "gpu_profile_submitted": false,
+  "cancer_baseline_evaluated": false,
+  "contamination_evaluated": false,
+  "patient_independence_verified": false,
+  "local_tests_passed": 165
+}

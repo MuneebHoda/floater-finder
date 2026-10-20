@@ -1,0 +1,16 @@
+{
+  "latest_source": "/u/mhoda/floater-finder/releases/panda-cohort-audit-20261020-v1/source",
+  "latest_source_archive_sha256": "01e0733cda408304acdfdf3b8e53a2e31a1c92cbedb7410e97f1e3afb8f7d031",
+  "latest_local_stage": "/var/folders/ws/kz52lt0948sdkwpvbrbyk4g40000gn/T/panda-source-7kw4xgfa",
+  "first_cohort_cpu_job_id": "23051691",
+  "first_cohort_cpu_command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-cohort-audit-20261020-v1/source/scripts/slurm/panda_tile_cohort.sbatch /u/mhoda/floater-finder/releases/panda-cohort-audit-20261020-v1/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/candidate_120.csv /work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative 0 10",
+  "remaining_cohort_cpu_job_id": "23051907",
+  "remaining_cohort_cpu_command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-cohort-audit-20261020-v1/cohort_remaining_workers.sbatch",
+  "remaining_cohort_cpu_script": "#!/bin/bash\n#SBATCH --job-name=panda-cohort-cpu\n#SBATCH --account=bfqi-delta-cpu\n#SBATCH --qos=bfqi-delta-cpu\n#SBATCH --partition=cpu-interactive\n#SBATCH --nodes=1\n#SBATCH --ntasks=4\n#SBATCH --cpus-per-task=1\n#SBATCH --mem=16G\n#SBATCH --time=00:30:00\n#SBATCH --chdir=/work/nvme/bfqi/mhoda\n#SBATCH --output=/work/nvme/bfqi/mhoda/panda-cohort-cpu-%j.out\nset -euo pipefail\numask 077\nmodule load pytorch-conda/2.8\nexport PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1\nexport PYTHONPATH=/u/mhoda/floater-finder/releases/panda-cohort-audit-20261020-v1/source/src\npids=()\nfor worker in 0 1 2 3; do\n  (\n    for ((start=10+worker*10; start<120; start+=40)); do\n      srun --exclusive --ntasks=1 --cpus-per-task=1 --mem=4G /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z/bin/python /u/mhoda/floater-finder/releases/panda-cohort-audit-20261020-v1/source/scripts/panda_tile_cohort.py         --root /work/nvme/bfqi/mhoda/panda --manifest /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/candidate_120.csv --output /work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative --start \"$start\" --count 10\n    done\n  ) &\n  pids+=(\"$!\")\ndone\nstatus=0\nfor pid in \"${pids[@]}\"; do wait \"$pid\" || status=1; done\nexit \"$status\"\n",
+  "cpu_partition_qos": {
+    "name": "cpuintqos",
+    "max_submit_jobs_per_user": 1,
+    "max_running_jobs_per_user": 1,
+    "rejected_array_created_job": false
+  }
+}

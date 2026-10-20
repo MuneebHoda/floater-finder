@@ -1,5 +1,7 @@
 # Floater Finder
 
+PANDA now has **120 slides / 50,729 verified CONCH embeddings**. The clean development baseline, **192 connected-fragment S1 trials** and **64 calibration piece counterfactuals** are executed. All 192 oracle recoveries pass. Genuine annotated cancer can also be decisive, so no foreignness or calibrated-alert claim follows. The 24 final-test slides remain unscored. [Current results, charts and remaining gates](reports/panda_s1_and_piece_results_20261020.md).
+
 Floater Finder now targets a CONCH-only **prostate-biopsy fragment-dependence safety check**: identify pieces whose exclusion changes a supplied slide scorer's decision, while preserving all tissue and the original prediction. The immediate target is benign-versus-cancer S1. A decisive piece may be genuine small cancer; this check does not establish foreign tissue.
 
 The new PANDA adapter adds bounded pyramid-region tiling, physical coordinates and native-mask label fractions, plus CPU/GPU smoke drafts that reuse the existing CONCH encoder. The user has now verified a PANDA pilot at `/work/nvme/bfqi/mhoda/panda/`, outside the roots of the earlier negative name search. [Implementation status and next command](reports/panda_implementation_status.md) distinguish tested local fixtures from the unexecuted real Delta run. [Artifact audit and scientific gates](docs/panda_integration.md) remain available. Real cancer scoring and unmodified-slide alert rates have not been evaluated.

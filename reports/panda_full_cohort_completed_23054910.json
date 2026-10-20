@@ -1,0 +1,59 @@
+{
+  "gpu_job": {
+    "id": "23054910",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 1306,
+    "gpu_hours": 0.36277777777777775,
+    "node": "gpua018",
+    "new_slides": 117,
+    "new_embeddings": 49785,
+    "peak_task_rss_kib": 5941960,
+    "slurm_tres_usage_in_max_gpu_memory": "5508M",
+    "slurm_tres_usage_in_max_gpu_util": 44
+  },
+  "cpu_job": {
+    "id": "23055022",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 184,
+    "node": "cn005",
+    "verification_seconds": 170,
+    "baseline_seconds": 4,
+    "verification_peak_rss_kib": 3365284
+  },
+  "verified_slides": 120,
+  "verified_embeddings": 50729,
+  "reused_slides": 3,
+  "reused_embeddings": 944,
+  "dimensions": 512,
+  "clinical_validity_verified": false,
+  "test_slides_scored": false,
+  "independent_local_metadata_checks": "All per-slide job counts, unique cohort IDs, all 480 prediction rows, 12 confusion matrices/denominators/error lists and all test exclusions independently checked against original manifest.",
+  "retrieval": {
+    "verification.json": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+      "sha256": "cef3c1b232ed4b12d767ce2e4d86e62f8f5bd4a1010f0b6a72760e33317cf4d0"
+    },
+    "metrics.json": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-baselines/dev-zero-shot-v1-23054910/metrics.json",
+      "sha256": "f5056abe450cefa610da25cb668cf863236fba639e6c4591ee71ced9ddfd27a9"
+    },
+    "predictions.json": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-baselines/dev-zero-shot-v1-23054910/predictions.json",
+      "sha256": "22f56294c9d08550913ce42a5059aa32987276120c51edb2b6164dae6deeabae"
+    },
+    "gpu.out": {
+      "path": "/work/nvme/bfqi/mhoda/panda-cohort-encode-23054910.out",
+      "sha256": "ca2a07a6c475813008426fda346c227fd9e466d41f46d6aa97c664370c353ede"
+    },
+    "cpu.out": {
+      "path": "/work/nvme/bfqi/mhoda/panda-verify-dev-23055022.out",
+      "sha256": "46a7a5dd8f36602bc67146a767d1ecef549b8d97bf6cb7ddef184c614349a6c0"
+    }
+  },
+  "allocation_snapshot_rounded_hours": {
+    "cpu": 5524,
+    "gpu": 8
+  }
+}

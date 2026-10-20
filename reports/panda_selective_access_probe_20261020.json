@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "probes": [
+    {
+      "file_name": "train_images/9b9b11aa65e492ece39e3fde93a89d82.tiff",
+      "http_status": 200,
+      "content_length": "7348923",
+      "content_type": "application/zip",
+      "body_consumed": false,
+      "file_saved": false
+    },
+    {
+      "file_name": "train_label_masks/9b9b11aa65e492ece39e3fde93a89d82_mask.tiff",
+      "http_status": 200,
+      "content_length": "644806",
+      "content_type": "image/tiff",
+      "body_consumed": false,
+      "file_saved": false
+    }
+  ],
+  "scope": "streamed response headers only; no body read and no TIFF/ZIP saved"
+}

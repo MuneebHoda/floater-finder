@@ -1,0 +1,52 @@
+{
+  "job_id": "23065744",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 11,
+  "node": "cn095",
+  "task_seconds": 3,
+  "peak_task_rss_kib": 149656,
+  "unmodified_slides": 24,
+  "evaluable_slides": 18,
+  "unevaluable_slides": 6,
+  "decisive_unmodified_slides": 7,
+  "synthetic_mixtures": 40,
+  "mixtures_with_decisive_pure_foreign_component": 8,
+  "genuine_annotated_cancer_removal_changes_cancer_to_benign_cases": 2,
+  "examples": {
+    "genuine_cancer": {
+      "file": "03849b0243900d79446bb27849dc0bb2-unmodified.json",
+      "slide_id": "03849b0243900d79446bb27849dc0bb2",
+      "kind": "unmodified",
+      "original_isup_grade": 1,
+      "requested_percent": null,
+      "baseline_prediction": "cancer",
+      "pieces": 2,
+      "evaluable_pieces": 2,
+      "decisive_pieces": 1,
+      "any_decisive": true,
+      "decisive_pure_foreign_components": 0,
+      "decisive_host_components": 1,
+      "decisive_annotated_cancer_components": 1
+    },
+    "synthetic_foreign": {
+      "file": "da15226ed2a9ca5a83e831a9c57f5380-p0p5.json",
+      "slide_id": "da15226ed2a9ca5a83e831a9c57f5380",
+      "kind": "synthetic_mixture",
+      "original_isup_grade": 0,
+      "requested_percent": 0.5,
+      "baseline_prediction": "cancer",
+      "pieces": 4,
+      "evaluable_pieces": 4,
+      "decisive_pieces": 1,
+      "any_decisive": true,
+      "decisive_pure_foreign_components": 1,
+      "decisive_host_components": 0,
+      "decisive_annotated_cancer_components": 0
+    }
+  },
+  "test_slides_scored": false,
+  "clinical_validity_verified": false,
+  "review_alert_rate": null,
+  "independent_metadata_checks": "All 64 outputs checked for full index partitions, physical areas, counterfactual empty-case handling, raw-score argmax and label-change consistency. All 40 pure foreign components exactly reproduce saved clean binary scores on exclusion."
+}

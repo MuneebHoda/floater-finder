@@ -1,0 +1,12 @@
+{
+  "source_kind": "real",
+  "test_slides_scored": false,
+  "plot_source_sha256": "ccd54361c967c41d3d7e208729fd3762bd9f0449a901254a29c9701db7c24443",
+  "inputs": {
+    "results/panda/piece_development_23065744/plot_inputs.json": "6ffa89ddba13fb8e7e9f010e3416391825db1edb58158b40ed7867c3fbd7d033",
+    "reports/panda_piece_completed_23065744.json": "86ed37c61d8b005f8f8a9a6ad0daa6733302956b85dec81d65c326a59341d955",
+    "reports/panda_s1_trials_23065666.json": "e8b1d24fe2b77465dae2bc6d79fabd66de221c8cdd3932a1070bea537cf54c84",
+    "reports/panda_piece_genuine_cancer_example_23065744.json": "1cce2400d283ad1dcc12bcee7d11b5e2b5fb825774f59644f759f8023a7c0c93",
+    "reports/panda_piece_synthetic_foreign_example_23065744.json": "eff208238e930c8204421cb1d77d3a91f56cb14360cc27c8cf27debc1d93c886"
+  }
+}

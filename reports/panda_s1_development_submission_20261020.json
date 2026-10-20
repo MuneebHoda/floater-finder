@@ -1,0 +1,20 @@
+{
+  "status": "submitted; results pending",
+  "job_id": "23065666",
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-s1-dev-20261020-v1/source/scripts/slurm/panda_s1_development.sbatch /u/mhoda/floater-finder/releases/panda-s1-dev-20261020-v1/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020",
+  "submitted_utc": "2026-10-20T23:26:29.215904+00:00",
+  "source": "/u/mhoda/floater-finder/releases/panda-s1-dev-20261020-v1/source",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020",
+  "resources": {
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu-interactive",
+    "cpus": 2,
+    "host_memory_gb": 4,
+    "wall_minutes": 10,
+    "gpus": 0
+  },
+  "scope": "Requested Phase 6 bounded development-only S1 engineering; existing saved embeddings only, no GPU or downloads, no final-test scoring, no detector/clinical claims",
+  "software_tests_passed": 176,
+  "protocol_sha256": "59053624eb93e3e34065d27a0ed20849bbd8425dc1ee4752784f6ac485e030ff"
+}

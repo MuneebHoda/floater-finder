@@ -44,12 +44,15 @@ def _resolve_tiff(directory, stems, required):
     return matches[0] if matches else None
 
 
-def panda_input(root, image_id):
-    """Resolve only the selected pilot biopsy; train.csv remains label authority."""
+def panda_input(root, image_id, manifest_path=None, mask_exclusion=None):
+    """Resolve selected biopsies; train.csv remains the original label authority."""
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,128}", image_id):
         raise ValueError("Unsafe image_id")
     root = Path(root).resolve()
-    pilot = _csv_row(root / "pilot.csv", image_id, limit=100)
+    manifest = Path(manifest_path) if manifest_path is not None else root / "pilot.csv"
+    pilot = _csv_row(manifest, image_id, limit=20000)
+    if pilot.get("split") and pilot["split"] not in {"train", "calibration", "test", "engineering"}:
+        raise ValueError("Unknown cohort split; expected train/calibration/test/engineering")
     label = _csv_row(root / "train.csv", image_id)
     if label.get("data_provider") != "radboud":
         raise ValueError("Only verified Radboud mask semantics are supported")
@@ -61,13 +64,25 @@ def panda_input(root, image_id):
         raise ValueError("Missing/invalid original slide-level labels")
     for key in ("data_provider", "isup_grade", "gleason_score"):
         if pilot.get(key) and pilot[key] != label[key]:
-            raise ValueError(f"pilot.csv disagrees with train.csv: {key}")
+            raise ValueError(f"Selection manifest disagrees with train.csv: {key}")
     image = _resolve_tiff(root / "train_images", [image_id], True)
     mask = _resolve_tiff(root / "train_label_masks", [image_id + "_mask", image_id], False)
+    original_mask, excluded = mask, None
+    if mask_exclusion is not None:
+        if (not isinstance(mask_exclusion, dict) or mask is None or
+                not isinstance(mask_exclusion.get("reason"), str) or not mask_exclusion["reason"].strip() or
+                not re.fullmatch(r"[0-9a-f]{64}", str(mask_exclusion.get("sha256", ""))) or
+                file_sha256(mask) != mask_exclusion["sha256"]):
+            raise ValueError("Mask exclusion requires a reason and the exact existing mask SHA256")
+        excluded = {**mask_exclusion, "path": str(mask), "bytes": mask.stat().st_size}
+        mask = None
     return {"image_id": image_id, "image_path": image, "mask_path": mask,
+            "original_mask_path": original_mask, "excluded_mask": excluded,
             "provider": "radboud", "isup_grade": grade, "gleason_score": label["gleason_score"],
             "train_csv_sha256": file_sha256(root / "train.csv"),
-            "pilot_csv_sha256": file_sha256(root / "pilot.csv")}
+            "pilot_csv_sha256": file_sha256(root / "pilot.csv"),
+            "selection_manifest": str(manifest.resolve()), "selection_manifest_sha256": file_sha256(manifest),
+            "cohort_split": pilot.get("split") or "engineering"}
 
 
 def _header(path):
@@ -181,24 +196,29 @@ def label_fractions(mask_region):
 
 def extract_panda_tiles(root, image_id, output, *, field_um=112., pixels=224, max_tiles=32,
                         max_candidates=4096, min_tissue_fraction=.1, recorded_mpp_xy=None,
-                        source_kind="real"):
-    """Outcome-blind row-major engineering subset; real extraction is Slurm-only."""
+                        source_kind="real", manifest_path=None, selection="row-major", seed=20261020,
+                        min_cancer_fraction=.01, mask_exclusion=None):
+    """Separate outcome-blind representative sampling from mask-guided donor sampling."""
     if not os.environ.get("SLURM_JOB_ID"):
         raise RuntimeError("PANDA WSI processing requires an authorized Slurm job")
     require_image_runtime()
     if (not np.isfinite(field_um) or not 0 < field_um <= 2000 or
             type(pixels) is not int or not 16 <= pixels <= 1024 or
-            type(max_tiles) is not int or not 1 <= max_tiles <= 128 or
-            type(max_candidates) is not int or not max_tiles <= max_candidates <= 20000 or
+            type(max_tiles) is not int or not 1 <= max_tiles <= 1024 or
+            type(max_candidates) is not int or not 1 <= max_candidates <= 20000 or
             not np.isfinite(min_tissue_fraction) or not 0 < min_tissue_fraction <= 1 or
-            source_kind not in {"fixture", "real"}):
+            source_kind not in {"fixture", "real"} or selection not in {"row-major", "representative", "donor"} or
+            type(seed) is not int or seed < 0 or not np.isfinite(min_cancer_fraction) or
+            not 0 < min_cancer_fraction <= 1):
         raise ValueError("Invalid/unbounded PANDA extraction settings")
     output = Path(output)
     if output.exists():
         raise FileExistsError("Choose a fresh output directory; previous results are preserved")
-    item = panda_input(root, image_id)
+    item = panda_input(root, image_id, manifest_path, mask_exclusion)
     rows, examined = [], 0
     with panda_readers(item["image_path"], item["mask_path"], recorded_mpp_xy) as (image, mask, provenance):
+        if item["excluded_mask"] is not None:
+            provenance["excluded_mask"] = item["excluded_mask"]
         mpp = np.array(provenance["measured_mpp_xy"])
         footprint = np.rint(field_um / mpp).astype(int)
         if np.any(footprint < 1) or np.prod(footprint) > 4_000_000:
@@ -208,10 +228,15 @@ def extract_panda_tiles(root, image_id, output, *, field_um=112., pixels=224, ma
         total = int(np.prod(grid))
         if total == 0:
             raise ValueError("No complete in-bounds tile footprints")
+        if selection != "row-major" and total > max_candidates:
+            raise ValueError("Full grid exceeds candidate bound; increase the explicit bound before representative/donor sampling")
+        if selection == "donor" and mask is None:
+            raise ValueError("Mask-guided donor selection requires a verified aligned mask")
         desired_downsample = float(min(footprint) / pixels)
         image_level = max(i for i, factor in enumerate(image.level_downsamples)
                           if factor <= max(1., desired_downsample))
         output.mkdir(parents=True, mode=0o700, exist_ok=False)
+        eligible = []
         for candidate in range(min(total, max_candidates)):
             examined += 1
             cell = np.array([candidate % grid[0], candidate // grid[0]], dtype=int)
@@ -220,6 +245,24 @@ def extract_panda_tiles(root, image_id, output, *, field_um=112., pixels=224, ma
             tissue_fraction = float(((preview.min(axis=2) < 220) & (np.ptp(preview, axis=2) > 10)).mean())
             if tissue_fraction < min_tissue_fraction:
                 continue
+            if selection == "donor":
+                labels = label_fractions(mask.read_region(tuple(origin), 0, tuple(footprint)))
+                cancer = labels["gleason4_fraction"] + labels["gleason5_fraction"]
+                if cancer < min_cancer_fraction:
+                    continue
+            eligible.append((candidate, tissue_fraction))
+            if selection == "row-major" and len(eligible) == max_tiles:
+                break
+        eligible_count = len(eligible)
+        if selection == "representative" and len(eligible) > max_tiles:
+            rng = np.random.default_rng(seed)
+            indices = sorted(rng.choice(len(eligible), max_tiles, replace=False).tolist())
+            eligible = [eligible[i] for i in indices]
+        else:
+            eligible = eligible[:max_tiles]
+        for candidate, tissue_fraction in eligible:
+            cell = np.array([candidate % grid[0], candidate // grid[0]], dtype=int)
+            origin = cell * footprint
             tile_id = f"{image_id}-x{cell[0]}-y{cell[1]}"
             tile = _rgb_region(image, origin, footprint, image_level, pixels)
             tile.save(output / (tile_id + ".png"))
@@ -234,11 +277,11 @@ def extract_panda_tiles(root, image_id, output, *, field_um=112., pixels=224, ma
                    "area_mm2": float(np.prod(field) / 1e6), "tissue_fraction": tissue_fraction,
                    "mask_available": mask is not None, **fractions}
             rows.append(row)
-            if len(rows) == max_tiles:
-                break
         metadata = {"slide_id": image_id, "image_id": image_id, "patient_id": "unknown",
             "patient_id_known": False, "project": "PANDA", "organ": "prostate", "source_kind": source_kind,
-            "split": "dev", "split_provenance": "engineering smoke only; no patient-separated evaluation",
+            "split": "eval" if item["cohort_split"] == "test" else "dev",
+            "split_provenance": "selection manifest; patient-level independence unverified",
+            "cohort_split": item["cohort_split"],
             "data_provider": item["provider"], "isup_grade": item["isup_grade"], "gleason_score": item["gleason_score"],
             "label_scope": "ISUP/Gleason score are slide-level only; tile fractions come only from masks",
             "coordinate_units": "microns", "coordinate_reference": "tile_top_left",
@@ -247,11 +290,19 @@ def extract_panda_tiles(root, image_id, output, *, field_um=112., pixels=224, ma
             "measured_mpp_xy": mpp.tolist(),
             "footprint_level0_pixels_xy": footprint.tolist(), "export_pixels": pixels,
             "panda": provenance, "train_csv_sha256": item["train_csv_sha256"], "pilot_csv_sha256": item["pilot_csv_sha256"],
+            "selection_manifest": item["selection_manifest"], "selection_manifest_sha256": item["selection_manifest_sha256"],
             "extraction": {"image_level": image_level, "preview_level": image.level_count - 1,
                 "mask_level": 0 if mask is not None else None, "max_tiles": max_tiles,
                 "max_candidates": max_candidates, "candidates_examined": examined, "total_grid_cells": total,
-                "min_tissue_fraction": min_tissue_fraction, "selection": "row-major RGB tissue screen; no mask/grade enrichment",
-                "subset_only": examined < total, "complete_piece_topology_verified": False,
+                "min_tissue_fraction": min_tissue_fraction, "selection": selection,
+                "sampling_mode": selection, "seed": seed, "eligible_tissue_cells": eligible_count,
+                "selection_uses_mask": selection == "donor", "clean_evaluation_eligible": selection == "representative",
+                "selection_description": {"row-major": "first RGB-positive cells; engineering only",
+                    "representative": "uniform seeded sample without replacement from the complete RGB tissue grid",
+                    "donor": "GP4/5 mask-enriched RGB tissue; donor construction only"}[selection],
+                "min_gp45_fraction": min_cancer_fraction if selection == "donor" else None,
+                "sampled_tissue_grid_fraction": len(rows) / eligible_count if eligible_count else 0,
+                "subset_only": examined < total or len(rows) < eligible_count, "complete_piece_topology_verified": False,
                 "partial_edge_tiles_excluded": True, "tile_labels_csv": "tiles.csv"},
             "runtime": {name: importlib.metadata.version(name) for name in ("Pillow", "openslide-python", "tifffile")}}
         write_json(output / "metadata.json", metadata)

@@ -1,0 +1,6242 @@
+[
+  {
+    "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.2383989840745926,
+      "cancer": 0.23272442817687988
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.40870779752731323,
+      "cancer": 0.4052317142486572
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.36469897627830505,
+      "cancer": 0.35211095213890076
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b9b11aa65e492ece39e3fde93a89d82",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.21341878175735474,
+      "cancer": 0.23336772620677948
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b9b11aa65e492ece39e3fde93a89d82",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.46706169843673706,
+      "cancer": 0.496017724275589
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b9b11aa65e492ece39e3fde93a89d82",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.41449645161628723,
+      "cancer": 0.4476082921028137
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "49db41e3293630f0b1a566d7c9a8f07e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.34781375527381897,
+      "cancer": 0.3396153450012207
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "49db41e3293630f0b1a566d7c9a8f07e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6865031123161316,
+      "cancer": 0.6875102519989014
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "49db41e3293630f0b1a566d7c9a8f07e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6609314680099487,
+      "cancer": 0.6524111032485962
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69f32b20f51e4166809a29e594764865",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.31296148896217346,
+      "cancer": 0.2959733307361603
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69f32b20f51e4166809a29e594764865",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6341817378997803,
+      "cancer": 0.6380689740180969
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69f32b20f51e4166809a29e594764865",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5251511931419373,
+      "cancer": 0.5298161506652832
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1f1440204eba45ff4f999795c7d52040",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4121425747871399,
+      "cancer": 0.3993338942527771
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1f1440204eba45ff4f999795c7d52040",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.711517333984375,
+      "cancer": 0.6898353099822998
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1f1440204eba45ff4f999795c7d52040",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6888856291770935,
+      "cancer": 0.6637222766876221
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "50a159e2f93214ad4ebb0ec9c5d428f7",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.47746965289115906,
+      "cancer": 0.46614158153533936
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "50a159e2f93214ad4ebb0ec9c5d428f7",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.701430082321167,
+      "cancer": 0.686933159828186
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "50a159e2f93214ad4ebb0ec9c5d428f7",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6856297850608826,
+      "cancer": 0.6749728918075562
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4a2aec11bc2def9644ba9756f888ec24",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4903958737850189,
+      "cancer": 0.4869854152202606
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4a2aec11bc2def9644ba9756f888ec24",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7118505835533142,
+      "cancer": 0.7169507741928101
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4a2aec11bc2def9644ba9756f888ec24",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6942250728607178,
+      "cancer": 0.6876980662345886
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "c6d41e8b7c2c101b9a927d4f403ec451",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4039772152900696,
+      "cancer": 0.3870277404785156
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "c6d41e8b7c2c101b9a927d4f403ec451",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.7031849026679993,
+      "cancer": 0.6914647221565247
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "c6d41e8b7c2c101b9a927d4f403ec451",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6897733211517334,
+      "cancer": 0.6719983220100403
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "df83132f9e6a7c8337e6cd91270f8f7d",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4727054834365845,
+      "cancer": 0.4652855694293976
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "df83132f9e6a7c8337e6cd91270f8f7d",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6976554989814758,
+      "cancer": 0.6932989358901978
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "df83132f9e6a7c8337e6cd91270f8f7d",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.677394688129425,
+      "cancer": 0.6702917218208313
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "c3fbbd442c89676b42a2f49ef7428b30",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.38558289408683777,
+      "cancer": 0.3881922960281372
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "c3fbbd442c89676b42a2f49ef7428b30",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6408443450927734,
+      "cancer": 0.6521927714347839
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "c3fbbd442c89676b42a2f49ef7428b30",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6199588179588318,
+      "cancer": 0.6232798099517822
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bec80e876b9ffa8f24cf85beaa431667",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3259280025959015,
+      "cancer": 0.326050341129303
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bec80e876b9ffa8f24cf85beaa431667",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6603302955627441,
+      "cancer": 0.6548143625259399
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bec80e876b9ffa8f24cf85beaa431667",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6243284940719604,
+      "cancer": 0.6102522015571594
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66fab9d13c7a0f1e81b77887bb8a535a",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3364013433456421,
+      "cancer": 0.34807509183883667
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66fab9d13c7a0f1e81b77887bb8a535a",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6021786332130432,
+      "cancer": 0.6612632870674133
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66fab9d13c7a0f1e81b77887bb8a535a",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5243726372718811,
+      "cancer": 0.5778470039367676
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0a97bd73cd153b33751d43821ff0a400",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.3586258292198181,
+      "cancer": 0.3530336618423462
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0a97bd73cd153b33751d43821ff0a400",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6215857267379761,
+      "cancer": 0.6596816778182983
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0a97bd73cd153b33751d43821ff0a400",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5404530167579651,
+      "cancer": 0.5699384808540344
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f88e932503d0e42467edb710bb8b9c46",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.41354435682296753,
+      "cancer": 0.41493022441864014
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f88e932503d0e42467edb710bb8b9c46",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.679032027721405,
+      "cancer": 0.6546316742897034
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f88e932503d0e42467edb710bb8b9c46",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6537840962409973,
+      "cancer": 0.6384514570236206
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66f5cc9041b6485114cf9555c31e908d",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.5183701515197754,
+      "cancer": 0.5082772374153137
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66f5cc9041b6485114cf9555c31e908d",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.7043569684028625,
+      "cancer": 0.7006266117095947
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66f5cc9041b6485114cf9555c31e908d",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6885407567024231,
+      "cancer": 0.6770111322402954
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a2fb69954b14fe15857b0f54515fc745",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.32880252599716187,
+      "cancer": 0.32615673542022705
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a2fb69954b14fe15857b0f54515fc745",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6941015124320984,
+      "cancer": 0.6699793934822083
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a2fb69954b14fe15857b0f54515fc745",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6381035447120667,
+      "cancer": 0.6250091195106506
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "42cb627feeceb770537e6c322c763dbf",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.34430497884750366,
+      "cancer": 0.3435623049736023
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "42cb627feeceb770537e6c322c763dbf",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.507131814956665,
+      "cancer": 0.5402604937553406
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "42cb627feeceb770537e6c322c763dbf",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.47637733817100525,
+      "cancer": 0.5074620842933655
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "291b2132e1fb9131478b8d691406874b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4064970910549164,
+      "cancer": 0.4055534601211548
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "291b2132e1fb9131478b8d691406874b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6969349980354309,
+      "cancer": 0.6977031230926514
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "291b2132e1fb9131478b8d691406874b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6828165650367737,
+      "cancer": 0.6708813309669495
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f0bb29042dfb17421aac02138f8e9d20",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.3350512385368347,
+      "cancer": 0.3066604733467102
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f0bb29042dfb17421aac02138f8e9d20",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6887580752372742,
+      "cancer": 0.6904375553131104
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f0bb29042dfb17421aac02138f8e9d20",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6648454666137695,
+      "cancer": 0.6467939019203186
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9f8dfe7b06ca41af4fa89f7deaf3b050",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.33322426676750183,
+      "cancer": 0.33008110523223877
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9f8dfe7b06ca41af4fa89f7deaf3b050",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6270257830619812,
+      "cancer": 0.6279261112213135
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9f8dfe7b06ca41af4fa89f7deaf3b050",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.5775904059410095,
+      "cancer": 0.575416088104248
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "756d99387536d5721fcf4cf590627179",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4538171589374542,
+      "cancer": 0.4492236375808716
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "756d99387536d5721fcf4cf590627179",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6822598576545715,
+      "cancer": 0.6834306716918945
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "756d99387536d5721fcf4cf590627179",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6613254547119141,
+      "cancer": 0.6606820225715637
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "87edb3eb0b79782b9b7eec15dc294872",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3448824882507324,
+      "cancer": 0.3467988073825836
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "87edb3eb0b79782b9b7eec15dc294872",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.681455135345459,
+      "cancer": 0.6904730796813965
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "87edb3eb0b79782b9b7eec15dc294872",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6623036861419678,
+      "cancer": 0.6539616584777832
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e005bc3ecd718b268588742a9e86d6f8",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3874877095222473,
+      "cancer": 0.3914835453033447
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e005bc3ecd718b268588742a9e86d6f8",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.665503203868866,
+      "cancer": 0.6719868779182434
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e005bc3ecd718b268588742a9e86d6f8",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6454496383666992,
+      "cancer": 0.6459348201751709
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "29fe9e445bbf0c9d84aec6799cbba4a5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4015515446662903,
+      "cancer": 0.4128236472606659
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "29fe9e445bbf0c9d84aec6799cbba4a5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6734112501144409,
+      "cancer": 0.6671899557113647
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "29fe9e445bbf0c9d84aec6799cbba4a5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.624057948589325,
+      "cancer": 0.623557984828949
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e5739e452d5b7c5e68c4171ece2557e3",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.43918484449386597,
+      "cancer": 0.4423410892486572
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e5739e452d5b7c5e68c4171ece2557e3",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6932637095451355,
+      "cancer": 0.6973696351051331
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e5739e452d5b7c5e68c4171ece2557e3",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6745929718017578,
+      "cancer": 0.6701031923294067
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "96415990a25ee1d758a8bc7ae97d593f",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4284900724887848,
+      "cancer": 0.43665632605552673
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "96415990a25ee1d758a8bc7ae97d593f",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6852964162826538,
+      "cancer": 0.6995947360992432
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "96415990a25ee1d758a8bc7ae97d593f",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6777830719947815,
+      "cancer": 0.669069230556488
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0e4a4827c5ce9d7cc92f05e25674b71",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.502365231513977,
+      "cancer": 0.4979734718799591
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0e4a4827c5ce9d7cc92f05e25674b71",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.7018414735794067,
+      "cancer": 0.6798977255821228
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0e4a4827c5ce9d7cc92f05e25674b71",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6754875183105469,
+      "cancer": 0.6681498289108276
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66557aa92abab5f0eaa6a7c03d17bff1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.29678821563720703,
+      "cancer": 0.29105818271636963
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66557aa92abab5f0eaa6a7c03d17bff1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6563488841056824,
+      "cancer": 0.6427598595619202
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "66557aa92abab5f0eaa6a7c03d17bff1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6182360053062439,
+      "cancer": 0.5933147072792053
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f746e9703e48b20b6c64c1b9dce29d8a",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4464455842971802,
+      "cancer": 0.4223446846008301
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f746e9703e48b20b6c64c1b9dce29d8a",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.7141934037208557,
+      "cancer": 0.6932143568992615
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "f746e9703e48b20b6c64c1b9dce29d8a",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6973230838775635,
+      "cancer": 0.66599440574646
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a213e4e689988738b8fb764e958ca497",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.24633806943893433,
+      "cancer": 0.25736144185066223
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a213e4e689988738b8fb764e958ca497",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4436362087726593,
+      "cancer": 0.487665593624115
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a213e4e689988738b8fb764e958ca497",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4072170853614807,
+      "cancer": 0.44393348693847656
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d383a65adb84e2f3032f0c68246224eb",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4528401494026184,
+      "cancer": 0.452116996049881
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d383a65adb84e2f3032f0c68246224eb",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6909396052360535,
+      "cancer": 0.7185647487640381
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d383a65adb84e2f3032f0c68246224eb",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6734328866004944,
+      "cancer": 0.693652868270874
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "da15226ed2a9ca5a83e831a9c57f5380",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3967489004135132,
+      "cancer": 0.39743226766586304
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "da15226ed2a9ca5a83e831a9c57f5380",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6729841828346252,
+      "cancer": 0.6782695651054382
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "da15226ed2a9ca5a83e831a9c57f5380",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6532511711120605,
+      "cancer": 0.650747537612915
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.37314775586128235,
+      "cancer": 0.4036503732204437
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6550201773643494,
+      "cancer": 0.7079629302024841
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6233813166618347,
+      "cancer": 0.6762142181396484
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.22937840223312378,
+      "high_grade": 0.2109726220369339
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5862652063369751,
+      "high_grade": 0.5917023420333862
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5360721945762634,
+      "high_grade": 0.5463599562644958
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4456886649131775,
+      "cancer": 0.4665580093860626
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6768952012062073,
+      "cancer": 0.711265504360199
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6545372009277344,
+      "cancer": 0.6846967935562134
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2859690189361572,
+      "high_grade": 0.25721877813339233
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6101987957954407,
+      "high_grade": 0.6048067212104797
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5834428071975708,
+      "high_grade": 0.5785624980926514
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4253289997577667,
+      "cancer": 0.41976290941238403
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.703850507736206,
+      "cancer": 0.7246870994567871
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6807733774185181,
+      "cancer": 0.7036641240119934
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2676140069961548,
+      "high_grade": 0.24444273114204407
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6408101916313171,
+      "high_grade": 0.6559323668479919
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.612934947013855,
+      "high_grade": 0.6206148862838745
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.40982145071029663,
+      "cancer": 0.4242900311946869
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6842671632766724,
+      "cancer": 0.7045382261276245
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6482738256454468,
+      "cancer": 0.6749325394630432
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2267618626356125,
+      "high_grade": 0.2139725238084793
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6164017915725708,
+      "high_grade": 0.6430374383926392
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5430702567100525,
+      "high_grade": 0.5574938654899597
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3682650029659271,
+      "cancer": 0.3837388753890991
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.689625084400177,
+      "cancer": 0.7057480216026306
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6548793911933899,
+      "cancer": 0.6851771473884583
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.22299917042255402,
+      "high_grade": 0.20550280809402466
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5799980163574219,
+      "high_grade": 0.5953253507614136
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5611812472343445,
+      "high_grade": 0.5689418911933899
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.46877798438072205,
+      "cancer": 0.47030335664749146
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7081992626190186,
+      "cancer": 0.7183782458305359
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6916772127151489,
+      "cancer": 0.7012745141983032
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.3214273452758789,
+      "high_grade": 0.2925975024700165
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6298156976699829,
+      "high_grade": 0.601665735244751
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.590610146522522,
+      "high_grade": 0.5675827264785767
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.44453921914100647,
+      "cancer": 0.4446656107902527
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6916468143463135,
+      "cancer": 0.7103997468948364
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6646557450294495,
+      "cancer": 0.6856661438941956
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.34330058097839355,
+      "high_grade": 0.32107335329055786
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6480990648269653,
+      "high_grade": 0.6380311846733093
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6143398880958557,
+      "high_grade": 0.6064968705177307
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4148359000682831,
+      "cancer": 0.3961988687515259
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.701431930065155,
+      "cancer": 0.7151171565055847
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6851565837860107,
+      "cancer": 0.6906457543373108
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.21877485513687134,
+      "high_grade": 0.19439226388931274
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6250853538513184,
+      "high_grade": 0.6076993346214294
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5745874047279358,
+      "high_grade": 0.5681818723678589
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.42104828357696533,
+      "cancer": 0.4452399015426636
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6568716168403625,
+      "cancer": 0.6646713614463806
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6332483291625977,
+      "cancer": 0.6453395485877991
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2981376647949219,
+      "high_grade": 0.26973146200180054
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5651601552963257,
+      "high_grade": 0.5701990723609924
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5225465893745422,
+      "high_grade": 0.5360721945762634
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5102569460868835,
+      "cancer": 0.5346451997756958
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6868316531181335,
+      "cancer": 0.7304661273956299
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6719226241111755,
+      "cancer": 0.7046568393707275
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.37653741240501404,
+      "high_grade": 0.37151801586151123
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.612267792224884,
+      "high_grade": 0.6458203792572021
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5820696353912354,
+      "high_grade": 0.6074656248092651
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5315277576446533,
+      "cancer": 0.5680965185165405
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7149925231933594,
+      "cancer": 0.757045328617096
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6954325437545776,
+      "cancer": 0.7350419759750366
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.38832077383995056,
+      "high_grade": 0.3895760774612427
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6037793159484863,
+      "high_grade": 0.654468834400177
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5925977230072021,
+      "high_grade": 0.6319526433944702
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.55177241563797,
+      "cancer": 0.5847520232200623
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.707287609577179,
+      "cancer": 0.7500054836273193
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6921035051345825,
+      "cancer": 0.7352729439735413
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.40042802691459656,
+      "high_grade": 0.3980129063129425
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5987669825553894,
+      "high_grade": 0.6441722512245178
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5809289216995239,
+      "high_grade": 0.6242959499359131
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.417232871055603,
+      "cancer": 0.430323988199234
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7159653902053833,
+      "cancer": 0.7405102252960205
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6795536279678345,
+      "cancer": 0.7103170156478882
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.26899588108062744,
+      "high_grade": 0.24239686131477356
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6129240989685059,
+      "high_grade": 0.6359214782714844
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5875641703605652,
+      "high_grade": 0.607912540435791
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.4160025119781494,
+      "cancer": 0.407542884349823
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6920611262321472,
+      "cancer": 0.7127323746681213
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6739878058433533,
+      "cancer": 0.6947926878929138
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.26003092527389526,
+      "high_grade": 0.24356117844581604
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5940255522727966,
+      "high_grade": 0.6221842169761658
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.566885769367218,
+      "high_grade": 0.5689796209335327
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.47369760274887085,
+      "cancer": 0.48235052824020386
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.698499858379364,
+      "cancer": 0.7195947766304016
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6824712157249451,
+      "cancer": 0.6955617666244507
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.31528565287590027,
+      "high_grade": 0.29934191703796387
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5921863913536072,
+      "high_grade": 0.6038897633552551
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5675475597381592,
+      "high_grade": 0.5774924755096436
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.3998747169971466,
+      "cancer": 0.37930041551589966
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6896424889564514,
+      "cancer": 0.7084682583808899
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6652988195419312,
+      "cancer": 0.6740729212760925
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.21586981415748596,
+      "high_grade": 0.19359567761421204
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5410549640655518,
+      "high_grade": 0.559648334980011
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5139400959014893,
+      "high_grade": 0.518698513507843
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3295459747314453,
+      "cancer": 0.3486187756061554
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6538476347923279,
+      "cancer": 0.7247229814529419
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6156688928604126,
+      "cancer": 0.6913077235221863
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.18229635059833527,
+      "high_grade": 0.15623749792575836
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5896813869476318,
+      "high_grade": 0.6068676114082336
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5507920980453491,
+      "high_grade": 0.564083993434906
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.2386617809534073,
+      "cancer": 0.23633407056331635
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.36254432797431946,
+      "cancer": 0.35193100571632385
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.35075926780700684,
+      "cancer": 0.3400708734989166
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.09476890414953232,
+      "high_grade": 0.07427361607551575
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.1909211426973343,
+      "high_grade": 0.18571239709854126
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.1849593222141266,
+      "high_grade": 0.17111630737781525
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.44716978073120117,
+      "cancer": 0.4283513128757477
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.707845151424408,
+      "cancer": 0.6820793151855469
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6900615096092224,
+      "cancer": 0.6606215834617615
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.25917428731918335,
+      "high_grade": 0.2425946444272995
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5448349118232727,
+      "high_grade": 0.5332158207893372
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5068249106407166,
+      "high_grade": 0.4944348633289337
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.40466225147247314,
+      "cancer": 0.42886796593666077
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6645026803016663,
+      "cancer": 0.7010592818260193
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6432939767837524,
+      "cancer": 0.6779983043670654
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2537291944026947,
+      "high_grade": 0.2304556667804718
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.600349485874176,
+      "high_grade": 0.6133354902267456
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5715155601501465,
+      "high_grade": 0.5720068216323853
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3691132664680481,
+      "cancer": 0.3733254075050354
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.674017071723938,
+      "cancer": 0.6830134987831116
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6497524976730347,
+      "cancer": 0.6465854048728943
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2013341784477234,
+      "high_grade": 0.17336487770080566
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.49562206864356995,
+      "high_grade": 0.5153164863586426
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.45847976207733154,
+      "high_grade": 0.46974214911460876
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.49218010902404785,
+      "cancer": 0.5160677433013916
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7012984156608582,
+      "cancer": 0.738369882106781
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.67447429895401,
+      "cancer": 0.7210626006126404
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.35634833574295044,
+      "high_grade": 0.3432188332080841
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6431106328964233,
+      "high_grade": 0.6583115458488464
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6212737560272217,
+      "high_grade": 0.6370636820793152
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.44947612285614014,
+      "cancer": 0.47027963399887085
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6877267956733704,
+      "cancer": 0.7389793992042542
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6671096086502075,
+      "cancer": 0.7133620381355286
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.30164721608161926,
+      "high_grade": 0.28363507986068726
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6213364601135254,
+      "high_grade": 0.6215337514877319
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5871884822845459,
+      "high_grade": 0.593908429145813
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.21931980550289154,
+      "cancer": 0.19398453831672668
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.598431408405304,
+      "cancer": 0.5945726037025452
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4788702130317688,
+      "cancer": 0.49763044714927673
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.06691931188106537,
+      "high_grade": 0.021915990859270096
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4742928445339203,
+      "high_grade": 0.47587132453918457
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.36865341663360596,
+      "high_grade": 0.3406071066856384
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.47827351093292236,
+      "cancer": 0.5183062553405762
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6884870529174805,
+      "cancer": 0.7201528549194336
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.667225182056427,
+      "cancer": 0.7113226652145386
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.3878425359725952,
+      "high_grade": 0.3461316227912903
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6321389079093933,
+      "high_grade": 0.6334471106529236
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6110115051269531,
+      "high_grade": 0.6127957701683044
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4041191637516022,
+      "cancer": 0.437527596950531
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6723424196243286,
+      "cancer": 0.7194199562072754
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6439428925514221,
+      "cancer": 0.6966798305511475
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2695827782154083,
+      "high_grade": 0.26284629106521606
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5803473591804504,
+      "high_grade": 0.5871067643165588
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5494920015335083,
+      "high_grade": 0.5621206164360046
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.41664379835128784,
+      "cancer": 0.41174304485321045
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6960669755935669,
+      "cancer": 0.6832231283187866
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6728817820549011,
+      "cancer": 0.6601410508155823
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2614772319793701,
+      "high_grade": 0.2350996881723404
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5554109811782837,
+      "high_grade": 0.5401861071586609
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5275412201881409,
+      "high_grade": 0.5116328597068787
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5347974300384521,
+      "cancer": 0.5915498733520508
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7057876586914062,
+      "cancer": 0.7581768035888672
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6864806413650513,
+      "cancer": 0.7438840866088867
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4199371337890625,
+      "high_grade": 0.4233868420124054
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6318286657333374,
+      "high_grade": 0.6635720133781433
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6193955540657043,
+      "high_grade": 0.6535083055496216
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.3767951726913452,
+      "cancer": 0.36539655923843384
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7097130417823792,
+      "cancer": 0.7124235033988953
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6715240478515625,
+      "cancer": 0.6792222261428833
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.21673473715782166,
+      "high_grade": 0.17393799126148224
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5718019604682922,
+      "high_grade": 0.5604477524757385
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5128596425056458,
+      "high_grade": 0.4966002106666565
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.3994012475013733,
+      "cancer": 0.386260449886322
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6880268454551697,
+      "cancer": 0.6863316893577576
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6616886854171753,
+      "cancer": 0.6578248143196106
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2665298581123352,
+      "high_grade": 0.25907182693481445
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5993465781211853,
+      "high_grade": 0.6209397912025452
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5462098717689514,
+      "high_grade": 0.5481180548667908
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.25877705216407776,
+      "cancer": 0.25415122509002686
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6736562848091125,
+      "cancer": 0.6939800381660461
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6295639872550964,
+      "cancer": 0.6463409662246704
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.10871550440788269,
+      "high_grade": 0.06525792926549911
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5852876305580139,
+      "high_grade": 0.5960877537727356
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5170220732688904,
+      "high_grade": 0.5088972449302673
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.459448903799057,
+      "cancer": 0.48775359988212585
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.687264621257782,
+      "cancer": 0.752087414264679
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6658403873443604,
+      "cancer": 0.7275013327598572
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.3248422145843506,
+      "high_grade": 0.2953975796699524
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6307087540626526,
+      "high_grade": 0.6228188872337341
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "low_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5936728715896606,
+      "high_grade": 0.5854151844978333
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.20981186628341675,
+      "cancer": 0.220068097114563
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.39221838116645813,
+      "cancer": 0.3823004364967346
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.36335620284080505,
+      "cancer": 0.3557005226612091
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.08838611841201782,
+      "high_grade": 0.0301356241106987
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.27346357703208923,
+      "high_grade": 0.22719652950763702
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.24647001922130585,
+      "high_grade": 0.19492661952972412
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.49790841341018677,
+      "cancer": 0.5755071640014648
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6820583939552307,
+      "cancer": 0.7421496510505676
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6629533171653748,
+      "cancer": 0.7262552976608276
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4318866729736328,
+      "high_grade": 0.44754815101623535
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6465447545051575,
+      "high_grade": 0.6860257983207703
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6293531656265259,
+      "high_grade": 0.6682338714599609
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.42243173718452454,
+      "cancer": 0.5208660960197449
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6465864181518555,
+      "cancer": 0.7297789454460144
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5935819745063782,
+      "cancer": 0.7113066911697388
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.40353137254714966,
+      "high_grade": 0.41914886236190796
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6557059288024902,
+      "high_grade": 0.7034594416618347
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6395829319953918,
+      "high_grade": 0.6842767000198364
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4713538885116577,
+      "cancer": 0.5778816342353821
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6797004342079163,
+      "cancer": 0.7391602993011475
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6446791291236877,
+      "cancer": 0.7266168594360352
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4088338017463684,
+      "high_grade": 0.4354822039604187
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6351779699325562,
+      "high_grade": 0.6679493188858032
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6270275712013245,
+      "high_grade": 0.6538469195365906
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4116241931915283,
+      "cancer": 0.4269166588783264
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6615911722183228,
+      "cancer": 0.7034767270088196
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.636444091796875,
+      "cancer": 0.6800132989883423
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.29407164454460144,
+      "high_grade": 0.2656254172325134
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6464732885360718,
+      "high_grade": 0.625401496887207
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6057136058807373,
+      "high_grade": 0.5874412059783936
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4627058207988739,
+      "cancer": 0.5316985249519348
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6882359981536865,
+      "cancer": 0.7272159457206726
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6628100275993347,
+      "cancer": 0.7147858738899231
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.3557090759277344,
+      "high_grade": 0.3712034821510315
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6258596181869507,
+      "high_grade": 0.645013153553009
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6016508936882019,
+      "high_grade": 0.6270965933799744
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.42671632766723633,
+      "cancer": 0.4647013247013092
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6696486473083496,
+      "cancer": 0.7229819893836975
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6555934548377991,
+      "cancer": 0.7054539322853088
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.34496060013771057,
+      "high_grade": 0.3385125696659088
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.660738468170166,
+      "high_grade": 0.6672160625457764
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6393996477127075,
+      "high_grade": 0.6464671492576599
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.39525556564331055,
+      "cancer": 0.4620954990386963
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6051976084709167,
+      "cancer": 0.7025952935218811
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5716831684112549,
+      "cancer": 0.6708406805992126
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.3649233877658844,
+      "high_grade": 0.36408355832099915
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6474149823188782,
+      "high_grade": 0.6721594929695129
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6160844564437866,
+      "high_grade": 0.6406884789466858
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.3329363167285919,
+      "cancer": 0.32584646344184875
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6068605780601501,
+      "cancer": 0.7028117775917053
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.549091637134552,
+      "cancer": 0.6343912482261658
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.1871194988489151,
+      "high_grade": 0.19229258596897125
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5750531554222107,
+      "high_grade": 0.6204701066017151
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5131615400314331,
+      "high_grade": 0.5659574866294861
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4238733947277069,
+      "cancer": 0.4971027076244354
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6396183371543884,
+      "cancer": 0.7218021750450134
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6206240653991699,
+      "cancer": 0.7017076015472412
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.34821709990501404,
+      "high_grade": 0.3556244373321533
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.625196099281311,
+      "high_grade": 0.6558051705360413
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6034988164901733,
+      "high_grade": 0.6291018128395081
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4410823583602905,
+      "cancer": 0.48521414399147034
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6831769943237305,
+      "cancer": 0.7354218363761902
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6599352359771729,
+      "cancer": 0.72080397605896
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.346577525138855,
+      "high_grade": 0.3387642800807953
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6722686886787415,
+      "high_grade": 0.7032243609428406
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6505225300788879,
+      "high_grade": 0.6793362498283386
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.39970558881759644,
+      "cancer": 0.42359989881515503
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6742432713508606,
+      "cancer": 0.7248263955116272
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6557677388191223,
+      "cancer": 0.6928667426109314
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2721472680568695,
+      "high_grade": 0.2583773136138916
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5801603198051453,
+      "high_grade": 0.6092902421951294
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5420764684677124,
+      "high_grade": 0.5574910640716553
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3368275463581085,
+      "cancer": 0.34998658299446106
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6346368789672852,
+      "cancer": 0.6932217478752136
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5867046117782593,
+      "cancer": 0.6635430455207825
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.23404669761657715,
+      "high_grade": 0.22867539525032043
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6404708623886108,
+      "high_grade": 0.6741286516189575
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.606675386428833,
+      "high_grade": 0.6483144164085388
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5125443339347839,
+      "cancer": 0.6017971634864807
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6899503469467163,
+      "cancer": 0.7598762512207031
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6647972464561462,
+      "cancer": 0.744572639465332
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4121093451976776,
+      "high_grade": 0.44436076283454895
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6360280513763428,
+      "high_grade": 0.6724069118499756
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6100582480430603,
+      "high_grade": 0.6579828858375549
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.33155596256256104,
+      "cancer": 0.4046928882598877
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6661951541900635,
+      "cancer": 0.6872048377990723
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6205298900604248,
+      "cancer": 0.6699990630149841
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.21544431149959564,
+      "high_grade": 0.2300596535205841
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6030253767967224,
+      "high_grade": 0.6247274279594421
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5362204313278198,
+      "high_grade": 0.5739213824272156
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.39853182435035706,
+      "cancer": 0.42062366008758545
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6928650736808777,
+      "cancer": 0.7391259074211121
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6647919416427612,
+      "cancer": 0.7183314561843872
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.2757103741168976,
+      "high_grade": 0.26703542470932007
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6481359601020813,
+      "high_grade": 0.6659371852874756
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.628067135810852,
+      "high_grade": 0.6438454985618591
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.46157342195510864,
+      "cancer": 0.5066527128219604
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7102906703948975,
+      "cancer": 0.7767483592033386
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6839993000030518,
+      "cancer": 0.7619411945343018
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.3484629988670349,
+      "high_grade": 0.3527628779411316
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6343226432800293,
+      "high_grade": 0.6970914006233215
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.608891487121582,
+      "high_grade": 0.6714684367179871
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.44017577171325684,
+      "cancer": 0.5137492418289185
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6504418849945068,
+      "cancer": 0.7161135673522949
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6202530264854431,
+      "cancer": 0.7020835876464844
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.3810517489910126,
+      "high_grade": 0.38813352584838867
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6454463601112366,
+      "high_grade": 0.6891928315162659
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6276565790176392,
+      "high_grade": 0.6694815158843994
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.39448028802871704,
+      "cancer": 0.4238514304161072
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5949596166610718,
+      "cancer": 0.7111560106277466
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5734071731567383,
+      "cancer": 0.6927330493927002
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.2735937535762787,
+      "high_grade": 0.27887335419654846
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6399291753768921,
+      "high_grade": 0.673077404499054
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5986994504928589,
+      "high_grade": 0.6476951837539673
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.45749881863594055,
+      "cancer": 0.48490819334983826
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.677963376045227,
+      "cancer": 0.7344099283218384
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6574289202690125,
+      "cancer": 0.7146512269973755
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.3125898838043213,
+      "high_grade": 0.2979137897491455
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6531446576118469,
+      "high_grade": 0.6658656597137451
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6313097476959229,
+      "high_grade": 0.640614926815033
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4334520399570465,
+      "cancer": 0.4823705554008484
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7000879645347595,
+      "cancer": 0.7500198483467102
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6824041604995728,
+      "cancer": 0.725213348865509
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.3196345269680023,
+      "high_grade": 0.315721333026886
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6437093615531921,
+      "high_grade": 0.6607667803764343
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.613423764705658,
+      "high_grade": 0.6198975443840027
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.23407498002052307,
+      "cancer": 0.30182337760925293
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4485703408718109,
+      "cancer": 0.5935360193252563
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.40341708064079285,
+      "cancer": 0.539719820022583
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.15639512240886688,
+      "high_grade": 0.1449907124042511
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.421552449464798,
+      "high_grade": 0.4714033603668213
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.35981056094169617,
+      "high_grade": 0.4203813970088959
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4639848470687866,
+      "cancer": 0.5713861584663391
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6184220314025879,
+      "cancer": 0.7359601855278015
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5839436650276184,
+      "cancer": 0.7089205980300903
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4711873531341553,
+      "high_grade": 0.4822104275226593
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6345621347427368,
+      "high_grade": 0.6585038900375366
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6237270832061768,
+      "high_grade": 0.6515733003616333
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.39253926277160645,
+      "cancer": 0.5193210244178772
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6257665753364563,
+      "cancer": 0.7281655669212341
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5991801023483276,
+      "cancer": 0.7027191519737244
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.3377656936645508,
+      "high_grade": 0.3806157112121582
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5693106651306152,
+      "high_grade": 0.6161784529685974
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5434132218360901,
+      "high_grade": 0.5964212417602539
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3634801506996155,
+      "cancer": 0.4853218197822571
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5948011875152588,
+      "cancer": 0.6995649933815002
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5531079769134521,
+      "cancer": 0.6757720708847046
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.38244444131851196,
+      "high_grade": 0.37396103143692017
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6339958310127258,
+      "high_grade": 0.650723934173584
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6132497191429138,
+      "high_grade": 0.6179719567298889
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4473375380039215,
+      "cancer": 0.5033966898918152
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6612752079963684,
+      "cancer": 0.7177082896232605
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6379141807556152,
+      "cancer": 0.7034732699394226
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.3487544655799866,
+      "high_grade": 0.3572133779525757
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6225388646125793,
+      "high_grade": 0.6524614095687866
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5965147018432617,
+      "high_grade": 0.6229845285415649
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.423484206199646,
+      "cancer": 0.560684323310852
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6106445789337158,
+      "cancer": 0.7314248085021973
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.5822510123252869,
+      "cancer": 0.7160650491714478
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4147816002368927,
+      "high_grade": 0.4574894905090332
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6630513072013855,
+      "high_grade": 0.7128598093986511
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.642535924911499,
+      "high_grade": 0.6946913599967957
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4104005694389343,
+      "cancer": 0.4309137165546417
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6407185196876526,
+      "cancer": 0.7145679593086243
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6209010481834412,
+      "cancer": 0.6972053050994873
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.3134429156780243,
+      "high_grade": 0.31002432107925415
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6531577110290527,
+      "high_grade": 0.6985647678375244
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.635630190372467,
+      "high_grade": 0.6756197214126587
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4206414222717285,
+      "cancer": 0.4887360632419586
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6763647198677063,
+      "cancer": 0.7497105598449707
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6437558531761169,
+      "cancer": 0.7296320199966431
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.34437474608421326,
+      "high_grade": 0.34834444522857666
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6516007781028748,
+      "high_grade": 0.679669201374054
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6330003142356873,
+      "high_grade": 0.6627658009529114
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4327492117881775,
+      "cancer": 0.48730796575546265
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6684464812278748,
+      "cancer": 0.7123094201087952
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6401510834693909,
+      "cancer": 0.6949658989906311
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.35601845383644104,
+      "high_grade": 0.3458196520805359
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6394968032836914,
+      "high_grade": 0.6424700617790222
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6191246509552002,
+      "high_grade": 0.6250693798065186
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.3735061585903168,
+      "cancer": 0.44378411769866943
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.653731107711792,
+      "cancer": 0.7211086750030518
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.624683141708374,
+      "cancer": 0.7117934823036194
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.2865675687789917,
+      "high_grade": 0.2926083207130432
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.634036660194397,
+      "high_grade": 0.6687030792236328
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6154381036758423,
+      "high_grade": 0.648441731929779
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "mean",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.34578609466552734,
+      "cancer": 0.38121604919433594
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top1pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.660780668258667,
+      "cancer": 0.7220659852027893
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "task": "benign_cancer",
+    "pooling": "top5pct",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6323502659797668,
+      "cancer": 0.6936212182044983
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "mean",
+    "truth": "high_grade",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.22897201776504517,
+      "high_grade": 0.2003927230834961
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top1pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6269983053207397,
+      "high_grade": 0.65167635679245
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "task": "low_high",
+    "pooling": "top5pct",
+    "truth": "high_grade",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5946234464645386,
+      "high_grade": 0.6123384237289429
+    },
+    "label_scope": "original slide ISUP; no per-tile grade assignment"
+  }
+]

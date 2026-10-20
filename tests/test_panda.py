@@ -288,3 +288,94 @@ def test_runner_rejects_scope_and_wrong_original_labels(tmp_path, monkeypatch):
     with pytest.raises(ValueError, match="Original labels"):
         module.run(path, tmp_path / "wrong-gleason", "tile")
     assert not (tmp_path / "wrong-gleason/tiling.json").exists()
+
+
+def test_representative_scans_full_grid_is_seeded_and_mask_independent(tmp_path, monkeypatch):
+    root = dataset(tmp_path)
+    result = extract(root, tmp_path/'rep', monkeypatch, selection='representative', max_candidates=25, max_tiles=1)
+    meta = result['metadata']['extraction']
+    assert meta['candidates_examined'] == meta['total_grid_cells'] == 25
+    assert meta['eligible_tissue_cells'] == 2
+    assert not meta['selection_uses_mask'] and meta['clean_evaluation_eligible']
+    (root/'train_label_masks/fixture_mask.tiff').unlink()
+    extract(root, tmp_path/'rep2', monkeypatch, selection='representative', max_candidates=25, max_tiles=1)
+    def coords(path):
+        with path.open() as f:
+            return [(r['grid_x'],r['grid_y']) for r in csv.DictReader(f)]
+    assert coords(tmp_path/'rep/tiles.csv') == coords(tmp_path/'rep2/tiles.csv')
+    with pytest.raises(ValueError, match='Full grid'):
+        extract(root, tmp_path/'bounded', monkeypatch, selection='representative', max_candidates=20)
+
+
+def test_donor_mode_and_native_full_mask_area(tmp_path, monkeypatch):
+    from floater_finder.panda_masks import audit_mask
+    root = dataset(tmp_path)
+    result = extract(root, tmp_path/'donor', monkeypatch, selection='donor', max_candidates=25,
+                     max_tiles=512, min_cancer_fraction=.3)
+    assert result['tiles'] == 1
+    assert result['metadata']['extraction']['selection_uses_mask']
+    assert not result['metadata']['extraction']['clean_evaluation_eligible']
+    with panda_readers(root/'train_images/fixture.tiff', root/'train_label_masks/fixture_mask.tiff') as (_, mask, meta):
+        audited = audit_mask(mask, meta['measured_mpp_xy'], block=48)
+    assert audited['native_pixel_counts']['gleason4'] == 64*16
+    assert audited['native_pixel_counts']['gleason5'] == 64*32
+    assert audited['area_mm2']['gleason4'] == pytest.approx(64*16*.5*.5/1e6)
+    assert audited['gp45_bbox_level0_xyxy'] == [112,0,192,64]
+    (root/'train_label_masks/fixture_mask.tiff').unlink()
+    with pytest.raises(ValueError, match='requires a verified'):
+        extract(root, tmp_path/'no-mask', monkeypatch, selection='donor', max_candidates=25)
+
+
+def test_explicit_manifest_preserves_authority_and_cohort_split(tmp_path, monkeypatch):
+    root = dataset(tmp_path)
+    manifest = root/'new.csv'
+    manifest.write_text('image_id,split,isup_grade\nfixture,test,4\n')
+    result = extract(root, tmp_path/'tiles', monkeypatch, manifest_path=manifest)
+    assert result['metadata']['cohort_split'] == 'test'
+    assert result['metadata']['split'] == 'eval'
+    manifest.write_text('image_id,isup_grade\nfixture,0\n')
+    with pytest.raises(ValueError, match='disagrees'):
+        panda_input(root, 'fixture', manifest)
+
+
+def test_cohort_tiling_checkpoint_reuses_and_rejects_changed_outputs(tmp_path,monkeypatch):
+    path=Path(__file__).resolve().parents[1]/'scripts/panda_tile_cohort.py'
+    spec=importlib.util.spec_from_file_location('panda_tile_cohort',path)
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    root=dataset(tmp_path);output=tmp_path/'batch'
+    monkeypatch.setenv('SLURM_JOB_ID','fixture-only')
+    result=module.run(root,root/'pilot.csv',output,count=1,max_tiles=256)
+    assert result[0]['status']=='tiled_validated'
+    assert module.run(root,root/'pilot.csv',output,count=1,max_tiles=256)[0]['status']=='reused_validated'
+    (output/'fixture/tiles.csv').write_text('changed')
+    with pytest.raises(ValueError,match='preserved for inspection'):
+        module.run(root,root/'pilot.csv',output,count=1,max_tiles=256)
+
+
+def test_independent_mask_diagnostic_preserves_native_inputs(tmp_path,monkeypatch):
+    path=Path(__file__).resolve().parents[1]/'scripts/ncsa_panda_mask_diagnostic.py'
+    spec=importlib.util.spec_from_file_location('panda_mask_diagnostic',path)
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    root=dataset(tmp_path);output=tmp_path/'diagnostic.fixture.json'
+    monkeypatch.setenv('SLURM_JOB_ID','software-fixture-only')
+    module.run(root,root/'pilot.csv','fixture',output)
+    report=json.loads(output.read_text())
+    assert report['inputs_modified'] is False and report['mask_sha256']==report['mask_sha256_after']
+    assert report['pillow_native_decode_passed']
+    assert report['pillow_native_pixel_counts']==report['openslide_audit']['native_pixel_counts']
+
+
+def test_explicit_unusable_mask_exclusion_keeps_annotations_unknown_and_source_unchanged(tmp_path,monkeypatch):
+    from floater_finder.experiments import file_sha256
+    root=dataset(tmp_path);path=root/'train_label_masks/fixture_mask.tiff';digest=file_sha256(path)
+    exclusion=dict(sha256=digest,reason='Simulated decoder failure in software fixture only')
+    result=extract(root,tmp_path/'excluded',monkeypatch,mask_exclusion=exclusion)
+    assert not result['metadata']['panda']['mask_available']
+    assert result['metadata']['panda']['excluded_mask']['sha256']==digest
+    assert path.is_file() and file_sha256(path)==digest
+    with (tmp_path/'excluded/tiles.csv').open() as handle:
+        assert all(r['gleason4_fraction']=='' for r in csv.DictReader(handle))
+    with pytest.raises(ValueError,match='exact existing mask'):
+        extract(root,tmp_path/'wrong',monkeypatch,mask_exclusion=exclusion|dict(sha256='0'*64))
+    with pytest.raises(ValueError,match='requires a verified'):
+        extract(root,tmp_path/'donor-excluded',monkeypatch,mask_exclusion=exclusion,selection='donor',max_candidates=25)
