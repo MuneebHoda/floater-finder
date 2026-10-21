@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "category": "PANDA S2 development synthetic embedding contamination",
+  "splits": ["train", "calibration"],
+  "seed": 20261020,
+  "percentages": [0, 0.5, 1, 2, 5, 10],
+  "primary_pooling": "mean",
+  "primary_selection": "Frozen before S2 outcomes: mean has highest existing clean low/high balanced accuracy on both train (35/48) and calibration (12/16); prompts, zero threshold and all pooling rules unchanged.",
+  "minimum_pattern_fraction": 0.1,
+  "conditions": ["high_gp45", "same_grade_gp3_only", "high_gp4_only", "high_gp5_positive"],
+  "donor_selection": "Same split, different slide, compatible physical grid, known same-patient pairs excluded. Prefer any largest four-connected native-mask component capable of 10%; seeded SHA256 pair order breaks ties; otherwise largest component and report dose exclusions. No replacement tiles or invented continuity.",
+  "interpretation": "Binary zero-shot low/high model stress only; synthetic translated fragments are not natural floaters and prediction changes are not clinical Grade Group upgrades.",
+  "test_slides_allowed": false,
+  "clinical_validity_verified": false
+}
