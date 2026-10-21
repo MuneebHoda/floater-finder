@@ -1,5 +1,22 @@
 # Floater Finder progress
 
+## Four-pair pixel study prepared; real CPU execution waiting — October 21
+
+Runtime/protocol `61959fa` adds a bounded four-pair/96-image PANDA study around
+the unchanged compositor, native-mask crop verification, canonical CONCH drift
+gates and paired feature/frozen-prediction measurements. All424 tests pass;
+276 immutable staged files verify. GPU execution remains explicitly approval
+blocked; no new inference,download,threshold/model fitting or original-test
+evaluation occurred. All payloads remain Delta.
+
+CPU23109222 timed out613s in node cn018's scheduler Prolog without observed
+Python step/log/outputs. Its failure receipt is preserved. Inspected replacement
+CPU23109277 excludes cn018 and remains PENDING (Priority), estimated19:39:58CDT
+as of17:48:34CDT. Same code,pairs,source hashes and per-job resource cap; no
+scientific reroll or duplicate active processing. Leave it queued and inspect
+before further execution. Actual tile selection,mask/WSI checks,96-image
+completion and exact GPU manifest hash remain pending. [Preparation record](panda_pixel_contamination_preparation_v1.md).
+
 ## Fresh baseline preparation — October 20
 
 The fixed 60-slide Radboud proposal now has a legacy-compatible execution manifest, exact 120-file acquisition plan, four frozen predictor hashes, default metadata-only preflight and CPU-only clean prediction runner. Original training-selected linear primaries remain primary for both tasks; corrected historical cancer top-5% and grade mean are fixed comparators. The fresh cohort is slide-disjoint from 129 exposed IDs; patient independence is unknown. Cancer uses all 60, low/high excludes benign and uses 40. No detector or final-readiness claim is inferred.

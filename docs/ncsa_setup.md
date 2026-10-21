@@ -1,5 +1,23 @@
 # Floater Finder: NCSA setup
 
+## Pixel-contamination preparation handoff — October 21
+
+Local Darwin and shared SSH identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu`
+verified. Existing account balances reported rounded4692 CPU hours and8 GPU
+sub-allocation hours; no new GPU submission. Runtime source `61959fa` is staged
+at `/u/mhoda/floater-finder/releases/panda-pixel-contamination-v1-20261021T223344Z/source`;
+all276 files and frozen metadata/model inputs verified. The unchanged private
+runtime is `panda-cpu-1598f9b-20261020T040441Z` under the documented envs root.
+
+CPU23109222 timed out613s in scheduler Prolog on cn018, before any observed
+Python step/log/preparation output. The inspected replacement CPU23109277
+excludes cn018 and uses identical source/scientific inputs,2 CPUs,8GB,ten
+minutes,`bfqi-delta-cpu` account/QoS,`cpu-interactive`. As of17:48:34CDT it is
+PENDING (Priority), estimated start19:39:58CDT; this is a scheduler estimate,
+not a guaranteed start. Old timeout is in terminal cleanup. No real96-image
+manifest or GPU output exists. Do not duplicate the pending job or infer GPU
+approval. [Exact commands, immutable receipts, tests and unresolved checks](../reports/panda_pixel_contamination_preparation_v1.md).
+
 ## Original-training topology/context execution — October 21
 
 Local Darwin and SSH `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified. CPU **23101968 completed 0:0 in 27s** on `cn061`, account/QoS `bfqi-delta-cpu` / partition `cpu-interactive`, 2 CPUs, 8 GB, 20-minute cap, no GPU. Actual 0.015 allocated CPU-hours; Python MaxRSS 378,920 KiB. One submission, no retry.
