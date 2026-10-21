@@ -50,3 +50,8 @@ Complete password/Duo privately, keep the session open and confirm reconnection.
 Do not send credentials. The agent then tests the shared connection once and
 continues verified staging of this already implemented candidate, without
 repeating acquisition, tiling, encoding or previous experiments.
+
+
+## Frozen implementation receipt
+
+Runtime source `204c194524943e75813e966f300e39dbb5e63bcb` is committed and pushed to `feature/panda-tiling`. The working tree was clean after that push. Source-only preflight reports prepared_not_executed for 72 original training slides /24 positive cases, 2 CPUs/8 GB/10 minutes/zero GPU. This commit has not been staged or executed on Delta because the shared connection required manual authentication. No Slurm job ID or new performance result exists. The original final-test protocol, all 33 legacy files and all six preceding runtime freezes remain unchanged.
