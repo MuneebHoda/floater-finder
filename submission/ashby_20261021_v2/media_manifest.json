@@ -1,0 +1,63 @@
+{
+  "original_evidence_commits": {
+    "S1_v1": "06c7b771399c26b9dbc390b7e4bd73b077878e95",
+    "S2": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+    "v2": "668d9b8c4e3e8aa300bda6ff15e416c601c2e024"
+  },
+  "source_kind": "real training/calibration outputs; no held-out predictions",
+  "assets": [
+    {
+      "path": "submission/ashby_20261021_v2/media/benign_native.png",
+      "sha256": "f33aad4d66d0734cd7e9ab98f1deeedd56da2c78dad1b016cb9cf56d30ebab9e",
+      "used_on_slide": 2,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    },
+    {
+      "path": "submission/ashby_20261021_v2/media/gp4_native.png",
+      "sha256": "085deddf6bd1647d6ca7ab6a70b7801f666e2971b79fc19e5f06b8c50724e321",
+      "used_on_slide": 2,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    },
+    {
+      "path": "submission/ashby_20261021_v2/media/known_synthetic_component.png",
+      "sha256": "2361712f9d002f89e18f28762d6c3701485f373a8e80d5cfc7d68464dec1163b",
+      "used_on_slide": 8,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    },
+    {
+      "path": "submission/ashby_20261021_v2/media/genuine_native_component.png",
+      "sha256": "e2cc60fdc5671f359a34e339560bda625c38f8caa97d26f2ba7655c314702cdf",
+      "used_on_slide": 9,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    },
+    {
+      "path": "reports/panda_topology_qa_v1/3c685ed0f92e30f6ffeb5cea7cef5994/overview.png",
+      "sha256": "62a43370f1c7fcebebfec8cc015bc453adef49ea32c583fef646da755e04918a",
+      "used_on_slide": 10,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    },
+    {
+      "path": "reports/panda_topology_qa_v1/3c685ed0f92e30f6ffeb5cea7cef5994/tissue_edges.png",
+      "sha256": "8b4b715d56cfe3694b012bbf6ff00af5b5f09909b0d47960b1a909047a17f417",
+      "used_on_slide": 10,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    },
+    {
+      "path": "reports/figures/panda_review_v1_final/review_failure_funnel.png",
+      "sha256": "ae2718f325e9d5e02eaab7285c174f317095cd90f61ba957f343f90bf8292388",
+      "used_on_slide": 12,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    },
+    {
+      "path": "submission/ashby_20261021_v2/media/s2_pooling_sensitivity.png",
+      "sha256": "01e22e1c496e2665d36d9275f0d8ab848141e10377e017198eaeae16195ce462",
+      "used_on_slide": 14,
+      "transformation": "Embedded source bytes unchanged; fit inside specified rectangle"
+    }
+  ],
+  "figure_source_records": [
+    "reports/panda_presentation_figure_manifest_v1.json",
+    "reports/figures/panda_piece_development_23065744/provenance.json"
+  ],
+  "microscopy_provenance": "media/provenance.json"
+}

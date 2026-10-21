@@ -1,0 +1,132 @@
+{
+  "deliverables": {
+    "pptx": "floater_finder_ashby_v2_final.pptx",
+    "pdf": "floater_finder_ashby_v2_final.pdf",
+    "abstract": "abstract.md",
+    "script": "presentation_script_8min.md",
+    "qa": "qa_4min.md",
+    "checklist": "submission_checklist.md"
+  },
+  "slides": 19,
+  "spoken_slides": 18,
+  "spoken_words": 908,
+  "script_seconds": 480,
+  "authoring": {
+    "method": "Native Keynote14.4 AppleScript export on local macOS",
+    "fallback_reason": "Required artifact-tool and dependency-loader unavailable; no substitute package installed",
+    "fonts": [
+      "Arial",
+      "Helvetica Neue"
+    ],
+    "native_tables": 4,
+    "native_charts": 1,
+    "linked_external_media": 0
+  },
+  "validation": {
+    "source_files_verified": 15,
+    "native_pdf_pages_rendered": 19,
+    "all_native_slides_visually_inspected": true,
+    "reopened_exported_pptx_in": "Keynote14.4",
+    "roundtrip_pdf_pages": 19,
+    "roundtrip_pages_rendered": 19,
+    "roundtrip_pixel_identical_pages": 17,
+    "roundtrip_nonidentical_pages": [
+      2,
+      7
+    ],
+    "roundtrip_visual_result": "Passed. Pages2 and7 differ slightly in image resampling/chart layout; source microscopy, curves, labels and numbers retained. Remaining17 pages are pixel-identical.",
+    "powerpoint_application_inspection": false,
+    "structural_package_findings": 0,
+    "layout_findings": 0,
+    "layout_warnings": 0,
+    "full_regression_tests_reported_by_parent": 204,
+    "warnings_as_errors": true,
+    "scientific_claim": "Observed development only, no clinical usefulness or final-test result"
+  },
+  "source_commits": {
+    "S1_v1": "06c7b771399c26b9dbc390b7e4bd73b077878e95",
+    "S2": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+    "detector_v2": "668d9b8c4e3e8aa300bda6ff15e416c601c2e024"
+  },
+  "final_test_slides_scored": false,
+  "automatic_tissue_action": "none",
+  "external_submission_performed": false,
+  "files": {
+    "README.md": {
+      "sha256": "038e27d6b625a189c407edce848eae6d8757c4f07afeaf1aee0756887efc8494",
+      "bytes": 3988
+    },
+    "abstract.md": {
+      "sha256": "696a03b2b309f5f046f89e4a8524a15c824c62c47284ed2b4d3e0d4d3fa367e4",
+      "bytes": 2443
+    },
+    "build_submission.py": {
+      "sha256": "aa25a14e4faa4241c44e4947b0a40db7b4e7f70c608dea9037ca4ed2fd49770c",
+      "bytes": 6097
+    },
+    "evidence_manifest.json": {
+      "sha256": "f3cf450edb51e652f04dd1eb56ebe4a1f3dd67559b5ebc395d879bca0147cf79",
+      "bytes": 2352
+    },
+    "floater_finder_ashby_v2_final.pdf": {
+      "sha256": "233561c70043b3e5fc4a34f3826c84211be955e6d8f05b75c4a0d4afbe74c4e9",
+      "bytes": 1124812
+    },
+    "floater_finder_ashby_v2_final.pptx": {
+      "sha256": "4f0fd01a111f1f7b48fe1e306234033deb7aaef459fc9bb2809072543841f501",
+      "bytes": 608127
+    },
+    "media/benign_native.png": {
+      "sha256": "f33aad4d66d0734cd7e9ab98f1deeedd56da2c78dad1b016cb9cf56d30ebab9e",
+      "bytes": 89939
+    },
+    "media/genuine_native_component.png": {
+      "sha256": "e2cc60fdc5671f359a34e339560bda625c38f8caa97d26f2ba7655c314702cdf",
+      "bytes": 48003
+    },
+    "media/gp4_native.png": {
+      "sha256": "085deddf6bd1647d6ca7ab6a70b7801f666e2971b79fc19e5f06b8c50724e321",
+      "bytes": 79880
+    },
+    "media/known_synthetic_component.png": {
+      "sha256": "2361712f9d002f89e18f28762d6c3701485f373a8e80d5cfc7d68464dec1163b",
+      "bytes": 53318
+    },
+    "media/provenance.json": {
+      "sha256": "c5de48723837afe728e0065addc89ce406fadeb3e3d6efeeae9175151c59cff1",
+      "bytes": 4765
+    },
+    "media/s2_pooling_sensitivity.png": {
+      "sha256": "01e22e1c496e2665d36d9275f0d8ab848141e10377e017198eaeae16195ce462",
+      "bytes": 65953
+    },
+    "media_manifest.json": {
+      "sha256": "5908d7e1d2065a3b2cffd7e6259f12bd0d40039ca38fc6ff2c1b139664ad553c",
+      "bytes": 2873
+    },
+    "prepare_media.py": {
+      "sha256": "e83c6b60cfef668569a4baa842ca6f0a460edc99c365a255e89fa4fdc5ba1d39",
+      "bytes": 725
+    },
+    "presentation_script_8min.md": {
+      "sha256": "4ced6445d7d00661d5af260a1debcb5a4ebcd1584c5ef3c8c5da6109da2581ab",
+      "bytes": 8687
+    },
+    "qa_4min.md": {
+      "sha256": "6e2b497f53a9b457d513d4b6e7182b6142000fe0a06b1af48cc2ecd475fa395b",
+      "bytes": 5270
+    },
+    "slide_content.json": {
+      "sha256": "ea87e6c43ded26d4cade2aa367c27726beb767a2d8562434834e46462d34c84a",
+      "bytes": 40681
+    },
+    "submission_checklist.md": {
+      "sha256": "bd956508a582399b74d9b8194b711eebacfdb324792632db51aa1fc00fc31849",
+      "bytes": 3518
+    },
+    "verify_package.py": {
+      "sha256": "df3177470da76b1b20bfd594749b4f8946d68880f8a1eb6e80319d1698dc7b87",
+      "bytes": 4820
+    }
+  }
+}

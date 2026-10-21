@@ -1,0 +1,102 @@
+[
+  {
+    "path": "submission/ashby_20261021_v2/media/benign_native.png",
+    "sha256": "f33aad4d66d0734cd7e9ab98f1deeedd56da2c78dad1b016cb9cf56d30ebab9e",
+    "source_path": "results/panda/profile_23051244/afe7eb15c8438861ca43f2b20dccf260/representative/afe7eb15c8438861ca43f2b20dccf260-x13-y13.png",
+    "source_csv": "results/panda/profile_23051244/afe7eb15c8438861ca43f2b20dccf260/representative/tiles.csv",
+    "source_csv_sha256": "09860c9b6bb927ec85b071fb477ccfc4a2808034e2dfa4f767c28e2422bf7a33",
+    "selected_by": "maximum benign_fraction among initial representative export",
+    "tile_metadata": {
+      "tile_id": "afe7eb15c8438861ca43f2b20dccf260-x13-y13",
+      "path": "afe7eb15c8438861ca43f2b20dccf260-x13-y13.png",
+      "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+      "x": "1453.7010345267367",
+      "y": "1453.7010345267367",
+      "x_level0": "2990",
+      "y_level0": "2990",
+      "grid_x": "13",
+      "grid_y": "13",
+      "area_mm2": "0.01250441833008346",
+      "tissue_fraction": "0.94921875",
+      "mask_available": "True",
+      "background_fraction": "0.0",
+      "stroma_fraction": "0.7241587901701323",
+      "benign_fraction": "0.27584120982986765",
+      "gleason3_fraction": "0.0",
+      "gleason4_fraction": "0.0",
+      "gleason5_fraction": "0.0"
+    },
+    "interpretation": "Actual PANDA tile, native mask annotation. No assertion this is foreign tissue."
+  },
+  {
+    "path": "submission/ashby_20261021_v2/media/gp4_native.png",
+    "sha256": "085deddf6bd1647d6ca7ab6a70b7801f666e2971b79fc19e5f06b8c50724e321",
+    "source_path": "results/panda/profile_23051244/dd1110c6430e3b1ac732be548a089886/representative/dd1110c6430e3b1ac732be548a089886-x15-y20.png",
+    "source_csv": "results/panda/profile_23051244/dd1110c6430e3b1ac732be548a089886/representative/tiles.csv",
+    "source_csv_sha256": "df88429de82319876e856546dc8f6e89c8d8f18a1a6476309b4857d110bde418",
+    "selected_by": "maximum gleason4_fraction among initial representative export",
+    "tile_metadata": {
+      "tile_id": "dd1110c6430e3b1ac732be548a089886-x15-y20",
+      "path": "dd1110c6430e3b1ac732be548a089886-x15-y20.png",
+      "image_id": "dd1110c6430e3b1ac732be548a089886",
+      "x": "1677.3473475308501",
+      "y": "2236.4631300411334",
+      "x_level0": "3450",
+      "y_level0": "4600",
+      "grid_x": "15",
+      "grid_y": "20",
+      "area_mm2": "0.01250441833008346",
+      "tissue_fraction": "1.0",
+      "mask_available": "True",
+      "background_fraction": "0.0",
+      "stroma_fraction": "0.5721739130434783",
+      "benign_fraction": "0.0",
+      "gleason3_fraction": "0.0",
+      "gleason4_fraction": "0.42782608695652175",
+      "gleason5_fraction": "0.0"
+    },
+    "interpretation": "Actual PANDA tile, native mask annotation. No assertion this is foreign tissue."
+  },
+  {
+    "path": "submission/ashby_20261021_v2/media/genuine_native_component.png",
+    "sha256": "e2cc60fdc5671f359a34e339560bda625c38f8caa97d26f2ba7655c314702cdf",
+    "source_path": "reports/figures/panda_piece_development_23065744/piece_examples.png",
+    "source_sha256": "e991b725427da54bfae0adb6482d4a92d11448a0d49445ce11e5201ac8c88849",
+    "transformation": "Scientific-figure panel crop only, no content drawn or altered",
+    "crop_box_pixels_xyxy": [
+      0,
+      70,
+      1100,
+      1050
+    ],
+    "crop_notes": "Original left two panels only. Titles and spatial axes retained. Original colorbar omitted, native annotation is identified in slide text."
+  },
+  {
+    "path": "submission/ashby_20261021_v2/media/known_synthetic_component.png",
+    "sha256": "2361712f9d002f89e18f28762d6c3701485f373a8e80d5cfc7d68464dec1163b",
+    "source_path": "reports/figures/panda_piece_development_23065744/piece_examples.png",
+    "source_sha256": "e991b725427da54bfae0adb6482d4a92d11448a0d49445ce11e5201ac8c88849",
+    "transformation": "Scientific-figure panel crop only, no content drawn or altered",
+    "crop_box_pixels_xyxy": [
+      1100,
+      70,
+      2160,
+      1050
+    ],
+    "crop_notes": "Original right two panels only. Titles, known-injection outline and axes retained."
+  },
+  {
+    "path": "submission/ashby_20261021_v2/media/s2_pooling_sensitivity.png",
+    "sha256": "01e22e1c496e2665d36d9275f0d8ab848141e10377e017198eaeae16195ce462",
+    "source_path": "reports/figures/panda_s2_development_23067396/s2_development.png",
+    "source_sha256": "51ef7251b3ae97efec44b0759293c31334009d376df4515ee03b57c72e742e04",
+    "transformation": "Scientific-figure panel crop only, no content drawn or altered",
+    "crop_box_pixels_xyxy": [
+      1170,
+      65,
+      2340,
+      835
+    ],
+    "crop_notes": "Original upper-right pooling panel only, including legend and axes. Primary null result shown prominently on the same slide."
+  }
+]
