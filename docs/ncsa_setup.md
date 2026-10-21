@@ -1,5 +1,14 @@
 # Floater Finder: NCSA setup
 
+## S3 conservative review transfer — October 21
+
+Shared SSH verified `mhoda` / `dt-login04.delta.ncsa.illinois.edu`. Site snapshot: 4908 rounded CPU hours, 8 rounded GPU hours, empty queue and CPU-interactive up. Latest request to push and move forward supplied next-stage research direction; agent chose the bounded 2-CPU/8-GB/20-minute scope and showed the exact staged command before submission. No explicit user choice of those resource values is claimed.
+
+CPU **23101320 completed 0:0 in 35s** on `cn100`, `bfqi-delta-cpu` account/QoS / `cpu-interactive`, zero GPUs; Python MaxRSS 345,324 KiB and 0.01944 allocated CPU-hours. Source `a5d819c360950d15ad0de84569ea5289edcb8942` at `/u/mhoda/floater-finder/releases/panda-fresh-review-transfer-v1-20261021T161755Z/source` verified all 240 files. Results are separately sealed at `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-review-transfer-v1`; authorization/output/interpretation/completion receipts are in the parent `reports/`. All 140 bags /9800 records, original S1 identities and 33 legacy files verify. The queue is empty, original final output absent, and no data/raw artifact was downloaded locally.
+
+Primary combined has zero foreign hits per 20 cases per mode with four genuine-cancer native flags and four hypothetical clean-prediction harms. No useful detector or final readiness follows. [Measured report and receipt hashes](../reports/panda_fresh_review_transfer_results_v1.md); [frozen design and exact command](panda_fresh_review_transfer_v1.md). The bounded stage is complete; no more job was submitted.
+
+
 ## Fresh S1 execution — October 21
 
 Local Darwin and shared SSH `mhoda` / `dt-login01.delta.ncsa.illinois.edu` verified. Explicitly approved CPU **23083320** ran once on `cn137`, account/QoS `bfqi-delta-cpu`, partition `cpu-interactive`, 2 CPUs /8 GB /20-minute cap, zero GPUs. It completed 0:0 in 148s; Python MaxRSS 281,436 KiB /0.08222 allocated CPU-hours. All 233 staged source files and three baseline input receipts matched before submission; sealed output hashes and input receipts verified afterward.

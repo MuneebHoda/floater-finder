@@ -1,6 +1,9 @@
-# S3 conservative visual-rule transfer — preparation
+# S3 conservative visual-rule transfer — frozen design
 
-This development diagnostic reuses the completed S1 registry from CPU 23083320.
+This completed development diagnostic reuses the S1 registry from CPU 23083320.
+[Observed results and limitations](../reports/panda_fresh_review_transfer_results_v1.md):
+CPU 23101320 completed 0:0 in 35s; the combined primary failed useful foreign
+localization and flagged genuine cancer-containing native carriers.
 It measures new review outcomes on exactly **140 saved bags**: 60 unmodified
 slides and the 80 fixed 5%/first-seed append/replacement foreign/sham bags.
 No new contamination draw, acquisition, tiling, embedding, baseline experiment,
@@ -80,25 +83,27 @@ operating-point approval or original final-test readiness follows from these dat
 
 ## Bounded execution scope
 
-One proposed CPU job: `bfqi-delta-cpu` account/QoS, `cpu-interactive`, 2 CPUs,
+One completed CPU job: `bfqi-delta-cpu` account/QoS, `cpu-interactive`, 2 CPUs,
 8 GB and 20 minutes, zero GPUs; maximum 0.667 allocated CPU-hours. It produces
 at most 9800 model/policy records (140 bags x 2 scorers x [3 fixed policies + 32
 random draws]), an upper bound on new filtered predictions; many reuse cached
-predictions or need no new score. Runtime is unmeasured. There are no dataset,
+predictions or need no new score. Observed runtime was 35 seconds /0.01944
+allocated CPU-hours. There are no dataset,
 weight or local downloads, no WSI/PNG reads, no refitting or threshold selection.
 
-Intended output, not a claim of executed results:
+Verified output, created once by CPU 23101320:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-review-transfer-v1`
 
-Expected sealed outputs: `run.json`, `events/`, per-bag `checkpoints/review-*.json`
+Verified sealed outputs: `run.json`, `events/`, per-bag `checkpoints/review-*.json`
 with visual scores, physical/explanatory metadata and policy-specific evaluation,
 `checkpoints/summary.json` with denominator/uncertainty ledgers, and `seal.json`.
 Any source/identity/oracle-state mismatch stops and preserves the failure; no
 automatic retry or overwritten output. The completed S1 approval is not reused.
 The latest user request to push and advance authorizes this bounded next
-CPU development stage under the existing research plan; it is not an explicit
-user choice of these resource values and does not reuse the consumed S1 approval.
+CPU development stage under the existing research plan. Resource values were
+selected by the agent and shown before submission; the consumed S1 approval was
+not reused.
 The exact new source/command is recorded after staging, before submission.
 All 306 software tests pass with warnings as errors in a clean offline
 environment; nine new tests use artificial arrays. Bash syntax and the original
@@ -113,5 +118,33 @@ python scripts/panda_fresh_review.py --config configs/panda_fresh_review_transfe
 
 `--check-inputs` additionally checks small remote receipts/output absence.
 `--execute` requires the exact output/source identity and an approved CPU Slurm
-allocation. Local tests use artificial arrays only; no real S3 outcomes have
-been computed during preparation.
+allocation. Local tests use artificial arrays only. Real S3 measurements were
+computed
+subsequently through the bounded CPU job and are documented in the result report.
+
+## Verified source staging and submitted command
+
+Source `a5d819c360950d15ad0de84569ea5289edcb8942` is staged read-only at:
+
+`/u/mhoda/floater-finder/releases/panda-fresh-review-transfer-v1-20261021T161755Z/source`
+
+All 240 source files and metadata/model preflight with remote receipt checks
+verified before submission. Original S1 run/summary/seal hashes matched, the
+new output was absent, the queue empty and CPU partition up. Archive SHA256:
+`93af99df6a55d9ee6f54e8add4721b27a0d6594c9f80eb8b8f9a43edad9363c0`. Source-manifest SHA256:
+`6b648ec2b2a8007cafeb4ff45b8cb7abb65aa75a94d9730b4cf7ab0ab712dd7f`. The latest allocation snapshot was 4908 rounded CPU hours
+and 8 rounded GPU hours; those are shared snapshots, not reservations.
+
+Exact command, submitted once as CPU **23101320**:
+
+```sh
+sbatch --parsable /u/mhoda/floater-finder/releases/panda-fresh-review-transfer-v1-20261021T161755Z/source/scripts/slurm/panda_fresh_review.sbatch /u/mhoda/floater-finder/releases/panda-fresh-review-transfer-v1-20261021T161755Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z f6c27f854187978ec5d2cb2e889adb8279b618d1a98c1d03cb370494109f68e9 /work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-review-transfer-v1 a5d819c360950d15ad0de84569ea5289edcb8942
+```
+
+Source code and its 306 passing tests were pushed as `a5d819c` before execution.
+The authorization receipt remains remote at
+`reports/fresh-review-transfer-authorization-v1.json` under the fresh Radboud60
+root, SHA256 `93abe4ea705202c34b4340bdd64fdedd28f42febae66881d1c15cfe1a0bc6898`.
+All 140 bags /9800 records are verified. The sealed registry has 141 checkpoints
+and 144 events; the old S1 inputs, source hashes and original test seal remain
+unchanged. This is a completed negative scientific result; the scope is consumed.
