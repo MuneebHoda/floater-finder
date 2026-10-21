@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda-shared-engine-acceptance-v1",
+  "hypothesis": "Shared S1/S2 engine preserves historical behavior and exact recovery; spatial relocation alone cannot change an order-invariant bag prediction.",
+  "splits": ["train"],
+  "host_limit_per_task": 2,
+  "donors_per_host": 2,
+  "seeds": [20261020, 20261021, 20261022],
+  "percentages": [0, 0.25, 0.5, 1, 2, 5, 10],
+  "tasks": {"s1": "cancer", "s2": "high_gp45"},
+  "modes": ["append_legacy", "near_tissue", "replacement", "within_region_context"],
+  "minimum_native_pattern_fraction": 0.1,
+  "near_tissue_max_chebyshev_distance_um": 224,
+  "maximum_preview_pixels": 4000000,
+  "maximum_placement_anchors": 100000,
+  "prediction_selection_uses_contamination": false,
+  "output_kind": "real-input engineering acceptance and placement ablation; not independent scientific validation",
+  "independent_unit": "unique host slide; donors and seeds reused, patient independence unknown",
+  "test_slides_scored": false
+}
