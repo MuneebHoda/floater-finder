@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_topology_context_v1",
+  "status": "frozen_before_original_training_context_audit",
+  "hypothesis": "Quantify disagreement between cached RGB and sampled-cell memberships and sensitivity of fixed CONCH morphology scores to remaining comparison support.",
+  "split": "train",
+  "slides": 72,
+  "inputs": {
+    "manifest": {
+      "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+      "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+    },
+    "directories": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+      "sha256": "f6825d19cbf60df9b3daf2d12d47c0b9bbb90a791ee5ccb62157892798e51132"
+    },
+    "verification": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+      "sha256": "cef3c1b232ed4b12d767ce2e4d86e62f8f5bd4a1010f0b6a72760e33317cf4d0"
+    },
+    "cases": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json",
+      "sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100"
+    },
+    "features": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z/feature_checkpoint.json",
+      "sha256": "3c879620286c16da6eefc6bf1ef223181ce928ac70a5684643b35499e2236fad"
+    },
+    "feature_completion": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z/completion.json",
+      "sha256": "10a684af01a772a0f88d2e694ae4579da7772f4a46cc47e0ec6977c94ff1ff6f"
+    }
+  },
+  "encoded_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "old_feature_config_sha256": "fa19dd81c9295ab51a03f0316361f73c665378176ce0231c7547974dccbb53fc",
+  "context_sizes": [
+    2,
+    5,
+    6,
+    16,
+    32
+  ],
+  "seeds": [
+    20261026,
+    20261027,
+    20261028
+  ],
+  "maximum_ablation_records": 2160,
+  "selection": "Largest mapped component per topology; ties resolve by original tile indices, never scores or annotation. Nested original-context permutation prefixes per seed. Full context scores reused; unavailable target sizes remain excluded.",
+  "topology": "Original cached 220/10 RGB memberships versus recorded-grid 8-neighbor occupied cells with zero missing-cell bridges; compare only, never choose a rule.",
+  "context_support": "Empty=0, singleton=1, partial-NN5=2..5, full-NN5>=6 outside tiles; background references exclude self. Majority means >half the sampled bag, not a foreignness cutoff.",
+  "classification_predictions": false,
+  "fit_thresholds": false,
+  "source_artifacts_preserved": true,
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 8,
+    "maximum_minutes": 20,
+    "gpu": 0
+  },
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1",
+  "authorization_basis": "User requested next after S3 topology/context audit recommendation; bounded original-development CPU research, no GPU/download/held-out evaluation.",
+  "limitations": [
+    "Training only; no held-out calibration/test or evaluated fresh60 arrays opened",
+    "Cached development case catalog includes known calibration records, filtered to training before measurement; contains no test cases",
+    "RGB masks and sampled components are proxies, not pathologist verified physical pieces",
+    "Unassigned RGB tiles remain unassigned and in outside context, never merged into guessed pieces",
+    "Reference subsampling changes observed context support/composition, not biological tissue or contamination",
+    "Seeds and context sizes repeat the same native slides; duplicate subsets are identified, not independent samples",
+    "No classifier calls, foreign detection estimates, policy choice, threshold fit, or final-test readiness",
+    "Annotation information joins only after feature construction for native positive/unknown-control accounting"
+  ],
+  "source_files": {
+    "src/floater_finder/research/topology_context.py": "b053ccf97cb65c5c89feb213870e9e92627cdf39551f9bd51207eff73c94cde5",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "src/floater_finder/research/registry.py": "ec9f069098846677ff93ac58804085fc845448cb5438d8166d0b092239477810",
+    "src/floater_finder/detectors/contextual_similarity.py": "d11ed2082aea895bd8963c4174cc8e78439b9d3dd06d103d2ffe41a585a80b4c",
+    "src/floater_finder/detectors/placement.py": "d0bbb5f16ef7f1a104e87a8550d0d530a51c352573357b765d7e26eebae50b2b",
+    "src/floater_finder/fragment_dependence.py": "4b296933afc00a515bfb091b8d42a6e28606519d43a5563e447e27b5ca85c155",
+    "src/floater_finder/predictors/data.py": "fc57900170b755c9be93ceb29636a8fcced635fc0e2156148a98fb45bf793da0",
+    "scripts/panda_topology_context.py": "641ffb035cbf73f27470d33f9f4499bb5eafaf2bc380a09453f2501fc8d24fe6",
+    "scripts/slurm/panda_topology_context.sbatch": "c577bc993f86ead328bb16bf5f5ead7f801580a548b1d59239994b3b18a4b6c2"
+  }
+}
