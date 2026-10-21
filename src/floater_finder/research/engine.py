@@ -286,7 +286,7 @@ def apply_intervention(host, donor, spec, *, occupancy=None):
                 raise ValueError('Replacement host region must be four-connected')
         feats, all_coords, ids, truth = host.feats.copy(), host.coords.copy(), host.tile_ids.copy(), host.foreign_mask.copy()
         feats[target] = donor.feats[indices]
-        truth[target] = True
+        truth[target] = spec.condition != 'same_source_sham'
     else:
         feats = np.concatenate([host.feats, donor.feats[indices]])
         all_coords = np.concatenate([host.coords, coords])
@@ -294,19 +294,21 @@ def apply_intervention(host, donor, spec, *, occupancy=None):
         # Preserve the historical S1 empty-array Unicode widening as well as the IDs.
         suffix = np.array(added_ids) if spec.task == 's1' and spec.mode == 'append_legacy' else np.array(added_ids, dtype=str)
         ids = np.concatenate([host.tile_ids, suffix])
-        truth = np.concatenate([host.foreign_mask, np.ones(count, bool)])
+        truth = np.concatenate([host.foreign_mask, np.full(count, spec.condition != 'same_source_sham', dtype=bool)])
     metadata['injection'] = _legacy_metadata(host, donor, indices, spec.percent, spec.seed, spec.task, spec.condition, translation)
     if spec.mode != 'append_legacy' or spec.condition == 'same_source_sham':
         metadata['injection'].update(kind='synthetic_PANDA_research_v1_representation_intervention', mode=spec.mode,
             condition=spec.condition, placement='retained host coordinates' if replacement else 'verified overview empty footprint; within 224 um Chebyshev tissue context',
             representation_only=True, pixel_composition=False, synthetic_foreign_tissue=spec.condition != 'same_source_sham',
-            replacement_indices=list(spec.replacement_indices), context=spec.context,
+            replacement_indices=list(spec.replacement_indices), altered_count=count, foreign_count=int(truth.sum()), context=spec.context,
             occupancy_source_sha256=occupancy.source_sha256 if occupancy else None)
     result = Slide(feats, all_coords, ids, metadata, truth)
     return InterventionResult(result, SlideArtifact.from_slide(host), canonical(dict(schema_version=1, spec=asdict(spec),
         host_identity=slide_identity(host), donor_identity=slide_identity(donor), result_identity=slide_identity(result),
         dose_denominator='original_host_tiles', realized_percent=100*count/len(host.feats), representation_only=True,
         synthetic_foreign_tissue=spec.condition != 'same_source_sham', oracle_original_state_retained=True,
+        altered_indices=list(spec.replacement_indices) if replacement else list(range(len(host.feats), len(host.feats)+count)),
+        actual_foreign_count=int(truth.sum()), altered_count=count,
         occupancy=(dict(source_sha256=occupancy.source_sha256, mask_sha256=hashlib.sha256(occupancy.mask_bytes).hexdigest(),
             shape=list(occupancy.shape), pixel_um=list(occupancy.pixel_um), origin_um=list(occupancy.origin_um),
             segmentation_rule=occupancy.segmentation_rule) if occupancy is not None else None))))

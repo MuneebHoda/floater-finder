@@ -131,6 +131,9 @@ def test_context_mode_and_same_source_sham_are_explicit_representation_controls(
     spec = InterventionSpec('s1', 'same_source_sham', 'within_region_context', 10, 1, (0, 1), (100., 400.), context='observed sparse edge')
     result = apply_intervention(h, h, spec, occupancy=occupancy())
     assert result.slide.metadata['injection']['synthetic_foreign_tissue'] is False
+    assert not result.slide.foreign_mask.any()
+    assert json.loads(result.audit_json)['altered_count'] == 2
+    assert json.loads(result.audit_json)['actual_foreign_count'] == 0
     assert result.slide.metadata['injection']['pixel_composition'] is False
     same(h, result.verify())
     with pytest.raises(ValueError, match='context'): replace(spec, context=None)
@@ -146,3 +149,14 @@ def test_deterministic_multiple_donors_capacity_and_unknown_patient_disclosure()
     a = select_donors(h, sources, selection, 's1', 10, 20261020)
     assert a == select_donors(h, sources, selection, 's1', 10, 20261020)
     assert len(a) == 2 and len({r['donor_id'] for r in a}) == 2 and all(r['full_capacity'] for r in a)
+
+
+def test_same_source_replacement_is_a_zero_edit_negative_control():
+    h = slide('native-control', 0)
+    result = apply_intervention(h, h, InterventionSpec('s1', 'same_source_sham', 'replacement', 10, 0,
+        (0, 1), replacement_indices=(0, 1)))
+    assert not result.slide.foreign_mask.any()
+    assert np.array_equal(result.slide.feats, h.feats)
+    assert binary_predictions(result.slide, text()) == binary_predictions(h, text())
+    assert result.slide.metadata['injection']['foreign_count'] == 0
+    assert result.slide.metadata['injection']['altered_count'] == 2

@@ -6,12 +6,19 @@ from pathlib import Path
 import numpy as np
 from ..artifacts import write_json
 from ..injection import connected_fragment
-from ..panda_review_run import load_sources, read_overview
+from ..panda_review_run import read_overview
 from ..panda_stress import inject_development_s1, binary_predictions, foreign_count
 from ..panda_s2 import inject as legacy_grade_inject, predictions as grade_predictions
 from .contracts import canonical, slide_identity, ExperimentRun, DonorSelection, InterventionSpec
 from .engine import apply_intervention, select_donors, placement_anchor, VerifiedOccupancy, tile_components
 from .registry import Registry, file_hash
+
+
+def _load_training(manifest, directories, encoded, verification):
+    from ..predictors.data import load_development
+    records, receipt = load_development(manifest, directories, encoded, verification, 'train')
+    sources = {r['slide'].metadata['slide_id']: dict(r, rows=r['annotations'], split='train') for r in records}
+    return sources, receipt
 
 
 def _same_slide(a, b):
@@ -41,12 +48,12 @@ def _occupancy(source, registry, receipt_root, output):
 
 def _summary(trials, exclusions):
     rows = []
-    groups = sorted({(r['task'], r['mode'], r['requested_percent'], r['control']) for r in trials})
-    for task, mode, percent, control in groups:
-        group = [r for r in trials if (r['task'], r['mode'], r['requested_percent'], r['control']) == (task, mode, percent, control)]
+    groups = sorted({(r['task'], r['condition'], r['mode'], r['requested_percent'], r['control']) for r in trials})
+    for task, condition, mode, percent, control in groups:
+        group = [r for r in trials if (r['task'], r['condition'], r['mode'], r['requested_percent'], r['control']) == (task, condition, mode, percent, control)]
         correct = [r for r in group if r['baseline']['prediction'] == r['host_truth']]
         induced = sum(r['contaminated']['prediction'] != r['host_truth'] for r in correct)
-        rows.append(dict(task=task, mode=mode, requested_percent=percent, control=control,
+        rows.append(dict(task=task, condition=condition, mode=mode, requested_percent=percent, control=control,
             trial_instances=len(group), unique_host_slides=len({r['host_id'] for r in group}),
             unique_donor_slides=len({r['donor_id'] for r in group}), unique_seeds=len({r['seed'] for r in group}),
             originally_correct_trial_instances=len(correct), initially_incorrect_trial_instances=len(group)-len(correct),
@@ -55,8 +62,9 @@ def _summary(trials, exclusions):
             mean_margin_shift=float(np.mean([r['margin_shift'] for r in group])),
             oracle_exact_passes=sum(r['oracle_exact_recovery'] for r in group),
             denominator_unit='host/donor/seed trials; repeated measurements, not independent patients'))
-    return dict(metrics=rows, trial_instances=len(trials), excluded_trial_instances=len(exclusions),
+    return dict(metrics=rows, trial_instances=len(trials), exclusion_records=len(exclusions),
         unique_host_slides=len({r['host_id'] for r in trials}), unique_donor_slides=len({r['donor_id'] for r in trials}),
+        unique_foreign_donor_slides=len({r['donor_id'] for r in trials if r['control'] != 'same_source_sham'}),
         exact_oracle_passes=sum(r['oracle_exact_recovery'] for r in trials),
         exact_legacy_comparisons=sum(r['legacy_exact_match'] for r in trials),
         coordinate_only_invariance_checks=sum(r['coordinate_only_bag_invariant'] is True for r in trials),
@@ -76,11 +84,13 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
     if not os.environ.get('SLURM_JOB_ID') or os.environ.get('SLURM_JOB_GPUS'):
         raise RuntimeError('Real shared-engine acceptance requires bounded CPU Slurm; no GPU')
     config = json.loads(Path(protocol).read_text())
-    if (config['schema_version'] != 1 or config['splits'] != ['train'] or config['host_limit_per_task'] != 2 or
+    if (config['schema_version'] not in (1, 2) or config['splits'] != ['train'] or config['host_limit_per_task'] != 2 or
             config['seeds'] != [20261020, 20261021, 20261022] or config['percentages'] != [0, .25, .5, 1, 2, 5, 10] or
             config['modes'] != ['append_legacy', 'near_tissue', 'replacement', 'within_region_context']):
         raise ValueError('Preregistered bounded training-only acceptance configuration required')
-    sources, receipt = load_sources(manifest, directories, encoded, verification, ('train',))
+    if config['schema_version'] == 2 and (not predictor_path or config['tasks'] != {'s1': ['cancer'], 's2': ['high_gp45', 'same_grade_gp3_only']}):
+        raise ValueError('S2 v2 requires the frozen improved predictor and predeclared same-grade controls')
+    sources, receipt = _load_training(manifest, directories, encoded, verification)
     identity = dict(manifest_sha256=file_hash(manifest), directories_sha256=file_hash(directories),
         verification_sha256=file_hash(verification), text_fingerprint=receipt['text_fingerprint'],
         input_identities={sid: slide_identity(s['slide']) for sid, s in sources.items()})
@@ -89,6 +99,17 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
         from ..predictors import load_predictor
         improved = load_predictor(predictor_path)
         identity['predictor_files'] = {n: file_hash(Path(predictor_path)/n) for n in ('predictor.json', 'parameters.npz')}
+        selection_path = Path(predictor_path).parents[2]/'selection_frozen.json'
+        if config.get('predictor_selection_sha256') and file_hash(selection_path) != config['predictor_selection_sha256']:
+            raise ValueError('Frozen training-only predictor selection changed')
+        if config.get('predictor_selection_sha256'):
+            selection = json.loads(selection_path.read_text())
+            selected = selection['tasks']['low_high']
+            if (selected['primary'] != improved.spec['model_id'] or not selected['s2_engineering_readiness'] or
+                    selection['calibration_opened_for_selection'] or selection['test_slides_scored'] or
+                    improved.spec['classes'] != ['low_grade', 'high_grade']):
+                raise ValueError('Training-only low/high predictor readiness/identity gate failed')
+            identity['predictor_selection_sha256'] = file_hash(selection_path)
     frozen = dict(protocol=config, protocol_sha256=file_hash(protocol), input_identity=identity,
                   predictor_selected_before_contaminated_predictions=True)
     registry = Registry(output, ExperimentRun(config['experiment_id'], config['hypothesis'], source_commit,
@@ -102,7 +123,8 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
     registry.status('running', slurm_job_id=os.environ['SLURM_JOB_ID'])
     trials, exclusions, selected_hosts, geometry = [], [], {}, {}
     try:
-        for task, condition in config['tasks'].items():
+        tasks = [(task, condition) for task, values in config['tasks'].items() for condition in ([values] if isinstance(values, str) else values)]
+        for task, condition in tasks:
             grade = 0 if task == 's1' else 1
             hosts = sorted(sid for sid, s in sources.items() if s['slide'].metadata['isup_grade'] == grade)[:config['host_limit_per_task']]
             selected_hosts[task] = hosts
@@ -119,12 +141,14 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                 for seed in config['seeds']:
                     donors = select_donors(host, sources, selection, task, 10, seed)
                     if not donors:
-                        exclusions.append(dict(task=task, host_id=sid, seed=seed, reason='No eligible same-split annotated connected donor'))
+                        exclusions.append(dict(task=task, condition=condition, host_id=sid, seed=seed, reason='No eligible same-split annotated connected donor'))
                     # Same-source sham uses the native host, and cannot be labelled foreign tissue.
                     native_part = tile_components(host)[0]
                     native_count = min(foreign_count(10, len(host.feats)), len(native_part))
                     native_order = native_part[connected_fragment(host.subset(native_part), native_count, seed)]
-                    donors.append(dict(donor_id=sid, indices=native_order.tolist(), component_capacity=len(native_order), sham=True))
+                    first_condition = config['tasks'][task] if isinstance(config['tasks'][task], str) else config['tasks'][task][0]
+                    if condition == first_condition:
+                        donors.append(dict(donor_id=sid, indices=native_order.tolist(), component_capacity=len(native_order), sham=True))
                     for pairing in donors:
                         did, order = pairing['donor_id'], np.array(pairing['indices'], dtype=int)
                         donor, sham = sources[did]['slide'], pairing.get('sham', False)
@@ -142,7 +166,7 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                         for percent in config['percentages']:
                             count = foreign_count(percent, len(host.feats))
                             if count > len(order):
-                                exclusions.append(dict(task=task, host_id=sid, donor_id=did, seed=seed, requested_percent=percent,
+                                exclusions.append(dict(task=task, condition=condition, host_id=sid, donor_id=did, seed=seed, requested_percent=percent,
                                     reason='Fixed donor lacks unique connected capacity', requested_count=count, capacity=len(order)))
                                 continue
                             indices = order[:count]
@@ -150,7 +174,7 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                             appended = apply_intervention(host, donor, append_spec)
                             append_prediction = scorer(appended.slide)
                             for mode in config['modes']:
-                                key = f'{task}-{sid}-{did}-{seed}-{percent:g}-{mode}'
+                                key = f'{task}-{condition}-{sid}-{did}-{seed}-{percent:g}-{mode}'
                                 cached = registry.load_checkpoint(key)
                                 if cached is not None:
                                     (exclusions if cached.get('excluded') else trials).append(cached)
@@ -158,7 +182,7 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                                 if mode == 'replacement' and count > len(target_order):
                                     placement_failures['replacement'] = 'Host lacks connected replacement-region capacity'
                                 if count and mode in placement_failures:
-                                    exclusion = dict(excluded=True, task=task, host_id=sid, donor_id=did, seed=seed,
+                                    exclusion = dict(excluded=True, task=task, condition=condition, host_id=sid, donor_id=did, seed=seed,
                                         requested_percent=percent, mode=mode, reason=placement_failures[mode])
                                     registry.checkpoint(key, exclusion); exclusions.append(exclusion)
                                     continue
@@ -182,7 +206,7 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                                     invariant = np.array_equal(result.slide.feats, appended.slide.feats) and prediction == append_prediction
                                     if not invariant:
                                         raise RuntimeError('Coordinate-only bag prediction changed; stop')
-                                row = dict(task=task, mode=mode, control='same_source_sham' if sham else 'annotated_donor',
+                                row = dict(task=task, condition=condition, mode=mode, control='same_source_sham' if sham else ('same_grade_donor' if condition == 'same_grade_gp3_only' else 'annotated_donor'),
                                     host_id=sid, donor_id=did, seed=seed, requested_percent=percent, realized_percent=100*count/len(host.feats),
                                     host_tiles=len(host.feats), donor_tiles=count, donor_indices=indices.tolist(),
                                     donor_tile_ids=donor.tile_ids[indices].tolist(), host_truth=labels[0], baseline=baseline,
@@ -193,6 +217,8 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                                 registry.checkpoint(key, row); trials.append(row)
         result = dict(_summary(trials, exclusions), source_commit=source_commit, slurm_job_id=os.environ['SLURM_JOB_ID'],
             selected_hosts=selected_hosts, selected_before_outcomes=True, input_identity=identity,
+            s2_training_stress_is_resubstitution=bool(improved),
+            s2_v2_full_cohort_completed=False, independent_validation_required=True,
             predictor_kind='training-selected improved S2' if improved else 'historical fixed S1 top5/S2 mean',
             clinical_interpretation='No clinical validity or foreignness diagnosis established; placement is representation-only',
             geometry={sid: record for sid, (_, record) in geometry.items()})
