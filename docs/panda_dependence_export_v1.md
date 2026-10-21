@@ -55,7 +55,7 @@ shown before submission. Do not reuse a consumed stage approval, retry, duplicat
 or overwrite an existing report run. No images/arrays, model calls, GPU, downloads,
 new calibration, classification performance measurement or final-test execution.
 
-New intended output, not yet a completion claim:
+Verified output, created by job 23102479:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1`
 
@@ -82,3 +82,29 @@ python scripts/panda_dependence_export.py --config configs/panda_dependence_expo
 wrapper and `--execute`. Exact staged source/command and observed export findings
 will be appended only after they exist. Export success is not detector validation
 or permission to unseal the rejected final evaluation.
+
+
+## Verified staging and exact submission
+
+Source `1a388ef47c393afff11e73d53e05783a6a4723d5` was pushed and staged read-only at:
+
+`/u/mhoda/floater-finder/releases/panda-dependence-export-v1-20261021T172655Z/source`
+
+All 260 source files and eight input hashes verified before submission; queue
+empty and output absent. Archive SHA256 `a43ac88d6cd706d0adbe14d6001101e0ef53600888192b5179a15e046f2554ad`;
+source-manifest SHA256 `9439d7d57216c3626fb2c7fbd74a5be4ae49b9c39412744f601b8d04819263d5`.
+
+Submitted once as **23102479**:
+
+```sh
+sbatch --parsable /u/mhoda/floater-finder/releases/panda-dependence-export-v1-20261021T172655Z/source/scripts/slurm/panda_dependence_export.sbatch /u/mhoda/floater-finder/releases/panda-dependence-export-v1-20261021T172655Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z 0d27e9f62c96e1e5e74466b2519e9e1c2f48bfe221a525da406b41517eaab970 /work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1 1a388ef47c393afff11e73d53e05783a6a4723d5
+```
+
+Authorization receipt SHA256 `0b7c202b3ea7166209bfea7823407f97e5d098682d28082372ebdfd15550c59e`.
+The latest “next” advances this new bounded integration; resource values are
+agent-selected, not expressly chosen by the user. No consumed approval reused.
+Job **23102479 completed 0:0 in 16 seconds**. All 72 JSON +72 HTML +index files,
+73 checkpoints /76 events verified. [Actual cached-dependence counts, controls,
+permission-check note and remaining visual limitations](../reports/panda_dependence_export_results_v1.md).
+All review decisions remain null. This bounded export scope is complete; no extra
+job or retry was submitted.
