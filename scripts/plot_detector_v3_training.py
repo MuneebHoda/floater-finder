@@ -18,11 +18,14 @@ a=parser.parse_args();r=json.loads(a.report.read_text());obs=json.loads(a.observ
 a.output.mkdir(parents=True,exist_ok=False)
 methods=list(r['methods']);colors=plt.colormaps['tab10'](np.arange(len(methods)))
 labels=[m.replace('_',' ') for m in methods]
-plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'savefig.facecolor':'white'})
+plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'savefig.facecolor':'white','svg.hashsalt':'floater-finder-detector-v3-training-v1'})
 
 def save(fig,name):
     fig.savefig(a.output/(name+'.png'),dpi=180,bbox_inches='tight')
-    fig.savefig(a.output/(name+'.svg'),bbox_inches='tight');plt.close(fig)
+    svg=a.output/(name+'.svg')
+    fig.savefig(svg,bbox_inches='tight',metadata={'Date':None})
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
+    plt.close(fig)
 
 fig,axes=plt.subplots(1,2,figsize=(12,4.5))
 x=np.arange(len(methods))
@@ -84,4 +87,4 @@ fig.suptitle('Two-stage review preserves visual shortlists; influence is not pro
 fig.tight_layout();save(fig,'two_stage_vs_and')
 write_json(a.output/'provenance.json',dict(source_kind='real',scope='training-only cross-fit',slurm_job_id=r['slurm_job_id'],
     source_commit=r['source_commit'],report_sha256=file_sha256(a.report),observations_sha256=file_sha256(a.observations),
-    plots={p.name:file_sha256(p) for p in a.output.iterdir()},prediction_action='none',held_out_predictions=False))
+    plotter_sha256=file_sha256(__file__),plots={p.name:file_sha256(p) for p in a.output.iterdir()},prediction_action='none',held_out_predictions=False))
