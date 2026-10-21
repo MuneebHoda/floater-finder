@@ -1,5 +1,10 @@
 # Stable-context candidate: implementation complete, real execution pending
 
+**Historical preparation record:** after the user confirmed reconnection, job
+**23108680 completed 0:0 in21s**. Both candidates failed the frozen utility gate.
+[Verified outcomes and limitations](panda_stable_context_results_v1.md).
+The preparation text below records the earlier source-freeze/authentication state.
+
 A new original-training candidate uses **32 outside tiles /three fixed seeds**
 and the minimum robust-NN5 score, with explicit support/majority/mapping abstention.
 It compares the matched full-context score under the same eligibility and new

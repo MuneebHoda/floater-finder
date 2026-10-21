@@ -105,7 +105,7 @@ dataset download, new GPU encoding, or original final-test job is included.
 Latest user “So do that to” advances remaining technical validation; resource
 values are agent-selected within the bounded existing-CONCH CPU research scope.
 
-Intended new output, not a claim it exists:
+Verified output, created by completed job 23108680:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-review/stable-context-v1`
 
@@ -123,10 +123,11 @@ without changing production code or suppressing warnings. Fixtures never supply
 PANDA performance evidence. All six previous runtime freezes, main and 33 legacy
 source hashes remain intact.
 
-Real execution is **unsubmitted**: the single shared-connection test returned
-`Permission denied`; no retry was made. The user must reconnect privately with
-`ssh ncsa-floater` and confirm before remote staging/inspection/submission resumes.
-Actual expert review is pending, and no scientific outcome is claimed here.
+At source freeze, the single shared-connection test returned `Permission denied`
+and no retry was made. After the user confirmed private manual reconnection,
+identity/source/input/queue checks passed and the job below was submitted once.
+The user also confirmed no reviewer is available; actual human review remains
+pending. The experiment has now [completed and failed its utility gate](../reports/panda_stable_context_results_v1.md).
 
 Source-only preflight:
 
@@ -136,6 +137,30 @@ python scripts/panda_stable_context.py --config configs/panda_stable_context_v1.
 ```
 
 `--check-inputs` adds remote metadata checks; arrays/measurements require the bounded
-Slurm wrapper and explicit `--execute`. Exact staged command remains pending a
-successful, user-confirmed reconnection. Do not interpret software tests or this
-preparation document as measured detector success or permission to unseal final data.
+Slurm wrapper and explicit `--execute`. Do not interpret software tests or this
+preparation document as detector success or permission to unseal final data.
+
+## Verified staging and exact executed command
+
+Pushed source `204c194524943e75813e966f300e39dbb5e63bcb` was staged read-only at:
+
+`/u/mhoda/floater-finder/releases/panda-stable-context-v1-20261021T214940Z/source`
+
+All 265 source files and seven input receipts verified. Own queue empty, CPU
+partition up and output absent before submission. Archive SHA256
+`0956e4e42d60edf24a2bb489296d1d5b728178732c0516ea9856b784a7e5ce68`;
+source-manifest SHA256 `0933e036ed0b0f8c4afc751b3c8cde738397c7a20c143b0a02695ed00ac852aa`.
+The command/resources/output were shown before the only submission:
+
+```sh
+sbatch --parsable /u/mhoda/floater-finder/releases/panda-stable-context-v1-20261021T214940Z/source/scripts/slurm/panda_stable_context.sbatch /u/mhoda/floater-finder/releases/panda-stable-context-v1-20261021T214940Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z bb92f57b73190cf207e32248720b7f963c742086942c7186b6a76d3540b093ae /work/nvme/bfqi/mhoda/floater-finder/panda-review/stable-context-v1 204c194524943e75813e966f300e39dbb5e63bcb
+```
+
+Job **23108680 completed 0:0 in21s**, node cn137, zero GPUs. All 96 case
+checkpoints +summary and 100 events verify; 473 eligible components /1419 estimates.
+Independent JSON inspection reproduces source-disjoint folds, every subset,
+clean-only thresholds, shortlist metrics and hypothetical saved-score pooling.
+Primary recall3/24, source-exact recovery1/12 and clean alerts8/72 fail the frozen
+targets. Comparator recall2/24 and recovery1/12 also fail. No primary switch,
+retuning, extra job or final-test launch follows; source/protocol/main and prior
+evidence remain intact. Human review stays0/24. This bounded scope is complete.
