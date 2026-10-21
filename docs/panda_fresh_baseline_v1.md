@@ -43,7 +43,7 @@ every evaluation input. It is not a training set. The historical tiler, existing
 train/calibration loader and all frozen legacy files are unchanged.
 
 Clean tiling keeps 112-µm requested FOV, 224-pixel saved exports, 512 tiles/slide,
-20,000 candidate cells, RGB tissue fraction0.1 and seed20261020. The existing
+20,000 candidate cells, RGB tissue fraction 0.1 and seed 20261020. The existing
 canonical CONCH preprocessing still applies during separately approved encoding.
 Mask fractions never enter prediction or clean sampling.
 
@@ -51,7 +51,7 @@ The fresh loader checks membership/exclusion lists before opening arrays; verifi
 the embedding/tiling receipts, source metadata, prompt/text/model fingerprints,
 coordinates, tile IDs, original grades, physical units and unbiased sampling;
 and rejects original test IDs, enriched/injected bags, incomplete receipts and
-corrupt artifacts. All60 sources must pass **before the first prediction**. A
+corrupt artifacts. All 60 sources must pass **before the first prediction**. A
 technical shortfall stops v1 with no silent replacement/exclusion. Record failures;
 any necessary intake amendment must be explicit and frozen before predictions,
 preserving v1 and every unusable case. Missing/corrupt masks may require an
@@ -66,30 +66,30 @@ job. The 24 original final-test predictions stay sealed.
 ## Reviewable acquisition and CPU scope
 
 The frozen [acquisition plan](../configs/panda_fresh_baseline_v1/acquisition.json)
-contains exactly 60 images plus60 masks, totaling **1,348,184,402 catalog TIFF
-bytes** (about1.35GB). Transfer packaging/wire bytes and network duration are
+contains exactly 60 images plus 60 masks, totaling **1,348,184,402 catalog TIFF
+bytes** (about 1.35 GB). Transfer packaging/wire bytes and network duration are
 unmeasured. Kaggle terms/access and live download availability are not checked
 by reading credential files or authenticating in this preparation.
 
 | Stage | Exact bound | Gate |
 | --- | --- | --- |
-| Selective acquisition | 1 CPU Slurm job; 2 CPUs,4GB,1hour maximum; at most2 allocated CPU-hours | Explicit exact-plan approval |
-| Reader/mask audit and representative tiling | Six serialized ten-slide CPU chunks,2CPUs,8GB,15minutes each; at most3 CPU-hours total | Acquisition integrity, then inspect the first chunk before the remaining five; preserve failures |
-| Future CONCH encoding | At most30,720tiles, oneA100,4CPUs,16GB,30minutes (0.5GPU-hour) proposal | Actual CPU artifacts/tile counts verified, then separate explicit GPU approval |
-| Future clean prediction | 2CPUs,8GB,20minutes; all60 verified embeddings | Frozen protocol/input verification and approved execution scope |
+| Selective acquisition | 1 CPU Slurm job; 2 CPUs, 4 GB, 1 hour maximum; at most 2 allocated CPU-hours | Explicit exact-plan approval |
+| Reader/mask audit and representative tiling | Six serialized ten-slide CPU chunks, 2 CPUs, 8 GB, 15 minutes each; at most 3 CPU-hours total | Acquisition integrity, then inspect the first chunk before the remaining five; preserve failures |
+| Future CONCH encoding | At most 30,720 tiles, one A100, 4 CPUs, 16 GB, 30 minutes (0.5 GPU-hour) proposal | Actual CPU artifacts/tile counts verified, then separate explicit GPU approval |
+| Future clean prediction | 2 CPUs, 8 GB, 20 minutes; all 60 verified embeddings | Frozen protocol/input verification and approved execution scope |
 
 The immediate approval request is **acquisition plus bounded CPU input validation/
 tiling only**, at most five allocated CPU-hours in requested wall-time caps.
 It includes no GPU job, checkpoint/data expansion, contamination draw or final
-prediction. Expected working storage is about10GB, an estimate rather than a
+prediction. Expected working storage is about 10 GB, an estimate rather than a
 quota. The first tiling chunk profiles real costs and stops on incompatibility.
 CPU QoS allows one submitted job per user; do not submit arrays/duplicates.
 
-At the bounded Delta recheck, all120 proposed paths were absent; the acquisition
+At the bounded Delta recheck, all 120 proposed paths were absent; the acquisition
 and CPU interpreter paths existed, the user's queue was empty and
-`cpu-interactive` was up with a one-hour limit. Site balances were5,425 rounded
+`cpu-interactive` was up with a one-hour limit. Site balances were 5,425 rounded
 CPU hours /8 GPU hours, shared snapshots rather than reservations. Approximately
-4.03TB filesystem space was available, also shared. No WSI or mask was opened.
+4.03 TB filesystem space was available, also shared. No WSI or mask was opened.
 
 Authoritative existing data root: `/work/nvme/bfqi/mhoda/panda/`.
 New intended acquisition receipts:
@@ -99,7 +99,9 @@ New intended downstream output root:
 These new output paths are proposals, not claims that data artifacts exist there.
 
 Exact staged source path, full acquisition command and six CPU chunk commands
-are recorded in the preparation receipt after immutable source staging. Submit
+are in the [preparation receipt](../reports/panda_fresh_baseline_preparation_v1.json).
+Source `bfd4416936d2c35d764d6fd46e1017f110ef48db` verified all 226 staged files;
+the Delta metadata/model preflight passed without predictions. Submit
 only after scope approval; do not use this draft as an automatic job chain.
 
 ## Frozen files, software checks and next command
@@ -115,7 +117,7 @@ only preflight, exact acquisition membership/bytes, physical/sampling/label
 provenance, original-test exclusion before I/O, changed/corrupt artifacts,
 incomplete receipts, grade denominators, explicit CPU execution and output
 preservation. These do not establish real reader/encoding compatibility or fresh
-scientific performance. The default local preflight verifies60 IDs/four models/
+scientific performance. The default local preflight verifies 60 IDs/four models/
 129 exclusions and computes no predictions.
 
 Read-only next command:
@@ -138,5 +140,5 @@ PYTHONPATH=src .venv/bin/python scripts/panda_fresh_baseline_prepare.py \
 
 The metadata source paths/hashes are preserved in the earlier proposal. No
 credentials are requested or recorded. `AGENTS.md` explicitly requires approval
-for new downloads/GPU scope; the already completed120-slide approval is not reused
+for new downloads/GPU scope; the already completed 120-slide approval is not reused
 for these new candidates.

@@ -1,5 +1,13 @@
 # Floater Finder progress
 
+## Fresh baseline preparation — October 20
+
+The fixed 60-slide Radboud proposal now has a legacy-compatible execution manifest, exact 120-file acquisition plan, four frozen predictor hashes, default metadata-only preflight and CPU-only clean prediction runner. Original training-selected linear primaries remain primary for both tasks; corrected historical cancer top-5% and grade mean are fixed comparators. The fresh cohort is slide-disjoint from 129 exposed IDs; patient independence is unknown. Cancer uses all 60, low/high excludes benign and uses 40. No detector or final-readiness claim is inferred.
+
+Source **bfd4416** was separately staged and all **226 files verified**. The Delta preflight verified 60 IDs/four models/129 exclusions without predicting. **284 tests pass**, after rebuilding the installed package to match source. Bounded read-only Delta checks found zero of the 120 image/mask files present, existing acquisition/CPU runtimes, and an empty user queue. No WSI, new embedding, download or job was launched. Main, the 33 frozen historical files, final protocol and submission files remain unchanged.
+
+The concrete pending request covers **1,348,184,402 catalog TIFF bytes** plus acquisition and six serialized CPU input/tiling chunks (at most five requested CPU-hours total, first-chunk profiling gate). It includes no GPU or prediction job. Future encoding needs actual input/tile verification and separate approval. [Frozen protocol, resource table and strict data gates](../docs/panda_fresh_baseline_v1.md); [exact staged commands, hashes and site observations](panda_fresh_baseline_preparation_v1.json). No fresh scientific outcomes are claimed.
+
 ## Paired-placement checkpoint — October 20
 
 Frozen source `bbc2845`, CPU **23069409 completed 0:0 in 271 seconds**, using 0.15056 allocated CPU-hours and no GPU. A separate hash-verified snapshot and sealed 1,657-checkpoint registry preserve 825 saved positive-dose interventions, four clean anchors, all 327 previous exclusions and 1,499 verified PNG exports. Geometry/pair definitions precede detector scoring. The numeric overlap validator fix has isolated regression evidence and does not admit old exclusions.

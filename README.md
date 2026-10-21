@@ -1,5 +1,7 @@
 # Floater Finder
 
+Fresh 60-slide Radboud [baseline validation is prepared and frozen](docs/panda_fresh_baseline_v1.md): unchanged candidate IDs, four pinned predictors, exact acquisition plan and a strict preflight/evaluation runner. **284 tests pass**. Source staging and metadata checks passed; fresh acquisition/CPU intake approval is pending, with no new downloads, jobs, predictions or GPU use.
+
 The latest [paired-placement CPU audit](reports/panda_detector_placement_v1.md) is complete: the frozen primary detects **0/607 foreign-fragment instances**, recovers **0/39 induced-error instances**, and detects 0/59 in each common paired placement mode. This four-host training-only study does not establish a useful review policy. **272 software tests pass**; all final-test predictions remain sealed.
 
 Research now uses training-only frozen-CONCH linear probes, a shared intervention/registry engine and context-aware detector v3. Grade prediction has promising development point estimates but no established independent improvement; v3 remains ineffective at low review burden. The [research checkpoint](reports/panda_research_checkpoint_v1.md) records all candidates, failures, S2 v2 engineering scope, fresh-cohort metadata and resource gates. Historical evidence below is retained; all 24 final-test predictions remain sealed.

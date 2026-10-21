@@ -1,5 +1,13 @@
 # Floater Finder: NCSA setup
 
+## Fresh baseline preparation — October 20
+
+Local Darwin and shared SSH `mhoda` / `dt-login03.delta.ncsa.illinois.edu` were confirmed. Site inspection observed 5,425 rounded shared CPU hours and 8 GPU hours, `cpu-interactive` up with a one-hour cap, and an empty user queue. Exactly 120 proposed Radboud image/mask paths were stat-checked: none present. Shared available storage was 4,031,141,281,792 bytes, not a reservation. The existing Kaggle and PANDA CPU interpreter paths were present; credentials and live Kaggle authentication/download access were not inspected.
+
+Source **bfd4416936d2c35d764d6fd46e1017f110ef48db** was staged at `/u/mhoda/floater-finder/releases/panda-fresh-baseline-v1-20261021T023142Z/source`; all **226 source files** and the default metadata/model preflight verified with no prediction. The [preparation receipt](../reports/panda_fresh_baseline_preparation_v1.json) records the archive hash, exact pending acquisition and CPU tiling commands, observation records and resource bounds. [Protocol and approval scope](panda_fresh_baseline_v1.md).
+
+No new job, image/mask acquisition, WSI processing, GPU or fresh prediction occurred. The proposed new 60-slide download/CPU intake scope remains pending approval; future GPU and fresh scoring have separate gates. Reader/mask usability, actual tissue yield, patient independence and fresh predictive results remain unknown. The original 24 final-test slides remain sealed.
+
 ## Paired-placement CPU audit — October 20
 
 Local Darwin and shared SSH identity `mhoda` / `dt-login03.delta.ncsa.illinois.edu` were verified for this continuation. Site inspection reported 5,447 rounded CPU hours and 8 rounded GPU hours, shared snapshots rather than reservations; `cpu-interactive` was up and the user's queue was empty before submission. The prepared runtime imports NumPy2.0.2 and Pillow12.3.0.
