@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_preview_export_v1",
+  "status": "frozen_before_bounded_training_png_galleries",
+  "hypothesis": "Attach reproducible geometry-only original PNG examples to saved dependence reports without changing predictions or tissue decisions.",
+  "split": "train",
+  "slides": 72,
+  "components": 389,
+  "report_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1",
+  "report_source_commit": "1a388ef47c393afff11e73d53e05783a6a4723d5",
+  "encoded_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "inputs": {
+    "manifest": {
+      "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+      "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+    },
+    "directories": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+      "sha256": "f6825d19cbf60df9b3daf2d12d47c0b9bbb90a791ee5ccb62157892798e51132"
+    },
+    "verification": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+      "sha256": "cef3c1b232ed4b12d767ce2e4d86e62f8f5bd4a1010f0b6a72760e33317cf4d0"
+    },
+    "report_run": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1/run.json",
+      "sha256": "6aa2ddcb11f1dbfc40975f121744bc6811c58f879b3c16d43c25378345bf1325"
+    },
+    "report_seal": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1/seal.json",
+      "sha256": "e39bdef356f22cce786f2598014518a31022187f3c6b3fd1ecf2d7a83978a534"
+    },
+    "report_summary": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1/checkpoints/summary.json",
+      "sha256": "876742124f003983a4edcb44aef8e39f69910b34777cc3027d0cc14ab56b17fa"
+    }
+  },
+  "examples_per_panel": 4,
+  "maximum_tile_references": 3112,
+  "maximum_copied_png_bytes": 536870912,
+  "new_predictions": false,
+  "fit_thresholds": false,
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 4,
+    "maximum_minutes": 5,
+    "gpu": 0
+  },
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1",
+  "authorization_basis": "Latest user next after explicit bounded existing-Delta-tile preview recommendation. One bounded CPU preview export, no GPU/downloads or new model calls; resources agent-selected within that development direction.",
+  "limitations": [
+    "Original72 training only, all389 original RGB components retained; no fresh60/calibration/test arrays or predictions",
+    "Up to four evenly spaced positions in x/y/index order per component/outside panel; no annotation, image, scorer, influence or outcome selection",
+    "Selected PNG byte copies remain identical to encoding inputs; HTML display resizing does not define physical measurement scale",
+    "Tile galleries are not spatial reconstructions, verified piece boundaries, whole-slide coverage or evidence of foreign tissue",
+    "Preview subsets do not replace full comparison support or recalibrate prior scores/gates",
+    "All pixels and detailed artifacts stay on Delta; no images, masks, embeddings or reports downloaded to Mac"
+  ],
+  "source_files": {
+    "src/floater_finder/review_previews.py": "1b506490562187022662bcb63156d3f04294f34197121a714fa97838e42e6a0b",
+    "src/floater_finder/research/preview_export.py": "f24ca60c0be042b514b667d88b8e14f78b41448cf25cfd6667ff59d9fe43166c",
+    "src/floater_finder/review_report.py": "7f358f6c8ae598f6f80a6c1e0159872a7f01ee10b8daeeaa437d927e03ecf768",
+    "src/floater_finder/research/context_safety.py": "58e2bbc8aa7756897edf7c518c7673844adb04ca122cb894d36801f3c445e20d",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "src/floater_finder/research/registry.py": "ec9f069098846677ff93ac58804085fc845448cb5438d8166d0b092239477810",
+    "scripts/panda_preview_export.py": "e06e24c583f2c65337cbb3a29d3dd809d1f62671c466c9503edba4d68f4cdf6c",
+    "scripts/slurm/panda_preview_export.sbatch": "83284a343939d894f4f8947c9aab87a1cc69dd6d61c6806d9be105affde4e26a"
+  }
+}

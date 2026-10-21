@@ -1,5 +1,7 @@
 # Floater Finder
 
+A [bounded saved-PNG gallery extension](docs/panda_preview_export_v1.md) is prepared for the training dependence reports: unchanged encoding-input image bytes, geometry-selected examples and recorded physical coordinates, with no new predictions or foreignness labels. Real image export remains pending; all payloads stay on Delta.
+
 The [review-only dependence export completed](reports/panda_dependence_export_results_v1.md): **72 training-slide JSON/HTML reports, 389 RGB components, 350 passing tests**. It preserves saved baseline/counterfactual evidence and explicit context abstentions, with no ranking, foreignness decisions or tissue removal. All detailed reports remain on Delta; no new predictions, GPU, downloads or final-test access. Visual layout remains unverified and image panels are not yet included.
 
 The [numeric-context/native-control audit completed](reports/panda_context_safety_results_v1.md): **72 training slides, 336 passing tests**. Explicit context abstentions leave 325/389 RGB and 316/377 sampled components eligible for numeric comparison, including 44 and 75 genuine cancer-containing components. Eligibility does not establish foreignness; all review decisions remain unset and tissue is preserved. No new predictions, GPU, downloads or final-test access.
