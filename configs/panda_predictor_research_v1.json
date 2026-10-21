@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda-conch-predictors-v1",
+  "splits_for_selection": ["train"],
+  "known_calibration_role": "Repeatedly inspected descriptive development only; never independent validation",
+  "tasks": {"benign_cancer": ["benign", "cancer"], "low_high": ["low_grade", "high_grade"]},
+  "models": ["zero_shot_mean", "zero_shot_top1pct", "zero_shot_top5pct", "linear_mean", "linear_mean_max_topk"],
+  "c_grid": [0.01, 0.1, 1.0],
+  "top_k": 5,
+  "outer_folds": 4,
+  "inner_folds": 3,
+  "seed": 20261021,
+  "maximum_iterations": 2000,
+  "tolerance": 0.000001,
+  "selection_rule": "Maximize train out-of-fold balanced accuracy, then minimum class recall, then prefer zero-shot mean, linear mean, other zero-shot pooling, concatenated linear features. No calibration or contamination outcome used.",
+  "minimum_support_for_s2_readiness": {"balanced_accuracy": 0.7, "each_class_recall": 0.6},
+  "mil": {"executed": false, "reason": "Only 72 BC / 48 grade training slides, 512-dimensional input, unknown patient IDs; an attention model adds learned tile-weight parameters without sufficient independent groups for credible complexity selection."},
+  "preprocessing": "StandardScaler fit separately on training portion of every inner/outer fold; no scaling before splitting. Mean/max/top-K are deterministic within-slide transforms. Native annotation, size, coordinates, identities and coverage are never model features.",
+  "probabilities": "Balanced logistic outputs are not calibrated probabilities; report descriptive Brier and five fixed bins without fitting a calibration map.",
+  "final_test_scored": false,
+  "clinical_validity_verified": false
+}

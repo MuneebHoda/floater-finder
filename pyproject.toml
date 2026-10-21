@@ -17,6 +17,10 @@ panda = [
     "openslide-python==1.4.6",
     "tifffile==2025.5.10",
 ]
+research = [
+    "scikit-learn==1.7.2",
+    "scipy==1.16.1",
+]
 
 [project.scripts]
 floater-finder = "floater_finder.cli:main"
