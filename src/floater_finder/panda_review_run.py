@@ -155,7 +155,7 @@ def choose_and_validate(cases,config):
             nontrivial_error_recovery=(m['new_error_recovery_rate'] or 0)>=config['minimum_useful_induced_error_recovery'])
     supported=all(all(g.values()) for g in gates.values())
     return dict(selected_rule=selected,training_visual_thresholds=quantiles,grid=grid,comparison=comparison,
-        matched_random=controls,matched_control_forced_size_matches=sum(forced),matched_control_components=len(forced),
+        matched_random=controls,matched_control_forced_size_matches=int(sum(forced)),matched_control_components=len(forced),
         gates=gates,operating_point_supported=supported,selection_uses='training only; calibration validates one selected point without retuning'),raw,control_rows
 
 

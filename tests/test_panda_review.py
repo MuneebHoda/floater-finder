@@ -45,3 +45,21 @@ def test_matched_random_keeps_burden_and_exposes_single_eligible_size_match():
     c['mapping_fraction']=.8
     assert flagged_components(c,dict(kind='visual',visual_threshold=0))==[]
     assert wilson(0,0) is None and wilson(0,24)[1]>.1
+
+
+def test_selected_policy_and_forced_match_counts_are_json_serializable():
+    import json
+    from pathlib import Path
+    from floater_finder.panda_review_run import choose_and_validate
+    config=json.loads((Path(__file__).resolve().parents[1]/'configs/panda_review_development_v1.json').read_text())
+    cases=[]
+    for split in ('train','calibration'):
+        clean=case();clean.update(case_id=split+'-clean',host_id=split+'-clean',split=split,kind='unmodified',requested_percent=0,
+            foreign_mask=[False]*6,clean_prediction='cancer',host_truth='cancer')
+        for p in clean['components']:p['visual']=.1
+        positive=case();positive.update(case_id=split+'-mixture',host_id=split+'-host',split=split,kind='synthetic',requested_percent=10)
+        cases.extend([clean,positive])
+    selection,raw,controls=choose_and_validate(cases,config)
+    assert selection['matched_control_forced_size_matches']>0
+    assert type(selection['matched_control_forced_size_matches']) is int
+    json.dumps(selection,allow_nan=False);json.dumps(raw,allow_nan=False);json.dumps(controls,allow_nan=False)
