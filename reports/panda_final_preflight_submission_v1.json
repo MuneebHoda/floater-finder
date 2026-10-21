@@ -1,0 +1,14 @@
+{
+  "job_id": "23066843",
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source/scripts/slurm/panda_review_preflight.sbatch /u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/floater-finder/panda-review/final-preparation-v1-20261021T000114Z/panda_frozen_protocol_v1.json 695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881",
+  "operation": "Read-only hash-only preflight; no predictions or label decoding",
+  "source_commit": "cde0e4a257898c6abe93d6a4df6ad52c744f31cc",
+  "protocol_sha256": "695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881",
+  "gpus": 0,
+  "cpus": 2,
+  "memory_gb": 4,
+  "wall_minutes": 10,
+  "account": "bfqi-delta-cpu",
+  "partition": "cpu-interactive",
+  "final_job_submitted": false
+}

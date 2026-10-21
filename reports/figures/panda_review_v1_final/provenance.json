@@ -1,0 +1,23 @@
+{
+  "source_kind": "real",
+  "test_predictions_computed": false,
+  "script_sha256": "97df32ae3675b0f4de6cdae23256d7b3331e8e922a5cce83a4ff844ad1043822",
+  "inputs": {
+    "reports/panda_review_selection_v1.json": "f1df88da9502a10c3a99c97fba6f6f53942ca2a4ebd65b05901e0dcb508966ad",
+    "reports/panda_review_diagnostics_v1.json": "5b605c68d7a9650ba4e5eab1711910369a2e263477694ad3881bd087407e06e4",
+    "reports/panda_topology_qa_v1/provenance.json": "3bc1f5b7b2325753f6fcb072bcc92692d590ae3e6ea66363be658cbf897d4e81"
+  },
+  "figures": {
+    "pipeline_and_protocol.png": "da55228f0adeb9a5423a99aa1762301e54651db60774aee652c84d8cd90fbe6c",
+    "pipeline_and_protocol.svg": "007388f818e622c0e5ce7ca4035b23a8be78d4b66abb8bb269f8926ce18d84a1",
+    "review_burden_and_genuine_tissue.png": "68d3b40485dbf116d4ade7998095c5fd35c092c71ce58e374b25b7728d872d57",
+    "review_burden_and_genuine_tissue.svg": "499ec5326a637ce9df5c482d42bd008da3c8b43343783a6d37198a88a8c8947f",
+    "review_failure_funnel.png": "ae2718f325e9d5e02eaab7285c174f317095cd90f61ba957f343f90bf8292388",
+    "review_failure_funnel.svg": "b4a9c8db68c45ad29b8cc5dd589228907567150f0de453573f748925b224d111",
+    "review_tradeoff.png": "98861316c69000a410721fb7d2476cbfe11ef9718b4d55a54d6b5e8340d75c19",
+    "review_tradeoff.svg": "c73d84b2d00446dd96bdb586d95d490ed35604c220609aca3498ce887c84bca5",
+    "topology_quality_checks.png": "318b27d2d76394687d5d07ef238a69baf3d2c5d41cae788938987605bad796bd",
+    "topology_quality_checks.svg": "e28ef2c7537300c097333b976af1ef439ceedce6a9bff01c6d83758d05e585e3"
+  },
+  "matched_control_limitation": "Calibration primary has zero flags, so burden-matched random controls also have zero flags and are uninformative."
+}

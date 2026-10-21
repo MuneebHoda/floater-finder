@@ -1,5 +1,19 @@
 # Floater Finder: NCSA setup
 
+## Latest PANDA review-policy checkpoint — October 20
+
+Shared SSH verified `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. CPU-only measurement job 23066481 preserved 96 topology / 256 review-case records before a selection-report JSON serialization failure; corrected selection-only job 23066553 completed `0:0` in 17 seconds from those exact measurement hashes. The selected combined policy has no supported operating point; all 24 final-test slides remain unscored. No acquisition, tiling or GPU inference was repeated.
+
+Read-only preflight 23066843 completed `0:0` in 31 seconds on `bfqi-delta-cpu` / `cpu-interactive` (2 CPUs, 4 GB, ten-minute cap). It verified 10,988 files across 24 test slides, all pinned source files and prepared package versions, without decoding held-out labels or computing predictions. It reported readiness false. Own queue was empty and the final output directory absent at the completion inspection. [Evidence](../reports/panda_final_preflight_completed_v1.json).
+
+- Verified final runtime source commit: `cde0e4a257898c6abe93d6a4df6ad52c744f31cc`; separate snapshot `/u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source` (323 files verified; source files mode 444).
+- Frozen rejected protocol: `/work/nvme/bfqi/mhoda/floater-finder/panda-review/final-preparation-v1-20261021T000114Z/panda_frozen_protocol_v1.json`, SHA256 `695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881` (mode 444).
+- Blinded input contract: the same preparation root's `blinded_test_inputs_v1.json`, SHA256 `da7cc55b2c68356b31fd5692dcea9e8ac8e1734f82d2ffb5d9555e382ae9744f`; IDs/paths/hashes only.
+- CPU runtime: `/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z`; numpy 2.0.2, Pillow 12.3.0, openslide-python 1.4.6, tifffile 2025.5.10 verified by the scheduled preflight.
+- Measurement output: `/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z`; completed reporting output adds suffix `-selection-v2`. Original failed output is preserved.
+
+The exact prepared final command and expected outputs are [documented](panda_final_test_v1.md), **not authorized for submission under this rejected protocol**. Missing scientific inputs are a useful independently validated development policy, verified patient identities and stronger physical-boundary/clinical validation. All earlier setup and experiment history below remains preserved.
+
 ## Latest PANDA scale-up checkpoint
 
 PANDA now has **120 slides / 50,729 verified CONCH embeddings**. The clean development baseline, **192 connected-fragment S1 trials** and **64 calibration piece counterfactuals** are executed. All 192 oracle recoveries pass. Genuine annotated cancer can also be decisive, so no foreignness or calibrated-alert claim follows. The 24 final-test slides remain unscored. [Current results, charts and remaining gates](../reports/panda_s1_and_piece_results_20261020.md).

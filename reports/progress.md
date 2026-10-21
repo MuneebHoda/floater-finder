@@ -1,6 +1,10 @@
 # Floater Finder progress
 
-Initial implementation 2026-10-17; latest verification 2026-10-18, America/Chicago. Real observations are limited to the explicitly labeled smokes below.
+Latest status: **2026-10-20, America/Chicago**. PANDA development review-policy v1 is frozen and rejected. The combined rule meets the user-confirmed ≤10% clean-slide alert / ≤0.5 components-per-slide budgets but detects 0/40 calibration fragments and recovers 0/8 induced-error instances. Decision-only recovers 8/8 instances across two hosts but alerts on 4/24 clean slides and hypothetically damages 3/20 originally correct clean predictions. No useful rule among the 81 preregistered candidates; no threshold relaxation or final-test launch. [Scientific audit and measured policy results](panda_review_results_v1.md).
+
+The preserved 120 slides and 50,729 CONCH embeddings support all current analysis. New RGB topology separates four of six formerly single-component calibration cases; boundaries remain approximate and sensitivity-limited. The new CPU measurement completed its records before a JSON serialization failure; checksum-pinned reporting resumed successfully without reprocessing. Read-only CPU preflight 23066843 completed 0:0 and verified 10,988 files / 24 held-out slides without label decoding or predictions. Frozen runtime source cde0e4a, blocked final command, uncertainty plan and output contract are [documented](../docs/panda_final_test_v1.md). All 24 test slides remain unscored. **192 software tests pass**; software fixtures do not count as real test evidence. [Reproducible figures and presentation outline](panda_presentation_v1.md).
+
+The sections below preserve the dated experiment history, including earlier TCGA smoke counts; they do not supersede the current PANDA status above. Initial implementation was 2026-10-17.
 
 ## Current state
 

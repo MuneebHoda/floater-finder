@@ -1,0 +1,27 @@
+{
+  "protocol_frozen": true,
+  "protocol_sha256": "695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881",
+  "source_commit": "cde0e4a257898c6abe93d6a4df6ad52c744f31cc",
+  "input_files_verified": 10988,
+  "test_slides": 24,
+  "test_predictions_computed": false,
+  "test_labels_decoded": false,
+  "ready_for_final_predictions": false,
+  "readiness_reason": "No useful rule among 81 preregistered candidates: selected combined fragment recall 5/120 train and 0/40 calibration; induced-error recovery 4/38 train and 0/8 calibration. Burden/harm pass but recall/recovery gates fail. Do not execute the final test under this rejected operating point.",
+  "automatic_tissue_action": "none",
+  "scheduler": "JobID|State|ExitCode|Elapsed|MaxRSS\n23066843|COMPLETED|0:0|00:00:31|\n23066843.batch|COMPLETED|0:0|00:00:31|13236K\n23066843.extern|COMPLETED|0:0|00:00:31|\n23066843.0|COMPLETED|0:0|00:00:23|1379612K\n",
+  "queue": "",
+  "final_output_exists": false,
+  "source_snapshot_mode": "0o444",
+  "protocol_file_mode": "0o444",
+  "remote_identity": {
+    "username": "mhoda",
+    "hostname": "dt-login03.delta.ncsa.illinois.edu"
+  },
+  "job_id": "23066843",
+  "operation": "Read-only byte/source/runtime preflight",
+  "final_job_submitted": false,
+  "prepared_final_command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source/scripts/slurm/panda_review_final.sbatch /u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/floater-finder/panda-review/final-preparation-v1-20261021T000114Z/panda_frozen_protocol_v1.json 695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881",
+  "protocol": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/final-preparation-v1-20261021T000114Z/panda_frozen_protocol_v1.json",
+  "source": "/u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source"
+}

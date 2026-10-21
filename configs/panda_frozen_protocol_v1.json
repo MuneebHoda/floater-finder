@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "protocol_id": "panda-review-v1-rejected",
+  "frozen_utc": "2026-10-21T00:10:58.354875+00:00",
+  "automatic_tissue_action": "none",
+  "readiness": {
+    "operating_point_supported": false,
+    "reason": "No useful rule among 81 preregistered candidates: selected combined fragment recall 5/120 train and 0/40 calibration; induced-error recovery 4/38 train and 0/8 calibration. Burden/harm pass but recall/recovery gates fail. Do not execute the final test under this rejected operating point."
+  },
+  "source": {
+    "commit": "cde0e4a257898c6abe93d6a4df6ad52c744f31cc",
+    "files": {
+      "configs/panda_morphology_v1.yaml": "9767f2ddb12f8c20ef905ae65db1796e0cf001a078e8179816022aff6317180a",
+      "configs/panda_review_development_v1.json": "bcc03859732020dcd13eb4922785801317c8eaf0a01f31ceb8e66fa7fa5cdb3c",
+      "scripts/panda_review_final.py": "2f2a2dfe3c233d138b72816da42fbddd5c8ab6344c2dc01a1a3ab305d8aff21a",
+      "scripts/panda_review_preflight.py": "a1a17840cb9194ef9ae11483b0925ac4413cbad44f9fcbc919807afa86f27f85",
+      "scripts/slurm/panda_review_final.sbatch": "c0671ffe38cd52ce0419c2e6ef879dfaf3149949ffd2d012789aabe6751f7762",
+      "scripts/slurm/panda_review_preflight.sbatch": "38abd5cc3021a37734dda3124324c0d9719c4bb20b2a030b559f67771b0abe0e",
+      "src/floater_finder/__init__.py": "73801f9e216e3274115b40665dadd7330884f4ad95efe98576564d607327d4e6",
+      "src/floater_finder/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "src/floater_finder/artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+      "src/floater_finder/cli.py": "b4d57a3c63d4e375b64e24162995c7c958699dfb7c6255400882e15b58b154d3",
+      "src/floater_finder/cohort.py": "adf0d5102226048a9a60f41e5e1f609b01050eec5cdc0bd8e4bb5ea2e1955939",
+      "src/floater_finder/conch.py": "0d1c2b9c1bc5042c5c81b9d2309c78736ed9c8696499e693989b7a13c988f1a0",
+      "src/floater_finder/detection.py": "cf092142e711020481ced70894a608512247f149da974750b480477200e72075",
+      "src/floater_finder/experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+      "src/floater_finder/fixtures.py": "054d38f95f4e079d901134276a3262533a32ee147156b00ece26859c14bbe868",
+      "src/floater_finder/fragment_dependence.py": "4b296933afc00a515bfb091b8d42a6e28606519d43a5563e447e27b5ca85c155",
+      "src/floater_finder/image_runtime.py": "7f76639698d5d1cdafabc0c9bd76774fd60ff69c3f17e2f047edafe5996c64d8",
+      "src/floater_finder/injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+      "src/floater_finder/inventory.py": "93c85975c7149d43b13d3c304894ea87c45bc59c852e152b148efd3d2bd9a4d6",
+      "src/floater_finder/panda.py": "edd4ba0adb16c351859b61b0f4db1e1fff0d68bef2f9be67531f86e9834a927d",
+      "src/floater_finder/panda_baseline.py": "5602b451c884282773eff373590918d93526c3feefd0addec3d6e3deb4dfc3c0",
+      "src/floater_finder/panda_cohort.py": "0a796b5453f7212c634dce389570afd47acac16823b2f95d78fbc44a69a91cfb",
+      "src/floater_finder/panda_encoding.py": "b1d70742936810fb7a7415dc0da35fbc16259f7d5e03c279ed5e7964db6a8ae4",
+      "src/floater_finder/panda_final.py": "ada7b7427971ab2bf7d0bcf1cdb0959eeab64a7b2b9fff5f47805799c33a52ca",
+      "src/floater_finder/panda_final_run.py": "ae4c3bc17ad26840fe4a66b6e2bd1eb3db16837ac42a6e57f3b7843e991b1987",
+      "src/floater_finder/panda_masks.py": "68571df7cec72a1d494d335d47232362dad95ffd8bc2f9f89946726efa664bb7",
+      "src/floater_finder/panda_review.py": "6f64489818cd4e101a0f12e054091a2e62267a64ffa6abc49d279d62d60e0b74",
+      "src/floater_finder/panda_review_run.py": "011a82191e61f98e234b326f9270667eb2cf526673b246c4674a3f6e2ea244e6",
+      "src/floater_finder/panda_stress.py": "e07bbbe279f503519a5c7fbcb5f35ca65a395aeeedee664a6527df57fb30672c",
+      "src/floater_finder/panda_topology.py": "e96105935fffbf66dcfe38591945f45fc3fea50b239756a10d3724d28beea959",
+      "src/floater_finder/reporting.py": "01182b210d17c0430eec881103610781a74ff189a412fd9be2af85b4eabbbab2",
+      "src/floater_finder/scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+      "src/floater_finder/tiling.py": "938709c19c8829b18f425f93c4910c97accd5a54b85ccdea28f5a2550a86f6a6"
+    },
+    "measurement_commit": "cb1cddc12dde114140958b97d93474a7e5761059",
+    "selection_commit": "e200aa08713a2f893f776f08b31955f42b0232e1",
+    "base_commit": "434b401"
+  },
+  "development_evidence": {
+    "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z-selection-v2/selection.json",
+    "sha256": "f1df88da9502a10c3a99c97fba6f6f53942ca2a4ebd65b05901e0dcb508966ad"
+  },
+  "runtime_versions": {
+    "numpy": "2.0.2",
+    "Pillow": "12.3.0",
+    "openslide-python": "1.4.6",
+    "tifffile": "2025.5.10"
+  },
+  "classifier": {
+    "model": "CONCH v1",
+    "pooling": "top5pct",
+    "classes": [
+      "benign",
+      "cancer"
+    ],
+    "tile_scores": "unit-normalized image/text cosine similarity; frozen class prompts; top ceil(0.05*N) tiles averaged separately per class; argmax ties benign",
+    "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+    "text_fingerprint": "1af114595a1aa2657102590b31ab480c431b6b61e87882230791b98609e6ce46",
+    "prompts_sha256": "9767f2ddb12f8c20ef905ae65db1796e0cf001a078e8179816022aff6317180a",
+    "validity": "Engineering zero-shot development baseline, not clinically validated cancer detection."
+  },
+  "review_policy": {
+    "objective": "Identify visually inconsistent and consequential components for pathologist review; never declare foreignness from decision change alone.",
+    "rules": {
+      "combined": {
+        "kind": "combined",
+        "visual_threshold": 0.24603846669197083,
+        "visual_quantile": 0.9,
+        "influence": 0.01,
+        "max_area_mm2": 0.25,
+        "min_isolation_mm": 0.0
+      },
+      "visual_only": {
+        "kind": "visual",
+        "visual_threshold": 0.4695781469345093,
+        "visual_quantile": 0.99
+      },
+      "decision_only": {
+        "kind": "decision"
+      },
+      "spatial_only": {
+        "kind": "spatial",
+        "max_area_mm2": 0.25,
+        "min_isolation_mm": 0.0
+      }
+    },
+    "visual": "Median component tile distance to mean of up to five nearest outside-component cosine neighbors; training-only unmodified quantiles, strict greater-than threshold.",
+    "influence": "Baseline cancer-minus-benign margin minus leave-one-component-out margin; combined threshold inclusive.",
+    "topology": {
+      "pyramid_level": 2,
+      "maximum_pixels": 4000000,
+      "rgb_maximum": 220,
+      "minimum_chroma": 10,
+      "connectivity": 8,
+      "morphology": "none",
+      "tile_component_purity": 0.8,
+      "minimum_foreground_coverage": 0.1,
+      "minimum_mapped_tile_fraction": 0.9,
+      "sensitivity_rgb_maximum": 235,
+      "sensitivity_minimum_chroma": 5
+    },
+    "observed_geometry": "RGB foreground area at measured overview pixel scale; isolation is a bounding-box distance lower bound against all observed tissue, not a pathologist-confirmed boundary.",
+    "unknown_topology": "Retain unassigned tiles; mapping below 90% abstains; abstentions count as missed positive trials, remain in clean-slide burden denominators. Empty counterfactual is unevaluable, never benign.",
+    "matched_random": {
+      "draws": 20,
+      "seed": 20261021,
+      "area_bin_boundaries_mm2": [
+        0.05,
+        0.25,
+        1
+      ],
+      "forced_matches_disclosed": true,
+      "zero_primary_flags_mean_zero_matched_flags": true
+    }
+  },
+  "development_config": {
+    "schema_version": 1,
+    "base_commit": "434b401",
+    "splits": [
+      "train",
+      "calibration"
+    ],
+    "scorer": {
+      "pooling": "top5pct",
+      "classes": [
+        "benign",
+        "cancer"
+      ],
+      "prompts": "configs/panda_morphology_v1.yaml"
+    },
+    "topology": {
+      "pyramid_level": 2,
+      "maximum_pixels": 4000000,
+      "rgb_maximum": 220,
+      "minimum_chroma": 10,
+      "connectivity": 8,
+      "morphology": "none",
+      "tile_component_purity": 0.8,
+      "minimum_foreground_coverage": 0.1,
+      "minimum_mapped_tile_fraction": 0.9,
+      "sensitivity_rgb_maximum": 235,
+      "sensitivity_minimum_chroma": 5
+    },
+    "visual_neighbors": 5,
+    "visual_aggregation": "median of tile distances to mean of up to five nearest outside-component cosine neighbors",
+    "grid": {
+      "training_visual_quantiles": [
+        0.9,
+        0.95,
+        0.99
+      ],
+      "influence": [
+        "flip",
+        0.01,
+        0.02
+      ],
+      "maximum_observed_area_mm2": [
+        0.05,
+        0.25,
+        1.0
+      ],
+      "minimum_isolation_bbox_lower_bound_mm": [
+        0.0,
+        0.1,
+        0.2
+      ]
+    },
+    "budgets": {
+      "unmodified_alert_rate": 0.1,
+      "components_per_slide": 0.5,
+      "genuine_cancer_slide_flag_rate": 0.1,
+      "clean_damage_rate": 0.05
+    },
+    "confirmed_user_budgets": [
+      "unmodified_alert_rate",
+      "components_per_slide"
+    ],
+    "additional_engineering_safety_targets": [
+      "genuine_cancer_slide_flag_rate",
+      "clean_damage_rate"
+    ],
+    "minimum_useful_fragment_recall": 0.2,
+    "minimum_useful_induced_error_recovery": 0.25,
+    "matched_random_draws": 20,
+    "seed": 20261021,
+    "selection": "Train only: satisfy all burden/harm constraints; maximize fragment recall then induced-error recovery, then minimize negative-control alerts and burden. Validate the single selected rule on calibration without retuning. If either split fails, do not authorize final prediction.",
+    "final_test_predictions_authorized": false
+  },
+  "contamination": {
+    "scenario": "S1: native mask-annotated cancer tissue added to benign host, same Radboud provider, distinct slide, same split",
+    "percentages": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10
+    ],
+    "fraction_definition": "100 * foreign tile count / original host tile count; count=ceil(percent*N/100)",
+    "minimum_total_cancer_fraction": 0.1,
+    "seed": 20261020,
+    "connectivity": "4-connected native donor sampled tiles, no gaps, largest component; connected nested prefixes",
+    "pairing": "Deterministic SHA256(seed/host/donor), prioritize donors with capacity for maximum dose; otherwise largest capacity, hash ties; same recorded coordinate geometry; never substitute slides or borrow development donors.",
+    "exclusions": "No eligible donor or insufficient fixed donor capacity is recorded with requested/realized contamination. No replacement draws. All successful positive trials require exact oracle recovery; failure stops evaluation."
+  },
+  "allowed_data_roots": [
+    "/work/nvme/bfqi/mhoda/panda",
+    "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles",
+    "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings",
+    "/work/nvme/bfqi/mhoda/floater-finder/panda-review"
+  ],
+  "data": {
+    "manifest": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+    "manifest_sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81",
+    "directories": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+    "encoded_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+    "verification": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+    "verification_sha256": "cef3c1b232ed4b12d767ce2e4d86e62f8f5bd4a1010f0b6a72760e33317cf4d0",
+    "acquisition_receipts": "/work/nvme/bfqi/mhoda/panda/acquisition-receipts/20261020-scale-v1-120",
+    "blinded_index": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/final-preparation-v1-20261021T000114Z/blinded_test_inputs_v1.json",
+    "blinded_index_sha256": "da7cc55b2c68356b31fd5692dcea9e8ac8e1734f82d2ffb5d9555e382ae9744f",
+    "additional_files": {
+      "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json": "f6825d19cbf60df9b3daf2d12d47c0b9bbb90a791ee5ccb62157892798e51132"
+    }
+  },
+  "test_ids": [
+    "0e4e6e275dbdf6742d98d5f853b2eaf1",
+    "1dd5d88d1e936e032ebb4840b46546f3",
+    "2268c3174c1c0890af7ae1bae4c8cd74",
+    "2409b82676fa73d6a71cde9839222b4b",
+    "467f8386fb72e5fe9970db33c8791302",
+    "47de9353032a12ede4ea28c8217b8a35",
+    "4fcadcef9e166eca9ec5652633434ed4",
+    "514bd15da8c32fabbd07c8b00a147173",
+    "530f322b76df13d90d37b08b7c592e39",
+    "571ff890388328af4b5cc76183ce8189",
+    "68a362123aff27d79dbc5284a948030c",
+    "702a3a5fd638c2f5ca38ed562122b407",
+    "9dc4c474c8f4f01ec503bdcd3043e10a",
+    "a184260ef13d42e03b958406346024e2",
+    "a8f2080a44dfee4946ac69a53e8ed0b1",
+    "b03acf15d51eac8437639fc77ea84b9f",
+    "b2b496615dbf9fb305bbc7ad5ac399c5",
+    "bde972923c4b9cee7d3e2a0661f21583",
+    "cac4a6e019153f88b52ae2fba6b20cef",
+    "d76be95baca47c31d827d59abbe132b6",
+    "daace2b519f2e64bb96e205344e39f50",
+    "efbd55aede0638c4e82fb065d40fa238",
+    "f2d4965abc424e27c5d482ac0155ffd1",
+    "fd34d5fda33d3e8281837a2a4511f7fd"
+  ],
+  "execution": {
+    "source": "/u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source",
+    "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+    "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/final-preparation-v1-20261021T000114Z/final-test-v1",
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu-interactive",
+    "cpus": 2,
+    "memory_gb": 4,
+    "wall_minutes": 10,
+    "gpus": 0,
+    "single_execution": true,
+    "submission_authorized": false
+  },
+  "statistical_analysis_plan": {
+    "primary_unit": "Unique slide; no verified patient IDs. Different slides are not verified different patients.",
+    "clean": "All 24 slides, benign versus any ISUP>0 cancer; confusion rows truth/columns prediction, balanced accuracy and class support. Never treat slide-level grade as per-tile truth.",
+    "classification_uncertainty": "95% percentile bootstrap, 2000 stratified resamples of unique slides within benign/cancer; class recall Wilson95.",
+    "contamination": "Report each dose: unique hosts, originally correct and initially wrong separately; newly induced errors divided by originally correct hosts only. Prediction changes include reversals of pre-existing errors and are distinct. Report all capacity exclusions and zero-dose clean aliases.",
+    "detector": "Per dose and aggregate: known-foreign tile recall, any-hit fragment recall and complete-fragment recall; unmodified slide alerts, mean/max flagged components, mapped coverage/abstentions, genuine annotated cancer components/slides/tiles flagged and unknown-mask cases; no true-foreign precision claim from injected positives.",
+    "hypothetical_filtering": "Report damage among originally correct unmodified slides and recovery among new-error trial instances, with raw counts and unique affected hosts. Filtering is a diagnostic calculation, never a tissue-deletion action.",
+    "uncertainty": "95% Wilson for unique-slide binary outcomes at each dose; aggregate tile/fragment recall and induced-error recovery use 2000 unique-host bootstrap resamples retaining every dose per host, conditional on fixed donors. Shared donors and unknown patient overlap limit population inference. No trial-as-patient intervals.",
+    "bootstrap_seed": 20261021,
+    "bootstrap_repetitions": 2000,
+    "comparisons": "Fixed combined, visual-only, decision-only, spatial-only and 20 size/burden matched random draws. Draws are repeated controls, not independent observations. Zero-flag matched controls are uninformative.",
+    "missing_data": "No invented annotations, score substitutions or quality-based label exclusions. Mask-unavailable tissue remains unknown for genuine-cancer controls. Capacity/exclusion denominators and empty counterfactuals reported.",
+    "finality": "One predeclared final execution after an independently supported development protocol. No threshold/model/prompt/topology/donor revision after final outcomes, no p-value fishing, no claim of clinical floater detection."
+  },
+  "provenance": {
+    "measurement_job": "23066481",
+    "selection_job": "23066553",
+    "component_cases_sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100",
+    "topology_sha256": "3846b9224ff285af79e07e97052f181440d8f883eee0918f92280780d26d5d69",
+    "test_predictions_used_for_development": false,
+    "test_label_values_used_for_selection": false,
+    "patient_independence_verified": false
+  }
+}
