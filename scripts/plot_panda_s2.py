@@ -18,7 +18,7 @@ trials=json.loads((a.input_dir/'trials.json').read_text())
 rows=summary['metrics']; a.output_dir.mkdir(parents=True,exist_ok=False)
 colors={'high_gp45':'#AC3A40','same_grade_gp3_only':'#287C7F','high_gp4_only':'#C28B2F','high_gp5_positive':'#6B5B95'}
 labels={'high_gp45':'High-slide GP4/5+','same_grade_gp3_only':'GG1 GP3+; no GP4/5','high_gp4_only':'GP4+; no GP5','high_gp5_positive':'GP5+ (GP3/4 allowed)'}
-plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none'})
+plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none','svg.hashsalt':'floater-s2-v1'})
 fig,axes=plt.subplots(2,2,figsize=(13,9),layout='constrained')
 for condition in colors:
     selected=[r for r in rows if r['split']=='calibration' and r['pooling']=='mean' and r['condition']==condition and r['hosts']]
@@ -45,7 +45,10 @@ if values:
     lo,hi=min(values),max(values);axes[1,1].plot([lo,hi],[lo,hi],'--',color='#777777',linewidth=1)
 axes[1,1].set(title='Same 10% fragment, different observed contexts',xlabel='Median nearest-5 cosine distance to native donor',ylabel='Median nearest-5 cosine distance to host');axes[1,1].legend(fontsize=8)
 fig.suptitle('PANDA S2 development: synthetic embedding stress, not clinical grading',fontsize=15)
-for ext in ('png','svg'):fig.savefig(a.output_dir/('s2_development.'+ext),dpi=180)
+for ext in ('png','svg'):
+    path=a.output_dir/('s2_development.'+ext)
+    fig.savefig(path,dpi=180,**({'metadata':{'Date':None}} if ext=='svg' else {}))
+    if ext=='svg':path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n')
 plt.close(fig)
 provenance=dict(source_kind='real',scope='training/calibration only; no independent held-out test',source_commit=summary['source_commit'],slurm_job_id=summary['slurm_job_id'],primary_pooling=summary['primary_pooling'],input_sha256={name:hashlib.sha256((a.input_dir/name).read_bytes()).hexdigest() for name in ('summary.json','trials.json')},figure_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in a.output_dir.iterdir()},limitations=['Synthetic right-edge placement is not a natural floater.','Binary low/high changes are not clinical Gleason Grade Group upgrades.','Controls overlap and reuse donor slides.','Repeated doses are not independent patients.','GP4-positive/noGP5 can include GP3; GP5-positive can include GP3/4.','Visual context diagnostic is annotation-informed, not a blinded detector.'])
 (a.output_dir/'provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
