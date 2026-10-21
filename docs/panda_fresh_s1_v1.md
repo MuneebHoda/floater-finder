@@ -1,9 +1,11 @@
-# Evaluated Radboud60 — frozen S1 follow-up preparation
+# Evaluated Radboud60 — frozen S1 follow-up
 
-The next study reuses the 60 evaluated slides and 25,915 verified CONCH v1
-embeddings. It prepares new representation-level contamination outcomes, with no
+The completed study reuses the 60 evaluated slides and 25,915 verified CONCH v1
+embeddings. It measures representation-level contamination outcomes, with no
 additional acquisition, tiling, encoding or model fitting. The original 24 test
 predictions stay sealed. All data and detailed outputs remain on Delta.
+[Observed results and limitations](../reports/panda_fresh_s1_results_v1.md): job
+23083320 completed 0:0 in 148s, 1191 interventions, 2382 exact oracle passes.
 
 ## Fixed design
 
@@ -93,21 +95,24 @@ A sealed shared registry preserves per-case interventions, exclusions, scores,
 component reports, raw metrics, source/input fingerprints and failure states.
 Existing outputs are refused rather than overwritten or automatically resumed.
 
-Proposed single CPU job: account/QoS `bfqi-delta-cpu`, partition `cpu-interactive`,
+Approved single CPU job: account/QoS `bfqi-delta-cpu`, partition `cpu-interactive`,
 2 CPUs, 8 GB, 20 minutes maximum (0.667 allocated CPU-hours), zero GPUs, no downloads
-or WSI/PNG reads. Intake uses already saved arrays and small metadata. The actual
-cost of this new workload is unmeasured; the wall-time cap is not a runtime claim.
+or WSI/PNG reads. Intake uses already saved arrays and small metadata. Observed
+runtime was 148 seconds /0.08222 allocated CPU-hours; the wall-time cap was not
+a runtime guarantee.
 The source snapshot, exact command and bounded remote preflight are recorded in
-`reports/panda_fresh_s1_preparation_v1.json` once staging is complete.
+`reports/panda_fresh_s1_preparation_v1.json` as the historical staging record.
 
-Intended new output, not a claim of executed results:
+Verified new output, created by job 23083320:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1`
 
-Further submission requires the new concrete CPU scope approval described in
-`AGENTS.md`; the completed clean-baseline approval is not reused. No follow-up
-experiment has been submitted or observed in this preparation. New scientific
-results must be committed separately after actual execution and verification.
+The user approved this exact CPU scope with “Approve CPU follow-up”. Job
+**23083320** was submitted once after a new source/input verification and empty-queue
+check. It completed successfully, and the sealed registry, artifact hashes,
+denominators and controls passed inspection. The completed clean-baseline
+approval was not reused. New scientific results are recorded separately in
+`reports/panda_fresh_s1_results_v1.md`. This exact approval is consumed.
 
 ## Completed software and metadata checks
 
@@ -125,9 +130,9 @@ The original protocol and main remain unchanged. Bounded Delta metadata confirms
 all 60 slides have the same recorded 111.82315650205668-µm nonoverlapping tile
 footprint, from TIFF-derived scale, for the 112-µm requested FOV. This supports
 strict compatibility checks without rescaling or inventing coordinates. Donor
-connected capacities and real follow-up outcomes remain unmeasured until the
-approved CPU job. The existing clean outcomes are not repeated contamination
-evidence.
+connected capacities and real follow-up outcomes were unmeasured during
+preparation; the result report now records observed outcomes and nine exclusions.
+The prior clean outcomes are not repeated contamination evidence.
 
 Metadata-only local command (no real slide arrays or predictions):
 
@@ -136,7 +141,7 @@ python scripts/panda_fresh_s1.py --config configs/panda_fresh_s1_v1.json \
   --config-sha256 d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594
 ```
 
-## Verified source staging and exact pending command
+## Verified source staging and approved command
 
 Source `3a3faf199bf2a334648227281a685a999a60f7c9` is staged read-only at:
 
@@ -148,15 +153,18 @@ slide-array reads or new predictions, all three pinned input receipts matched,
 all 60 completion paths were present, and the intended output did not exist.
 The queue was empty; `cpu-interactive` was up with a one-hour limit.
 
-This command runs **on Delta only after the new CPU-scope approval**:
+The approved command was submitted once on Delta as **23083320**:
 
 ```sh
 sbatch --parsable /u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source/scripts/slurm/panda_fresh_s1.sbatch /u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594 /work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1 3a3faf199bf2a334648227281a685a999a60f7c9
 ```
 
-Expected output is a new sealed shared registry under `fresh-s1-v1/`, with raw
+Observed output is a new sealed shared registry under `fresh-s1-v1/`, with raw
 case/role scores, donor tile IDs, replacement targets/translation, exclusions,
 oracle audits, component counterfactuals and summary ledgers. Case audits retain
 both `altered_count` and `actual_foreign_count`; generic realized dose fields
 describe edited representations, so native-sham edits are not biological foreign
-tissue. All raw artifacts stay on Delta. No Slurm job has been submitted.
+tissue. All raw artifacts stay on Delta. Source and all three pinned input
+receipts were rechecked before submission; the queue was empty and the intended
+output absent. The non-secret authorization receipt is stored remotely at
+`reports/fresh-s1-authorization-v1.json` under the fresh Radboud60 root.

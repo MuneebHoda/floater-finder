@@ -1,5 +1,13 @@
 # Floater Finder: NCSA setup
 
+## Fresh S1 execution — October 21
+
+Local Darwin and shared SSH `mhoda` / `dt-login01.delta.ncsa.illinois.edu` verified. Explicitly approved CPU **23083320** ran once on `cn137`, account/QoS `bfqi-delta-cpu`, partition `cpu-interactive`, 2 CPUs /8 GB /20-minute cap, zero GPUs. It completed 0:0 in 148s; Python MaxRSS 281,436 KiB /0.08222 allocated CPU-hours. All 233 staged source files and three baseline input receipts matched before submission; sealed output hashes and input receipts verified afterward.
+
+Frozen source `3a3faf199bf2a334648227281a685a999a60f7c9` is at `/u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source`. Results are separately preserved at `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1`; authorization, output/safety checks and completion receipts are in the parent root’s `reports/`. No datasets, weights or raw reports were downloaded to the Mac. All 2382 exact oracle checks passed; nine capacity exclusions remain. [Observed results, uncertainty, tissue-safety limits and receipt hashes](../reports/panda_fresh_s1_results_v1.md); [frozen protocol and exact submitted command](panda_fresh_s1_v1.md).
+
+This consumes the approved CPU follow-up. No alert threshold, useful foreignness policy, patient independence or clinical validity is established. No additional jobs, GPU, downloads, fitting or original 24 final-test predictions are authorized by this run. Historical preparation notes below describe earlier states, not current pending work.
+
 ## Fresh baseline preparation — October 20
 
 Local Darwin and shared SSH `mhoda` / `dt-login03.delta.ncsa.illinois.edu` were confirmed. Site inspection observed 5,425 rounded shared CPU hours and 8 GPU hours, `cpu-interactive` up with a one-hour cap, and an empty user queue. Exactly 120 proposed Radboud image/mask paths were stat-checked: none present. Shared available storage was 4,031,141,281,792 bytes, not a reservation. The existing Kaggle and PANDA CPU interpreter paths were present; credentials and live Kaggle authentication/download access were not inspected.
