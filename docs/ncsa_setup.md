@@ -1,5 +1,14 @@
 # Floater Finder: NCSA setup
 
+## Submission, S2 and ranked detector v2 — October 20
+
+Shared SSH identity reverified `mhoda` on `dt-login03.delta.ncsa.illinois.edu` from the local Mac. Site `accounts` reported 5,488 rounded CPU hours and 8 rounded GPU hours at the setup inspection; these are shared-allocation observations, not future guarantees. `cpu-interactive` was available with a one-hour partition limit. Both new jobs used the verified `bfqi-delta-cpu` account/QoS, 2 CPUs, 4 GB and a ten-minute cap, with no GPUs.
+
+- S2 job **23067396 completed 0:0 in 19 seconds**. Runtime source `35e0a8dae57e22808420b45ae040fc2f8c3710a5`; verified separate snapshot `/u/mhoda/floater-finder/releases/panda-s2-dev-20261021T003007Z/source` (361 files). New output `/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s2-dev-v1-20261021T003007Z`. All 760 oracles passed; mean primary has no calibration low-to-high errors across the tested doses. [Exact job and input/output hashes](../reports/panda_s2_submission_v1.json).
+- Ranked detector v2 job **23067454 completed 0:0 in 23 seconds**. Source `668d9b8c4e3e8aa300bda6ff15e416c601c2e024`; verified snapshot `/u/mhoda/floater-finder/releases/panda-review-v2-20261021T003112Z/source` (367 files). New output `/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v2-20261021T003112Z`. The selected point remains unsupported: 0/40 calibration fragment hits. [Exact job and result hashes](../reports/panda_review_v2_job_23067454.json).
+
+No existing acquisition, WSI/tiling, GPU encoding, S1 draw, counterfactual or final-preflight job was repeated. The completed 23066843 preflight and rejected v1 frozen protocol remain unchanged. All 24 final-test predictions remain sealed; no final job or new GPU workload is authorized. [Submission/scientific handoff](../reports/submission_execution_checkpoint_20261020.md).
+
 ## Latest PANDA review-policy checkpoint — October 20
 
 Shared SSH verified `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. CPU-only measurement job 23066481 preserved 96 topology / 256 review-case records before a selection-report JSON serialization failure; corrected selection-only job 23066553 completed `0:0` in 17 seconds from those exact measurement hashes. The selected combined policy has no supported operating point; all 24 final-test slides remain unscored. No acquisition, tiling or GPU inference was repeated.
