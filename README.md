@@ -1,5 +1,7 @@
 # Floater Finder
 
+The [saved native/synthetic control audit is prepared](docs/panda_paired_control_audit_v1.md): 24 original training 5%-dose cases /16 reused donors, showing the same PNGs in native and known appended contexts. It preserves cached predictions and separates new errors from initially incorrect hosts. All 386 tests pass; no new inference, detector decision or tissue removal. Real audit outputs remain pending.
+
 The [bounded PNG galleries completed](reports/panda_preview_export_results_v1.md): **72 training slides /389 RGB components, 1,638 unchanged source images, 363 passing tests**. Geometry-selected component/outside examples retain recorded physical coordinates and uncertainty. Original predictions/reports are preserved; no new inference, GPU or local download. All galleries stay on Delta. Browser layout and visual/clinical validity remain unverified.
 
 The [review-only dependence export completed](reports/panda_dependence_export_results_v1.md): **72 training-slide JSON/HTML reports, 389 RGB components, 350 passing tests**. It preserves saved baseline/counterfactual evidence and explicit context abstentions, with no ranking, foreignness decisions or tissue removal. All detailed reports remain on Delta; no new predictions, GPU, downloads or final-test access. Visual layout remains unverified and image panels are not yet included.

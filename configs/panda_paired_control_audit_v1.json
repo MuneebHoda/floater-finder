@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_paired_control_audit_v1",
+  "status": "frozen_before_bounded_training_saved_control_audit",
+  "hypothesis": "Show the same known donor PNGs in native and saved synthetic contexts without inferring foreignness or recomputing predictions.",
+  "split": "train",
+  "percent": 5,
+  "pairs": 24,
+  "unique_donors": 16,
+  "native_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1",
+  "native_source_commit": "ec5a71dde4b566393ddfa4b53b5e1b6a8eec3d6d",
+  "encoded_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "old_feature_config_sha256": "fa19dd81c9295ab51a03f0316361f73c665378176ce0231c7547974dccbb53fc",
+  "inputs": {
+    "manifest": {
+      "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+      "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+    },
+    "directories": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+      "sha256": "f6825d19cbf60df9b3daf2d12d47c0b9bbb90a791ee5ccb62157892798e51132"
+    },
+    "verification": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+      "sha256": "cef3c1b232ed4b12d767ce2e4d86e62f8f5bd4a1010f0b6a72760e33317cf4d0"
+    },
+    "cases": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json",
+      "sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100"
+    },
+    "trials": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020/trials.json",
+      "sha256": "e8b1d24fe2b77465dae2bc6d79fabd66de221c8cdd3932a1070bea537cf54c84"
+    },
+    "features": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z/feature_checkpoint.json",
+      "sha256": "3c879620286c16da6eefc6bf1ef223181ce928ac70a5684643b35499e2236fad"
+    },
+    "feature_completion": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z/completion.json",
+      "sha256": "10a684af01a772a0f88d2e694ae4579da7772f4a46cc47e0ec6977c94ff1ff6f"
+    },
+    "native_run": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1/run.json",
+      "sha256": "261bd5a081d170e23614c25cf68a949427acd96dda3489dbf0efb41e3a2f4f80"
+    },
+    "native_seal": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1/seal.json",
+      "sha256": "2431a745be1a7af169d1b612064c175df2a98436cdd871ab7c25d6b811e5ebae"
+    },
+    "native_summary": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1/checkpoints/summary.json",
+      "sha256": "12c952f15e0983bc71d7ff662d12f16892942171ef643b9cba49f21c443c6570"
+    }
+  },
+  "maximum_image_references": 384,
+  "maximum_png_bytes": 67108864,
+  "new_predictions": false,
+  "fit_thresholds": false,
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 4,
+    "maximum_minutes": 5,
+    "gpu": 0
+  },
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/paired-control-audit-v1",
+  "authorization_basis": "Latest user next after the explicitly proposed genuine-tissue versus saved-synthetic control comparison; one bounded CPU audit using existing Delta artifacts. Resources selected by agent within that development direction, not expressly selected by user.",
+  "limitations": [
+    "All 24 old training 5-percent append cases, selected without outcome filtering; 24 host slides and 16 reused donor slides are not independent patients.",
+    "Known provenance is disclosed for an audit, not inferred by a detector. Null review/foreignness and no tissue action.",
+    "Synthetic placement is an embedding-coordinate construction; unchanged PNG examples are neither a contaminated WSI nor a spatial reconstruction.",
+    "Native component overlap is not fragment-only exclusion. Keep missing mappings and context abstentions.",
+    "No new inference, predictions, draws, oracle executions, thresholds, WSI/mask/NPZ reads, GPU, downloads or fresh/calibration/test evaluation.",
+    "All PNGs and detailed outputs remain on Delta. Browser layout remains unverified."
+  ],
+  "source_files": {
+    "src/floater_finder/review_previews.py": "1b506490562187022662bcb63156d3f04294f34197121a714fa97838e42e6a0b",
+    "src/floater_finder/research/preview_export.py": "f24ca60c0be042b514b667d88b8e14f78b41448cf25cfd6667ff59d9fe43166c",
+    "src/floater_finder/review_report.py": "7f358f6c8ae598f6f80a6c1e0159872a7f01ee10b8daeeaa437d927e03ecf768",
+    "src/floater_finder/research/context_safety.py": "58e2bbc8aa7756897edf7c518c7673844adb04ca122cb894d36801f3c445e20d",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "src/floater_finder/research/registry.py": "ec9f069098846677ff93ac58804085fc845448cb5438d8166d0b092239477810",
+    "scripts/panda_preview_export.py": "e06e24c583f2c65337cbb3a29d3dd809d1f62671c466c9503edba4d68f4cdf6c",
+    "scripts/slurm/panda_preview_export.sbatch": "83284a343939d894f4f8947c9aab87a1cc69dd6d61c6806d9be105affde4e26a",
+    "src/floater_finder/research/control_audit.py": "f0787066a59e48696895993d80b903f14a9b01469b5b78bd3ec3ae1f6988d8bd",
+    "src/floater_finder/detectors/context_eligibility.py": "f806d5946b33d48d129a10a6b1327d8f711bf6f41dcc5afeb3e4a8d7ee9e2e4d",
+    "scripts/panda_paired_controls.py": "dee9bb229a6736812bf9fe723598cf00d6e8e17be1a02c08f49f41885f35fdd4",
+    "scripts/slurm/panda_paired_controls.sbatch": "2125bb854db0d592e538e992fe2df53bc33b2ee2b148c7785629b500d14caffd",
+    "reports/panda_s1_trials_23065666.json": "e8b1d24fe2b77465dae2bc6d79fabd66de221c8cdd3932a1070bea537cf54c84"
+  }
+}
