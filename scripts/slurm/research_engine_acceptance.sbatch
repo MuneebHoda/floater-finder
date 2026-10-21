@@ -26,6 +26,6 @@ source_commit=$9
 module load pytorch-conda/2.8
 export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$project/src" OMP_NUM_THREADS=2 FLOATER_SOURCE_COMMIT="$source_commit"
 arguments=(--manifest "$manifest" --tiling-directories "$directories" --encoded-root "$encoded" --verification "$verification"
- --acquisition-receipts "$receipts" --protocol "$project/configs/research_engine_acceptance_v2.json" --source-commit "$source_commit" --output "$output")
+ --acquisition-receipts "$receipts" --protocol "$project/configs/research_engine_acceptance_v3.json" --source-commit "$source_commit" --output "$output")
 if [ "$#" -eq 10 ]; then arguments+=(--predictor "${10}"); fi
 srun "$environment/bin/python" "$project/scripts/research_engine_acceptance.py" "${arguments[@]}"

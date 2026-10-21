@@ -160,3 +160,13 @@ def test_same_source_replacement_is_a_zero_edit_negative_control():
     assert binary_predictions(result.slide, text()) == binary_predictions(h, text())
     assert result.slide.metadata['injection']['foreign_count'] == 0
     assert result.slide.metadata['injection']['altered_count'] == 2
+
+
+def test_maximal_fragment_near_boundary_does_not_prove_every_nested_prefix_is_near():
+    from floater_finder.research.engine import _valid_position
+    h = slide('wide-host', 0, 100); h.coords[:, 1] = 200
+    mask = np.zeros((100, 1500), bool); mask[20:30, 990:1000] = True
+    observed = VerifiedOccupancy.from_mask(mask, (10., 10.), 'a'*64, 'fixture sparse observed edge')
+    fragment = np.c_[np.arange(10)*100.+9000, np.full(10, 400.)]
+    assert _valid_position(fragment, h, observed)
+    assert not _valid_position(fragment[:1], h, observed)

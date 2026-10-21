@@ -48,18 +48,22 @@ def _occupancy(source, registry, receipt_root, output):
 
 def _summary(trials, exclusions):
     rows = []
-    groups = sorted({(r['task'], r['condition'], r['mode'], r['requested_percent'], r['control']) for r in trials})
+    dimensions = ('task', 'condition', 'mode', 'requested_percent', 'control')
+    grouped_exclusions = [r for r in exclusions if all(k in r for k in dimensions)]
+    groups = sorted({tuple(r[k] for k in dimensions) for r in trials+grouped_exclusions})
     for task, condition, mode, percent, control in groups:
         group = [r for r in trials if (r['task'], r['condition'], r['mode'], r['requested_percent'], r['control']) == (task, condition, mode, percent, control)]
+        excluded = [r for r in grouped_exclusions if tuple(r[k] for k in dimensions) == (task, condition, mode, percent, control)]
         correct = [r for r in group if r['baseline']['prediction'] == r['host_truth']]
         induced = sum(r['contaminated']['prediction'] != r['host_truth'] for r in correct)
         rows.append(dict(task=task, condition=condition, mode=mode, requested_percent=percent, control=control,
+            attempted_trial_instances=len(group)+len(excluded), excluded_trial_instances=len(excluded),
             trial_instances=len(group), unique_host_slides=len({r['host_id'] for r in group}),
             unique_donor_slides=len({r['donor_id'] for r in group}), unique_seeds=len({r['seed'] for r in group}),
             originally_correct_trial_instances=len(correct), initially_incorrect_trial_instances=len(group)-len(correct),
             induced_error_instances=induced, induced_error_fraction=induced/len(correct) if correct else None,
             prediction_change_instances=sum(r['baseline']['prediction'] != r['contaminated']['prediction'] for r in group),
-            mean_margin_shift=float(np.mean([r['margin_shift'] for r in group])),
+            mean_margin_shift=float(np.mean([r['margin_shift'] for r in group])) if group else None,
             oracle_exact_passes=sum(r['oracle_exact_recovery'] for r in group),
             denominator_unit='host/donor/seed trials; repeated measurements, not independent patients'))
     return dict(metrics=rows, trial_instances=len(trials), exclusion_records=len(exclusions),
@@ -84,11 +88,11 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
     if not os.environ.get('SLURM_JOB_ID') or os.environ.get('SLURM_JOB_GPUS'):
         raise RuntimeError('Real shared-engine acceptance requires bounded CPU Slurm; no GPU')
     config = json.loads(Path(protocol).read_text())
-    if (config['schema_version'] not in (1, 2) or config['splits'] != ['train'] or config['host_limit_per_task'] != 2 or
+    if (config['schema_version'] not in (1, 2, 3) or config['splits'] != ['train'] or config['host_limit_per_task'] != 2 or
             config['seeds'] != [20261020, 20261021, 20261022] or config['percentages'] != [0, .25, .5, 1, 2, 5, 10] or
             config['modes'] != ['append_legacy', 'near_tissue', 'replacement', 'within_region_context']):
         raise ValueError('Preregistered bounded training-only acceptance configuration required')
-    if config['schema_version'] == 2 and (not predictor_path or config['tasks'] != {'s1': ['cancer'], 's2': ['high_gp45', 'same_grade_gp3_only']}):
+    if config['schema_version'] in (2, 3) and (not predictor_path or config['tasks'] != {'s1': ['cancer'], 's2': ['high_gp45', 'same_grade_gp3_only']}):
         raise ValueError('S2 v2 requires the frozen improved predictor and predeclared same-grade controls')
     sources, receipt = _load_training(manifest, directories, encoded, verification)
     identity = dict(manifest_sha256=file_hash(manifest), directories_sha256=file_hash(directories),
@@ -123,6 +127,26 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
     registry.status('running', slurm_job_id=os.environ['SLURM_JOB_ID'])
     trials, exclusions, selected_hosts, geometry = [], [], {}, {}
     try:
+        reused = 0
+        if config.get('resume_prior_run'):
+            previous = config['resume_prior_run']
+            prior_root = Path(previous['path'])
+            if file_hash(prior_root/'run.json') != previous['run_sha256']:
+                raise ValueError('Prior checkpoint registry identity changed')
+            prior_metadata = json.loads((prior_root/'run.json').read_text())
+            prior_run = ExperimentRun(**prior_metadata['run'])
+            prior_frozen = json.loads(prior_run.config_json)
+            if prior_frozen['input_identity'] != identity:
+                raise ValueError('Cannot reuse checkpoints with different inputs/predictor')
+            if any(prior_frozen['protocol'][k] != config[k] for k in ('tasks', 'seeds', 'percentages', 'host_limit_per_task', 'donors_per_host')):
+                raise ValueError('Cannot reuse checkpoints with different intervention selection')
+            prior_registry = Registry(prior_root, prior_run)
+            if prior_registry.report()['status'] != 'failed':
+                raise ValueError('Only the explicitly documented failed run may supply retry checkpoints')
+            for event in prior_registry.events():
+                if event['kind'] == 'checkpoint':
+                    registry.checkpoint(event['key'], prior_registry.load_checkpoint(event['key']))
+                    reused += 1
         tasks = [(task, condition) for task, values in config['tasks'].items() for condition in ([values] if isinstance(values, str) else values)]
         for task, condition in tasks:
             grade = 0 if task == 's1' else 1
@@ -165,9 +189,14 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                         target_order = target_part[connected_fragment(host.subset(target_part), target_count, seed+37)]
                         for percent in config['percentages']:
                             count = foreign_count(percent, len(host.feats))
+                            control = 'same_source_sham' if sham else ('same_grade_donor' if condition == 'same_grade_gp3_only' else 'annotated_donor')
                             if count > len(order):
-                                exclusions.append(dict(task=task, condition=condition, host_id=sid, donor_id=did, seed=seed, requested_percent=percent,
-                                    reason='Fixed donor lacks unique connected capacity', requested_count=count, capacity=len(order)))
+                                for mode in config['modes']:
+                                    key = f'{task}-{condition}-{sid}-{did}-{seed}-{percent:g}-{mode}'
+                                    exclusion = dict(excluded=True, task=task, condition=condition, host_id=sid, donor_id=did, seed=seed,
+                                        requested_percent=percent, mode=mode, control=control, reason='Fixed donor lacks unique connected capacity',
+                                        requested_count=count, capacity=len(order))
+                                    registry.checkpoint(key, exclusion); exclusions.append(exclusion)
                                 continue
                             indices = order[:count]
                             append_spec = InterventionSpec(task, pair_condition, 'append_legacy', percent, seed, tuple(indices))
@@ -183,13 +212,22 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                                     placement_failures['replacement'] = 'Host lacks connected replacement-region capacity'
                                 if count and mode in placement_failures:
                                     exclusion = dict(excluded=True, task=task, condition=condition, host_id=sid, donor_id=did, seed=seed,
-                                        requested_percent=percent, mode=mode, reason=placement_failures[mode])
+                                        requested_percent=percent, mode=mode, control=control, reason=placement_failures[mode])
                                     registry.checkpoint(key, exclusion); exclusions.append(exclusion)
                                     continue
                                 anchor = tuple((donor.coords[indices].min(axis=0)+anchors[mode]).tolist()) if count and mode in anchors else None
                                 spec = replace(append_spec, mode=mode, placement_anchor_um=anchor,
                                     replacement_indices=tuple(target_order[:count]) if mode == 'replacement' else (),
                                     context='alternative observed tissue-boundary context; no histological compartment asserted' if mode == 'within_region_context' else None)
+                                if mode in ('near_tissue', 'within_region_context'):
+                                    # A maximal fragment may be near tissue while a smaller nested prefix is not.
+                                    try:
+                                        placement_anchor(host, donor, indices, occupancy, seed, spec.placement_anchor_um)
+                                    except ValueError as error:
+                                        exclusion = dict(excluded=True, task=task, condition=condition, host_id=sid, donor_id=did, seed=seed,
+                                            requested_percent=percent, mode=mode, control=control, reason='Fixed nested placement ineligible at this dose: '+str(error))
+                                        registry.checkpoint(key, exclusion); exclusions.append(exclusion)
+                                        continue
                                 result = apply_intervention(host, donor, spec, occupancy=occupancy)
                                 restored = result.verify(scorer)
                                 _same_slide(host, restored)
@@ -206,7 +244,7 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                                     invariant = np.array_equal(result.slide.feats, appended.slide.feats) and prediction == append_prediction
                                     if not invariant:
                                         raise RuntimeError('Coordinate-only bag prediction changed; stop')
-                                row = dict(task=task, condition=condition, mode=mode, control='same_source_sham' if sham else ('same_grade_donor' if condition == 'same_grade_gp3_only' else 'annotated_donor'),
+                                row = dict(task=task, condition=condition, mode=mode, control=control,
                                     host_id=sid, donor_id=did, seed=seed, requested_percent=percent, realized_percent=100*count/len(host.feats),
                                     host_tiles=len(host.feats), donor_tiles=count, donor_indices=indices.tolist(),
                                     donor_tile_ids=donor.tile_ids[indices].tolist(), host_truth=labels[0], baseline=baseline,
@@ -217,7 +255,7 @@ def run(manifest, directories, encoded, verification, receipts, protocol, source
                                 registry.checkpoint(key, row); trials.append(row)
         result = dict(_summary(trials, exclusions), source_commit=source_commit, slurm_job_id=os.environ['SLURM_JOB_ID'],
             selected_hosts=selected_hosts, selected_before_outcomes=True, input_identity=identity,
-            s2_training_stress_is_resubstitution=bool(improved),
+            s2_training_stress_is_resubstitution=bool(improved), reused_verified_prior_checkpoints=reused,
             s2_v2_full_cohort_completed=False, independent_validation_required=True,
             predictor_kind='training-selected improved S2' if improved else 'historical fixed S1 top5/S2 mean',
             clinical_interpretation='No clinical validity or foreignness diagnosis established; placement is representation-only',

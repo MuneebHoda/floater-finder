@@ -61,6 +61,8 @@ def validate_pair(host, donor, task, condition):
     check_compatible(host, donor)
     h, d = host.metadata, donor.metadata
     sham = condition == 'same_source_sham'
+    if task not in ('s1', 's2') or h['isup_grade'] != (0 if task == 's1' else 1):
+        raise ValueError('Host grade is incompatible with prediction task')
     expected = (h['isup_grade'] == 0 and d['isup_grade'] in (1, 4, 5) and condition == 'cancer') if task == 's1' else (
         h['isup_grade'] == 1 and
         ((condition == 'same_grade_gp3_only' and d['isup_grade'] == 1) or

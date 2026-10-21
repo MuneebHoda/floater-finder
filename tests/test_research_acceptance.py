@@ -15,7 +15,8 @@ def test_acceptance_cpu_gate_precedes_any_input_access(monkeypatch, tmp_path):
     assert not (tmp_path/'out').exists()
 
 
-def test_complete_fixture_acceptance_resume_and_coordinate_invariance(monkeypatch, tmp_path):
+@pytest.mark.parametrize('prefix_infeasible', [False, True])
+def test_complete_fixture_acceptance_resume_and_coordinate_invariance(monkeypatch, tmp_path, prefix_infeasible):
     import floater_finder.research.acceptance as module
     monkeypatch.setenv('SLURM_JOB_ID', 'fixture-not-real')
     monkeypatch.delenv('SLURM_JOB_GPUS', raising=False)
@@ -39,16 +40,25 @@ def test_complete_fixture_acceptance_resume_and_coordinate_invariance(monkeypatc
         reads.append(sid)
         return dict(image_id=sid, image_sha256='a'*64, mapping_fraction=1.)
     monkeypatch.setattr(module, 'read_overview', overview)
+    if prefix_infeasible:
+        original_placement = module.placement_anchor
+        def placement(h, d, indices, occupancy, seed, anchor=None):
+            if anchor is not None and len(indices) == 1:
+                raise ValueError('fixture nested prefix no longer near tissue')
+            return original_placement(h, d, indices, occupancy, seed, anchor)
+        monkeypatch.setattr(module, 'placement_anchor', placement)
     for name in ('manifest', 'directories', 'verification'):
         (tmp_path/name).write_text('fixture')
     args = [tmp_path/'manifest', tmp_path/'directories', 'unused-embeddings', tmp_path/'verification',
             'unused-receipts', Path(__file__).parents[1]/'configs/research_engine_acceptance_v1.json', 'f'*40, tmp_path/'out']
     result = run(*args)
     assert result['unique_host_slides'] == 4
-    assert result['trial_instances'] == result['exact_oracle_passes'] == 1008
+    assert result['trial_instances'] == result['exact_oracle_passes'] == (648 if prefix_infeasible else 1008)
     assert result['exact_legacy_comparisons'] == 168
-    assert result['coordinate_only_invariance_checks'] == 504
+    assert result['coordinate_only_invariance_checks'] == (144 if prefix_infeasible else 504)
     assert result['test_slides_scored'] is False and len(reads) == 4
+    assert sum(r['attempted_trial_instances'] for r in result['metrics']) == 1008
+    assert result['exclusion_records'] == (360 if prefix_infeasible else 0)
     assert run(*args) == result and len(reads) == 4  # Resume skips all geometry/interventions.
     registry = json.loads((tmp_path/'out/run.json').read_text())
     assert registry['run']['split'] == 'train'
@@ -104,3 +114,20 @@ def test_s2_v2_fixture_integrates_frozen_predictor_and_same_grade_controls(monke
     same_grade = [r for r in result['metrics'] if r['task'] == 's2' and r['condition'] == 'same_grade_gp3_only']
     assert len(same_grade) == 28 and all(r['control'] == 'same_grade_donor' for r in same_grade)
     assert all(r['induced_error_instances'] == 0 for r in same_grade)
+    # An interrupted earlier source can donate only hash-checked checkpoints with identical inputs.
+    from floater_finder.research import Registry, ExperimentRun
+    old_metadata = json.loads((tmp_path/'out/run.json').read_text())
+    old_registry = Registry(tmp_path/'out', ExperimentRun(**old_metadata['run']))
+    interrupted = Registry(tmp_path/'interrupted', ExperimentRun(**old_metadata['run']))
+    interrupted.status('planned'); interrupted.status('running')
+    checkpoints = [r for r in old_registry.events() if r['kind'] == 'checkpoint'][:2]
+    for entry in checkpoints:
+        interrupted.checkpoint(entry['key'], old_registry.load_checkpoint(entry['key']))
+    interrupted.status('failed', interpretation='fixture nested placement interrupted')
+    cfg.update(schema_version=3, resume_prior_run=dict(path=str(tmp_path/'interrupted'), run_sha256=file_hash(tmp_path/'interrupted/run.json')))
+    retry_protocol = tmp_path/'retry-protocol.json'; retry_protocol.write_text(json.dumps(cfg))
+    retried = run(tmp_path/'manifest', tmp_path/'directories', 'unused', tmp_path/'verification', 'unused', retry_protocol,
+        'e'*40, tmp_path/'retry', model_root)
+    assert retried['reused_verified_prior_checkpoints'] == 2
+    assert retried['metrics'] == result['metrics']
+    assert interrupted.report()['status'] == 'failed'
