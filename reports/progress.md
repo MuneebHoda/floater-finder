@@ -1,5 +1,22 @@
 # Floater Finder progress
 
+## Pixel GPU submitted behind successful CPU preparation — October 21
+
+User authorized submitting the bounded GPU execution and committing code.
+Launcher1b4d19b/five immutable staged files pass all432 tests; unchanged
+scientific runtime61959fa/protocol33594b46/all276 files reverified. One actual
+GPU job23109340 is PENDING(Dependency) on`afterok:23109277`,with invalid-
+dependency cancellation requested. Verified one GPU,four CPUs,16GB,five minutes,
+account`bfqi-delta-gpu`,QoS`bfqi-delta-gpu-mhoda`,partition
+`gpuA100x4-interactive`. CPU23109277 remains pending as of17:55:22CDT.
+
+The real96-image manifest is still absent; the resolver must verify the exact
+successful CPU receipt and freeze its actual hash before invoking unchanged
+source-anchor/null drift checks,CONCH encoding and frozen measurements. Queue
+acceptance is not a scientific result. No new GPU inference,downloads,model/
+threshold fitting or final-test execution is claimed. Leave existing jobs
+queued; no duplicates or automatic retries. [Submission receipt and exact command](panda_pixel_gpu_submission_v1.md).
+
 ## Four-pair pixel study prepared; real CPU execution waiting — October 21
 
 Runtime/protocol `61959fa` adds a bounded four-pair/96-image PANDA study around

@@ -1,5 +1,21 @@
 # Floater Finder: NCSA setup
 
+## Approved pixel GPU submission — October 21
+
+User explicitly requested GPU submission and code commit. GPU23109340 is
+PENDING (Dependency) as of17:55:22CDT,with`afterok:23109277(unfulfilled)` and
+invalid-dependency cancellation requested. Slurm verified account
+`bfqi-delta-gpu`,QoS`bfqi-delta-gpu-mhoda`,partition`gpuA100x4-interactive`,
+one GPU,four CPUs,16GB,five minutes. CPU23109277 remains PENDING(Priority).
+No new inference or real-image completion is verified; do not duplicate jobs.
+
+Launcher1b4d19b is staged at
+`/u/mhoda/floater-finder/releases/panda-pixel-gpu-launch-v1-20261021T225437Z/source`
+(five files verified),using unchanged runtime61959fa/all276 files verified.
+The resolver freezes the actual real-image manifest only after the successful
+CPU dependency and validates all sources before the existing CONCH drift gates.
+All432 tests pass. [Exact command,authorization and immutable receipts](../reports/panda_pixel_gpu_submission_v1.md).
+
 ## Pixel-contamination preparation handoff — October 21
 
 Local Darwin and shared SSH identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu`

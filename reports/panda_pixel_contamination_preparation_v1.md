@@ -1,5 +1,12 @@
 # Four-pair pixel contamination preparation v1
 
+**Subsequent execution update:** the user explicitly authorized GPU submission.
+GPU23109340 is now queued with `afterok:23109277`; its resolver must verify the
+successful real CPU preparation and freeze the actual manifest before the
+unchanged CONCH runner. No real-image completion or GPU inference is verified
+yet. [Current submission/status record](panda_pixel_gpu_submission_v1.md).
+Approval-pending statements below preserve the earlier handoff history.
+
 CPU preparation **23109222 timed out after 613s in scheduler Prolog on cn018**,
 with no Python step,log,preparation directory or real-image completion receipt
 observed. Failure metadata is preserved. After inspecting that terminal

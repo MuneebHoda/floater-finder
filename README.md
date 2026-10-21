@@ -1,5 +1,7 @@
 # Floater Finder
 
+The [pixel GPU job is submitted as **23109340**](reports/panda_pixel_gpu_submission_v1.md), waiting for CPU preparation **23109277** to succeed. The one-A100/four-CPU/16GB/five-minute request preserves the frozen runtime,real-manifest checks and unchanged/null drift gates. **432 tests pass**. The96 real images and new GPU measurements remain unverified; leave the queued jobs in place. All data stay on Delta and original test predictions remain sealed.
+
 The [four-pair pixel contamination study is prepared in code](reports/panda_pixel_contamination_preparation_v1.md), with **424 passing tests**. Real-data CPU preparation job **23109277 is pending** after a scheduler-prolog timeout on the first node; leave it queued. The 96 real composite/control images and exact GPU manifest remain unverified. No new CONCH inference or pixel-level scientific result exists; GPU submission requires separate approval after preparation passes. All data stay on Delta and original test predictions remain sealed.
 
 The [fixed-support candidate was executed and failed its utility gate](reports/panda_stable_context_results_v1.md): **3/24 fragments detected, 1/12 source-exact hypothetical error recoveries, 8/72 clean slides alerted (11.1%)**. Both fixed-support and matched full-context methods remain unsupported at the frozen targets. **416 tests pass**; no new model inference, GPU or downloads. Human review remains pending (no reviewer available); the final test stays sealed.
