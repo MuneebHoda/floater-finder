@@ -50,3 +50,27 @@ def test_registry_preserves_failed_partial_runs_and_rejects_sealed_test_scope(tm
     registry.checkpoint('second', {'oracle': True})
     assert registry.report()['checkpoints'] == 2
     with pytest.raises(ValueError, match='development'): replace(run(), split='test')
+def test_status_cli_summary_keeps_full_hash_validation(tmp_path):
+    import json
+    import os
+    from pathlib import Path
+    import subprocess
+    import sys
+    from floater_finder.research import ExperimentRun, Registry
+    from floater_finder.research.contracts import canonical
+    run = ExperimentRun('fixture-status', 'software only', 'fixture', canonical({}),
+        'fixture-data', 'train', 'fixture-model', 'fixture-embeddings', canonical({'gpu': 0}))
+    registry = Registry(tmp_path, run)
+    registry.status('planned'); registry.status('running')
+    registry.checkpoint('fixture', {'synthetic': True})
+    registry.status('verified', validation=True)
+    root = Path(__file__).parents[1]
+    env = dict(os.environ, PYTHONPATH=str(root/'src'))
+    command = [sys.executable, str(root/'scripts/research_status.py'), str(tmp_path), '--summary']
+    good = subprocess.run(command, env=env, capture_output=True, text=True, check=True)
+    report = json.loads(good.stdout)
+    assert report['status'] == 'verified' and report['hashes_verified'] and 'artifacts' not in report
+    (tmp_path/'checkpoints/fixture.json').write_text('{"synthetic":false}')
+    failed = subprocess.run(command, env=env, capture_output=True, text=True)
+    assert failed.returncode != 0 and 'hash changed' in failed.stderr
+
