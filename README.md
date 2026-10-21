@@ -1,5 +1,7 @@
 # Floater Finder
 
+A [numeric-context eligibility contract](docs/panda_context_safety_v1.md) is prepared for training-only native-control accounting. It separates unsupported comparisons from review decisions, retains uncertain topology, and never labels an eligible cancer component foreign. Real coverage accounting is pending; no review-policy validity follows.
+
 The [original-training topology/context audit completed](reports/panda_topology_context_results_v1.md): **72 slides, 2,160 planned context records, 315 passing software tests**. Sampled components disagree substantially with cached RGB membership. Sparse comparison context causes large morphology-score sensitivity without inserted foreign tissue; six outside tiles supplies NN5 neighbor counts but does not validate a review cutoff. No classifier predictions, GPU, downloads or final-test access. The floater review policy remains unsupported.
 
 The [S3 conservative review-transfer diagnostic completed](reports/panda_fresh_review_transfer_results_v1.md): 140 saved bags /9800 model-policy records, **306 passing software tests**. The primary combined rule detects **0/20 foreign fragments per edit mode** while flagging four genuine cancer-containing carriers and hypothetically damaging 4/46 initially correct unmodified predictions. Its apparent one-case label recovery retains all foreign tissue. No useful review policy follows; topology/native-context feasibility needs further development. All data/raw results stay on Delta and original final-test predictions remain sealed.
