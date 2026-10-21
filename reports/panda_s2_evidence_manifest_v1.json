@@ -1,0 +1,26 @@
+{
+  "source_kind": "real results plus separately identified software checks",
+  "runtime_source_commit": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+  "slurm_job_id": "23067396",
+  "files": {
+    "reports/figures/panda_s2_development_23067396/provenance.json": "9d5b0117494522dd87871e0fdbeb67adfc029d76d365e71099dd9a46a8764c3c",
+    "reports/figures/panda_s2_development_23067396/s2_development.png": "51ef7251b3ae97efec44b0759293c31334009d376df4515ee03b57c72e742e04",
+    "reports/figures/panda_s2_development_23067396/s2_development.svg": "9472bc7e8ffc59fbbcdf561fc1144ad4cb9e9daf4c5458dfd33c9b873e14b9db",
+    "reports/panda_s2_development_v1/analysis.json": "1fe96ce76eedf6588270eab8164c8cde7c0d4aaeec7a31030bd242ad28ed2ad5",
+    "reports/panda_s2_development_v1/clean_audit.json": "5792af51d0e19a40d1975f0cba195c57aed04725e40c6f7f4b45485f94dc6241",
+    "reports/panda_s2_development_v1/completion.json": "440f02933477aad66b44f0c8b1e6415960656d1886f773becc3486cbbe395367",
+    "reports/panda_s2_development_v1/donor_audit.json": "f48d7105e2de35fae976a38567f617edef490298b015bc017cdff43ac916c82c",
+    "reports/panda_s2_development_v1/exclusions.json": "d553f1b4309277de55cdbe854f4ef4ac360dc732016437faabf76c52e0ebc9d8",
+    "reports/panda_s2_development_v1/native_safety.json": "6655eb54f0577d2dfe332d1d164f21b14166abf0941d7bf782f8d4b5222d69e1",
+    "reports/panda_s2_development_v1/pairings.json": "3f69356dfb2238045207856b4c064b3d6ad7829cb184475324157a5989f3b1ea",
+    "reports/panda_s2_development_v1/sacct.txt": "acb625bcddaff7fb244b1499d95d473ede3bf91acbf73f9bea3ae411f1e36d00",
+    "reports/panda_s2_development_v1/summary.json": "508ae59c3b886b093002fbc127a089b3d9b49d73e0869d951316ad36995d489d",
+    "reports/panda_s2_development_v1/trials.json": "025da1c8781043faf79c2db1b864438f97a205cdf1429fefd63007a5639292a4",
+    "reports/panda_s2_results_v1.md": "e4e67dc446b9cc581a41e0f62673fa571abcc97797542874f55106ac3bcdd0cd",
+    "reports/panda_s2_submission_v1.json": "9634d9ebafbf8800d9bc7162e55dfdde21773367bfd1d32ebfd278318e8632f5",
+    "scripts/plot_panda_s2.py": "6362b0031a7f4a27fa350c6bfed05b34717752582f0d0d6725ff7414138ed425",
+    "tests/test_panda_s2.py": "e51576cf09c758a326ed3f7707e198692bc35cf04fce83c325dfa76887e63393"
+  },
+  "test_outputs_are_scientific_evidence": false,
+  "held_out_scored": false
+}

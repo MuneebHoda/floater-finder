@@ -1,0 +1,2562 @@
+[
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 33,
+    "four_connected_components": 3,
+    "largest_capacity": 22
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 163,
+    "four_connected_components": 13,
+    "largest_capacity": 50
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 133,
+    "four_connected_components": 34,
+    "largest_capacity": 37
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 50,
+    "four_connected_components": 5,
+    "largest_capacity": 17
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 98,
+    "four_connected_components": 5,
+    "largest_capacity": 63
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 44,
+    "four_connected_components": 9,
+    "largest_capacity": 17
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 195,
+    "four_connected_components": 3,
+    "largest_capacity": 117
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 83,
+    "four_connected_components": 21,
+    "largest_capacity": 19
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 2,
+    "four_connected_components": 1,
+    "largest_capacity": 2
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 133,
+    "four_connected_components": 7,
+    "largest_capacity": 68
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 247,
+    "four_connected_components": 17,
+    "largest_capacity": 148
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 276,
+    "four_connected_components": 8,
+    "largest_capacity": 189
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 75,
+    "four_connected_components": 6,
+    "largest_capacity": 43
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 30,
+    "four_connected_components": 1,
+    "largest_capacity": 30
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 201,
+    "four_connected_components": 15,
+    "largest_capacity": 155
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 9,
+    "four_connected_components": 6,
+    "largest_capacity": 3
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 73,
+    "four_connected_components": 5,
+    "largest_capacity": 33
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 39,
+    "four_connected_components": 11,
+    "largest_capacity": 19
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 151,
+    "four_connected_components": 24,
+    "largest_capacity": 41
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 1,
+    "four_connected_components": 1,
+    "largest_capacity": 1
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 141,
+    "four_connected_components": 14,
+    "largest_capacity": 88
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 258,
+    "four_connected_components": 56,
+    "largest_capacity": 42
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 8,
+    "four_connected_components": 1,
+    "largest_capacity": 8
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 307,
+    "four_connected_components": 6,
+    "largest_capacity": 258
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 134,
+    "four_connected_components": 14,
+    "largest_capacity": 62
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 176,
+    "four_connected_components": 10,
+    "largest_capacity": 73
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 317,
+    "four_connected_components": 2,
+    "largest_capacity": 316
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 56,
+    "four_connected_components": 3,
+    "largest_capacity": 42
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 28,
+    "four_connected_components": 6,
+    "largest_capacity": 21
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 30,
+    "four_connected_components": 4,
+    "largest_capacity": 18
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 282,
+    "four_connected_components": 9,
+    "largest_capacity": 216
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "isup_grade": 1,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 4,
+    "four_connected_components": 3,
+    "largest_capacity": 2
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 4,
+    "four_connected_components": 3,
+    "largest_capacity": 2
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 374,
+    "four_connected_components": 15,
+    "largest_capacity": 149
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 302,
+    "four_connected_components": 16,
+    "largest_capacity": 88
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 57,
+    "four_connected_components": 11,
+    "largest_capacity": 17
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 331,
+    "four_connected_components": 13,
+    "largest_capacity": 168
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 329,
+    "four_connected_components": 13,
+    "largest_capacity": 167
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 98,
+    "four_connected_components": 2,
+    "largest_capacity": 75
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 98,
+    "four_connected_components": 2,
+    "largest_capacity": 75
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 63,
+    "four_connected_components": 24,
+    "largest_capacity": 13
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 61,
+    "four_connected_components": 24,
+    "largest_capacity": 13
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 2,
+    "four_connected_components": 1,
+    "largest_capacity": 2
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 123,
+    "four_connected_components": 4,
+    "largest_capacity": 59
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 123,
+    "four_connected_components": 4,
+    "largest_capacity": 59
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 96,
+    "four_connected_components": 25,
+    "largest_capacity": 30
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 96,
+    "four_connected_components": 25,
+    "largest_capacity": 30
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 280,
+    "four_connected_components": 21,
+    "largest_capacity": 77
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 276,
+    "four_connected_components": 20,
+    "largest_capacity": 77
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 123,
+    "four_connected_components": 12,
+    "largest_capacity": 53
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 67,
+    "four_connected_components": 10,
+    "largest_capacity": 22
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 46,
+    "four_connected_components": 6,
+    "largest_capacity": 29
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 248,
+    "four_connected_components": 6,
+    "largest_capacity": 116
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 248,
+    "four_connected_components": 6,
+    "largest_capacity": 116
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 155,
+    "four_connected_components": 23,
+    "largest_capacity": 51
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 155,
+    "four_connected_components": 23,
+    "largest_capacity": 51
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 161,
+    "four_connected_components": 31,
+    "largest_capacity": 18
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 157,
+    "four_connected_components": 32,
+    "largest_capacity": 18
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 1,
+    "four_connected_components": 1,
+    "largest_capacity": 1
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 59,
+    "four_connected_components": 1,
+    "largest_capacity": 59
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 59,
+    "four_connected_components": 1,
+    "largest_capacity": 59
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 105,
+    "four_connected_components": 1,
+    "largest_capacity": 105
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 105,
+    "four_connected_components": 1,
+    "largest_capacity": 105
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 238,
+    "four_connected_components": 25,
+    "largest_capacity": 103
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 84,
+    "four_connected_components": 15,
+    "largest_capacity": 21
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 140,
+    "four_connected_components": 22,
+    "largest_capacity": 37
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 201,
+    "four_connected_components": 64,
+    "largest_capacity": 22
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 201,
+    "four_connected_components": 64,
+    "largest_capacity": 22
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 253,
+    "four_connected_components": 32,
+    "largest_capacity": 63
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 253,
+    "four_connected_components": 32,
+    "largest_capacity": 63
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 329,
+    "four_connected_components": 3,
+    "largest_capacity": 327
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 329,
+    "four_connected_components": 3,
+    "largest_capacity": 327
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 88,
+    "four_connected_components": 7,
+    "largest_capacity": 58
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 88,
+    "four_connected_components": 7,
+    "largest_capacity": 58
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 134,
+    "four_connected_components": 6,
+    "largest_capacity": 54
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 134,
+    "four_connected_components": 6,
+    "largest_capacity": 54
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 90,
+    "four_connected_components": 34,
+    "largest_capacity": 12
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 87,
+    "four_connected_components": 31,
+    "largest_capacity": 12
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 3,
+    "four_connected_components": 3,
+    "largest_capacity": 1
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 289,
+    "four_connected_components": 59,
+    "largest_capacity": 37
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 289,
+    "four_connected_components": 59,
+    "largest_capacity": 37
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 43,
+    "four_connected_components": 1,
+    "largest_capacity": 43
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 43,
+    "four_connected_components": 1,
+    "largest_capacity": 43
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 120,
+    "four_connected_components": 1,
+    "largest_capacity": 120
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 109,
+    "four_connected_components": 3,
+    "largest_capacity": 107
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 398,
+    "four_connected_components": 91,
+    "largest_capacity": 36
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 301,
+    "four_connected_components": 86,
+    "largest_capacity": 23
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 47,
+    "four_connected_components": 17,
+    "largest_capacity": 15
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 235,
+    "four_connected_components": 4,
+    "largest_capacity": 121
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 235,
+    "four_connected_components": 4,
+    "largest_capacity": 121
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 307,
+    "four_connected_components": 8,
+    "largest_capacity": 186
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 307,
+    "four_connected_components": 8,
+    "largest_capacity": 186
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 153,
+    "four_connected_components": 3,
+    "largest_capacity": 117
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 153,
+    "four_connected_components": 3,
+    "largest_capacity": 117
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": false,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": false,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": false,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": false,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 161,
+    "four_connected_components": 19,
+    "largest_capacity": 43
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 154,
+    "four_connected_components": 17,
+    "largest_capacity": 43
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "split": "calibration",
+    "isup_grade": 5,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 4,
+    "four_connected_components": 4,
+    "largest_capacity": 1
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 67,
+    "four_connected_components": 5,
+    "largest_capacity": 60
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 67,
+    "four_connected_components": 5,
+    "largest_capacity": 60
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp45",
+    "mask_available": true,
+    "eligible_tiles": 81,
+    "four_connected_components": 7,
+    "largest_capacity": 49
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "same_grade_gp3_only",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp4_only",
+    "mask_available": true,
+    "eligible_tiles": 81,
+    "four_connected_components": 7,
+    "largest_capacity": 49
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "split": "calibration",
+    "isup_grade": 4,
+    "condition": "high_gp5_positive",
+    "mask_available": true,
+    "eligible_tiles": 0,
+    "four_connected_components": 0,
+    "largest_capacity": 0
+  }
+]

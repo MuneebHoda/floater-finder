@@ -1,0 +1,12 @@
+{
+  "source_commit": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+  "files": {
+    "pairings.json": "3f69356dfb2238045207856b4c064b3d6ad7829cb184475324157a5989f3b1ea",
+    "exclusions.json": "d553f1b4309277de55cdbe854f4ef4ac360dc732016437faabf76c52e0ebc9d8",
+    "clean_audit.json": "5792af51d0e19a40d1975f0cba195c57aed04725e40c6f7f4b45485f94dc6241",
+    "trials.json": "025da1c8781043faf79c2db1b864438f97a205cdf1429fefd63007a5639292a4",
+    "summary.json": "508ae59c3b886b093002fbc127a089b3d9b49d73e0869d951316ad36995d489d",
+    "donor_audit.json": "f48d7105e2de35fae976a38567f617edef490298b015bc017cdff43ac916c82c",
+    "native_safety.json": "6655eb54f0577d2dfe332d1d164f21b14166abf0941d7bf782f8d4b5222d69e1"
+  }
+}
