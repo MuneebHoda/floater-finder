@@ -1,5 +1,13 @@
 # Floater Finder: NCSA setup
 
+## Paired-placement CPU audit — October 20
+
+Local Darwin and shared SSH identity `mhoda` / `dt-login03.delta.ncsa.illinois.edu` were verified for this continuation. Site inspection reported 5,447 rounded CPU hours and 8 rounded GPU hours, shared snapshots rather than reservations; `cpu-interactive` was up and the user's queue was empty before submission. The prepared runtime imports NumPy2.0.2 and Pillow12.3.0.
+
+CPU **23069409 completed 0:0** on `cn034`, two CPUs /8 GB /20-minute cap, `bfqi-delta-cpu` account/QoS and `cpu-interactive`. Actual elapsed 271 seconds, Python MaxRSS 1,319,304 KiB, 0.15056 allocated CPU-hours. Source `bbc2845875c8ff980a20d2c7bf9123ed801afc99` was staged separately at `/u/mhoda/floater-finder/releases/panda-placement-v1-20261021T015213Z/source`, verifying all 207 files. Verified immutable results are at `/work/nvme/bfqi/mhoda/floater-finder/panda-review/placement-v1-20261021T015213Z`; the sealed registry has 1,657 checkpoints /1,660 events. [Exact command, runtime paths, archives and every output hash](../reports/panda_detector_placement_v1/execution.json).
+
+This training-only audit uses existing embeddings/PNG exports and cached foreground, with no WSI processing, downloads, GPU, calibration or final-test predictions. Primary detection is 0/607 foreign instances; no useful policy or final readiness is established. [Measured report and read-only next command](../reports/panda_detector_placement_v1.md). The rejected final protocol and all prior artifacts remain preserved; fresh acquisition/encoding still needs explicit scope/resource approval.
+
 ## Research CPU checkpoint — October 20
 
 The local Mac execution environment was verified as Darwin. Shared SSH confirmed `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. The prepared PANDA CPU runtime reports NumPy2.0.2, SciPy1.16.1, scikit-learn1.7.2 and Torch2.8.0+cu128 by package metadata; no Torch/CUDA inference was needed for this stage. Site allocations initially showed 5,467 rounded CPU hours and 8 GPU hours. These are shared snapshots, not reservations. CPU QoS permits one submitted job per user, so the research jobs were serialized.

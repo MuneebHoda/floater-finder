@@ -1,5 +1,13 @@
 # Floater Finder progress
 
+## Paired-placement checkpoint — October 20
+
+Frozen source `bbc2845`, CPU **23069409 completed 0:0 in 271 seconds**, using 0.15056 allocated CPU-hours and no GPU. A separate hash-verified snapshot and sealed 1,657-checkpoint registry preserve 825 saved positive-dose interventions, four clean anchors, all 327 previous exclusions and 1,499 verified PNG exports. Geometry/pair definitions precede detector scoring. The numeric overlap validator fix has isolated regression evidence and does not admit old exclusions.
+
+The primary finds **0/607 foreign instances /0/10,610 foreign-tile observations** and recovers **0/39 induced errors**. The 88 complete triplets contain 59 foreign groups and 29 shams; all seven methods find 0/59 in each paired foreign mode. A secondary component-neighbor rule finds three all-case instances outside common addition triplets or in replacement carriers; distant-NN5's five sham alerts cause three hypothetical prediction errors on one host. There is no useful policy or outcome-guided retuning. Only two hosts per task, repeated doses/donors and three clean native-cancer components limit interpretation. [Full results, denominators, topology, all methods and exact verification command](panda_detector_placement_v1.md).
+
+**272 tests pass** with warnings treated as errors. All 33 frozen historical files, rejected final protocol, main and submission/presentation artifacts are preserved. No downloads, new encodings, calibration/test predictions or duplicate job were launched. Fresh-validation inputs remain a separately gated metadata proposal.
+
 ## Research acceleration checkpoint — October 20
 
 Three isolated workstreams produced training-only nested-CV CONCH linear probes, versioned shared S1/S2 interventions/registry and seven detector-v3 context hypotheses. Selected grade training OOF BA is 85.42% with 13/16 reused-calibration slides correct; selected cancer reused-calibration BA falls to 71.88%, and paired uncertainty includes no improvement for both tasks. Detector v3's fixed robust-NN5 primary finds 1/120 fragments with 7/72 clean alerts, five native-cancer component flags and 3/61 hypothetical clean-prediction damage. No useful review policy is established. [Eight-part measured research checkpoint](panda_research_checkpoint_v1.md).
