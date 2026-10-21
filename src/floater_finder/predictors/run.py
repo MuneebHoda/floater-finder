@@ -84,8 +84,8 @@ def run(manifest, directories, encoded, verification, config_path, output):
             spec = dict(common, model_id=name)
             try:
                 if name.startswith('zero_shot_'):
-                    text = sources[0]['text']; model = FrozenPredictor(dict(spec, kind='zero_shot', pooling=name.removeprefix('zero_shot_')),
-                        dict(text=text.feats[[text.classes.index(c) for c in classes]]))
+                    text = sources[0]['text']; model = FrozenPredictor(dict(spec, kind='zero_shot', pooling=name.removeprefix('zero_shot_'), text_classes=text.classes),
+                        dict(text=text.feats))
                     rows = [dict(image_id=s.metadata['slide_id'], truth=classes[v], outer_fold='fixed scorer; no fitting', **model(s.feats)) for s, v in zip(slides, y)]
                     folds = dict(fitting='None; unchanged historical fixed text cosine and pooling')
                 else:

@@ -46,19 +46,32 @@ def test_pickle_free_roundtrip_hash_and_checkpoint(tmp_path):
 
 def test_zero_shot_is_exact_legacy_pooling():
     from floater_finder.scoring import pool
-    x=np.array([[1.,0.,0.],[0.,1.,0.]],dtype=np.float32)
-    text=x.copy()
+    rng=np.random.default_rng(17)
+    x=rng.normal(size=(183,512)).astype(np.float32)
+    text=rng.normal(size=(4,512)).astype(np.float32)
+    classes=['benign','cancer','low_grade','high_grade']
     for rule in ('mean','top1pct','top5pct'):
-        m=FrozenPredictor(dict(common(),kind='zero_shot',pooling=rule),{'text':text})
-        expected=pool(np.einsum('id,cd->ic',x,text,optimize=False),rule)
+        m=FrozenPredictor(dict(common(512),kind='zero_shot',pooling=rule,text_classes=classes),{'text':text})
+        expected=pool(np.einsum('id,cd->ic',x,text,optimize=False)[:,[0,1]],rule)
         assert m(x)['scores']==dict(zip(['benign','cancer'],map(float,expected)))
-        assert m(x)['prediction']=='benign'
+        assert m(x)['prediction']==['benign','cancer'][int(np.argmax(expected))]
         assert m(x)['positive_probability'] is None
 
 
 def test_final_test_rejected_before_reading_any_input(tmp_path):
     with pytest.raises(ValueError,match='Final test'):
         load_development(tmp_path/'notread',None,None,None,'test')
+
+
+def test_adapter_verification_needs_scheduler_before_reading_files(tmp_path,monkeypatch):
+    import runpy
+    from pathlib import Path
+    script=Path(__file__).parents[1]/'scripts/panda_predictor_adapter_verify.py'
+    module=runpy.run_path(str(script))
+    monkeypatch.delenv('SLURM_JOB_ID',raising=False)
+    with pytest.raises(RuntimeError,match='CPU Slurm'):
+        module['run']('notread','notread','notread','notread','notread','notread',tmp_path/'absent')
+    assert not (tmp_path/'absent').exists()
 
 
 def test_nested_cv_disjoint_groups_and_portable_fit_matches_sklearn():

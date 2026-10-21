@@ -24,7 +24,7 @@ class FrozenPredictor:
                 self.arrays['intercept'].shape != (1,) or (self.arrays['scale'] <= 0).any()):
                 raise ValueError('Invalid linear probe dimensions/scales')
         elif s.get('kind') == 'zero_shot':
-            if self.arrays['text'].shape != (2, s['input_dimensions']):
+            if self.arrays['text'].shape != (len(s.get('text_classes', s['classes'])), s['input_dimensions']):
                 raise ValueError('Text dimensions differ')
         else:
             raise ValueError('Unknown predictor kind')
@@ -37,7 +37,10 @@ class FrozenPredictor:
             raise ValueError('Nonempty finite features of the frozen dimension required')
         a, s = self.arrays, self.spec
         if s['kind'] == 'zero_shot':
-            values = pool(np.einsum('id,cd->ic', x, a['text'], optimize=False), s['pooling'])
+            all_scores = np.einsum('id,cd->ic', x, a['text'], optimize=False)
+            indices = [s.get('text_classes', s['classes']).index(c) for c in s['classes']]
+            # Match legacy column-indexed memory layout: float32 reductions depend on strides.
+            values = pool(all_scores[:, indices], s['pooling'])
             margin = float(values[1]-values[0]); probability = None
         else:
             v = slide_vector(x, s['feature_rule'], s['top_k'])
