@@ -63,3 +63,10 @@ def test_selected_policy_and_forced_match_counts_are_json_serializable():
     assert selection['matched_control_forced_size_matches']>0
     assert type(selection['matched_control_forced_size_matches']) is int
     json.dumps(selection,allow_nan=False);json.dumps(raw,allow_nan=False);json.dumps(controls,allow_nan=False)
+
+
+def test_policy_selector_refuses_any_held_out_case_before_reading_features():
+    import pytest
+    from floater_finder.panda_review_run import choose_and_validate
+    with pytest.raises(ValueError,match='Test cases are forbidden'):
+        choose_and_validate([{'split':'test'}],{})

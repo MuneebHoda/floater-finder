@@ -42,7 +42,7 @@ def load_sources(manifest,directories,encoded,verification,splits):
         for name,key in [('tiles.csv','manifest_sha256'),('metadata.json','metadata_sha256')]:
             if file_sha256(d/name)!=completion['input_identity'][key]:raise ValueError('Changed tiling input')
         slide=Slide.load(root/'slide.npz');text=TextEmbeddings.load(root/'text.npz');m=slide.metadata
-        if (m['source_kind']!='real' or m['project']!='PANDA' or m['slide_id']!=sid or
+        if (m['source_kind']!='real' or m['project']!='PANDA' or m.get('data_provider')!='radboud' or m['slide_id']!=sid or
                 m['cohort_split']!=row['split'] or m['isup_grade']!=int(row['isup_grade']) or
                 m['extraction']['sampling_mode']!='representative' or m['extraction']['selection_uses_mask'] or
                 text.fingerprint()!=receipt['text_fingerprint']):raise ValueError('Ineligible saved source')
@@ -111,6 +111,7 @@ def evaluate_rule(cases,rule):
 
 
 def choose_and_validate(cases,config):
+    if any(c['split'] not in ('train','calibration') for c in cases):raise ValueError('Test cases are forbidden in review-policy selection')
     train=[c for c in cases if c['split']=='train'];cal=[c for c in cases if c['split']=='calibration']
     visual=[p['visual'] for c in train if c['kind']=='unmodified' and c['mapping_fraction']>=.9 for p in c['components'] if p['status']=='evaluable']
     if not visual:raise ValueError('No training visual reference distribution')

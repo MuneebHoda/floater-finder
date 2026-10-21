@@ -45,11 +45,17 @@ def cancer_components(slide, rows, minimum_fraction):
 
 
 def inject_development_s1(host, donor, indices, percent, seed):
+    return _inject_s1(host,donor,indices,percent,seed,allowed_splits=('train','calibration'))
+
+
+def _inject_s1(host, donor, indices, percent, seed, *, allowed_splits):
+    if allowed_splits not in (('train','calibration'),('test',)):
+        raise ValueError('Explicit development or frozen-test split required')
     if type(seed) is not int or seed<0:raise ValueError('Nonnegative integer seed required')
     check_compatible(host,donor)
     h,d=host.metadata,donor.metadata
     if (h['project']!='PANDA' or d['project']!='PANDA' or h['data_provider']!='radboud' or d['data_provider']!='radboud' or
-            h['slide_id']==d['slide_id'] or h['cohort_split'] not in ('train','calibration') or
+            h['slide_id']==d['slide_id'] or h['cohort_split'] not in allowed_splits or
             h['cohort_split']!=d['cohort_split'] or h['isup_grade']!=0 or d['isup_grade'] not in (1,4,5)):
         raise ValueError('S1 requires distinct Radboud benign/cancer slides in the same development split')
     if (h.get('patient_id_known') and d.get('patient_id_known') and h['patient_id']==d['patient_id']):

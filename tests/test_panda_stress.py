@@ -58,3 +58,15 @@ def test_real_s1_runner_requires_slurm_before_reading_inputs(monkeypatch,tmp_pat
     monkeypatch.delenv('SLURM_JOB_ID',raising=False)
     with pytest.raises(RuntimeError,match='CPU Slurm'):run('absent','absent','absent','absent','absent',tmp_path/'out')
     assert not (tmp_path/'out').exists()
+
+
+def test_frozen_test_injection_preserves_real_split_without_relaxing_development_guard():
+    from floater_finder.panda_stress import _inject_s1
+    h,d=slide('test-host-fixture',0),slide('test-donor-fixture',4)
+    h.metadata['cohort_split']=d.metadata['cohort_split']='test'
+    h.metadata['split']=d.metadata['split']='eval'
+    with pytest.raises(ValueError,match='development split'):inject_development_s1(h,d,np.array([0,1]),10,0)
+    mixed=_inject_s1(h,d,np.array([0,1]),10,0,allowed_splits=('test',))
+    assert mixed.metadata['cohort_split']=='test' and mixed.metadata['split']=='eval'
+    assert mixed.metadata['injection']['host_metadata']['cohort_split']=='test'
+    assert h.metadata['patient_id']=='unknown'

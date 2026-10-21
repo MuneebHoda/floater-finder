@@ -31,6 +31,16 @@ def preflight(protocol_path,expected_sha256,source_root):
     data=protocol['data'];index_path=Path(data['blinded_index'])
     for name,digest in [(data['manifest'],data['manifest_sha256']),(data['verification'],data['verification_sha256']),(index_path,data['blinded_index_sha256'])]:
         if not _inside(name,roots) or file_sha256(name)!=digest:raise ValueError('Frozen data contract differs')
+    for name,digest in data.get('additional_files',{}).items():
+        if not _inside(name,roots) or file_sha256(name)!=digest:raise ValueError('Additional frozen input differs')
+    evidence=protocol.get('development_evidence')
+    if evidence:
+        if not _inside(evidence['path'],roots) or file_sha256(evidence['path'])!=evidence['sha256']:raise ValueError('Development evidence checksum/path differs')
+        selection=json.loads(Path(evidence['path']).read_text())
+        if selection['selected_rule']!=protocol['review_policy']['rules']['combined']:
+            raise ValueError('Development selection evidence differs')
+        if selection['operating_point_supported'] is not protocol['readiness']['operating_point_supported']:
+            raise ValueError('Readiness contradicts observed development gates')
     index=json.loads(index_path.read_text());entries=index['entries']
     if len(entries)!=24 or len({r['image_id'] for r in entries})!=24:raise ValueError('Exactly 24 distinct test IDs required')
     if sorted(r['image_id'] for r in entries)!=sorted(protocol['test_ids']):raise ValueError('Test membership differs')
@@ -47,6 +57,7 @@ def preflight(protocol_path,expected_sha256,source_root):
     for name,digest in files.items():
         if file_sha256(name)!=digest:raise ValueError('Final input checksum mismatch: '+Path(name).name)
     target=Path(protocol['execution']['output'])
+    if not _inside(target,roots):raise ValueError('Final output is outside approved roots')
     if target.exists():raise FileExistsError('Final output already exists; single execution guard')
     if not target.parent.is_dir():raise ValueError('Verified final output parent is absent')
     return dict(protocol_frozen=True,protocol_sha256=expected_sha256,source_commit=source['commit'],input_files_verified=len(files),
