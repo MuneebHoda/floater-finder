@@ -170,3 +170,44 @@ def test_maximal_fragment_near_boundary_does_not_prove_every_nested_prefix_is_ne
     fragment = np.c_[np.arange(10)*100.+9000, np.full(10, 400.)]
     assert _valid_position(fragment, h, observed)
     assert not _valid_position(fragment[:1], h, observed)
+
+
+def test_near_placement_cell_ownership_ignores_actual_roundtrip_phantom_overlap():
+    """Actual CSV geometry values; synthetic arrays/mask, never model evidence."""
+    from floater_finder.research.engine import _valid_position
+    step = 111.82315650205668
+    h = slide('numeric-host-fixture', 0, 2)
+    h.metadata['tile_step'] = h.metadata['tile_size'] = [step, step]
+    h.coords[:] = [[894.5852520164534, 4696.5725730863805],
+                   [894.5852520164534, 4808.395729588437]]
+    exact = np.array([[1006.4084085185101, 4696.5725730863805]])
+    roundtrip = exact.copy(); roundtrip[0, 0] = 4249.279947078154+(exact[0, 0]-4249.279947078154)
+    assert roundtrip[0, 0] == 1006.40840851851
+    assert np.all((h.coords[0] < roundtrip[0]+step) & (h.coords[0]+step > roundtrip[0]))
+    mask = np.zeros((800, 300), bool)
+    mask[603, 128] = True  # Nearby native tissue, outside the inserted footprint.
+    observed = VerifiedOccupancy.from_mask(mask, (7.779002191447421,)*2, 'a'*64, 'numeric fixture')
+    original = roundtrip.copy()
+    assert _valid_position(exact, h, observed)
+    assert _valid_position(roundtrip, h, observed)
+    assert np.array_equal(roundtrip, original)  # Validate ownership without snapping stored coordinates.
+
+
+def test_near_placement_rejects_owned_cells_off_grid_and_invalid_footprints():
+    from floater_finder.research.engine import _valid_position
+    h = slide('geometry-host-fixture', 0, 2)
+    h.coords[:] = [[0., 200.], [100., 200.]]
+    mask = np.zeros((100, 100), bool); mask[20:30, :20] = True
+    observed = VerifiedOccupancy.from_mask(mask, (10., 10.), 'a'*64, 'cell ownership fixture')
+    assert _valid_position(np.array([[200., 200.]]), h, observed)  # Touching edges are not overlap.
+    assert not _valid_position(np.array([[100., 200.]]), h, observed)  # An occupied cell is rejected.
+    with pytest.raises(ValueError, match='align'):
+        _valid_position(np.array([[199., 200.]]), h, observed)  # Do not quantize an actual off-grid overlap.
+    with pytest.raises(ValueError, match='Duplicate'):
+        _valid_position(np.array([[200., 200.], [200., 200.]]), h, observed)
+    h.metadata['tile_size'] = [101., 100.]
+    with pytest.raises(ValueError, match='no larger'):
+        _valid_position(np.array([[200., 200.]]), h, observed)
+    h.metadata['tile_size'] = [100., 100.]; h.coords[1, 0] = 99.
+    with pytest.raises(ValueError, match='aligned'):
+        _valid_position(np.array([[200., 200.]]), h, observed)

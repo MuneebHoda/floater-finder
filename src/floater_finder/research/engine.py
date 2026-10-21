@@ -171,13 +171,28 @@ def _raster_rect(coords, size, occupancy):
 
 
 def _valid_position(coords, host, occupancy, max_distance_um=224.):
-    mask, size = occupancy.mask(), np.asarray(host.metadata['tile_size'])
-    for point in coords:
+    coords = np.asarray(coords, dtype=float)
+    mask, size = occupancy.mask(), np.asarray(host.metadata['tile_size'], dtype=float)
+    grid_neighbors(host)
+    step = np.asarray(host.metadata['tile_step'], dtype=float)
+    if size.shape != (2,) or not np.isfinite(size).all() or np.any(size <= 0) or np.any(size > step):
+        raise ValueError('Positive tile_size no larger than tile_step required for cell ownership')
+    if coords.ndim != 2 or coords.shape[1] != 2 or not len(coords) or not np.isfinite(coords).all():
+        raise ValueError('Finite nonempty placement coordinates required')
+    origin = host.coords.min(axis=0)
+    grid = (coords-origin)/step
+    if not np.allclose(grid, np.rint(grid), atol=1e-5, rtol=0):
+        raise ValueError('Placement coordinates must align with the declared host grid')
+    cells = np.rint(grid).astype(np.int64)
+    if len(np.unique(cells, axis=0)) != len(cells):
+        raise ValueError('Duplicate placement grid cells')
+    occupied = {tuple(cell) for cell in np.rint((host.coords-origin)/step).astype(np.int64)}
+    for point, cell in zip(coords, cells):
         start, stop = _raster_rect(point, size, occupancy)
         if mask[start[1]:stop[1], start[0]:stop[0]].any():
             return False
-        overlap = np.all((host.coords < point+size) & (host.coords+size > point), axis=1)
-        if overlap.any():
+        # Aligned nonoverlapping footprints collide exactly when they own the same cell.
+        if tuple(cell) in occupied:
             return False
     # Expand actual footprints, not the fragment bbox: empty holes are not tissue boundaries.
     for point in coords:

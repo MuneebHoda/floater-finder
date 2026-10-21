@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "category": "read-only numerical geometry audit; no predictions or new scientific outcomes",
+  "source_baseline": "de220802f68098fac84119112157ee9078c6c13c",
+  "case": {
+    "host_id": "3901caec5d914bf20a44f176469b0294",
+    "donor_id": "14cff64d674f558dc47ee5e817b7f671",
+    "seed": 20261021,
+    "condition": "same_grade_gp3_only",
+    "requested_percent": 10,
+    "donor_tiles": 52,
+    "old_result": "excluded and retained unchanged"
+  },
+  "inputs": {
+    "3901caec5d914bf20a44f176469b0294": {
+      "directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/3901caec5d914bf20a44f176469b0294",
+      "csv_sha256": "c1c57b8737bcc22c8b631134d08c5f66517e8c713506044d053c5641736cbedc",
+      "metadata_sha256": "953c12afd0eb56528ad1235377e1989c8a0096a4172b30a6e4f10d2581dc613d",
+      "geometry": {
+        "slide_id": "3901caec5d914bf20a44f176469b0294",
+        "coordinate_units": "microns",
+        "microns_per_unit": 1,
+        "tile_step": [
+          111.82315650205668,
+          111.82315650205668
+        ],
+        "tile_size": [
+          111.82315650205668,
+          111.82315650205668
+        ],
+        "measured_mpp_xy": [
+          0.4861876369654638,
+          0.4861876369654638
+        ],
+        "footprint_level0_pixels_xy": [
+          230,
+          230
+        ],
+        "cohort_split": "train"
+      },
+      "completion_receipt": {
+        "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative/3901caec5d914bf20a44f176469b0294/completion.json",
+        "sha256": "eff8677f719ddca3c3de5fc5d8dcef11b89bbc65ded2c94d75fc3fdd1a0c2e39"
+      }
+    },
+    "14cff64d674f558dc47ee5e817b7f671": {
+      "directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/14cff64d674f558dc47ee5e817b7f671",
+      "csv_sha256": "c889bc001cc3552f4ede34f583d229f77434bb6c8a1e19f69456ce4b8619ec2c",
+      "metadata_sha256": "662c3ef710825cf8acc14da30f346bf183ed73f67a32a7a555e0d3cda8db15a3",
+      "geometry": {
+        "slide_id": "14cff64d674f558dc47ee5e817b7f671",
+        "coordinate_units": "microns",
+        "microns_per_unit": 1,
+        "tile_step": [
+          111.82315650205668,
+          111.82315650205668
+        ],
+        "tile_size": [
+          111.82315650205668,
+          111.82315650205668
+        ],
+        "measured_mpp_xy": [
+          0.4861876369654638,
+          0.4861876369654638
+        ],
+        "footprint_level0_pixels_xy": [
+          230,
+          230
+        ],
+        "cohort_split": "train"
+      },
+      "completion_receipt": {
+        "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative/14cff64d674f558dc47ee5e817b7f671/completion.json",
+        "sha256": "6a694eb1831503b6c039fe9477ddec02f0ae7519d60ca00d89459fe189e1e678"
+      }
+    }
+  },
+  "geometry_checkpoint": {
+    "path": "results/research_engine_v3_23069070/run/checkpoints/geometry-3901caec5d914bf20a44f176469b0294.json",
+    "sha256": "19362b12e44c3d9c7750301e73aa8b3d97a4da01e4e0c372847ef725393dc974",
+    "record": {
+      "component_rule": "observed RGB pixels; 8-connectivity; no morphology",
+      "image_id": "3901caec5d914bf20a44f176469b0294",
+      "image_sha256": "9d9d466c7b28a6a25672eb01b7f59af11fc5d6e454cbc2c9dbb70439c1a65491",
+      "mapped_tiles": 508,
+      "mapping_fraction": 0.9921875,
+      "new_observed_components": 2,
+      "old_sampled_components": 4,
+      "overview_dimensions": [
+        592,
+        1696
+      ],
+      "physical_boundary_validation": "RGB/pyramid proxy; not pathologist-verified",
+      "pixel_um": [
+        7.779002191447421,
+        7.779002191447421
+      ],
+      "pyramid_level": 2,
+      "selected_primary_before_outcomes": true,
+      "sensitive_components": 2,
+      "sensitive_mapping_fraction": 0.994140625,
+      "sensitivity_pairwise_membership_agreement": 1.0,
+      "split": "train",
+      "tiles": 512
+    }
+  },
+  "arithmetic": {
+    "host_id": "3901caec5d914bf20a44f176469b0294",
+    "donor_id": "14cff64d674f558dc47ee5e817b7f671",
+    "seed": 20261021,
+    "count": 52,
+    "minimum": [
+      4249.279947078154,
+      2124.639973539077
+    ],
+    "initial_anchor": [
+      1006.4084085185101,
+      4025.6336340740404
+    ],
+    "translation": [
+      -3242.871538559644,
+      1900.9936605349635
+    ],
+    "roundtrip_anchor": [
+      1006.40840851851,
+      4025.6336340740404
+    ],
+    "roundtrip_difference_um": [
+      -1.1368683772161603e-13,
+      0.0
+    ],
+    "max_coordinate_difference_um": 1.1368683772161603e-13,
+    "initial_valid": true,
+    "rechecked_valid": false,
+    "actual_valid": false,
+    "changed_tiles": [
+      {
+        "donor_index": 218,
+        "tile_id": "14cff64d674f558dc47ee5e817b7f671-x38-y25",
+        "initial": {
+          "point": [
+            1006.4084085185101,
+            4696.5725730863805
+          ],
+          "start": [
+            129,
+            603
+          ],
+          "stop": [
+            144,
+            619
+          ],
+          "foreground_pixels": 0,
+          "overlap_host_indices": []
+        },
+        "rechecked": {
+          "point": [
+            1006.40840851851,
+            4696.5725730863805
+          ],
+          "start": [
+            129,
+            603
+          ],
+          "stop": [
+            144,
+            619
+          ],
+          "foreground_pixels": 0,
+          "overlap_host_indices": [
+            167,
+            172
+          ]
+        },
+        "actual": {
+          "point": [
+            1006.40840851851,
+            4696.5725730863805
+          ],
+          "start": [
+            129,
+            603
+          ],
+          "stop": [
+            144,
+            619
+          ],
+          "foreground_pixels": 0,
+          "overlap_host_indices": [
+            167,
+            172
+          ]
+        }
+      }
+    ]
+  },
+  "corrected_validation": {
+    "initial_valid": true,
+    "roundtrip_valid": true,
+    "foreground_raster_rectangles_unchanged": true,
+    "foreground_pixels_on_all_52_footprints": 0,
+    "near_distance_um_unchanged": 224,
+    "coordinate_arrays_modified": false
+  },
+  "cause": "Floating-point anchor subtract/add roundtrip causes 1.1368683772161603e-13 micrometre phantom overlap with adjacent host grid cells. Observed RGB raster bounds and pixels are identical; this specific 10% exclusion is numerical, not a truly infeasible prefix.",
+  "fix": "After existing declared-grid alignment validation and positive tile_size<=tile_step checks, identify host overlap by exact integer grid-cell ownership. Reject unaligned/duplicate cells. Do not change coordinates, rasterization, distance or bounds.",
+  "local_tests": "31 targeted engine/acceptance tests passed, including actual numeric adjacency counterexample, true occupancy, off-grid geometry, invalid footprints, bounds and source/oracle integration.",
+  "no_model_or_wsi_read": true,
+  "no_jobs_submitted": true,
+  "no_test_inputs_read": true,
+  "old_scientific_artifacts_hash_unchanged": true,
+  "old_327_exclusions_preserved": true,
+  "new_scientific_eligibility_retroactively_changed": false
+}
