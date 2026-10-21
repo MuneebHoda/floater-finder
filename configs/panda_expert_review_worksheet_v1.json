@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "panda_expert_review_worksheet_v1",
+  "pairs": 24,
+  "split": "train",
+  "blindness": "unblinded_source_truth_and_saved_predictions_visible",
+  "human_judgments_generated": false,
+  "new_predictions": false,
+  "slurm_jobs": 0,
+  "gpu_jobs": 0,
+  "audit_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/paired-control-audit-v1",
+  "audit_source_commit": "24364b4946de211ae8b608f7bf7d710408aca112",
+  "inputs": {
+    "run.json": "24e48eeb8fd550e9b4ac2b0ba3deff2b0e50d7894310fa8e26a58c10e5e78671",
+    "seal.json": "6064a1c5037d364cc0f3c82848ac24ab76f1c2a173ee06d421a39ae84a182ac4",
+    "checkpoints/summary.json": "e684f6cc7a7cb36d60f8aa6017fb285077473fb6d9ca0ea8e08ef1bb3555659d"
+  },
+  "guide": "docs/panda_expert_review_v1.md",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-v1",
+  "authorization_basis": "Latest user next after completed saved controls and stated expert-review next need. Blank administrative metadata only; no human judgments, inference, downloads, Slurm or GPU jobs.",
+  "source_files": {
+    "src/floater_finder/research/review_worksheet.py": "c1062250c954074c0b2bbabf70b4c892f4f9356bd457edcd633bd6a2e7caaee7",
+    "scripts/panda_review_worksheet.py": "95c85d8eda8f67c07ddaa62a1847c454870b3e4921c3e1f7e42effe81ebe8393",
+    "docs/panda_expert_review_v1.md": "4d9a070d4bd755d8532f48b29ed5d6caa8e73220e996889a9d378380fb50495d",
+    "src/floater_finder/research/context_safety.py": "58e2bbc8aa7756897edf7c518c7673844adb04ca122cb894d36801f3c445e20d",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "src/floater_finder/experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea"
+  }
+}
