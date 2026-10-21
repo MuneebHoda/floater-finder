@@ -1,0 +1,66 @@
+[
+  {
+    "task": "benign_cancer",
+    "primary": "linear_mean_max_topk",
+    "baseline": "zero_shot_top5pct",
+    "split": "train",
+    "slides": 72,
+    "balanced_accuracy_difference": 0.020833333333333343,
+    "paired_stratified_slide_bootstrap95": [
+      -0.09375,
+      0.13541666666666666
+    ],
+    "repetitions": 2000,
+    "seed": 20261021,
+    "conditional_on_fixed_predictions": true,
+    "caveat": "Does not include CV refitting/model-selection uncertainty; known calibration is not independent validation"
+  },
+  {
+    "task": "benign_cancer",
+    "primary": "linear_mean_max_topk",
+    "baseline": "zero_shot_top5pct",
+    "split": "calibration",
+    "slides": 24,
+    "balanced_accuracy_difference": -0.0625,
+    "paired_stratified_slide_bootstrap95": [
+      -0.21875,
+      0.09375
+    ],
+    "repetitions": 2000,
+    "seed": 20261021,
+    "conditional_on_fixed_predictions": true,
+    "caveat": "Does not include CV refitting/model-selection uncertainty; known calibration is not independent validation"
+  },
+  {
+    "task": "low_high",
+    "primary": "linear_mean_max_topk",
+    "baseline": "zero_shot_mean",
+    "split": "train",
+    "slides": 48,
+    "balanced_accuracy_difference": 0.125,
+    "paired_stratified_slide_bootstrap95": [
+      -0.020833333333333332,
+      0.2708333333333333
+    ],
+    "repetitions": 2000,
+    "seed": 20261021,
+    "conditional_on_fixed_predictions": true,
+    "caveat": "Does not include CV refitting/model-selection uncertainty; known calibration is not independent validation"
+  },
+  {
+    "task": "low_high",
+    "primary": "linear_mean_max_topk",
+    "baseline": "zero_shot_mean",
+    "split": "calibration",
+    "slides": 16,
+    "balanced_accuracy_difference": 0.0625,
+    "paired_stratified_slide_bootstrap95": [
+      -0.125,
+      0.2515624999999915
+    ],
+    "repetitions": 2000,
+    "seed": 20261021,
+    "conditional_on_fixed_predictions": true,
+    "caveat": "Does not include CV refitting/model-selection uncertainty; known calibration is not independent validation"
+  }
+]

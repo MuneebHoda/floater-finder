@@ -74,6 +74,21 @@ def test_adapter_verification_needs_scheduler_before_reading_files(tmp_path,monk
     assert not (tmp_path/'absent').exists()
 
 
+def test_posthoc_annotation_join_rejects_test_records(tmp_path):
+    import runpy
+    from pathlib import Path
+    script=Path(__file__).parents[1]/'scripts/summarize_panda_predictors.py'
+    summarize=runpy.run_path(str(script))['summarize'];data=tmp_path/'input';data.mkdir()
+    files={'selection_frozen.json':{},'known_calibration_metrics.json':{'metrics':{}},
+        'clean_error_case_studies.json':[{'image_id':'only-test-id'}],
+        'execution.json':{}}
+    for name,value in files.items():(data/name).write_text(json.dumps(value))
+    receipt=tmp_path/'receipt.json';receipt.write_text(json.dumps({'records':[{'image_id':'only-test-id','split':'test'}]}))
+    with pytest.raises(ValueError,match='no test joins'):
+        summarize(data,tmp_path/'output',receipt)
+    assert not (tmp_path/'output').exists()
+
+
 def test_nested_cv_disjoint_groups_and_portable_fit_matches_sklearn():
     pytest.importorskip('sklearn')
     from floater_finder.predictors.evaluation import fit_linear, portable

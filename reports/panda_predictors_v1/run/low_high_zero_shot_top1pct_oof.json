@@ -1,0 +1,674 @@
+[
+  {
+    "image_id": "55d91c32710982de78a975ed0f45395c",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5862652063369751,
+      "high_grade": 0.5917023420333862
+    },
+    "margin": 0.005437135696411133,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "3901caec5d914bf20a44f176469b0294",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6101987957954407,
+      "high_grade": 0.6048067212104797
+    },
+    "margin": -0.0053920745849609375,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6408101916313171,
+      "high_grade": 0.6559323668479919
+    },
+    "margin": 0.015122175216674805,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "530d4ae320630f972f49d861a4724fb1",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6164017915725708,
+      "high_grade": 0.6430374383926392
+    },
+    "margin": 0.02663564682006836,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5799980163574219,
+      "high_grade": 0.5953253507614136
+    },
+    "margin": 0.0153273344039917,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "63080d06c66488c4c30285e0363ca0ad",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6298156976699829,
+      "high_grade": 0.601665735244751
+    },
+    "margin": -0.028149962425231934,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "14cff64d674f558dc47ee5e817b7f671",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6480990648269653,
+      "high_grade": 0.6380311846733093
+    },
+    "margin": -0.010067880153656006,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6250853538513184,
+      "high_grade": 0.6076993346214294
+    },
+    "margin": -0.017386019229888916,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5651601552963257,
+      "high_grade": 0.5701990723609924
+    },
+    "margin": 0.005038917064666748,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.612267792224884,
+      "high_grade": 0.6458203792572021
+    },
+    "margin": 0.033552587032318115,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6037793159484863,
+      "high_grade": 0.654468834400177
+    },
+    "margin": 0.050689518451690674,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "69da9f886fc4413167b8b144da775269",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5987669825553894,
+      "high_grade": 0.6441722512245178
+    },
+    "margin": 0.04540526866912842,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5896813869476318,
+      "high_grade": 0.6068676114082336
+    },
+    "margin": 0.017186224460601807,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.1909211426973343,
+      "high_grade": 0.18571239709854126
+    },
+    "margin": -0.00520874559879303,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "dc7254ab21584e852fe556646c86d6f4",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5448349118232727,
+      "high_grade": 0.5332158207893372
+    },
+    "margin": -0.011619091033935547,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.600349485874176,
+      "high_grade": 0.6133354902267456
+    },
+    "margin": 0.01298600435256958,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.49562206864356995,
+      "high_grade": 0.5153164863586426
+    },
+    "margin": 0.019694417715072632,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "ddbeff8437def5f80c4890b394711ec2",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6431106328964233,
+      "high_grade": 0.6583115458488464
+    },
+    "margin": 0.015200912952423096,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6213364601135254,
+      "high_grade": 0.6215337514877319
+    },
+    "margin": 0.00019729137420654297,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.4742928445339203,
+      "high_grade": 0.47587132453918457
+    },
+    "margin": 0.0015784800052642822,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "452eca104841c28098e3ea454f9626c5",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6321389079093933,
+      "high_grade": 0.6334471106529236
+    },
+    "margin": 0.0013082027435302734,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "591da133fabcfdfa629d09729d356cda",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5803473591804504,
+      "high_grade": 0.5871067643165588
+    },
+    "margin": 0.0067594051361083984,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.5554109811782837,
+      "high_grade": 0.5401861071586609
+    },
+    "margin": -0.015224874019622803,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "truth": "low_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6318286657333374,
+      "high_grade": 0.6635720133781433
+    },
+    "margin": 0.03174334764480591,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "dd1110c6430e3b1ac732be548a089886",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.27346357703208923,
+      "high_grade": 0.22719652950763702
+    },
+    "margin": -0.04626704752445221,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "134d69e06d397dc06ed6794b737c63fd",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6465447545051575,
+      "high_grade": 0.6860257983207703
+    },
+    "margin": 0.03948104381561279,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "4e5c75b501c348de7af7620dab9d783e",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6557059288024902,
+      "high_grade": 0.7034594416618347
+    },
+    "margin": 0.04775351285934448,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6351779699325562,
+      "high_grade": 0.6679493188858032
+    },
+    "margin": 0.03277134895324707,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "955f09b99664b07b0cf18768c84f2253",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "low_grade",
+    "scores": {
+      "low_grade": 0.6464732885360718,
+      "high_grade": 0.625401496887207
+    },
+    "margin": -0.021071791648864746,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "ab0c6950b69d38008bea90173b44aefa",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6258596181869507,
+      "high_grade": 0.645013153553009
+    },
+    "margin": 0.01915353536605835,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.660738468170166,
+      "high_grade": 0.6672160625457764
+    },
+    "margin": 0.0064775943756103516,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6474149823188782,
+      "high_grade": 0.6721594929695129
+    },
+    "margin": 0.024744510650634766,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "31e82faf725d625e322f58692dd90ac1",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5750531554222107,
+      "high_grade": 0.6204701066017151
+    },
+    "margin": 0.045416951179504395,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "0e305c4d31f47db36c44a1d55d389193",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.625196099281311,
+      "high_grade": 0.6558051705360413
+    },
+    "margin": 0.030609071254730225,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "7e8136cda906272497595cfb2088f4c4",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6722686886787415,
+      "high_grade": 0.7032243609428406
+    },
+    "margin": 0.03095567226409912,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "9c2eafb5480094f718bc40213531b7d5",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5801603198051453,
+      "high_grade": 0.6092902421951294
+    },
+    "margin": 0.02912992238998413,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6343226432800293,
+      "high_grade": 0.6970914006233215
+    },
+    "margin": 0.06276875734329224,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "84bc390199b8e7466a020ca6abe11852",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6454463601112366,
+      "high_grade": 0.6891928315162659
+    },
+    "margin": 0.0437464714050293,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6399291753768921,
+      "high_grade": 0.673077404499054
+    },
+    "margin": 0.033148229122161865,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6531446576118469,
+      "high_grade": 0.6658656597137451
+    },
+    "margin": 0.012721002101898193,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6437093615531921,
+      "high_grade": 0.6607667803764343
+    },
+    "margin": 0.017057418823242188,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "60bf955e8135c580681a253469151ed6",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.421552449464798,
+      "high_grade": 0.4714033603668213
+    },
+    "margin": 0.049850910902023315,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6345621347427368,
+      "high_grade": 0.6585038900375366
+    },
+    "margin": 0.023941755294799805,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.5693106651306152,
+      "high_grade": 0.6161784529685974
+    },
+    "margin": 0.04686778783798218,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6339958310127258,
+      "high_grade": 0.650723934173584
+    },
+    "margin": 0.016728103160858154,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6225388646125793,
+      "high_grade": 0.6524614095687866
+    },
+    "margin": 0.029922544956207275,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6630513072013855,
+      "high_grade": 0.7128598093986511
+    },
+    "margin": 0.049808502197265625,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "truth": "high_grade",
+    "outer_fold": "fixed scorer; no fitting",
+    "prediction": "high_grade",
+    "scores": {
+      "low_grade": 0.6531577110290527,
+      "high_grade": 0.6985647678375244
+    },
+    "margin": 0.04540705680847168,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  }
+]

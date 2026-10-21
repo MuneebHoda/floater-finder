@@ -1,0 +1,3674 @@
+{
+  "source_kind": "real_cached_annotation_metadata",
+  "selection": "96 existing train/known-cal IDs only",
+  "WSI_or_embedding_arrays_opened": false,
+  "test_metadata_opened": false,
+  "records": [
+    {
+      "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/00951a7fad040bf7e90f32e81fc0746f",
+      "status": "verified_cached_audit",
+      "audit_sha256": "43810425fda7e7a8bdcf62b483c030740dd567ca72ed72f802ca017b43b22115",
+      "tiling_completion_sha256": "2482ee3d9ce9de733d0bb27291a50b85f745930d338f52dcbdb85b5c1cbcbd19",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          11520,
+          8192
+        ],
+        "native_pixel_counts": {
+          "background": 63259648,
+          "stroma": 29925052,
+          "benign": 454144,
+          "gleason3": 732996,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 14.953215538862523,
+          "stroma": 7.073636460444247,
+          "benign": 0.10734984041772065,
+          "gleason3": 0.1732644351281258,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.007767105102539062,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.1732644351281258,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "03849b0243900d79446bb27849dc0bb2",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/03849b0243900d79446bb27849dc0bb2",
+      "status": "verified_cached_audit",
+      "audit_sha256": "9393a13d1e7d65954c549efbbcd470ee033c2d0db0b560bc017472d0bc9380af",
+      "tiling_completion_sha256": "55c2604b0b8fbca09411848a67d497d2843ff1bfd65ffedfb40d7a6bff83b9cd",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          12288,
+          25344
+        ],
+        "native_pixel_counts": {
+          "background": 283483172,
+          "stroma": 24781192,
+          "benign": 2402120,
+          "gleason3": 760588,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 67.00930382281668,
+          "stroma": 5.857738969491826,
+          "benign": 0.5678093262582246,
+          "gleason3": 0.1797865884469096,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.00244226680460201,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.1797865884469096,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "0a97bd73cd153b33751d43821ff0a400",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/0a97bd73cd153b33751d43821ff0a400",
+      "status": "verified_cached_audit",
+      "audit_sha256": "e5622a4366257e4c13f5e114fb9bdc50098f1b7d4bd85319d4dd84951b7f0833",
+      "tiling_completion_sha256": "4c98be2d4375e2d694c63b6b7dab1c2c91a0b4596705b0bbdbb5d0c68bd32327",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6400,
+          20480
+        ],
+        "native_pixel_counts": {
+          "background": 107806300,
+          "stroma": 22715412,
+          "benign": 550288,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 25.48308268087857,
+          "stroma": 5.369433160457425,
+          "benign": 0.13007620707041526,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "0e305c4d31f47db36c44a1d55d389193",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/0e305c4d31f47db36c44a1d55d389193",
+      "status": "verified_cached_audit",
+      "audit_sha256": "fc5d247baf895b7fd73162b23da38d73dd5914b6568786e2dcae1865741fd405",
+      "tiling_completion_sha256": "c9c993fd59973a7434dba0a98b6c931d9ea634893d140f67ea107ec8bb6397f3",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          19456,
+          20480
+        ],
+        "native_pixel_counts": {
+          "background": 374994236,
+          "stroma": 17706912,
+          "benign": 22684,
+          "gleason3": 0,
+          "gleason4": 5735048,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 88.6405443915698,
+          "stroma": 4.185531852211243,
+          "benign": 0.005362008041580589,
+          "gleason3": 0.0,
+          "gleason4": 1.3556415753328634,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          3104,
+          2304,
+          14776,
+          18512
+        ],
+        "annotation_fraction_of_slide": 0.014393073634097451,
+        "gp45_fraction_of_annotated_tissue": 0.2444123166752498,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.3556415753328634,
+      "native_gp45_area_mm2": 1.3556415753328634
+    },
+    {
+      "image_id": "134d69e06d397dc06ed6794b737c63fd",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/134d69e06d397dc06ed6794b737c63fd",
+      "status": "verified_cached_audit",
+      "audit_sha256": "e16e67588eecca760547ba040a2875c8ee42b09ee95a5619e807ae7e9d4484d2",
+      "tiling_completion_sha256": "ae4f06e7222c5e0d43c72ad853cac599815462e0e1bce3ed4df2e0bedf364df5",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          4608,
+          26624
+        ],
+        "native_pixel_counts": {
+          "background": 87136680,
+          "stroma": 21752600,
+          "benign": 1031996,
+          "gleason3": 0,
+          "gleason4": 11405228,
+          "gleason5": 1356888
+        },
+        "area_mm2": {
+          "background": 20.597230597629807,
+          "stroma": 5.141845182740519,
+          "benign": 0.24394158221120624,
+          "gleason3": 0.0,
+          "gleason4": 2.695949755424974,
+          "gleason5": 0.32073903930189573
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          346,
+          438,
+          3926,
+          25176
+        ],
+        "annotation_fraction_of_slide": 0.1040248055743356,
+        "gp45_fraction_of_annotated_tissue": 0.3590238106973157,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 3.0166887947268695,
+      "native_gp45_area_mm2": 3.0166887947268695
+    },
+    {
+      "image_id": "14cff64d674f558dc47ee5e817b7f671",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/14cff64d674f558dc47ee5e817b7f671",
+      "status": "verified_cached_audit",
+      "audit_sha256": "afcacb835f4a5a38df9ed1ae493d65101b38b656a62d16bcc4f9d6259d0452fc",
+      "tiling_completion_sha256": "3b52cde106fa35490a1c1f40ee6fc08206de32787d6a0068badcee51569dc54d",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          15360,
+          12032
+        ],
+        "native_pixel_counts": {
+          "background": 159331428,
+          "stroma": 21622400,
+          "benign": 175756,
+          "gleason3": 3681936,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 37.662510942184745,
+          "stroma": 5.111068712672903,
+          "benign": 0.04154492529342436,
+          "gleason3": 0.8703302081019691,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.019922654172207448,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.8703302081019691,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "1b176c9049260a8843b97349ccdd3eb7",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/1b176c9049260a8843b97349ccdd3eb7",
+      "status": "verified_cached_audit",
+      "audit_sha256": "bcba9da159fff846007d6a0e76ec2af1221540ac0203c682b67f8926dd9861e0",
+      "tiling_completion_sha256": "5e1607d5ba7b376488bf1e9f0167cada3cc2e399d2c71a0ee22ab5d0146294f2",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          13056,
+          30720
+        ],
+        "native_pixel_counts": {
+          "background": 349273024,
+          "stroma": 33321900,
+          "benign": 56928,
+          "gleason3": 0,
+          "gleason4": 17056112,
+          "gleason5": 1372356
+        },
+        "area_mm2": {
+          "background": 82.56060498127184,
+          "stroma": 7.876578018019055,
+          "benign": 0.01345655059914917,
+          "gleason3": 0.0,
+          "gleason4": 4.031696777556832,
+          "gleason5": 0.32439534067674886
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          546,
+          18,
+          12396,
+          29958
+        ],
+        "annotation_fraction_of_slide": 0.045947076136769814,
+        "gp45_fraction_of_annotated_tissue": 0.35571182869686924,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 4.3560921182335814,
+      "native_gp45_area_mm2": 4.3560921182335814
+    },
+    {
+      "image_id": "1e73a4d3e89de944a6c309defde99839",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/1e73a4d3e89de944a6c309defde99839",
+      "status": "verified_cached_audit",
+      "audit_sha256": "e7148985550de025efdc3c03d02c3d9f23965db87dfc603cee2c11677789b090",
+      "tiling_completion_sha256": "85fd7a87fdea9946bba064a8b25af17e32d5b076a82ab236358fa213c75da9b4",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          4864,
+          22528
+        ],
+        "native_pixel_counts": {
+          "background": 76810320,
+          "stroma": 30001328,
+          "benign": 677932,
+          "gleason3": 0,
+          "gleason4": 2086612,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 18.15630195364038,
+          "stroma": 7.0916664606814015,
+          "benign": 0.1602484939007588,
+          "gleason3": 0.0,
+          "gleason4": 0.4932300442452194,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          674,
+          8888,
+          3378,
+          21094
+        ],
+        "annotation_fraction_of_slide": 0.019042567202919407,
+        "gp45_fraction_of_annotated_tissue": 0.06368248035639033,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.4932300442452194,
+      "native_gp45_area_mm2": 0.4932300442452194
+    },
+    {
+      "image_id": "1f1440204eba45ff4f999795c7d52040",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/1f1440204eba45ff4f999795c7d52040",
+      "status": "verified_cached_audit",
+      "audit_sha256": "1d7eedbee20cd26b47b50c6d742ff25529549aaec4713d05079404f2b110e60c",
+      "tiling_completion_sha256": "3dada1b280395dae9b8d5038b49706bc2ef955d841b40f52620be42e3af5b519",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6400,
+          19456
+        ],
+        "native_pixel_counts": {
+          "background": 90795292,
+          "stroma": 29938368,
+          "benign": 3784740,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 21.46204751550246,
+          "stroma": 7.076784075462837,
+          "benign": 0.8946308550207953,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/20be7c34058e2f24ef3bb0cda3c376d5",
+      "status": "verified_cached_audit",
+      "audit_sha256": "7652282d1c59682714ab4b1e4e90deea9fd5db65169d55292bf33a5de3a3142e",
+      "tiling_completion_sha256": "3ce8bfbdb44020a4f05cd1c13538eb9202b50891eee01596be03e696cde8e86a",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          15104,
+          27392
+        ],
+        "native_pixel_counts": {
+          "background": 370492348,
+          "stroma": 37137840,
+          "benign": 5295724,
+          "gleason3": 802856,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 87.5763952265947,
+          "stroma": 8.778583879691999,
+          "benign": 1.251794863074913,
+          "gleason3": 0.1897778314332228,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0019405370428579915,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.1897778314332228,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "291b2132e1fb9131478b8d691406874b",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/291b2132e1fb9131478b8d691406874b",
+      "status": "verified_cached_audit",
+      "audit_sha256": "967bc05baac55cc1ea027f76e923809bbef7a664a6d8168071840f7f1703ec44",
+      "tiling_completion_sha256": "edfd2ce7387f63a450864523f92df954ae3e00db05cdd62e290871147fc3a513",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          8192,
+          6400
+        ],
+        "native_pixel_counts": {
+          "background": 41419232,
+          "stroma": 10292524,
+          "benign": 717044,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 9.790612548937228,
+          "stroma": 2.432930543826539,
+          "benign": 0.16949372659879705,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "29fe9e445bbf0c9d84aec6799cbba4a5",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/29fe9e445bbf0c9d84aec6799cbba4a5",
+      "status": "verified_cached_audit",
+      "audit_sha256": "46f525669c18f82a4e53bcf1cf0d4e1c7d9d70251930a979973dc2709b4aab08",
+      "tiling_completion_sha256": "b523960bb83ac1fc8f020bb88c3539e5acd7244f7789e59df31ac3ab381935a6",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          2304,
+          7680
+        ],
+        "native_pixel_counts": {
+          "background": 9613540,
+          "stroma": 7727280,
+          "benign": 353900,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 2.272433379829689,
+          "stroma": 1.8265622244553368,
+          "benign": 0.08365432224984,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "2a6d0c4bd562bb83e9863a175af50de4",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/2a6d0c4bd562bb83e9863a175af50de4",
+      "status": "verified_cached_audit",
+      "audit_sha256": "6e5a3e6460cdc522a484d46d04875c216083ae6c64e8be202b6e5b272f0ecc84",
+      "tiling_completion_sha256": "86251402e1441face1628504e219921923c63b434cb4940708c865064d44b6ae",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7936,
+          27904
+        ],
+        "native_pixel_counts": {
+          "background": 179493780,
+          "stroma": 38989612,
+          "benign": 715084,
+          "gleason3": 0,
+          "gleason4": 2157644,
+          "gleason5": 90024
+        },
+        "area_mm2": {
+          "background": 42.428455817919996,
+          "stroma": 9.216302816174707,
+          "benign": 0.16903042489885445,
+          "gleason3": 0.0,
+          "gleason4": 0.5100204760566086,
+          "gleason5": 0.021279730732465658
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          238,
+          1354,
+          6060,
+          25448
+        ],
+        "annotation_fraction_of_slide": 0.010149953209390722,
+        "gp45_fraction_of_annotated_tissue": 0.053576670911798914,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.5313002067890743,
+      "native_gp45_area_mm2": 0.5313002067890743
+    },
+    {
+      "image_id": "31e82faf725d625e322f58692dd90ac1",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/31e82faf725d625e322f58692dd90ac1",
+      "status": "verified_cached_audit",
+      "audit_sha256": "b9680d1b43a20c24cffed21e959459c53f40c63b15cc5c8877ac845a32afe0a7",
+      "tiling_completion_sha256": "94eb9af6bff0838a27482d460377454c5c2fd0b9fde05087cdfdff4be023c825",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          3584,
+          18688
+        ],
+        "native_pixel_counts": {
+          "background": 39519308,
+          "stroma": 24453120,
+          "benign": 105828,
+          "gleason3": 0,
+          "gleason4": 1882800,
+          "gleason5": 1016736
+        },
+        "area_mm2": {
+          "background": 9.341511518854706,
+          "stroma": 5.780189829030821,
+          "benign": 0.025015455255880382,
+          "gleason3": 0.0,
+          "gleason4": 0.44505328604690236,
+          "gleason5": 0.2403344475473674
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          710,
+          1356,
+          3098,
+          16876
+        ],
+        "annotation_fraction_of_slide": 0.043291006069593935,
+        "gp45_fraction_of_annotated_tissue": 0.10559708977378358,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.6853877335942697,
+      "native_gp45_area_mm2": 0.6853877335942697
+    },
+    {
+      "image_id": "36dd11dbc0aba4413623bdc44775e6fe",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/36dd11dbc0aba4413623bdc44775e6fe",
+      "status": "verified_cached_audit",
+      "audit_sha256": "7c16fd8e6c5e5c58bcab6455d8ae171dd7084a32b9ecba21a9c1a6c65d2f4e66",
+      "tiling_completion_sha256": "6536de7a9213797a0f68fc6e00386092cc49d2ecac76eeb3be88470735a12c8e",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          20224,
+          4096
+        ],
+        "native_pixel_counts": {
+          "background": 59380228,
+          "stroma": 22046992,
+          "benign": 107276,
+          "gleason3": 0,
+          "gleason4": 1928,
+          "gleason5": 1301080
+        },
+        "area_mm2": {
+          "background": 14.03620437519348,
+          "stroma": 5.211433098071898,
+          "benign": 0.025357731205633897,
+          "gleason3": 0.0,
+          "gleason4": 0.0004557375905557828,
+          "gleason5": 0.3075472325312852
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          1544,
+          176,
+          17490,
+          3106
+        ],
+        "annotation_fraction_of_slide": 0.01572968688192247,
+        "gp45_fraction_of_annotated_tissue": 0.05554813781446746,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.30800297012184097,
+      "native_gp45_area_mm2": 0.30800297012184097
+    },
+    {
+      "image_id": "375b2c9501320b35ceb638a3274812aa",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/375b2c9501320b35ceb638a3274812aa",
+      "status": "verified_cached_audit",
+      "audit_sha256": "912ace92d1b50ef8341262be8efdc228b9012d514864d807176a280ff1a8be19",
+      "tiling_completion_sha256": "c1a98fbb264f91291961653660f29f61f629fef441d1ab11f897bfd1503090fb",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6656,
+          20736
+        ],
+        "native_pixel_counts": {
+          "background": 109481444,
+          "stroma": 22888416,
+          "benign": 317252,
+          "gleason3": 5331704,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 25.879050570087063,
+          "stroma": 5.410327572343583,
+          "benign": 0.07499152597458672,
+          "gleason3": 1.2602997585667164,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.03863026907867403,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.2602997585667164,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "3901caec5d914bf20a44f176469b0294",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/3901caec5d914bf20a44f176469b0294",
+      "status": "verified_cached_audit",
+      "audit_sha256": "8975be60e44352910687d8795dfa87711372dd0f4728a2a82b0ad2d89e2451c5",
+      "tiling_completion_sha256": "1acca535c706dcaff91127dbdebfb7a65ebef32d9243a1c0974e2a8e5bf8e2bb",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          9472,
+          27136
+        ],
+        "native_pixel_counts": {
+          "background": 219019820,
+          "stroma": 30429196,
+          "benign": 3541312,
+          "gleason3": 4041864,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 51.771558636286954,
+          "stroma": 7.192805221778871,
+          "benign": 0.8370897294015976,
+          "gleason3": 0.955409419457551,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.015725127535775752,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.955409419457551,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/3c685ed0f92e30f6ffeb5cea7cef5994",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a83a5581aed451351bc61b26f2c416688f5d7539b4bc25d7fb96b8364f3eb4d8",
+      "tiling_completion_sha256": "5df682de57e02942d9a0430a15e0983f3da5ff2ebdccac009105fc7b51511432",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          5888,
+          3584
+        ],
+        "native_pixel_counts": {
+          "background": 15339560,
+          "stroma": 5719524,
+          "benign": 43508,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 3.6259409308017965,
+          "stroma": 1.3519720367665835,
+          "benign": 0.010284352225052385,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/3ef789f8caa7186261ad9f77bb552c7a",
+      "status": "verified_cached_audit",
+      "audit_sha256": "2e0c37d03f0e034d8634c55685cfb6cd69665eb0b57bd5716d81065d7d94b410",
+      "tiling_completion_sha256": "88469c10b3e6b401ff12f4af9a97b03f9b74decf2ce02be8f21c42338cf7d3e5",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          10496,
+          11520
+        ],
+        "native_pixel_counts": {
+          "background": 87987676,
+          "stroma": 24529528,
+          "benign": 2351876,
+          "gleason3": 6044840,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 20.798387686121824,
+          "stroma": 5.798251031219196,
+          "benign": 0.555932729007247,
+          "gleason3": 1.4288697183066483,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.04999292058350271,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.4288697183066483,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "428f0c9a110cf7cae62d620a4306ceaf",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/428f0c9a110cf7cae62d620a4306ceaf",
+      "status": "verified_cached_audit",
+      "audit_sha256": "538b039f7b77634491ab3b405515cb3a46f76d86265cfaabba8d6a25e539a7dd",
+      "tiling_completion_sha256": "fcacce2c3f301a2dd8dba7a232c3b9c8cf5ad8a8ac65e91bd8d96d23e245f6de",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          26880,
+          3072
+        ],
+        "native_pixel_counts": {
+          "background": 52165916,
+          "stroma": 21845872,
+          "benign": 1232816,
+          "gleason3": 7330756,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 12.33089671523618,
+          "stroma": 5.163892670575747,
+          "benign": 0.29141109618185573,
+          "gleason3": 1.7328325085022551,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.08877655513702877,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.7328325085022551,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "42cb627feeceb770537e6c322c763dbf",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/42cb627feeceb770537e6c322c763dbf",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a8763dce72e8920b9eb8fe5f01cf6f74a7b1d0076ab0c5f2281423afb6eab847",
+      "tiling_completion_sha256": "abcab1ba674138476ff3a6e7c046bb18bbf1fffa46c8d76c94fd9d863d612b47",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          17408,
+          6656
+        ],
+        "native_pixel_counts": {
+          "background": 93658928,
+          "stroma": 21810972,
+          "benign": 397748,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 22.13894926387839,
+          "stroma": 5.155643063775748,
+          "benign": 0.09401904313712733,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "452eca104841c28098e3ea454f9626c5",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/452eca104841c28098e3ea454f9626c5",
+      "status": "verified_cached_audit",
+      "audit_sha256": "f69a51384c9e9d21a3d95a2592be8668e29850edcf82e28c1c3d03d842984472",
+      "tiling_completion_sha256": "3dea5858b263fd48f1fd9a433496b21fb8b8074f49de15e8bd759468ae02e11c",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          20992,
+          3584
+        ],
+        "native_pixel_counts": {
+          "background": 47066468,
+          "stroma": 20935020,
+          "benign": 7792,
+          "gleason3": 7226048,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 11.125497262598989,
+          "stroma": 4.948586915475686,
+          "benign": 0.001841860635690176,
+          "gleason3": 1.7080817970749134,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.09604594267203832,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.7080817970749134,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "46d067b212c4dda9e6f87c8b82f22d79",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/46d067b212c4dda9e6f87c8b82f22d79",
+      "status": "verified_cached_audit",
+      "audit_sha256": "38d21e198d6a398de947228a875f47dc609e28aaa35963fcf43413e9c788519c",
+      "tiling_completion_sha256": "c95425d8ee80c36bd5c3d06ea47a8a026eef79348d6451bb0e4cf48b0ffb5896",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          9216,
+          23296
+        ],
+        "native_pixel_counts": {
+          "background": 194834596,
+          "stroma": 18220220,
+          "benign": 213008,
+          "gleason3": 1428112,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 46.05469364001522,
+          "stroma": 4.306866785371517,
+          "benign": 0.050350494133353824,
+          "gleason3": 0.33757485576960583,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.006651788695245726,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.33757485576960583,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "49db41e3293630f0b1a566d7c9a8f07e",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/49db41e3293630f0b1a566d7c9a8f07e",
+      "status": "verified_cached_audit",
+      "audit_sha256": "4a292b8dc59401d4f5795ddef7ce967839837e37212947a8004def566b633695",
+      "tiling_completion_sha256": "15893fd3249ace26b3d332b2c7b63d19ed5b31b61688ca160f5f4b8ff5098312",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          13056,
+          8192
+        ],
+        "native_pixel_counts": {
+          "background": 73462376,
+          "stroma": 31239724,
+          "benign": 2252652,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 17.364920246235975,
+          "stroma": 7.384396548437583,
+          "benign": 0.5324783168260712,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "4a2aec11bc2def9644ba9756f888ec24",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/4a2aec11bc2def9644ba9756f888ec24",
+      "status": "verified_cached_audit",
+      "audit_sha256": "9261a2a7741aa45dbd953a4837254cd3ea400e672b89c95a52e8d1d54b10c889",
+      "tiling_completion_sha256": "9c5034285e4d9871b6468e83d8b645968e78f875e2481c29494e2ca24558b3dc",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6656,
+          26112
+        ],
+        "native_pixel_counts": {
+          "background": 147923224,
+          "stroma": 22403044,
+          "benign": 3475204,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 34.9658577245868,
+          "stroma": 5.295596106678001,
+          "benign": 0.821463224922105,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "4e5c75b501c348de7af7620dab9d783e",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/4e5c75b501c348de7af7620dab9d783e",
+      "status": "verified_cached_audit",
+      "audit_sha256": "8366c2f8cd86a9af45b4d2f762b2400fef42a9c1b9beb9c6781f43775fe779fc",
+      "tiling_completion_sha256": "2a1ee267d988fdd11f76d80972d8718e59e8a3343fe98da2726e7ac6f44ae834",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          28416,
+          4096
+        ],
+        "native_pixel_counts": {
+          "background": 81096748,
+          "stroma": 23100844,
+          "benign": 127536,
+          "gleason3": 0,
+          "gleason4": 77040,
+          "gleason5": 11989768
+        },
+        "area_mm2": {
+          "background": 19.16952102460036,
+          "stroma": 5.460540966994301,
+          "benign": 0.030146757961163024,
+          "gleason3": 0.0,
+          "gleason4": 0.018210593348764265,
+          "gleason5": 2.8341223960803044
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          2288,
+          760,
+          20922,
+          3718
+        ],
+        "annotation_fraction_of_slide": 0.10367391775320242,
+        "gp45_fraction_of_annotated_tissue": 0.3418825251759532,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 2.8523329894290685,
+      "native_gp45_area_mm2": 2.8523329894290685
+    },
+    {
+      "image_id": "50a159e2f93214ad4ebb0ec9c5d428f7",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/50a159e2f93214ad4ebb0ec9c5d428f7",
+      "status": "verified_cached_audit",
+      "audit_sha256": "216a8195d2ac0847cac0f6d6e60af7adb409a656c7643f07b285c2e8fb36c5ed",
+      "tiling_completion_sha256": "62898c4c9cb02ebe913c48876660f81f84444502a07fec7be99481130f3d768c",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7936,
+          2304
+        ],
+        "native_pixel_counts": {
+          "background": 9363584,
+          "stroma": 7657124,
+          "benign": 1263836,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 2.2133491758955803,
+          "stroma": 1.8099788601384117,
+          "benign": 0.29874355471870245,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "530d4ae320630f972f49d861a4724fb1",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/530d4ae320630f972f49d861a4724fb1",
+      "status": "verified_cached_audit",
+      "audit_sha256": "713b47170e83e378b5643e7e45f31f6c4ff9810ee46a7b2bc1644360338ecb59",
+      "tiling_completion_sha256": "c300a3423ff9aca200ebe316fe8cd092f9ba7d4e1fdfa184bb4ace9373377a7d",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          23296,
+          9728
+        ],
+        "native_pixel_counts": {
+          "background": 202128360,
+          "stroma": 21831704,
+          "benign": 1710216,
+          "gleason3": 953208,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 47.77878203806632,
+          "stroma": 5.160543661144733,
+          "benign": 0.40425815309644636,
+          "gleason3": 0.22531779938718702,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0042061306549125215,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.22531779938718702,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "55d91c32710982de78a975ed0f45395c",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-profile/20261020T175626Z/55d91c32710982de78a975ed0f45395c/representative",
+      "status": "missing_cached_audit"
+    },
+    {
+      "image_id": "591da133fabcfdfa629d09729d356cda",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/591da133fabcfdfa629d09729d356cda",
+      "status": "verified_cached_audit",
+      "audit_sha256": "57e618245eb3e8756a48a7aa94be2aebec0759a261d3eb1e864dbe3c1fdf212c",
+      "tiling_completion_sha256": "9d98ab0496fadcde0e8de5faf814b12b1dac2ee984edadb1dde77bfb330b71bf",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          8192,
+          22528
+        ],
+        "native_pixel_counts": {
+          "background": 163631624,
+          "stroma": 18391140,
+          "benign": 39592,
+          "gleason3": 2487020,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 38.6789844712084,
+          "stroma": 4.347268584633858,
+          "benign": 0.009358694338840534,
+          "gleason3": 0.5878778539751259,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.01347617669539018,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.5878778539751259,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "5c2226e06c1c417be01fdd49ce5501b9",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/5c2226e06c1c417be01fdd49ce5501b9",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a0a359fa1ff1067096bb5b2e05cebe97765b3968890b8d53ce0b7e404ca90505",
+      "tiling_completion_sha256": "b09cbfe1f933e3ac4c4db2f9eaf59168eaafe87799c249f3117cbc2ccf8ef0b8",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7936,
+          25344
+        ],
+        "native_pixel_counts": {
+          "background": 163500820,
+          "stroma": 34481928,
+          "benign": 791144,
+          "gleason3": 0,
+          "gleason4": 2356092,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 38.64806522857611,
+          "stroma": 8.15078360188692,
+          "benign": 0.1870093673976474,
+          "gleason3": 0.0,
+          "gleason4": 0.5569293004189603,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          416,
+          5538,
+          4054,
+          20372
+        ],
+        "annotation_fraction_of_slide": 0.011714275281799854,
+        "gp45_fraction_of_annotated_tissue": 0.06261345588225133,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.5569293004189603,
+      "native_gp45_area_mm2": 0.5569293004189603
+    },
+    {
+      "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/5f7ebc491021150fdb969866ad5f6d81",
+      "status": "verified_cached_audit",
+      "audit_sha256": "cc81cc7a14731da159b0c2425709e1b75fe31e68b8399bc046294b591e97f3c0",
+      "tiling_completion_sha256": "13b7386c4001bce256bc2e0d3f409944294541ab6721b31ee92c13482f06b03e",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          30976,
+          5120
+        ],
+        "native_pixel_counts": {
+          "background": 137578864,
+          "stroma": 14330264,
+          "benign": 78544,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 6609448
+        },
+        "area_mm2": {
+          "background": 32.520674269067285,
+          "stroma": 3.387365138686864,
+          "benign": 0.018566106489944712,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 1.5623308643276645
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          250,
+          74,
+          30664,
+          4640
+        ],
+        "annotation_fraction_of_slide": 0.04167445159155475,
+        "gp45_fraction_of_annotated_tissue": 0.3144622465346316,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.5623308643276645,
+      "native_gp45_area_mm2": 1.5623308643276645
+    },
+    {
+      "image_id": "60bf955e8135c580681a253469151ed6",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/60bf955e8135c580681a253469151ed6",
+      "status": "verified_cached_audit",
+      "audit_sha256": "83b01768ecee4117c34a36559efa89de2ae747470656e2fa6dcc12febe40ba17",
+      "tiling_completion_sha256": "516f2bbf959d7c48b7efa9c0ccf84d51c87e7683ede3e99e06daf230d881bed2",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7424,
+          27392
+        ],
+        "native_pixel_counts": {
+          "background": 161396972,
+          "stroma": 31609216,
+          "benign": 56880,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 10295140
+        },
+        "area_mm2": {
+          "background": 38.15076096591242,
+          "stroma": 7.471736482986151,
+          "benign": 0.013445204435068943,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 2.4335489097689114
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          392,
+          2320,
+          5342,
+          25830
+        ],
+        "annotation_fraction_of_slide": 0.05062564280660852,
+        "gp45_fraction_of_annotated_tissue": 0.24534882623571908,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 2.4335489097689114,
+      "native_gp45_area_mm2": 2.4335489097689114
+    },
+    {
+      "image_id": "615b8a4e40699ea384e5f518ac0c68b4",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/615b8a4e40699ea384e5f518ac0c68b4",
+      "status": "verified_cached_audit",
+      "audit_sha256": "6b3f2c9cb71ad63803ef211c8fbdd71e4e741b669230dba35078a048f0871c5f",
+      "tiling_completion_sha256": "4af6ecb918cf958c49823c750943949272e4922d965711a89c70e874cfefd14d",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          4352,
+          12032
+        ],
+        "native_pixel_counts": {
+          "background": 39213224,
+          "stroma": 12980848,
+          "benign": 66328,
+          "gleason3": 102864,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 9.269159867056118,
+          "stroma": 3.06839231892679,
+          "benign": 0.01567850773152695,
+          "gleason3": 0.02431482962392637,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.001964430635951189,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.02431482962392637,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "63080d06c66488c4c30285e0363ca0ad",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/63080d06c66488c4c30285e0363ca0ad",
+      "status": "verified_cached_audit",
+      "audit_sha256": "02f58e87bd6446f6d6a87cafba690033173bfaa7f4064ff55b891cebeb87794c",
+      "tiling_completion_sha256": "ed6f4bae0b6f587cd6044ecfb63949f62325bbeb1503ce48ceb22e94e30681c2",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          9216,
+          23552
+        ],
+        "native_pixel_counts": {
+          "background": 187123028,
+          "stroma": 26588032,
+          "benign": 2605808,
+          "gleason3": 738364,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 44.23184539326881,
+          "stroma": 6.284836950881769,
+          "benign": 0.6159567735326676,
+          "gleason3": 0.17453331447776452,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0034017332510095865,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.17453331447776452,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "647f4dabc53f943acbffbde9db87e35e",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/647f4dabc53f943acbffbde9db87e35e",
+      "status": "verified_cached_audit",
+      "audit_sha256": "5b581945ba995a426b08de7ccb07e46ea4758afbdbbd7aea238c9074e942ff01",
+      "tiling_completion_sha256": "7fc7b5175972ab848afae1302cc97e18ae926815789219d9800e227d3d973f91",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          5376,
+          26112
+        ],
+        "native_pixel_counts": {
+          "background": 112813676,
+          "stroma": 24122540,
+          "benign": 119456,
+          "gleason3": 0,
+          "gleason4": 3248516,
+          "gleason5": 73924
+        },
+        "area_mm2": {
+          "background": 26.66671829978254,
+          "stroma": 5.702047851496625,
+          "benign": 0.028236820340991488,
+          "gleason3": 0.0,
+          "gleason4": 0.7678790740258865,
+          "gleason5": 0.017474038197222867
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          664,
+          558,
+          4470,
+          25346
+        ],
+        "annotation_fraction_of_slide": 0.023667792312237396,
+        "gp45_fraction_of_annotated_tissue": 0.12053357449432305,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.7853531122231093,
+      "native_gp45_area_mm2": 0.7853531122231093
+    },
+    {
+      "image_id": "66557aa92abab5f0eaa6a7c03d17bff1",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/66557aa92abab5f0eaa6a7c03d17bff1",
+      "status": "verified_cached_audit",
+      "audit_sha256": "0b84bd97897b00d399f1647869ce368bb514c615b9e66cb8caf0bae2cf8bf88e",
+      "tiling_completion_sha256": "f8e19d2651e9174bdfe31d56dd7fed97e8149f8ad271ba842e27536a816a36a3",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          20736,
+          23296
+        ],
+        "native_pixel_counts": {
+          "background": 442108356,
+          "stroma": 39570476,
+          "benign": 1387024,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 104.50487392532067,
+          "stroma": 9.353606529764226,
+          "benign": 0.32786253931693154,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "66f5cc9041b6485114cf9555c31e908d",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/66f5cc9041b6485114cf9555c31e908d",
+      "status": "verified_cached_audit",
+      "audit_sha256": "70e08b95cb438593b874ed3242d99228b6b794fa2cbe764b4e081538d38095d0",
+      "tiling_completion_sha256": "5976f34bf92ce1594ffbe24dbdd9a0b98c0b036996c399b3aa0749f355854c7f",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          8448,
+          26624
+        ],
+        "native_pixel_counts": {
+          "background": 203556112,
+          "stroma": 16338864,
+          "benign": 5024576,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 48.11627179760532,
+          "stroma": 3.8621548297606947,
+          "benign": 1.1877013276993842,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "66fab9d13c7a0f1e81b77887bb8a535a",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/66fab9d13c7a0f1e81b77887bb8a535a",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a8def51b51a4eee1a4d2a9c81887a77641ec9b40fa4eca108948c6b10fb5c066",
+      "tiling_completion_sha256": "13a091f2d87c89c08640d1e3fe753ea7b793f810a1de12dadcc6d24ad799ee89",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          12800,
+          21760
+        ],
+        "native_pixel_counts": {
+          "background": 235306636,
+          "stroma": 42717060,
+          "benign": 504304,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 55.621410442129985,
+          "stroma": 10.097391078852079,
+          "benign": 0.11920658188155782,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "69da9f886fc4413167b8b144da775269",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/69da9f886fc4413167b8b144da775269",
+      "status": "verified_cached_audit",
+      "audit_sha256": "0698c42089a09c9b4d585722552fca5ae7ebc4e85ceffcc20981276bbb2e1612",
+      "tiling_completion_sha256": "c4ea981dddee298bdd1eb691d576af571025dfa4a4f87d43b6d8dbbbb1ceeb46",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          24320,
+          4096
+        ],
+        "native_pixel_counts": {
+          "background": 74436248,
+          "stroma": 18358932,
+          "benign": 1011232,
+          "gleason3": 5808308,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 17.5951225692597,
+          "stroma": 4.339655308536026,
+          "benign": 0.2390334207328347,
+          "gleason3": 1.37295865826031,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.05830772801449424,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.37295865826031,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "69f32b20f51e4166809a29e594764865",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/69f32b20f51e4166809a29e594764865",
+      "status": "verified_cached_audit",
+      "audit_sha256": "9d511e81c2068ef6251390926dbd53f34d80dc1687fbf16debf923da07ca4dc5",
+      "tiling_completion_sha256": "1d55a00f198ae033b5ad7b3ec1a16ac914fbb78580e111407a01ae0bc588400c",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7424,
+          9728
+        ],
+        "native_pixel_counts": {
+          "background": 63059516,
+          "stroma": 9058496,
+          "benign": 102660,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 14.905908653243689,
+          "stroma": 2.1412329570016575,
+          "benign": 0.024266608426585404,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "756d99387536d5721fcf4cf590627179",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/756d99387536d5721fcf4cf590627179",
+      "status": "verified_cached_audit",
+      "audit_sha256": "895b76315b44a535701cc7413f5514348d27394ab771a68e77304c53ccdf8cb9",
+      "tiling_completion_sha256": "489dc902c6b5178b7b6cb23ac75212bde91d39efd929a399a6ac7102b4a1eb48",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          22528,
+          7424
+        ],
+        "native_pixel_counts": {
+          "background": 149034096,
+          "stroma": 15356200,
+          "benign": 2857576,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 35.22844389092283,
+          "stroma": 3.6298742676829416,
+          "benign": 0.6754692951608047,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/775abecd4e7149acd83c9c3c55e2834c",
+      "status": "verified_cached_audit",
+      "audit_sha256": "0939a72abbb57ddfa48bb53f876b0e47af4f0f60d1a8a0815e523ec15cc3c2ff",
+      "tiling_completion_sha256": "6e9def366bb532a7cf50645942e6ca4141fa980e56f036fe1ce93fc2b3873c76",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          21760,
+          7424
+        ],
+        "native_pixel_counts": {
+          "background": 127462184,
+          "stroma": 27559156,
+          "benign": 776816,
+          "gleason3": 0,
+          "gleason4": 2541524,
+          "gleason5": 3206560
+        },
+        "area_mm2": {
+          "background": 30.12930945183498,
+          "stroma": 6.514389706011901,
+          "benign": 0.18362253741969967,
+          "gleason3": 0.0,
+          "gleason4": 0.6007614232882237,
+          "gleason5": 0.7579615811060948
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          550,
+          1198,
+          17438,
+          6646
+        ],
+        "annotation_fraction_of_slide": 0.035581663801026876,
+        "gp45_fraction_of_annotated_tissue": 0.16864436556494333,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.3587230043943186,
+      "native_gp45_area_mm2": 1.3587230043943186
+    },
+    {
+      "image_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/7c7ba4a041b9bedb14fd83e7da0ac6e2",
+      "status": "verified_cached_audit",
+      "audit_sha256": "096918957125ff2656f79010994038464888fda0d859b57152d5f62776575ffc",
+      "tiling_completion_sha256": "7884bd4d41e5bcc570c7ac8adc78895713297871c1ada79369b61d428f7d3d89",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          14592,
+          4864
+        ],
+        "native_pixel_counts": {
+          "background": 51857668,
+          "stroma": 11863472,
+          "benign": 79136,
+          "gleason3": 7175212,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 12.25803354054031,
+          "stroma": 2.8042687473578805,
+          "benign": 0.01870604251360084,
+          "gleason3": 1.6960652638002798,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.10109422565717337,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.6960652638002798,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "7e8136cda906272497595cfb2088f4c4",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/7e8136cda906272497595cfb2088f4c4",
+      "status": "verified_cached_audit",
+      "audit_sha256": "aa62f3a4d1d25a7141a3463adfb398564b076111a162ccc43bc7a47d100749a4",
+      "tiling_completion_sha256": "c72437d92e67cc4b8e65bfd999c8eec3cab774ce004dfa1d6ddab04b755cfcfd",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          8448,
+          24576
+        ],
+        "native_pixel_counts": {
+          "background": 167012496,
+          "stroma": 35643048,
+          "benign": 1193596,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 3768908
+        },
+        "area_mm2": {
+          "background": 39.47814964717184,
+          "stroma": 8.42524731098761,
+          "benign": 0.282140334614637,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.8908885119016671
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          374,
+          1784,
+          4444,
+          18060
+        ],
+        "annotation_fraction_of_slide": 0.018153084648980036,
+        "gp45_fraction_of_annotated_tissue": 0.09281755361926862,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.8908885119016671,
+      "native_gp45_area_mm2": 0.8908885119016671
+    },
+    {
+      "image_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/7f15c706a91ae8c7ccbfaae1897aa024",
+      "status": "verified_cached_audit",
+      "audit_sha256": "bcde642c58659f668ebc6e6d237a6e5e03c0e3bfb12946458bcec5556dc0b589",
+      "tiling_completion_sha256": "34be9933823b2aa900ffe87b78783181d5edeedf7c4f29a327d59d758cca238f",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6656,
+          17664
+        ],
+        "native_pixel_counts": {
+          "background": 94996880,
+          "stroma": 19469792,
+          "benign": 708168,
+          "gleason3": 0,
+          "gleason4": 2396744,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 22.45521224145064,
+          "stroma": 4.602238638331045,
+          "benign": 0.16739563175762842,
+          "gleason3": 0.0,
+          "gleason4": 0.5665385558812391,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          3420,
+          6690,
+          5924,
+          16952
+        ],
+        "annotation_fraction_of_slide": 0.020385401969237736,
+        "gp45_fraction_of_annotated_tissue": 0.10616945409339587,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.5665385558812391,
+      "native_gp45_area_mm2": 0.5665385558812391
+    },
+    {
+      "image_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/80a9fb86cc68aade057a0e680f3e5c0a",
+      "status": "verified_cached_audit",
+      "audit_sha256": "c9cb65865e24c5d90954b26907e8857bc4aeabc79c550a6f556f0bf3ceb83e86",
+      "tiling_completion_sha256": "c769cc7f2a22a02e4da796cebc33f3fe5d676c26c852e54533a4ab4452895590",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          22272,
+          5376
+        ],
+        "native_pixel_counts": {
+          "background": 87887072,
+          "stroma": 25722956,
+          "benign": 48584,
+          "gleason3": 0,
+          "gleason4": 6048508,
+          "gleason5": 27152
+        },
+        "area_mm2": {
+          "background": 20.77460707172334,
+          "stroma": 6.080351654259552,
+          "benign": 0.011484209076536385,
+          "gleason3": 0.0,
+          "gleason4": 1.4297367543451123,
+          "gleason5": 0.0064181468147150485
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          1414,
+          444,
+          18578,
+          3482
+        ],
+        "annotation_fraction_of_slide": 0.05074286500025657,
+        "gp45_fraction_of_annotated_tissue": 0.19077532718731946,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.4361549011598274,
+      "native_gp45_area_mm2": 1.4361549011598274
+    },
+    {
+      "image_id": "84bc390199b8e7466a020ca6abe11852",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/84bc390199b8e7466a020ca6abe11852",
+      "status": "verified_cached_audit",
+      "audit_sha256": "4c83671a0b5b4e0c78e5643d248e37b408bffacddc1192145825fa7c40a11c12",
+      "tiling_completion_sha256": "3b7f128de7533a0808400bdd336528a3f5853ead452658f3a0021995f2d35ab6",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6656,
+          23552
+        ],
+        "native_pixel_counts": {
+          "background": 127043872,
+          "stroma": 18140048,
+          "benign": 493032,
+          "gleason3": 0,
+          "gleason4": 11085160,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 30.03042952290315,
+          "stroma": 4.287915854816518,
+          "benign": 0.1165421243500512,
+          "gleason3": 0.0,
+          "gleason4": 2.620292587824347,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          1104,
+          3678,
+          4628,
+          17392
+        ],
+        "annotation_fraction_of_slide": 0.07071326010203281,
+        "gp45_fraction_of_annotated_tissue": 0.3730086303899558,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 2.620292587824347,
+      "native_gp45_area_mm2": 2.620292587824347
+    },
+    {
+      "image_id": "87edb3eb0b79782b9b7eec15dc294872",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/87edb3eb0b79782b9b7eec15dc294872",
+      "status": "verified_cached_audit",
+      "audit_sha256": "97387d6973b95b6725e9b499e3b8fd27df2e49b852c754e9ffc00d148e201493",
+      "tiling_completion_sha256": "0cdce23b9ddace28c128baaae3154aca4287534e6353557bb5b3af0e0a9a19ba",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7680,
+          13568
+        ],
+        "native_pixel_counts": {
+          "background": 86480972,
+          "stroma": 16406360,
+          "benign": 1314908,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 20.442235377698193,
+          "stroma": 3.87810942748484,
+          "benign": 0.3108158733000639,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/8d96e24f96029fb89ad33d017f1fbcfc",
+      "status": "verified_cached_audit",
+      "audit_sha256": "909e7ba5b47dee9c8bfe03faac3be08f2df1a2318e4a2af1329f3698180e4722",
+      "tiling_completion_sha256": "9f81a3f6eba62f1773061cfde8b893436dfdee64f4c7b785d26f0f9e9e80a7b2",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          4608,
+          2304
+        ],
+        "native_pixel_counts": {
+          "background": 4690860,
+          "stroma": 2575024,
+          "benign": 0,
+          "gleason3": 0,
+          "gleason4": 3350948,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 1.1088180674452797,
+          "stroma": 0.6086801003025487,
+          "benign": 0.0,
+          "gleason3": 0.0,
+          "gleason4": 0.7920917881730909,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          80,
+          236,
+          4534,
+          2082
+        ],
+        "annotation_fraction_of_slide": 0.3156259795765818,
+        "gp45_fraction_of_annotated_tissue": 0.5654680784856898,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.7920917881730909,
+      "native_gp45_area_mm2": 0.7920917881730909
+    },
+    {
+      "image_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/8efb75ef39c5b55cffeac6d3d19cf238",
+      "status": "verified_cached_audit",
+      "audit_sha256": "50de3a5e0ac3c839f9e309d10614f4539f06121bc2bb46fc1d56256bc16fdffa",
+      "tiling_completion_sha256": "f13c28d890015fcb677556e20a9131a9b443418e79aeb8097f885b92ccd359d0",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          28928,
+          7680
+        ],
+        "native_pixel_counts": {
+          "background": 177329560,
+          "stroma": 31926468,
+          "benign": 587156,
+          "gleason3": 0,
+          "gleason4": 12323856,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 41.9168809173844,
+          "stroma": 7.546728008960737,
+          "benign": 0.1387910065977029,
+          "gleason3": 0.0,
+          "gleason4": 2.9130935891060306,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          10708,
+          382,
+          27698,
+          5862
+        ],
+        "annotation_fraction_of_slide": 0.055471126590154865,
+        "gp45_fraction_of_annotated_tissue": 0.2748561248312795,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 2.9130935891060306,
+      "native_gp45_area_mm2": 2.9130935891060306
+    },
+    {
+      "image_id": "8fae0151f134c7499934dfe20c700eb9",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/8fae0151f134c7499934dfe20c700eb9",
+      "status": "verified_cached_audit",
+      "audit_sha256": "c4c8a2dac66350166966c13ac9beb4aa27cf3c35b353ebb203eeac8bc8cd3ede",
+      "tiling_completion_sha256": "bf11cb9e6dc7c9296e2a67340f9a269864843c1e2d30b59d60ce6987b7a5cce3",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          8960,
+          36608
+        ],
+        "native_pixel_counts": {
+          "background": 284380168,
+          "stroma": 34892320,
+          "benign": 277068,
+          "gleason3": 0,
+          "gleason4": 8457728,
+          "gleason5": 396
+        },
+        "area_mm2": {
+          "background": 67.22133431855224,
+          "stroma": 8.247791413745514,
+          "benign": 0.06549289561209005,
+          "gleason3": 0.0,
+          "gleason4": 1.999224367373537,
+          "gleason5": 9.36058536618724e-05
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          3554,
+          7904,
+          6532,
+          33386
+        ],
+        "annotation_fraction_of_slide": 0.02578635963645729,
+        "gp45_fraction_of_annotated_tissue": 0.1938713351336652,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.9993179732271988,
+      "native_gp45_area_mm2": 1.9993179732271988
+    },
+    {
+      "image_id": "900ca15382fabf04c7b62af369e0b551",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/900ca15382fabf04c7b62af369e0b551",
+      "status": "mask_unusable_unknown"
+    },
+    {
+      "image_id": "955f09b99664b07b0cf18768c84f2253",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/955f09b99664b07b0cf18768c84f2253",
+      "status": "verified_cached_audit",
+      "audit_sha256": "f34e415b8b62f1ab30bb74d79dafd748f0283d4585a63ddc9b934ea86259bbea",
+      "tiling_completion_sha256": "d4116d099995c34a5d87253b5521a3aa0eee2455a71050706bb60824840eb088",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          12544,
+          32000
+        ],
+        "native_pixel_counts": {
+          "background": 357064536,
+          "stroma": 41751816,
+          "benign": 437644,
+          "gleason3": 0,
+          "gleason4": 2108848,
+          "gleason5": 45156
+        },
+        "area_mm2": {
+          "background": 84.40235026429386,
+          "stroma": 9.869228228821774,
+          "benign": 0.10344959651514263,
+          "gleason3": 0.0,
+          "gleason4": 0.49848615475538455,
+          "gleason5": 0.01067390385847351
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          2502,
+          16036,
+          10250,
+          29118
+        ],
+        "annotation_fraction_of_slide": 0.005366121253188775,
+        "gp45_fraction_of_annotated_tissue": 0.04857545635135767,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.509160058613858,
+      "native_gp45_area_mm2": 0.509160058613858
+    },
+    {
+      "image_id": "96415990a25ee1d758a8bc7ae97d593f",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/96415990a25ee1d758a8bc7ae97d593f",
+      "status": "verified_cached_audit",
+      "audit_sha256": "9350bf7773985afc32f401e98c42de8601f8826492191df35b65cef90e1b3db5",
+      "tiling_completion_sha256": "9b6ea3bb11b3a784d85a5d4038a70d2068153d778d1a58ad46e3a5f3f43163e1",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          5376,
+          2816
+        ],
+        "native_pixel_counts": {
+          "background": 9980240,
+          "stroma": 4503576,
+          "benign": 655000,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 2.359113345834256,
+          "stroma": 1.064548171745254,
+          "benign": 0.15482786401143034,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "9b56f501c6765027cce8a1a8ad797767",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/9b56f501c6765027cce8a1a8ad797767",
+      "status": "verified_cached_audit",
+      "audit_sha256": "3c5563e0c0aa8132e5765c8db2726d49b7d2a052d5666ba3c6d98845cc2895c3",
+      "tiling_completion_sha256": "c0318eaa9834997955a9b8fef0adcc7c10350d156b6c9b0929bb2429234ab8e0",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6656,
+          37120
+        ],
+        "native_pixel_counts": {
+          "background": 205083352,
+          "stroma": 39043716,
+          "benign": 2653264,
+          "gleason3": 290388,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 48.477278373227946,
+          "stroma": 9.229091834120469,
+          "benign": 0.6271743477533187,
+          "gleason3": 0.06864145614435303,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.001175323405379642,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.06864145614435303,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "9b9b11aa65e492ece39e3fde93a89d82",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/9b9b11aa65e492ece39e3fde93a89d82",
+      "status": "verified_cached_audit",
+      "audit_sha256": "b1828bae84526ebc7884f1ddc8ee6283275c169e57f1f96c26dab3fe256b59f1",
+      "tiling_completion_sha256": "72d626a548e2f9270112f7ae470d534b2aaad45c058d79a58d9dd7d84556c1cf",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          13568,
+          4096
+        ],
+        "native_pixel_counts": {
+          "background": 38630112,
+          "stroma": 16890724,
+          "benign": 53692,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 9.131324774782174,
+          "stroma": 3.9926026237047374,
+          "benign": 0.012691630037407203,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "9c2eafb5480094f718bc40213531b7d5",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/9c2eafb5480094f718bc40213531b7d5",
+      "status": "verified_cached_audit",
+      "audit_sha256": "47a596109e40629b16f1717f34284cf87ac102f22bdc27b414a6039202bb939f",
+      "tiling_completion_sha256": "6ae619439c72703249310ed7329261210e413cf209c8a0968d3fb14ad0c445f6",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          30208,
+          11520
+        ],
+        "native_pixel_counts": {
+          "background": 305853616,
+          "stroma": 35254348,
+          "benign": 1528792,
+          "gleason3": 0,
+          "gleason4": 5310476,
+          "gleason5": 48928
+        },
+        "area_mm2": {
+          "background": 72.29719399305685,
+          "stroma": 8.333367019779605,
+          "benign": 0.3613734349278819,
+          "gleason3": 0.0,
+          "gleason4": 1.255281917502236,
+          "gleason5": 0.011565523252444677
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          4016,
+          1056,
+          25938,
+          9784
+        ],
+        "annotation_fraction_of_slide": 0.015400756146274718,
+        "gp45_fraction_of_annotated_tissue": 0.12717324326694657,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.2668474407546808,
+      "native_gp45_area_mm2": 1.2668474407546808
+    },
+    {
+      "image_id": "9f8dfe7b06ca41af4fa89f7deaf3b050",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/9f8dfe7b06ca41af4fa89f7deaf3b050",
+      "status": "verified_cached_audit",
+      "audit_sha256": "d257d2a58ed304cb10e474e8c1599596cdb2d2bcd574e9fe609f27236a0a3a0a",
+      "tiling_completion_sha256": "ba957f1d90e92ff013e6e4d4960af51eb05094174140d042cb51463a5bd31d42",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          5120,
+          17920
+        ],
+        "native_pixel_counts": {
+          "background": 67364048,
+          "stroma": 23734824,
+          "benign": 651528,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 15.923407119089262,
+          "stroma": 5.610400156652265,
+          "benign": 0.1540071581429606,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "9ffb9e9e7be39a7af216779a06a6302b",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/9ffb9e9e7be39a7af216779a06a6302b",
+      "status": "verified_cached_audit",
+      "audit_sha256": "4f420edf9f95d5f43882cad58d9ad1e85991172929f7d75b01d737831f3ce600",
+      "tiling_completion_sha256": "c959fa362f3d8561363cf0a20e1c6d29338243d324bb64e9320e18014c3113b4",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6656,
+          2560
+        ],
+        "native_pixel_counts": {
+          "background": 9688820,
+          "stroma": 3784516,
+          "benign": 0,
+          "gleason3": 0,
+          "gleason4": 3551868,
+          "gleason5": 14156
+        },
+        "area_mm2": {
+          "background": 2.290227947162178,
+          "stroma": 0.8945779062550876,
+          "benign": 0.0,
+          "gleason3": 0.0,
+          "gleason4": 0.8395849399855742,
+          "gleason5": 0.0033461728899936
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          650,
+          224,
+          5856,
+          2074
+        ],
+        "annotation_fraction_of_slide": 0.2092815692608173,
+        "gp45_fraction_of_annotated_tissue": 0.4851376905642307,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.8429311128755678,
+      "native_gp45_area_mm2": 0.8429311128755678
+    },
+    {
+      "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/a1abdacdaaa93b69a92c68cb5edf2560",
+      "status": "verified_cached_audit",
+      "audit_sha256": "4fe1c1e05532c481bf7ff90b2a4b3905cd0069a80df988db5c98340019f7610d",
+      "tiling_completion_sha256": "b026bae603fba140395093d74d32b86832cdc3e773bf0fb4464e4bca55f4b5c0",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          3584,
+          9472
+        ],
+        "native_pixel_counts": {
+          "background": 26024940,
+          "stroma": 6538856,
+          "benign": 70292,
+          "gleason3": 0,
+          "gleason4": 1313560,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 6.151734154542953,
+          "stroma": 1.545644439020344,
+          "benign": 0.016615511781819026,
+          "gleason3": 0.0,
+          "gleason4": 0.3104972351921442,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          710,
+          1066,
+          2600,
+          8684
+        ],
+        "annotation_fraction_of_slide": 0.03869369683578668,
+        "gp45_fraction_of_annotated_tissue": 0.1657968462298497,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.3104972351921442,
+      "native_gp45_area_mm2": 0.3104972351921442
+    },
+    {
+      "image_id": "a213e4e689988738b8fb764e958ca497",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/a213e4e689988738b8fb764e958ca497",
+      "status": "verified_cached_audit",
+      "audit_sha256": "8a1b041144a136f09566088c5f5a911e407afb6620d554de598c9a8af5ec0dc2",
+      "tiling_completion_sha256": "c20adb9ebd57620b1e8617d9da2629722859c291ab8ae4a640aa1d24ed85e0e7",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7168,
+          6400
+        ],
+        "native_pixel_counts": {
+          "background": 35843340,
+          "stroma": 9649216,
+          "benign": 382644,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 8.472592017153376,
+          "stroma": 2.2808664162823176,
+          "benign": 0.09044878350654924,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "a2fb69954b14fe15857b0f54515fc745",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/a2fb69954b14fe15857b0f54515fc745",
+      "status": "verified_cached_audit",
+      "audit_sha256": "22ebc6c81a219eeda9e756a79123cfaaf5677d44ff6ddc14302d0f360dbf45be",
+      "tiling_completion_sha256": "cc7d0ce0879b1a03c41e873e438af0b4525ac82ed35c418c546842027bf66abd",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7424,
+          27648
+        ],
+        "native_pixel_counts": {
+          "background": 183239280,
+          "stroma": 21484760,
+          "benign": 534712,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 43.31381118380521,
+          "stroma": 5.078533587172853,
+          "benign": 0.1263943768263816,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/a65a095302fbc94c8e21ae65e1ccd17e",
+      "status": "verified_cached_audit",
+      "audit_sha256": "e3b9729fb57c9c530047f1620145d6998c440bea2e2ef411339a555dfb52e87a",
+      "tiling_completion_sha256": "8e28231b59a38dba18d5fca589fd1c931971492afb2f9052e14a0f0bf29e547d",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          19456,
+          30464
+        ],
+        "native_pixel_counts": {
+          "background": 549824572,
+          "stroma": 36777664,
+          "benign": 1310760,
+          "gleason3": 4794588,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 129.96666269276167,
+          "stroma": 8.693446046488669,
+          "benign": 0.3098353756207976,
+          "gleason3": 1.13333712802265,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.008089297537991348,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.13333712802265,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/a979f5e3d61ebeec3dcbe8943c9316ca",
+      "status": "verified_cached_audit",
+      "audit_sha256": "ac31091bf3c77e816ed6ee3301a869b686674d220536ebdf9157f94f67f6e67f",
+      "tiling_completion_sha256": "77c618b500cfe5cdc69d7697feeee7848bcbd8f3533d0b48b6a8063cb69e0481",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          10496,
+          31744
+        ],
+        "native_pixel_counts": {
+          "background": 286072520,
+          "stroma": 41091924,
+          "benign": 5979884,
+          "gleason3": 40696,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 67.62136980758349,
+          "stroma": 9.713244001587833,
+          "benign": 1.4135155217650812,
+          "gleason3": 0.009619656112685756,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.00012214234454907552,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.009619656112685756,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/aa9be7d9f82e983d21e2746078b877d9",
+      "status": "verified_cached_audit",
+      "audit_sha256": "d24d39f027892bb2bf6000dc723e2b6f098edb86b14e79fbc6d1511f0eee0cf2",
+      "tiling_completion_sha256": "1f2ac56f4f9cff56d775cd03f242cdb1b682f38330eb1119559af443215dee79",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          9216,
+          13056
+        ],
+        "native_pixel_counts": {
+          "background": 98775356,
+          "stroma": 19013952,
+          "benign": 1183892,
+          "gleason3": 0,
+          "gleason4": 1350896,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 23.348362422058962,
+          "stroma": 4.494487900115823,
+          "benign": 0.27984651844308445,
+          "gleason3": 0.0,
+          "gleason4": 0.3193226598192141,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          2508,
+          5232,
+          4340,
+          7942
+        ],
+        "annotation_fraction_of_slide": 0.011227144395084423,
+        "gp45_fraction_of_annotated_tissue": 0.06269025474343279,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.3193226598192141,
+      "native_gp45_area_mm2": 0.3193226598192141
+    },
+    {
+      "image_id": "ab0c6950b69d38008bea90173b44aefa",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/ab0c6950b69d38008bea90173b44aefa",
+      "status": "verified_cached_audit",
+      "audit_sha256": "adeb47dddddd9dca3f7a2ad66d8b15db6386a96971c00c1b83cf16ce56edaa2b",
+      "tiling_completion_sha256": "fdfbf5d130e153bdc7d336f9036e99a05123a9498eddf72a0d9607279346de6d",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          3840,
+          11520
+        ],
+        "native_pixel_counts": {
+          "background": 32793588,
+          "stroma": 8436204,
+          "benign": 284512,
+          "gleason3": 0,
+          "gleason4": 2722496,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 7.751696463070037,
+          "stroma": 1.9941365582972286,
+          "benign": 0.06725249655819858,
+          "gleason3": 0.0,
+          "gleason4": 0.6435392984116993,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          282,
+          562,
+          3152,
+          11102
+        ],
+        "annotation_fraction_of_slide": 0.06154369212962963,
+        "gp45_fraction_of_annotated_tissue": 0.23791362075613037,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.6435392984116993,
+      "native_gp45_area_mm2": 0.6435392984116993
+    },
+    {
+      "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-profile/20261020T175626Z/afe7eb15c8438861ca43f2b20dccf260/representative",
+      "status": "missing_cached_audit"
+    },
+    {
+      "image_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/b0dc9662008d3c1d40f3b30d82a6ffe0",
+      "status": "verified_cached_audit",
+      "audit_sha256": "be116be7168ac1857436b2ca44040d64db2be054003ad4e9838d575cee78c386",
+      "tiling_completion_sha256": "8f6def84f285e30e8bc1287a8da2ec80a4635cd30189b12693c01ee4e9dd479b",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          8448,
+          31744
+        ],
+        "native_pixel_counts": {
+          "background": 227100184,
+          "stroma": 32745188,
+          "benign": 5014828,
+          "gleason3": 3313112,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 53.68158229820276,
+          "stroma": 7.7402557476224745,
+          "benign": 1.1853971108774248,
+          "gleason3": 0.7831481743368519,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.012354368804603494,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.7831481743368519,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/ba8e50f3e374a63eae8af2f9d9a7acb0",
+      "status": "verified_cached_audit",
+      "audit_sha256": "409b7086467125c6e9d823118c10bb958ce891bcb9ffc59399b5c2614d989125",
+      "tiling_completion_sha256": "c2d6aaa731418a33647b68729d21ce1f3e1d901b3b8dfe11b07bd8a09f28eae6",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7936,
+          26624
+        ],
+        "native_pixel_counts": {
+          "background": 174560484,
+          "stroma": 29314240,
+          "benign": 3033552,
+          "gleason3": 4379788,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 41.26233111224651,
+          "stroma": 6.929253685982339,
+          "benign": 0.7170662237062635,
+          "gleason3": 1.0352873600960222,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.02072898921540594,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.0352873600960222,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "bc2518ea5985260ea91f96e2db178b5f",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/bc2518ea5985260ea91f96e2db178b5f",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a75b3c620e6b2e34103d95e5325b72e8417a757be6cf96980b8b6a7c3a14972e",
+      "tiling_completion_sha256": "c5269ef24adb38530fd9bb68d95b24b8343c2d6ea97b626d0708ce6ebe5e76cb",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          20480,
+          5120
+        ],
+        "native_pixel_counts": {
+          "background": 79095952,
+          "stroma": 21735868,
+          "benign": 413168,
+          "gleason3": 3612612,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 18.69657603070324,
+          "stroma": 5.137890099044887,
+          "benign": 0.09766399834790024,
+          "gleason3": 0.8539435106291015,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.03445255279541016,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.8539435106291015,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "bec80e876b9ffa8f24cf85beaa431667",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/bec80e876b9ffa8f24cf85beaa431667",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a98dd7efd1ddcbf531091d049430b01c86a7d509b999bc722f9336e07e304587",
+      "tiling_completion_sha256": "4113f62f15284d220d72f48022e0ad20ff16b3cb93b785e848f541b5f07160db",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          4096,
+          4352
+        ],
+        "native_pixel_counts": {
+          "background": 10889428,
+          "stroma": 6559032,
+          "benign": 377332,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 2.5740257672462015,
+          "stroma": 1.550413609988733,
+          "benign": 0.08919314134833746,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "c3fbbd442c89676b42a2f49ef7428b30",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/c3fbbd442c89676b42a2f49ef7428b30",
+      "status": "verified_cached_audit",
+      "audit_sha256": "37c0e5981eac9fc960f316a596f7a8dad105d4f24281be88b737e9999b306d2e",
+      "tiling_completion_sha256": "9f1c6c3d375c87bbcdf1dc39fe55c4a935a4830ed2976757f4666464690b4b09",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          2304,
+          13568
+        ],
+        "native_pixel_counts": {
+          "background": 18423696,
+          "stroma": 12181912,
+          "benign": 655064,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 4.354964120421272,
+          "stroma": 2.879541090893453,
+          "benign": 0.15484299223020398,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "c6d41e8b7c2c101b9a927d4f403ec451",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/c6d41e8b7c2c101b9a927d4f403ec451",
+      "status": "verified_cached_audit",
+      "audit_sha256": "374f2924b8f7928fe7eac6c588248f0ff34dc6897b8bff84e398435ff57a375a",
+      "tiling_completion_sha256": "1ceb9d674e33737066c3e2b0cdb90e1145ded5ae9b4cde52a96b3db7570c04f0",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          5888,
+          45056
+        ],
+        "native_pixel_counts": {
+          "background": 208754160,
+          "stroma": 52408560,
+          "benign": 4127008,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 49.344978162290644,
+          "stroma": 12.388252520175401,
+          "benign": 0.975535623508527,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "cb91772271b72c237c42f64fb6d2e84e",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/cb91772271b72c237c42f64fb6d2e84e",
+      "status": "verified_cached_audit",
+      "audit_sha256": "1aec2a9f2e20b2e78b7e08cb7e3263a7675a3904e806a418898e4ef9fbf86cd3",
+      "tiling_completion_sha256": "795e80cbc090cbcab0b41b84b709d87cd2afc2e2c33b0de8049a3aeb4d27cd46",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          2816,
+          3072
+        ],
+        "native_pixel_counts": {
+          "background": 5609064,
+          "stroma": 2283128,
+          "benign": 9324,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 749236
+        },
+        "area_mm2": {
+          "background": 1.325861676676961,
+          "stroma": 0.5396821855033419,
+          "benign": 0.0022039923725840865,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.17710322064193593
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          402,
+          378,
+          2068,
+          2592
+        ],
+        "annotation_fraction_of_slide": 0.08660934910629735,
+        "gp45_fraction_of_annotated_tissue": 0.24632243675222443,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.17710322064193593,
+      "native_gp45_area_mm2": 0.17710322064193593
+    },
+    {
+      "image_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/d0cb73c9ad19c13c6fe93cc2c61cc073",
+      "status": "verified_cached_audit",
+      "audit_sha256": "8aa70e8e7c9d2ae9fcd943c3a5c4614f613d5b232d2e9b1e50c2b56c5b817339",
+      "tiling_completion_sha256": "4637cce4dda4e9153d1a66aa47b0d325a85d126b5d4c76e16b3fc7ca475214ac",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          5888,
+          14848
+        ],
+        "native_pixel_counts": {
+          "background": 70973036,
+          "stroma": 9590212,
+          "benign": 35980,
+          "gleason3": 0,
+          "gleason4": 6825796,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 16.776493994330306,
+          "stroma": 2.2669191440866983,
+          "benign": 0.008504895491803456,
+          "gleason3": 0.0,
+          "gleason4": 1.6134708623782676,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          256,
+          310,
+          5072,
+          14038
+        ],
+        "annotation_fraction_of_slide": 0.07807599801173631,
+        "gp45_fraction_of_annotated_tissue": 0.4148918659556523,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.6134708623782676,
+      "native_gp45_area_mm2": 1.6134708623782676
+    },
+    {
+      "image_id": "d0e4a4827c5ce9d7cc92f05e25674b71",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/d0e4a4827c5ce9d7cc92f05e25674b71",
+      "status": "verified_cached_audit",
+      "audit_sha256": "910f5356100483bc9079f540216478f3034d37abde7d4032f882dd1adf73346e",
+      "tiling_completion_sha256": "9b03797a756f53ff8a226f051d04212a319c0c9ccf62d198ecbb64d9e05ce591",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          8448,
+          5376
+        ],
+        "native_pixel_counts": {
+          "background": 28785528,
+          "stroma": 12785040,
+          "benign": 3845880,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 6.804277579665985,
+          "stroma": 3.022107533588851,
+          "benign": 0.9090830315179843,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "d1088ba933bd7066a3a777f542f61fa6",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/d1088ba933bd7066a3a777f542f61fa6",
+      "status": "verified_cached_audit",
+      "audit_sha256": "f2393424d2cff66fe8b66a8595753f5baaef3270c8a21169bfe871d75a4b6a57",
+      "tiling_completion_sha256": "fbfb5fc6b355b21bed0bd814fff5488d60d6b8a76ae8a08a9fd3dcfca5440c0c",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6912,
+          15360
+        ],
+        "native_pixel_counts": {
+          "background": 86479512,
+          "stroma": 17831844,
+          "benign": 153860,
+          "gleason3": 1703104,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 20.44189026520742,
+          "stroma": 4.215063080771054,
+          "benign": 0.03636918344549416,
+          "gleason3": 0.4025770297852261,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.01604154610339506,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.4025770297852261,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "d383a65adb84e2f3032f0c68246224eb",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/d383a65adb84e2f3032f0c68246224eb",
+      "status": "verified_cached_audit",
+      "audit_sha256": "f9b04cfb22569fc76c8653fa0a5814394d3c184d58fb272bbf1aa041472af83e",
+      "tiling_completion_sha256": "a45e1d10ac9e198ba1f8b2788b323b97974eba07df3c3927a8b8abf3223357a6",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6144,
+          23040
+        ],
+        "native_pixel_counts": {
+          "background": 108935244,
+          "stroma": 27221036,
+          "benign": 5401480,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 25.749940677990814,
+          "stroma": 6.434465435203435,
+          "benign": 1.276793299084673,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/d38a9db63e100d405ddb1a932b53d92f",
+      "status": "verified_cached_audit",
+      "audit_sha256": "9790e794a4bbd5a7584b79fda7de8e4e78cf26990de9b82e94996f5c0c37e114",
+      "tiling_completion_sha256": "d8c53b6b7a46c66181e2640c8322027ad97cfc9d452ab82396e0f7454a8898ed",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          3840,
+          19456
+        ],
+        "native_pixel_counts": {
+          "background": 54460916,
+          "stroma": 17589812,
+          "benign": 844332,
+          "gleason3": 1815980,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 12.873385185322032,
+          "stroma": 4.157851939423856,
+          "benign": 0.19958186271221223,
+          "gleason3": 0.4292584801335531,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.024306715580455045,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.4292584801335531,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "da15226ed2a9ca5a83e831a9c57f5380",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/da15226ed2a9ca5a83e831a9c57f5380",
+      "status": "verified_cached_audit",
+      "audit_sha256": "58952ed43d23a987cedaa3493cdd20e75e82e852c90b7e7d47577e9c2d755618",
+      "tiling_completion_sha256": "04a53b9c7a91ee6567d6b31a57b9e65be6555fb1bd4e0b18ffab01d6137fbced",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          9728,
+          22272
+        ],
+        "native_pixel_counts": {
+          "background": 194307968,
+          "stroma": 20198984,
+          "benign": 2155064,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 45.930210146322686,
+          "stroma": 4.774603889955813,
+          "benign": 0.5094106197372964,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "dc10032bf598b0a3268074de4bb2d7b6",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/dc10032bf598b0a3268074de4bb2d7b6",
+      "status": "verified_cached_audit",
+      "audit_sha256": "b0eaee3c6db652b6580fc81d6a83a899b56f49f5f7c0ee6a4d93a4354bef8ea4",
+      "tiling_completion_sha256": "b5a9115dd5d9f2df49467cb3a7c95e0afc11babef6c4c585cc4a0ac6a11376ce",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6912,
+          4096
+        ],
+        "native_pixel_counts": {
+          "background": 21955992,
+          "stroma": 3794952,
+          "benign": 7772,
+          "gleason3": 0,
+          "gleason4": 2552836,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 5.189922662003134,
+          "stroma": 0.8970447514288635,
+          "benign": 0.0018371330673234148,
+          "gleason3": 0.0,
+          "gleason4": 0.6034353359564638,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          910,
+          480,
+          6168,
+          3242
+        ],
+        "annotation_fraction_of_slide": 0.09016941211841724,
+        "gp45_fraction_of_annotated_tissue": 0.40166971911208454,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.6034353359564638,
+      "native_gp45_area_mm2": 0.6034353359564638
+    },
+    {
+      "image_id": "dc7254ab21584e852fe556646c86d6f4",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/dc7254ab21584e852fe556646c86d6f4",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a9e34789710452e36fa62d4e5efbd040a2dde1acbbe71704b33fe515b29e250f",
+      "tiling_completion_sha256": "d83ed64171c30cd4725015fa9d1017b70fa302d58e774772ef67bae6529d2723",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          12288,
+          24576
+        ],
+        "native_pixel_counts": {
+          "background": 254943212,
+          "stroma": 39896464,
+          "benign": 5296032,
+          "gleason3": 1854180,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 60.26307321858513,
+          "stroma": 9.430663057601414,
+          "benign": 1.2518676676277611,
+          "gleason3": 0.43828813571406705,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.006139874458312988,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.43828813571406705,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "dd1110c6430e3b1ac732be548a089886",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-profile/20261020T175626Z/dd1110c6430e3b1ac732be548a089886/representative",
+      "status": "missing_cached_audit"
+    },
+    {
+      "image_id": "ddbeff8437def5f80c4890b394711ec2",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/ddbeff8437def5f80c4890b394711ec2",
+      "status": "verified_cached_audit",
+      "audit_sha256": "982e0125ec2767dd3dfab2fbfbc2054cf79569c6cf42e40092fcab838eadfeec",
+      "tiling_completion_sha256": "3e59d191ed75ae75eab21d1ae9a622c7a54df230f983ac4787b0cd94122fe46b",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          24576,
+          14080
+        ],
+        "native_pixel_counts": {
+          "background": 313528660,
+          "stroma": 27579348,
+          "benign": 806864,
+          "gleason3": 4115208,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 74.11140875445189,
+          "stroma": 6.519162659034983,
+          "benign": 0.19072523613392173,
+          "gleason3": 0.9727463581721378,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.011892630837180397,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.9727463581721378,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "df83132f9e6a7c8337e6cd91270f8f7d",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/df83132f9e6a7c8337e6cd91270f8f7d",
+      "status": "verified_cached_audit",
+      "audit_sha256": "79aa28fa6bb4ceb82de98bcd2e4f023577ebd79a3ff354b87b2607474489ecb3",
+      "tiling_completion_sha256": "7af138c189f99d606171cffc73136d962227c9a95963668ee505a27aa03a2e56",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          9984,
+          23552
+        ],
+        "native_pixel_counts": {
+          "background": 212963788,
+          "stroma": 17774812,
+          "benign": 4404568,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 50.34004337072226,
+          "stroma": 4.201581946816398,
+          "benign": 1.0411448173024394,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "e005bc3ecd718b268588742a9e86d6f8",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/e005bc3ecd718b268588742a9e86d6f8",
+      "status": "verified_cached_audit",
+      "audit_sha256": "bd3ca42b1a825c35fef21bd8ba9c8c7118ca2f00df0d825cb70f739f7890b67a",
+      "tiling_completion_sha256": "a5ed0b4e2c63b5e4aaa5b28b529141c32093545d567cfa0eb229e01297265d97",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          12032,
+          33024
+        ],
+        "native_pixel_counts": {
+          "background": 369866312,
+          "stroma": 24606040,
+          "benign": 2872416,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 87.42841382709202,
+          "stroma": 5.816336816763077,
+          "benign": 0.6789771508889416,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/e02a4e6752db30ddfe21a7c2cab7470b",
+      "status": "verified_cached_audit",
+      "audit_sha256": "cb8d1256bc1558b1cd638e94f31b0edb8354647fc44617cf189f5661a97e5824",
+      "tiling_completion_sha256": "093d540a67684d500e871357819bd5403131da05c3e4d1b5232b81124ab25f1f",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          16640,
+          18688
+        ],
+        "native_pixel_counts": {
+          "background": 289423728,
+          "stroma": 18300392,
+          "benign": 3224940,
+          "gleason3": 19260,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 68.41352305414536,
+          "stroma": 4.325817715926516,
+          "benign": 0.7623062164351484,
+          "gleason3": 0.004552648337191066,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 6.193556951396207e-05,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.004552648337191066,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "e5739e452d5b7c5e68c4171ece2557e3",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/e5739e452d5b7c5e68c4171ece2557e3",
+      "status": "verified_cached_audit",
+      "audit_sha256": "b8b6a678c4fed8702afacdbe401f7ce28742ddaf1195c1ba7a4a0d13109127b4",
+      "tiling_completion_sha256": "c0a631aead1ccfe489fe41fa584a3108a58ca67a5ffb8c692ab542db3d53818e",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          11008,
+          28416
+        ],
+        "native_pixel_counts": {
+          "background": 259635684,
+          "stroma": 44112512,
+          "benign": 9055132,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 61.372272328040765,
+          "stroma": 10.427245815478763,
+          "benign": 2.1404377800023684,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "e7f434dd3d607e019828f9c1f0a66144",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/e7f434dd3d607e019828f9c1f0a66144",
+      "status": "verified_cached_audit",
+      "audit_sha256": "83d4d0b0fe4d76dab1483628309c95f5ce3aca75601c382ce46ac19893ca6625",
+      "tiling_completion_sha256": "9030ff36a5617a7f03921bddf123bf33e36c87e4f5141f6a5b1deee2c2f5b5d1",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7680,
+          24832
+        ],
+        "native_pixel_counts": {
+          "background": 164573264,
+          "stroma": 20440400,
+          "benign": 1356580,
+          "gleason3": 0,
+          "gleason4": 4339516,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 38.901567845052256,
+          "stroma": 4.831669422197314,
+          "benign": 0.3206662347490476,
+          "gleason3": 0.0,
+          "gleason4": 1.0257679284327117,
+          "gleason5": 0.0
+        },
+        "gp45_positive": true,
+        "gp45_bbox_level0_xyxy": [
+          940,
+          4224,
+          4232,
+          19972
+        ],
+        "annotation_fraction_of_slide": 0.022754556452695446,
+        "gp45_fraction_of_annotated_tissue": 0.1660328148042492,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 1.0257679284327117,
+      "native_gp45_area_mm2": 1.0257679284327117
+    },
+    {
+      "image_id": "e97722ee42a5566b71eef7e75e9d86f0",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/e97722ee42a5566b71eef7e75e9d86f0",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a2b3539a4b708508e2aa7da1447c8c5e7e7461767fd14f3a6c8298c06b354954",
+      "tiling_completion_sha256": "e707e33e01aee3599078728b224f59b509453d017c30d6a35200b2ec480e0605",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          25344,
+          10752
+        ],
+        "native_pixel_counts": {
+          "background": 239192020,
+          "stroma": 25964632,
+          "benign": 3785040,
+          "gleason3": 3556996,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 56.539831366685995,
+          "stroma": 6.137478644889821,
+          "benign": 0.8947017685462967,
+          "gleason3": 0.8407970885148117,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.013053259177526755,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.8407970885148117,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/ebc0cf09e9f77d222af0b8015c409a01",
+      "status": "verified_cached_audit",
+      "audit_sha256": "47b9f69404df53b3a48dd5bd9f532021f4b0471c003206f754a8ead836901caf",
+      "tiling_completion_sha256": "e84f40b51101dedce4018579c97ca84dcd69ac42bc3c34abc8c54fbfb8637305",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          6144,
+          26368
+        ],
+        "native_pixel_counts": {
+          "background": 132676520,
+          "stroma": 26261392,
+          "benign": 1984824,
+          "gleason3": 1082256,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 31.361865948198197,
+          "stroma": 6.207626304315824,
+          "benign": 0.46916955779942476,
+          "gleason3": 0.2558219615168772,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.006680386737712379,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.2558219615168772,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "f0bb29042dfb17421aac02138f8e9d20",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/f0bb29042dfb17421aac02138f8e9d20",
+      "status": "verified_cached_audit",
+      "audit_sha256": "575c1884707342309269c27bd89fb6774909a643a18d55e7f22010e42a9ddecd",
+      "tiling_completion_sha256": "53fe030cfab2b3399930ecbfc26d75d6be57bd42fdd548020032a81407be7efe",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          21248,
+          17664
+        ],
+        "native_pixel_counts": {
+          "background": 328658916,
+          "stroma": 43207252,
+          "benign": 3458504,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 77.68787473678185,
+          "stroma": 10.21326188849405,
+          "benign": 0.8175157053358594,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "f746e9703e48b20b6c64c1b9dce29d8a",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/f746e9703e48b20b6c64c1b9dce29d8a",
+      "status": "verified_cached_audit",
+      "audit_sha256": "b5123c042f118522430fd6cdb8873f4692e927751823bf080fe4449284b73c06",
+      "tiling_completion_sha256": "fed4ff89be29d3bbb9340d5811230fd01342bd0e89d2272ecb7d168e3b697411",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          13056,
+          17664
+        ],
+        "native_pixel_counts": {
+          "background": 200035612,
+          "stroma": 26592212,
+          "benign": 3993360,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 47.28410157584618,
+          "stroma": 6.285825012670422,
+          "benign": 0.9439441206544816,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "f88e932503d0e42467edb710bb8b9c46",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/f88e932503d0e42467edb710bb8b9c46",
+      "status": "verified_cached_audit",
+      "audit_sha256": "f51911be1ef0f9ab680813d2655c346f9b24aed0ef5fbf8994454768a0c0bc5d",
+      "tiling_completion_sha256": "3f39a6439d57ad524c2ed4f924b0de491c8174c2dda84b6945418576c944a067",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          7424,
+          15872
+        ],
+        "native_pixel_counts": {
+          "background": 106079048,
+          "stroma": 10359924,
+          "benign": 1394756,
+          "gleason3": 0,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 25.074797585047317,
+          "stroma": 2.4488624492225246,
+          "benign": 0.32969021724752146,
+          "gleason3": 0.0,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.0,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 0.0,
+      "native_gp45_area_mm2": 0.0
+    },
+    {
+      "image_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+      "source_directory": "/work/nvme/bfqi/mhoda/floater-finder/panda-cohort-tiles/120-v1-representative/ff10f937c3d52eff6ad4dd733f2bc3ac",
+      "status": "verified_cached_audit",
+      "audit_sha256": "a67e259e1bbc4f51622fdb3aad723f5391d64fe6190e42987baabd0bcf2d1c70",
+      "tiling_completion_sha256": "426818bce103c209968b9c1e2645e309c1c02bdff8171e17a375524e8dafeed2",
+      "audit": {
+        "resolution_level": 0,
+        "block_pixels": 512,
+        "dimensions": [
+          11520,
+          27648
+        ],
+        "native_pixel_counts": {
+          "background": 273045960,
+          "stroma": 34364464,
+          "benign": 818428,
+          "gleason3": 10276108,
+          "gleason4": 0,
+          "gleason5": 0
+        },
+        "area_mm2": {
+          "background": 64.54217215839763,
+          "stroma": 8.123017647355258,
+          "benign": 0.1934587161635831,
+          "gleason3": 2.4290501557111015,
+          "gleason4": 0.0,
+          "gleason5": 0.0
+        },
+        "gp45_positive": false,
+        "gp45_bbox_level0_xyxy": null,
+        "annotation_fraction_of_slide": 0.03226357291264789,
+        "gp45_fraction_of_annotated_tissue": 0.0,
+        "area_provenance": "exact native channel-0 counts multiplied by measured TIFF X/Y MPP"
+      },
+      "native_cancer_area_mm2": 2.4290501557111015,
+      "native_gp45_area_mm2": 0.0
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task": "low_high",
+  "model": "zero_shot_top1pct",
+  "metrics": {
+    "unit": "unique slide; true patient independence unverified",
+    "slides": 48,
+    "classes": [
+      "low_grade",
+      "high_grade"
+    ],
+    "confusion_rows_truth_columns_prediction": [
+      [
+        7,
+        17
+      ],
+      [
+        2,
+        22
+      ]
+    ],
+    "class_support": [
+      24,
+      24
+    ],
+    "accuracy": 0.6041666666666666,
+    "balanced_accuracy": 0.6041666666666666,
+    "class_recall": [
+      0.2916666666666667,
+      0.9166666666666666
+    ],
+    "class_recall_wilson95": [
+      [
+        0.14914648196960872,
+        0.4916769366449663
+      ],
+      [
+        0.7415119780678932,
+        0.9768411847029566
+      ]
+    ],
+    "balanced_accuracy_stratified_slide_bootstrap95": [
+      0.5,
+      0.7083333333333334
+    ],
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 20261021,
+    "brier": null,
+    "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+    "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+  },
+  "cv": {
+    "fitting": "None; unchanged historical fixed text cosine and pooling"
+  },
+  "failures": []
+}

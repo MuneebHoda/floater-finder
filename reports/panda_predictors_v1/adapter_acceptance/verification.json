@@ -1,0 +1,15 @@
+{
+  "source_commit": "22f44d9af6191df283ffe9d9f0b1243ac8ec2d02",
+  "slurm_job_id": "23069033",
+  "historical_exact_comparisons": 480,
+  "previous_roundoff_vectors": 158,
+  "previous_maximum_absolute_cosine_difference": 3.8743019104003906e-07,
+  "linear_known_calibration_predictions_exact": 80,
+  "primary_unchanged": true,
+  "models_retrained": false,
+  "selection_sha256": "acff113f130a6ac1650589009e002eef351787a791ad08a0508d41f869d973e7",
+  "historical_sha256": "22f56294c9d08550913ce42a5059aa32987276120c51edb2b6164dae6deeabae",
+  "original_completion_sha256": "a1ba15288a5f710b087e158bcb38159a4f070dc75ab3ff6cc2494c6253537ab0",
+  "test_slides_scored": false,
+  "correction": "Preserve all four text classes and original advanced-indexed score strides before float32 pooling"
+}

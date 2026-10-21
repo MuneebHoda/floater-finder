@@ -1,0 +1,13 @@
+{
+  "source_commit": "0f2fc5fa3413ac3c7c5d1cd81181fd9c57017140",
+  "slurm_job_id": "23068979",
+  "config_sha256": "b79b4fdc8746fb211be1f7914d46b02e1610a1a4b175dd4b8f0a0e1149c030ba",
+  "manifest_sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81",
+  "runtime": {
+    "numpy": "2.0.2",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.16.1"
+  },
+  "test_slides_scored": false,
+  "clinical_validity_verified": false
+}

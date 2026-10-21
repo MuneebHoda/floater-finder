@@ -1,0 +1,18 @@
+{
+  "files": {
+    "exact_zero_shot_predictions.json": "c4e29d3018b11e6aa0e5171319f0ebbb1c0e1a8befc8508eeeb4d290455b913f",
+    "verification.json": "70f9c924e961f15e22751f1eae6a6efd0256957e0927bea19c97ff5081e41b20",
+    "corrected_models/benign_cancer/zero_shot_top5pct/predictor.json": "e85c2132a3e354cb09ec132e0d8752e330838cd59f69760c4a0e656a69086905",
+    "corrected_models/benign_cancer/zero_shot_top5pct/parameters.npz": "665f2ba781ba9a1910db062a09b0e6ab8489e4c44836638c84f2dcbfa084d11e",
+    "corrected_models/benign_cancer/zero_shot_mean/predictor.json": "7ab5cec6e3dccee0fa078c99ab6d0affa7feb4083b146e56719c6ef241fcba6b",
+    "corrected_models/benign_cancer/zero_shot_mean/parameters.npz": "665f2ba781ba9a1910db062a09b0e6ab8489e4c44836638c84f2dcbfa084d11e",
+    "corrected_models/benign_cancer/zero_shot_top1pct/predictor.json": "514d819af85f2ca884bb404b3806e223f419d2bd1148d6fa007709969af0a344",
+    "corrected_models/benign_cancer/zero_shot_top1pct/parameters.npz": "665f2ba781ba9a1910db062a09b0e6ab8489e4c44836638c84f2dcbfa084d11e",
+    "corrected_models/low_high/zero_shot_top5pct/predictor.json": "a8254b31e76e5b8c3cf3359978767d32395cd43547018fc6ef3bc944ec73afb6",
+    "corrected_models/low_high/zero_shot_top5pct/parameters.npz": "665f2ba781ba9a1910db062a09b0e6ab8489e4c44836638c84f2dcbfa084d11e",
+    "corrected_models/low_high/zero_shot_mean/predictor.json": "d6e00b61132b71ee11a41af602b9a8cfe0633794032140e16c174987ff126cc3",
+    "corrected_models/low_high/zero_shot_mean/parameters.npz": "665f2ba781ba9a1910db062a09b0e6ab8489e4c44836638c84f2dcbfa084d11e",
+    "corrected_models/low_high/zero_shot_top1pct/predictor.json": "ac4c8b10bc4969b3a43d902975b875c94f2c037cc57ce73cef84661e7c1ede59",
+    "corrected_models/low_high/zero_shot_top1pct/parameters.npz": "665f2ba781ba9a1910db062a09b0e6ab8489e4c44836638c84f2dcbfa084d11e"
+  }
+}
