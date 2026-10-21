@@ -135,3 +135,28 @@ Metadata-only local command (no real slide arrays or predictions):
 python scripts/panda_fresh_s1.py --config configs/panda_fresh_s1_v1.json \
   --config-sha256 d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594
 ```
+
+## Verified source staging and exact pending command
+
+Source `3a3faf199bf2a334648227281a685a999a60f7c9` is staged read-only at:
+
+`/u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source`
+
+All 233 source files match the uploaded archive/manifest. Archive SHA256:
+`510f6957213316167a3b1e8433a6215a655521de2b8760e08ca3f7388a5ecbe3`. The remote metadata-only preflight passed with no
+slide-array reads or new predictions, all three pinned input receipts matched,
+all 60 completion paths were present, and the intended output did not exist.
+The queue was empty; `cpu-interactive` was up with a one-hour limit.
+
+This command runs **on Delta only after the new CPU-scope approval**:
+
+```sh
+sbatch --parsable /u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source/scripts/slurm/panda_fresh_s1.sbatch /u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594 /work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1 3a3faf199bf2a334648227281a685a999a60f7c9
+```
+
+Expected output is a new sealed shared registry under `fresh-s1-v1/`, with raw
+case/role scores, donor tile IDs, replacement targets/translation, exclusions,
+oracle audits, component counterfactuals and summary ledgers. Case audits retain
+both `altered_count` and `actual_foreign_count`; generic realized dose fields
+describe edited representations, so native-sham edits are not biological foreign
+tissue. All raw artifacts stay on Delta. No Slurm job has been submitted.

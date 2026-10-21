@@ -1,5 +1,7 @@
 # Floater Finder
 
+The [CPU-only S1 follow-up is prepared and frozen](docs/panda_fresh_s1_v1.md): same 60 evaluated slides, two fixed cancer scorers, append/replacement interventions, same-source shams and genuine-cancer counterfactual controls. **297 tests pass**; separate Delta staging and metadata preflight passed. The exact 20-minute CPU job awaits scope approval; no new follow-up result or calibrated floater alert is claimed.
+
 Fresh Radboud60 [CONCH encoding and frozen baseline evaluation are complete](reports/panda_fresh_baseline_results_v1.md): **60 slides / 25,915 verified 512D embeddings**. The frozen primary reaches **80.0% benign/cancer balanced accuracy** (cancer recall 28/40) and **72.5% low/high** (high-grade recall 11/20); both have wide slide-bootstrap intervals. All files remain on Delta. No refitting, threshold changes or original 24 final-test predictions; no floater-policy validity follows. [CPU intake evidence](reports/panda_fresh_cpu_execution_v1.md); unchanged software suite 284 tests.
 
 The latest [paired-placement CPU audit](reports/panda_detector_placement_v1.md) is complete: the frozen primary detects **0/607 foreign-fragment instances**, recovers **0/39 induced-error instances**, and detects 0/59 in each common paired placement mode. This four-host training-only study does not establish a useful review policy. **272 software tests pass**; all final-test predictions remain sealed.

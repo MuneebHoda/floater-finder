@@ -1,0 +1,77 @@
+{
+  "status": "prepared_verified_awaiting_cpu_approval",
+  "source_commit": "3a3faf199bf2a334648227281a685a999a60f7c9",
+  "release": "/u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z",
+  "source": "/u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source",
+  "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+  "archive_sha256": "510f6957213316167a3b1e8433a6215a655521de2b8760e08ca3f7388a5ecbe3",
+  "source_files": 233,
+  "source_manifest_sha256": "64525d7bf0fdb034189d93a27ab4a282e11ea17fd09aea9dc8b98fbec92e6d26",
+  "config_sha256": "d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594",
+  "command_pending_approval": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source/scripts/slurm/panda_fresh_s1.sbatch /u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594 /work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1 3a3faf199bf2a334648227281a685a999a60f7c9",
+  "output_intended": "/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1",
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 8,
+    "maximum_minutes": 20,
+    "gpu": 0
+  },
+  "jobs_submitted": [],
+  "predictions_computed": false,
+  "local_file_downloads": false,
+  "approval_status": "pending_exact_cpu_scope",
+  "source_verification": {
+    "status": "source_verified",
+    "source_commit": "3a3faf199bf2a334648227281a685a999a60f7c9",
+    "files": 233
+  },
+  "metadata_preflight": {
+    "status": "prepared_not_executed",
+    "slides": 60,
+    "benign_hosts": 20,
+    "primary": "linear_mean_max_topk",
+    "comparator": "zero_shot_top5pct",
+    "maximum_interventions": 1200,
+    "maximum_counterfactual_bags": 140,
+    "predictions_computed": false,
+    "output_intended": "/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1",
+    "resources": {
+      "cpus": 2,
+      "memory_gb": 8,
+      "maximum_minutes": 20,
+      "gpu": 0
+    }
+  },
+  "remote_input_preflight": {
+    "status": "verified_metadata_only",
+    "slides": 60,
+    "tiles": 25915,
+    "inputs_match": true,
+    "output_exists": false,
+    "queue_snapshot": "",
+    "partition_snapshot": "cpu-interactive up 1:00:00\n",
+    "predictions_computed": false
+  },
+  "category": "Bounded metadata-only preparation; no new real scientific outcomes",
+  "software_tests": {
+    "full_passed": 297,
+    "warnings_as_errors": true,
+    "environment": "Clean offline temporary environment outside the project folder",
+    "initial_worktree_environment": {
+      "passed": 295,
+      "failed": 2,
+      "reason": "Transient installed-package isolated imports; duplicate numbered Python files observed",
+      "subsequent_cli_passed": 6
+    }
+  },
+  "architecture_commit": "104dd31",
+  "source_uploaded_only": true,
+  "downloads_bytes": 0,
+  "acceptance_criteria": [
+    "All source/input identities match before any counterfactual predictions",
+    "Frozen clean model outputs reproduce saved baseline labels and numeric scores within absolute1e-12",
+    "Any oracle failure stops; source artifacts and failed checkpoints are preserved",
+    "Capacity exclusions retain planned and originally-correct denominator ledgers",
+    "No alert threshold, foreignness inference, clinical validation or original final-test execution"
+  ]
+}
