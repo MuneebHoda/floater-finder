@@ -1,0 +1,244 @@
+=====================================================
+Conda-Forge PyTorch 2.8 Environment Loaded Successfully!
+=====================================================
+
+To activate the environment:
+  conda activate base
+
+If 'conda activate' fails, use:
+  source $CONDA_PREFIX/etc/profile.d/conda.sh && conda activate base
+
+To verify PyTorch installation:
+  python -c "import torch; print(f'PyTorch {torch.__version__} CUDA:
+{torch.cuda.is_available()}')"
+
+Environment includes:
+  - PyTorch 2.8 with CUDA 12.8 support
+  - Scientific Python stack (numpy, scipy, pandas)
+  - ML libraries (transformers, lightning, timm)
+  - Cray PE integration with optimized MPI
+
+For Jupyter notebook support:
+  setup-kernel (creates Jupyter kernel for this environment)
+
+For distributed training, load:
+  module load aws-ofi-nccl/1.14.2
+
+Ready for single-node and distributed training!
+=====================================================
+
+{"stage": "features", "case_id": "afe7eb15c8438861ca43f2b20dccf260", "components": 2}
+{"stage": "features", "case_id": "9b9b11aa65e492ece39e3fde93a89d82", "components": 6}
+{"stage": "features", "case_id": "49db41e3293630f0b1a566d7c9a8f07e", "components": 3}
+{"stage": "features", "case_id": "69f32b20f51e4166809a29e594764865", "components": 8}
+{"stage": "features", "case_id": "1f1440204eba45ff4f999795c7d52040", "components": 5}
+{"stage": "features", "case_id": "50a159e2f93214ad4ebb0ec9c5d428f7", "components": 1}
+{"stage": "features", "case_id": "4a2aec11bc2def9644ba9756f888ec24", "components": 10}
+{"stage": "features", "case_id": "c6d41e8b7c2c101b9a927d4f403ec451", "components": 6}
+{"stage": "features", "case_id": "df83132f9e6a7c8337e6cd91270f8f7d", "components": 12}
+{"stage": "features", "case_id": "c3fbbd442c89676b42a2f49ef7428b30", "components": 3}
+{"stage": "features", "case_id": "bec80e876b9ffa8f24cf85beaa431667", "components": 1}
+{"stage": "features", "case_id": "66fab9d13c7a0f1e81b77887bb8a535a", "components": 5}
+{"stage": "features", "case_id": "42cb627feeceb770537e6c322c763dbf", "components": 5}
+{"stage": "features", "case_id": "291b2132e1fb9131478b8d691406874b", "components": 7}
+{"stage": "features", "case_id": "f0bb29042dfb17421aac02138f8e9d20", "components": 9}
+{"stage": "features", "case_id": "9f8dfe7b06ca41af4fa89f7deaf3b050", "components": 7}
+{"stage": "features", "case_id": "756d99387536d5721fcf4cf590627179", "components": 15}
+{"stage": "features", "case_id": "87edb3eb0b79782b9b7eec15dc294872", "components": 5}
+{"stage": "features", "case_id": "e005bc3ecd718b268588742a9e86d6f8", "components": 10}
+{"stage": "features", "case_id": "29fe9e445bbf0c9d84aec6799cbba4a5", "components": 1}
+{"stage": "features", "case_id": "e5739e452d5b7c5e68c4171ece2557e3", "components": 6}
+{"stage": "features", "case_id": "96415990a25ee1d758a8bc7ae97d593f", "components": 1}
+{"stage": "features", "case_id": "d0e4a4827c5ce9d7cc92f05e25674b71", "components": 2}
+{"stage": "features", "case_id": "66557aa92abab5f0eaa6a7c03d17bff1", "components": 5}
+{"stage": "features", "case_id": "55d91c32710982de78a975ed0f45395c", "components": 9}
+{"stage": "features", "case_id": "3901caec5d914bf20a44f176469b0294", "components": 2}
+{"stage": "features", "case_id": "a65a095302fbc94c8e21ae65e1ccd17e", "components": 5}
+{"stage": "features", "case_id": "530d4ae320630f972f49d861a4724fb1", "components": 9}
+{"stage": "features", "case_id": "d1088ba933bd7066a3a777f542f61fa6", "components": 3}
+{"stage": "features", "case_id": "63080d06c66488c4c30285e0363ca0ad", "components": 1}
+{"stage": "features", "case_id": "14cff64d674f558dc47ee5e817b7f671", "components": 12}
+{"stage": "features", "case_id": "b0dc9662008d3c1d40f3b30d82a6ffe0", "components": 10}
+{"stage": "features", "case_id": "a979f5e3d61ebeec3dcbe8943c9316ca", "components": 4}
+{"stage": "features", "case_id": "e97722ee42a5566b71eef7e75e9d86f0", "components": 4}
+{"stage": "features", "case_id": "428f0c9a110cf7cae62d620a4306ceaf", "components": 3}
+{"stage": "features", "case_id": "69da9f886fc4413167b8b144da775269", "components": 8}
+{"stage": "features", "case_id": "46d067b212c4dda9e6f87c8b82f22d79", "components": 8}
+{"stage": "features", "case_id": "3c685ed0f92e30f6ffeb5cea7cef5994", "components": 15}
+{"stage": "features", "case_id": "dc7254ab21584e852fe556646c86d6f4", "components": 6}
+{"stage": "features", "case_id": "ba8e50f3e374a63eae8af2f9d9a7acb0", "components": 4}
+{"stage": "features", "case_id": "e02a4e6752db30ddfe21a7c2cab7470b", "components": 12}
+{"stage": "features", "case_id": "ddbeff8437def5f80c4890b394711ec2", "components": 6}
+{"stage": "features", "case_id": "ff10f937c3d52eff6ad4dd733f2bc3ac", "components": 9}
+{"stage": "features", "case_id": "615b8a4e40699ea384e5f518ac0c68b4", "components": 2}
+{"stage": "features", "case_id": "452eca104841c28098e3ea454f9626c5", "components": 3}
+{"stage": "features", "case_id": "591da133fabcfdfa629d09729d356cda", "components": 6}
+{"stage": "features", "case_id": "bc2518ea5985260ea91f96e2db178b5f", "components": 7}
+{"stage": "features", "case_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2", "components": 4}
+{"stage": "features", "case_id": "dd1110c6430e3b1ac732be548a089886", "components": 3}
+{"stage": "features", "case_id": "134d69e06d397dc06ed6794b737c63fd", "components": 2}
+{"stage": "features", "case_id": "4e5c75b501c348de7af7620dab9d783e", "components": 9}
+{"stage": "features", "case_id": "dc10032bf598b0a3268074de4bb2d7b6", "components": 1}
+{"stage": "features", "case_id": "955f09b99664b07b0cf18768c84f2253", "components": 2}
+{"stage": "features", "case_id": "ab0c6950b69d38008bea90173b44aefa", "components": 3}
+{"stage": "features", "case_id": "5c2226e06c1c417be01fdd49ce5501b9", "components": 4}
+{"stage": "features", "case_id": "80a9fb86cc68aade057a0e680f3e5c0a", "components": 3}
+{"stage": "features", "case_id": "31e82faf725d625e322f58692dd90ac1", "components": 2}
+{"stage": "features", "case_id": "0e305c4d31f47db36c44a1d55d389193", "components": 5}
+{"stage": "features", "case_id": "7e8136cda906272497595cfb2088f4c4", "components": 10}
+{"stage": "features", "case_id": "9c2eafb5480094f718bc40213531b7d5", "components": 9}
+{"stage": "features", "case_id": "8efb75ef39c5b55cffeac6d3d19cf238", "components": 7}
+{"stage": "features", "case_id": "84bc390199b8e7466a020ca6abe11852", "components": 6}
+{"stage": "features", "case_id": "36dd11dbc0aba4413623bdc44775e6fe", "components": 2}
+{"stage": "features", "case_id": "7f15c706a91ae8c7ccbfaae1897aa024", "components": 3}
+{"stage": "features", "case_id": "2a6d0c4bd562bb83e9863a175af50de4", "components": 7}
+{"stage": "features", "case_id": "60bf955e8135c580681a253469151ed6", "components": 4}
+{"stage": "features", "case_id": "cb91772271b72c237c42f64fb6d2e84e", "components": 1}
+{"stage": "features", "case_id": "9ffb9e9e7be39a7af216779a06a6302b", "components": 7}
+{"stage": "features", "case_id": "1b176c9049260a8843b97349ccdd3eb7", "components": 3}
+{"stage": "features", "case_id": "d0cb73c9ad19c13c6fe93cc2c61cc073", "components": 1}
+{"stage": "features", "case_id": "5f7ebc491021150fdb969866ad5f6d81", "components": 5}
+{"stage": "features", "case_id": "e7f434dd3d607e019828f9c1f0a66144", "components": 3}
+{"stage": "features", "case_id": "afe7eb15c8438861ca43f2b20dccf260-p0.5", "components": 3}
+{"stage": "features", "case_id": "afe7eb15c8438861ca43f2b20dccf260-p1", "components": 3}
+{"stage": "features", "case_id": "afe7eb15c8438861ca43f2b20dccf260-p2", "components": 3}
+{"stage": "features", "case_id": "afe7eb15c8438861ca43f2b20dccf260-p5", "components": 3}
+{"stage": "features", "case_id": "afe7eb15c8438861ca43f2b20dccf260-p10", "components": 3}
+{"stage": "features", "case_id": "9b9b11aa65e492ece39e3fde93a89d82-p0.5", "components": 7}
+{"stage": "features", "case_id": "9b9b11aa65e492ece39e3fde93a89d82-p1", "components": 7}
+{"stage": "features", "case_id": "9b9b11aa65e492ece39e3fde93a89d82-p2", "components": 7}
+{"stage": "features", "case_id": "9b9b11aa65e492ece39e3fde93a89d82-p5", "components": 8}
+{"stage": "features", "case_id": "9b9b11aa65e492ece39e3fde93a89d82-p10", "components": 8}
+{"stage": "features", "case_id": "49db41e3293630f0b1a566d7c9a8f07e-p0.5", "components": 4}
+{"stage": "features", "case_id": "49db41e3293630f0b1a566d7c9a8f07e-p1", "components": 4}
+{"stage": "features", "case_id": "49db41e3293630f0b1a566d7c9a8f07e-p2", "components": 4}
+{"stage": "features", "case_id": "49db41e3293630f0b1a566d7c9a8f07e-p5", "components": 4}
+{"stage": "features", "case_id": "49db41e3293630f0b1a566d7c9a8f07e-p10", "components": 4}
+{"stage": "features", "case_id": "69f32b20f51e4166809a29e594764865-p0.5", "components": 9}
+{"stage": "features", "case_id": "69f32b20f51e4166809a29e594764865-p1", "components": 9}
+{"stage": "features", "case_id": "69f32b20f51e4166809a29e594764865-p2", "components": 9}
+{"stage": "features", "case_id": "69f32b20f51e4166809a29e594764865-p5", "components": 9}
+{"stage": "features", "case_id": "69f32b20f51e4166809a29e594764865-p10", "components": 9}
+{"stage": "features", "case_id": "1f1440204eba45ff4f999795c7d52040-p0.5", "components": 6}
+{"stage": "features", "case_id": "1f1440204eba45ff4f999795c7d52040-p1", "components": 6}
+{"stage": "features", "case_id": "1f1440204eba45ff4f999795c7d52040-p2", "components": 6}
+{"stage": "features", "case_id": "1f1440204eba45ff4f999795c7d52040-p5", "components": 6}
+{"stage": "features", "case_id": "1f1440204eba45ff4f999795c7d52040-p10", "components": 6}
+{"stage": "features", "case_id": "50a159e2f93214ad4ebb0ec9c5d428f7-p0.5", "components": 2}
+{"stage": "features", "case_id": "50a159e2f93214ad4ebb0ec9c5d428f7-p1", "components": 2}
+{"stage": "features", "case_id": "50a159e2f93214ad4ebb0ec9c5d428f7-p2", "components": 2}
+{"stage": "features", "case_id": "50a159e2f93214ad4ebb0ec9c5d428f7-p5", "components": 2}
+{"stage": "features", "case_id": "50a159e2f93214ad4ebb0ec9c5d428f7-p10", "components": 2}
+{"stage": "features", "case_id": "4a2aec11bc2def9644ba9756f888ec24-p0.5", "components": 11}
+{"stage": "features", "case_id": "4a2aec11bc2def9644ba9756f888ec24-p1", "components": 11}
+{"stage": "features", "case_id": "4a2aec11bc2def9644ba9756f888ec24-p2", "components": 11}
+{"stage": "features", "case_id": "4a2aec11bc2def9644ba9756f888ec24-p5", "components": 11}
+{"stage": "features", "case_id": "4a2aec11bc2def9644ba9756f888ec24-p10", "components": 11}
+{"stage": "features", "case_id": "c6d41e8b7c2c101b9a927d4f403ec451-p0.5", "components": 7}
+{"stage": "features", "case_id": "c6d41e8b7c2c101b9a927d4f403ec451-p1", "components": 7}
+{"stage": "features", "case_id": "c6d41e8b7c2c101b9a927d4f403ec451-p2", "components": 7}
+{"stage": "features", "case_id": "c6d41e8b7c2c101b9a927d4f403ec451-p5", "components": 8}
+{"stage": "features", "case_id": "c6d41e8b7c2c101b9a927d4f403ec451-p10", "components": 8}
+{"stage": "features", "case_id": "df83132f9e6a7c8337e6cd91270f8f7d-p0.5", "components": 13}
+{"stage": "features", "case_id": "df83132f9e6a7c8337e6cd91270f8f7d-p1", "components": 13}
+{"stage": "features", "case_id": "df83132f9e6a7c8337e6cd91270f8f7d-p2", "components": 13}
+{"stage": "features", "case_id": "df83132f9e6a7c8337e6cd91270f8f7d-p5", "components": 13}
+{"stage": "features", "case_id": "df83132f9e6a7c8337e6cd91270f8f7d-p10", "components": 14}
+{"stage": "features", "case_id": "c3fbbd442c89676b42a2f49ef7428b30-p0.5", "components": 4}
+{"stage": "features", "case_id": "c3fbbd442c89676b42a2f49ef7428b30-p1", "components": 4}
+{"stage": "features", "case_id": "c3fbbd442c89676b42a2f49ef7428b30-p2", "components": 4}
+{"stage": "features", "case_id": "c3fbbd442c89676b42a2f49ef7428b30-p5", "components": 4}
+{"stage": "features", "case_id": "c3fbbd442c89676b42a2f49ef7428b30-p10", "components": 4}
+{"stage": "features", "case_id": "bec80e876b9ffa8f24cf85beaa431667-p0.5", "components": 2}
+{"stage": "features", "case_id": "bec80e876b9ffa8f24cf85beaa431667-p1", "components": 2}
+{"stage": "features", "case_id": "bec80e876b9ffa8f24cf85beaa431667-p2", "components": 2}
+{"stage": "features", "case_id": "bec80e876b9ffa8f24cf85beaa431667-p5", "components": 2}
+{"stage": "features", "case_id": "bec80e876b9ffa8f24cf85beaa431667-p10", "components": 2}
+{"stage": "features", "case_id": "66fab9d13c7a0f1e81b77887bb8a535a-p0.5", "components": 6}
+{"stage": "features", "case_id": "66fab9d13c7a0f1e81b77887bb8a535a-p1", "components": 6}
+{"stage": "features", "case_id": "66fab9d13c7a0f1e81b77887bb8a535a-p2", "components": 6}
+{"stage": "features", "case_id": "66fab9d13c7a0f1e81b77887bb8a535a-p5", "components": 6}
+{"stage": "features", "case_id": "66fab9d13c7a0f1e81b77887bb8a535a-p10", "components": 6}
+{"stage": "features", "case_id": "42cb627feeceb770537e6c322c763dbf-p0.5", "components": 6}
+{"stage": "features", "case_id": "42cb627feeceb770537e6c322c763dbf-p1", "components": 6}
+{"stage": "features", "case_id": "42cb627feeceb770537e6c322c763dbf-p2", "components": 7}
+{"stage": "features", "case_id": "42cb627feeceb770537e6c322c763dbf-p5", "components": 8}
+{"stage": "features", "case_id": "42cb627feeceb770537e6c322c763dbf-p10", "components": 7}
+{"stage": "features", "case_id": "291b2132e1fb9131478b8d691406874b-p0.5", "components": 8}
+{"stage": "features", "case_id": "291b2132e1fb9131478b8d691406874b-p1", "components": 8}
+{"stage": "features", "case_id": "291b2132e1fb9131478b8d691406874b-p2", "components": 8}
+{"stage": "features", "case_id": "291b2132e1fb9131478b8d691406874b-p5", "components": 8}
+{"stage": "features", "case_id": "291b2132e1fb9131478b8d691406874b-p10", "components": 8}
+{"stage": "features", "case_id": "f0bb29042dfb17421aac02138f8e9d20-p0.5", "components": 10}
+{"stage": "features", "case_id": "f0bb29042dfb17421aac02138f8e9d20-p1", "components": 10}
+{"stage": "features", "case_id": "f0bb29042dfb17421aac02138f8e9d20-p2", "components": 10}
+{"stage": "features", "case_id": "f0bb29042dfb17421aac02138f8e9d20-p5", "components": 10}
+{"stage": "features", "case_id": "f0bb29042dfb17421aac02138f8e9d20-p10", "components": 10}
+{"stage": "features", "case_id": "9f8dfe7b06ca41af4fa89f7deaf3b050-p0.5", "components": 8}
+{"stage": "features", "case_id": "9f8dfe7b06ca41af4fa89f7deaf3b050-p1", "components": 8}
+{"stage": "features", "case_id": "9f8dfe7b06ca41af4fa89f7deaf3b050-p2", "components": 8}
+{"stage": "features", "case_id": "9f8dfe7b06ca41af4fa89f7deaf3b050-p5", "components": 8}
+{"stage": "features", "case_id": "9f8dfe7b06ca41af4fa89f7deaf3b050-p10", "components": 8}
+{"stage": "features", "case_id": "756d99387536d5721fcf4cf590627179-p0.5", "components": 16}
+{"stage": "features", "case_id": "756d99387536d5721fcf4cf590627179-p1", "components": 16}
+{"stage": "features", "case_id": "756d99387536d5721fcf4cf590627179-p2", "components": 16}
+{"stage": "features", "case_id": "756d99387536d5721fcf4cf590627179-p5", "components": 16}
+{"stage": "features", "case_id": "756d99387536d5721fcf4cf590627179-p10", "components": 16}
+{"stage": "features", "case_id": "87edb3eb0b79782b9b7eec15dc294872-p0.5", "components": 6}
+{"stage": "features", "case_id": "87edb3eb0b79782b9b7eec15dc294872-p1", "components": 6}
+{"stage": "features", "case_id": "87edb3eb0b79782b9b7eec15dc294872-p2", "components": 6}
+{"stage": "features", "case_id": "87edb3eb0b79782b9b7eec15dc294872-p5", "components": 6}
+{"stage": "features", "case_id": "87edb3eb0b79782b9b7eec15dc294872-p10", "components": 7}
+{"stage": "features", "case_id": "e005bc3ecd718b268588742a9e86d6f8-p0.5", "components": 11}
+{"stage": "features", "case_id": "e005bc3ecd718b268588742a9e86d6f8-p1", "components": 11}
+{"stage": "features", "case_id": "e005bc3ecd718b268588742a9e86d6f8-p2", "components": 11}
+{"stage": "features", "case_id": "e005bc3ecd718b268588742a9e86d6f8-p5", "components": 12}
+{"stage": "features", "case_id": "e005bc3ecd718b268588742a9e86d6f8-p10", "components": 17}
+{"stage": "features", "case_id": "29fe9e445bbf0c9d84aec6799cbba4a5-p0.5", "components": 2}
+{"stage": "features", "case_id": "29fe9e445bbf0c9d84aec6799cbba4a5-p1", "components": 2}
+{"stage": "features", "case_id": "29fe9e445bbf0c9d84aec6799cbba4a5-p2", "components": 2}
+{"stage": "features", "case_id": "29fe9e445bbf0c9d84aec6799cbba4a5-p5", "components": 4}
+{"stage": "features", "case_id": "29fe9e445bbf0c9d84aec6799cbba4a5-p10", "components": 2}
+{"stage": "features", "case_id": "e5739e452d5b7c5e68c4171ece2557e3-p0.5", "components": 7}
+{"stage": "features", "case_id": "e5739e452d5b7c5e68c4171ece2557e3-p1", "components": 7}
+{"stage": "features", "case_id": "e5739e452d5b7c5e68c4171ece2557e3-p2", "components": 7}
+{"stage": "features", "case_id": "e5739e452d5b7c5e68c4171ece2557e3-p5", "components": 7}
+{"stage": "features", "case_id": "e5739e452d5b7c5e68c4171ece2557e3-p10", "components": 7}
+{"stage": "features", "case_id": "96415990a25ee1d758a8bc7ae97d593f-p0.5", "components": 2}
+{"stage": "features", "case_id": "96415990a25ee1d758a8bc7ae97d593f-p1", "components": 2}
+{"stage": "features", "case_id": "96415990a25ee1d758a8bc7ae97d593f-p2", "components": 2}
+{"stage": "features", "case_id": "96415990a25ee1d758a8bc7ae97d593f-p5", "components": 2}
+{"stage": "features", "case_id": "96415990a25ee1d758a8bc7ae97d593f-p10", "components": 2}
+{"stage": "features", "case_id": "d0e4a4827c5ce9d7cc92f05e25674b71-p0.5", "components": 3}
+{"stage": "features", "case_id": "d0e4a4827c5ce9d7cc92f05e25674b71-p1", "components": 3}
+{"stage": "features", "case_id": "d0e4a4827c5ce9d7cc92f05e25674b71-p2", "components": 3}
+{"stage": "features", "case_id": "d0e4a4827c5ce9d7cc92f05e25674b71-p5", "components": 4}
+{"stage": "features", "case_id": "d0e4a4827c5ce9d7cc92f05e25674b71-p10", "components": 3}
+{"stage": "features", "case_id": "66557aa92abab5f0eaa6a7c03d17bff1-p0.5", "components": 6}
+{"stage": "features", "case_id": "66557aa92abab5f0eaa6a7c03d17bff1-p1", "components": 6}
+{"stage": "features", "case_id": "66557aa92abab5f0eaa6a7c03d17bff1-p2", "components": 6}
+{"stage": "features", "case_id": "66557aa92abab5f0eaa6a7c03d17bff1-p5", "components": 6}
+{"stage": "features", "case_id": "66557aa92abab5f0eaa6a7c03d17bff1-p10", "components": 6}
+	Command being timed: "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z/bin/python /u/mhoda/floater-finder/releases/panda-detector-v3-20261021T011243Z/source/scripts/panda_detector_v3_train.py --manifest /work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv --directories /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json --encoded /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative --verification /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json --stress /work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020 --cases /work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json --config /u/mhoda/floater-finder/releases/panda-detector-v3-20261021T011243Z/source/configs/panda_detector_v3_train_v1.json --output /work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z"
+	User time (seconds): 15.78
+	System time (seconds): 0.82
+	Percent of CPU this job got: 117%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 322984
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 815
+	Minor (reclaiming a frame) page faults: 138842
+	Voluntary context switches: 5307
+	Involuntary context switches: 2431
+	Swaps: 0
+	File system inputs: 260224
+	File system outputs: 50048
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

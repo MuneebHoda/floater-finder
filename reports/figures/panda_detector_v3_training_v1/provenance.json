@@ -1,0 +1,22 @@
+{
+  "source_kind": "real",
+  "scope": "training-only cross-fit",
+  "slurm_job_id": "23068965",
+  "source_commit": "4bf89cd1e2f1dc838ccd84bc626d090709e83476",
+  "report_sha256": "46e691590e5a28b61e250166493715231ace1fa69633d038f6c7f763617c3bd3",
+  "observations_sha256": "46a39e8fba48d7ce9cf0ed62b79dc50ff10fed9f285ba33fbd7dde732d752038",
+  "plots": {
+    "native_foreign_overlap.svg": "973652a3df3c5c2353ad5a3a81fbb34dee14e75b4977f58d3b05bea028196c62",
+    "recall_burden_curves.png": "6217ca3043ad2a84b4986ee865cff48571fc1b1c1c76d585b6afc20162b30fb2",
+    "precision_recall.svg": "69fda2e7f1c80ab2e470a1bee3467449e9c873d19be406db65846fcb6b9d572f",
+    "two_stage_vs_and.png": "f9e0965377eb53849c25ca9606fbb5964c9de111fd7b2dc18a7f4d46f3a16f62",
+    "operating_points.png": "e6986d30a994a8dc0c61589b82131894ae0a9a6321bbdee215790f19cd22b88b",
+    "operating_points.svg": "cfc15ece1ddd3c840d832090808a1a81d0223ee6c24b55fee8d457743e166b33",
+    "two_stage_vs_and.svg": "aba679689064756b6052e937ab0f93dac2d9626162480f8bb9794928554d14ca",
+    "precision_recall.png": "ac9f973edb07ca4ca720f9a6b27853603a48d465b83f46bce682d09e5932c9ea",
+    "recall_burden_curves.svg": "78c17516b80f34211f7c644d33875b0c518dfb7e41411633bdadd0c3bf24ebe1",
+    "native_foreign_overlap.png": "3b85a07f012d2776a4329ee77f46208941495761a28c4f773e13270c48c198b2"
+  },
+  "prediction_action": "none",
+  "held_out_predictions": false
+}
