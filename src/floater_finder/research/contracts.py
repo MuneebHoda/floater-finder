@@ -69,6 +69,35 @@ class SlideArtifact:
 
 
 @dataclass(frozen=True)
+class FollowupCohort:
+    """Explicit membership for previously verified fresh engineering artifacts."""
+    manifest_sha256: str
+    baseline_protocol_sha256: str
+    members: tuple[tuple[str, str], ...]
+    excluded_ids: tuple[str, ...]
+
+    def __post_init__(self):
+        hashes = [self.manifest_sha256, self.baseline_protocol_sha256]
+        if (not isinstance(self.members, tuple) or not self.members or
+                any(not isinstance(p, tuple) or len(p) != 2 for p in self.members) or
+                not isinstance(self.excluded_ids, tuple)):
+            raise ValueError('Immutable follow-up whitelist required')
+        ids = [p[0] for p in self.members]
+        hashes += [p[1] for p in self.members]
+        if (any(not isinstance(s, str) or not s for s in ids) or len(set(ids)) != len(ids) or
+                set(ids) & set(self.excluded_ids) or any(not isinstance(h, str) or len(h) != 64 or
+                    any(c not in '0123456789abcdef' for c in h) for h in hashes)):
+            raise ValueError('Hash-bound disjoint follow-up whitelist required')
+
+    def validate(self, slide):
+        m = slide.metadata
+        if (m.get('cohort_split') != 'engineering' or
+                m.get('selection_manifest_sha256') != self.manifest_sha256 or
+                dict(self.members).get(m['slide_id']) != slide_identity(slide)):
+            raise ValueError('Slide differs from verified follow-up whitelist or engineering provenance')
+
+
+@dataclass(frozen=True)
 class DonorSelection:
     condition: str
     minimum_fraction: float = .1
@@ -146,7 +175,7 @@ class ExperimentRun:
     schema_version: int = SCHEMA_VERSION
 
     def __post_init__(self):
-        if (self.schema_version != 1 or self.split not in ('train', 'known_calibration') or
+        if (self.schema_version != 1 or self.split not in ('train', 'known_calibration', 'fresh_followup') or
                 any(not value for value in (self.experiment_id, self.hypothesis, self.source_commit,
                                            self.dataset_identity, self.checkpoint_fingerprint, self.embedding_fingerprint))):
             raise ValueError('Identified development-only experiment required')

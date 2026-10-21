@@ -11,7 +11,7 @@ import numpy as np
 from ..artifacts import Slide, check_compatible
 from ..injection import grid_neighbors, connected_fragment
 from ..panda_stress import foreign_count
-from .contracts import DonorSelection, InterventionSpec, SlideArtifact, slide_identity
+from .contracts import DonorSelection, InterventionSpec, SlideArtifact, FollowupCohort, slide_identity
 
 
 def donor_components(slide, rows, selection):
@@ -57,7 +57,7 @@ def tile_components(slide, eligible_indices=None):
     return sorted(parts, key=lambda p: (-len(p), int(p[0])))
 
 
-def validate_pair(host, donor, task, condition):
+def validate_pair(host, donor, task, condition, *, cohort=None):
     check_compatible(host, donor)
     h, d = host.metadata, donor.metadata
     sham = condition == 'same_source_sham'
@@ -67,8 +67,14 @@ def validate_pair(host, donor, task, condition):
         h['isup_grade'] == 1 and
         ((condition == 'same_grade_gp3_only' and d['isup_grade'] == 1) or
          (condition in ('high_gp45', 'high_gp4_only', 'high_gp5_positive') and d['isup_grade'] in (4, 5))))
+    if cohort is not None:
+        if not isinstance(cohort, FollowupCohort):
+            raise TypeError('Explicit verified FollowupCohort required')
+        cohort.validate(host)
+        cohort.validate(donor)
+    allowed = ('train', 'calibration') if cohort is None else ('engineering',)
     if (any(m['project'] != 'PANDA' or m['data_provider'] != 'radboud' or
-            m['cohort_split'] not in ('train', 'calibration') for m in (h, d)) or
+            m['cohort_split'] not in allowed for m in (h, d)) or
             h['cohort_split'] != d['cohort_split'] or
             (h['slide_id'] == d['slide_id']) != sham or (not sham and not expected)):
         raise ValueError('Eligible PANDA Radboud task/condition pair in same development split required')
@@ -109,14 +115,14 @@ def validate_indices(host, donor, indices, percent):
     return a.astype(int), count
 
 
-def select_donors(host, sources, selection, task, percent, seed):
+def select_donors(host, sources, selection, task, percent, seed, *, cohort=None):
     """Capacity-first deterministic selection; a fixed prefix keeps nested doses unique."""
     candidates = []
     needed = foreign_count(percent, len(host.feats))
     for sid, source in sources.items():
         donor = source['slide']
         try:
-            validate_pair(host, donor, task, selection.condition)
+            validate_pair(host, donor, task, selection.condition, cohort=cohort)
         except ValueError:
             continue
         parts = donor_components(donor, source['rows'], selection)
@@ -268,10 +274,10 @@ def _legacy_metadata(host, donor, indices, percent, seed, task, condition, trans
     return value
 
 
-def apply_intervention(host, donor, spec, *, occupancy=None):
+def apply_intervention(host, donor, spec, *, occupancy=None, cohort=None):
     from dataclasses import asdict
     from .contracts import canonical
-    validate_pair(host, donor, spec.task, spec.condition)
+    validate_pair(host, donor, spec.task, spec.condition, cohort=cohort)
     indices, count = validate_indices(host, donor, np.asarray(spec.donor_indices, dtype=int), spec.percent)
     metadata = deepcopy(host.metadata)
     coords, translation = donor.coords[indices].copy(), np.zeros(2)
@@ -319,6 +325,9 @@ def apply_intervention(host, donor, spec, *, occupancy=None):
             representation_only=True, pixel_composition=False, synthetic_foreign_tissue=spec.condition != 'same_source_sham',
             replacement_indices=list(spec.replacement_indices), altered_count=count, foreign_count=int(truth.sum()), context=spec.context,
             occupancy_source_sha256=occupancy.source_sha256 if occupancy else None)
+    if cohort is not None and spec.mode == 'append_legacy' and spec.condition == 'same_source_sham':
+        # Historical sham metadata stays byte-compatible; fresh runs record the actual placement.
+        metadata['injection']['placement'] = 'three x-grid steps beyond host right edge; y rounded to host grid'
     result = Slide(feats, all_coords, ids, metadata, truth)
     return InterventionResult(result, SlideArtifact.from_slide(host), canonical(dict(schema_version=1, spec=asdict(spec),
         host_identity=slide_identity(host), donor_identity=slide_identity(donor), result_identity=slide_identity(result),
