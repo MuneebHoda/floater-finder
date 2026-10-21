@@ -1,5 +1,11 @@
 # Floater Finder progress
 
+## Research acceleration checkpoint — October 20
+
+Three isolated workstreams produced training-only nested-CV CONCH linear probes, versioned shared S1/S2 interventions/registry and seven detector-v3 context hypotheses. Selected grade training OOF BA is 85.42% with 13/16 reused-calibration slides correct; selected cancer reused-calibration BA falls to 71.88%, and paired uncertainty includes no improvement for both tasks. Detector v3's fixed robust-NN5 primary finds 1/120 fragments with 7/72 clean alerts, five native-cancer component flags and 3/61 hypothetical clean-prediction damage. No useful review policy is established. [Eight-part measured research checkpoint](panda_research_checkpoint_v1.md).
+
+CPU-only runs preserve the original zero-shot models and all previous scientific outcomes. Strict adapter acceptance matches 480 historical score vectors and 80 saved linear predictions exactly, without rerunning CV. The shared-engine geometry failure is retained; corrected job **23069070** completes 1,017 exact recoveries, 252 legacy comparisons and 345 coordinate-invariance checks, with 327 explicit exclusions. Its S2 v2 engineering smoke uses two training hosts and same-grade controls, not independent validation. Fresh Radboud/Karolinska cohorts are metadata-only proposals, with no acquisitions. The existing test set and submission package remain unchanged; no new GPU inference occurred. Full regression passes **258 tests** with warnings treated as errors. Detailed job/provenance/test/status records are linked from the checkpoint.
+
 ## Submission and S2/ranked-v2 checkpoint — October 20
 
 The [finished submission package](../submission/ashby_20261021_v2/) contains a 19-slide PPTX/PDF, abstract, 480-second presentation script, four-minute Q&A and checklist. The exact organizer upload URL, deadline hour/timezone, team details and availability remain unresolved as requested; nothing was uploaded. [Integrated handoff](submission_execution_checkpoint_20261020.md).

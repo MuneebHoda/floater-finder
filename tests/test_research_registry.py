@@ -73,4 +73,3 @@ def test_status_cli_summary_keeps_full_hash_validation(tmp_path):
     (tmp_path/'checkpoints/fixture.json').write_text('{"synthetic":false}')
     failed = subprocess.run(command, env=env, capture_output=True, text=True)
     assert failed.returncode != 0 and 'hash changed' in failed.stderr
-

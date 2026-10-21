@@ -1,5 +1,15 @@
 # Floater Finder: NCSA setup
 
+## Research CPU checkpoint — October 20
+
+The local Mac execution environment was verified as Darwin. Shared SSH confirmed `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. The prepared PANDA CPU runtime reports NumPy2.0.2, SciPy1.16.1, scikit-learn1.7.2 and Torch2.8.0+cu128 by package metadata; no Torch/CUDA inference was needed for this stage. Site allocations initially showed 5,467 rounded CPU hours and 8 GPU hours. These are shared snapshots, not reservations. CPU QoS permits one submitted job per user, so the research jobs were serialized.
+
+Detector v3 **23068965** and nested-CV predictors **23068979** completed 0:0 in 23 seconds each. Exact-score adapter verification **23069033** completed 0:0 in 13 seconds, matching 480 historical zero-shot vectors and 80 saved linear predictions. The first shared-engine job **23069018** failed an unhandled dose-specific placement eligibility check in 25 seconds; its five trial / one geometry checkpoints and failure record are preserved. Corrected **23069070** completed 0:0 in 116 seconds, using a new output and fixed predictor/geometry rules. There was no oracle failure or duplicate submission.
+
+These jobs used `bfqi-delta-cpu` / `cpu-interactive`, 2 CPUs and 4–8 GB each, with separate hash-verified source snapshots. No GPU, dataset/weight acquisition or final-test job was launched. The [research checkpoint](../reports/panda_research_checkpoint_v1.md) links exact commands, source revisions, inputs, outputs, measured denominators and remaining gates. The original 120-slide artifacts, frozen rejected final protocol and submission materials are preserved.
+
+Metadata-only fresh-cohort proposals exclude all 129 exposed pilot/study IDs. The proposed Radboud60 inputs total 1,348,184,402 catalog TIFF bytes; optional Karolinska60 inputs total 3,512,683,208 bytes. Exactly 240 candidate paths were stat-checked and none was present. Catalog masks are not verified usable masks, and patient IDs remain unavailable. [Versioned manifests and acquisition/resource gates](panda_fresh_validation_v1.md). PathGen remains unverified: the prepared runtime has no `open_clip_torch` distribution, and the bounded existing model-root check found only CONCH. [Interface/checkpoint audit](panda_encoder_readiness_v1.md).
+
 ## Submission, S2 and ranked detector v2 — October 20
 
 Shared SSH identity reverified `mhoda` on `dt-login03.delta.ncsa.illinois.edu` from the local Mac. Site `accounts` reported 5,488 rounded CPU hours and 8 rounded GPU hours at the setup inspection; these are shared-allocation observations, not future guarantees. `cpu-interactive` was available with a one-hour partition limit. Both new jobs used the verified `bfqi-delta-cpu` account/QoS, 2 CPUs, 4 GB and a ten-minute cap, with no GPUs.
