@@ -177,10 +177,13 @@ def _valid_position(coords, host, occupancy, max_distance_um=224.):
         overlap = np.all((host.coords < point+size) & (host.coords+size > point), axis=1)
         if overlap.any():
             return False
-    # Rectangle expansion expresses a stated Chebyshev bound, not a fabricated Euclidean distance.
-    lo = np.maximum(np.floor((coords.min(axis=0)-max_distance_um-np.array(occupancy.origin_um))/occupancy.pixel_um).astype(int), 0)
-    hi = np.minimum(np.ceil((coords.max(axis=0)+size+max_distance_um-np.array(occupancy.origin_um))/occupancy.pixel_um).astype(int), occupancy.shape[::-1])
-    return bool(mask[lo[1]:hi[1], lo[0]:hi[0]].any())
+    # Expand actual footprints, not the fragment bbox: empty holes are not tissue boundaries.
+    for point in coords:
+        lo = np.maximum(np.floor((point-max_distance_um-np.array(occupancy.origin_um))/occupancy.pixel_um).astype(int), 0)
+        hi = np.minimum(np.ceil((point+size+max_distance_um-np.array(occupancy.origin_um))/occupancy.pixel_um).astype(int), occupancy.shape[::-1])
+        if mask[lo[1]:hi[1], lo[0]:hi[0]].any():
+            return True
+    return False
 
 
 def placement_anchor(host, donor, indices, occupancy, seed, anchor=None):
