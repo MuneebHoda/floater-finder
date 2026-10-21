@@ -52,7 +52,7 @@ integration; resource values are agent-selected within that new scope. Exact
 pushed source and command are shown before submission. No consumed job approval,
 retry, duplicate, acquisition, new inference, fitting or final-test execution.
 
-New intended output, not yet a completion claim:
+Verified output, created by job 23102636:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1`
 
@@ -80,3 +80,28 @@ python scripts/panda_preview_export.py --config configs/panda_preview_export_v1.
 `--check-inputs` adds remote metadata/destination checks without decoding images.
 Execution requires the bounded CPU wrapper and `--execute`. Exact staging and
 observed output/byte counts will be appended after verification, not inferred.
+
+
+## Verified staging and exact submission
+
+Source `ec5a71dde4b566393ddfa4b53b5e1b6a8eec3d6d` was pushed and separately staged read-only at:
+
+`/u/mhoda/floater-finder/releases/panda-preview-export-v1-20261021T174522Z/source`
+
+All 267 source files and six input receipts verified; own queue empty and intended
+output absent before submission. Archive SHA256 `643bdb1fa64cd9845905f567b3e2a80ee13402f79652c06ef0d1973564dba1d3`;
+source-manifest SHA256 `44990c614f128132714a4b9f7f315f669f97d15447769405e8dde553225fade1`.
+
+Submitted once as **23102636** with the exact command:
+
+```sh
+sbatch --parsable /u/mhoda/floater-finder/releases/panda-preview-export-v1-20261021T174522Z/source/scripts/slurm/panda_preview_export.sbatch /u/mhoda/floater-finder/releases/panda-preview-export-v1-20261021T174522Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z 5024779111434c188f6a2d486acff1203db4969f337c1875dfb9481bfd61859c /work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1 ec5a71dde4b566393ddfa4b53b5e1b6a8eec3d6d
+```
+
+Authorization receipt SHA256 `604b7b9931374f7555f7417c0d88cd4274bae8300461d33757fb43d582b877bc`.
+The latest user “next” advances this bounded gallery integration; resource values
+are agent-selected within that scope, not expressly user-selected. No consumed
+approval reused. Job **23102636 completed 0:0 in 23 seconds**. Source PNGs/metadata and all
+1,783 output files verify: 1,638 PNG copies /2,605 references, 101,466,949 bytes,
+73 checkpoints /76 events. [Observed counts, preservation checks and limitations](../reports/panda_preview_export_results_v1.md).
+This bounded scope is complete; no additional job or retry was submitted.
