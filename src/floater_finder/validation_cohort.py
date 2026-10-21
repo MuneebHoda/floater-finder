@@ -99,3 +99,88 @@ def write_proposal(train, catalog_path, exclude_manifests, output, *, per_group=
         report["proposals"][provider] = summary
     (output / "proposal.json").write_text(json.dumps(report, indent=2) + "\n")
     return report
+
+
+def prepare_fresh_baseline(project, train, catalog_path, pilot, output):
+    """Freeze the existing Radboud60 proposal and models; never acquire or predict."""
+    from .predictors import load_predictor
+    project, output = Path(project), Path(output)
+    proposal_root = project/'reports/fresh_validation_metadata_v1'
+    proposal = json.loads((proposal_root/'proposal.json').read_text())
+    candidate = proposal_root/'radboud_fresh_validation_candidates.csv'
+    exposed = project/'reports/manifests/panda_candidate_120_20261020.csv'
+    if (sha256(train) != proposal['train_sha256'] or sha256(catalog_path) != proposal['catalog_sha256'] or
+            sha256(candidate) != proposal['proposals']['radboud']['manifest_sha256'] or
+            sha256(exposed) != proposal['exclusion_manifest_sha256']['reports/manifests/panda_candidate_120_20261020.csv'] or
+            sha256(pilot) != proposal['exclusion_manifest_sha256']['/tmp/floater-fresh-validation-metadata/pilot.csv']):
+        raise ValueError('Metadata proposal/input checksums changed')
+    def rows(path):
+        with Path(path).open(newline='') as handle: return list(csv.DictReader(handle))
+    originals = {r['image_id']:r for r in rows(train)}
+    exclusions = rows(exposed)+rows(pilot); excluded = {r['image_id'] for r in exclusions}
+    patients = {r['patient_id'] for r in exclusions if r.get('patient_id')}
+    chosen = rows(candidate)
+    if len(chosen) != 60 or len({r['image_id'] for r in chosen}) != 60:
+        raise ValueError('Exactly the frozen 60 candidates required')
+    catalog = json.loads(Path(catalog_path).read_text())
+    if not catalog['complete'] or catalog.get('error'): raise ValueError('Successful complete catalog required')
+    files = {r['name']:r['bytes'] for r in catalog['files']}
+    required = []; execution = []
+    for row in chosen:
+        sid = row['image_id']; original = originals[sid]
+        if (sid in excluded or (row['patient_id'] and row['patient_id'] in patients) or
+                row['split'] != 'fresh_development_validation' or row['data_provider'] != 'radboud' or
+                any(str(row[k]) != str(original[k]) for k in ('data_provider','isup_grade','gleason_score'))):
+            raise ValueError('Fresh slide/patient exclusion or original label check failed')
+        for role in ('image','mask'):
+            name = row[role+'_file']; size = int(row[role+'_catalog_bytes'])
+            expected = ('train_images/' if role=='image' else 'train_label_masks/')+sid+('_mask' if role=='mask' else '')+'.tiff'
+            if name != expected or files.get(name) != size or size <= 0: raise ValueError('Catalog file identity differs')
+            required.append(dict(image_id=sid,role=role,name=name,bytes=size))
+        execution.append(dict(row,candidate_split=row['split'],split='engineering',validation_role=row['split']))
+    if Counter(r['group'] for r in chosen) != dict(benign=20,gg1=20,high_grade=20):
+        raise ValueError('Frozen group counts differ')
+    selection_path = project/'reports/panda_predictors_v1/run/selection_frozen.json'
+    selection = json.loads(selection_path.read_text()); models = []
+    for task,historical in (('benign_cancer','zero_shot_top5pct'),('low_high','zero_shot_mean')):
+        if selection['tasks'][task]['primary'] != 'linear_mean_max_topk' or selection['calibration_opened_for_selection']:
+            raise ValueError('Original training-only model selection differs')
+        for role,name,base in (('primary','linear_mean_max_topk','run'),('historical',historical,'adapter_acceptance/corrected_models')):
+            directory = Path('reports/panda_predictors_v1')/(base+'/models' if base=='run' else base)/task/name
+            model = load_predictor(project/directory)
+            if set(model.spec['train_ids']) & {r['image_id'] for r in chosen}: raise ValueError('Model training overlap')
+            models.append(dict(task=task,role=role,model_id=name,directory=str(directory),
+                sha256={n:sha256(project/directory/n) for n in ('predictor.json','parameters.npz')}))
+    source_names = ['src/floater_finder/predictors/fresh.py','src/floater_finder/predictors/linear_probe.py',
+        'src/floater_finder/predictors/pooling.py','src/floater_finder/predictors/evaluation.py',
+        'src/floater_finder/artifacts.py','src/floater_finder/panda.py','src/floater_finder/panda_encoding.py',
+        'src/floater_finder/panda_final.py','src/floater_finder/panda_review.py','src/floater_finder/validation_cohort.py',
+        'scripts/panda_fresh_baseline.py','scripts/panda_fresh_baseline_prepare.py','scripts/panda_tile_cohort.py',
+        'scripts/panda_acquire.py','scripts/panda_encode_batch.py','configs/panda_morphology_v1.yaml',
+        'scripts/slurm/panda_fresh_acquire.sbatch','scripts/slurm/panda_fresh_baseline.sbatch',
+        'scripts/slurm/panda_tile_cohort.sbatch','scripts/slurm/panda_encode_cohort.sbatch']
+    model = load_predictor(project/models[0]['directory'])
+    protocol = dict(schema_version=1,status='frozen_before_acquisition',scope='fresh_clean_baseline_only',
+        candidate_sha256=sha256(candidate),train_sha256=sha256(train),catalog_sha256=sha256(catalog_path),
+        selection_sha256=sha256(selection_path),image_ids=[r['image_id'] for r in chosen],excluded_slide_ids=sorted(excluded),
+        models=models,embedding_model=model.spec['embedding_model'],text_fingerprint=model.spec['text_fingerprint'],
+        prompts_sha256=sha256(project/'configs/panda_morphology_v1.yaml'),bootstrap_seed=20261024,
+        source_files={n:sha256(project/n) for n in source_names},
+        analysis='Report both frozen train-selected linear primaries plus exact historical BC top5% / grade mean comparators. No fitting, model switch, thresholds, contamination or floater-policy claims. BC: all60; low/high: ISUP1 vs4/5 only40; no ISUP2/3 claim. Class confusion/recall/BA, conditional unique-slide bootstrap and uncalibrated probability diagnostics; no outcome-driven revision.',
+        intake_gate='All60 input artifacts must pass before any prediction. Technical failures remain recorded and block this v1; no silent replacement/exclusion. An explicit pre-prediction protocol amendment is needed if the frozen cohort cannot be completed.',
+        limitations=['Slide-disjoint from129 exposed IDs; patient independence unknown.',
+            'Known calibration was repeatedly inspected development. Training-only selection is historical; fresh results cannot retune it.',
+            'Artificial tests verify software only; acquisition, mask usability, new embeddings and fresh scientific results are unexecuted.',
+            'This evaluates clean slide predictions, not a floater detector, clinical grading or final-test readiness. Original24 test slides remain sealed.'])
+    output.mkdir(parents=True,exist_ok=False)
+    with (output/'manifest.csv').open('x',newline='') as handle:
+        writer = csv.DictWriter(handle,fieldnames=list(execution[0])); writer.writeheader(); writer.writerows(execution)
+    protocol['manifest_sha256'] = sha256(output/'manifest.csv')
+    acquisition = dict(slides=60,files=required,catalog_tiff_bytes=sum(r['bytes'] for r in required),
+        candidate_sha256=sha256(candidate),manifest_sha256=protocol['manifest_sha256'],catalog_sha256=sha256(catalog_path),
+        approval_required=True,integrity='Catalog sizes; after approval verify ZIP CRC when present, local SHA256 and bounded CPU reader alignment. No external checksums available.')
+    for name,value in (('protocol.json',protocol),('acquisition.json',acquisition)):
+        (output/name).write_text(json.dumps(value,indent=2)+'\n')
+    return dict(status='prepared_not_executed',slides=60,groups=dict(Counter(r['group'] for r in chosen)),
+        excluded_ids=len(excluded),catalog_tiff_bytes=acquisition['catalog_tiff_bytes'],
+        hashes={p.name:sha256(p) for p in sorted(output.iterdir())},predictions_computed=False,downloads_started=False)
