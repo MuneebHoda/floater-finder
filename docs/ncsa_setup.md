@@ -393,3 +393,12 @@ This successful scheduled run verifies Slurm GPU allocation and driver visibilit
 The exact next command from the local checkout is `cat configs/ncsa_expanded_pilot_download_plan.json` to review the concrete, approved acquisition manifest. Dependency maintenance and the bounded GPU compatibility check are verified; broader research still needs completed acquisition/integrity checks, broader sampling, a cohort runner and frozen calibration protocol. The current evaluation set must not be used for threshold tuning.
 
 Keep `AGENTS.md` safeguards and the recorded continuing authorization in force. Bounded CONCH plan jobs and the two development inputs are covered; bulk cohorts or additional models need separate scope authorization. Preserve the user-authorized private-repository audience for setup details and project documents.
+
+
+## Fresh Radboud60 CPU intake — verified October 21
+
+Approved acquisition 23070667 and CPU tiling 23070755/23070937/23071013/23073158/23073380/23081800 completed `0:0`. Full metadata verification passed 60 slides, 25,915 tiles and 60 masks. All 20 high-grade slides have sampled GP4/5 annotation, totaling 4,209 distinct positive tiles. These are annotation observations, not predictions. Root-job accounting totals 0.7572 allocated CPU-hours.
+
+Verified output root: `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1`. The exact 60-directory encoding list is `tiling-directories.json`; complete readiness is `reports/cpu-readiness-v1.json` (SHA256 `2547519afadbb0615cd0691bf550ec4c0db117b32069ab360641bd7447654790`). All payloads and detailed artifacts remain on Delta; none were copied to the Mac. Source is `bfd4416936d2c35d764d6fd46e1017f110ef48db` in `/u/mhoda/floater-finder/releases/panda-fresh-baseline-v1-20261021T023142Z/source`. See the [execution record](../reports/panda_fresh_cpu_execution_v1.md) for provenance limits and exact unsubmitted GPU/CPU proposals. Fresh embeddings, clean predictive performance and patient independence remain unverified; the original 24 final-test predictions are sealed.
+
+Final lightweight recheck: queue empty; both interactive partitions up with one-hour limits. `accounts` reported 5,287 rounded CPU hours and 8 GPU hours remaining in the previously selected CPU/GPU allocations (shared snapshots, not reservations). No GPU submission was made.

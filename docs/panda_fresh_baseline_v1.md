@@ -1,4 +1,8 @@
-# Fresh Radboud60 baseline validation — prepared, not executed
+# Fresh Radboud60 baseline validation
+
+**Execution update:** approved Delta-only acquisition and CPU tiling are complete: 60 slides / 25,915 tiles / 60 usable masks. See the [verified execution record](../reports/panda_fresh_cpu_execution_v1.md). GPU encoding and fresh prediction remain unapproved and unexecuted. The protocol, candidate IDs and models below are unchanged.
+
+## Historical preparation record — before acquisition approval
 
 The next study checks whether the already frozen CONCH prediction models transfer
 to new slides. It does not validate the failed floater detector or release the

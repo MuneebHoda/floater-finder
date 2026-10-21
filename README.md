@@ -1,6 +1,6 @@
 # Floater Finder
 
-Fresh 60-slide Radboud [baseline validation is prepared and frozen](docs/panda_fresh_baseline_v1.md): unchanged candidate IDs, four pinned predictors, exact acquisition plan and a strict preflight/evaluation runner. **284 tests pass**. Source staging and metadata checks passed; fresh acquisition/CPU intake approval is pending, with no new downloads, jobs, predictions or GPU use.
+Fresh Radboud60 [CPU intake is complete](reports/panda_fresh_cpu_execution_v1.md): **60 slides / 25,915 spatial tiles / 60 masks**, including 4,209 GP4/5-positive tiles across all 20 high-grade slides. Acquisition and six CPU jobs completed successfully; all files remain on Delta. The [frozen baseline protocol](docs/panda_fresh_baseline_v1.md) and four predictors are unchanged. No fresh GPU encoding or prediction has run; those exact proposed jobs remain separate approval gates. Original 24 final-test predictions remain sealed; the unchanged software suite has 284 passing tests.
 
 The latest [paired-placement CPU audit](reports/panda_detector_placement_v1.md) is complete: the frozen primary detects **0/607 foreign-fragment instances**, recovers **0/39 induced-error instances**, and detects 0/59 in each common paired placement mode. This four-host training-only study does not establish a useful review policy. **272 software tests pass**; all final-test predictions remain sealed.
 
