@@ -1,5 +1,13 @@
 # Floater Finder: NCSA setup
 
+## Original-training topology/context execution — October 21
+
+Local Darwin and SSH `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified. CPU **23101968 completed 0:0 in 27s** on `cn061`, account/QoS `bfqi-delta-cpu` / partition `cpu-interactive`, 2 CPUs, 8 GB, 20-minute cap, no GPU. Actual 0.015 allocated CPU-hours; Python MaxRSS 378,920 KiB. One submission, no retry.
+
+Source `a1597699d3e6381a2f2baa35cebde1b687bdd6ff` at `/u/mhoda/floater-finder/releases/panda-topology-context-v1-20261021T164149Z/source` verified all 246 source files and six pinned original metadata/cache inputs. Results are sealed at `/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1`; authorization/output/common-support/completion receipts are sibling JSON files under `panda-review/`. All 72 training sources and 2160 planned context records verify, with no classification predictions or threshold changes. The original test output remains absent and the queue empty. [Findings and receipt hashes](../reports/panda_topology_context_results_v1.md); [frozen scope and exact command](panda_topology_context_v1.md).
+
+No dataset, model or raw-result files were downloaded to the Mac; no WSI/PNG, fresh 60, calibration or original-test arrays were opened. Old input hashes, S1/S3 registry receipts, frozen source/protocol and main remain preserved. The audit provides topology/context feasibility evidence, not an approved foreignness policy or clinical validation.
+
 ## S3 conservative review transfer — October 21
 
 Shared SSH verified `mhoda` / `dt-login04.delta.ncsa.illinois.edu`. Site snapshot: 4908 rounded CPU hours, 8 rounded GPU hours, empty queue and CPU-interactive up. Latest request to push and move forward supplied next-stage research direction; agent chose the bounded 2-CPU/8-GB/20-minute scope and showed the exact staged command before submission. No explicit user choice of those resource values is claimed.

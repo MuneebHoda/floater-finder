@@ -1,6 +1,6 @@
 # Original-training topology and native-context audit
 
-This diagnostic follows the failed S3 transfer rule. Its scope is the original
+This completed diagnostic follows the failed S3 transfer rule. Its scope is the original
 **72 training slides only**, using existing CONCH v1 artifacts. The evaluated
 fresh 60, known-calibration arrays and original 24 final-test arrays are outside
 this study. Old development-case JSON contains known calibration records but
@@ -75,11 +75,11 @@ The latest “next” request advances this development audit; resource values a
 agent-selected within that bounded research scope. Exact source/command is shown
 and recorded before submission. No completed stage approval is reused.
 
-Intended output, not a claim that the experiment has run:
+Verified output, created by job 23101968:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1`
 
-Expected outputs are a new sealed registry: `run.json`, `events/`, 72 per-slide
+Observed outputs are a new sealed registry: `run.json`, `events/`, 72 per-slide
 `checkpoints/slide-*.json` files, `checkpoints/summary.json` and `seal.json`.
 Raw membership matrices, scores, context samples and annotation/control counts
 remain on Delta; locally authored notes contain bounded aggregate facts only.
@@ -95,3 +95,36 @@ python scripts/panda_topology_context.py --config configs/panda_topology_context
 absence. Actual execution requires `--execute` inside the frozen CPU Slurm
 wrapper. These diagnostics cannot make the previously evaluated 60 independent
 or bypass the rejected original final-test protocol.
+
+## Before-output-inspection analysis clarification
+
+After submission, before viewing any new result, fixed a secondary common-support
+contrast: within each topology, compare all five context sizes only among slides
+whose geometry-defined largest component has at least 32 remaining tiles. This
+eligibility uses support counts, not scores, predictions or annotations. Report
+all-eligible size summaries separately; different target sizes can admit different
+slide cohorts. This is an explicit clarification after runtime-source freezing,
+not a changed runtime or a newly optimized detector.
+
+## Verified staging and exact executed command
+
+Source `a1597699d3e6381a2f2baa35cebde1b687bdd6ff` was staged read-only at:
+
+`/u/mhoda/floater-finder/releases/panda-topology-context-v1-20261021T164149Z/source`
+
+All 246 source files and six original input hashes verified before submission.
+Metadata preflight passed, the queue was empty and the intended output absent.
+Archive SHA256 `2132f2c87654dc98fb605e93e0dad96a77cde0a39b6b669bddc7f7240d8aaf4d`; source manifest SHA256
+`65601eedf31e99f1814a26afa8d0fec575774b544bdde22d6d007bf4395dd1aa`.
+
+Submitted once as **23101968**, completed 0:0 in 27 seconds:
+
+```sh
+sbatch --parsable /u/mhoda/floater-finder/releases/panda-topology-context-v1-20261021T164149Z/source/scripts/slurm/panda_topology_context.sbatch /u/mhoda/floater-finder/releases/panda-topology-context-v1-20261021T164149Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z 7972dad8aa97db90ac3012239e68412636ce6c1010351541db9190997d8ad9ae /work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1 a1597699d3e6381a2f2baa35cebde1b687bdd6ff
+```
+
+All 315 tests passed with warnings as errors before execution, including nine
+new artificial-fixture tests. No dependency was added. The sealed registry has
+73 checkpoints /76 events and all 72 slide identities remain verified.
+[Observed findings, denominators, context contrasts and limitations](../reports/panda_topology_context_results_v1.md).
+No detector was retuned or validated; this bounded audit is complete.
