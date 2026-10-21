@@ -2,7 +2,7 @@
 import csv
 import json
 from pathlib import Path
-from ..artifacts import Slide, TextEmbeddings
+from ..artifacts import Slide, TextEmbeddings, check_compatible
 from ..experiments import file_sha256
 
 
@@ -35,6 +35,7 @@ def load_development(manifest, directories, encoded, verification, split):
             if file_sha256(directory/name) != completion['input_identity'][key]:
                 raise ValueError('Tiling input identity differs')
         slide, text = Slide.load(root/'slide.npz'), TextEmbeddings.load(root/'text.npz'); m = slide.metadata
+        check_compatible(slide, text)
         if (m['source_kind'] != 'real' or m['project'] != 'PANDA' or m['data_provider'] != 'radboud' or
             m['slide_id'] != sid or m['cohort_split'] != split or int(row['isup_grade']) != m['isup_grade'] or
             m['isup_grade'] not in (0, 1, 4, 5) or m['extraction']['sampling_mode'] != 'representative' or

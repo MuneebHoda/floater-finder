@@ -50,8 +50,9 @@ class FrozenPredictor:
                     probability_calibrated=False, model_id=s['model_id'])
 
     def score_slide(self, slide):
-        if slide.metadata['model']['checkpoint_sha256'] != self.spec['checkpoint_sha256']:
-            raise ValueError('Frozen predictor checkpoint differs from slide space')
+        if (slide.metadata['model'] != self.spec['embedding_model'] or
+            slide.metadata['source_kind'] != self.spec['source_kind']):
+            raise ValueError('Frozen predictor model/checkpoint/preprocessing/source differs from slide space')
         return self(slide.feats)
 
     def save(self, directory):

@@ -53,8 +53,11 @@ multiple comparisons.
 
 Models are portable JSON plus hash-verified NPZ, never pickle. Import
 `floater_finder.predictors.load_predictor(directory)` and call
-`predictor.score_slide(slide)` to enforce the checkpoint identity. The lower-level
+`predictor.score_slide(slide)` to enforce full embedding-model provenance,
+preprocessing, checkpoint, source-kind and dimension identity. The lower-level
 `predictor(feats)` accepts a finite matrix and returns prediction, class scores,
 signed positive-minus-negative margin and optional uncalibrated probability.
+Its caller is responsible for verifying source/model provenance before providing
+an array without metadata.
 Linear class scores are symmetric logits; zero-shot scores remain original pooled
 cosines. Scores from different model kinds are not comparable probability scales.

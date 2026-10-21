@@ -75,6 +75,7 @@ def run(manifest, directories, encoded, verification, config_path, output):
         y = [label(s, task) for s in sources]; groups = [s['group'] for s in sources]
         common = dict(schema_version=1, task=task, classes=classes, input_dimensions=slides[0].feats.shape[1],
             top_k=config['top_k'], checkpoint_sha256=slides[0].metadata['model']['checkpoint_sha256'],
+            embedding_model=dict(slides[0].metadata['model']), source_kind=slides[0].metadata['source_kind'],
             text_fingerprint=receipt['text_fingerprint'], config_sha256=file_sha256(config_path),
             train_ids=[s.metadata['slide_id'] for s in slides], trained_on='train only', patient_independence_verified=False,
             source_commit=os.environ.get('FLOATER_SOURCE_COMMIT'))
