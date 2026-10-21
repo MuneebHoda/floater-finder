@@ -1,0 +1,17 @@
+{
+  "source_commit": "668d9b8c4e3e8aa300bda6ff15e416c601c2e024",
+  "config_sha256": "967688b943cebd5af35c9182bdc271a9489286ce1d38f01184dc706f78f1d6a7",
+  "measurements_sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100",
+  "result_sha256": "0aef9f671d2fc4b139a3995b852bdbe057ab0a1a5ac766955d1a6d52265ce270",
+  "component_diagnostics_sha256": "7697a89942d14e361fc4313fd01854223c8ace23b2c0bcf618b1ee1fe93b36ee",
+  "final_test_slides_scored": false,
+  "calibration_role": "Iterative development; prior calibration outcomes are already known. It is not independent validation.",
+  "figures": {
+    "v1_failure_intersections.svg": "272f0dc104ea9a6c81cee623198c301f83a4df1c0327af53afc8d167f9fae7c0",
+    "v1_failure_intersections.png": "a13eb5db7207d9a0c2a3ed185075ecf1ba3723c3426d583089f73f2398e91ef6",
+    "signal_distributions.svg": "425dfc1bda2cd4d5f2e6aea061d5da9cb6394d0af0043304ec6e0e487d57ffcf",
+    "ranked_review_tradeoff.svg": "47e0859c3da5888531073a1d39df59d337148428b63f2a997e1b4b45dcdd444a",
+    "ranked_review_tradeoff.png": "c9e21de0227fc6139f5d0795a3ee6964008175837cfb5edf92892ba741536daf",
+    "signal_distributions.png": "b7bb58bdee10319d3aa2f0c24da4c88f0c42664a433e7890ac5dbf2aa8a04c95"
+  }
+}
