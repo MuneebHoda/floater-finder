@@ -1,6 +1,6 @@
 # Floater Finder
 
-The [qualitative expert-review worksheet is prepared](reports/panda_expert_review_preparation_v1.md): 24 blank original-training case records, an unblinded review rubric and a provenance/completeness validator. **408 tests pass**. Human assessments remain pending; software cannot supply expert review or validate foreignness. No new inference, jobs or downloads are needed.
+The [qualitative expert-review packet is verified on Delta](reports/panda_expert_review_preparation_v1.md): 24 blank original-training case records, an unblinded rubric and a provenance/completeness validator. **408 tests pass; 0/24 cases reviewed**. Human assessments remain pending; software cannot supply expert review or validate foreignness. No new inference, jobs or downloads occurred.
 
 The [saved native/synthetic control audit completed](reports/panda_paired_control_audit_results_v1.md): **24 original training pairs /16 reused donors, 250 unchanged PNGs, 386 passing tests**. Cached cases show 12 new host-label errors among 18 originally correct benign hosts; six hosts were already incorrect. Three genuine native cancer-containing components also change predictions on exclusion. Dependence does not establish foreignness; all tissue is preserved, no new inference/GPU/downloads or final-test access. Detailed comparisons remain on Delta; visual/clinical validity is unverified.
 

@@ -41,7 +41,7 @@ Original audit source `24364b4946de211ae8b608f7bf7d710408aca112`, with receipt h
 | `seal.json` | `6064a1c5037d364cc0f3c82848ac24ab76f1c2a173ee06d421a39ae84a182ac4` |
 | `checkpoints/summary.json` | `e684f6cc7a7cb36d60f8aa6017fb285077473fb6d9ca0ea8e08ef1bb3555659d` |
 
-Intended new packet path, **not yet a verified remote output**:
+Verified new packet path, prepared October 21 at 18:50 UTC:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-v1`
 
@@ -54,7 +54,7 @@ sharing or contact with reviewers is included. Browser layout remains unverified
 
 The latest user “next” advances the stated expert-review need through this
 bounded administrative preparation. Exact pushed source, staging and preparation
-receipt will be recorded after verification; **no expert assessment is claimed**.
+receipt are recorded below; **no expert assessment is claimed**.
 No Slurm command is needed or authorized by this worksheet preparation.
 
 Source-only preflight:
@@ -65,7 +65,82 @@ python scripts/panda_review_worksheet.py \
   --config-sha256 ce0ab94413020d85f2edb3c810b05716f9554334612a13ed2b9bd73094dca68d
 ```
 
-The real packet and reviewer availability remain unverified until staging and
-preparation complete. Known source labels and cached predictions must never fill
-reviewer answers. Existing negative detector results and the final-test gate remain
-unchanged. Preparation is a workflow artifact, not a new scientific result.
+The real packet is verified; reviewer availability and expert judgments remain
+unverified. Known source labels and cached predictions must never fill reviewer
+answers. Existing negative detector results and the final-test gate remain unchanged.
+Preparation is a workflow artifact, not a new scientific result.
+
+## Observed preparation and recording status
+
+Local Darwin and shared SSH `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified.
+Pushed source `e29a7a3fa56179451d6d2f123fa6add9ba66f619` was staged read-only at:
+
+`/u/mhoda/floater-finder/releases/panda-expert-review-v1-20261021T184909Z/source`
+
+All **258 source files** verified, protocol source preflight passed, original three
+audit receipts matched and destination was absent before preparation. Archive
+SHA256 `aad63493b006a4f6354db0c756aa56f09d75b37a6f3b1ea20b7aaf9f2099ea8a`;
+source-manifest SHA256 `014d819572f9e5bd74fba88f7d975c1340a4d17951b83f524cc493790a34c9f2`.
+
+The metadata-only command created exactly three files:
+
+| Packet file | Bytes | SHA256 |
+| --- | ---: | --- |
+| `worksheet.blank.json` | 16,267 | `479ef6f237c378303c72a46a4fd8549aa8136e45720e3192f34de781d56401df` |
+| `review_guide.md` | 5,155 | `4d9a070d4bd755d8532f48b29ed5d6caa8e73220e996889a9d378380fb50495d` |
+| `preparation.json` | 805 | `cd3dc7edd023b4a26e08ecf4c27f654c0b066575e7be1f249fdcba96e32203af` |
+
+All 24 original host references /16 reused donor identities, sorted review IDs,
+public-page/JSON hashes, source receipts and guide bytes match. All judgments and
+reviewer identity/role/exposure remain null; human-entry attestation false. Read-only
+validation of the blank form reports **0 recorded /24 pending cases**. The zero
+recorded requests/cannot-assess counts mean no answers exist, not negative findings.
+Detector/clinical validation, correctness/qualifications verification and final
+readiness remain false. No reviewer or expert assessment was invented or contacted.
+
+All original source receipt hashes and **48 public audit JSON/HTML files** match;
+the sealed registry was verified without opening images. The 33 legacy source
+hashes and original final-protocol hash match, and original final output remains
+absent. No PNG, WSI, mask, NPZ or model was opened. No images, raw reports or
+response files were downloaded; only bounded status/count/hash metadata returned.
+No Slurm/GPU job, new prediction, fit, experiment draw, retry or final access.
+
+Independent verification receipt, kept outside the blank packet:
+
+`/work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-verification-v1.json`
+
+SHA256 `e741fd742ee7d59499753c6e5114a33559569ed344ad556ed1490c6a988850e4`.
+This verifies administrative preparation only. All 408 tests passed before source
+freeze; subsequent edits are documentation only. Human review, browser layout,
+visual validity and a useful foreignness policy remain unverified. This bounded
+preparation is complete; no further job was submitted or authorized by it.
+
+Exact executed preparation command on Delta:
+
+```sh
+module load pytorch-conda/2.8
+PYTHONPATH=/u/mhoda/floater-finder/releases/panda-expert-review-v1-20261021T184909Z/source/src \
+  PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 \
+  /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z/bin/python \
+  /u/mhoda/floater-finder/releases/panda-expert-review-v1-20261021T184909Z/source/scripts/panda_review_worksheet.py \
+  --config /u/mhoda/floater-finder/releases/panda-expert-review-v1-20261021T184909Z/source/configs/panda_expert_review_worksheet_v1.json \
+  --config-sha256 ce0ab94413020d85f2edb3c810b05716f9554334612a13ed2b9bd73094dca68d \
+  --prepare --source-commit e29a7a3fa56179451d6d2f123fa6add9ba66f619
+```
+
+Do not repeat preparation: the existing packet is preserved and reruns refuse it.
+For read-only recording validation, replace the last line with:
+
+```sh
+--responses /work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-v1/worksheet.blank.json
+```
+
+That is the exact blank-form validation performed, returning 0/24 reviewed. After
+a reviewer saves a separate response copy, use that filename instead. Do not infer
+validated clinical expertise or an approved alert policy from a successful parse.
+
+Exact next command from the Mac, reading the source-authored guide only:
+
+```sh
+ssh -o BatchMode=yes ncsa-floater 'cat /work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-v1/review_guide.md'
+```
