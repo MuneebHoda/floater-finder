@@ -1,5 +1,7 @@
 # Fresh Radboud60 — verified Delta-only CPU intake
 
+**Subsequent execution:** the proposed GPU/CPU scope below was separately approved and completed as jobs 23081929/23082231. See [frozen fresh-baseline results](panda_fresh_baseline_results_v1.md). This CPU-stage record retains the approval state and proposed commands at its original checkpoint.
+
 The approved acquisition and all six serialized CPU chunks completed successfully
 with exit `0:0`. **60 slides / 25,915 tiles / 60 masks** passed the full metadata
 verification gate. No fresh GPU encoding or prediction job has run. All dataset

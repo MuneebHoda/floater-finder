@@ -1,6 +1,6 @@
 # Fresh Radboud60 baseline validation
 
-**Execution update:** approved Delta-only acquisition and CPU tiling are complete: 60 slides / 25,915 tiles / 60 usable masks. See the [verified execution record](../reports/panda_fresh_cpu_execution_v1.md). GPU encoding and fresh prediction remain unapproved and unexecuted. The protocol, candidate IDs and models below are unchanged.
+**Execution update:** the separately approved Delta-only intake, CONCH encoding and frozen baseline evaluation are complete: 60 slides / 25,915 verified 512D embeddings. See the [fresh results and exact denominators](../reports/panda_fresh_baseline_results_v1.md) and [CPU intake record](../reports/panda_fresh_cpu_execution_v1.md). Both frozen primaries and all parameters remain unchanged; no original final-test prediction was computed. The preparation record below is historical.
 
 ## Historical preparation record — before acquisition approval
 
