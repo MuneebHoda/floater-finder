@@ -61,10 +61,10 @@ One CPU Slurm job: account/QoS **bfqi-delta-cpu**, partition **cpu-interactive**
 Maximum 384 display references, 288 unique PNGs and 64 MiB copied PNG bytes.
 The latest user “next” advances the explicitly proposed saved-control comparison;
 resources are agent-selected within that direction, not expressly user-selected.
-Exact pushed source and command will be shown before one submission. No duplicate,
+Exact pushed source and command were shown before the one submission. No duplicate,
 retry, inference, embedding, stress draw, fitting or final-test job is included.
 
-Intended new output, not a claim of completed execution:
+Verified new output, completed by job 23104084:
 
 `/work/nvme/bfqi/mhoda/floater-finder/panda-review/paired-control-audit-v1`
 
@@ -77,7 +77,7 @@ layout remains unverified under the previously observed local-file policy.
 All **386 software tests pass** with warnings as errors (33.90s), including 23
 new artificial fixture cases and a complete 24-pair /16-donor software run. These
 are software checks only. Original main, 33 legacy source files and all four
-previous runtime freezes remain intact. Actual real audit counts remain pending.
+previous runtime freezes remain intact. [Verified real audit counts and limits](../reports/panda_paired_control_audit_results_v1.md).
 
 Metadata-only local source preflight (no remote payload read):
 
@@ -89,3 +89,29 @@ python scripts/panda_paired_controls.py \
 
 On Delta, `--check-inputs` adds metadata/destination checks without PNG decoding.
 Actual export requires the bounded CPU wrapper and explicit `--execute`.
+
+## Verified staging and one submission
+
+Pushed source `24364b4946de211ae8b608f7bf7d710408aca112` was separately staged at:
+
+`/u/mhoda/floater-finder/releases/panda-paired-controls-v1-20261021T181828Z/source`
+
+All 273 source files and ten input receipts verified, own queue empty and intended
+output absent. Archive SHA256 `e5ea5b3d2a5bbc2e5871a6147a9b71da820b4402bb9e3ce2a944d890546d3631`;
+source-manifest SHA256 `9bc9d13bce22bd15960f1b7e52fc979b6ab91e3e6607bcc53eee55401a5aba3a`.
+The first archive at `panda-paired-controls-v1-20261021T181806Z/source` omitted the
+pinned original trial receipt and failed metadata preflight before submission.
+It is preserved; the completed archive passed before the only job submission.
+No source/protocol/runtime change or Slurm retry was needed.
+
+Exact submitted command, job **23104084**:
+
+```sh
+sbatch --parsable /u/mhoda/floater-finder/releases/panda-paired-controls-v1-20261021T181828Z/source/scripts/slurm/panda_paired_controls.sbatch /u/mhoda/floater-finder/releases/panda-paired-controls-v1-20261021T181828Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z cb5f47e63ec9c745fa59b379b6d6e460e083f031acc73e52b49a095ac1ab1b7b /work/nvme/bfqi/mhoda/floater-finder/panda-review/paired-control-audit-v1 24364b4946de211ae8b608f7bf7d710408aca112
+```
+
+Completed **0:0 in 21 seconds**, node cn137, zero GPUs; 24 paired pages /250 PNGs
+/384 references, 16,981,004 copied bytes, all 299 files /25 checkpoints /28 events
+verified. Previous 1,783 gallery and 145 reviewer hashes are unchanged. All
+payloads remain on Delta; no new predictions, draws or oracle executions. This
+scope is complete; browser layout and visual/clinical validity remain unverified.
