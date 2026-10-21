@@ -1,5 +1,7 @@
 # Floater Finder
 
+A [review-only dependence exporter](docs/panda_dependence_export_v1.md) is prepared to combine saved original-training predictions, RGB spatial metadata and context abstentions into JSON/HTML without ranking, foreignness labels or tissue removal. Real-data export remains pending.
+
 The [numeric-context/native-control audit completed](reports/panda_context_safety_results_v1.md): **72 training slides, 336 passing tests**. Explicit context abstentions leave 325/389 RGB and 316/377 sampled components eligible for numeric comparison, including 44 and 75 genuine cancer-containing components. Eligibility does not establish foreignness; all review decisions remain unset and tissue is preserved. No new predictions, GPU, downloads or final-test access.
 
 The [original-training topology/context audit completed](reports/panda_topology_context_results_v1.md): **72 slides, 2,160 planned context records, 315 passing software tests**. Sampled components disagree substantially with cached RGB membership. Sparse comparison context causes large morphology-score sensitivity without inserted foreign tissue; six outside tiles supplies NN5 neighbor counts but does not validate a review cutoff. No classifier predictions, GPU, downloads or final-test access. The floater review policy remains unsupported.

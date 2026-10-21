@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_dependence_export_v1",
+  "status": "frozen_before_saved_training_evidence_export",
+  "hypothesis": "Integrate saved dependence evidence with explicit numeric-context abstention while preserving tissue and withholding foreignness decisions.",
+  "split": "train",
+  "slides": 72,
+  "components": 389,
+  "topology": "rgb_cached",
+  "topology_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1",
+  "safety_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/context-safety-v1",
+  "topology_source_commit": "a1597699d3e6381a2f2baa35cebde1b687bdd6ff",
+  "safety_source_commit": "0340d605acd6bee8ea913d09307a326750cb1a5c",
+  "topology_experiment_id": "panda_topology_context_v1",
+  "safety_experiment_id": "panda_context_safety_v1",
+  "scorer": {
+    "name": "legacy_conch_v1_zero_shot_top5pct",
+    "classes": [
+      "benign",
+      "cancer"
+    ],
+    "pooling": "top5pct",
+    "prompts_sha256": "9767f2ddb12f8c20ef905ae65db1796e0cf001a078e8179816022aff6317180a",
+    "original_development_config_sha256": "bcc03859732020dcd13eb4922785801317c8eaf0a01f31ceb8e66fa7fa5cdb3c"
+  },
+  "inputs": {
+    "manifest": {
+      "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+      "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+    },
+    "cases": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json",
+      "sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100"
+    },
+    "topology_run": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1/run.json",
+      "sha256": "7eeaf9cfec77b83c3653ef1ff72bf73137140ea62b275d020765afc69a12f188"
+    },
+    "topology_seal": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1/seal.json",
+      "sha256": "7ec995e21c0fecf6559951ed51f5068ba64ffd53f9d24c62fe90fdc9c5136036"
+    },
+    "topology_summary": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1/checkpoints/summary.json",
+      "sha256": "77b9974b1b9b2ee80db8f1e5c2010cb3b69587c5a60881fba7b49c4372b4bcd7"
+    },
+    "safety_run": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/context-safety-v1/run.json",
+      "sha256": "36bd034645465fbbc220582abdbca7bc9e20fa7f10d1a69fddf74c3deb81ad9d"
+    },
+    "safety_seal": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/context-safety-v1/seal.json",
+      "sha256": "acbe852f1a5be0f438f11002b5fd2fb76e766c2450950607627dc08416ea5a53"
+    },
+    "safety_summary": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/context-safety-v1/checkpoints/summary.json",
+      "sha256": "3a5686dedfed7caa474b1b71f11a2fb04adc4fe29647318dbb08d837aba8228f"
+    }
+  },
+  "new_predictions": false,
+  "fit_thresholds": false,
+  "automatic_tissue_action": "none",
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 4,
+    "maximum_minutes": 5,
+    "gpu": 0
+  },
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1",
+  "authorization_basis": "Latest user next after explicit review-only dependence integration recommendation. One bounded saved-JSON CPU export; resource values agent-selected within that development direction.",
+  "limitations": [
+    "Original72 training only; known calibration records in old case catalog excluded before report construction; no tests or fresh60",
+    "Historical zero-shot CONCH scorer, not newer frozen linear predictor; no outcome-guided scorer substitution",
+    "RGB proxy memberships only; never transfer predictions across mismatched sampled memberships",
+    "All components retained in original order, no ranking/shortlist/foreignness threshold",
+    "Decision-changing tissue can be genuine cancer; context abstention does not suppress cached dependence",
+    "No new probabilities, performance validation, tissue filtering, image panels or clinical use",
+    "Review decisions null; controls separate from reviewer JSON/HTML; all detailed files remain on Delta"
+  ],
+  "source_files": {
+    "src/floater_finder/review_report.py": "7f358f6c8ae598f6f80a6c1e0159872a7f01ee10b8daeeaa437d927e03ecf768",
+    "src/floater_finder/research/review_export.py": "5676518ec9f924b94950d48d79387630883e1e004e70fbd15d42d372ee273ab3",
+    "src/floater_finder/research/context_safety.py": "58e2bbc8aa7756897edf7c518c7673844adb04ca122cb894d36801f3c445e20d",
+    "src/floater_finder/detectors/context_eligibility.py": "f806d5946b33d48d129a10a6b1327d8f711bf6f41dcc5afeb3e4a8d7ee9e2e4d",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "src/floater_finder/research/registry.py": "ec9f069098846677ff93ac58804085fc845448cb5438d8166d0b092239477810",
+    "scripts/panda_dependence_export.py": "35bb8a7c4dff3e41af522d267246dfe58003e0f75e6b410b6bc17ce867e5bae8",
+    "scripts/slurm/panda_dependence_export.sbatch": "10fe6824a8e8569acee3878d0306ee7ae66475ddbef79f24d73847743b0e2bc7",
+    "configs/panda_morphology_v1.yaml": "9767f2ddb12f8c20ef905ae65db1796e0cf001a078e8179816022aff6317180a",
+    "configs/panda_review_development_v1.json": "bcc03859732020dcd13eb4922785801317c8eaf0a01f31ceb8e66fa7fa5cdb3c"
+  }
+}
