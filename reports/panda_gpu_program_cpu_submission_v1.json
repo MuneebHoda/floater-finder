@@ -1,0 +1,135 @@
+{
+  "observed_at": "2026-10-21T19:07:42.900310-05:00",
+  "identity": {
+    "local_system": "Darwin",
+    "remote_user": "mhoda",
+    "remote_hostname": "dt-login03.delta.ncsa.illinois.edu"
+  },
+  "status": "CPU_submitted_pending_priority",
+  "job_id": "23109667",
+  "resources": {
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu",
+    "cpus": 4,
+    "memory_gb": 16,
+    "maximum_minutes": 30,
+    "gpus": 0
+  },
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--exclude=cn018",
+    "/u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source/scripts/slurm/panda_pixel_program_prepare.sbatch",
+    "/u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source",
+    "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+    "8e4f4b6683d1647b94b7e5168205ce30e2ff6fcd4aa78fcb4ae95357d9ef85a9",
+    "/work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-prepared"
+  ],
+  "source_snapshot": {
+    "observed_at": "2026-10-21T19:07:05.787089-05:00",
+    "release": "/u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837",
+    "source": "/u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source",
+    "files_verified": 73,
+    "source_manifest_sha256": "479238282837d51818b72a612118dc999e0a85b9f2082a5896968d7f6b5da00a",
+    "archive_sha256": "77708c9a486ed661bbee378438c2368fa12c5e827a053b7aecb31592123ed48f",
+    "protocol_sha256": "8e4f4b6683d1647b94b7e5168205ce30e2ff6fcd4aa78fcb4ae95357d9ef85a9",
+    "parent_commit": "7b337832ef1dcd21737eb0d5475ff975e2939358",
+    "source_kind": "uncommitted_working_tree_snapshot"
+  },
+  "submission_receipt_path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-submission.json",
+  "submission_receipt_sha256": "8e21a2136cac41a0369d00e5d9c28772b9bc20f497411a6e1e53ee894ba54e16",
+  "intent_receipt_path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-submission-intent.json",
+  "intent_receipt_sha256": "4decf5c5e8ba7c04d6587be50d89ec4f0aba65ae4835bb070d4fe81512b4fab8",
+  "actual_cpu_start_estimate": null,
+  "scheduler_checks": [
+    {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "23109667"
+      ],
+      "exit_code": 0,
+      "stdout": "JobId=23109667 JobName=panda-pixel10k-gate\n   UserId=mhoda(92269) GroupId=grp_202(202) MCS_label=N/A\n   Priority=211 Nice=0 Account=bfqi-delta-cpu QOS=bfqi-delta-cpu\n   JobState=PENDING Reason=Priority Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=N/A\n   SubmitTime=2026-10-21T19:07:42 EligibleTime=2026-10-21T19:07:42\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-21T19:07:42 Scheduler=Main\n   Partition=cpu AllocNode:Sid=dt-login03:3741215\n   ReqNodeList=(null) ExcNodeList=cn018\n   NodeList=\n   NumNodes=1-1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=4,mem=16G,node=1,billing=8192\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=4 MinMemoryNode=16G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)\n   Command=/u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source/scripts/slurm/panda_pixel_program_prepare.sbatch\n   SubmitLine=sbatch --parsable --exclude=cn018 /u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source/scripts/slurm/panda_pixel_program_prepare.sbatch /u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z 8e4f4b6683d1647b94b7e5168205ce30e2ff6fcd4aa78fcb4ae95357d9ef85a9 /work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-prepared\n   WorkDir=/work/nvme/bfqi/mhoda\n   StdErr=\n   StdIn=/dev/null\n   StdOut=/work/nvme/bfqi/mhoda/panda-pixel10k-gate-23109667.out\n   TresPerTask=cpu=4\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "squeue",
+        "--start",
+        "-j",
+        "23109667",
+        "-o",
+        "%.12i %.12T %.22S %.28R"
+      ],
+      "exit_code": 0,
+      "stdout": "       JOBID        STATE             START_TIME             NODELIST(REASON)\n    23109667      PENDING                    N/A                   (Priority)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "squeue",
+        "-j",
+        "23109277,23109340",
+        "-o",
+        "%.12i %.12T %.28R"
+      ],
+      "exit_code": 0,
+      "stdout": "       JOBID        STATE             NODELIST(REASON)\n    23109277      PENDING                   (Priority)\n    23109340      PENDING                 (Dependency)\n",
+      "stderr": ""
+    }
+  ],
+  "batch_gpu_test_only": {
+    "command": [
+      "sbatch",
+      "--test-only",
+      "--account=bfqi-delta-gpu",
+      "--qos=bfqi-delta-gpu-mhoda",
+      "--partition=gpuA100x4",
+      "--gres=gpu:1",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=16G",
+      "--time=00:15:00",
+      "--wrap=true"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 23109662 to start at 2026-10-29T04:56:37 a using 4 processors on nodes gpua100 in partition gpuA100x4\n"
+  },
+  "batch_cpu_test_only": {
+    "command": [
+      "sbatch",
+      "--test-only",
+      "--account=bfqi-delta-cpu",
+      "--qos=bfqi-delta-cpu",
+      "--partition=cpu",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=16G",
+      "--time=00:30:00",
+      "--wrap=true"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 23109663 to start at 2026-10-26T23:14:58 a using 4 processors on nodes cn013 in partition cpu\n"
+  },
+  "gpu_balance_equivalent_hours": 8.408333333333333,
+  "gpu_used_billing_minutes": 95500,
+  "gpu_limit_billing_minutes": 600000,
+  "checkpoint_current_hash_verified": false,
+  "real_preparation_completed": false,
+  "exact_unique_images_requiring_inference": null,
+  "existing_pilot_jobs_untouched": [
+    23109277,
+    23109340
+  ],
+  "new_GPU_jobs_submitted": false,
+  "data_or_weights_downloaded": false,
+  "original_final_test_accessed": false,
+  "prior_software_tests_passed": 443,
+  "new_scientific_results": false
+}

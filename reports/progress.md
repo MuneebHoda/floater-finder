@@ -1,5 +1,21 @@
 # Floater Finder progress
 
+## Stage B GPU approval and dependent profile submitted — October 21, 19:39 CDT
+
+User approved the bounded 10,000-candidate CONCH benchmark GPU stage. Profile **23109849** is submitted once, PENDING (Dependency): afterok CPU23109667 AND afterany pilot GPU23109340, invalid-dependency cancellation requested. One A100/4 CPUs/16 GiB/15 min on normal `gpuA100x4`, up to512 actual deduplicated fit-source images, preserving the unchanged73-file runtime. Five new launcher/authorization files verified; all453 tests pass. Actual successful CPU hash/count/range is frozen only at launch before canonical drift/encoding gates. Remaining exact ranges are conditionally approved within30 additional batch minutes (≤0.75 billed equivalents total) but not submitted before profile artifact and charge inspection. Other research GPU scopes remain gated; no downloads, new models, original final-test predictions, duplicates, commit/push or scientific successes. Current balance8.4083 equivalents; queue forecast remains beyond deadline. [Exact command, guards and receipts](panda_pixel_program_gpu_submission_v1.md).
+
+## Parallel 10,000-record CPU scope submitted — October 21, 19:07 CDT
+
+CPU **23109667** is submitted once and PENDING (Priority), actual start estimate N/A. Verified manual reconnection identity, all 73 files in a separate source snapshot, runtime read-only preflight and exact scheduler admission. Four CPUs/16 GiB/30 min on `bfqi-delta-cpu` / `cpu`, no GPU or downloads, excludes the known prolog-failure node cn018. Existing pilot CPU 23109277 and GPU 23109340 remain pending and untouched. The advisory normal CPU/A100 test-only forecasts extend to October 26/29 beyond the deadline; admitted resources and 8.4083 remaining billed A100-hour equivalents do not guarantee timely wall time. No new GPU submitted or scientific outcome measured. Actual eligibility/dedup counts and current checkpoint hash await CPU success. No code change since 443 passing tests; main, historical freezes and original final test preserved. [Exact submission and verification](panda_gpu_program_cpu_execution_v1.md).
+
+## Expanded GPU research program prepared — October 21
+
+Live own-QoS accounting reconciles to **8.4083333 billed batch-A100-hour equivalents remaining**, not eight guaranteed interactive wall-hours. Normal A100 batch uses a 1× GPU billing weight; interactive uses 2×. Ten root-job charges, including an allocated failure, reconcile exactly with raw QoS usage. The provisional 6.4167-equivalent research program includes the existing pilot and retains about 1.9917 for verification. These ceilings are not authorization to spend.
+
+Prepared a new source-disjoint 10,000-candidate pixel/control benchmark: 45 real masked original-training sources, 40 predetermined pairs, 27/9/9 fit/calibration/validation sources; 12 different sources reserved for dense/multiscale work. Exact real eligible/deduplicated counts remain pending CPU execution. Five matched control variants, measured physical provenance, actual RGB support, strict detached-background verification, cross-fold pixel deduplication and no-overwrite gates are implemented. No patient independence is claimed. The full plan specifies hypotheses, controls, learned localization gates, external-provider/UNI2-h feasibility, costs, stop/go rules and source-level evaluation.
+
+All **443 software tests pass**; no historical pixel runtime/source or main change. A 73-file working-tree snapshot is prepared locally, not committed or staged remotely. CPU 23109277 and GPU 23109340 were last observed pending; both remain untouched. The shared SSH connection expired before fresh scheduler admission/staging. Manual reconnection requested, no authentication retry. New CPU scope (4 CPUs/16 GiB/30 min on `cpu`) is prepared but not submitted; no new GPU, downloads, prediction outcome or original final-test access. [Executable plan](../docs/panda_gpu_research_program_v1.md), [exact command and verification](panda_gpu_research_program_preparation_v1.md).
+
 ## Pixel GPU submitted behind successful CPU preparation — October 21
 
 User authorized submitting the bounded GPU execution and committing code.

@@ -1,5 +1,13 @@
 # Floater Finder
 
+Current software verification: **453 tests pass**. All four pixel-study jobs were still pending at the latest October 21 inspection; no new real pixel results are claimed. [Verified CPU-capacity and node-health constraints](docs/ncsa_setup.md).
+
+The approved [10k-benchmark GPU profile is queued as **23109849**](reports/panda_pixel_program_gpu_submission_v1.md), waiting for CPU **23109667** to succeed and the existing pilot GPU to terminate. The remaining encoding is conditional on profile verification and billing reconciliation.
+
+The parallel [10,000-record CPU preparation is submitted as **23109667**](reports/panda_gpu_program_cpu_execution_v1.md), pending on priority. Its GPU profile is queued as **23109849**; remaining approved encoding awaits profile verification and billing reconciliation. Queue forecasts currently extend beyond the deadline.
+
+The [expanded GPU research plan](docs/panda_gpu_research_program_v1.md) prepares a separate 10,000-record pixel benchmark and audits exact billing. Later GPU workstreams remain separately gated; [CPU preparation history](reports/panda_gpu_research_program_preparation_v1.md).
+
 The [pixel GPU job is submitted as **23109340**](reports/panda_pixel_gpu_submission_v1.md), waiting for CPU preparation **23109277** to succeed. The one-A100/four-CPU/16GB/five-minute request preserves the frozen runtime,real-manifest checks and unchanged/null drift gates. **432 tests pass**. The96 real images and new GPU measurements remain unverified; leave the queued jobs in place. All data stay on Delta and original test predictions remain sealed.
 
 The [four-pair pixel contamination study is prepared in code](reports/panda_pixel_contamination_preparation_v1.md), with **424 passing tests**. Real-data CPU preparation job **23109277 is pending** after a scheduler-prolog timeout on the first node; leave it queued. The 96 real composite/control images and exact GPU manifest remain unverified. No new CONCH inference or pixel-level scientific result exists; GPU submission requires separate approval after preparation passes. All data stay on Delta and original test predictions remain sealed.

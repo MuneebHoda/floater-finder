@@ -1,0 +1,490 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_gpu_program_v1",
+  "status": "CPU_preparation_frozen_GPU_scopes_not_authorized",
+  "selection_seed": 20261021,
+  "sources_csv": "configs/panda_gpu_program_v1/sources.csv",
+  "sources_sha256": "1f79e8d8de1950adef1b3b0391232c2dbdef44806ea91bf4b133224f0dae0469",
+  "excluded_pilot_ids": [
+    "0e305c4d31f47db36c44a1d55d389193",
+    "134d69e06d397dc06ed6794b737c63fd",
+    "14cff64d674f558dc47ee5e817b7f671",
+    "1b176c9049260a8843b97349ccdd3eb7",
+    "1f1440204eba45ff4f999795c7d52040",
+    "291b2132e1fb9131478b8d691406874b",
+    "2a6d0c4bd562bb83e9863a175af50de4",
+    "3901caec5d914bf20a44f176469b0294"
+  ],
+  "cohort_manifest": {
+    "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+    "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+  },
+  "pairs": [
+    {
+      "pair_id": "fit-00",
+      "split": "fit",
+      "host": "87edb3eb0b79782b9b7eec15dc294872",
+      "donor": "96415990a25ee1d758a8bc7ae97d593f",
+      "host_grade": 0,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-01",
+      "split": "fit",
+      "host": "756d99387536d5721fcf4cf590627179",
+      "donor": "3c685ed0f92e30f6ffeb5cea7cef5994",
+      "host_grade": 0,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-02",
+      "split": "fit",
+      "host": "d0e4a4827c5ce9d7cc92f05e25674b71",
+      "donor": "31e82faf725d625e322f58692dd90ac1",
+      "host_grade": 0,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "fit-03",
+      "split": "fit",
+      "host": "e97722ee42a5566b71eef7e75e9d86f0",
+      "donor": "afe7eb15c8438861ca43f2b20dccf260",
+      "host_grade": 1,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-04",
+      "split": "fit",
+      "host": "428f0c9a110cf7cae62d620a4306ceaf",
+      "donor": "a65a095302fbc94c8e21ae65e1ccd17e",
+      "host_grade": 1,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-05",
+      "split": "fit",
+      "host": "452eca104841c28098e3ea454f9626c5",
+      "donor": "5c2226e06c1c417be01fdd49ce5501b9",
+      "host_grade": 1,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "fit-06",
+      "split": "fit",
+      "host": "9ffb9e9e7be39a7af216779a06a6302b",
+      "donor": "42cb627feeceb770537e6c322c763dbf",
+      "host_grade": 5,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-07",
+      "split": "fit",
+      "host": "7f15c706a91ae8c7ccbfaae1897aa024",
+      "donor": "55d91c32710982de78a975ed0f45395c",
+      "host_grade": 4,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-08",
+      "split": "fit",
+      "host": "4e5c75b501c348de7af7620dab9d783e",
+      "donor": "5f7ebc491021150fdb969866ad5f6d81",
+      "host_grade": 5,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "fit-09",
+      "split": "fit",
+      "host": "f0bb29042dfb17421aac02138f8e9d20",
+      "donor": "4a2aec11bc2def9644ba9756f888ec24",
+      "host_grade": 0,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-10",
+      "split": "fit",
+      "host": "50a159e2f93214ad4ebb0ec9c5d428f7",
+      "donor": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+      "host_grade": 0,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-11",
+      "split": "fit",
+      "host": "afe7eb15c8438861ca43f2b20dccf260",
+      "donor": "8efb75ef39c5b55cffeac6d3d19cf238",
+      "host_grade": 0,
+      "donor_grade": 4
+    },
+    {
+      "pair_id": "fit-12",
+      "split": "fit",
+      "host": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+      "donor": "afe7eb15c8438861ca43f2b20dccf260",
+      "host_grade": 1,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-13",
+      "split": "fit",
+      "host": "e97722ee42a5566b71eef7e75e9d86f0",
+      "donor": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+      "host_grade": 1,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-14",
+      "split": "fit",
+      "host": "55d91c32710982de78a975ed0f45395c",
+      "donor": "36dd11dbc0aba4413623bdc44775e6fe",
+      "host_grade": 1,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "fit-15",
+      "split": "fit",
+      "host": "e7f434dd3d607e019828f9c1f0a66144",
+      "donor": "4a2aec11bc2def9644ba9756f888ec24",
+      "host_grade": 5,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-16",
+      "split": "fit",
+      "host": "e7f434dd3d607e019828f9c1f0a66144",
+      "donor": "e97722ee42a5566b71eef7e75e9d86f0",
+      "host_grade": 5,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-17",
+      "split": "fit",
+      "host": "36dd11dbc0aba4413623bdc44775e6fe",
+      "donor": "9ffb9e9e7be39a7af216779a06a6302b",
+      "host_grade": 5,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "fit-18",
+      "split": "fit",
+      "host": "42cb627feeceb770537e6c322c763dbf",
+      "donor": "87edb3eb0b79782b9b7eec15dc294872",
+      "host_grade": 0,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-19",
+      "split": "fit",
+      "host": "afe7eb15c8438861ca43f2b20dccf260",
+      "donor": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+      "host_grade": 0,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-20",
+      "split": "fit",
+      "host": "d0e4a4827c5ce9d7cc92f05e25674b71",
+      "donor": "5c2226e06c1c417be01fdd49ce5501b9",
+      "host_grade": 0,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "fit-21",
+      "split": "fit",
+      "host": "e97722ee42a5566b71eef7e75e9d86f0",
+      "donor": "42cb627feeceb770537e6c322c763dbf",
+      "host_grade": 1,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "fit-22",
+      "split": "fit",
+      "host": "428f0c9a110cf7cae62d620a4306ceaf",
+      "donor": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+      "host_grade": 1,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "fit-23",
+      "split": "fit",
+      "host": "3c685ed0f92e30f6ffeb5cea7cef5994",
+      "donor": "5f7ebc491021150fdb969866ad5f6d81",
+      "host_grade": 1,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "calibration-00",
+      "split": "calibration",
+      "host": "c3fbbd442c89676b42a2f49ef7428b30",
+      "donor": "29fe9e445bbf0c9d84aec6799cbba4a5",
+      "host_grade": 0,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "calibration-01",
+      "split": "calibration",
+      "host": "e5739e452d5b7c5e68c4171ece2557e3",
+      "donor": "591da133fabcfdfa629d09729d356cda",
+      "host_grade": 0,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "calibration-02",
+      "split": "calibration",
+      "host": "29fe9e445bbf0c9d84aec6799cbba4a5",
+      "donor": "9c2eafb5480094f718bc40213531b7d5",
+      "host_grade": 0,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "calibration-03",
+      "split": "calibration",
+      "host": "e02a4e6752db30ddfe21a7c2cab7470b",
+      "donor": "c3fbbd442c89676b42a2f49ef7428b30",
+      "host_grade": 1,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "calibration-04",
+      "split": "calibration",
+      "host": "e02a4e6752db30ddfe21a7c2cab7470b",
+      "donor": "530d4ae320630f972f49d861a4724fb1",
+      "host_grade": 1,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "calibration-05",
+      "split": "calibration",
+      "host": "591da133fabcfdfa629d09729d356cda",
+      "donor": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+      "host_grade": 1,
+      "donor_grade": 4
+    },
+    {
+      "pair_id": "calibration-06",
+      "split": "calibration",
+      "host": "dd1110c6430e3b1ac732be548a089886",
+      "donor": "e5739e452d5b7c5e68c4171ece2557e3",
+      "host_grade": 4,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "calibration-07",
+      "split": "calibration",
+      "host": "dd1110c6430e3b1ac732be548a089886",
+      "donor": "e02a4e6752db30ddfe21a7c2cab7470b",
+      "host_grade": 4,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "validation-00",
+      "split": "validation",
+      "host": "66fab9d13c7a0f1e81b77887bb8a535a",
+      "donor": "9f8dfe7b06ca41af4fa89f7deaf3b050",
+      "host_grade": 0,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "validation-01",
+      "split": "validation",
+      "host": "e005bc3ecd718b268588742a9e86d6f8",
+      "donor": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+      "host_grade": 0,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "validation-02",
+      "split": "validation",
+      "host": "66fab9d13c7a0f1e81b77887bb8a535a",
+      "donor": "7e8136cda906272497595cfb2088f4c4",
+      "host_grade": 0,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "validation-03",
+      "split": "validation",
+      "host": "ddbeff8437def5f80c4890b394711ec2",
+      "donor": "9f8dfe7b06ca41af4fa89f7deaf3b050",
+      "host_grade": 1,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "validation-04",
+      "split": "validation",
+      "host": "d1088ba933bd7066a3a777f542f61fa6",
+      "donor": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+      "host_grade": 1,
+      "donor_grade": 1
+    },
+    {
+      "pair_id": "validation-05",
+      "split": "validation",
+      "host": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+      "donor": "955f09b99664b07b0cf18768c84f2253",
+      "host_grade": 1,
+      "donor_grade": 5
+    },
+    {
+      "pair_id": "validation-06",
+      "split": "validation",
+      "host": "cb91772271b72c237c42f64fb6d2e84e",
+      "donor": "e005bc3ecd718b268588742a9e86d6f8",
+      "host_grade": 5,
+      "donor_grade": 0
+    },
+    {
+      "pair_id": "validation-07",
+      "split": "validation",
+      "host": "7e8136cda906272497595cfb2088f4c4",
+      "donor": "ddbeff8437def5f80c4890b394711ec2",
+      "host_grade": 5,
+      "donor_grade": 1
+    }
+  ],
+  "target_records": 10000,
+  "sides_pixels": [
+    11,
+    16,
+    22,
+    50,
+    71
+  ],
+  "placements": [
+    "nw",
+    "ne",
+    "sw",
+    "se",
+    "detached"
+  ],
+  "shapes": [
+    "rectangle",
+    "irregular"
+  ],
+  "variants": [
+    "foreign",
+    "native_sham",
+    "seam_only",
+    "unchanged",
+    "identity"
+  ],
+  "source_candidate_bound": 64,
+  "checkpoint": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+  "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+  "embedding_model": {
+    "name": "conch_v1",
+    "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+    "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+    "projection": true,
+    "normalized": true,
+    "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+    "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+    "torch_version": "2.8.0+cu128",
+    "pillow_version": "12.3.0",
+    "encoder_weight_coverage_verified": true
+  },
+  "encoded_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "drift_tolerances": {
+    "max_cosine_distance": 1e-05,
+    "max_absolute_difference": 0.0005
+  },
+  "cpu_output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-prepared",
+  "cpu_resources": {
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu",
+    "cpus": 4,
+    "memory_gb": 16,
+    "minutes": 30,
+    "gpu": 0
+  },
+  "gpu_profile_resources": {
+    "account": "bfqi-delta-gpu",
+    "qos": "bfqi-delta-gpu-mhoda",
+    "partition": "gpuA100x4",
+    "cpus": 4,
+    "memory_gb": 16,
+    "minutes": 15,
+    "gpu": 1
+  },
+  "authorization": "CPU feasibility/preparation only. Exact deduplicated GPU ranges, receipts, charges and explicit user authorization required before submission.",
+  "unique_inference_images": null,
+  "unique_count_status": "Must measure actual rendered RGB content, not logical variants",
+  "exclusions": "Whole matched group excluded; no replacement sources or fabricated masks/scale. Counts may be less than target.",
+  "source_patient_independence_verified": false,
+  "source_files": {
+    "configs/panda_gpu_program_v1/sources.csv": "1f79e8d8de1950adef1b3b0391232c2dbdef44806ea91bf4b133224f0dae0469",
+    "configs/panda_morphology_v1.yaml": "9767f2ddb12f8c20ef905ae65db1796e0cf001a078e8179816022aff6317180a",
+    "scripts/panda_pixel_program.py": "46e6851372416c80be14ec913d7ec1cdc0f0eb24025869f986b5fe0d75d32b14",
+    "scripts/panda_pixel_program_preflight.py": "41e6a23396e494716d9911796a9e089a6d9a0e7d5a1ee5dddfdebd914e39a85f",
+    "scripts/slurm/panda_pixel_program_encode.sbatch": "5667e6ee1b2e56992ac2caf551789fd4ac05913f144e8d18aeed6eecce0e595f",
+    "scripts/slurm/panda_pixel_program_prepare.sbatch": "87716f238b0a41a60fc484bb63a86f611dc74aef062a856b7e8bbf51fb912cb4",
+    "src/floater_finder/__init__.py": "73801f9e216e3274115b40665dadd7330884f4ad95efe98576564d607327d4e6",
+    "src/floater_finder/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/floater_finder/artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+    "src/floater_finder/cli.py": "b4d57a3c63d4e375b64e24162995c7c958699dfb7c6255400882e15b58b154d3",
+    "src/floater_finder/cohort.py": "adf0d5102226048a9a60f41e5e1f609b01050eec5cdc0bd8e4bb5ea2e1955939",
+    "src/floater_finder/conch.py": "0d1c2b9c1bc5042c5c81b9d2309c78736ed9c8696499e693989b7a13c988f1a0",
+    "src/floater_finder/detection.py": "cf092142e711020481ced70894a608512247f149da974750b480477200e72075",
+    "src/floater_finder/detectors/__init__.py": "a77121ec56e801ca36e4d1ae7a1ca2c849dffa2d197db1081ce3e1988c39e4aa",
+    "src/floater_finder/detectors/calibration.py": "5adbb86b958cab55385f593668b119e9651d0e5829fd5eb7b146fb34d02c2d1d",
+    "src/floater_finder/detectors/context_eligibility.py": "f806d5946b33d48d129a10a6b1327d8f711bf6f41dcc5afeb3e4a8d7ee9e2e4d",
+    "src/floater_finder/detectors/contextual_similarity.py": "d11ed2082aea895bd8963c4174cc8e78439b9d3dd06d103d2ffe41a585a80b4c",
+    "src/floater_finder/detectors/fresh_review.py": "073bbff4c9ec7086f5f27804b711604dd4cb19824abfbc66d1528b8faa9449f3",
+    "src/floater_finder/detectors/placement.py": "d0bbb5f16ef7f1a104e87a8550d0d530a51c352573357b765d7e26eebae50b2b",
+    "src/floater_finder/detectors/placement_run.py": "9651631e287ec4178eeedf53e4005a034e983ab047351c8c402aff2f2b05567b",
+    "src/floater_finder/detectors/stable_context.py": "e365355707222b44e7b0a03979e372ab0457265de92e0afc53026c0c8891ba56",
+    "src/floater_finder/detectors/training.py": "b302f9a1107d7332eea2dfcbcae9dea9fe29558e617895342d2c6ded4ee21279",
+    "src/floater_finder/experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+    "src/floater_finder/fixtures.py": "054d38f95f4e079d901134276a3262533a32ee147156b00ece26859c14bbe868",
+    "src/floater_finder/fragment_dependence.py": "4b296933afc00a515bfb091b8d42a6e28606519d43a5563e447e27b5ca85c155",
+    "src/floater_finder/image_runtime.py": "7f76639698d5d1cdafabc0c9bd76774fd60ff69c3f17e2f047edafe5996c64d8",
+    "src/floater_finder/injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+    "src/floater_finder/inventory.py": "93c85975c7149d43b13d3c304894ea87c45bc59c852e152b148efd3d2bd9a4d6",
+    "src/floater_finder/panda.py": "edd4ba0adb16c351859b61b0f4db1e1fff0d68bef2f9be67531f86e9834a927d",
+    "src/floater_finder/panda_baseline.py": "5602b451c884282773eff373590918d93526c3feefd0addec3d6e3deb4dfc3c0",
+    "src/floater_finder/panda_cohort.py": "0a796b5453f7212c634dce389570afd47acac16823b2f95d78fbc44a69a91cfb",
+    "src/floater_finder/panda_encoding.py": "b1d70742936810fb7a7415dc0da35fbc16259f7d5e03c279ed5e7964db6a8ae4",
+    "src/floater_finder/panda_final.py": "ada7b7427971ab2bf7d0bcf1cdb0959eeab64a7b2b9fff5f47805799c33a52ca",
+    "src/floater_finder/panda_final_run.py": "ae4c3bc17ad26840fe4a66b6e2bd1eb3db16837ac42a6e57f3b7843e991b1987",
+    "src/floater_finder/panda_masks.py": "68571df7cec72a1d494d335d47232362dad95ffd8bc2f9f89946726efa664bb7",
+    "src/floater_finder/panda_review.py": "6f64489818cd4e101a0f12e054091a2e62267a64ffa6abc49d279d62d60e0b74",
+    "src/floater_finder/panda_review_run.py": "011a82191e61f98e234b326f9270667eb2cf526673b246c4674a3f6e2ea244e6",
+    "src/floater_finder/panda_review_v2.py": "6ccf1da06695d7ee2b1efc5a37b01c2d7786e112b22dc24064e62c74a897c9fc",
+    "src/floater_finder/panda_s2.py": "08b98a4f9380510c3f0a2d7cef7d2ab09201450446645e49e7e9e2e825ba18c8",
+    "src/floater_finder/panda_stress.py": "e07bbbe279f503519a5c7fbcb5f35ca65a395aeeedee664a6527df57fb30672c",
+    "src/floater_finder/panda_topology.py": "e96105935fffbf66dcfe38591945f45fc3fea50b239756a10d3724d28beea959",
+    "src/floater_finder/predictors/__init__.py": "c1f579cc16eba34346422e2645b5c45593bc6ce8b2e86cbaf6da3aaf1668b626",
+    "src/floater_finder/predictors/data.py": "fc57900170b755c9be93ceb29636a8fcced635fc0e2156148a98fb45bf793da0",
+    "src/floater_finder/predictors/evaluation.py": "e5d6dcceb6042693939f8a30fd0c6b0e4a8d64ceddb54294e40d7f5b10020ebd",
+    "src/floater_finder/predictors/fresh.py": "fbbe98cddd51e54241bbd3f01f32fda3c3f9ee8adbf5e01699ab3551919747c7",
+    "src/floater_finder/predictors/linear_probe.py": "bbbfd6cfbdfe8fc276c6c9baa337bfdc6e2a2a6eaf233d3d1f8cd82e8272bf1b",
+    "src/floater_finder/predictors/pooling.py": "4deda7c0a199773fc36825c9f6e8fb0ab0f4108e0beb1413522af06b93652986",
+    "src/floater_finder/predictors/run.py": "773f1eea0d445a14794ec91108eb454610b891fa90fc731125013338c2a24d1f",
+    "src/floater_finder/reporting.py": "01182b210d17c0430eec881103610781a74ff189a412fd9be2af85b4eabbbab2",
+    "src/floater_finder/research/__init__.py": "943c69422eba7bf85c1fbdae742b5c61a404ad594aa54ded1442adce554533e9",
+    "src/floater_finder/research/acceptance.py": "36da7003fe774d86a0693167a05d940a746590931e3b45ddf098f8c83483e741",
+    "src/floater_finder/research/context_safety.py": "58e2bbc8aa7756897edf7c518c7673844adb04ca122cb894d36801f3c445e20d",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "src/floater_finder/research/control_audit.py": "f0787066a59e48696895993d80b903f14a9b01469b5b78bd3ec3ae1f6988d8bd",
+    "src/floater_finder/research/engine.py": "eba1c6d687f7775e5f2aac6693f750f1fdc5c15e3d58ecb641a4760f2cc4a826",
+    "src/floater_finder/research/fresh_stress.py": "cd7106e7939bfefb5075882feb7733111d0e2b9b21bff2a666ebd22fac2cf094",
+    "src/floater_finder/research/pixel_controls.py": "7dd2698f9901d60abc82d4304b53af4d05baa7f783c4a10ea9917e2cf8bf4df1",
+    "src/floater_finder/research/pixel_program.py": "dc16d3bae24bbb72f8d264733d6561e56378072c7c681ab7c9ac7a471e450d1b",
+    "src/floater_finder/research/pixel_study.py": "17847f7f3d842a9fade793ee2673def52d45fa633f72b9c98044f1ecc754129e",
+    "src/floater_finder/research/preview_export.py": "f24ca60c0be042b514b667d88b8e14f78b41448cf25cfd6667ff59d9fe43166c",
+    "src/floater_finder/research/registry.py": "ec9f069098846677ff93ac58804085fc845448cb5438d8166d0b092239477810",
+    "src/floater_finder/research/review_export.py": "5676518ec9f924b94950d48d79387630883e1e004e70fbd15d42d372ee273ab3",
+    "src/floater_finder/research/review_worksheet.py": "c1062250c954074c0b2bbabf70b4c892f4f9356bd457edcd633bd6a2e7caaee7",
+    "src/floater_finder/research/topology_context.py": "b053ccf97cb65c5c89feb213870e9e92627cdf39551f9bd51207eff73c94cde5",
+    "src/floater_finder/review_previews.py": "1b506490562187022662bcb63156d3f04294f34197121a714fa97838e42e6a0b",
+    "src/floater_finder/review_report.py": "7f358f6c8ae598f6f80a6c1e0159872a7f01ee10b8daeeaa437d927e03ecf768",
+    "src/floater_finder/scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "src/floater_finder/tiling.py": "938709c19c8829b18f425f93c4910c97accd5a54b85ccdea28f5a2550a86f6a6",
+    "src/floater_finder/validation_cohort.py": "f16403ab2785672ab657ad8770153e0682295fede5a831083c8039f1fa4ed996"
+  },
+  "original_embedding_verification": {
+    "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+    "sha256": "cef3c1b232ed4b12d767ce2e4d86e62f8f5bd4a1010f0b6a72760e33317cf4d0"
+  }
+}

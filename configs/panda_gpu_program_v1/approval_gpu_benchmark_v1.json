@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-21T19:37:31.149568-05:00",
+  "user_message": "Okay I approve it",
+  "scope": "Stage B: canonical CONCH preparation and GPU encoding for the frozen 10000-candidate pixel benchmark, within measured eligible/deduplicated counts. Conditional profile then remaining exact ranges; no approval for C/D/E.",
+  "protocol_sha256": "8e4f4b6683d1647b94b7e5168205ce30e2ff6fcd4aa78fcb4ae95357d9ef85a9",
+  "source_manifest_sha256": "479238282837d51818b72a612118dc999e0a85b9f2082a5896968d7f6b5da00a",
+  "cpu_job_id": "23109667",
+  "maximum_logical_records": 10000,
+  "maximum_unique_images": 6155,
+  "profile": {
+    "maximum_fit_images": 512,
+    "maximum_minutes": 15,
+    "account": "bfqi-delta-gpu",
+    "qos": "bfqi-delta-gpu-mhoda",
+    "partition": "gpuA100x4",
+    "gpu": 1,
+    "cpus": 4,
+    "memory_gb": 16
+  },
+  "remaining": {
+    "maximum_batches": 3,
+    "maximum_minutes_per_batch": 10,
+    "maximum_total_minutes": 30,
+    "sequential": true,
+    "profile_inspection_and_billing_reconciliation_required": true
+  },
+  "maximum_combined_billed_a100_equivalent_hours": 0.75,
+  "scheduler_dependencies": {
+    "profile_after_successful_cpu": "23109667",
+    "profile_after_terminal_existing_gpu": "23109340",
+    "kill_on_invalid_dependency": true
+  },
+  "gates": [
+    "Successful exact CPU job and feasibility receipt",
+    "Actual source/protocol/checkpoint hashes and real dedup ranges frozen before inference",
+    "No prior profile output; preserve partial failures",
+    "Existing canonical CONCH source/runtime/drift gates unchanged",
+    "Inspect profile artifacts, throughput and exact charges before any remaining batch",
+    "At most one GPU; no blind retries or automatic reruns"
+  ],
+  "exclusions": [
+    "Dense/multiscale GPU stage C",
+    "Learned-window GPU stage D",
+    "Karolinska acquisition or external evaluation",
+    "Additional encoder or checkpoint download/inference",
+    "Original final-test predictions",
+    "Local image/mask/embedding/data/weight downloads"
+  ]
+}
