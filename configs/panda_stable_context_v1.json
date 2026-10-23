@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_stable_context_v1",
+  "status": "frozen_before_fixed_support_training_candidate",
+  "hypothesis": "Fixed 32-tile context and minimum anomaly over three fixed subsets may reduce sparse-context native outliers while retaining foreign-fragment recall at unchanged clean-fold review budgets.",
+  "split": "train",
+  "slides": 72,
+  "positive_cases": 24,
+  "percent": 5,
+  "components": 556,
+  "reference_tiles": 32,
+  "seeds": [
+    20261026,
+    20261027,
+    20261028
+  ],
+  "methods": [
+    "stable32_min3",
+    "matched_full_context"
+  ],
+  "primary": "stable32_min3",
+  "folds": 5,
+  "fold_seed": 20261022,
+  "maximum_feature_estimates": 1668,
+  "budgets": {
+    "unmodified_alert_rate": 0.1,
+    "components_per_slide": 0.5,
+    "genuine_cancer_slide_flag_rate": 0.1,
+    "clean_damage_rate": 0.05
+  },
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 8,
+    "maximum_minutes": 10,
+    "gpu": 0
+  },
+  "inputs": {
+    "manifest": {
+      "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+      "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+    },
+    "directories": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+      "sha256": "f6825d19cbf60df9b3daf2d12d47c0b9bbb90a791ee5ccb62157892798e51132"
+    },
+    "verification": {
+      "path": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+      "sha256": "cef3c1b232ed4b12d767ce2e4d86e62f8f5bd4a1010f0b6a72760e33317cf4d0"
+    },
+    "cases": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json",
+      "sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100"
+    },
+    "features": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z/feature_checkpoint.json",
+      "sha256": "3c879620286c16da6eefc6bf1ef223181ce928ac70a5684643b35499e2236fad"
+    },
+    "feature_completion": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z/completion.json",
+      "sha256": "10a684af01a772a0f88d2e694ae4579da7772f4a46cc47e0ec6977c94ff1ff6f"
+    },
+    "trials": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020/trials.json",
+      "sha256": "e8b1d24fe2b77465dae2bc6d79fabd66de221c8cdd3932a1070bea537cf54c84"
+    }
+  },
+  "encoded_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "old_feature_config_sha256": "fa19dd81c9295ab51a03f0316361f73c665378176ce0231c7547974dccbb53fc",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/stable-context-v1",
+  "original_final_test_predictions_authorized": false,
+  "new_model_inference": false,
+  "new_contamination_draws": false,
+  "hypothetical_pooling_uses_saved_class_scores": true,
+  "minimum_useful_fragment_recall": 0.2,
+  "minimum_source_exact_error_recovery": 0.25,
+  "authorization_basis": "User asked to proceed with remaining technical validation after current completion report. One bounded original-training CPU candidate experiment, agent-selected resources, no GPU/download/human judgment/final-test execution.",
+  "limitations": [
+    "Training-only iterative research; no independent or clinical validation, final readiness always false.",
+    "Source-connected host/donor groups stay in one fold. IDs define study partitions only, never detector features.",
+    "Both methods use identical minority/32-outside/mapping eligibility and clean-fold budget fitting; matched baseline is not the historical v3 operating point.",
+    "Anomaly inputs are saved embeddings/coordinates/component memberships only; annotation and foreign truth enter provenance/metrics afterward.",
+    "No primary switch, grid search, altered thresholds/budgets, new component rule or completed stress draw repeated.",
+    "Subset seeds repeat the same component, not independent cases. RGB memberships and unmapped context are not verified tissue boundaries.",
+    "Synthetic right-edge S1 is preserved; disease differences and genuine cancer heterogeneity do not establish foreignness.",
+    "Recovery requires restored host label plus all donor tiles flagged and no native host tile flagged; generic label return is separate.",
+    "Uncertainty conditions on frozen scores/folds/thresholds. Source-slide clustering and unknown patient identities limit population inference.",
+    "All arrays/raw metrics stay on Delta; no local data downloads. Human review remains pending."
+  ],
+  "source_files": {
+    "src/floater_finder/detectors/stable_context.py": "e365355707222b44e7b0a03979e372ab0457265de92e0afc53026c0c8891ba56",
+    "src/floater_finder/detectors/contextual_similarity.py": "d11ed2082aea895bd8963c4174cc8e78439b9d3dd06d103d2ffe41a585a80b4c",
+    "src/floater_finder/detectors/training.py": "b302f9a1107d7332eea2dfcbcae9dea9fe29558e617895342d2c6ded4ee21279",
+    "src/floater_finder/detectors/calibration.py": "5adbb86b958cab55385f593668b119e9651d0e5829fd5eb7b146fb34d02c2d1d",
+    "src/floater_finder/detectors/placement.py": "d0bbb5f16ef7f1a104e87a8550d0d530a51c352573357b765d7e26eebae50b2b",
+    "src/floater_finder/research/engine.py": "eba1c6d687f7775e5f2aac6693f750f1fdc5c15e3d58ecb641a4760f2cc4a826",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "src/floater_finder/research/registry.py": "ec9f069098846677ff93ac58804085fc845448cb5438d8166d0b092239477810",
+    "src/floater_finder/research/topology_context.py": "b053ccf97cb65c5c89feb213870e9e92627cdf39551f9bd51207eff73c94cde5",
+    "src/floater_finder/predictors/data.py": "fc57900170b755c9be93ceb29636a8fcced635fc0e2156148a98fb45bf793da0",
+    "src/floater_finder/panda_review.py": "6f64489818cd4e101a0f12e054091a2e62267a64ffa6abc49d279d62d60e0b74",
+    "src/floater_finder/panda_review_run.py": "011a82191e61f98e234b326f9270667eb2cf526673b246c4674a3f6e2ea244e6",
+    "src/floater_finder/artifacts.py": "2295e291abbc92ad1bee603004575076a769d1ec2b080a292654c7b0755914f9",
+    "src/floater_finder/experiments.py": "70998b2e3627249f1646e4a541bd54b2bafe568851b33e971e3f554a97b290ea",
+    "src/floater_finder/scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "src/floater_finder/injection.py": "1a41c421ed9bd0438c7743bcb3c4b23c9520ea6e3343f352b6b502eb1a842666",
+    "scripts/panda_stable_context.py": "a89ff0d813202dd354f1a03e7301e0f6f29e45501e7134380f8249cc606ac9ce",
+    "scripts/slurm/panda_stable_context.sbatch": "736e70fdda80b46e2f9e2ab65fed1dd46121c0fdff7720af9fc377a680f4d51e",
+    "reports/panda_s1_trials_23065666.json": "e8b1d24fe2b77465dae2bc6d79fabd66de221c8cdd3932a1070bea537cf54c84"
+  },
+  "minimum_mapping_fraction": 0.9
+}

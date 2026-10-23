@@ -1,0 +1,10 @@
+purpose: Unvalidated zero-shot engineering smoke only; not a clinically useful cancer detector.
+prompts:
+  benign:
+    - an H&E image of benign prostate tissue
+    - a histopathology image of benign prostatic glands
+    - an H&E stained prostate tissue section without carcinoma
+  cancer:
+    - an H&E image of prostatic adenocarcinoma
+    - a histopathology image of prostate cancer
+    - an H&E stained tissue section of prostate adenocarcinoma

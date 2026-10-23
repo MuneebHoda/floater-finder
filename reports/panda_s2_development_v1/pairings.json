@@ -1,0 +1,1026 @@
+[
+  {
+    "host_id": "55d91c32710982de78a975ed0f45395c",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 31
+  },
+  {
+    "host_id": "55d91c32710982de78a975ed0f45395c",
+    "donor_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 41,
+    "required_for_ten_percent": 31
+  },
+  {
+    "host_id": "55d91c32710982de78a975ed0f45395c",
+    "donor_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 327,
+    "required_for_ten_percent": 31
+  },
+  {
+    "host_id": "55d91c32710982de78a975ed0f45395c",
+    "donor_id": "60bf955e8135c580681a253469151ed6",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 31
+  },
+  {
+    "host_id": "3901caec5d914bf20a44f176469b0294",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "3901caec5d914bf20a44f176469b0294",
+    "donor_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 258,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "3901caec5d914bf20a44f176469b0294",
+    "donor_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 77,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "3901caec5d914bf20a44f176469b0294",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "donor_id": "31e82faf725d625e322f58692dd90ac1",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 53,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "donor_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "530d4ae320630f972f49d861a4724fb1",
+    "donor_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 59,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "530d4ae320630f972f49d861a4724fb1",
+    "donor_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 73,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "530d4ae320630f972f49d861a4724fb1",
+    "donor_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 107,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "530d4ae320630f972f49d861a4724fb1",
+    "donor_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 51,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "donor_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 121,
+    "required_for_ten_percent": 38
+  },
+  {
+    "host_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "donor_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 68,
+    "required_for_ten_percent": 38
+  },
+  {
+    "host_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 38
+  },
+  {
+    "host_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "donor_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 43,
+    "required_for_ten_percent": 38
+  },
+  {
+    "host_id": "63080d06c66488c4c30285e0363ca0ad",
+    "donor_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 121,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "63080d06c66488c4c30285e0363ca0ad",
+    "donor_id": "d1088ba933bd7066a3a777f542f61fa6",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 63,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "63080d06c66488c4c30285e0363ca0ad",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "63080d06c66488c4c30285e0363ca0ad",
+    "donor_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 167,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "14cff64d674f558dc47ee5e817b7f671",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 46
+  },
+  {
+    "host_id": "14cff64d674f558dc47ee5e817b7f671",
+    "donor_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 258,
+    "required_for_ten_percent": 46
+  },
+  {
+    "host_id": "14cff64d674f558dc47ee5e817b7f671",
+    "donor_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 59,
+    "required_for_ten_percent": 46
+  },
+  {
+    "host_id": "14cff64d674f558dc47ee5e817b7f671",
+    "donor_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 167,
+    "required_for_ten_percent": 46
+  },
+  {
+    "host_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "donor_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 54,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "donor_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 189,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "donor_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "b0dc9662008d3c1d40f3b30d82a6ffe0",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "donor_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "donor_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 148,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "donor_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 107,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "a979f5e3d61ebeec3dcbe8943c9316ca",
+    "donor_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 186,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "donor_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 327,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "donor_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 258,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "donor_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 327,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "donor_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 186,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "donor_id": "69da9f886fc4413167b8b144da775269",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 189,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "donor_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 63,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "428f0c9a110cf7cae62d620a4306ceaf",
+    "donor_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 186,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "69da9f886fc4413167b8b144da775269",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 51
+  },
+  {
+    "host_id": "69da9f886fc4413167b8b144da775269",
+    "donor_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 51
+  },
+  {
+    "host_id": "69da9f886fc4413167b8b144da775269",
+    "donor_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 77,
+    "required_for_ten_percent": 51
+  },
+  {
+    "host_id": "69da9f886fc4413167b8b144da775269",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 51
+  },
+  {
+    "host_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "donor_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 60,
+    "required_for_ten_percent": 40
+  },
+  {
+    "host_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "donor_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 42,
+    "required_for_ten_percent": 40
+  },
+  {
+    "host_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "donor_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 60,
+    "required_for_ten_percent": 40
+  },
+  {
+    "host_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 40
+  },
+  {
+    "host_id": "03849b0243900d79446bb27849dc0bb2",
+    "donor_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 60,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "03849b0243900d79446bb27849dc0bb2",
+    "donor_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 216,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "03849b0243900d79446bb27849dc0bb2",
+    "donor_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 105,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "03849b0243900d79446bb27849dc0bb2",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "donor_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 105,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "donor_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 216,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "donor_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 105,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "9b56f501c6765027cce8a1a8ad797767",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 103,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "9b56f501c6765027cce8a1a8ad797767",
+    "donor_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 155,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "9b56f501c6765027cce8a1a8ad797767",
+    "donor_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 60,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "9b56f501c6765027cce8a1a8ad797767",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "donor_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 51,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "donor_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 62,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "donor_id": "9ffb9e9e7be39a7af216779a06a6302b",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 107,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "46d067b212c4dda9e6f87c8b82f22d79",
+    "donor_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 167,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "donor_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 36,
+    "required_for_ten_percent": 10
+  },
+  {
+    "host_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "donor_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 68,
+    "required_for_ten_percent": 10
+  },
+  {
+    "host_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "donor_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 10
+  },
+  {
+    "host_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+    "donor_id": "1b176c9049260a8843b97349ccdd3eb7",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 15,
+    "required_for_ten_percent": 10
+  },
+  {
+    "host_id": "dc7254ab21584e852fe556646c86d6f4",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "dc7254ab21584e852fe556646c86d6f4",
+    "donor_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 68,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "dc7254ab21584e852fe556646c86d6f4",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "dc7254ab21584e852fe556646c86d6f4",
+    "donor_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 167,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "donor_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 327,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "donor_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 316,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "donor_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 77,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ba8e50f3e374a63eae8af2f9d9a7acb0",
+    "donor_id": "4e5c75b501c348de7af7620dab9d783e",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 167,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "donor_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 51,
+    "required_for_ten_percent": 45
+  },
+  {
+    "host_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "donor_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 316,
+    "required_for_ten_percent": 45
+  },
+  {
+    "host_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "donor_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 327,
+    "required_for_ten_percent": 45
+  },
+  {
+    "host_id": "e02a4e6752db30ddfe21a7c2cab7470b",
+    "donor_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 186,
+    "required_for_ten_percent": 45
+  },
+  {
+    "host_id": "ddbeff8437def5f80c4890b394711ec2",
+    "donor_id": "134d69e06d397dc06ed6794b737c63fd",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 149,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ddbeff8437def5f80c4890b394711ec2",
+    "donor_id": "e97722ee42a5566b71eef7e75e9d86f0",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 68,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ddbeff8437def5f80c4890b394711ec2",
+    "donor_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ddbeff8437def5f80c4890b394711ec2",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "donor_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "donor_id": "452eca104841c28098e3ea454f9626c5",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 258,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "donor_id": "84bc390199b8e7466a020ca6abe11852",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 327,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ff10f937c3d52eff6ad4dd733f2bc3ac",
+    "donor_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 186,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "donor_id": "e7f434dd3d607e019828f9c1f0a66144",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 26
+  },
+  {
+    "host_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "donor_id": "a65a095302fbc94c8e21ae65e1ccd17e",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 26
+  },
+  {
+    "host_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "donor_id": "80a9fb86cc68aade057a0e680f3e5c0a",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 77,
+    "required_for_ten_percent": 26
+  },
+  {
+    "host_id": "615b8a4e40699ea384e5f518ac0c68b4",
+    "donor_id": "7e8136cda906272497595cfb2088f4c4",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 51,
+    "required_for_ten_percent": 26
+  },
+  {
+    "host_id": "452eca104841c28098e3ea454f9626c5",
+    "donor_id": "0e305c4d31f47db36c44a1d55d389193",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 116,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "452eca104841c28098e3ea454f9626c5",
+    "donor_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 73,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "452eca104841c28098e3ea454f9626c5",
+    "donor_id": "dc10032bf598b0a3268074de4bb2d7b6",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 75,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "452eca104841c28098e3ea454f9626c5",
+    "donor_id": "5f7ebc491021150fdb969866ad5f6d81",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 186,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "591da133fabcfdfa629d09729d356cda",
+    "donor_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 63,
+    "required_for_ten_percent": 41
+  },
+  {
+    "host_id": "591da133fabcfdfa629d09729d356cda",
+    "donor_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 316,
+    "required_for_ten_percent": 41
+  },
+  {
+    "host_id": "591da133fabcfdfa629d09729d356cda",
+    "donor_id": "ab0c6950b69d38008bea90173b44aefa",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 59,
+    "required_for_ten_percent": 41
+  },
+  {
+    "host_id": "591da133fabcfdfa629d09729d356cda",
+    "donor_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 43,
+    "required_for_ten_percent": 41
+  },
+  {
+    "host_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "donor_id": "d0cb73c9ad19c13c6fe93cc2c61cc073",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 121,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "donor_id": "14cff64d674f558dc47ee5e817b7f671",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 117,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "donor_id": "8efb75ef39c5b55cffeac6d3d19cf238",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 63,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "bc2518ea5985260ea91f96e2db178b5f",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 48
+  },
+  {
+    "host_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "donor_id": "cb91772271b72c237c42f64fb6d2e84e",
+    "split": "train",
+    "condition": "high_gp45",
+    "donor_component_capacity": 43,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "donor_id": "591da133fabcfdfa629d09729d356cda",
+    "split": "train",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 62,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "donor_id": "7f15c706a91ae8c7ccbfaae1897aa024",
+    "split": "train",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 54,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "7c7ba4a041b9bedb14fd83e7da0ac6e2",
+    "donor_id": "36dd11dbc0aba4413623bdc44775e6fe",
+    "split": "train",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 58,
+    "required_for_ten_percent": 39
+  },
+  {
+    "host_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "donor_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 60,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "donor_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 216,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "donor_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 105,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 103,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "donor_id": "375b2c9501320b35ceb638a3274812aa",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 216,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "donor_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 59,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "donor_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 59,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "donor_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 155,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "donor_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 60,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "375b2c9501320b35ceb638a3274812aa",
+    "donor_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "condition": "high_gp45",
+    "donor_component_capacity": 59,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "375b2c9501320b35ceb638a3274812aa",
+    "donor_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "split": "calibration",
+    "condition": "same_grade_gp3_only",
+    "donor_component_capacity": 155,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "375b2c9501320b35ceb638a3274812aa",
+    "donor_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "split": "calibration",
+    "condition": "high_gp4_only",
+    "donor_component_capacity": 59,
+    "required_for_ten_percent": 52
+  },
+  {
+    "host_id": "375b2c9501320b35ceb638a3274812aa",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "donor_component_capacity": 37,
+    "required_for_ten_percent": 52
+  }
+]

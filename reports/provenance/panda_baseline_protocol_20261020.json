@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-20T20:09:10.937326+00:00",
+  "before_real_cohort_scoring_inspection": true,
+  "test_slides_scored": false,
+  "files": {
+    "docs/panda_baseline_protocol_v1.md": "36c29ff5015091faefd54380d5370c8268a3716c3d34a2473285c78572f42d7d",
+    "configs/panda_morphology_v1.yaml": "9767f2ddb12f8c20ef905ae65db1796e0cf001a078e8179816022aff6317180a",
+    "src/floater_finder/panda_baseline.py": "5602b451c884282773eff373590918d93526c3feefd0addec3d6e3deb4dfc3c0",
+    "src/floater_finder/scoring.py": "0f929e24fe967c51f9a2447dd0c000c2806ab977a4b4600f38047b4632b9b890",
+    "scripts/panda_clean_baseline.py": "eb146bc10fb2a0fce687424f5f25d1582af735bb6491926c59a712264226e4fc"
+  }
+}

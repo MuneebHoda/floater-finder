@@ -1,0 +1,27 @@
+{
+  "verified_utc": "2026-10-20T23:37:13.757902+00:00",
+  "execution_environment": "local Mac (Darwin)",
+  "branch": "feature/panda-tiling",
+  "main_commit": "bdb13e5ee2fd8f61bf4a1885e0c6771d1ce9f39e",
+  "jobs": {
+    "23054910": "COMPLETED 0:0",
+    "23055022": "COMPLETED 0:0",
+    "23065666": "COMPLETED 0:0",
+    "23065744": "COMPLETED 0:0"
+  },
+  "own_queue_empty": true,
+  "software_tests_passed": 178,
+  "tests_warnings_as_errors": true,
+  "slurm_scripts_bash_syntax_passed": true,
+  "whitespace_check_passed": true,
+  "original_manifests_sha256": {
+    "train.csv": "f67935796d8da5ff9dcb27865968e51f24d297fe7f17e69f4af3ca1b3737f45a",
+    "pilot.csv": "91713d4f430e53c74e8dee9a7c8aeda8e25781302d05c74d020952a239564c7e",
+    "annotated_cohort.csv": "9042c167c13a18da999e29a130dffb6495e32d102ade48fb79c28e53a69d00b7"
+  },
+  "clinical_validity_verified": false,
+  "test_slides_scored": false,
+  "review_alert_rate": null,
+  "changes_committed": false,
+  "changes_pushed": false
+}

@@ -1,0 +1,2 @@
+# Preserve the exact CSV bytes pinned by the submitted CPU/GPU source snapshots.
+configs/panda_gpu_program_v1/sources.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

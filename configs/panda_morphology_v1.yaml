@@ -1,0 +1,19 @@
+# Candidate prompts fixed before any PANDA encoding/scoring. Unvalidated engineering baseline.
+# Slide-level cancer and low/high tasks must select their respective pair of classes.
+prompts:
+  benign:
+    - An H&E prostate biopsy with benign prostatic glands and intervening stroma.
+    - An H&E section showing non-neoplastic prostate epithelium with orderly glands.
+    - Benign prostate tissue with well-formed glands and no invasive carcinoma.
+  cancer:
+    - An H&E prostate biopsy showing invasive prostatic adenocarcinoma.
+    - Malignant prostatic epithelial glands infiltrating prostate stroma on H&E.
+    - A histology image of acinar adenocarcinoma of the prostate.
+  low_grade:
+    - Prostatic adenocarcinoma with separate well-formed infiltrative glands, Gleason pattern 3.
+    - An H&E image of prostate cancer composed of discrete well-formed glands.
+    - Low-grade acinar prostate carcinoma with individually formed neoplastic glands.
+  high_grade:
+    - Prostatic adenocarcinoma with fused or poorly formed glands, Gleason pattern 4.
+    - An H&E image of prostate cancer with cribriform malignant glandular architecture.
+    - High-grade prostatic adenocarcinoma with solid sheets or individual malignant cells, Gleason pattern 5.

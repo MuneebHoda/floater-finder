@@ -1,0 +1,14 @@
+{
+  "manifest": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_acquired_v1.csv",
+  "manifest_sha256": "02012026f8686cec90ea6917d0c6e55555c7d9fa2901c39906cdbb79a92bb648",
+  "source_candidate_manifest_sha256": "3cd6e18678ad8fe0d207a72bc4354d371dc93003f515a53b8724867fc041b24d",
+  "acquisition_job_id": "23051626",
+  "slides": 120,
+  "masks": 120,
+  "files": 240,
+  "total_bytes": 2490697994,
+  "source_integrity": "official selective downloads; catalog size, ZIP CRC when supplied, computed local SHA256; no external source checksum in catalog",
+  "native_image_mask_validation": "not complete; bounded CPU batches pending",
+  "patient_independence_verified": false,
+  "original_partial_preserved_sha256": "9042c167c13a18da999e29a130dffb6495e32d102ade48fb79c28e53a69d00b7"
+}

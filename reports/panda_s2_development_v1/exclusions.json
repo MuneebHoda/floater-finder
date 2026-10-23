@@ -1,0 +1,82 @@
+[
+  {
+    "host_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 40,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  },
+  {
+    "host_id": "03849b0243900d79446bb27849dc0bb2",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 52,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  },
+  {
+    "host_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 52,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  },
+  {
+    "host_id": "9b56f501c6765027cce8a1a8ad797767",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 52,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  },
+  {
+    "host_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 52,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  },
+  {
+    "host_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 52,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  },
+  {
+    "host_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 52,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  },
+  {
+    "host_id": "375b2c9501320b35ceb638a3274812aa",
+    "donor_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "split": "calibration",
+    "condition": "high_gp5_positive",
+    "requested_percent": 10,
+    "requested_count": 52,
+    "capacity": 37,
+    "reason": "Fixed donor lacks unique four-connected capacity"
+  }
+]

@@ -1,0 +1,1197 @@
+{
+  "source_kind": "real",
+  "category": "Development-only description of frozen saved measurements",
+  "test_predictions_computed": false,
+  "patient_independence_verified": false,
+  "selection_changed": false,
+  "splits": {
+    "train": {
+      "methods": {
+        "combined": {
+          "unmodified_alert_wilson95": [
+            0.0,
+            0.05065117259645777
+          ],
+          "clean_damage_wilson95": [
+            0.0,
+            0.059243867898112784
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            0.0,
+            0.07555760416399626
+          ],
+          "clean_mask_unknown_slides": 0,
+          "unique_positive_hosts": 24,
+          "unique_new_error_hosts": 14,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.041666666666666664,
+            "interval95": [
+              0.0,
+              0.11666666666666667
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.023679417122040074,
+            "interval95": [
+              0.0,
+              0.07666725069290019
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 0.10526315789473684,
+            "interval95": [
+              0.0,
+              0.32437948152233836
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.1111111111111111,
+              "new_error_wilson95": [
+                0.03101952264561242,
+                0.32799765130178793
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.13797620467498012
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 4,
+              "new_errors": 4,
+              "new_error_rate": 0.2222222222222222,
+              "new_error_wilson95": [
+                0.09000928108601702,
+                0.45214584316212614
+              ],
+              "fragment_hits": 1,
+              "fragment_hit_wilson95": [
+                0.007393456165505796,
+                0.20241806478655927
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 6,
+              "new_errors": 6,
+              "new_error_rate": 0.3333333333333333,
+              "new_error_wilson95": [
+                0.16278774750833702,
+                0.5625053270405489
+              ],
+              "fragment_hits": 2,
+              "fragment_hit_wilson95": [
+                0.023158815297043334,
+                0.2584880219321067
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 12,
+              "new_errors": 12,
+              "new_error_rate": 0.6666666666666666,
+              "new_error_wilson95": [
+                0.4374946729594511,
+                0.837212252491663
+              ],
+              "fragment_hits": 1,
+              "fragment_hit_wilson95": [
+                0.007393456165505796,
+                0.20241806478655927
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 14,
+              "new_errors": 14,
+              "new_error_rate": 0.7777777777777778,
+              "new_error_wilson95": [
+                0.5478541568378739,
+                0.9099907189139831
+              ],
+              "fragment_hits": 1,
+              "fragment_hit_wilson95": [
+                0.007393456165505796,
+                0.20241806478655927
+              ]
+            }
+          ]
+        },
+        "visual_only": {
+          "unmodified_alert_wilson95": [
+            0.014270807466925182,
+            0.11549276741316108
+          ],
+          "clean_damage_wilson95": [
+            0.009037890398362391,
+            0.11189490419495611
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            0.021945385205433238,
+            0.17162614183124433
+          ],
+          "clean_mask_unknown_slides": 0,
+          "unique_positive_hosts": 24,
+          "unique_new_error_hosts": 14,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.1111111111111111,
+              "new_error_wilson95": [
+                0.03101952264561242,
+                0.32799765130178793
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.13797620467498012
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 4,
+              "new_errors": 4,
+              "new_error_rate": 0.2222222222222222,
+              "new_error_wilson95": [
+                0.09000928108601702,
+                0.45214584316212614
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.13797620467498012
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 6,
+              "new_errors": 6,
+              "new_error_rate": 0.3333333333333333,
+              "new_error_wilson95": [
+                0.16278774750833702,
+                0.5625053270405489
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.13797620467498012
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 12,
+              "new_errors": 12,
+              "new_error_rate": 0.6666666666666666,
+              "new_error_wilson95": [
+                0.4374946729594511,
+                0.837212252491663
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.13797620467498012
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 14,
+              "new_errors": 14,
+              "new_error_rate": 0.7777777777777778,
+              "new_error_wilson95": [
+                0.5478541568378739,
+                0.9099907189139831
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.13797620467498012
+              ]
+            }
+          ]
+        },
+        "decision_only": {
+          "unmodified_alert_wilson95": [
+            0.22325610278261981,
+            0.4339234873216566
+          ],
+          "clean_damage_wilson95": [
+            0.20937432780615273,
+            0.43591434369641446
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            0.11989707998095003,
+            0.349040267091984
+          ],
+          "clean_mask_unknown_slides": 0,
+          "unique_positive_hosts": 24,
+          "unique_new_error_hosts": 14,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.30833333333333335,
+            "interval95": [
+              0.18333333333333332,
+              0.43333333333333335
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.4304796599878567,
+            "interval95": [
+              0.24646045642282696,
+              0.6038691548272961
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 0.9736842105263158,
+            "interval95": [
+              0.9206190476190476,
+              1.0
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.1111111111111111,
+              "new_error_wilson95": [
+                0.03101952264561242,
+                0.32799765130178793
+              ],
+              "fragment_hits": 2,
+              "fragment_hit_wilson95": [
+                0.023158815297043334,
+                0.2584880219321067
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 4,
+              "new_errors": 4,
+              "new_error_rate": 0.2222222222222222,
+              "new_error_wilson95": [
+                0.09000928108601702,
+                0.45214584316212614
+              ],
+              "fragment_hits": 4,
+              "fragment_hit_wilson95": [
+                0.06678676328632951,
+                0.3585307064969905
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 6,
+              "new_errors": 6,
+              "new_error_rate": 0.3333333333333333,
+              "new_error_wilson95": [
+                0.16278774750833702,
+                0.5625053270405489
+              ],
+              "fragment_hits": 6,
+              "fragment_hit_wilson95": [
+                0.11999366228595004,
+                0.44899444005153993
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 12,
+              "new_errors": 12,
+              "new_error_rate": 0.6666666666666666,
+              "new_error_wilson95": [
+                0.4374946729594511,
+                0.837212252491663
+              ],
+              "fragment_hits": 11,
+              "fragment_hit_wilson95": [
+                0.27891333731210993,
+                0.649251346410805
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 14,
+              "new_errors": 14,
+              "new_error_rate": 0.7777777777777778,
+              "new_error_wilson95": [
+                0.5478541568378739,
+                0.9099907189139831
+              ],
+              "fragment_hits": 14,
+              "fragment_hit_wilson95": [
+                0.38834665865228757,
+                0.7553239739018823
+              ]
+            }
+          ]
+        },
+        "spatial_only": {
+          "unmodified_alert_wilson95": [
+            0.6996724105411147,
+            0.8804852062054944
+          ],
+          "clean_damage_wilson95": [
+            0.002899730799299824,
+            0.08718860044641581
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            0.22167443843771614,
+            0.48329075438058056
+          ],
+          "clean_mask_unknown_slides": 0,
+          "unique_positive_hosts": 24,
+          "unique_new_error_hosts": 14,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.8583333333333333,
+            "interval95": [
+              0.7833333333333333,
+              0.925
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.47540983606557374,
+            "interval95": [
+              0.3756296829816282,
+              0.5984329307852094
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 0.6842105263157895,
+            "interval95": [
+              0.4650955149501661,
+              0.8571428571428571
+            ],
+            "unique_host_slides": 24,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.1111111111111111,
+              "new_error_wilson95": [
+                0.03101952264561242,
+                0.32799765130178793
+              ],
+              "fragment_hits": 24,
+              "fragment_hit_wilson95": [
+                0.8620237953250198,
+                1.0
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 4,
+              "new_errors": 4,
+              "new_error_rate": 0.2222222222222222,
+              "new_error_wilson95": [
+                0.09000928108601702,
+                0.45214584316212614
+              ],
+              "fragment_hits": 24,
+              "fragment_hit_wilson95": [
+                0.8620237953250198,
+                1.0
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 6,
+              "new_errors": 6,
+              "new_error_rate": 0.3333333333333333,
+              "new_error_wilson95": [
+                0.16278774750833702,
+                0.5625053270405489
+              ],
+              "fragment_hits": 24,
+              "fragment_hit_wilson95": [
+                0.8620237953250198,
+                1.0
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 12,
+              "new_errors": 12,
+              "new_error_rate": 0.6666666666666666,
+              "new_error_wilson95": [
+                0.4374946729594511,
+                0.837212252491663
+              ],
+              "fragment_hits": 17,
+              "fragment_hit_wilson95": [
+                0.5083230633550336,
+                0.8508535180303912
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 24,
+              "originally_correct": 18,
+              "initially_incorrect": 6,
+              "prediction_changes": 14,
+              "new_errors": 14,
+              "new_error_rate": 0.7777777777777778,
+              "new_error_wilson95": [
+                0.5478541568378739,
+                0.9099907189139831
+              ],
+              "fragment_hits": 14,
+              "fragment_hit_wilson95": [
+                0.38834665865228757,
+                0.7553239739018823
+              ]
+            }
+          ]
+        }
+      },
+      "foreign_truth_diagnostic_funnel": {
+        "positive_trials": 120,
+        "mapped_foreign_component": 120,
+        "visual_pass": 16,
+        "visual_and_influence_pass": 5,
+        "combined_pass": 5
+      },
+      "topology": {
+        "slides": 72,
+        "old_single_component": 28,
+        "new_single_component": 8,
+        "formerly_single_now_multiple": 20,
+        "mapping_abstentions": 2,
+        "minimum_mapping": 0.76,
+        "mean_mapping": 0.9803649761575378,
+        "minimum_sensitivity_agreement": 0.3705122300065453,
+        "mean_sensitivity_agreement": 0.9624689631593528
+      }
+    },
+    "calibration": {
+      "methods": {
+        "combined": {
+          "unmodified_alert_wilson95": [
+            0.0,
+            0.13797620467498012
+          ],
+          "clean_damage_wilson95": [
+            0.0,
+            0.16112515805281927
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            2.7755575615628914e-17,
+            0.2038833010358485
+          ],
+          "clean_mask_unknown_slides": 1,
+          "unique_positive_hosts": 8,
+          "unique_new_error_hosts": 2,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 1789,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            }
+          ]
+        },
+        "visual_only": {
+          "unmodified_alert_wilson95": [
+            0.0,
+            0.13797620467498012
+          ],
+          "clean_damage_wilson95": [
+            0.0,
+            0.16112515805281927
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            2.7755575615628914e-17,
+            0.2038833010358485
+          ],
+          "clean_mask_unknown_slides": 1,
+          "unique_positive_hosts": 8,
+          "unique_new_error_hosts": 2,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 1789,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 0,
+              "fragment_hit_wilson95": [
+                0.0,
+                0.3244075648838801
+              ]
+            }
+          ]
+        },
+        "decision_only": {
+          "unmodified_alert_wilson95": [
+            0.06678676328632951,
+            0.3585307064969905
+          ],
+          "clean_damage_wilson95": [
+            0.05236874589621657,
+            0.3604188647407569
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            0.011866895493268526,
+            0.2981652987378002
+          ],
+          "clean_mask_unknown_slides": 1,
+          "unique_positive_hosts": 8,
+          "unique_new_error_hosts": 2,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.2,
+            "interval95": [
+              0.0,
+              0.475
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.25205930807248766,
+            "interval95": [
+              0.0,
+              0.581829878330065
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 1.0,
+            "interval95": [
+              1.0,
+              1.0
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 1789,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 1,
+              "fragment_hit_wilson95": [
+                0.02241749145005667,
+                0.47088818221285345
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 1,
+              "fragment_hit_wilson95": [
+                0.02241749145005667,
+                0.47088818221285345
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 2,
+              "fragment_hit_wilson95": [
+                0.07147921275210911,
+                0.590724569689831
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 2,
+              "fragment_hit_wilson95": [
+                0.07147921275210911,
+                0.590724569689831
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 2,
+              "fragment_hit_wilson95": [
+                0.07147921275210911,
+                0.590724569689831
+              ]
+            }
+          ]
+        },
+        "spatial_only": {
+          "unmodified_alert_wilson95": [
+            0.5952954674681132,
+            0.9075517464714813
+          ],
+          "clean_damage_wilson95": [
+            0.0,
+            0.16112515805281927
+          ],
+          "genuine_cancer_slide_flag_wilson95": [
+            0.07047549346981563,
+            0.4518544871516935
+          ],
+          "clean_mask_unknown_slides": 1,
+          "unique_positive_hosts": 8,
+          "unique_new_error_hosts": 2,
+          "fragment_recall_host_bootstrap": {
+            "estimate": 0.8,
+            "interval95": [
+              0.725,
+              0.875
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "tile_recall_host_bootstrap": {
+            "estimate": 0.45634266886326197,
+            "interval95": [
+              0.362333360908946,
+              0.5744274809160306
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 2000,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "recovery_host_bootstrap": {
+            "estimate": 0.75,
+            "interval95": [
+              0.6666666666666666,
+              0.8
+            ],
+            "unique_host_slides": 8,
+            "valid_bootstraps": 1789,
+            "bootstrap_seed": 20261021,
+            "interpretation": "conditional on fixed donor assignments; shared donors and unknown patient overlap limit population inference"
+          },
+          "by_dose": [
+            {
+              "percent": 0.5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 8,
+              "fragment_hit_wilson95": [
+                0.67559243511612,
+                1.0
+              ]
+            },
+            {
+              "percent": 1,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 1,
+              "new_errors": 1,
+              "new_error_rate": 0.2,
+              "new_error_wilson95": [
+                0.036224108632430196,
+                0.6244653702374746
+              ],
+              "fragment_hits": 8,
+              "fragment_hit_wilson95": [
+                0.67559243511612,
+                1.0
+              ]
+            },
+            {
+              "percent": 2,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 8,
+              "fragment_hit_wilson95": [
+                0.67559243511612,
+                1.0
+              ]
+            },
+            {
+              "percent": 5,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 7,
+              "fragment_hit_wilson95": [
+                0.5291118177871466,
+                0.9775825085499434
+              ]
+            },
+            {
+              "percent": 10,
+              "unique_hosts": 8,
+              "originally_correct": 5,
+              "initially_incorrect": 3,
+              "prediction_changes": 2,
+              "new_errors": 2,
+              "new_error_rate": 0.4,
+              "new_error_wilson95": [
+                0.117620774232648,
+                0.7692757187239869
+              ],
+              "fragment_hits": 1,
+              "fragment_hit_wilson95": [
+                0.02241749145005667,
+                0.47088818221285345
+              ]
+            }
+          ]
+        }
+      },
+      "foreign_truth_diagnostic_funnel": {
+        "positive_trials": 40,
+        "mapped_foreign_component": 40,
+        "visual_pass": 5,
+        "visual_and_influence_pass": 0,
+        "combined_pass": 0
+      },
+      "topology": {
+        "slides": 24,
+        "old_single_component": 6,
+        "new_single_component": 2,
+        "formerly_single_now_multiple": 4,
+        "mapping_abstentions": 0,
+        "minimum_mapping": 0.9626865671641791,
+        "mean_mapping": 0.9848393075298137,
+        "minimum_sensitivity_agreement": 0.8428436147186147,
+        "mean_sensitivity_agreement": 0.9846899206769565
+      }
+    }
+  },
+  "confidence_interpretation": "Slide/host resampling conditional on fixed donors. Repeated doses and random controls are not independent patients. Zero observed alerts do not establish a population rate below 10%.",
+  "source_sha256": {
+    "reports/panda_review_selection_v1.json": "f1df88da9502a10c3a99c97fba6f6f53942ca2a4ebd65b05901e0dcb508966ad",
+    "reports/panda_review_metrics_by_case_v1.json": "8915763c5a26e1a77a0d43d2e5a1aaa7560d3c174167b6921dd04f7b69c0ecce",
+    "reports/panda_topology_audit_v1.json": "3846b9224ff285af79e07e97052f181440d8f883eee0918f92280780d26d5d69",
+    "results/panda/review_development_v1/component_cases.json": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100"
+  },
+  "script_sha256": "217b77e4fa1cce99f3ed1f070edecad2945f5dbea19e0f8d245fb2473b84de49"
+}

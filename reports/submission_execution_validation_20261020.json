@@ -1,0 +1,85 @@
+{
+  "branch": "feature/panda-tiling",
+  "submission_commit": "bab80e5c4e8db580d61625ae0b971e819f53a700",
+  "s2_runtime_commit": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+  "v2_runtime_commit": "668d9b8c4e3e8aa300bda6ff15e416c601c2e024",
+  "verified_utc": "2026-10-21T00:44:32.145300+00:00",
+  "package_checks": {
+    "status": "pass",
+    "source_files_verified": 15,
+    "slides": 19,
+    "native_tables": 4,
+    "native_charts": 1,
+    "linked_external_media": 0,
+    "spoken_words": 908,
+    "seconds": 480,
+    "held_out_predictions_computed": false
+  },
+  "regression": {
+    "command": "uv sync --locked --no-editable --reinstall-package floater-finder --extra test --extra plots --extra panda; .venv/bin/python -m pytest -q -W error",
+    "passed": 204,
+    "failed": 0,
+    "warnings_treated_as_errors": true,
+    "source_modules_unchanged_after_full_suite": true
+  },
+  "independent_visual_qa": {
+    "final_slides_reviewed_by_author": 19,
+    "root_reviewed_final_slides": [
+      2,
+      7,
+      10,
+      11,
+      14
+    ],
+    "root_reviewed_correct_source_cases": [
+      8,
+      9
+    ],
+    "native_pptx_roundtrip": "Keynote; not Microsoft PowerPoint",
+    "package_delivery_manifest_sha256": "e75b6a5e2c7d8a3ff3fd3873b2cb3baea7ec5c9cc128a5f2a90cc7f35405c8e2"
+  },
+  "artifact_sha256": {
+    "submission/ashby_20261021_v2/README.md": "038e27d6b625a189c407edce848eae6d8757c4f07afeaf1aee0756887efc8494",
+    "submission/ashby_20261021_v2/abstract.md": "696a03b2b309f5f046f89e4a8524a15c824c62c47284ed2b4d3e0d4d3fa367e4",
+    "submission/ashby_20261021_v2/build_submission.py": "aa25a14e4faa4241c44e4947b0a40db7b4e7f70c608dea9037ca4ed2fd49770c",
+    "submission/ashby_20261021_v2/delivery_manifest.json": "e75b6a5e2c7d8a3ff3fd3873b2cb3baea7ec5c9cc128a5f2a90cc7f35405c8e2",
+    "submission/ashby_20261021_v2/evidence_manifest.json": "f3cf450edb51e652f04dd1eb56ebe4a1f3dd67559b5ebc395d879bca0147cf79",
+    "submission/ashby_20261021_v2/floater_finder_ashby_v2_final.pdf": "233561c70043b3e5fc4a34f3826c84211be955e6d8f05b75c4a0d4afbe74c4e9",
+    "submission/ashby_20261021_v2/floater_finder_ashby_v2_final.pptx": "4f0fd01a111f1f7b48fe1e306234033deb7aaef459fc9bb2809072543841f501",
+    "submission/ashby_20261021_v2/media_manifest.json": "5908d7e1d2065a3b2cffd7e6259f12bd0d40039ca38fc6ff2c1b139664ad553c",
+    "submission/ashby_20261021_v2/prepare_media.py": "e83c6b60cfef668569a4baa842ca6f0a460edc99c365a255e89fa4fdc5ba1d39",
+    "submission/ashby_20261021_v2/presentation_script_8min.md": "4ced6445d7d00661d5af260a1debcb5a4ebcd1584c5ef3c8c5da6109da2581ab",
+    "submission/ashby_20261021_v2/qa_4min.md": "6e2b497f53a9b457d513d4b6e7182b6142000fe0a06b1af48cc2ecd475fa395b",
+    "submission/ashby_20261021_v2/slide_content.json": "ea87e6c43ded26d4cade2aa367c27726beb767a2d8562434834e46462d34c84a",
+    "submission/ashby_20261021_v2/submission_checklist.md": "bd956508a582399b74d9b8194b711eebacfdb324792632db51aa1fc00fc31849",
+    "submission/ashby_20261021_v2/verify_package.py": "df3177470da76b1b20bfd594749b4f8946d68880f8a1eb6e80319d1698dc7b87"
+  },
+  "new_jobs": {
+    "S2": {
+      "id": "23067396",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 19,
+      "oracle_passes": 760,
+      "trials": 760
+    },
+    "detector_v2": {
+      "id": "23067454",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 23
+    }
+  },
+  "remote_last_check": {
+    "queue": "",
+    "v1_final_output_exists": false,
+    "v1_preflight_rerun": false
+  },
+  "v1_protocol_sha256": "695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881",
+  "all_prior_experimental_artifacts_unchanged": true,
+  "final_test_slides_scored": false,
+  "final_test_ready": false,
+  "main_commit": "bdb13e5ee2fd8f61bf4a1885e0c6771d1ce9f39e",
+  "submission_uploaded": false,
+  "new_scope_pushed": false
+}

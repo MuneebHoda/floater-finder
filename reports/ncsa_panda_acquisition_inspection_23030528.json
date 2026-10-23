@@ -1,0 +1,18 @@
+{
+  "job_id": "23030528",
+  "observed_state": "PENDING",
+  "reason": "Priority",
+  "work_directory": "/u/mhoda",
+  "batch_script": "/work/nvme/bfqi/mhoda/panda/collect_annotated.sbatch",
+  "stdout": "/work/nvme/bfqi/mhoda/panda/logs/cohort-23030528.log",
+  "stdout_existed_at_inspection": false,
+  "batch_script_csv_references": [
+    "train.csv"
+  ],
+  "invoked_collector": "/work/nvme/bfqi/mhoda/panda/collect_annotated.py",
+  "collector_existed_at_inspection": false,
+  "larger_manifest_generated_at_inspection": false,
+  "job_cancelled_or_modified": false,
+  "duplicate_acquisition_submitted": false,
+  "inspection_scope": "Slurm metadata, safe batch-script structure and relevant log/file existence only; no credential files read"
+}

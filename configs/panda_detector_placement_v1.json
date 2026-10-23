@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "split": "train",
+  "hypothesis": "Frozen morphology detector scores on identical saved vector bags may depend on observed-RGB component grouping and relative placement; append-only detection may not transfer to near/context placement.",
+  "methods": ["nn1", "nn5", "robust_nn5", "background_centroid", "component_neighbor", "distant_nn5", "cohort_centroid5"],
+  "primary": "robust_nn5",
+  "trials": "reports/research_engine_trials_23069070.json",
+  "trials_sha256": "b6015d0de52e6026c4af58aae5d82c636a1628f3f5aa267dfef5c120b343a39d",
+  "threshold_report": "reports/panda_detector_v3_training_v1.json",
+  "threshold_sha256": "46e691590e5a28b61e250166493715231ace1fa69633d038f6c7f763617c3bd3",
+  "old_components_sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100",
+  "engine_identity": "b6093dccf8fc9e66164ab06d2296bdb2651dcae7e54ed9925fb6f0807dd8f809",
+  "predictor_files": {
+    "predictor.json": "4f6809ea1df1c898d95ce14907ef38f7f6d1c305fe3963d48c10eb2a29ada5eb",
+    "parameters.npz": "16cecba9f20e12dc12d70c708cae9203b8b9090864e1f210c127d023692b4e2f"
+  },
+  "mapping": {
+    "additions": "complete cached host RGB foreground union verified saved donor PNG foreground at recorded coordinates",
+    "replacement": "unchanged native host component carriers, not observed donor piece identity",
+    "connectivity": 8,
+    "rgb_maximum": 220,
+    "minimum_chroma": 10,
+    "tile_component_purity": 0.8,
+    "minimum_tile_foreground_coverage": 0.1,
+    "minimum_mapping_fraction": 0.9,
+    "maximum_canvas_pixels": 4000000,
+    "morphology_or_gap_bridging": false
+  },
+  "selection": "No fitting, threshold selection, primary switch, new donors or changed eligibility. Reuse original 35 method/fold records and fit-slide centroid references. Strict score > threshold; unavailable context abstains. Influence explains visual flags without veto.",
+  "pairing": "task/condition/control/host/donor/seed/dose; all complete append/near/context triplets fixed from old eligibility before detector scoring; retain mapping abstentions as misses",
+  "metrics": "All-case and common-triplet fragment/tile recall, alerts, source-following native cancer flags, clean damage, originally-correct induced-error recovery; S1 cosine and S2 logit influences separate. Conditional host bootstrap 2000 draws seed 20261023, never a patient-population interval.",
+  "limitations": [
+    "Training-only exploratory engineering audit; two unique hosts per task, repeated doses/seeds and donor reuse; no independent validation or verified patient identities.",
+    "S2 scorer is fitted on training hosts; apparent robustness is resubstitution evidence, not held-out disease performance.",
+    "RGB topology uses bounded level-2 host foreground and rasterized saved PNGs. Topology and physical context can change together; do not claim a pure causal distance effect.",
+    "Replacement evaluates native component carriers and may mix donor and host vectors; it does not measure recognition of a physically separate foreign fragment.",
+    "Four clean anchors cannot validate population burden. Historical 72-slide cross-fit clean results remain the prior development reference; no thresholds are recalibrated here.",
+    "Known annotated native cancer is a negative control for foreignness. An influential or flagged component is not evidence of contamination. No tissue is removed.",
+    "All 327 previous exclusions remain excluded despite the numeric geometry validator fix; no outcome-guided eligibility revision.",
+    "No GPU, new data, model training, calibration or final-test predictions. Existing rejected final-test protocol remains blocked."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "submitted dependent CPU verification then development-only baseline",
+  "job_id": "23055022",
+  "depends_on_gpu_job": "23054910",
+  "command": "sbatch --parsable --dependency=afterok:23054910 --kill-on-invalid-dep=yes /u/mhoda/floater-finder/releases/panda-postencode-20261020-v2/verify_then_baseline.sbatch",
+  "script": "/u/mhoda/floater-finder/releases/panda-postencode-20261020-v2/verify_then_baseline.sbatch",
+  "script_sha256": "9d8706d4c9fc760ae46b50f657e1b657bcbccffef52f3bbcbe778feb5fc5565a",
+  "source": "/u/mhoda/floater-finder/releases/panda-postencode-20261020-v2/source",
+  "manifest": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+  "verification_output": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+  "baseline_output": "/work/nvme/bfqi/mhoda/floater-finder/panda-baselines/dev-zero-shot-v1-23054910",
+  "resources": {
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu-interactive",
+    "cpus": 2,
+    "host_memory_gb": 4,
+    "wall_minutes": 5,
+    "gpus": 0
+  },
+  "test_slides_scored": false,
+  "results_observed": false
+}

@@ -1,0 +1,1306 @@
+[
+  {
+    "title": "Floater Finder",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Prostate-biopsy fragment dependence",
+        "x": 70,
+        "y": 220,
+        "w": 1110,
+        "h": 70,
+        "size": 38,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "A CONCH safety experiment for pathologist review",
+        "x": 70,
+        "y": 315,
+        "w": 1040,
+        "h": 65,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Ashby Hackathon 2026",
+        "x": 70,
+        "y": 510,
+        "w": 700,
+        "h": 45,
+        "size": 23,
+        "bold": false,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "Measured development results. Clinical usefulness remains unverified.",
+        "x": 70,
+        "y": 580,
+        "w": 1120,
+        "h": 55,
+        "size": 21,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "Floater Finder measures whether a pathology model depends on a small tissue fragment, and whether that evidence supports useful review. We completed a real-data pipeline and controlled stress experiments. We also rejected two review policies when they failed our development targets. This is a safety experiment with explicit failure gates.",
+    "source": "Development evidence through commit 06c7b77. No held-out test predictions.",
+    "seconds": 20
+  },
+  {
+    "title": "The specimen-consistency problem",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Extraneous tissue can create a diagnostic discrepancy",
+        "x": 70,
+        "y": 140,
+        "w": 650,
+        "h": 100,
+        "size": 31,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "A disease classifier can recognize cancer without establishing that the tissue belongs to the specimen.",
+        "x": 70,
+        "y": 270,
+        "w": 650,
+        "h": 145,
+        "size": 28,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "The intended action is focused pathologist review. Original tissue and predictions remain intact.",
+        "x": 70,
+        "y": 455,
+        "w": 650,
+        "h": 110,
+        "size": 26,
+        "bold": false,
+        "color": "#116D77"
+      },
+      {
+        "kind": "image",
+        "path": "submission/ashby_20261021_v2/media/benign_native.png",
+        "x": 840,
+        "y": 145,
+        "w": 230,
+        "h": 230
+      },
+      {
+        "kind": "image",
+        "path": "submission/ashby_20261021_v2/media/gp4_native.png",
+        "x": 840,
+        "y": 395,
+        "w": 230,
+        "h": 230
+      },
+      {
+        "kind": "text",
+        "text": "Actual Radboud tiles\nNative benign / GP4 annotations\nNo confirmed floater shown",
+        "x": 1090,
+        "y": 245,
+        "w": 140,
+        "h": 260,
+        "size": 17,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "Extraneous tissue can create diagnostic discrepancies. A disease classifier can recognize cancer without establishing that it belongs to the specimen. These are actual PANDA tiles with native benign and pattern-four annotations. Neither is a verified natural floater. The intended output is evidence for pathologist review, while preserving the tissue.",
+    "source": "Clinical context: Sapp et al. 2021, doi:10.14309/crj.0000000000000583. Tiles: media/provenance.json.\nLu et al., Nature Medicine 2024, https://doi.org/10.1038/s41591-024-02856-4\nBulten et al., Nature Medicine 2022, https://doi.org/10.1038/s41591-021-01620-2\nSapp et al., ACG Case Reports Journal 2021, https://doi.org/10.14309/crj.0000000000000583",
+    "seconds": 30
+  },
+  {
+    "title": "CONCH and the review question",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "CONCH supplies reusable visual representations",
+        "x": 70,
+        "y": 145,
+        "w": 1120,
+        "h": 60,
+        "size": 31,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Fixed morphology prompts support an engineering benign/cancer scorer. They do not certify specimen identity.",
+        "x": 70,
+        "y": 235,
+        "w": 1080,
+        "h": 100,
+        "size": 29,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Disease prediction",
+        "x": 70,
+        "y": 405,
+        "w": 480,
+        "h": 50,
+        "size": 29,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "What does the sampled tissue resemble?",
+        "x": 70,
+        "y": 475,
+        "w": 480,
+        "h": 100,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Review evidence",
+        "x": 700,
+        "y": 405,
+        "w": 500,
+        "h": 50,
+        "size": 29,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "Which component is unusual and consequential, and what uncertainty remains?",
+        "x": 700,
+        "y": 475,
+        "w": 500,
+        "h": 130,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      }
+    ],
+    "notes": "CONCH provides reusable histology representations. Frozen morphology prompts supply our engineering disease scorer. Specimen consistency is a separate task. We therefore examine visual inconsistency, prediction influence and physical context separately. A piece can influence the cancer prediction and still be entirely genuine.",
+    "source": "Lu et al., Nature Medicine 2024, doi:10.1038/s41591-024-02856-4. Frozen prompts/config: configs/panda_morphology_v1.yaml.",
+    "seconds": 20
+  },
+  {
+    "title": "120 real slides and 50,729 embeddings",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "40 benign      40 GG1      40 ISUP 4–5",
+        "x": 70,
+        "y": 145,
+        "w": 1140,
+        "h": 60,
+        "size": 34,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "72 training      24 calibration      24 held-out",
+        "x": 70,
+        "y": 240,
+        "w": 1140,
+        "h": 60,
+        "size": 30,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "112 µm tissue fields, spatial coordinates and native mask fractions\n512-dimensional normalized CONCH v1 embeddings\n119 usable masks. Distinct slide splits, patient identity unknown.",
+        "x": 70,
+        "y": 340,
+        "w": 1120,
+        "h": 190,
+        "size": 28,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Delta Slurm handled WSI processing and GPU encoding. Subsequent stress tests reuse saved features on CPU.",
+        "x": 70,
+        "y": 565,
+        "w": 1110,
+        "h": 75,
+        "size": 24,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "Our cohort contains one hundred twenty Radboud biopsies and fifty thousand seven hundred twenty-nine verified embeddings. Slides split seventy-two, twenty-four and twenty-four across training, calibration and held-out test. Patient identities are unavailable. Clean sampling ignores cancer masks. Delta Slurm handled WSI processing and GPU encoding. Subsequent experiments reuse cached features on CPU.",
+    "source": "reports/panda_s1_and_piece_results_20261020.md; reports/panda_embeddings_verified_23055022.json; reports/manifests/panda_verified_120_20261020.csv.",
+    "seconds": 25
+  },
+  {
+    "title": "Clean benign/cancer baseline",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Frozen top-5% pooling, calibration only",
+        "x": 70,
+        "y": 135,
+        "w": 1100,
+        "h": 55,
+        "size": 27,
+        "bold": false,
+        "color": "#116D77"
+      },
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Original slide label",
+            "Predicted benign",
+            "Predicted cancer"
+          ],
+          [
+            "Benign",
+            "5",
+            "3"
+          ],
+          [
+            "Cancer",
+            "1",
+            "15"
+          ]
+        ],
+        "x": 70,
+        "y": 235,
+        "w": 730,
+        "h": 240,
+        "widths": [
+          320,
+          205,
+          205
+        ],
+        "size": 27
+      },
+      {
+        "kind": "text",
+        "text": "20 / 24",
+        "x": 870,
+        "y": 235,
+        "w": 330,
+        "h": 80,
+        "size": 51,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Accuracy 83.3%\nBalanced accuracy 78.1%",
+        "x": 870,
+        "y": 345,
+        "w": 330,
+        "h": 110,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Only 5 of 8 benign hosts start correct. New contamination errors must use those five as the denominator.",
+        "x": 70,
+        "y": 535,
+        "w": 1120,
+        "h": 110,
+        "size": 28,
+        "bold": true,
+        "color": "#A36516"
+      }
+    ],
+    "notes": "The clean top-five-percent scorer is correct on twenty of twenty-four calibration slides, with seventy-eight-point-one percent balanced accuracy. It identifies fifteen of sixteen cancer slides, but only five of eight benign slides. Those five originally correct benign hosts define the new-error denominator. The three initial false positives cannot become new contamination errors.",
+    "source": "reports/panda_clean_baseline_23055022.json, calibration/benign_cancer/top5pct. Rows truth, columns prediction.",
+    "seconds": 30
+  },
+  {
+    "title": "S1: a controlled cancer-fragment stress test",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "32 benign host slides, 21 reused donor slides",
+        "x": 70,
+        "y": 145,
+        "w": 1130,
+        "h": 60,
+        "size": 33,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "192 trials across 0, 0.5, 1, 2, 5 and 10% doses\nDose = injected tiles / original host tiles, rounded up",
+        "x": 70,
+        "y": 255,
+        "w": 1120,
+        "h": 115,
+        "size": 29,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Each donor fragment uses unique four-connected saved tiles with ≥10% native cancer annotation per tile.",
+        "x": 70,
+        "y": 420,
+        "w": 1120,
+        "h": 100,
+        "size": 28,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Synthetic embedding mixtures and translated placement. No assertion of natural floaters or independent patients.",
+        "x": 70,
+        "y": 570,
+        "w": 1120,
+        "h": 80,
+        "size": 23,
+        "bold": false,
+        "color": "#A36516"
+      }
+    ],
+    "notes": "S1 inserts connected, annotated cancer-positive donor features into benign hosts at six doses. We use thirty-two host slides and twenty-one reused donor slides. Dose means donor tiles divided by original host tiles, rounded up. A new error conflicts with the original host label. The mixture truly contains donor cancer, so this does not prove misrecognition of its pixels.",
+    "source": "reports/panda_s1_summary_23065666.json; reports/panda_s1_donor_audit_23065666.json; frozen protocol configs/panda_s1_development_v1.json.",
+    "seconds": 30
+  },
+  {
+    "title": "Small fragments can change the prediction",
+    "objects": [
+      {
+        "kind": "chart",
+        "x": 65,
+        "y": 155,
+        "w": 740,
+        "h": 405,
+        "row_names": [
+          "Mean",
+          "Top 1%",
+          "Top 5%"
+        ],
+        "column_names": [
+          "0",
+          "0.5",
+          "1",
+          "2",
+          "5",
+          "10"
+        ],
+        "data": [
+          [
+            0,
+            0,
+            0,
+            0,
+            12.5,
+            50
+          ],
+          [
+            0,
+            12.5,
+            12.5,
+            12.5,
+            12.5,
+            25
+          ],
+          [
+            0,
+            12.5,
+            12.5,
+            25,
+            25,
+            25
+          ]
+        ]
+      },
+      {
+        "kind": "text",
+        "text": "Top-5% new errors",
+        "x": 855,
+        "y": 160,
+        "w": 350,
+        "h": 60,
+        "size": 29,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "1/5, 1/5, 2/5, 2/5, 2/5",
+        "x": 855,
+        "y": 255,
+        "w": 350,
+        "h": 100,
+        "size": 29,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Originally correct benign hosts\nDoses 0.5 / 1 / 2 / 5 / 10%",
+        "x": 855,
+        "y": 365,
+        "w": 350,
+        "h": 95,
+        "size": 23,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "8 error instances across\n2 unique calibration hosts",
+        "x": 855,
+        "y": 510,
+        "w": 350,
+        "h": 95,
+        "size": 25,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "Mean",
+        "x": 110,
+        "y": 605,
+        "w": 170,
+        "h": 40,
+        "size": 23,
+        "bold": true,
+        "color": "#0085D1"
+      },
+      {
+        "kind": "text",
+        "text": "Top 1%",
+        "x": 330,
+        "y": 605,
+        "w": 180,
+        "h": 40,
+        "size": 23,
+        "bold": true,
+        "color": "#398A1C"
+      },
+      {
+        "kind": "text",
+        "text": "Top 5%",
+        "x": 570,
+        "y": 605,
+        "w": 180,
+        "h": 40,
+        "size": 23,
+        "bold": true,
+        "color": "#747474"
+      },
+      {
+        "kind": "text",
+        "text": "Y: prediction changes (% of 8 calibration hosts). X: requested dose categories (%)",
+        "x": 80,
+        "y": 655,
+        "w": 730,
+        "h": 30,
+        "size": 17,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "Pooling changes sensitivity. For our primary top-five-percent scorer, positive-dose new errors are one, one, two, two and two out of five originally correct calibration hosts. These are eight error instances involving two unique hosts, rather than eight patients. Every original S1 trial passes exact oracle restoration. That validates pipeline integrity, not detector performance.",
+    "source": "Editable chart transcribes calibration prediction_changes/hosts from reports/panda_s1_summary_23065666.json. Original figure: reports/figures/panda_s1_development_23065666/stress_curves.png. Induced-error denominators: reports/panda_scientific_audit_v1.json.",
+    "seconds": 35
+  },
+  {
+    "title": "Known synthetic donor component",
+    "objects": [
+      {
+        "kind": "image",
+        "path": "submission/ashby_20261021_v2/media/known_synthetic_component.png",
+        "x": 70,
+        "y": 145,
+        "w": 620,
+        "h": 460
+      },
+      {
+        "kind": "text",
+        "text": "3 donor tiles",
+        "x": 770,
+        "y": 165,
+        "w": 430,
+        "h": 70,
+        "size": 37,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "0.0375 mm² injected footprint\n428 original host tiles",
+        "x": 770,
+        "y": 275,
+        "w": 430,
+        "h": 100,
+        "size": 28,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Cancer before exclusion\nBenign after exclusion",
+        "x": 770,
+        "y": 425,
+        "w": 430,
+        "h": 105,
+        "size": 30,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Known injection in a saved-feature mixture. These are tile footprints, not a microscopy composite.",
+        "x": 70,
+        "y": 630,
+        "w": 1120,
+        "h": 45,
+        "size": 21,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "This known synthetic insertion contains three cancer-positive donor tiles in a four-hundred-twenty-eight-tile host. Excluding the red-outlined fragment changes cancer back to benign. The measured footprint is zero-point-zero-three-seven-five square millimeters. This plot shows saved coordinates, not natural contamination or a microscopy composite.",
+    "source": "reports/panda_piece_synthetic_foreign_example_23065744.json; original right two panels from reports/figures/panda_piece_development_23065744/piece_examples.png. Crop hashes/coordinates: media/provenance.json.",
+    "seconds": 25
+  },
+  {
+    "title": "Genuine cancer can also change the decision",
+    "objects": [
+      {
+        "kind": "image",
+        "path": "submission/ashby_20261021_v2/media/genuine_native_component.png",
+        "x": 70,
+        "y": 145,
+        "w": 620,
+        "h": 460
+      },
+      {
+        "kind": "text",
+        "text": "Native annotated cancer",
+        "x": 770,
+        "y": 165,
+        "w": 430,
+        "h": 100,
+        "size": 34,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "0.171 mm² annotation within\na 5.439 mm² sampled footprint\n435 tiles in this component",
+        "x": 770,
+        "y": 295,
+        "w": 430,
+        "h": 135,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Cancer before exclusion\nBenign after exclusion",
+        "x": 770,
+        "y": 465,
+        "w": 430,
+        "h": 100,
+        "size": 29,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Red shading shows native cancer fraction. Dependence alone does not establish foreignness.",
+        "x": 70,
+        "y": 630,
+        "w": 1120,
+        "h": 45,
+        "size": 22,
+        "bold": true,
+        "color": "#A36516"
+      }
+    ],
+    "notes": "The genuine-cancer counterexample produces the same decision change. Excluding this unmodified four-hundred-thirty-five-tile component changes cancer to benign. It contains zero-point-one-seven-one square millimeters of native cancer annotation inside a five-point-four-three-nine-square-millimeter sampled footprint. The component is not a tiny tumor focus or a confirmed whole piece. Influence alone cannot establish foreignness.",
+    "source": "reports/panda_piece_genuine_cancer_example_23065744.json; original left two panels from reports/figures/panda_piece_development_23065744/piece_examples.png. Native-cancer colorbar 0–1 is omitted from crop, red shading identified explicitly. media/provenance.json.",
+    "seconds": 30
+  },
+  {
+    "title": "Observed tissue geometry has limits",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Actual RGB overview",
+        "x": 70,
+        "y": 160,
+        "w": 520,
+        "h": 45,
+        "size": 26,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "Observed foreground edge proxy",
+        "x": 690,
+        "y": 160,
+        "w": 520,
+        "h": 45,
+        "size": 26,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "image",
+        "path": "reports/panda_topology_qa_v1/3c685ed0f92e30f6ffeb5cea7cef5994/overview.png",
+        "x": 70,
+        "y": 230,
+        "w": 520,
+        "h": 316
+      },
+      {
+        "kind": "image",
+        "path": "reports/panda_topology_qa_v1/3c685ed0f92e30f6ffeb5cea7cef5994/tissue_edges.png",
+        "x": 690,
+        "y": 230,
+        "w": 520,
+        "h": 316
+      },
+      {
+        "kind": "text",
+        "text": "Worst mapping among training slides: 76% of tiles assigned. Review abstains on this case.",
+        "x": 70,
+        "y": 565,
+        "w": 1120,
+        "h": 55,
+        "size": 25,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "RGB at factor 16, without gap filling. Boundaries are proxies. 4 of 6 formerly single-component calibration cases become multiple.",
+        "x": 70,
+        "y": 635,
+        "w": 1120,
+        "h": 45,
+        "size": 20,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "Sparse sampled cells can misrepresent physical pieces. We use observed RGB foreground at pyramid factor sixteen without filling gaps. This worst-mapping training example maps only seventy-six percent of tiles, so review abstains. Four of six formerly single-component calibration cases become multiple components. RGB boundaries remain proxies and empty exclusions stay unevaluable.",
+    "source": "Actual training RGB overview and foreground edge output for3c685ed0f92e30f6ffeb5cea7cef5994, selected by lowest training mapping, not classification outcomes. reports/panda_topology_qa_v1/provenance.json. Mapping76/100; observedRGB15components vs sampled4; no pathologist-confirmed boundaries.",
+    "seconds": 20
+  },
+  {
+    "title": "Review utility conflicts with reviewer burden",
+    "objects": [
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Calibration rule",
+            "Fragments hit",
+            "Clean slides alerted",
+            "Components / slide"
+          ],
+          [
+            "Combined",
+            "0 / 40",
+            "0 / 24",
+            "0"
+          ],
+          [
+            "Visual only",
+            "0 / 40",
+            "0 / 24",
+            "0"
+          ],
+          [
+            "Decision only",
+            "8 / 40",
+            "4 / 24",
+            "0.167"
+          ],
+          [
+            "Spatial only",
+            "32 / 40",
+            "19 / 24",
+            "3.583"
+          ]
+        ],
+        "x": 65,
+        "y": 160,
+        "w": 1150,
+        "h": 285,
+        "widths": [
+          330,
+          240,
+          300,
+          280
+        ],
+        "size": 24
+      },
+      {
+        "kind": "text",
+        "text": "Decision-only hypothetical filtering damages 3/20 originally correct clean predictions and flags 1/26 native cancer components.",
+        "x": 70,
+        "y": 500,
+        "w": 1120,
+        "h": 100,
+        "size": 27,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "40 mixtures reuse 8 hosts. Clean alerts measure review burden, not adjudicated natural-contaminant specificity.",
+        "x": 70,
+        "y": 630,
+        "w": 1120,
+        "h": 45,
+        "size": 20,
+        "bold": false,
+        "color": "#586674"
+      },
+      {
+        "kind": "text",
+        "text": "Development targets: ≤10% clean slides alerted and ≤0.5 components per slide",
+        "x": 70,
+        "y": 460,
+        "w": 1120,
+        "h": 35,
+        "size": 22,
+        "bold": true,
+        "color": "#116D77"
+      }
+    ],
+    "notes": "The detector comparison reveals a burden tradeoff. Spatial rules hit thirty-two of forty fragments but alert on nineteen of twenty-four clean slides. Decision dependence hits eight fragments and recovers eight induced-error instances, but alerts on four clean slides. Hypothetical filtering damages three of twenty initially correct clean predictions and flags a genuine cancer component.",
+    "source": "reports/panda_review_selection_v1.json, comparison calibration. 40 correlated positive-dose mixtures, 24 clean slides, 26 evaluable annotated native-cancer components. Filtering is hypothetical only.",
+    "seconds": 35
+  },
+  {
+    "title": "The combined v1 policy failed its utility gate",
+    "objects": [
+      {
+        "kind": "image",
+        "path": "reports/figures/panda_review_v1_final/review_failure_funnel.png",
+        "x": 70,
+        "y": 155,
+        "w": 740,
+        "h": 375
+      },
+      {
+        "kind": "text",
+        "text": "0 / 40 fragments detected",
+        "x": 855,
+        "y": 165,
+        "w": 350,
+        "h": 95,
+        "size": 35,
+        "bold": true,
+        "color": "#A94740"
+      },
+      {
+        "kind": "text",
+        "text": "No useful candidate among\n81 preregistered rules",
+        "x": 855,
+        "y": 315,
+        "w": 350,
+        "h": 110,
+        "size": 29,
+        "bold": true,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "0/24 alerts has a 95%\nWilson interval of 0–13.8%",
+        "x": 855,
+        "y": 495,
+        "w": 350,
+        "h": 85,
+        "size": 23,
+        "bold": false,
+        "color": "#586674"
+      },
+      {
+        "kind": "text",
+        "text": "The frozen protocol records rejection. Its final-test job remains blocked.",
+        "x": 70,
+        "y": 610,
+        "w": 1130,
+        "h": 55,
+        "size": 28,
+        "bold": true,
+        "color": "#A94740"
+      }
+    ],
+    "notes": "The combined policy misses every calibration fragment. Five mixtures pass its visual criterion, but none also passes influence. Those five mixtures are nested doses from one host. No useful candidate emerges among eighty-one preregistered rules. Zero clean alerts cannot rescue zero recall. We froze the rejection and blocked its final-test job.",
+    "source": "reports/panda_review_diagnostics_v1.json; reports/panda_review_selection_v1.json; configs/panda_frozen_protocol_v1.json unchanged. Budgets: ≤10% clean-slide alerts, ≤0.5 components/slide. Utility: ≥20% fragment recall, ≥25% induced-error recovery. Five visually qualifying mixtures are five nested doses from one calibration host, not five independent hosts. reports/panda_review_v2_results.md.",
+    "seconds": 30
+  },
+  {
+    "title": "S2: clean grade scorer before contamination",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Mean pooling selected before S2 outcomes",
+        "x": 70,
+        "y": 145,
+        "w": 1110,
+        "h": 60,
+        "size": 31,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Clean low/high scorer",
+            "Training correct",
+            "Calibration correct"
+          ],
+          [
+            "Mean, primary",
+            "35 / 48",
+            "12 / 16"
+          ],
+          [
+            "Top 1%",
+            "29 / 48",
+            "10 / 16"
+          ],
+          [
+            "Top 5%",
+            "30 / 48",
+            "11 / 16"
+          ]
+        ],
+        "x": 70,
+        "y": 250,
+        "w": 1110,
+        "h": 245,
+        "widths": [
+          450,
+          330,
+          330
+        ],
+        "size": 25
+      },
+      {
+        "kind": "text",
+        "text": "Primary calibration: low 8/8, high 4/8. Limited high-grade sensitivity remains explicit.",
+        "x": 70,
+        "y": 535,
+        "w": 1110,
+        "h": 70,
+        "size": 27,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "760 trials across four donor conditions. 32 host slides, 37 donor slides. Exact oracle: 760/760.",
+        "x": 70,
+        "y": 625,
+        "w": 1110,
+        "h": 45,
+        "size": 22,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "S2 now tests low-versus-high predictions using pattern-four-or-five donor material and same-grade controls. We chose mean pooling before stress outcomes. Its clean calibration baseline gets all eight low-grade slides correct, but only four of eight high-grade slides. That limited sensitivity remains explicit. All seven hundred sixty trial records pass exact oracle restoration.",
+    "source": "Verified CPU Slurm job 23067396; source35e0a8dae57e22808420b45ae040fc2f8c3710a5. reports/panda_s2_results_v1.md; reports/panda_s2_development_v1/clean_audit.json; summary.json; completion.json.",
+    "seconds": 25
+  },
+  {
+    "title": "S2 primary result: no calibration label flips",
+    "objects": [
+      {
+        "kind": "image",
+        "path": "submission/ashby_20261021_v2/media/s2_pooling_sensitivity.png",
+        "x": 70,
+        "y": 155,
+        "w": 700,
+        "h": 405
+      },
+      {
+        "kind": "text",
+        "text": "Mean: 0 / 8",
+        "x": 825,
+        "y": 165,
+        "w": 385,
+        "h": 80,
+        "size": 43,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "New low-to-high errors\nat every tested GP4/5 dose",
+        "x": 825,
+        "y": 270,
+        "w": 385,
+        "h": 95,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Top 1% at 10%: 2/2\nTop 5% at 10%: 3/3",
+        "x": 825,
+        "y": 420,
+        "w": 385,
+        "h": 100,
+        "size": 28,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "Same-grade GP3 control also causes 1/3 top-5% new errors at 10%. A binary flip is not a clinical Grade Group upgrade.",
+        "x": 70,
+        "y": 610,
+        "w": 1120,
+        "h": 70,
+        "size": 24,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "X: requested foreign / original-host tile percentage (ceil-rounded counts)",
+        "x": 70,
+        "y": 580,
+        "w": 715,
+        "h": 25,
+        "size": 17,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "The primary S2 result is negative: zero of eight new calibration errors at every tested requested dose. Training has one of twenty-two at ten percent. Secondary top pooling flips two of two or three of three correct hosts, but misclassifies most clean low-grade slides. Same-grade tissue also causes a flip. Eight pattern-five cases lack capacity. These are binary engineering endpoints, not clinical upgrades.",
+    "source": "reports/panda_s2_results_v1.md; reports/panda_s2_development_v1/analysis.json. Figure upper-right crop from reports/figures/panda_s2_development_23067396/s2_development.png. Per-dose denominator = unique originally correct low-grade hosts. GP5 at10% unavailable, not0error.",
+    "seconds": 35
+  },
+  {
+    "title": "Detector v2: a separately versioned ranking study",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Training selects rank threshold and review cap",
+        "x": 70,
+        "y": 145,
+        "w": 1110,
+        "h": 60,
+        "size": 30,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "Visual anomaly and prediction influence become separate rank features. Geometry contributes observed area and isolation.",
+        "x": 70,
+        "y": 255,
+        "w": 1110,
+        "h": 115,
+        "size": 30,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Native annotation, injection truth and donor identity enter evaluation only. They never enter the blinded review features.",
+        "x": 70,
+        "y": 435,
+        "w": 1110,
+        "h": 105,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Known calibration outcomes make this iterative development, not independent validation.",
+        "x": 70,
+        "y": 610,
+        "w": 1110,
+        "h": 65,
+        "size": 25,
+        "bold": true,
+        "color": "#A36516"
+      }
+    ],
+    "notes": "Version two tests ranked review instead of requiring every signal to pass a strict conjunction. Training selects thresholds and review caps. Visual, influence and geometry features enter the ranking. Injection truth, donor identity and native annotation remain evaluation-only. Previously seen calibration outcomes make this iterative development, not independent validation.",
+    "source": "Verified CPU job23067454; source668d9b8c4e3e8aa300bda6ff15e416c601c2e024. configs/panda_review_development_v2.json; reports/panda_review_v2_results.json. No model training/test-derived normalization.",
+    "seconds": 20
+  },
+  {
+    "title": "Ranked review still fails useful calibration recall",
+    "objects": [
+      {
+        "kind": "table",
+        "rows": [
+          [
+            "Ranked-review condition",
+            "Fragments hit",
+            "Clean slides alerted",
+            "Clean damage"
+          ],
+          [
+            "Selected combined, train",
+            "22 / 120",
+            "3 / 72",
+            "3 / 61"
+          ],
+          [
+            "Selected combined, known cal",
+            "0 / 40",
+            "1 / 24",
+            "0 / 20"
+          ],
+          [
+            "Top-one visual + relevance, cal",
+            "21 / 40",
+            "24 / 24",
+            "2 / 20"
+          ]
+        ],
+        "x": 65,
+        "y": 170,
+        "w": 1150,
+        "h": 275,
+        "widths": [
+          455,
+          225,
+          260,
+          210
+        ],
+        "size": 23
+      },
+      {
+        "kind": "text",
+        "text": "Unbudgeted top-one review flags 14 native cancer components. It exceeds both review-burden targets.",
+        "x": 70,
+        "y": 490,
+        "w": 1120,
+        "h": 95,
+        "size": 27,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "No supported v2 policy and no validated useful improvement over v1. The 24-slide final test remains blocked.",
+        "x": 70,
+        "y": 625,
+        "w": 1120,
+        "h": 55,
+        "size": 25,
+        "bold": true,
+        "color": "#A94740"
+      }
+    ],
+    "notes": "The selected rank detects twenty-two of one hundred twenty training fragments, but zero of forty on known calibration. Its one clean calibration alert contains native cancer. An unbudgeted ranking hits twenty-one fragments but alerts on every clean slide and flags fourteen native cancer components. That exceeds the burden targets. We found no useful validated improvement over version one.",
+    "source": "reports/panda_review_v2_results.json; reports/panda_review_v2_results.md; selected primary combined_rank and unbudgeted reference visual_relevance_rank, known calibration. Source668d9b8c4e3e8aa300bda6ff15e416c601c2e024; job23067454. Calibration is iterative development. No tissue removed.",
+    "seconds": 30
+  },
+  {
+    "title": "What the experiment demonstrates",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Demonstrated",
+        "x": 70,
+        "y": 145,
+        "w": 500,
+        "h": 55,
+        "size": 31,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "Verified PANDA-to-CONCH pipeline\nS1 synthetic model-sensitivity effects\nS2 null primary calibration outcome\nTwo review policies rejected honestly",
+        "x": 70,
+        "y": 235,
+        "w": 550,
+        "h": 275,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Still unverified",
+        "x": 720,
+        "y": 145,
+        "w": 490,
+        "h": 55,
+        "size": 31,
+        "bold": true,
+        "color": "#A36516"
+      },
+      {
+        "kind": "text",
+        "text": "Naturally occurring floater detection\nPatient-level independence\nClinical cancer or grading validity\nIndependent final-test performance",
+        "x": 720,
+        "y": 235,
+        "w": 490,
+        "h": 275,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Preserving a negative result is part of the safety check.",
+        "x": 70,
+        "y": 590,
+        "w": 1120,
+        "h": 55,
+        "size": 30,
+        "bold": true,
+        "color": "#173042"
+      }
+    ],
+    "notes": "We demonstrate a verified pipeline, S1 sensitivity, a negative primary S2 result and two rejected review policies. We do not establish natural-floater detection or clinical usefulness. Reused donors, unknown patient overlap and representative sampling limit inference. Artificial edge placement also simplifies geometry. The twenty-four final slides remain unscored.",
+    "source": "All numerical claims refer to training/calibration only. reports/panda_scientific_audit_v1.md; reports/panda_review_results_v1.md.",
+    "seconds": 25
+  },
+  {
+    "title": "Next evidence requires a new scientific gate",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "24 final-test slides remain sealed",
+        "x": 70,
+        "y": 150,
+        "w": 1140,
+        "h": 70,
+        "size": 37,
+        "bold": true,
+        "color": "#116D77"
+      },
+      {
+        "kind": "text",
+        "text": "S3: useful review with genuine-cancer preservation and realistic controls.\nS4: external institutions and models, after separate approval and embedding-compatibility checks.",
+        "x": 70,
+        "y": 285,
+        "w": 1120,
+        "h": 150,
+        "size": 28,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "A useful new policy needs a new frozen protocol and explicit final-test authorization. Additional models or GPU work require a separate scope.",
+        "x": 70,
+        "y": 500,
+        "w": 1120,
+        "h": 115,
+        "size": 27,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Research prototype. Pathologist review only. No automatic tissue removal.",
+        "x": 70,
+        "y": 640,
+        "w": 1120,
+        "h": 35,
+        "size": 22,
+        "bold": true,
+        "color": "#586674"
+      }
+    ],
+    "notes": "Next research needs useful review that preserves native cancer, followed by external institutional and model testing. New resources need separate approval. Any final evaluation requires a scientifically useful, newly frozen protocol and explicit authorization. Original tissue remains intact.",
+    "source": "Final preparation verified by CPU preflight job 23066843. No final job submitted. Versioned readiness and command: docs/panda_final_test_v1.md.",
+    "seconds": 15
+  },
+  {
+    "title": "Sources and reproducibility",
+    "objects": [
+      {
+        "kind": "text",
+        "text": "Clinical context\nSapp et al. 2021. doi:10.14309/crj.0000000000000583",
+        "x": 70,
+        "y": 145,
+        "w": 1120,
+        "h": 90,
+        "size": 24,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Foundation model\nLu et al. Nature Medicine 2024. doi:10.1038/s41591-024-02856-4",
+        "x": 70,
+        "y": 260,
+        "w": 1120,
+        "h": 90,
+        "size": 24,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Dataset\nBulten et al. Nature Medicine 2022. doi:10.1038/s41591-021-01620-2",
+        "x": 70,
+        "y": 375,
+        "w": 1120,
+        "h": 90,
+        "size": 24,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "Code and measured development evidence\ngithub.com/MuneebHoda/floater-finder/tree/feature/panda-tiling",
+        "x": 70,
+        "y": 490,
+        "w": 1120,
+        "h": 90,
+        "size": 24,
+        "bold": false,
+        "color": "#173042"
+      },
+      {
+        "kind": "text",
+        "text": "S1/v1 source: 06c7b77. S2 source: 35e0a8. v2 source: 668d9b8.\nMedia hashes, source reports and exact protocol paths accompany this deck.",
+        "x": 70,
+        "y": 615,
+        "w": 1120,
+        "h": 60,
+        "size": 19,
+        "bold": false,
+        "color": "#586674"
+      }
+    ],
+    "notes": "Reference slide for questions. Sources, media provenance and version hashes accompany the submission. No final-test prediction appears in the deck.",
+    "source": "Lu et al., Nature Medicine 2024, https://doi.org/10.1038/s41591-024-02856-4\nBulten et al., Nature Medicine 2022, https://doi.org/10.1038/s41591-021-01620-2\nSapp et al., ACG Case Reports Journal 2021, https://doi.org/10.14309/crj.0000000000000583\nS2: reports/panda_s2_results_v1.md. v2: reports/panda_review_v2_results.json. Sources/hashes in media_manifest.json.",
+    "seconds": 0
+  }
+]

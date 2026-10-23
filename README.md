@@ -1,8 +1,64 @@
 # Floater Finder
 
-Stress-testing pathology vision-language models against synthetic tissue contamination and detecting suspicious foreign tissue without model fine-tuning. The first milestone is CONCH on TCGA-PRAD versus TCGA-BLCA.
+Current software verification: **453 tests pass**. All four pixel-study jobs were still pending at the latest October 21 inspection; no new real pixel results are claimed. [Verified CPU-capacity and node-health constraints](docs/ncsa_setup.md).
 
-This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. **The scheduled CONCH v1 workflow now passes a four-patient smoke through patient-separated detector calibration and evaluation. The fixed detector threshold misses most injected tiles; broader validation remains necessary.**
+The approved [10k-benchmark GPU profile is queued as **23109849**](reports/panda_pixel_program_gpu_submission_v1.md), waiting for CPU **23109667** to succeed and the existing pilot GPU to terminate. The remaining encoding is conditional on profile verification and billing reconciliation.
+
+The parallel [10,000-record CPU preparation is submitted as **23109667**](reports/panda_gpu_program_cpu_execution_v1.md), pending on priority. Its GPU profile is queued as **23109849**; remaining approved encoding awaits profile verification and billing reconciliation. Queue forecasts currently extend beyond the deadline.
+
+The [expanded GPU research plan](docs/panda_gpu_research_program_v1.md) prepares a separate 10,000-record pixel benchmark and audits exact billing. Later GPU workstreams remain separately gated; [CPU preparation history](reports/panda_gpu_research_program_preparation_v1.md).
+
+The [pixel GPU job is submitted as **23109340**](reports/panda_pixel_gpu_submission_v1.md), waiting for CPU preparation **23109277** to succeed. The one-A100/four-CPU/16GB/five-minute request preserves the frozen runtime,real-manifest checks and unchanged/null drift gates. **432 tests pass**. The96 real images and new GPU measurements remain unverified; leave the queued jobs in place. All data stay on Delta and original test predictions remain sealed.
+
+The [four-pair pixel contamination study is prepared in code](reports/panda_pixel_contamination_preparation_v1.md), with **424 passing tests**. Real-data CPU preparation job **23109277 is pending** after a scheduler-prolog timeout on the first node; leave it queued. The 96 real composite/control images and exact GPU manifest remain unverified. No new CONCH inference or pixel-level scientific result exists; GPU submission requires separate approval after preparation passes. All data stay on Delta and original test predictions remain sealed.
+
+The [fixed-support candidate was executed and failed its utility gate](reports/panda_stable_context_results_v1.md): **3/24 fragments detected, 1/12 source-exact hypothetical error recoveries, 8/72 clean slides alerted (11.1%)**. Both fixed-support and matched full-context methods remain unsupported at the frozen targets. **416 tests pass**; no new model inference, GPU or downloads. Human review remains pending (no reviewer available); the final test stays sealed.
+
+The [qualitative expert-review packet is verified on Delta](reports/panda_expert_review_preparation_v1.md): 24 blank original-training case records, an unblinded rubric and a provenance/completeness validator. **408 tests pass; 0/24 cases reviewed**. Human assessments remain pending; software cannot supply expert review or validate foreignness. No new inference, jobs or downloads occurred.
+
+The [saved native/synthetic control audit completed](reports/panda_paired_control_audit_results_v1.md): **24 original training pairs /16 reused donors, 250 unchanged PNGs, 386 passing tests**. Cached cases show 12 new host-label errors among 18 originally correct benign hosts; six hosts were already incorrect. Three genuine native cancer-containing components also change predictions on exclusion. Dependence does not establish foreignness; all tissue is preserved, no new inference/GPU/downloads or final-test access. Detailed comparisons remain on Delta; visual/clinical validity is unverified.
+
+The [bounded PNG galleries completed](reports/panda_preview_export_results_v1.md): **72 training slides /389 RGB components, 1,638 unchanged source images, 363 passing tests**. Geometry-selected component/outside examples retain recorded physical coordinates and uncertainty. Original predictions/reports are preserved; no new inference, GPU or local download. All galleries stay on Delta. Browser layout and visual/clinical validity remain unverified.
+
+The [review-only dependence export completed](reports/panda_dependence_export_results_v1.md): **72 training-slide JSON/HTML reports, 389 RGB components, 350 passing tests**. It preserves saved baseline/counterfactual evidence and explicit context abstentions, with no ranking, foreignness decisions or tissue removal. All detailed reports remain on Delta; no new predictions, GPU, downloads or final-test access. Visual layout remains unverified and image panels are not yet included.
+
+The [numeric-context/native-control audit completed](reports/panda_context_safety_results_v1.md): **72 training slides, 336 passing tests**. Explicit context abstentions leave 325/389 RGB and 316/377 sampled components eligible for numeric comparison, including 44 and 75 genuine cancer-containing components. Eligibility does not establish foreignness; all review decisions remain unset and tissue is preserved. No new predictions, GPU, downloads or final-test access.
+
+The [original-training topology/context audit completed](reports/panda_topology_context_results_v1.md): **72 slides, 2,160 planned context records, 315 passing software tests**. Sampled components disagree substantially with cached RGB membership. Sparse comparison context causes large morphology-score sensitivity without inserted foreign tissue; six outside tiles supplies NN5 neighbor counts but does not validate a review cutoff. No classifier predictions, GPU, downloads or final-test access. The floater review policy remains unsupported.
+
+The [S3 conservative review-transfer diagnostic completed](reports/panda_fresh_review_transfer_results_v1.md): 140 saved bags /9800 model-policy records, **306 passing software tests**. The primary combined rule detects **0/20 foreign fragments per edit mode** while flagging four genuine cancer-containing carriers and hypothetically damaging 4/46 initially correct unmodified predictions. Its apparent one-case label recovery retains all foreign tissue. No useful review policy follows; topology/native-context feasibility needs further development. All data/raw results stay on Delta and original final-test predictions remain sealed.
+
+The [frozen CPU S1 follow-up completed](reports/panda_fresh_s1_results_v1.md): **1,191 interventions /2,382 exact oracle passes**, nine capacity exclusions and 140 counterfactual bags. At 5% requested contamination, the fixed primary changes 9/54 initially correct host-trial decisions per edit mode (four unique hosts). Genuine cancer-containing pieces also influence predictions: excluding them changes primary cancer to benign in 14 component tests across 13 slides. This does not validate foreignness or a review alert. **297 software tests pass**; all raw artifacts stay on Delta and the original 24 test predictions remain sealed.
+
+Fresh Radboud60 [CONCH encoding and frozen baseline evaluation are complete](reports/panda_fresh_baseline_results_v1.md): **60 slides / 25,915 verified 512D embeddings**. The frozen primary reaches **80.0% benign/cancer balanced accuracy** (cancer recall 28/40) and **72.5% low/high** (high-grade recall 11/20); both have wide slide-bootstrap intervals. All files remain on Delta. No refitting, threshold changes or original 24 final-test predictions; no floater-policy validity follows. [CPU intake evidence](reports/panda_fresh_cpu_execution_v1.md); unchanged software suite 284 tests.
+
+The latest [paired-placement CPU audit](reports/panda_detector_placement_v1.md) is complete: the frozen primary detects **0/607 foreign-fragment instances**, recovers **0/39 induced-error instances**, and detects 0/59 in each common paired placement mode. This four-host training-only study does not establish a useful review policy. **272 software tests pass**; all final-test predictions remain sealed.
+
+Research now uses training-only frozen-CONCH linear probes, a shared intervention/registry engine and context-aware detector v3. Grade prediction has promising development point estimates but no established independent improvement; v3 remains ineffective at low review burden. The [research checkpoint](reports/panda_research_checkpoint_v1.md) records all candidates, failures, S2 v2 engineering scope, fresh-cohort metadata and resource gates. Historical evidence below is retained; all 24 final-test predictions remain sealed.
+
+The **[19-slide submission package](submission/ashby_20261021_v2/)** contains the standalone PowerPoint/PDF, abstract, eight-minute script, Q&A and checklist. Completed CPU S2 stress preserves **760/760 exact oracle recoveries**; its preselected mean scorer has **0/8 calibration low-to-high errors at every primary dose**. Ranked detector v2 also remains unsupported: **0/40 calibration fragment hits**, with **1/24 unmodified slides alerted**. [Current execution checkpoint](reports/submission_execution_checkpoint_20261020.md), [S2 results](reports/panda_s2_results_v1.md), [ranked v2 results](reports/panda_review_v2_results.md). All 24 final-test slides remain unscored; **204 software tests pass**.
+
+PANDA has **120 slides / 50,729 verified CONCH embeddings**. Development review-policy v1 is now **frozen and rejected**: the combined policy flags 0/24 unmodified calibration slides but detects 0/40 injected fragments. Decision dependence alone detects more but exceeds the clean-alert/harm targets. The 24 final-test slides remain unscored; CPU preflight verified 10,988 input files without decoding labels or computing predictions. [Current scientific findings](reports/panda_review_results_v1.md), [presentation figures and outline](reports/panda_presentation_v1.md), [frozen protocol and blocked final command](docs/panda_final_test_v1.md).
+
+Floater Finder now targets a CONCH-only **prostate-biopsy fragment-dependence safety check**: identify pieces whose exclusion changes a supplied slide scorer's decision, while preserving all tissue and the original prediction. The immediate target is benign-versus-cancer S1. A decisive piece may be genuine small cancer; this check does not establish foreign tissue.
+
+The PANDA adapter provides bounded pyramid-region tiling, physical coordinates and native-mask label fractions with the existing CONCH encoder. Real clean development scoring, 192 connected-fragment S1 trials and component-review comparisons have run; all original 192 oracle checks pass. The earlier [implementation status](reports/panda_implementation_status.md) and [artifact audit](docs/panda_integration.md) preserve the initial smoke-stage history. The current software suite passes **192 tests**. These development observations do not establish a clinically useful cancer or floater detector.
+
+```sh
+uv sync --locked --no-editable --reinstall-package floater-finder --extra test
+.venv/bin/python scripts/fragment_dependence_demo.py --output results/fixtures/fragment-dependence/new-run
+```
+
+The demo saves/reloads artificial embeddings and emits baseline/counterfactual predictions, piece geometry and [fixture alert JSON](examples/fragment_dependence/alert.fixture.json). Its scorer and thresholds are artificial and uncalibrated. `analyze_saved_slide()` now accepts saved NPZ artifacts plus a prediction callable and requires recorded physical geometry. Existing CLI commands and the CONCH/NCSA pipeline remain available below; the earlier TCGA experiments are historical **organ-classification evidence only**, not evidence of cancer detection.
+
+For PANDA TIFF integration tests, install the optional region-reader dependencies:
+
+```sh
+uv sync --locked --no-editable --reinstall-package floater-finder --extra test --extra panda
+.venv/bin/python -m pytest tests/test_panda.py tests/test_fragment_dependence.py -q -W error
+```
+
+This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. The historical CONCH v1 organ workflow passed a four-patient smoke through patient-separated detector calibration and evaluation. The fixed detector threshold missed most injected tiles; the subsequent development cutoff gate failed. Those observations are preserved below and in the experiment reports.
 
 ## Run locally
 

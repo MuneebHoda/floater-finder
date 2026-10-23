@@ -1,0 +1,8 @@
+{
+  "900ca15382fabf04c7b62af369e0b551": {
+    "sha256": "0d915e9abb3aa4a20bd71a9981521725f388114b33895207ba9e04a4fb92cf6a",
+    "reason": "Native LZW annotation decode failed with OpenSlide and Pillow; tile annotation fractions remain unknown; original file preserved",
+    "diagnostic_report_sha256": "cae9d01ca8b48d6e58e426140215a7de12e0c732c27e78bbe8cb7c9ff1998541",
+    "diagnostic_remote_path": "/work/nvme/bfqi/mhoda/floater-finder/panda-mask-diagnostic/900ca153-20261020-v2.json"
+  }
+}

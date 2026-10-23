@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "base_commit": "434b401",
+  "splits": ["train", "calibration"],
+  "scorer": {"pooling": "top5pct", "classes": ["benign", "cancer"], "prompts": "configs/panda_morphology_v1.yaml"},
+  "topology": {"pyramid_level": 2, "maximum_pixels": 4000000, "rgb_maximum": 220, "minimum_chroma": 10, "connectivity": 8, "morphology": "none", "tile_component_purity": 0.8, "minimum_foreground_coverage": 0.1, "minimum_mapped_tile_fraction": 0.9, "sensitivity_rgb_maximum": 235, "sensitivity_minimum_chroma": 5},
+  "visual_neighbors": 5,
+  "visual_aggregation": "median of tile distances to mean of up to five nearest outside-component cosine neighbors",
+  "grid": {"training_visual_quantiles": [0.90, 0.95, 0.99], "influence": ["flip", 0.01, 0.02], "maximum_observed_area_mm2": [0.05, 0.25, 1.0], "minimum_isolation_bbox_lower_bound_mm": [0.0, 0.1, 0.2]},
+  "budgets": {"unmodified_alert_rate": 0.10, "components_per_slide": 0.5, "genuine_cancer_slide_flag_rate": 0.10, "clean_damage_rate": 0.05},
+  "confirmed_user_budgets": ["unmodified_alert_rate", "components_per_slide"],
+  "additional_engineering_safety_targets": ["genuine_cancer_slide_flag_rate", "clean_damage_rate"],
+  "minimum_useful_fragment_recall": 0.20,
+  "minimum_useful_induced_error_recovery": 0.25,
+  "matched_random_draws": 20,
+  "seed": 20261021,
+  "selection": "Train only: satisfy all burden/harm constraints; maximize fragment recall then induced-error recovery, then minimize negative-control alerts and burden. Validate the single selected rule on calibration without retuning. If either split fails, do not authorize final prediction.",
+  "final_test_predictions_authorized": false
+}

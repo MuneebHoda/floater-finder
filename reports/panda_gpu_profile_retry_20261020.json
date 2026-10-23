@@ -1,0 +1,15 @@
+{
+  "gpu_profile_job_id": "23051627",
+  "gpu_fixed_source": "/u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v3/source",
+  "gpu_fixed_archive_sha256": "f2986a39d7589f419e5fc963d01844d931d97a82a4cde0404f5ec930dd5ff9bb",
+  "gpu_fixed_local_stage": "/var/folders/ws/kz52lt0948sdkwpvbrbyk4g40000gn/T/panda-namespace-fix-tfk4jocr",
+  "gpu_initial_failure": {
+    "job_id": "23051627",
+    "elapsed_seconds": 12,
+    "exit_code": "1:0",
+    "cause": "CONCH namespace package origin=None; provenance check failed before inference"
+  },
+  "gpu_retry_output": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/profile-20261020-v1-v2",
+  "gpu_retry_command": "sbatch --parsable --time=00:04:48 /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v3/source/scripts/slurm/panda_encode_profile.sbatch /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v3/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v3/source/configs/panda_encode_profile_directories.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/profile-20261020-v1-v2",
+  "gpu_retry_job_id": "23051673"
+}

@@ -1,0 +1,554 @@
+{
+  "config": {
+    "schema_version": 1,
+    "experiment_id": "panda-conch-predictors-v1",
+    "splits_for_selection": [
+      "train"
+    ],
+    "known_calibration_role": "Repeatedly inspected descriptive development only; never independent validation",
+    "tasks": {
+      "benign_cancer": [
+        "benign",
+        "cancer"
+      ],
+      "low_high": [
+        "low_grade",
+        "high_grade"
+      ]
+    },
+    "models": [
+      "zero_shot_mean",
+      "zero_shot_top1pct",
+      "zero_shot_top5pct",
+      "linear_mean",
+      "linear_mean_max_topk"
+    ],
+    "c_grid": [
+      0.01,
+      0.1,
+      1.0
+    ],
+    "top_k": 5,
+    "outer_folds": 4,
+    "inner_folds": 3,
+    "seed": 20261021,
+    "maximum_iterations": 2000,
+    "tolerance": 1e-06,
+    "selection_rule": "Maximize train out-of-fold balanced accuracy, then minimum class recall, then prefer zero-shot mean, linear mean, other zero-shot pooling, concatenated linear features. No calibration or contamination outcome used.",
+    "minimum_support_for_s2_readiness": {
+      "balanced_accuracy": 0.7,
+      "each_class_recall": 0.6
+    },
+    "mil": {
+      "executed": false,
+      "reason": "Only 72 BC / 48 grade training slides, 512-dimensional input, unknown patient IDs; an attention model adds learned tile-weight parameters without sufficient independent groups for credible complexity selection."
+    },
+    "preprocessing": "StandardScaler fit separately on training portion of every inner/outer fold; no scaling before splitting. Mean/max/top-K are deterministic within-slide transforms. Native annotation, size, coordinates, identities and coverage are never model features.",
+    "probabilities": "Balanced logistic outputs are not calibrated probabilities; report descriptive Brier and five fixed bins without fitting a calibration map.",
+    "final_test_scored": false,
+    "clinical_validity_verified": false
+  },
+  "tasks": {
+    "benign_cancer": {
+      "training_slides": 72,
+      "unique_groups": 72,
+      "all_models": {
+        "zero_shot_mean": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 72,
+          "classes": [
+            "benign",
+            "cancer"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              15,
+              9
+            ],
+            [
+              7,
+              41
+            ]
+          ],
+          "class_support": [
+            24,
+            48
+          ],
+          "accuracy": 0.7777777777777778,
+          "balanced_accuracy": 0.7395833333333333,
+          "class_recall": [
+            0.625,
+            0.8541666666666666
+          ],
+          "class_recall_wilson95": [
+            [
+              0.42709962442674276,
+              0.7884063244045122
+            ],
+            [
+              0.7283282347525372,
+              0.9275175067339628
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.6354166666666666,
+            0.8541666666666666
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": null,
+          "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "zero_shot_top1pct": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 72,
+          "classes": [
+            "benign",
+            "cancer"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              9,
+              15
+            ],
+            [
+              5,
+              43
+            ]
+          ],
+          "class_support": [
+            24,
+            48
+          ],
+          "accuracy": 0.7222222222222222,
+          "balanced_accuracy": 0.6354166666666667,
+          "class_recall": [
+            0.375,
+            0.8958333333333334
+          ],
+          "class_recall_wilson95": [
+            [
+              0.21159367559548778,
+              0.5729003755732571
+            ],
+            [
+              0.7783257830561368,
+              0.9546782809581869
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.53125,
+            0.7395833333333333
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": null,
+          "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "zero_shot_top5pct": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 72,
+          "classes": [
+            "benign",
+            "cancer"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              18,
+              6
+            ],
+            [
+              5,
+              43
+            ]
+          ],
+          "class_support": [
+            24,
+            48
+          ],
+          "accuracy": 0.8472222222222222,
+          "balanced_accuracy": 0.8229166666666667,
+          "class_recall": [
+            0.75,
+            0.8958333333333334
+          ],
+          "class_recall_wilson95": [
+            [
+              0.55100555994846,
+              0.8800063377140499
+            ],
+            [
+              0.7783257830561368,
+              0.9546782809581869
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.71875,
+            0.9166666666666666
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": null,
+          "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "linear_mean": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 72,
+          "classes": [
+            "benign",
+            "cancer"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              24,
+              0
+            ],
+            [
+              19,
+              29
+            ]
+          ],
+          "class_support": [
+            24,
+            48
+          ],
+          "accuracy": 0.7361111111111112,
+          "balanced_accuracy": 0.8020833333333333,
+          "class_recall": [
+            1.0,
+            0.6041666666666666
+          ],
+          "class_recall_wilson95": [
+            [
+              0.8620237953250198,
+              1.0
+            ],
+            [
+              0.4631040849254725,
+              0.7297917213940862
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.7291666666666666,
+            0.875
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": 0.186824276388049,
+          "ece_five_fixed_probability_bins": 0.18840379806917879,
+          "probability_caveat": "Uncalibrated balanced logistic outputs; class weighting changes class prior. No Platt/isotonic fitting.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "linear_mean_max_topk": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 72,
+          "classes": [
+            "benign",
+            "cancer"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              23,
+              1
+            ],
+            [
+              13,
+              35
+            ]
+          ],
+          "class_support": [
+            24,
+            48
+          ],
+          "accuracy": 0.8055555555555556,
+          "balanced_accuracy": 0.84375,
+          "class_recall": [
+            0.9583333333333334,
+            0.7291666666666666
+          ],
+          "class_recall_wilson95": [
+            [
+              0.7975819352134407,
+              0.9926065438344941
+            ],
+            [
+              0.5900303501775939,
+              0.8343404237254355
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.7604166666666667,
+            0.9166666666666667
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": 0.15965954033569146,
+          "ece_five_fixed_probability_bins": 0.19518694524013208,
+          "probability_caveat": "Uncalibrated balanced logistic outputs; class weighting changes class prior. No Platt/isotonic fitting.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        }
+      },
+      "primary": "linear_mean_max_topk",
+      "selected_using": "Train out-of-fold BA, worst recall, frozen simplicity tie-break only",
+      "s2_engineering_readiness": true
+    },
+    "low_high": {
+      "training_slides": 48,
+      "unique_groups": 48,
+      "all_models": {
+        "zero_shot_mean": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 48,
+          "classes": [
+            "low_grade",
+            "high_grade"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              22,
+              2
+            ],
+            [
+              11,
+              13
+            ]
+          ],
+          "class_support": [
+            24,
+            24
+          ],
+          "accuracy": 0.7291666666666666,
+          "balanced_accuracy": 0.7291666666666666,
+          "class_recall": [
+            0.9166666666666666,
+            0.5416666666666666
+          ],
+          "class_recall_wilson95": [
+            [
+              0.7415119780678932,
+              0.9768411847029566
+            ],
+            [
+              0.3507486535891948,
+              0.72108666268789
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.6041666666666666,
+            0.8333333333333334
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": null,
+          "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "zero_shot_top1pct": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 48,
+          "classes": [
+            "low_grade",
+            "high_grade"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              7,
+              17
+            ],
+            [
+              2,
+              22
+            ]
+          ],
+          "class_support": [
+            24,
+            24
+          ],
+          "accuracy": 0.6041666666666666,
+          "balanced_accuracy": 0.6041666666666666,
+          "class_recall": [
+            0.2916666666666667,
+            0.9166666666666666
+          ],
+          "class_recall_wilson95": [
+            [
+              0.14914648196960872,
+              0.4916769366449663
+            ],
+            [
+              0.7415119780678932,
+              0.9768411847029566
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.5,
+            0.7083333333333334
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": null,
+          "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "zero_shot_top5pct": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 48,
+          "classes": [
+            "low_grade",
+            "high_grade"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              8,
+              16
+            ],
+            [
+              2,
+              22
+            ]
+          ],
+          "class_support": [
+            24,
+            24
+          ],
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.625,
+          "class_recall": [
+            0.3333333333333333,
+            0.9166666666666666
+          ],
+          "class_recall_wilson95": [
+            [
+              0.17972190327297755,
+              0.5329368316186824
+            ],
+            [
+              0.7415119780678932,
+              0.9768411847029566
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.5208333333333333,
+            0.7291666666666667
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": null,
+          "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "linear_mean": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 48,
+          "classes": [
+            "low_grade",
+            "high_grade"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              20,
+              4
+            ],
+            [
+              7,
+              17
+            ]
+          ],
+          "class_support": [
+            24,
+            24
+          ],
+          "accuracy": 0.7708333333333334,
+          "balanced_accuracy": 0.7708333333333334,
+          "class_recall": [
+            0.8333333333333334,
+            0.7083333333333334
+          ],
+          "class_recall_wilson95": [
+            [
+              0.6414692935030095,
+              0.9332132367136705
+            ],
+            [
+              0.5083230633550337,
+              0.8508535180303913
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.6458333333333334,
+            0.875
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": 0.14055075599482572,
+          "ece_five_fixed_probability_bins": 0.10903793054667799,
+          "probability_caveat": "Uncalibrated balanced logistic outputs; class weighting changes class prior. No Platt/isotonic fitting.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        },
+        "linear_mean_max_topk": {
+          "unit": "unique slide; true patient independence unverified",
+          "slides": 48,
+          "classes": [
+            "low_grade",
+            "high_grade"
+          ],
+          "confusion_rows_truth_columns_prediction": [
+            [
+              24,
+              0
+            ],
+            [
+              7,
+              17
+            ]
+          ],
+          "class_support": [
+            24,
+            24
+          ],
+          "accuracy": 0.8541666666666666,
+          "balanced_accuracy": 0.8541666666666667,
+          "class_recall": [
+            1.0,
+            0.7083333333333334
+          ],
+          "class_recall_wilson95": [
+            [
+              0.8620237953250198,
+              1.0
+            ],
+            [
+              0.5083230633550337,
+              0.8508535180303913
+            ]
+          ],
+          "balanced_accuracy_stratified_slide_bootstrap95": [
+            0.75,
+            0.9375
+          ],
+          "bootstrap_repetitions": 2000,
+          "bootstrap_seed": 20261021,
+          "brier": 0.15286110462919827,
+          "ece_five_fixed_probability_bins": 0.1729825375647503,
+          "probability_caveat": "Uncalibrated balanced logistic outputs; class weighting changes class prior. No Platt/isotonic fitting.",
+          "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+        }
+      },
+      "primary": "linear_mean_max_topk",
+      "selected_using": "Train out-of-fold BA, worst recall, frozen simplicity tie-break only",
+      "s2_engineering_readiness": true
+    }
+  },
+  "failures": [],
+  "test_slides_scored": false,
+  "calibration_opened_for_selection": false,
+  "nested_cv_caveat": "Outer predictions estimate each model algorithm. Choosing among five by these predictions introduces selection optimism; no independent claim.",
+  "model4": {
+    "executed": false,
+    "reason": "Only 72 BC / 48 grade training slides, 512-dimensional input, unknown patient IDs; an attention model adds learned tile-weight parameters without sufficient independent groups for credible complexity selection."
+  },
+  "patient_independence_verified": false
+}

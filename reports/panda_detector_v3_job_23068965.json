@@ -1,0 +1,30 @@
+{
+  "source_commit": "4bf89cd1e2f1dc838ccd84bc626d090709e83476",
+  "source": "/u/mhoda/floater-finder/releases/panda-detector-v3-20261021T011243Z/source",
+  "archive_sha256": "15d8c15bcc7a9be7c60692bd7d90d10d2eafe34d0341f54135b698bfbd055a35",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z",
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-detector-v3-20261021T011243Z/source/scripts/slurm/panda_detector_v3_train.sbatch /u/mhoda/floater-finder/releases/panda-detector-v3-20261021T011243Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020 /work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json /work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v3-training-v1-20261021T011243Z 4bf89cd1e2f1dc838ccd84bc626d090709e83476",
+  "job_id": "23068965",
+  "config_sha256": "fa19dd81c9295ab51a03f0316361f73c665378176ce0231c7547974dccbb53fc",
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 8,
+    "maximum_minutes": 20,
+    "account": "bfqi-delta-cpu",
+    "partition": "cpu-interactive"
+  },
+  "input_case_sha256": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100",
+  "local_output": "/Users/muneebhoda/Documents/Masters - Fall 2026/Ashby Hackathon-research-detector/results/panda/detector_v3_training_v1",
+  "completion_sha256": "10a684af01a772a0f88d2e694ae4579da7772f4a46cc47e0ec6977c94ff1ff6f",
+  "artifacts": {
+    "metrics_by_case.json": "9592164fbcf2a0b0b51eb520c4417e9b83c5b657306170c472c0d7f3ac418976",
+    "ranking_observations.json": "46a39e8fba48d7ce9cf0ed62b79dc50ff10fed9f285ba33fbd7dde732d752038",
+    "feature_checkpoint.json": "3c879620286c16da6eefc6bf1ef223181ce928ac70a5684643b35499e2236fad",
+    "report.json": "46e691590e5a28b61e250166493715231ace1fa69633d038f6c7f763617c3bd3"
+  },
+  "job_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 23,
+  "task_seconds": 14,
+  "peak_rss_kib": 442612
+}

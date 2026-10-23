@@ -1,0 +1,55 @@
+{
+  "task": "benign_cancer",
+  "model": "zero_shot_mean",
+  "metrics": {
+    "unit": "unique slide; true patient independence unverified",
+    "slides": 72,
+    "classes": [
+      "benign",
+      "cancer"
+    ],
+    "confusion_rows_truth_columns_prediction": [
+      [
+        15,
+        9
+      ],
+      [
+        7,
+        41
+      ]
+    ],
+    "class_support": [
+      24,
+      48
+    ],
+    "accuracy": 0.7777777777777778,
+    "balanced_accuracy": 0.7395833333333333,
+    "class_recall": [
+      0.625,
+      0.8541666666666666
+    ],
+    "class_recall_wilson95": [
+      [
+        0.42709962442674276,
+        0.7884063244045122
+      ],
+      [
+        0.7283282347525372,
+        0.9275175067339628
+      ]
+    ],
+    "balanced_accuracy_stratified_slide_bootstrap95": [
+      0.6354166666666666,
+      0.8541666666666666
+    ],
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 20261021,
+    "brier": null,
+    "probability_caveat": "Cosine similarities are not probabilities; no arbitrary temperature fitted.",
+    "independent_unit": "Unique slide; unknown patient identities prevent verified patient independence"
+  },
+  "cv": {
+    "fitting": "None; unchanged historical fixed text cosine and pooling"
+  },
+  "failures": []
+}

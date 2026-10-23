@@ -1,0 +1,38 @@
+{
+  "status": "candidate plans; acquisition and mask usability are not verified",
+  "seed": 20261020,
+  "train_csv_sha256": "f67935796d8da5ff9dcb27865968e51f24d297fe7f17e69f4af3ca1b3737f45a",
+  "catalog_sha256": "996b0313b76decc70978f46c9f3286035edc40e15738431e04c610ed5eb09f1e",
+  "preserved_partial_manifest_sha256": "9042c167c13a18da999e29a130dffb6495e32d102ade48fb79c28e53a69d00b7",
+  "eligible_catalog_counts": {
+    "benign": 967,
+    "gg1": 852,
+    "high_grade": 1741
+  },
+  "patient_independence": "unknown; no patient identifiers supplied; slide-disjoint splits only",
+  "plans": {
+    "60": {
+      "slides": 60,
+      "manifest_sha256": "65bd577e15e2d992bfcf1baeefc3bfdd267e15d778f1b21cbf8fbc2db4b9a2e8",
+      "listed_missing_file_bytes": 1201123589,
+      "listed_total_file_bytes": 1232470464,
+      "catalog_masks": 60,
+      "local_images": 3,
+      "local_masks": 3,
+      "transfer_bytes": "not measured; the per-file endpoint may ZIP-compress TIFFs",
+      "integrity": "catalog sizes only; downloaded bytes require CRC/SHA256 and reader checks"
+    },
+    "120": {
+      "slides": 120,
+      "manifest_sha256": "3cd6e18678ad8fe0d207a72bc4354d371dc93003f515a53b8724867fc041b24d",
+      "listed_missing_file_bytes": 2459351119,
+      "listed_total_file_bytes": 2490697994,
+      "catalog_masks": 120,
+      "local_images": 3,
+      "local_masks": 3,
+      "transfer_bytes": "not measured; the per-file endpoint may ZIP-compress TIFFs",
+      "integrity": "catalog sizes only; downloaded bytes require CRC/SHA256 and reader checks"
+    }
+  },
+  "mask_profile_sha256": "77ddde216bd23c72f6e4fcae153d49dd391934a31ca5424c2b425e2658c09663"
+}

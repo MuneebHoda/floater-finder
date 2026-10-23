@@ -1,0 +1,20 @@
+{
+  "job_id": "23065666",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 14,
+  "node": "cn096",
+  "task_seconds": 5,
+  "peak_task_rss_kib": 340516,
+  "distinct_host_slides": 32,
+  "distinct_donor_slides": 21,
+  "trials": 192,
+  "oracle_passes": 192,
+  "exclusions": 0,
+  "test_slides_scored": false,
+  "patient_independence_verified": false,
+  "clinical_validity_verified": false,
+  "detector_evaluated": false,
+  "independent_metadata_validation": "All trial split/label/source IDs, requested/realized counts, nested unique donor IDs, 4-connected geometry, >=10% native cancer fractions, physical and annotated areas, raw-score argmax, oracle equality and aggregate flip/accuracy counts checked locally.",
+  "donor_tile_metadata_sha256": "6edcd829e94ed6c9a912b9cbd570c1793e46e1872599d207d76e90548d667005"
+}

@@ -1,0 +1,29 @@
+{
+  "source_kind": "real",
+  "job_id": "23066553",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 17,
+  "source_commit": "e200aa08713a2f893f776f08b31955f42b0232e1",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z-selection-v2",
+  "resumed_reporting_only": true,
+  "original_measurement_sha256": {
+    "component_cases.json": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100",
+    "topology_audit.json": "3846b9224ff285af79e07e97052f181440d8f883eee0918f92280780d26d5d69"
+  },
+  "retrieval": {
+    "selection.json": {
+      "sha256": "f1df88da9502a10c3a99c97fba6f6f53942ca2a4ebd65b05901e0dcb508966ad"
+    },
+    "metrics_by_case.json": {
+      "sha256": "8915763c5a26e1a77a0d43d2e5a1aaa7560d3c174167b6921dd04f7b69c0ecce"
+    },
+    "topology_audit.json": {
+      "sha256": "3846b9224ff285af79e07e97052f181440d8f883eee0918f92280780d26d5d69"
+    },
+    "sacct.txt": {}
+  },
+  "scheduler": "JobID|State|ExitCode|ElapsedRaw|NodeList|MaxRSS\n23066481|FAILED|1:0|64|cn095|\n23066481.batch|FAILED|1:0|64|cn095|13236K\n23066481.extern|COMPLETED|0:0|64|cn095|\n23066481.0|FAILED|1:0|57|cn095|2511488K\n23066553|COMPLETED|0:0|17|cn095|\n23066553.batch|COMPLETED|0:0|17|cn095|13292K\n23066553.extern|COMPLETED|0:0|17|cn095|\n23066553.0|COMPLETED|0:0|8|cn095|103496K\n",
+  "test_slides_scored": false,
+  "operating_point_supported": false
+}

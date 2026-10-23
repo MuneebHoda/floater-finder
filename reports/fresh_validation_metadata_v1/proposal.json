@@ -1,0 +1,79 @@
+{
+  "train_sha256": "f67935796d8da5ff9dcb27865968e51f24d297fe7f17e69f4af3ca1b3737f45a",
+  "catalog_sha256": "996b0313b76decc70978f46c9f3286035edc40e15738431e04c610ed5eb09f1e",
+  "exclusion_manifest_sha256": {
+    "reports/manifests/panda_candidate_120_20261020.csv": "3cd6e18678ad8fe0d207a72bc4354d371dc93003f515a53b8724867fc041b24d",
+    "/tmp/floater-fresh-validation-metadata/pilot.csv": "91713d4f430e53c74e8dee9a7c8aeda8e25781302d05c74d020952a239564c7e"
+  },
+  "patient_id_column_present": false,
+  "proposals": {
+    "radboud": {
+      "provider": "radboud",
+      "seed": 20261021,
+      "target_per_group": 20,
+      "eligible_after_exclusion": {
+        "benign": 924,
+        "gg1": 809,
+        "high_grade": 1698
+      },
+      "selected_counts": {
+        "benign": 20,
+        "gg1": 20,
+        "high_grade": 20
+      },
+      "selected_slides": 60,
+      "target_met": true,
+      "excluded_slide_ids": 129,
+      "selected_excluded_overlap": 0,
+      "selected_known_patient_ids": 0,
+      "patient_independence": "unknown unless every selected and excluded slide has a verified patient identifier",
+      "catalog_masks": 60,
+      "usable_mask_coverage": "unverified; catalog presence is not readable annotation",
+      "catalog_tiff_bytes": 1348184402,
+      "transfer_bytes": "unmeasured; compression/ZIP overhead can change network volume",
+      "selection_rule": "catalog mask first, then SHA256(seed:purpose:provider:image_id); no predictions or annotation contents",
+      "status": "metadata-only proposal; acquisition, tiling, encoding and validation not executed",
+      "manifest_sha256": "30bf03fe9eb09b88a9b8b30db792ec0c5ff437fd8c49240d65124fa3f65f81ea"
+    },
+    "karolinska": {
+      "provider": "karolinska",
+      "seed": 20261021,
+      "target_per_group": 20,
+      "eligible_after_exclusion": {
+        "benign": 1925,
+        "gg1": 1814,
+        "high_grade": 732
+      },
+      "selected_counts": {
+        "benign": 20,
+        "gg1": 20,
+        "high_grade": 20
+      },
+      "selected_slides": 60,
+      "target_met": true,
+      "excluded_slide_ids": 129,
+      "selected_excluded_overlap": 0,
+      "selected_known_patient_ids": 0,
+      "patient_independence": "unknown unless every selected and excluded slide has a verified patient identifier",
+      "catalog_masks": 60,
+      "usable_mask_coverage": "unverified; catalog presence is not readable annotation",
+      "catalog_tiff_bytes": 3512683208,
+      "transfer_bytes": "unmeasured; compression/ZIP overhead can change network volume",
+      "selection_rule": "catalog mask first, then SHA256(seed:purpose:provider:image_id); no predictions or annotation contents",
+      "status": "metadata-only proposal; acquisition, tiling, encoding and validation not executed",
+      "manifest_sha256": "eee984f482837374f4af2978651a081fe0003193dca801cef807f71357913fbe"
+    }
+  },
+  "selection_source_commit": "558980c8ec196e3530b37ab03de7c01ff0c4a2be",
+  "source_paths": {
+    "train": "/work/nvme/bfqi/mhoda/panda/train.csv",
+    "catalog": "/work/nvme/bfqi/mhoda/panda/official_catalog-20261020-paced.json",
+    "pilot": "/work/nvme/bfqi/mhoda/panda/pilot.csv"
+  },
+  "observed_presence": {
+    "files_checked": 240,
+    "present": 0,
+    "reader_checks_performed": false,
+    "filesystem_available_bytes": 4031335342080
+  }
+}

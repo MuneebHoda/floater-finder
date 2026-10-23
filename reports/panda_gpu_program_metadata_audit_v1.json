@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-21T18:43:37.401199-05:00",
+  "allocation": {
+    "limit_billing_minutes": 600000,
+    "used_billing_minutes": 95500,
+    "used_raw_billing_seconds": 5730000,
+    "remaining_billing_minutes": 504500,
+    "remaining_a100_equivalent_hours": 8.408333333333333,
+    "ledger_a100_equivalent_hours": 1.5916666666666666,
+    "accounts_display_gpu_hours": 8,
+    "currently_running_gpu_jobs": 0,
+    "pending_pilot_maximum_equivalent_hours": 0.16666666666666666
+  },
+  "charges": [
+    {
+      "job_id": "22957101",
+      "job_name": "floater-smoke",
+      "partition": "gpuA100x4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 5,
+      "billing_tres": 1000,
+      "billed_equivalent_hours": 0.001388888888888889
+    },
+    {
+      "job_id": "22994469",
+      "job_name": "floater-one-pair",
+      "partition": "gpuA100x4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 68,
+      "billing_tres": 1000,
+      "billed_equivalent_hours": 0.01888888888888889
+    },
+    {
+      "job_id": "22994635",
+      "job_name": "floater-one-pair",
+      "partition": "gpuA100x4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 61,
+      "billing_tres": 1000,
+      "billed_equivalent_hours": 0.016944444444444446
+    },
+    {
+      "job_id": "22994850",
+      "job_name": "floater-dev-encode",
+      "partition": "gpuA100x4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 71,
+      "billing_tres": 1000,
+      "billed_equivalent_hours": 0.01972222222222222
+    },
+    {
+      "job_id": "22995434",
+      "job_name": "floater-runtime",
+      "partition": "gpuA100x4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 85,
+      "billing_tres": 1000,
+      "billed_equivalent_hours": 0.02361111111111111
+    },
+    {
+      "job_id": "23028013",
+      "job_name": "floater-dev-encode",
+      "partition": "gpuA100x4-interactive",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 605,
+      "billing_tres": 2000,
+      "billed_equivalent_hours": 0.33611111111111114
+    },
+    {
+      "job_id": "23051627",
+      "job_name": "panda-encode-profile",
+      "partition": "gpuA100x4-interactive",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed_seconds": 12,
+      "billing_tres": 2000,
+      "billed_equivalent_hours": 0.006666666666666667
+    },
+    {
+      "job_id": "23051673",
+      "job_name": "panda-encode-profile",
+      "partition": "gpuA100x4-interactive",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 54,
+      "billing_tres": 2000,
+      "billed_equivalent_hours": 0.03
+    },
+    {
+      "job_id": "23054910",
+      "job_name": "panda-cohort-encode",
+      "partition": "gpuA100x4-interactive",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 1306,
+      "billing_tres": 2000,
+      "billed_equivalent_hours": 0.7255555555555555
+    },
+    {
+      "job_id": "23081929",
+      "job_name": "panda-cohort-encode",
+      "partition": "gpuA100x4-interactive",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 743,
+      "billing_tres": 2000,
+      "billed_equivalent_hours": 0.4127777777777778
+    }
+  ],
+  "runtime_source_commit": "61959fa148a4a3ae4aadb5ee84b9578933140f6b",
+  "runtime_source_files_verified": 276,
+  "runtime_source_manifest_sha256": "573c26663c3dec96b080c3f186573c513c39ff3408e469dc64f501140e894618",
+  "launcher_source_commit": "1b4d19b39c3535a326bc6b00ef497f857e440cf7",
+  "launcher_files_verified": 5,
+  "launcher_source_manifest_sha256": "a7738f5eb9f14c64ac0b13d278da74811b0a25f962ff365e0521a16df20c9528",
+  "checkpoint_path": "/work/nvme/bfqi/mhoda/floater-finder/inputs/models/conch_v1/pytorch_model.bin",
+  "checkpoint_expected_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+  "checkpoint_current_hash_verified": false,
+  "cohort_manifest": {
+    "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+    "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+  },
+  "eligible_counts_after_pilot_exclusion": {
+    "benign": 22,
+    "gg1": 22,
+    "high_grade": 20
+  },
+  "excluded_pilot_ids": [
+    "0e305c4d31f47db36c44a1d55d389193",
+    "134d69e06d397dc06ed6794b737c63fd",
+    "14cff64d674f558dc47ee5e817b7f671",
+    "1b176c9049260a8843b97349ccdd3eb7",
+    "1f1440204eba45ff4f999795c7d52040",
+    "291b2132e1fb9131478b8d691406874b",
+    "2a6d0c4bd562bb83e9863a175af50de4",
+    "3901caec5d914bf20a44f176469b0294"
+  ],
+  "source_patient_independence_verified": false,
+  "karolinska": {
+    "candidates": 60,
+    "files_present": 0,
+    "files_checked": 120,
+    "source_overlap_with_all_known_slides": 0,
+    "known_exposed_slides": 189,
+    "catalog_tiff_bytes": 3512683208,
+    "image_mask_scale_verified": false,
+    "mask_semantics": "0 background/unknown,1 benign region,2 cancer region; no GP3/4/5 labels"
+  },
+  "relevant_model_directory_filenames": [
+    "conch_v1/pytorch_model.bin"
+  ],
+  "local_data_downloads": false,
+  "receipt_path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/expanded-program-metadata-audit-v1.json",
+  "receipt_sha256": "54e72cb6eb836eb09b9257e1b2c3e4e46a2d69bdf2ba4d764d6b6f541998ac1e"
+}

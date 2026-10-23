@@ -1,0 +1,30 @@
+{
+  "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+  "manifest": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+  "directories": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+  "encoded": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "verification": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+  "source_commit": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+  "source": "/u/mhoda/floater-finder/releases/panda-s2-dev-20261021T003007Z/source",
+  "release": "/u/mhoda/floater-finder/releases/panda-s2-dev-20261021T003007Z",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s2-dev-v1-20261021T003007Z",
+  "archive_sha256": "5e6938eaaa45d23871085f6cb94e82b25d12e80d2fba15bbd30da09570a65974",
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-s2-dev-20261021T003007Z/source/scripts/slurm/panda_s2_development.sbatch /u/mhoda/floater-finder/releases/panda-s2-dev-20261021T003007Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-stress/s2-dev-v1-20261021T003007Z 35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+  "job_id": "23067396",
+  "result_hashes": {
+    "clean_audit.json": "5792af51d0e19a40d1975f0cba195c57aed04725e40c6f7f4b45485f94dc6241",
+    "trials.json": "025da1c8781043faf79c2db1b864438f97a205cdf1429fefd63007a5639292a4",
+    "donor_audit.json": "f48d7105e2de35fae976a38567f617edef490298b015bc017cdff43ac916c82c",
+    "pairings.json": "3f69356dfb2238045207856b4c064b3d6ad7829cb184475324157a5989f3b1ea",
+    "exclusions.json": "d553f1b4309277de55cdbe854f4ef4ac360dc732016437faabf76c52e0ebc9d8",
+    "native_safety.json": "6655eb54f0577d2dfe332d1d164f21b14166abf0941d7bf782f8d4b5222d69e1",
+    "summary.json": "508ae59c3b886b093002fbc127a089b3d9b49d73e0869d951316ad36995d489d",
+    "completion.json": "440f02933477aad66b44f0c8b1e6415960656d1886f773becc3486cbbe395367"
+  },
+  "sacct": "JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS|NodeList\n23067396|panda-s2-dev-v1|COMPLETED|0:0|00:00:19|2||cn099\n23067396.batch|batch|COMPLETED|0:0|00:00:19|2|13544K|cn099\n23067396.extern|extern|COMPLETED|0:0|00:00:19|2||cn099\n23067396.0|python|COMPLETED|0:0|00:00:10|2|360004K|cn099\n",
+  "source_snapshot_verified_files": 361,
+  "result_retrieval_verified": true,
+  "frozen_before_contamination_outcomes": true,
+  "gpu_inference_performed": false,
+  "test_slides_scored": false
+}

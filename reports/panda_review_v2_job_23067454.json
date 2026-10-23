@@ -1,0 +1,37 @@
+{
+  "commit": "668d9b8c4e3e8aa300bda6ff15e416c601c2e024",
+  "stamp": "20261021T003112Z",
+  "archive": "/tmp/floater-review-v2-20261021T003112Z.tar",
+  "archive_sha256": "1b7f5c02c7b9e76996c9395722246581e8dd01b89127a71616d8c3a394263ee2",
+  "release": "/u/mhoda/floater-finder/releases/panda-review-v2-20261021T003112Z",
+  "source": "/u/mhoda/floater-finder/releases/panda-review-v2-20261021T003112Z/source",
+  "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+  "cases": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v2-20261021T003112Z",
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-review-v2-20261021T003112Z/source/scripts/slurm/panda_review_v2.sbatch /u/mhoda/floater-finder/releases/panda-review-v2-20261021T003112Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/component_cases.json /work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v2-20261021T003112Z 668d9b8c4e3e8aa300bda6ff15e416c601c2e024",
+  "job_id": "23067454",
+  "local_output": "/Users/muneebhoda/Documents/Masters - Fall 2026/Ashby Hackathon-panda-tiling/results/panda/review_v2_development",
+  "job_state": "COMPLETED",
+  "result_files_sha256": {
+    "review_v2_metrics_by_case.json": "575aa02acbd83d8b9ac9a8f355644c268cb2270b354079a15247bffd588fc64d",
+    "review_v2_decomposition_by_component.json": "7697a89942d14e361fc4313fd01854223c8ace23b2c0bcf618b1ee1fe93b36ee",
+    "review_v2_results.json": "0aef9f671d2fc4b139a3995b852bdbe057ab0a1a5ac766955d1a6d52265ce270"
+  },
+  "source_file_sha256": {
+    "configs/panda_review_v2_development.json": "967688b943cebd5af35c9182bdc271a9489286ce1d38f01184dc706f78f1d6a7",
+    "docs/panda_review_v2_development.md": "025e2f0c9458cc152d3718947cf915a4c4dbcdf135532b4bfa25f4e2a4f96157",
+    "scripts/panda_review_v2.py": "0b3229891532c5008a5dfb46352ec9d626f06187e90aac7f8d51a87c3b86db1b",
+    "scripts/slurm/panda_review_v2.sbatch": "3aa04cb984af5a08787e3c1e4772260910116cd1fb403711c7aafb7a4cbda79c",
+    "src/floater_finder/panda_review_v2.py": "6ccf1da06695d7ee2b1efc5a37b01c2d7786e112b22dc24064e62c74a897c9fc",
+    "tests/test_panda_review_v2.py": "41bc996772e0d686746c28b1fc398314a247076aea213058d7a532f44c9b1735"
+  },
+  "source_files_verified": 367,
+  "job_accounting": "JobID|State|ExitCode|Elapsed|MaxRSS|AllocCPUS|NodeList\n23067454|COMPLETED|0:0|00:00:23||2|cn095\n23067454.batch|COMPLETED|0:0|00:00:23|13280K|2|cn095\n23067454.extern|COMPLETED|0:0|00:00:23||2|cn095\n23067454.0|COMPLETED|0:0|00:00:14|118600K|2|cn095\n",
+  "source_kind": "real saved CONCH measurements; injected mixtures are synthetic stresses",
+  "calibration_role": "Iterative development, not independent validation",
+  "final_test_slides_scored": false,
+  "gpu_jobs_submitted": 0,
+  "repeated_wsi_or_encoding_jobs": 0,
+  "final_test_ready": false,
+  "reason": "Every train-selected strategy fails utility; primary calibration fragment recall remains zero"
+}

@@ -1,0 +1,28 @@
+{
+  "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+  "manifest": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+  "directories": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json",
+  "encoded": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative",
+  "verification": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json",
+  "source_commit": "0f2fc5fa3413ac3c7c5d1cd81181fd9c57017140",
+  "release": "/u/mhoda/floater-finder/releases/panda-predictors-v1-20261021T011509Z",
+  "source": "/u/mhoda/floater-finder/releases/panda-predictors-v1-20261021T011509Z/source",
+  "archive": "/tmp/floater-predictors-0f2fc5fa.tar",
+  "archive_sha256": "81669456c0b54e9e83f0ec255b892fdd4e95ee0c85651f3ff5fef8de62167996",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-predictors/v1-20261021T011509Z",
+  "stage_utc": "20261021T011509Z",
+  "prior_submission_rejected": {
+    "source_commit": "c1eafb820ee42213fb49dcbc23457096812d8708",
+    "release": "/u/mhoda/floater-finder/releases/panda-predictors-v1-20261021T011312Z",
+    "error": "QOSMaxSubmitJobPerUserLimit",
+    "no_job_submitted": true
+  },
+  "submission_command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-predictors-v1-20261021T011509Z/source/scripts/slurm/panda_predictor_research.sbatch /u/mhoda/floater-finder/releases/panda-predictors-v1-20261021T011509Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json /u/mhoda/floater-finder/releases/panda-predictors-v1-20261021T011509Z/source/configs/panda_predictor_research_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-predictors/v1-20261021T011509Z",
+  "submission_stdout": "23068979\n",
+  "submission_stderr": "",
+  "submission_returncode": 0,
+  "job_id": "23068979",
+  "sacct": "23068979|COMPLETED|0:0|00:00:23||cn034\n23068979.batch|COMPLETED|0:0|00:00:23|13168K|cn034\n23068979.extern|COMPLETED|0:0|00:00:23||cn034\n23068979.0|COMPLETED|0:0|00:00:14|426492K|cn034\n",
+  "completion_sha256": "a1ba15288a5f710b087e158bcb38159a4f070dc75ab3ff6cc2494c6253537ab0",
+  "selection_sha256": "acff113f130a6ac1650589009e002eef351787a791ad08a0508d41f869d973e7"
+}

@@ -1,0 +1,314 @@
+[
+  {
+    "image_id": "0a97bd73cd153b33751d43821ff0a400",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6215857267379761,
+      "cancer": 0.6596816778182983
+    },
+    "margin": 0.038095951080322266,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "f88e932503d0e42467edb710bb8b9c46",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.679032027721405,
+      "cancer": 0.6546316742897034
+    },
+    "margin": -0.02440035343170166,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "66f5cc9041b6485114cf9555c31e908d",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.7043569684028625,
+      "cancer": 0.7006266117095947
+    },
+    "margin": -0.0037303566932678223,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "a2fb69954b14fe15857b0f54515fc745",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6941015124320984,
+      "cancer": 0.6699793934822083
+    },
+    "margin": -0.024122118949890137,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "f746e9703e48b20b6c64c1b9dce29d8a",
+    "truth": "benign",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.7141934037208557,
+      "cancer": 0.6932143568992615
+    },
+    "margin": -0.02097904682159424,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "a213e4e689988738b8fb764e958ca497",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.4436362087726593,
+      "cancer": 0.487665593624115
+    },
+    "margin": 0.04402938485145569,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "d383a65adb84e2f3032f0c68246224eb",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6909396052360535,
+      "cancer": 0.7185647487640381
+    },
+    "margin": 0.02762514352798462,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "da15226ed2a9ca5a83e831a9c57f5380",
+    "truth": "benign",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6729841828346252,
+      "cancer": 0.6782695651054382
+    },
+    "margin": 0.005285382270812988,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "d38a9db63e100d405ddb1a932b53d92f",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7159653902053833,
+      "cancer": 0.7405102252960205
+    },
+    "margin": 0.024544835090637207,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "03849b0243900d79446bb27849dc0bb2",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6920611262321472,
+      "cancer": 0.7127323746681213
+    },
+    "margin": 0.02067124843597412,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "3ef789f8caa7186261ad9f77bb552c7a",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.698499858379364,
+      "cancer": 0.7195947766304016
+    },
+    "margin": 0.021094918251037598,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "9b56f501c6765027cce8a1a8ad797767",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6896424889564514,
+      "cancer": 0.7084682583808899
+    },
+    "margin": 0.018825769424438477,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "ebc0cf09e9f77d222af0b8015c409a01",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.7097130417823792,
+      "cancer": 0.7124235033988953
+    },
+    "margin": 0.0027104616165161133,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "20be7c34058e2f24ef3bb0cda3c376d5",
+    "truth": "cancer",
+    "prediction": "benign",
+    "scores": {
+      "benign": 0.6880268454551697,
+      "cancer": 0.6863316893577576
+    },
+    "margin": -0.0016951560974121094,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "00951a7fad040bf7e90f32e81fc0746f",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6736562848091125,
+      "cancer": 0.6939800381660461
+    },
+    "margin": 0.020323753356933594,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "375b2c9501320b35ceb638a3274812aa",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.687264621257782,
+      "cancer": 0.752087414264679
+    },
+    "margin": 0.06482279300689697,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "aa9be7d9f82e983d21e2746078b877d9",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6346368789672852,
+      "cancer": 0.6932217478752136
+    },
+    "margin": 0.05858486890792847,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "8d96e24f96029fb89ad33d017f1fbcfc",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6899503469467163,
+      "cancer": 0.7598762512207031
+    },
+    "margin": 0.06992590427398682,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "775abecd4e7149acd83c9c3c55e2834c",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6661951541900635,
+      "cancer": 0.6872048377990723
+    },
+    "margin": 0.02100968360900879,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "8fae0151f134c7499934dfe20c700eb9",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6928650736808777,
+      "cancer": 0.7391259074211121
+    },
+    "margin": 0.046260833740234375,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "900ca15382fabf04c7b62af369e0b551",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6763647198677063,
+      "cancer": 0.7497105598449707
+    },
+    "margin": 0.0733458399772644,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "647f4dabc53f943acbffbde9db87e35e",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.6684464812278748,
+      "cancer": 0.7123094201087952
+    },
+    "margin": 0.04386293888092041,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "a1abdacdaaa93b69a92c68cb5edf2560",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.653731107711792,
+      "cancer": 0.7211086750030518
+    },
+    "margin": 0.06737756729125977,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  },
+  {
+    "image_id": "1e73a4d3e89de944a6c309defde99839",
+    "truth": "cancer",
+    "prediction": "cancer",
+    "scores": {
+      "benign": 0.660780668258667,
+      "cancer": 0.7220659852027893
+    },
+    "margin": 0.061285316944122314,
+    "positive_probability": null,
+    "probability_calibrated": false,
+    "model_id": "zero_shot_top1pct"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "source_kind": "real",
+  "category": "Measured development figure pack; no final-test outcomes",
+  "figures": [
+    {
+      "path": "reports/figures/panda_review_v1_final/pipeline_and_protocol.png",
+      "sha256": "da55228f0adeb9a5423a99aa1762301e54651db60774aee652c84d8cd90fbe6c"
+    },
+    {
+      "path": "reports/figures/panda_review_v1_final/review_burden_and_genuine_tissue.png",
+      "sha256": "68d3b40485dbf116d4ade7998095c5fd35c092c71ce58e374b25b7728d872d57"
+    },
+    {
+      "path": "reports/figures/panda_review_v1_final/review_failure_funnel.png",
+      "sha256": "ae2718f325e9d5e02eaab7285c174f317095cd90f61ba957f343f90bf8292388"
+    },
+    {
+      "path": "reports/figures/panda_review_v1_final/review_tradeoff.png",
+      "sha256": "98861316c69000a410721fb7d2476cbfe11ef9718b4d55a54d6b5e8340d75c19"
+    },
+    {
+      "path": "reports/figures/panda_review_v1_final/topology_quality_checks.png",
+      "sha256": "318b27d2d76394687d5d07ef238a69baf3d2c5d41cae788938987605bad796bd"
+    },
+    {
+      "path": "reports/figures/panda_clean_baseline_23055022/calibration_confusion.png",
+      "sha256": "ef3bfce124b3c2b3419b4252a5432a3a3a9a501bb228ed5a384bbe028234ea9f"
+    },
+    {
+      "path": "reports/figures/panda_s1_development_23065666/stress_curves.png",
+      "sha256": "9a869b181473a510c0a84915e426636dd3626ad7ce2b6c65ab0586af8d9836b3"
+    },
+    {
+      "path": "reports/figures/panda_piece_development_23065744/piece_examples.png",
+      "sha256": "e991b725427da54bfae0adb6482d4a92d11448a0d49445ce11e5201ac8c88849"
+    }
+  ],
+  "new_figure_visual_qa": {
+    "figures_inspected": 5,
+    "overlap_check": "Passed after failure-funnel label spacing revision",
+    "data_checks": "Denominators and values checked against committed selection and original reports; source hashes recorded per figure directory",
+    "actual_rgb_topology_previews_inspected": 4,
+    "export_check": "Final PNG bytes unchanged after deterministic SVG export and trailing-whitespace normalization."
+  },
+  "test_predictions_computed": false,
+  "automatic_tissue_action": "none",
+  "outline": "reports/panda_presentation_v1.md"
+}

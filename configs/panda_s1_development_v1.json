@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task": "S1 benign host plus annotated cancer donor; development only",
+  "splits": ["train", "calibration"],
+  "percentages": [0, 0.5, 1, 2, 5, 10],
+  "foreign_fraction_denominator": "original host tile count",
+  "rounding": "ceil",
+  "seed": 20261020,
+  "minimum_total_cancer_fraction": 0.1,
+  "donor_selection": "native GP3+GP4+GP5 >= 10% per saved tile; four-connected occupied cells, no gap bridging",
+  "pairing": "same-provider distinct-slide same-split; hash order preferring capacity for 10%, otherwise largest available component",
+  "fragment_growth": "one seeded connected ordering per pair; nested prefixes across percentages; no repeats",
+  "pooling": ["mean", "top1pct", "top5pct"],
+  "candidate_primary_pooling": "top5pct selected using development clean baseline only; report all rules",
+  "interpretation": "engineering stress on saved representative subsets, not clinical validation or final-test performance",
+  "no_additional_gpu_or_downloads": true
+}

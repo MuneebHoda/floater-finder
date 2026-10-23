@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "category": "real training-input shared-engine acceptance and bounded S2v2 smoke; not independent validation",
+  "source_commit": "de220802f68098fac84119112157ee9078c6c13c",
+  "source_snapshot": "/u/mhoda/floater-finder/releases/panda-engine-v3-20261021T012457Z/source",
+  "source_archive_sha256": "11de6c22f6355b188b0b20e798a1d83a9b2359f9ec76240265b77aac13c828dc",
+  "job_id": "23069070",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 116,
+  "task_elapsed_seconds": 108,
+  "task_peak_rss_kib": 318016,
+  "requested": {
+    "cpus": 2,
+    "memory_gb": 4,
+    "walltime_minutes": 15,
+    "gpus": 0,
+    "account": "bfqi-delta-cpu",
+    "qos": "bfqi-delta-cpu",
+    "partition": "cpu-interactive"
+  },
+  "actual_requested_core_hours": 0.06444444444444444,
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-engine-v3-20261021T012457Z/source/scripts/slurm/research_engine_acceptance.sbatch /u/mhoda/floater-finder/releases/panda-engine-v3-20261021T012457Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/gpu_directories_120_v1.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json /work/nvme/bfqi/mhoda/panda/acquisition-receipts/20261020-scale-v1-120 /work/nvme/bfqi/mhoda/floater-finder/panda-engine/acceptance-v3-20261021T012457Z de220802f68098fac84119112157ee9078c6c13c /work/nvme/bfqi/mhoda/floater-finder/panda-predictors/v1-20261021T011509Z/models/low_high/linear_mean_max_topk",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-engine/acceptance-v3-20261021T012457Z",
+  "protocol": "configs/research_engine_acceptance_v3.json",
+  "protocol_sha256": "dfc1febce26ad5548c5df9eb7a0375cecd8fd02b09892e8209cb12eb3733e939",
+  "predictor": "/work/nvme/bfqi/mhoda/floater-finder/panda-predictors/v1-20261021T011509Z/models/low_high/linear_mean_max_topk",
+  "predictor_selection_sha256": "acff113f130a6ac1650589009e002eef351787a791ad08a0508d41f869d973e7",
+  "registry_identity": "b6093dccf8fc9e66164ab06d2296bdb2651dcae7e54ed9925fb6f0807dd8f809",
+  "registry_checkpoints": 1350,
+  "registry_events": 1353,
+  "all_checkpoint_hashes_verified_remote_and_local": true,
+  "trial_instances": 1017,
+  "zero_dose_instances": 192,
+  "positive_foreign_donor_instances": 607,
+  "positive_same_source_instances": 218,
+  "planned_mode_dose_instances": 1344,
+  "explicit_placement_exclusions": 327,
+  "oracle_exact_passes": 1017,
+  "exact_legacy_comparisons": 252,
+  "coordinate_only_invariance_checks": 345,
+  "unique_host_slides": 4,
+  "unique_non_sham_donor_slides": 21,
+  "unique_source_slides": 24,
+  "by_task": {
+    "s1": {
+      "trial_instances": 402,
+      "unique_hosts": 2,
+      "positive_foreign_trials": 219,
+      "prediction_changes": 39
+    },
+    "s2": {
+      "trial_instances": 615,
+      "unique_hosts": 2,
+      "positive_foreign_trials": 388,
+      "prediction_changes": 0
+    }
+  },
+  "by_mode": {
+    "append_legacy": {
+      "eligible": 336,
+      "excluded": 0
+    },
+    "near_tissue": {
+      "eligible": 168,
+      "excluded": 168
+    },
+    "replacement": {
+      "eligible": 336,
+      "excluded": 0
+    },
+    "within_region_context": {
+      "eligible": 177,
+      "excluded": 159
+    }
+  },
+  "requested_to_realized_percent": {
+    "0": [
+      0.0
+    ],
+    "0.25": [
+      0.390625,
+      0.44052863436123346,
+      0.4878048780487805
+    ],
+    "0.5": [
+      0.5859375,
+      0.6607929515418502,
+      0.975609756097561
+    ],
+    "1": [
+      1.1013215859030836,
+      1.171875,
+      1.4634146341463414
+    ],
+    "2": [
+      2.1484375,
+      2.202643171806167,
+      2.4390243902439024
+    ],
+    "5": [
+      5.066079295154185,
+      5.078125,
+      5.365853658536586
+    ],
+    "10": [
+      10.13215859030837,
+      10.15625,
+      10.24390243902439
+    ]
+  },
+  "descriptive_unique_host_uncertainty": [
+    {
+      "task": "s1",
+      "condition": "cancer",
+      "mode": "append_legacy",
+      "requested_percent": 10,
+      "hosts": [
+        {
+          "host_id": "1f1440204eba45ff4f999795c7d52040",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 3,
+          "rate": 0.5
+        },
+        {
+          "host_id": "291b2132e1fb9131478b8d691406874b",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 4,
+          "rate": 0.6666666666666666
+        }
+      ],
+      "equal_host_weight_error_rate": 0.5833333333333333,
+      "unique_host_cluster_bootstrap95": [
+        0.5,
+        0.6666666666666666
+      ],
+      "seed": 20261022,
+      "repetitions": 2000,
+      "independent_units": 2,
+      "limitation": "Only two reused training slides; resampling is descriptive conditional on these hosts/donors, does not establish population uncertainty or patient independence. Zero-event bootstrap degeneracy is not evidence of zero risk."
+    },
+    {
+      "task": "s1",
+      "condition": "cancer",
+      "mode": "replacement",
+      "requested_percent": 10,
+      "hosts": [
+        {
+          "host_id": "1f1440204eba45ff4f999795c7d52040",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 5,
+          "rate": 0.8333333333333334
+        },
+        {
+          "host_id": "291b2132e1fb9131478b8d691406874b",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 4,
+          "rate": 0.6666666666666666
+        }
+      ],
+      "equal_host_weight_error_rate": 0.75,
+      "unique_host_cluster_bootstrap95": [
+        0.6666666666666666,
+        0.8333333333333334
+      ],
+      "seed": 20261022,
+      "repetitions": 2000,
+      "independent_units": 2,
+      "limitation": "Only two reused training slides; resampling is descriptive conditional on these hosts/donors, does not establish population uncertainty or patient independence. Zero-event bootstrap degeneracy is not evidence of zero risk."
+    },
+    {
+      "task": "s2",
+      "condition": "high_gp45",
+      "mode": "append_legacy",
+      "requested_percent": 10,
+      "hosts": [
+        {
+          "host_id": "14cff64d674f558dc47ee5e817b7f671",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        },
+        {
+          "host_id": "3901caec5d914bf20a44f176469b0294",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        }
+      ],
+      "equal_host_weight_error_rate": 0.0,
+      "unique_host_cluster_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "seed": 20261022,
+      "repetitions": 2000,
+      "independent_units": 2,
+      "limitation": "Only two reused training slides; resampling is descriptive conditional on these hosts/donors, does not establish population uncertainty or patient independence. Zero-event bootstrap degeneracy is not evidence of zero risk."
+    },
+    {
+      "task": "s2",
+      "condition": "high_gp45",
+      "mode": "replacement",
+      "requested_percent": 10,
+      "hosts": [
+        {
+          "host_id": "14cff64d674f558dc47ee5e817b7f671",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        },
+        {
+          "host_id": "3901caec5d914bf20a44f176469b0294",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        }
+      ],
+      "equal_host_weight_error_rate": 0.0,
+      "unique_host_cluster_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "seed": 20261022,
+      "repetitions": 2000,
+      "independent_units": 2,
+      "limitation": "Only two reused training slides; resampling is descriptive conditional on these hosts/donors, does not establish population uncertainty or patient independence. Zero-event bootstrap degeneracy is not evidence of zero risk."
+    },
+    {
+      "task": "s2",
+      "condition": "same_grade_gp3_only",
+      "mode": "append_legacy",
+      "requested_percent": 10,
+      "hosts": [
+        {
+          "host_id": "14cff64d674f558dc47ee5e817b7f671",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        },
+        {
+          "host_id": "3901caec5d914bf20a44f176469b0294",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        }
+      ],
+      "equal_host_weight_error_rate": 0.0,
+      "unique_host_cluster_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "seed": 20261022,
+      "repetitions": 2000,
+      "independent_units": 2,
+      "limitation": "Only two reused training slides; resampling is descriptive conditional on these hosts/donors, does not establish population uncertainty or patient independence. Zero-event bootstrap degeneracy is not evidence of zero risk."
+    },
+    {
+      "task": "s2",
+      "condition": "same_grade_gp3_only",
+      "mode": "replacement",
+      "requested_percent": 10,
+      "hosts": [
+        {
+          "host_id": "14cff64d674f558dc47ee5e817b7f671",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        },
+        {
+          "host_id": "3901caec5d914bf20a44f176469b0294",
+          "originally_correct_trial_instances": 6,
+          "induced_error_instances": 0,
+          "rate": 0.0
+        }
+      ],
+      "equal_host_weight_error_rate": 0.0,
+      "unique_host_cluster_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "seed": 20261022,
+      "repetitions": 2000,
+      "independent_units": 2,
+      "limitation": "Only two reused training slides; resampling is descriptive conditional on these hosts/donors, does not establish population uncertainty or patient independence. Zero-event bootstrap degeneracy is not evidence of zero risk."
+    }
+  ],
+  "previous_failed_job": "23069018",
+  "previous_failure_report": "reports/research_engine_failure_23069018.json",
+  "reused_hash_verified_checkpoints": 6,
+  "test_predictions_computed": false,
+  "new_gpu_inference": false,
+  "patient_independence_verified": false,
+  "clinical_validity_verified": false,
+  "s2_training_stress_is_resubstitution": true,
+  "s2_v2_full_cohort_completed": false,
+  "sacct": "23069070               panda-engine-v1  COMPLETED      0:0   00:01:56            \n23069070.ba+                     batch  COMPLETED      0:0   00:01:56     13204K \n23069070.ex+                    extern  COMPLETED      0:0   00:01:56            \n23069070.0                      python  COMPLETED      0:0   00:01:48    318016K \n",
+  "artifacts_sha256": {
+    "reports/research_engine_summary_23069070.json": "33e9562127af1c3be96a46577849945462626ba964bba8ae914d0d3134e51dc7",
+    "reports/research_engine_trials_23069070.json": "b6015d0de52e6026c4af58aae5d82c636a1628f3f5aa267dfef5c120b343a39d",
+    "reports/research_engine_exclusions_23069070.json": "97dd1f51019133077c3f42598c9946cae9a3096d685e6621839058431ca391f9",
+    "reports/research_engine_registry_23069070.json": "0018e608558af1d09bdb940bcba3fcce9cff39066c69adc1ee90a7c8e3d9bc1a"
+  },
+  "all_reported_scores_from_executed_jobs": true,
+  "measurement_jobs": [
+    "23069018",
+    "23069070"
+  ],
+  "reused_trial_checkpoints": 5,
+  "reused_geometry_checkpoints": 1,
+  "new_trial_checkpoints": 1012,
+  "geometry_eligibility_limitation": "Combined occupancy/proximity revalidation can be conservative; one same-grade 10% near placement was excluded after a maximal-fragment proposal. Floating/raster-boundary effects have not been isolated. All exclusions remain NA, not scored as successes."
+}

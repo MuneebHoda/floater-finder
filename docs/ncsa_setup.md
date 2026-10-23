@@ -1,5 +1,203 @@
 # Floater Finder: NCSA setup
 
+## Source-path correction prepared — October 22
+
+The original profile metadata for the three reused smoke slides matches the
+existing embedding receipts exactly. Only `selection_manifest` and its SHA256
+differ in the cohort copies. A new v2 source list points to the verified original
+profile directories; the metadata/CSV/unbiased-training checks now pass57/57.
+No hash guard, source ID, fold, scientific parameter or historical file changes.
+The new versioned CPU configuration/launcher is prepared and tested locally;
+no replacement job has run. WSI/PNG/native-mask and feasibility gates still need
+scheduled execution. [Correction, pins and pending CPU command](panda_pixel_program_v2.md).
+
+## Pixel results inspection — October 22, 20:33 CDT
+
+Shared SSH verified `mhoda` / `dt-login03.delta.ncsa.illinois.edu` from Darwin.
+CPU23109277 completed0:0 in13s and GPU23109340 completed0:0 in43s this morning.
+The real96-image pilot has all399 prepared and five encoded receipt-file hashes
+verified; both source-anchor and null drift gates pass. Across four repeated
+training pairs, foreign NN5 exceeds its matched native sham in3/8,8/8,7/8
+comparisons at1%,5%,10% within-tile patch area. Both frozen scorers have0/24
+foreign mixed-image prediction changes; this is descriptive engineering evidence,
+not a calibrated detector or independent clinical validation.
+
+10k CPU23109667 failed1:0 in15s on a provenance check; its dependent GPU23109849
+was cancelled before starting. Read-only metadata checks identify three reused
+smoke sources whose current cohort metadata SHA256 differs from their original
+embedding receipts. Five partial source facts, zero images/masks, no successful
+record manifest/profile. Exact field differences remain unresolved; preserve
+failures and reconcile provenance before a versioned correction or retry.
+
+Own-QoS raw GPU usage5,816,000 billing-TRES seconds leaves8.3844444 normal-batch
+A100-hour equivalents, reconciling exactly with the43-second interactive pilot
+at billing2000. User queue empty. No new jobs/downloads/model calls or final-test
+access during inspection. [Observed metrics, paths, hashes and limitations](../reports/panda_pixel_results_20261022.md).
+
+The dated sections below preserve earlier submission states.
+
+## Approved pixel GPU submission — October 21
+
+User explicitly requested GPU submission and code commit. GPU23109340 is
+PENDING (Dependency) as of17:55:22CDT,with`afterok:23109277(unfulfilled)` and
+invalid-dependency cancellation requested. Slurm verified account
+`bfqi-delta-gpu`,QoS`bfqi-delta-gpu-mhoda`,partition`gpuA100x4-interactive`,
+one GPU,four CPUs,16GB,five minutes. CPU23109277 remains PENDING(Priority).
+No new inference or real-image completion is verified; do not duplicate jobs.
+
+Launcher1b4d19b is staged at
+`/u/mhoda/floater-finder/releases/panda-pixel-gpu-launch-v1-20261021T225437Z/source`
+(five files verified),using unchanged runtime61959fa/all276 files verified.
+The resolver freezes the actual real-image manifest only after the successful
+CPU dependency and validates all sources before the existing CONCH drift gates.
+All432 tests pass. [Exact command,authorization and immutable receipts](../reports/panda_pixel_gpu_submission_v1.md).
+
+## Pixel-contamination preparation handoff — October 21
+
+Local Darwin and shared SSH identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu`
+verified. Existing account balances reported rounded4692 CPU hours and8 GPU
+sub-allocation hours; no new GPU submission. Runtime source `61959fa` is staged
+at `/u/mhoda/floater-finder/releases/panda-pixel-contamination-v1-20261021T223344Z/source`;
+all276 files and frozen metadata/model inputs verified. The unchanged private
+runtime is `panda-cpu-1598f9b-20261020T040441Z` under the documented envs root.
+
+CPU23109222 timed out613s in scheduler Prolog on cn018, before any observed
+Python step/log/preparation output. The inspected replacement CPU23109277
+excludes cn018 and uses identical source/scientific inputs,2 CPUs,8GB,ten
+minutes,`bfqi-delta-cpu` account/QoS,`cpu-interactive`. As of17:48:34CDT it is
+PENDING (Priority), estimated start19:39:58CDT; this is a scheduler estimate,
+not a guaranteed start. Old timeout is in terminal cleanup. No real96-image
+manifest or GPU output exists. Do not duplicate the pending job or infer GPU
+approval. [Exact commands, immutable receipts, tests and unresolved checks](../reports/panda_pixel_contamination_preparation_v1.md).
+
+## Original-training topology/context execution — October 21
+
+Local Darwin and SSH `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified. CPU **23101968 completed 0:0 in 27s** on `cn061`, account/QoS `bfqi-delta-cpu` / partition `cpu-interactive`, 2 CPUs, 8 GB, 20-minute cap, no GPU. Actual 0.015 allocated CPU-hours; Python MaxRSS 378,920 KiB. One submission, no retry.
+
+Source `a1597699d3e6381a2f2baa35cebde1b687bdd6ff` at `/u/mhoda/floater-finder/releases/panda-topology-context-v1-20261021T164149Z/source` verified all 246 source files and six pinned original metadata/cache inputs. Results are sealed at `/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1`; authorization/output/common-support/completion receipts are sibling JSON files under `panda-review/`. All 72 training sources and 2160 planned context records verify, with no classification predictions or threshold changes. The original test output remains absent and the queue empty. [Findings and receipt hashes](../reports/panda_topology_context_results_v1.md); [frozen scope and exact command](panda_topology_context_v1.md).
+
+No dataset, model or raw-result files were downloaded to the Mac; no WSI/PNG, fresh 60, calibration or original-test arrays were opened. Old input hashes, S1/S3 registry receipts, frozen source/protocol and main remain preserved. The audit provides topology/context feasibility evidence, not an approved foreignness policy or clinical validation.
+
+## S3 conservative review transfer — October 21
+
+Shared SSH verified `mhoda` / `dt-login04.delta.ncsa.illinois.edu`. Site snapshot: 4908 rounded CPU hours, 8 rounded GPU hours, empty queue and CPU-interactive up. Latest request to push and move forward supplied next-stage research direction; agent chose the bounded 2-CPU/8-GB/20-minute scope and showed the exact staged command before submission. No explicit user choice of those resource values is claimed.
+
+CPU **23101320 completed 0:0 in 35s** on `cn100`, `bfqi-delta-cpu` account/QoS / `cpu-interactive`, zero GPUs; Python MaxRSS 345,324 KiB and 0.01944 allocated CPU-hours. Source `a5d819c360950d15ad0de84569ea5289edcb8942` at `/u/mhoda/floater-finder/releases/panda-fresh-review-transfer-v1-20261021T161755Z/source` verified all 240 files. Results are separately sealed at `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-review-transfer-v1`; authorization/output/interpretation/completion receipts are in the parent `reports/`. All 140 bags /9800 records, original S1 identities and 33 legacy files verify. The queue is empty, original final output absent, and no data/raw artifact was downloaded locally.
+
+Primary combined has zero foreign hits per 20 cases per mode with four genuine-cancer native flags and four hypothetical clean-prediction harms. No useful detector or final readiness follows. [Measured report and receipt hashes](../reports/panda_fresh_review_transfer_results_v1.md); [frozen design and exact command](panda_fresh_review_transfer_v1.md). The bounded stage is complete; no more job was submitted.
+
+
+## Fresh S1 execution — October 21
+
+Local Darwin and shared SSH `mhoda` / `dt-login01.delta.ncsa.illinois.edu` verified. Explicitly approved CPU **23083320** ran once on `cn137`, account/QoS `bfqi-delta-cpu`, partition `cpu-interactive`, 2 CPUs /8 GB /20-minute cap, zero GPUs. It completed 0:0 in 148s; Python MaxRSS 281,436 KiB /0.08222 allocated CPU-hours. All 233 staged source files and three baseline input receipts matched before submission; sealed output hashes and input receipts verified afterward.
+
+Frozen source `3a3faf199bf2a334648227281a685a999a60f7c9` is at `/u/mhoda/floater-finder/releases/panda-fresh-s1-v1-20261021T073227Z/source`. Results are separately preserved at `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-s1-v1`; authorization, output/safety checks and completion receipts are in the parent root’s `reports/`. No datasets, weights or raw reports were downloaded to the Mac. All 2382 exact oracle checks passed; nine capacity exclusions remain. [Observed results, uncertainty, tissue-safety limits and receipt hashes](../reports/panda_fresh_s1_results_v1.md); [frozen protocol and exact submitted command](panda_fresh_s1_v1.md).
+
+This consumes the approved CPU follow-up. No alert threshold, useful foreignness policy, patient independence or clinical validity is established. No additional jobs, GPU, downloads, fitting or original 24 final-test predictions are authorized by this run. Historical preparation notes below describe earlier states, not current pending work.
+
+## Fresh baseline preparation — October 20
+
+Local Darwin and shared SSH `mhoda` / `dt-login03.delta.ncsa.illinois.edu` were confirmed. Site inspection observed 5,425 rounded shared CPU hours and 8 GPU hours, `cpu-interactive` up with a one-hour cap, and an empty user queue. Exactly 120 proposed Radboud image/mask paths were stat-checked: none present. Shared available storage was 4,031,141,281,792 bytes, not a reservation. The existing Kaggle and PANDA CPU interpreter paths were present; credentials and live Kaggle authentication/download access were not inspected.
+
+Source **bfd4416936d2c35d764d6fd46e1017f110ef48db** was staged at `/u/mhoda/floater-finder/releases/panda-fresh-baseline-v1-20261021T023142Z/source`; all **226 source files** and the default metadata/model preflight verified with no prediction. The [preparation receipt](../reports/panda_fresh_baseline_preparation_v1.json) records the archive hash, exact pending acquisition and CPU tiling commands, observation records and resource bounds. [Protocol and approval scope](panda_fresh_baseline_v1.md).
+
+No new job, image/mask acquisition, WSI processing, GPU or fresh prediction occurred. The proposed new 60-slide download/CPU intake scope remains pending approval; future GPU and fresh scoring have separate gates. Reader/mask usability, actual tissue yield, patient independence and fresh predictive results remain unknown. The original 24 final-test slides remain sealed.
+
+## Paired-placement CPU audit — October 20
+
+Local Darwin and shared SSH identity `mhoda` / `dt-login03.delta.ncsa.illinois.edu` were verified for this continuation. Site inspection reported 5,447 rounded CPU hours and 8 rounded GPU hours, shared snapshots rather than reservations; `cpu-interactive` was up and the user's queue was empty before submission. The prepared runtime imports NumPy2.0.2 and Pillow12.3.0.
+
+CPU **23069409 completed 0:0** on `cn034`, two CPUs /8 GB /20-minute cap, `bfqi-delta-cpu` account/QoS and `cpu-interactive`. Actual elapsed 271 seconds, Python MaxRSS 1,319,304 KiB, 0.15056 allocated CPU-hours. Source `bbc2845875c8ff980a20d2c7bf9123ed801afc99` was staged separately at `/u/mhoda/floater-finder/releases/panda-placement-v1-20261021T015213Z/source`, verifying all 207 files. Verified immutable results are at `/work/nvme/bfqi/mhoda/floater-finder/panda-review/placement-v1-20261021T015213Z`; the sealed registry has 1,657 checkpoints /1,660 events. [Exact command, runtime paths, archives and every output hash](../reports/panda_detector_placement_v1/execution.json).
+
+This training-only audit uses existing embeddings/PNG exports and cached foreground, with no WSI processing, downloads, GPU, calibration or final-test predictions. Primary detection is 0/607 foreign instances; no useful policy or final readiness is established. [Measured report and read-only next command](../reports/panda_detector_placement_v1.md). The rejected final protocol and all prior artifacts remain preserved; fresh acquisition/encoding still needs explicit scope/resource approval.
+
+## Research CPU checkpoint — October 20
+
+The local Mac execution environment was verified as Darwin. Shared SSH confirmed `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. The prepared PANDA CPU runtime reports NumPy2.0.2, SciPy1.16.1, scikit-learn1.7.2 and Torch2.8.0+cu128 by package metadata; no Torch/CUDA inference was needed for this stage. Site allocations initially showed 5,467 rounded CPU hours and 8 GPU hours. These are shared snapshots, not reservations. CPU QoS permits one submitted job per user, so the research jobs were serialized.
+
+Detector v3 **23068965** and nested-CV predictors **23068979** completed 0:0 in 23 seconds each. Exact-score adapter verification **23069033** completed 0:0 in 13 seconds, matching 480 historical zero-shot vectors and 80 saved linear predictions. The first shared-engine job **23069018** failed an unhandled dose-specific placement eligibility check in 25 seconds; its five trial / one geometry checkpoints and failure record are preserved. Corrected **23069070** completed 0:0 in 116 seconds, using a new output and fixed predictor/geometry rules. There was no oracle failure or duplicate submission.
+
+These jobs used `bfqi-delta-cpu` / `cpu-interactive`, 2 CPUs and 4–8 GB each, with separate hash-verified source snapshots. No GPU, dataset/weight acquisition or final-test job was launched. The [research checkpoint](../reports/panda_research_checkpoint_v1.md) links exact commands, source revisions, inputs, outputs, measured denominators and remaining gates. The original 120-slide artifacts, frozen rejected final protocol and submission materials are preserved.
+
+Metadata-only fresh-cohort proposals exclude all 129 exposed pilot/study IDs. The proposed Radboud60 inputs total 1,348,184,402 catalog TIFF bytes; optional Karolinska60 inputs total 3,512,683,208 bytes. Exactly 240 candidate paths were stat-checked and none was present. Catalog masks are not verified usable masks, and patient IDs remain unavailable. [Versioned manifests and acquisition/resource gates](panda_fresh_validation_v1.md). PathGen remains unverified: the prepared runtime has no `open_clip_torch` distribution, and the bounded existing model-root check found only CONCH. [Interface/checkpoint audit](panda_encoder_readiness_v1.md).
+
+## Submission, S2 and ranked detector v2 — October 20
+
+Shared SSH identity reverified `mhoda` on `dt-login03.delta.ncsa.illinois.edu` from the local Mac. Site `accounts` reported 5,488 rounded CPU hours and 8 rounded GPU hours at the setup inspection; these are shared-allocation observations, not future guarantees. `cpu-interactive` was available with a one-hour partition limit. Both new jobs used the verified `bfqi-delta-cpu` account/QoS, 2 CPUs, 4 GB and a ten-minute cap, with no GPUs.
+
+- S2 job **23067396 completed 0:0 in 19 seconds**. Runtime source `35e0a8dae57e22808420b45ae040fc2f8c3710a5`; verified separate snapshot `/u/mhoda/floater-finder/releases/panda-s2-dev-20261021T003007Z/source` (361 files). New output `/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s2-dev-v1-20261021T003007Z`. All 760 oracles passed; mean primary has no calibration low-to-high errors across the tested doses. [Exact job and input/output hashes](../reports/panda_s2_submission_v1.json).
+- Ranked detector v2 job **23067454 completed 0:0 in 23 seconds**. Source `668d9b8c4e3e8aa300bda6ff15e416c601c2e024`; verified snapshot `/u/mhoda/floater-finder/releases/panda-review-v2-20261021T003112Z/source` (367 files). New output `/work/nvme/bfqi/mhoda/floater-finder/panda-review/detector-v2-20261021T003112Z`. The selected point remains unsupported: 0/40 calibration fragment hits. [Exact job and result hashes](../reports/panda_review_v2_job_23067454.json).
+
+No existing acquisition, WSI/tiling, GPU encoding, S1 draw, counterfactual or final-preflight job was repeated. The completed 23066843 preflight and rejected v1 frozen protocol remain unchanged. All 24 final-test predictions remain sealed; no final job or new GPU workload is authorized. [Submission/scientific handoff](../reports/submission_execution_checkpoint_20261020.md).
+
+## Latest PANDA review-policy checkpoint — October 20
+
+Shared SSH verified `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. CPU-only measurement job 23066481 preserved 96 topology / 256 review-case records before a selection-report JSON serialization failure; corrected selection-only job 23066553 completed `0:0` in 17 seconds from those exact measurement hashes. The selected combined policy has no supported operating point; all 24 final-test slides remain unscored. No acquisition, tiling or GPU inference was repeated.
+
+Read-only preflight 23066843 completed `0:0` in 31 seconds on `bfqi-delta-cpu` / `cpu-interactive` (2 CPUs, 4 GB, ten-minute cap). It verified 10,988 files across 24 test slides, all pinned source files and prepared package versions, without decoding held-out labels or computing predictions. It reported readiness false. Own queue was empty and the final output directory absent at the completion inspection. [Evidence](../reports/panda_final_preflight_completed_v1.json).
+
+- Verified final runtime source commit: `cde0e4a257898c6abe93d6a4df6ad52c744f31cc`; separate snapshot `/u/mhoda/floater-finder/releases/panda-final-prep-20261021T001051Z/source` (323 files verified; source files mode 444).
+- Frozen rejected protocol: `/work/nvme/bfqi/mhoda/floater-finder/panda-review/final-preparation-v1-20261021T000114Z/panda_frozen_protocol_v1.json`, SHA256 `695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881` (mode 444).
+- Blinded input contract: the same preparation root's `blinded_test_inputs_v1.json`, SHA256 `da7cc55b2c68356b31fd5692dcea9e8ac8e1734f82d2ffb5d9555e382ae9744f`; IDs/paths/hashes only.
+- CPU runtime: `/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z`; numpy 2.0.2, Pillow 12.3.0, openslide-python 1.4.6, tifffile 2025.5.10 verified by the scheduled preflight.
+- Measurement output: `/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z`; completed reporting output adds suffix `-selection-v2`. Original failed output is preserved.
+
+The exact prepared final command and expected outputs are [documented](panda_final_test_v1.md), **not authorized for submission under this rejected protocol**. Missing scientific inputs are a useful independently validated development policy, verified patient identities and stronger physical-boundary/clinical validation. All earlier setup and experiment history below remains preserved.
+
+## Latest PANDA scale-up checkpoint
+
+PANDA now has **120 slides / 50,729 verified CONCH embeddings**. The clean development baseline, **192 connected-fragment S1 trials** and **64 calibration piece counterfactuals** are executed. All 192 oracle recoveries pass. Genuine annotated cancer can also be decisive, so no foreignness or calibrated-alert claim follows. The 24 final-test slides remain unscored. [Current results, charts and remaining gates](../reports/panda_s1_and_piece_results_20261020.md).
+
+## Verified PANDA follow-up outputs — October 20
+
+Shared SSH after manual reconnection verified `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. GPU `23054910`, verification/baseline CPU `23055022`, S1 CPU `23065666` and piece-diagnostic CPU `23065744` are all `COMPLETED 0:0`. Own queue is empty at the final check. Latest site `accounts` shows 5,516 rounded CPU hours and 8 rounded GPU hours; these are observed balances, not future availability guarantees.
+
+- Verified cohort: `/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv`.
+- Verified 120-slide embeddings: `/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/cohort-120-v1-representative`.
+- CPU artifact receipt: `/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/embeddings_verified_120_job23054910_v1.json`.
+- Clean development baseline: `/work/nvme/bfqi/mhoda/floater-finder/panda-baselines/dev-zero-shot-v1-23054910`.
+- S1 development outputs: `/work/nvme/bfqi/mhoda/floater-finder/panda-stress/s1-dev-v1-20261020`.
+- Calibration piece outputs: `/work/nvme/bfqi/mhoda/floater-finder/panda-pieces/calibration-top5pct-v1-20261020`.
+- Immutable S1 source: `/u/mhoda/floater-finder/releases/panda-s1-dev-20261020-v1/source`; piece source: `/u/mhoda/floater-finder/releases/panda-piece-dev-20261020-v1/source`.
+
+Both new diagnostics used CPU only and existing embeddings, with no new data/weight download. Final `train.csv`, `pilot.csv` and original partial `annotated_cohort.csv` hashes still match their recorded originals. The current per-slide ledger is `reports/panda_scale_ledger_current_20261020.json`. Patient identities, complete physical-piece topology, calibrated review-alert thresholds and independent final-test validity remain unresolved. No final-test scoring or additional GPU batch was launched.
+
+## PANDA CPU smoke completed; cancer capture failed; available cohort is partial
+
+The user explicitly approved the prepared CPU command. It was submitted once as **`23050425`**, completed `0:0` on `cn137` in **9 seconds**, and produced **32 tiles per biopsy / 96 total**. All three CSVs, geometry, mask fractions, PNG dimensions and saved artifact hashes passed remote checks; retrieved CSV/metadata hashes and counts were independently checked locally. High-grade donor `dd1110c6430e3b1ac732be548a089886` had **0/32 tiles with nonzero Gleason 4 and 0/32 with Gleason 5**, so the cancer-positive extraction acceptance gate did not pass. Preserve this outcome; no resubmission, donor enrichment or GPU inference followed. [Observed CPU results](../reports/panda_cpu_smoke_results.md).
+
+At inspection, acquisition `23030528` was still pending for Priority. Its expected log did not exist, and its batch script invokes `/work/nvme/bfqi/mhoda/panda/collect_annotated.py`, which was absent. No larger manifest was generated in the checked locations. The job and script were left unchanged. [Inspection facts](../reports/ncsa_panda_acquisition_inspection_23030528.json).
+
+Under the user's explicit metadata-selection request, created `/work/nvme/bfqi/mhoda/panda/annotated_cohort.csv` with **three verified available Radboud biopsies**, one per requested group, using seed **20261020** and valid-mask-first deterministic selection. All three are training-only; calibration/test are empty. Mask coverage is **2/3**. There is a shortfall of 19 cases per group. The original `pilot.csv` hash is unchanged. The adjacent `.selection_provenance.json` records source metadata hash, selection recipe hash, seed, actual counts and partial status. No patient IDs are supplied, and no 60-slide readiness or patient-disjoint evaluation is claimed. [Selection provenance](../reports/panda_cohort_selection_20261020.json).
+
+## Real PANDA CPU smoke: staged and preflighted; submission awaits approval
+
+After manual reconnection, shared SSH verified `mhoda` on `dt-login04`. Exact pushed commit `1598f9b08e625112be7d5bf91a25f82335c962f9` is staged read-only at `/u/mhoda/floater-finder/releases/panda-1598f9b-20261020T040441Z/source`; all 172 source hashes match before and after preflight. The existing CONCH runtime was preserved. A new CPU runtime at `/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z` imports NumPy 2.0.2, Pillow 12.3.0, PyYAML 6.0.2, OpenSlide Python 1.4.6/binary 4.0.1.2 and tifffile 2025.5.10. Only the new runtime received dependency overrides, installed offline from two staged wheels.
+
+All three real images and both available masks passed the exact reader's header/alignment/calibration checks and five bounded one-pixel decoder probes. Native compressed tiles are 512×512; no complete slide plane or tile collection was processed on the login node. Measured MPP is 0.4861876369654638 in both axes for all three. The GG1 mask remains absent. [Observed reader/runtime facts](../reports/ncsa_panda_reader_preflight_1598f9b_20261020.json), [source hashes](../reports/ncsa_panda_source_manifest_1598f9b_20261020.json).
+
+Acquisition job `23030528` remains pending for Priority at the latest check and was left unchanged; no duplicate was submitted. The site's `accounts` snapshot showed 6,765 rounded CPU hours and 9 GPU hours; `cpu-interactive` was up. A scheduler `--test-only` check accepted the separate two-CPU, 4 GB, ten-minute tiling request without submitting it. The user's explicit step-5 approval is still required. [Exact paths, command, outputs and acceptance checks](../reports/panda_cpu_smoke_preparation.md). No GPU inference was launched. Tile counts and cancer-positive donor counts remain unknown until the actual CPU job runs.
+
+The observed `train.csv` has 10,616 rows and `pilot.csv` still has 12. A local software fixture confirms compatibility with a 60-row Radboud membership CSV, but the actual new cohort manifest has not yet been located; its path was requested. No original manifest was overwritten. The three-slide smoke cap remains in force.
+
+## PANDA pilot supplied by the user: adapter prepared, real run pending
+
+The user has now verified `/work/nvme/bfqi/mhoda/panda/` containing original `train.csv`, a 12-Radboud-biopsy `pilot.csv`, `train_images/` and `train_label_masks/`. This personal root was outside the earlier bounded shared-root search. [The implementation status](../reports/panda_implementation_status.md) records the three exact user-verified slide IDs, scale/mask facts, local tests and unsubmitted CPU/GPU resource drafts. These facts came from the user; the new adapter has not independently executed on those Delta files.
+
+The adapter reads physical scale from level-0 TIFF resolution tags and checks it against the user's approximate `.486` microns/pixel within 1%; it does not replace measured scale with an assumed value. Mask absence remains unknown, and original ISUP/Gleason grades are never copied into tile labels. The original checkpoint and verified CONCH runtime paths below remain unchanged. The new optional TIFF dependency must be checked/prepared in an isolated Delta runtime before the CPU stage; no runtime was modified remotely.
+
+No PANDA job, new GPU inference or bulk download was performed for this request. Real TIFF decoder compatibility, spatial QC of extracted tiles and approval of the bounded new scope remain gates. A local uncompressed RGB tiled-TIFF decoder failure is documented in the status report; compressed fixture success is not a real-Delta compatibility claim.
+
+## Prostate-biopsy pivot: read-only availability check
+
+On October 19 (observation timestamp October 20 UTC), the local Mac's shared SSH connection verified `mhoda` on `dt-login04.delta.ncsa.illinois.edu` via `ncsa-floater`. A bounded name/metadata search checked the two documented shared dataset roots, at most two directory levels, 200 entries per directory, 2,000 total entries and 30 seconds. It examined 48 entries, without truncation or reported directory errors, and found no PANDA/prostate/biopsy candidate names. This historical check excluded the personal PANDA root subsequently supplied above. [Exact scope and observed names](../reports/ncsa_panda_availability_20261019.json).
+
+`accounts` returned 6,881 rounded CPU hours on `bfqi-delta-cpu` and 9 rounded GPU hours on the `bfqi-delta-gpu` sub-allocation `mhoda`. Both allocations were previously confirmed for the hackathon. The user's queue was empty; the queried `cpu-interactive` and `gpuA100x4-interactive` partitions were up with one-hour limits. These are snapshots, not guarantees, and this was not a new GPU-access test.
+
+No dataset/weight downloads, image/feature body reads, inference or jobs were started for this pivot. PANDA slide, mask, provider/label metadata and access/license locations remain unverified; no PANDA destination or new Slurm request has been selected. Phase 2 also needs a validated benign/cancer scorer and new-scope execution authorization. [Integration gates and artifact reuse](panda_integration.md) supersede the older “next command” recommendations below for current work. Historical experiment paths, jobs and evidence remain preserved.
+
+## Historical CONCH/TCGA setup and execution
+
 Initial setup verified on 2026-10-17; latest acquisition verification on 2026-10-19 (America/Chicago). First milestone: CONCH only.
 Initial connection setup performed no Slurm job, inference, whole-slide processing, or dataset/model download. The later approved scheduled GPU smoke and hosted two-tile CONCH image-encoding test succeeded. Self-hosted CONCH v1 encoding and patient-separated detector smoke are verified below. The expanded development cohort is now encoded, but its cutoff-retention gate did not pass; expanded held-out and clinical performance remain untested.
 
@@ -290,3 +488,83 @@ This successful scheduled run verifies Slurm GPU allocation and driver visibilit
 The exact next command from the local checkout is `cat configs/ncsa_expanded_pilot_download_plan.json` to review the concrete, approved acquisition manifest. Dependency maintenance and the bounded GPU compatibility check are verified; broader research still needs completed acquisition/integrity checks, broader sampling, a cohort runner and frozen calibration protocol. The current evaluation set must not be used for threshold tuning.
 
 Keep `AGENTS.md` safeguards and the recorded continuing authorization in force. Bounded CONCH plan jobs and the two development inputs are covered; bulk cohorts or additional models need separate scope authorization. Preserve the user-authorized private-repository audience for setup details and project documents.
+
+
+## Fresh Radboud60 CPU intake — verified October 21
+
+Approved acquisition 23070667 and CPU tiling 23070755/23070937/23071013/23073158/23073380/23081800 completed `0:0`. Full metadata verification passed 60 slides, 25,915 tiles and 60 masks. All 20 high-grade slides have sampled GP4/5 annotation, totaling 4,209 distinct positive tiles. These are annotation observations, not predictions. Root-job accounting totals 0.7572 allocated CPU-hours.
+
+Verified output root: `/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1`. The exact 60-directory encoding list is `tiling-directories.json`; complete readiness is `reports/cpu-readiness-v1.json` (SHA256 `2547519afadbb0615cd0691bf550ec4c0db117b32069ab360641bd7447654790`). All payloads and detailed artifacts remain on Delta; none were copied to the Mac. Source is `bfd4416936d2c35d764d6fd46e1017f110ef48db` in `/u/mhoda/floater-finder/releases/panda-fresh-baseline-v1-20261021T023142Z/source`. See the [execution record](../reports/panda_fresh_cpu_execution_v1.md) for provenance limits and exact unsubmitted GPU/CPU proposals. Fresh embeddings, clean predictive performance and patient independence remain unverified; the original 24 final-test predictions are sealed.
+
+Final lightweight recheck: queue empty; both interactive partitions up with one-hour limits. `accounts` reported 5,287 rounded CPU hours and 8 GPU hours remaining in the previously selected CPU/GPU allocations (shared snapshots, not reservations). No GPU submission was made.
+
+
+## Fresh GPU and frozen-baseline stage — verified October 21
+
+The user separately approved the exact 30-minute one-A100 encoding plus 20-minute CPU verification/frozen-scoring scope. GPU 23081929 completed 0:0 in 743 seconds (one GPU, 4 CPUs, 16 GB; 0.2064 GPU-hours). CPU 23082231 completed 0:0 in 66 seconds (2 CPUs, 8 GB, no GPU). All 60 slides / 25,915 512D embeddings passed scheduled array/hash/provenance checks before scoring; original 24 final-test predictions remain sealed. Detailed outputs stay under the verified fresh root; no files were copied to the Mac. See the [result record](../reports/panda_fresh_baseline_results_v1.md) for observed performance and limits.
+
+Remote artifact-verification SHA256: `242050b5398cc0473e641760d1aed96dbae46b871a8feebefb653de9318b4d4e`. Baseline completion SHA256: `8b6d86b01d40fd05651211de5f8faee50806e3a1dd814bb18d44cccd7f6e9248`. Independent small-result inspection SHA256: `7064d2962d983c97e0cff45d96f267aba3b9e45a081cb440ed1c43811ae527b0`. No further encoding/evaluation job is covered by this consumed scope.
+
+
+## 2026-10-21 — training numeric-context/native controls
+
+Verified local Darwin and shared SSH identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu`. Site `accounts` showed bfqi-delta-cpu 4,875 hours and bfqi-delta-gpu sub-allocation mhoda 8 hours; cpu-interactive up with one-hour maximum, own queue empty. No GPU submitted. CPU **23102229 completed 0:0 in 12s**, 2 CPUs/4 GB/five-minute cap, node cn095, MaxRSS 70,576 KiB, 0.006667 allocated CPU-hours. It read only the prior sealed training audit JSON and filtered manifest IDs; no image/array/prediction work.
+
+Source `0340d605acd6bee8ea913d09307a326750cb1a5c` at `/u/mhoda/floater-finder/releases/panda-context-safety-v1-20261021T170007Z/source`, all 253 files verified. New output `/work/nvme/bfqi/mhoda/floater-finder/panda-review/context-safety-v1` has 73 sealed checkpoints /76 events for 72 training slides. Completion receipt `/work/nvme/bfqi/mhoda/floater-finder/panda-review/context-safety-completion-v1.json`, SHA256 `7bc8726d4fc2ed8ce0bab3d920b3e8b6df0f2ef18d57892c5d2b998f255dc0a4`. Original audit receipts, legacy sources and final-test seal remain preserved. [Findings and unresolved physical-context/foreignness validity](../reports/panda_context_safety_results_v1.md). Queue empty on completion; no extra job or local data download.
+
+
+## 2026-10-21 — saved-training dependence report export
+
+Local Darwin and shared SSH `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified. Latest site account snapshot: bfqi-delta-cpu 4,860 hours, bfqi-delta-gpu sub-allocation mhoda 8 hours; cpu-interactive up with one-hour maximum, own queue empty. CPU **23102479 completed 0:0 in 16s**, node cn095, 2 CPUs/4 GB/five-minute cap, Python MaxRSS 121,300 KiB, 0.008889 allocated CPU-hours. No GPU, new predictions, images/arrays or download.
+
+Source `1a388ef47c393afff11e73d53e05783a6a4723d5` at `/u/mhoda/floater-finder/releases/panda-dependence-export-v1-20261021T172655Z/source`, all 260 files verified. Remote report index `/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-report-v1/index.html`; 72 HTML +72 reviewer JSON +index verify with 73 sealed checkpoints /76 events. All 145 rendered files have observed mode 0660, recorded without permission changes. Completion `/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-export-completion-v1.json`, SHA256 `7ae084249f6516e181b44a04c0695f976405a4c165baecd0d8ba8788acf69a76`. [Results and unresolved visual/clinical validity](../reports/panda_dependence_export_results_v1.md). Original protocol/main/legacy source and final-test seal preserved; queue empty and bounded scope complete. All detailed artifacts remain remote.
+
+
+## 2026-10-21 — bounded original-training PNG galleries
+
+Darwin and shared SSH `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified. Latest account snapshot: bfqi-delta-cpu 4,850 hours and bfqi-delta-gpu sub-allocation mhoda 8 hours; cpu-interactive up with one-hour maximum. CPU **23102636 completed 0:0 in 23s**, node cn099, 2 CPUs/4 GB/five-minute cap, Python MaxRSS 316,776 KiB, 0.012778 allocated CPU-hours. No GPU, new model call or local download.
+
+Source `ec5a71dde4b566393ddfa4b53b5e1b6a8eec3d6d` at `/u/mhoda/floater-finder/releases/panda-preview-export-v1-20261021T174522Z/source`, all 267 files verified. New index `/work/nvme/bfqi/mhoda/floater-finder/panda-review/dependence-previews-v1/index.html`: 72 training slide galleries /389 components, 1,638 original PNG byte copies /2,605 references, 101,466,949 bytes. All 1,783 output files and 72 source receipt groups verify; output mode 0660 preserved, own queue empty. Completion `/work/nvme/bfqi/mhoda/floater-finder/panda-review/preview-export-completion-v1.json`, SHA256 `05c148adb417d907673d5fd8d099960690a5e78a9a00e9ef05deb20246344c02`. [Preservation proof and unresolved visual/clinical validity](../reports/panda_preview_export_results_v1.md). No old report or data overwritten; all images/detailed outputs stay remote and original test seal remains closed. Bounded scope complete.
+
+
+## 2026-10-21 — saved native/synthetic training controls
+
+Local Darwin and shared SSH identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified. Site account snapshot: bfqi-delta-cpu 4,833 hours and bfqi-delta-gpu sub-allocation mhoda 8 hours, the previously selected allocations; cpu-interactive up with one-hour maximum. CPU **23104084 completed 0:0 in 21s**, node cn137, 2 CPUs/4 GB/five-minute cap, Python MaxRSS 244,700 KiB, 0.011667 allocated CPU-hours. No GPU or new predictions.
+
+Source `24364b4946de211ae8b608f7bf7d710408aca112` at `/u/mhoda/floater-finder/releases/panda-paired-controls-v1-20261021T181828Z/source`, all 273 files /ten input receipts verified. New index `/work/nvme/bfqi/mhoda/floater-finder/panda-review/paired-control-audit-v1/index.html`: 24 known-provenance training pairs /16 reused donors, 250 unchanged PNG assets /384 references, 16,981,004 bytes, 299 files verified. Completion `/work/nvme/bfqi/mhoda/floater-finder/panda-review/paired-controls-completion-v1.json`, SHA256 `44a79eddff734526a00194e88b9c328cc5351d8874545bbc2dca68315e1a2eb1`. Previous galleries/reports, all source identities and original test seal are preserved; own queue empty, no duplicate/retry or local data download. First incomplete source archive was retained after pre-submission metadata failure. [Observed audit findings and unresolved visual/foreignness validity](../reports/panda_paired_control_audit_results_v1.md). This bounded scope is complete; all pixels/detailed artifacts remain remote.
+
+
+## 2026-10-21 — blank qualitative-review metadata packet
+
+Darwin and the shared SSH identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified once before remote work. Pushed source `e29a7a3fa56179451d6d2f123fa6add9ba66f619` was staged at `/u/mhoda/floater-finder/releases/panda-expert-review-v1-20261021T184909Z/source`; all 258 files and frozen source preflight verified. Metadata-only preparation used the existing CPU runtime, without Slurm/GPU submission or image/array/model reads.
+
+Verified new packet `/work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-v1` has exactly `worksheet.blank.json`, `review_guide.md` and `preparation.json`. It contains 24 original training case references /16 reused donors, all human answers null and **0/24 reviewed**. Preparation SHA256 `cd3dc7edd023b4a26e08ecf4c27f654c0b066575e7be1f249fdcba96e32203af`. Independent administrative verification `/work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-verification-v1.json`, SHA256 `e741fd742ee7d59499753c6e5114a33559569ed344ad556ed1490c6a988850e4`. Old audit receipts and 48 public case files match; original final output absent. No local data/result file download, expert assessment, reviewer contact or model operation. [Commands, provenance and unresolved human/visual/foreignness validity](../reports/panda_expert_review_preparation_v1.md). Blank preparation is complete; detailed response copies remain remote and must preserve the original packet.
+
+
+## 2026-10-21 — fixed-support training candidate executed
+
+After the user confirmed manual reconnection, local Darwin and shared identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu` verified once. Site snapshot: bfqi-delta-cpu 4,714 hours and GPU sub-allocation mhoda 8 hours; CPU interactive up with one-hour maximum, own queue empty. Runtime source `204c194524943e75813e966f300e39dbb5e63bcb` was staged read-only at `/u/mhoda/floater-finder/releases/panda-stable-context-v1-20261021T214940Z/source`, all 265 files /seven input receipts match.
+
+CPU **23108680 completed 0:0 in 21s**, node cn137, 2 CPUs/8 GB/ten-minute cap, Python MaxRSS 365,672 KiB, 0.011667 allocated CPU-hours, zero GPU. New verified output `/work/nvme/bfqi/mhoda/floater-finder/panda-review/stable-context-v1`: 96 case checkpoints +summary /100 events. Primary detects 3/24, source-exact hypothetical recovery 1/12, clean alerts 8/72; both frozen candidate/comparator fail utility. [Denominators, uncertainty, source and exact command](../reports/panda_stable_context_results_v1.md). Completion `/work/nvme/bfqi/mhoda/floater-finder/panda-review/stable-context-completion-v1.json`, SHA256 `c5eeca3dd295128edff570333973f6f8d79776fdec3118e56e51d7817d9e3abe`.
+
+No new model/encoder inference, GPU, download, draw, fitting of a disease model, duplicate/retry or held-out/fresh prediction. All raw data/metrics remain remote; source/input receipts, historical evidence and final-test seal intact, own queue empty. User confirmed no reviewer available; blank worksheet unchanged at 0/24 reviewed, expert review stays pending. This bounded stage is complete and does not authorize another job or opening final predictions.
+
+
+## Expanded-program resource audit — October 21, 18:43 CDT
+
+Verified identity `mhoda` / `dt-login04.delta.ncsa.illinois.edu`. Own QoS `bfqi-delta-gpu-mhoda` exposes 600,000 billing-TRES minutes deposited, 95,500 used, 504,500 remaining = 8.4083333 batch A100-hour equivalents. Root-job accounting and raw QoS usage reconcile exactly; `accounts` rounds to 8 and `jobcharge` displays rounded rows. Live `gpuA100x4` maximum 48h / GPU weight 1000; interactive maximum 1h / GPU weight 2000. CPU/memory weights and MAX_TRES billing mean the planned one-A100/4-CPU/16-GiB batch is GPU dominated. Association has no partition restriction and historical normal A100 batch jobs succeeded. New test-only admission and current checkpoint hash are still pending; connection expired before admission testing. No authentication retries. No new GPU or data download. [Verified charge ledger](../reports/panda_gpu_program_metadata_audit_v1.json), [prepared scope and exact paths](../reports/panda_gpu_research_program_preparation_v1.md).
+
+
+### Reconnected submission — October 21, 19:07 CDT
+
+One shared test verified `mhoda` on `dt-login03.delta.ncsa.illinois.edu`. Normal A100 batch scheduler admission now passes for one A100/4 CPUs/16 GiB/15 min under `bfqi-delta-gpu` / `bfqi-delta-gpu-mhoda`; no GPU job was submitted. Test-only advisory A100 start was October 29 and CPU start October 26, both beyond the deadline. Actual new CPU **23109667** is PENDING (Priority) with no start estimate at submission. Its 4-CPU/16-GiB/30-minute source snapshot and exact command are verified; existing pilot jobs remain queued unchanged. All 73 source files match the frozen manifest. Current model rehash and real dedup counts are still pending scheduled execution. [Submission status and paths](../reports/panda_gpu_program_cpu_execution_v1.md).
+
+
+### Approved Stage B profile queued — October 21, 19:39 CDT
+
+GPU profile **23109849** is PENDING (Dependency) behind successful CPU23109667 and terminal pilot GPU23109340. Verified normal A100 account/QoS/partition, one GPU/4 CPUs/16 GiB/15 min, GPU-dominated billing1000, unchanged73-file scientific source and five-file launcher. User approval covers this frozen benchmark’s profile plus conditional remaining ranges within45 total batch minutes/0.75 billed equivalents; other GPU stages remain gated. Balance at19:38 remains8.4083333 equivalents. Actual input receipt hash/count and profile measurements await scheduled execution. [Exact command and all source/authorization receipts](../reports/panda_pixel_program_gpu_submission_v1.md).
+
+
+### CPU capacity and node-health diagnosis — October 21, 23:56–23:57 CDT
+
+Read-only Slurm inspection found the normal CPU pool had 136 nodes: 76 draining, 55 allocated, four completing and one reserved; no idle node group was listed. Draining-node reasons included 45 `/sw` filesystem node-health-check timeouts and 14 terminated node-health checks. The interactive CPU pool was similarly constrained (77 draining, 55 allocated, four completing, one reserved). These are observed scheduler/node-health readings, not an official outage announcement or a confirmed repair timeline. Current CPU jobs23109277/23109667 still report Priority; their GPU dependents23109340/23109849 have not started. Allocation balance is not reserved hardware capacity. Old failed CPU23109222 remains COMPLETING on cn018, whose state includes DRAIN and whose recorded reason is a terminated health check; direct causality for other jobs is not established. Latest advisory pilot CPU start at this inspection was October22 16:53 CDT, not a guarantee; the10k CPU had no estimate. No job settings, scripts, priorities, dependencies, resources or submissions were changed.

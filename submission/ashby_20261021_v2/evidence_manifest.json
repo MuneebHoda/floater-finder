@@ -1,0 +1,36 @@
+{
+  "source_files_sha256": {
+    "reports/panda_clean_baseline_23055022.json": "f5056abe450cefa610da25cb668cf863236fba639e6c4591ee71ced9ddfd27a9",
+    "reports/panda_s1_summary_23065666.json": "c1dfee563f602557b8740d2b2f31cd317977801bb707c6c02349fa905a9c2da0",
+    "reports/panda_scientific_audit_v1.json": "a7e61bf1bbe82a2929d325b462dcf1ca7653c8e2fe116cd0cffed16bf042d3a8",
+    "reports/panda_piece_genuine_cancer_example_23065744.json": "1cce2400d283ad1dcc12bcee7d11b5e2b5fb825774f59644f759f8023a7c0c93",
+    "reports/panda_piece_synthetic_foreign_example_23065744.json": "eff208238e930c8204421cb1d77d3a91f56cb14360cc27c8cf27debc1d93c886",
+    "reports/panda_review_selection_v1.json": "f1df88da9502a10c3a99c97fba6f6f53942ca2a4ebd65b05901e0dcb508966ad",
+    "reports/panda_review_diagnostics_v1.json": "5b605c68d7a9650ba4e5eab1711910369a2e263477694ad3881bd087407e06e4",
+    "reports/panda_topology_qa_v1/provenance.json": "3bc1f5b7b2325753f6fcb072bcc92692d590ae3e6ea66363be658cbf897d4e81",
+    "configs/panda_frozen_protocol_v1.json": "695e2097aa0916bdd03b9b0721fc1f58dd5fda338e9c4975c171d64d2d36c881",
+    "reports/panda_s2_results_v1.md": "e4e67dc446b9cc581a41e0f62673fa571abcc97797542874f55106ac3bcdd0cd",
+    "reports/panda_s2_development_v1/summary.json": "508ae59c3b886b093002fbc127a089b3d9b49d73e0869d951316ad36995d489d",
+    "reports/panda_s2_development_v1/analysis.json": "1fe96ce76eedf6588270eab8164c8cde7c0d4aaeec7a31030bd242ad28ed2ad5",
+    "reports/panda_s2_development_v1/clean_audit.json": "5792af51d0e19a40d1975f0cba195c57aed04725e40c6f7f4b45485f94dc6241",
+    "reports/panda_review_v2_results.json": "0aef9f671d2fc4b139a3995b852bdbe057ab0a1a5ac766955d1a6d52265ce270",
+    "reports/panda_review_v2_results.md": "9812287a739b03119ad075207803d6ea60138ee25eab877a1bfd29ab40b2be5f"
+  },
+  "execution_sources": {
+    "S1_v1": "06c7b771399c26b9dbc390b7e4bd73b077878e95",
+    "S2": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+    "detector_v2": "668d9b8c4e3e8aa300bda6ff15e416c601c2e024"
+  },
+  "slurm_jobs": {
+    "S1": "23065666",
+    "piece": "23065744",
+    "v1_measurement": "23066481",
+    "v1_selection": "23066553",
+    "preflight": "23066843",
+    "S2": "23067396",
+    "detector_v2": "23067454"
+  },
+  "source_kind": "Observed training/calibration only",
+  "final_test_slides_scored": false,
+  "automatic_tissue_action": "none"
+}

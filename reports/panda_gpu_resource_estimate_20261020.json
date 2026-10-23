@@ -1,0 +1,30 @@
+{
+  "source_kind": "real",
+  "category": "PANDA engineering resource estimate; not a completed cohort encoding",
+  "profile_job": "23051673",
+  "image_tiles_per_second_weighted": 63.186424479719406,
+  "model_load_seconds_mean": 3.9361960196401924,
+  "profile_host_rss_kib": 4007116,
+  "profile_slurm_gpu_memory": "3130M",
+  "cohort_estimates": {
+    "60": {
+      "representative_tile_upper_bound": 30720,
+      "linear_image_seconds_upper_bound": 486.18038214616854,
+      "per_slide_model_load_seconds": 3.9361960196401924,
+      "estimated_model_load_seconds": 236.17176117841154,
+      "estimated_seconds_excluding_other_overhead": 722.3521433245801
+    },
+    "120": {
+      "representative_tile_upper_bound": 61440,
+      "linear_image_seconds_upper_bound": 972.3607642923371,
+      "per_slide_model_load_seconds": 3.9361960196401924,
+      "estimated_model_load_seconds": 472.3435223568231,
+      "estimated_seconds_excluding_other_overhead": 1444.7042866491602
+    }
+  },
+  "limitations": [
+    "Three slides profiled; larger-slide tissue counts and I/O differ",
+    "Estimates include per-slide model load but exclude text/serialization/hash/startup overhead",
+    "Final request must use completed tiling counts and reuse the three matching profile artifacts"
+  ]
+}

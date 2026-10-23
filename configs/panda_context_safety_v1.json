@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_context_safety_v1",
+  "status": "frozen_before_training_native_control_accounting",
+  "hypothesis": "Expose unsupported or dominant sampled-bag comparisons and measure retained native positive controls without declaring foreignness.",
+  "split": "train",
+  "slides": 72,
+  "audit_root": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1",
+  "audit_protocol": "configs/panda_topology_context_v1.json",
+  "audit_protocol_sha256": "7972dad8aa97db90ac3012239e68412636ce6c1010351541db9190997d8ad9ae",
+  "audit_source_commit": "a1597699d3e6381a2f2baa35cebde1b687bdd6ff",
+  "minimum_comparison_tiles": 6,
+  "majority_veto": true,
+  "classification_predictions": false,
+  "fit_thresholds": false,
+  "inputs": {
+    "manifest": {
+      "path": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+      "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81"
+    },
+    "audit_run": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1/run.json",
+      "sha256": "7eeaf9cfec77b83c3653ef1ff72bf73137140ea62b275d020765afc69a12f188"
+    },
+    "audit_seal": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1/seal.json",
+      "sha256": "7ec995e21c0fecf6559951ed51f5068ba64ffd53f9d24c62fe90fdc9c5136036"
+    },
+    "audit_summary": {
+      "path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/topology-context-v1/checkpoints/summary.json",
+      "sha256": "77b9974b1b9b2ee80db8f1e5c2010cb3b69587c5a60881fba7b49c4372b4bcd7"
+    }
+  },
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 4,
+    "maximum_minutes": 5,
+    "gpu": 0
+  },
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/context-safety-v1",
+  "authorization_basis": "User next after topology/context audit and explicit eligibility/abstention recommendation; bounded development-only CPU accounting. Resources agent-selected, not expressly user-selected.",
+  "limitations": [
+    "Training coverage only; no validation or foreign-tissue detection estimate",
+    "Minimum six ensures NN5 counts, not stability",
+    "Majority veto is a new conservative engineering candidate chosen after prior training audit; not a validated physical size or clinical cutoff",
+    "RGB and sampled components are uncertain proxies; unassigned references remain unknown",
+    "Native annotation joins only after gates; positive cancer annotation is not foreignness",
+    "No numerical score threshold, cancer prediction or filtering; all review and harm metrics remain null",
+    "No arrays, images, masks, GPU, downloads, calibration/fresh60/test inputs or parameter search"
+  ],
+  "source_files": {
+    "src/floater_finder/detectors/context_eligibility.py": "f806d5946b33d48d129a10a6b1327d8f711bf6f41dcc5afeb3e4a8d7ee9e2e4d",
+    "src/floater_finder/research/context_safety.py": "58e2bbc8aa7756897edf7c518c7673844adb04ca122cb894d36801f3c445e20d",
+    "src/floater_finder/research/topology_context.py": "b053ccf97cb65c5c89feb213870e9e92627cdf39551f9bd51207eff73c94cde5",
+    "src/floater_finder/research/registry.py": "ec9f069098846677ff93ac58804085fc845448cb5438d8166d0b092239477810",
+    "src/floater_finder/research/contracts.py": "008d67204e0398212a479fd1f45d0a9370905c4815607ba76cff07b9b03f5449",
+    "scripts/panda_context_safety.py": "033019507cd04d5fe0eaadbd95bc1b23709dd7e253ae71e1fe69337b177b1ad1",
+    "scripts/slurm/panda_context_safety.sbatch": "c4172aec647e079cd3b065628691166c8a6cbe8ce361d1e1cef77d7a5c4f3f29"
+  }
+}

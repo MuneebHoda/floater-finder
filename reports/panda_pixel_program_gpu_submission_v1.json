@@ -1,0 +1,79 @@
+{
+  "observed_at": "2026-10-21T19:39:23.797968-05:00",
+  "user_authorization": "Okay I approve it: conditional frozen Stage B CONCH profile and remaining encoding; maximum .75 billed equivalents total",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--dependency=afterok:23109667,afterany:23109340",
+    "--kill-on-invalid-dep=yes",
+    "/u/mhoda/floater-finder/releases/panda-pixel10k-profile-launch-v1-a2589ae29beb/source/scripts/slurm/panda_pixel_program_after_cpu.sbatch",
+    "/u/mhoda/floater-finder/releases/panda-pixel10k-profile-launch-v1-a2589ae29beb/source",
+    "/u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source",
+    "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+    "479238282837d51818b72a612118dc999e0a85b9f2082a5896968d7f6b5da00a",
+    "8e4f4b6683d1647b94b7e5168205ce30e2ff6fcd4aa78fcb4ae95357d9ef85a9",
+    "23109667"
+  ],
+  "authorization_path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-gpu-authorization.json",
+  "authorization_sha256": "7693dbf2a9e45d8bd46525a817a91a5cd5392fec58b6b2a9e6ca3436eec39a3e",
+  "launcher_manifest_sha256": "a2589ae29beb4fcaa2a05118678af48465b4553da89be8c3af659d555f6f69ca",
+  "scientific_manifest_sha256": "479238282837d51818b72a612118dc999e0a85b9f2082a5896968d7f6b5da00a",
+  "remaining_gpu_equivalent_hours_before_submission": 8.408333333333333,
+  "resource_caps": {
+    "account": "bfqi-delta-gpu",
+    "qos": "bfqi-delta-gpu-mhoda",
+    "partition": "gpuA100x4",
+    "gpus": 1,
+    "cpus": 4,
+    "memory_gb": 16,
+    "profile_minutes": 15,
+    "maximum_profile_images": 512,
+    "combined_stage_b_minutes": 45,
+    "combined_stage_b_equivalent_hours": 0.75
+  },
+  "actual_cpu_completion_hash_pending": true,
+  "remaining_batches_submitted": false,
+  "original_pilot_jobs_untouched": [
+    23109277,
+    23109340
+  ],
+  "cpu_job_untouched": 23109667,
+  "status": "submitted",
+  "exit_code": 0,
+  "stdout": "23109849\n",
+  "stderr": "",
+  "intent_path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-profile-submission-intent.json",
+  "intent_sha256": "bb32d55d07f3e606410e2d14cf9b83579766b4b6fb59b2c947c27fb49b0b337d",
+  "job_id": "23109849",
+  "checks": [
+    {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "23109849"
+      ],
+      "exit_code": 0,
+      "stdout": "JobId=23109849 JobName=panda-pixel10k-profile\n   UserId=mhoda(92269) GroupId=grp_202(202) MCS_label=N/A\n   Priority=1199 Nice=0 Account=bfqi-delta-gpu QOS=bfqi-delta-gpu-mhoda\n   JobState=PENDING Reason=Dependency Dependency=afterok:23109667(unfulfilled),afterany:23109340(unfulfilled)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=00:15:00 TimeMin=N/A\n   SubmitTime=2026-10-21T19:39:23 EligibleTime=Unknown\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-21T19:39:23 Scheduler=Main\n   Partition=gpuA100x4 AllocNode:Sid=dt-login03:988123\n   ReqNodeList=(null) ExcNodeList=(null)\n   NodeList=\n   NumNodes=1-1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=4,mem=16G,node=1,billing=1000,gres/gpu=1\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=4 MinMemoryNode=16G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)\n   Command=/u/mhoda/floater-finder/releases/panda-pixel10k-profile-launch-v1-a2589ae29beb/source/scripts/slurm/panda_pixel_program_after_cpu.sbatch\n   SubmitLine=sbatch --parsable --dependency=afterok:23109667,afterany:23109340 --kill-on-invalid-dep=yes /u/mhoda/floater-finder/releases/panda-pixel10k-profile-launch-v1-a2589ae29beb/source/scripts/slurm/panda_pixel_program_after_cpu.sbatch /u/mhoda/floater-finder/releases/panda-pixel10k-profile-launch-v1-a2589ae29beb/source /u/mhoda/floater-finder/releases/panda-pixel-program-v1-479238282837/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z 479238282837d51818b72a612118dc999e0a85b9f2082a5896968d7f6b5da00a 8e4f4b6683d1647b94b7e5168205ce30e2ff6fcd4aa78fcb4ae95357d9ef85a9 23109667\n   WorkDir=/work/nvme/bfqi/mhoda\n   StdErr=\n   StdIn=/dev/null\n   StdOut=/work/nvme/bfqi/mhoda/panda-pixel10k-profile-23109849.out\n   KillOnInvalidDependent=Yes\n   TresPerNode=gres/gpu:1\n   TresPerTask=cpu=4\n\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "squeue",
+        "--start",
+        "-u",
+        "mhoda",
+        "-o",
+        "%.12i %.25j %.12T %.22S %.30R"
+      ],
+      "exit_code": 0,
+      "stdout": "       JOBID                      NAME        STATE             START_TIME               NODELIST(REASON)\n    23109277       panda-pixel-prepare      PENDING    2026-10-21T21:09:37                     (Priority)\n    23109340        panda-pixel-encode      PENDING                    N/A                   (Dependency)\n    23109667       panda-pixel10k-gate      PENDING                    N/A                     (Priority)\n    23109849    panda-pixel10k-profile      PENDING                    N/A                   (Dependency)\n",
+      "stderr": ""
+    }
+  ],
+  "receipt_path": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/pixel-program-10k-v1-profile-submission.json",
+  "receipt_sha256": "131a56b54fa862463fc8fac1c112544ec5ef2922996f782803c612e2f5c3541a",
+  "prior_local_tests_passed": 453,
+  "tests_seconds": 56.79,
+  "scientific_inference_completed": false
+}

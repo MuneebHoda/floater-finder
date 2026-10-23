@@ -1,0 +1,23 @@
+{
+  "source_kind": "real",
+  "scope": "training/calibration only; no independent held-out test",
+  "source_commit": "35e0a8dae57e22808420b45ae040fc2f8c3710a5",
+  "slurm_job_id": "23067396",
+  "primary_pooling": "mean",
+  "input_sha256": {
+    "summary.json": "508ae59c3b886b093002fbc127a089b3d9b49d73e0869d951316ad36995d489d",
+    "trials.json": "025da1c8781043faf79c2db1b864438f97a205cdf1429fefd63007a5639292a4"
+  },
+  "figure_sha256": {
+    "s2_development.svg": "4068bf7185bc678b8d8704aa75501719636e088d5d7ce5584648a4fcd1b4aa2d",
+    "s2_development.png": "51ef7251b3ae97efec44b0759293c31334009d376df4515ee03b57c72e742e04"
+  },
+  "limitations": [
+    "Synthetic right-edge placement is not a natural floater.",
+    "Binary low/high changes are not clinical Gleason Grade Group upgrades.",
+    "Controls overlap and reuse donor slides.",
+    "Repeated doses are not independent patients.",
+    "GP4-positive/noGP5 can include GP3; GP5-positive can include GP3/4.",
+    "Visual context diagnostic is annotation-informed, not a blinded detector."
+  ]
+}

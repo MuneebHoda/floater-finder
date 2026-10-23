@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "experiment_id": "panda_fresh_review_transfer_v1",
+  "status": "frozen_before_fresh_visual_scores",
+  "hypothesis": "Test conservative visual-rule transfer and whether decision dependence adds useful review evidence without flagging genuine annotated cancer.",
+  "s1_protocol": "configs/panda_fresh_s1_v1.json",
+  "s1_protocol_sha256": "d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594",
+  "s1_files": {
+    "run.json": "5fc9a9df37f59d48e63855c697d899a9761facfc1a42480815db6fb193f971ab",
+    "seal.json": "604b840c2f705c90309fb9804f523ddc967bf54ffe0ba9da05c165e503edf95a",
+    "checkpoints/summary.json": "1708497a6260cb7fd0cf2432a55e8d5829c853fe63ef2ab7ad75f3bc6fec8462"
+  },
+  "threshold_report": "reports/panda_detector_v3_training_v1.json",
+  "threshold_report_sha256": "46e691590e5a28b61e250166493715231ace1fa69633d038f6c7f763617c3bd3",
+  "visual_method": "robust_nn5",
+  "transfer_rule": "strict score greater than every original clean-fold threshold; any unavailable threshold abstains",
+  "visual_threshold": 9.32818765238456,
+  "policies": [
+    "visual",
+    "dependence",
+    "combined",
+    "random_matched"
+  ],
+  "primary_policy": "combined",
+  "random_draws": 32,
+  "random_seed": 20261025,
+  "maximum_bags": 140,
+  "maximum_filtered_predictions": 9800,
+  "fit_thresholds": false,
+  "change_component_rule": false,
+  "physical_size_isolation": "Report occupied footprint and isolation only; no newly fitted size or isolation cutoffs",
+  "budgets": {
+    "unmodified_alert_rate": 0.1,
+    "components_per_slide": 0.5
+  },
+  "resources": {
+    "cpus": 2,
+    "memory_gb": 8,
+    "maximum_minutes": 20,
+    "gpu": 0
+  },
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-fresh-baseline/radboud60-v1/fresh-review-transfer-v1",
+  "approval_required": true,
+  "automatic_tissue_action": "none",
+  "original_final_test_predictions_authorized": false,
+  "limitations": [
+    "Fresh clean/S1 outcomes already known; this is an evaluated development cohort, not pristine independent policy validation",
+    "Original clean-fold thresholds used RGB topology; transfer uses fixed sampled occupied cells, so original burden calibration does not carry over",
+    "Native annotations and synthetic truth enter evaluation only, never flags or anomaly features",
+    "Replacement exclusions target native carriers and may remove extra genuine evidence",
+    "Random draws are matched to combined component count per bag; 32 draws are not independent cases or patients",
+    "Bootstrap resamples unique hosts with all repeated bags/draws retained; conditional on fixed donors and policy, unknown patient overlap",
+    "Single-component exclusions remain unevaluable and in all-slide burden denominators",
+    "Strict thresholds can yield no useful recall; no post-outcome relaxation or final readiness follows"
+  ],
+  "source_files": {
+    "src/floater_finder/detectors/fresh_review.py": "073bbff4c9ec7086f5f27804b711604dd4cb19824abfbc66d1528b8faa9449f3",
+    "src/floater_finder/detectors/contextual_similarity.py": "d11ed2082aea895bd8963c4174cc8e78439b9d3dd06d103d2ffe41a585a80b4c",
+    "src/floater_finder/detectors/placement.py": "d0bbb5f16ef7f1a104e87a8550d0d530a51c352573357b765d7e26eebae50b2b",
+    "scripts/panda_fresh_review.py": "ccece772a481525fccd6389313eb58f6b355fbc6e505dab0478d7dec49bf742d",
+    "scripts/slurm/panda_fresh_review.sbatch": "b12efc506bdaec9f0dc4d5dd66ca9ddda43d6c6d213193bf4d9d508175b83973"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "observed_utc": "2026-10-20T02:28:58.215666+00:00",
+  "username": "mhoda",
+  "hostname": "dt-login04.delta.ncsa.illinois.edu",
+  "scope": "Two documented shared dataset roots; names only, maximum depth 2, 200 entries per directory, 2000 total entries, 30 seconds. Matching directory metadata only; no images/features read.",
+  "name_matcher": "panda|prostate|biops|grade.assessment (case insensitive)",
+  "hidden_entries_excluded": true,
+  "symlink_directories_followed": false,
+  "roots": [
+    {
+      "path": "/projects/bfqi/shared/datasets",
+      "exists": true,
+      "top_level_names": ["pathgen_dataset", "NCT-CRC-HE-100K", "pathmmu"],
+      "errors": []
+    },
+    {
+      "path": "/work/nvme/bfqi/shared/datasets",
+      "exists": true,
+      "top_level_names": ["quilt", "tcga_conch_v1.5"],
+      "errors": []
+    }
+  ],
+  "matches": [],
+  "entries_examined": 48,
+  "truncated": false,
+  "dataset_bodies_read": false,
+  "jobs_submitted": false,
+  "downloads_started": false,
+  "conclusion": "No PANDA/prostate-biopsy candidate names found within these bounds; this is not a filesystem-wide absence claim."
+}

@@ -1,0 +1,157 @@
+{
+  "source_kind": "real",
+  "source_job_id": "23066481",
+  "selection": "Predeclared quality diagnostics only, training slides; not selected by labels, predictions or detector performance.",
+  "choices": [
+    {
+      "image_id": "e5739e452d5b7c5e68c4171ece2557e3",
+      "reason": "lowest training sensitivity agreement",
+      "record": {
+        "image_id": "e5739e452d5b7c5e68c4171ece2557e3",
+        "split": "train",
+        "image_sha256": "3a403cd1407c13b125783fdfba84ce844d21414114e792f2c59624292c00c897",
+        "pyramid_level": 2,
+        "overview_dimensions": [
+          688,
+          1776
+        ],
+        "pixel_um": [
+          7.779002191447421,
+          7.779002191447421
+        ],
+        "component_rule": "observed RGB pixels; 8-connectivity; no morphology",
+        "old_sampled_components": 31,
+        "new_observed_components": 6,
+        "mapping_fraction": 0.974609375,
+        "mapped_tiles": 499,
+        "tiles": 512,
+        "sensitive_components": 3,
+        "sensitive_mapping_fraction": 0.994140625,
+        "sensitivity_pairwise_membership_agreement": 0.3705122300065453,
+        "selected_primary_before_outcomes": true,
+        "physical_boundary_validation": "RGB/pyramid proxy; not pathologist-verified"
+      }
+    },
+    {
+      "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+      "reason": "lowest training tile mapping",
+      "record": {
+        "image_id": "3c685ed0f92e30f6ffeb5cea7cef5994",
+        "split": "train",
+        "image_sha256": "1c4a555fe68fcdacca943a710767d48e2838d59fa1712751bbb9d4fd78bbcb87",
+        "pyramid_level": 2,
+        "overview_dimensions": [
+          368,
+          224
+        ],
+        "pixel_um": [
+          7.779002191447421,
+          7.779002191447421
+        ],
+        "component_rule": "observed RGB pixels; 8-connectivity; no morphology",
+        "old_sampled_components": 4,
+        "new_observed_components": 15,
+        "mapping_fraction": 0.76,
+        "mapped_tiles": 76,
+        "tiles": 100,
+        "sensitive_components": 4,
+        "sensitive_mapping_fraction": 0.94,
+        "sensitivity_pairwise_membership_agreement": 0.5369369369369369,
+        "selected_primary_before_outcomes": true,
+        "physical_boundary_validation": "RGB/pyramid proxy; not pathologist-verified"
+      }
+    },
+    {
+      "image_id": "c6d41e8b7c2c101b9a927d4f403ec451",
+      "reason": "largest training component-count change",
+      "record": {
+        "image_id": "c6d41e8b7c2c101b9a927d4f403ec451",
+        "split": "train",
+        "image_sha256": "59abe2f3c4c8ffd67a0a0d1d716c362b368657e64a92fefc8441959845128a66",
+        "pyramid_level": 2,
+        "overview_dimensions": [
+          368,
+          2816
+        ],
+        "pixel_um": [
+          7.779002191447421,
+          7.779002191447421
+        ],
+        "component_rule": "observed RGB pixels; 8-connectivity; no morphology",
+        "old_sampled_components": 48,
+        "new_observed_components": 6,
+        "mapping_fraction": 0.998046875,
+        "mapped_tiles": 511,
+        "tiles": 512,
+        "sensitive_components": 4,
+        "sensitive_mapping_fraction": 0.99609375,
+        "sensitivity_pairwise_membership_agreement": 0.9224700489233021,
+        "selected_primary_before_outcomes": true,
+        "physical_boundary_validation": "RGB/pyramid proxy; not pathologist-verified"
+      }
+    },
+    {
+      "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+      "reason": "median training sensitivity agreement",
+      "record": {
+        "image_id": "5f7ebc491021150fdb969866ad5f6d81",
+        "split": "train",
+        "image_sha256": "f6e49e73c76eb5e35a4c7c39d3043e61ac477a36440b1a6cbbdcc80ed3bcecd2",
+        "pyramid_level": 2,
+        "overview_dimensions": [
+          1936,
+          320
+        ],
+        "pixel_um": [
+          7.779002191447421,
+          7.779002191447421
+        ],
+        "component_rule": "observed RGB pixels; 8-connectivity; no morphology",
+        "old_sampled_components": 2,
+        "new_observed_components": 5,
+        "mapping_fraction": 0.9877450980392157,
+        "mapped_tiles": 403,
+        "tiles": 408,
+        "sensitive_components": 4,
+        "sensitive_mapping_fraction": 0.9901960784313726,
+        "sensitivity_pairwise_membership_agreement": 0.9975310480018859,
+        "selected_primary_before_outcomes": true,
+        "physical_boundary_validation": "RGB/pyramid proxy; not pathologist-verified"
+      }
+    }
+  ],
+  "files": {
+    "reports/panda_topology_qa_v1/e5739e452d5b7c5e68c4171ece2557e3/overview.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/e5739e452d5b7c5e68c4171ece2557e3/overview.png",
+      "sha256": "2d6fc53bf01db771e3033f40a538af18b2eb287d14178010f5de1c7bb3caaadf"
+    },
+    "reports/panda_topology_qa_v1/e5739e452d5b7c5e68c4171ece2557e3/tissue_edges.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/e5739e452d5b7c5e68c4171ece2557e3/tissue_edges.png",
+      "sha256": "fed3fc4e11814970b9e02255d9ae0dddff0d3a874d3a3e3a333d51cfe16e6ea8"
+    },
+    "reports/panda_topology_qa_v1/3c685ed0f92e30f6ffeb5cea7cef5994/overview.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/3c685ed0f92e30f6ffeb5cea7cef5994/overview.png",
+      "sha256": "62a43370f1c7fcebebfec8cc015bc453adef49ea32c583fef646da755e04918a"
+    },
+    "reports/panda_topology_qa_v1/3c685ed0f92e30f6ffeb5cea7cef5994/tissue_edges.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/3c685ed0f92e30f6ffeb5cea7cef5994/tissue_edges.png",
+      "sha256": "8b4b715d56cfe3694b012bbf6ff00af5b5f09909b0d47960b1a909047a17f417"
+    },
+    "reports/panda_topology_qa_v1/c6d41e8b7c2c101b9a927d4f403ec451/overview.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/c6d41e8b7c2c101b9a927d4f403ec451/overview.png",
+      "sha256": "e62891eeeb6c0afe7c4a2841bb8e7d8cccc1893db5b61758f594e4430316a5f9"
+    },
+    "reports/panda_topology_qa_v1/c6d41e8b7c2c101b9a927d4f403ec451/tissue_edges.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/c6d41e8b7c2c101b9a927d4f403ec451/tissue_edges.png",
+      "sha256": "0668f543fe07f1795da7979c6525586eb3c85173311fa4dab7ffddcfdbc2dee3"
+    },
+    "reports/panda_topology_qa_v1/5f7ebc491021150fdb969866ad5f6d81/overview.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/5f7ebc491021150fdb969866ad5f6d81/overview.png",
+      "sha256": "4007259af65320ff8b7644e3419bd9492410d0513bacb24ac471fdb904d31162"
+    },
+    "reports/panda_topology_qa_v1/5f7ebc491021150fdb969866ad5f6d81/tissue_edges.png": {
+      "remote": "/work/nvme/bfqi/mhoda/floater-finder/panda-review/development-v1-20261020T235701Z/topology/5f7ebc491021150fdb969866ad5f6d81/tissue_edges.png",
+      "sha256": "5990757c0eba9be7c55134bd38d9b6b20ff606dcdec67b30e51e3d3fe49c3d5e"
+    }
+  }
+}

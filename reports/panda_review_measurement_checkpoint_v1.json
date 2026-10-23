@@ -1,0 +1,16 @@
+{
+  "job_id": "23066481",
+  "state": "FAILED",
+  "exit_code": "1:0",
+  "elapsed_seconds": 64,
+  "complete_topology_records": 96,
+  "complete_component_cases": 256,
+  "measurement_hashes": {
+    "component_cases.json": "e5b8615dd45d29e0146052dbf167ae1f8d066fc02b2d28eba8523a411517c100",
+    "topology_audit.json": "3846b9224ff285af79e07e97052f181440d8f883eee0918f92280780d26d5d69"
+  },
+  "failed_file": "selection.json (empty)",
+  "failure": "NumPy int64 count was not JSON serializable; fixed conversion and regression-tested",
+  "resume": "Selection/reporting only, with original component-case SHA256 pinned; no image/model reprocessing",
+  "test_slides_scored": false
+}

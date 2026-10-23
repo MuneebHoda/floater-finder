@@ -1,0 +1,46 @@
+{
+  "local_stage": "/var/folders/ws/kz52lt0948sdkwpvbrbyk4g40000gn/T/panda-scale-profile-3b_idm43",
+  "remote_stage": "/u/mhoda/floater-finder/releases/panda-scale-20261020T175626Z",
+  "output": "/work/nvme/bfqi/mhoda/floater-finder/panda-profile/20261020T175626Z",
+  "runtime": "/work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z",
+  "source_tar_sha256": "0613a39701f0068bc84f5d5725ff548f13a511f293fa757e5c214cd7697e8c37",
+  "cpu_job_id": "23051244",
+  "command": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-scale-20261020T175626Z/source/scripts/slurm/panda_profile.sbatch /u/mhoda/floater-finder/releases/panda-scale-20261020T175626Z/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /work/nvme/bfqi/mhoda/floater-finder/panda-profile/20261020T175626Z",
+  "cohort_plan_root": "/work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1",
+  "ready_source": "/u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source",
+  "ready_stage": "/u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2",
+  "ready_local_stage": "/var/folders/ws/kz52lt0948sdkwpvbrbyk4g40000gn/T/panda-scale-final-zofwzt0y",
+  "ready_tar_sha256": "feb7de874eeb8bbf8668674270f25ad3f4e10dda3ceb5f4dbecd860b5fba69ad",
+  "proposed_acquisition_receipts": "/work/nvme/bfqi/mhoda/panda/acquisition-receipts/20261020-scale-v1",
+  "proposed_gpu_output": "/work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/profile-20261020-v1",
+  "approval_commands": {
+    "60": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/scripts/slurm/panda_acquire.sbatch /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/acquisition_60.json /work/nvme/bfqi/mhoda/panda /work/nvme/bfqi/mhoda/panda/acquisition-receipts/20261020-scale-v1-60 64edc5e4123e1fdaf29d353002fb1f0bb942b05dde21131a66013e5e5a68a0e3",
+    "120": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/scripts/slurm/panda_acquire.sbatch /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source /work/nvme/bfqi/mhoda/panda/cohort-plans/20261020-scale-v1/acquisition_120.json /work/nvme/bfqi/mhoda/panda /work/nvme/bfqi/mhoda/panda/acquisition-receipts/20261020-scale-v1-120 198478f7ee73aa9e0b7bd6f676b641805d93ce658e309eb24dd598e70f8484f7",
+    "gpu_profile": "sbatch --parsable /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/scripts/slurm/panda_encode_profile.sbatch /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source /work/nvme/bfqi/mhoda/floater-finder/envs/panda-cpu-1598f9b-20261020T040441Z /u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v2/source/configs/panda_encode_profile_directories.json /work/nvme/bfqi/mhoda/floater-finder/panda-embeddings/profile-20261020-v1"
+  },
+  "scheduler_preflight": {
+    "120": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 23051555 to start at 2026-10-20T13:09:06 a using 2 processors on nodes cn001 in partition cpu-interactive\n",
+      "submitted": false
+    },
+    "gpu_profile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 23051556 to start at 2026-10-20T13:09:09 a using 4 processors on nodes gpua017 in partition gpuA100x4-interactive\n",
+      "submitted": false
+    }
+  },
+  "ready_verified_files": 213,
+  "approved_scope": {
+    "acquisition": 120,
+    "additional_catalog_file_bytes": 2459351119,
+    "cancel_replace_23030528": true,
+    "gpu_profile_minutes": 5,
+    "gpu_profile_tiles": 944,
+    "larger_gpu_batch": false
+  },
+  "acquisition_job_id": "23051626",
+  "gpu_profile_job_id": "23051627"
+}

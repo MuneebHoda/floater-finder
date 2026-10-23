@@ -1,6 +1,111 @@
 # Floater Finder progress
 
-Initial implementation 2026-10-17; latest verification 2026-10-18, America/Chicago. Real observations are limited to the explicitly labeled smokes below.
+## Pixel pilot complete; benchmark provenance corrected — October 22
+
+Scheduled CPU23109277 completed0:0 in13s; GPU23109340 completed0:0 in43s.
+The96 real composite/control embeddings pass canonical checkpoint/preprocessing,
+eight-anchor and48-null drift gates; all404 receipt-file hashes verify. Foreign
+NN5 exceeds native sham3/8,8/8,7/8 at1%,5%,10% within-tile patch area, but
+both frozen scorers have0/24 foreign mixed-image decision changes. Four repeated
+training pairs do not establish independent detector performance.
+
+10k CPU23109667 failed1:0; GPU23109849 was cancelled before allocation. The
+three reused profile sources have cohort metadata copies with different
+selection-manifest provenance. V2 points to their exact original profile metadata;
+57/57 source metadata/CSV checks pass. Original code/hash guards, v1 files and
+failed outputs remain unchanged. A separate CPU launcher/output is prepared;
+no replacement job or10k scientific result is claimed. Tests distinguish this
+metadata correction from real image preparation. All455 software tests pass with
+warnings treated as errors; Slurm syntax and source pins pass. [Pilot/failure evidence](panda_pixel_results_20261022.md),
+[v2 configuration and pending execution](../docs/panda_pixel_program_v2.md).
+
+## Stage B GPU approval and dependent profile submitted — October 21, 19:39 CDT
+
+User approved the bounded 10,000-candidate CONCH benchmark GPU stage. Profile **23109849** is submitted once, PENDING (Dependency): afterok CPU23109667 AND afterany pilot GPU23109340, invalid-dependency cancellation requested. One A100/4 CPUs/16 GiB/15 min on normal `gpuA100x4`, up to512 actual deduplicated fit-source images, preserving the unchanged73-file runtime. Five new launcher/authorization files verified; all453 tests pass. Actual successful CPU hash/count/range is frozen only at launch before canonical drift/encoding gates. Remaining exact ranges are conditionally approved within30 additional batch minutes (≤0.75 billed equivalents total) but not submitted before profile artifact and charge inspection. Other research GPU scopes remain gated; no downloads, new models, original final-test predictions, duplicates, commit/push or scientific successes. Current balance8.4083 equivalents; queue forecast remains beyond deadline. [Exact command, guards and receipts](panda_pixel_program_gpu_submission_v1.md).
+
+## Parallel 10,000-record CPU scope submitted — October 21, 19:07 CDT
+
+CPU **23109667** is submitted once and PENDING (Priority), actual start estimate N/A. Verified manual reconnection identity, all 73 files in a separate source snapshot, runtime read-only preflight and exact scheduler admission. Four CPUs/16 GiB/30 min on `bfqi-delta-cpu` / `cpu`, no GPU or downloads, excludes the known prolog-failure node cn018. Existing pilot CPU 23109277 and GPU 23109340 remain pending and untouched. The advisory normal CPU/A100 test-only forecasts extend to October 26/29 beyond the deadline; admitted resources and 8.4083 remaining billed A100-hour equivalents do not guarantee timely wall time. No new GPU submitted or scientific outcome measured. Actual eligibility/dedup counts and current checkpoint hash await CPU success. No code change since 443 passing tests; main, historical freezes and original final test preserved. [Exact submission and verification](panda_gpu_program_cpu_execution_v1.md).
+
+## Expanded GPU research program prepared — October 21
+
+Live own-QoS accounting reconciles to **8.4083333 billed batch-A100-hour equivalents remaining**, not eight guaranteed interactive wall-hours. Normal A100 batch uses a 1× GPU billing weight; interactive uses 2×. Ten root-job charges, including an allocated failure, reconcile exactly with raw QoS usage. The provisional 6.4167-equivalent research program includes the existing pilot and retains about 1.9917 for verification. These ceilings are not authorization to spend.
+
+Prepared a new source-disjoint 10,000-candidate pixel/control benchmark: 45 real masked original-training sources, 40 predetermined pairs, 27/9/9 fit/calibration/validation sources; 12 different sources reserved for dense/multiscale work. Exact real eligible/deduplicated counts remain pending CPU execution. Five matched control variants, measured physical provenance, actual RGB support, strict detached-background verification, cross-fold pixel deduplication and no-overwrite gates are implemented. No patient independence is claimed. The full plan specifies hypotheses, controls, learned localization gates, external-provider/UNI2-h feasibility, costs, stop/go rules and source-level evaluation.
+
+All **443 software tests pass**; no historical pixel runtime/source or main change. A 73-file working-tree snapshot is prepared locally, not committed or staged remotely. CPU 23109277 and GPU 23109340 were last observed pending; both remain untouched. The shared SSH connection expired before fresh scheduler admission/staging. Manual reconnection requested, no authentication retry. New CPU scope (4 CPUs/16 GiB/30 min on `cpu`) is prepared but not submitted; no new GPU, downloads, prediction outcome or original final-test access. [Executable plan](../docs/panda_gpu_research_program_v1.md), [exact command and verification](panda_gpu_research_program_preparation_v1.md).
+
+## Pixel GPU submitted behind successful CPU preparation — October 21
+
+User authorized submitting the bounded GPU execution and committing code.
+Launcher1b4d19b/five immutable staged files pass all432 tests; unchanged
+scientific runtime61959fa/protocol33594b46/all276 files reverified. One actual
+GPU job23109340 is PENDING(Dependency) on`afterok:23109277`,with invalid-
+dependency cancellation requested. Verified one GPU,four CPUs,16GB,five minutes,
+account`bfqi-delta-gpu`,QoS`bfqi-delta-gpu-mhoda`,partition
+`gpuA100x4-interactive`. CPU23109277 remains pending as of17:55:22CDT.
+
+The real96-image manifest is still absent; the resolver must verify the exact
+successful CPU receipt and freeze its actual hash before invoking unchanged
+source-anchor/null drift checks,CONCH encoding and frozen measurements. Queue
+acceptance is not a scientific result. No new GPU inference,downloads,model/
+threshold fitting or final-test execution is claimed. Leave existing jobs
+queued; no duplicates or automatic retries. [Submission receipt and exact command](panda_pixel_gpu_submission_v1.md).
+
+## Four-pair pixel study prepared; real CPU execution waiting — October 21
+
+Runtime/protocol `61959fa` adds a bounded four-pair/96-image PANDA study around
+the unchanged compositor, native-mask crop verification, canonical CONCH drift
+gates and paired feature/frozen-prediction measurements. All424 tests pass;
+276 immutable staged files verify. GPU execution remains explicitly approval
+blocked; no new inference,download,threshold/model fitting or original-test
+evaluation occurred. All payloads remain Delta.
+
+CPU23109222 timed out613s in node cn018's scheduler Prolog without observed
+Python step/log/outputs. Its failure receipt is preserved. Inspected replacement
+CPU23109277 excludes cn018 and remains PENDING (Priority), estimated19:39:58CDT
+as of17:48:34CDT. Same code,pairs,source hashes and per-job resource cap; no
+scientific reroll or duplicate active processing. Leave it queued and inspect
+before further execution. Actual tile selection,mask/WSI checks,96-image
+completion and exact GPU manifest hash remain pending. [Preparation record](panda_pixel_contamination_preparation_v1.md).
+
+## Fresh baseline preparation — October 20
+
+The fixed 60-slide Radboud proposal now has a legacy-compatible execution manifest, exact 120-file acquisition plan, four frozen predictor hashes, default metadata-only preflight and CPU-only clean prediction runner. Original training-selected linear primaries remain primary for both tasks; corrected historical cancer top-5% and grade mean are fixed comparators. The fresh cohort is slide-disjoint from 129 exposed IDs; patient independence is unknown. Cancer uses all 60, low/high excludes benign and uses 40. No detector or final-readiness claim is inferred.
+
+Source **bfd4416** was separately staged and all **226 files verified**. The Delta preflight verified 60 IDs/four models/129 exclusions without predicting. **284 tests pass**, after rebuilding the installed package to match source. Bounded read-only Delta checks found zero of the 120 image/mask files present, existing acquisition/CPU runtimes, and an empty user queue. No WSI, new embedding, download or job was launched. Main, the 33 frozen historical files, final protocol and submission files remain unchanged.
+
+The concrete pending request covers **1,348,184,402 catalog TIFF bytes** plus acquisition and six serialized CPU input/tiling chunks (at most five requested CPU-hours total, first-chunk profiling gate). It includes no GPU or prediction job. Future encoding needs actual input/tile verification and separate approval. [Frozen protocol, resource table and strict data gates](../docs/panda_fresh_baseline_v1.md); [exact staged commands, hashes and site observations](panda_fresh_baseline_preparation_v1.json). No fresh scientific outcomes are claimed.
+
+## Paired-placement checkpoint — October 20
+
+Frozen source `bbc2845`, CPU **23069409 completed 0:0 in 271 seconds**, using 0.15056 allocated CPU-hours and no GPU. A separate hash-verified snapshot and sealed 1,657-checkpoint registry preserve 825 saved positive-dose interventions, four clean anchors, all 327 previous exclusions and 1,499 verified PNG exports. Geometry/pair definitions precede detector scoring. The numeric overlap validator fix has isolated regression evidence and does not admit old exclusions.
+
+The primary finds **0/607 foreign instances /0/10,610 foreign-tile observations** and recovers **0/39 induced errors**. The 88 complete triplets contain 59 foreign groups and 29 shams; all seven methods find 0/59 in each paired foreign mode. A secondary component-neighbor rule finds three all-case instances outside common addition triplets or in replacement carriers; distant-NN5's five sham alerts cause three hypothetical prediction errors on one host. There is no useful policy or outcome-guided retuning. Only two hosts per task, repeated doses/donors and three clean native-cancer components limit interpretation. [Full results, denominators, topology, all methods and exact verification command](panda_detector_placement_v1.md).
+
+**272 tests pass** with warnings treated as errors. All 33 frozen historical files, rejected final protocol, main and submission/presentation artifacts are preserved. No downloads, new encodings, calibration/test predictions or duplicate job were launched. Fresh-validation inputs remain a separately gated metadata proposal.
+
+## Research acceleration checkpoint — October 20
+
+Three isolated workstreams produced training-only nested-CV CONCH linear probes, versioned shared S1/S2 interventions/registry and seven detector-v3 context hypotheses. Selected grade training OOF BA is 85.42% with 13/16 reused-calibration slides correct; selected cancer reused-calibration BA falls to 71.88%, and paired uncertainty includes no improvement for both tasks. Detector v3's fixed robust-NN5 primary finds 1/120 fragments with 7/72 clean alerts, five native-cancer component flags and 3/61 hypothetical clean-prediction damage. No useful review policy is established. [Eight-part measured research checkpoint](panda_research_checkpoint_v1.md).
+
+CPU-only runs preserve the original zero-shot models and all previous scientific outcomes. Strict adapter acceptance matches 480 historical score vectors and 80 saved linear predictions exactly, without rerunning CV. The shared-engine geometry failure is retained; corrected job **23069070** completes 1,017 exact recoveries, 252 legacy comparisons and 345 coordinate-invariance checks, with 327 explicit exclusions. Its S2 v2 engineering smoke uses two training hosts and same-grade controls, not independent validation. Fresh Radboud/Karolinska cohorts are metadata-only proposals, with no acquisitions. The existing test set and submission package remain unchanged; no new GPU inference occurred. Full regression passes **258 tests** with warnings treated as errors. Detailed job/provenance/test/status records are linked from the checkpoint.
+
+## Submission and S2/ranked-v2 checkpoint — October 20
+
+The [finished submission package](../submission/ashby_20261021_v2/) contains a 19-slide PPTX/PDF, abstract, 480-second presentation script, four-minute Q&A and checklist. The exact organizer upload URL, deadline hour/timezone, team details and availability remain unresolved as requested; nothing was uploaded. [Integrated handoff](submission_execution_checkpoint_20261020.md).
+
+S2 CPU **23067396 completed 0:0 in 19 seconds**: 760 records (632 positive, 128 repeated zero references), 32 host / 37 donor slides, **760/760 exact oracles**. Mean pooling was selected before outcomes from clean 35/48 training and 12/16 calibration accuracy. It produces **0/8 new calibration low-to-high errors at every primary dose**, versus tiny secondary correct-host denominators of two/three and same-grade-control instability. Eight GP5-positive calibration 10% trials are excluded for capacity. Genuine GP4/5 native exclusion changes six training / two calibration predictions. These are valid nonclinical engineering observations, not clinical Grade Group upgrades or a foreignness detector. [S2 evidence](panda_s2_results_v1.md).
+
+Ranked detector v2 CPU **23067454 completed 0:0 in 23 seconds**, reusing saved measurements. Its primary improves training fragment hits 5/120→22/120 but fails utility targets; calibration remains **0/40 hits, 1/24 clean alerts**. Unbudgeted visual/relevance top-one review hits 21/40 while alerting on all 24 clean slides and flagging 14 native-cancer components. This does not establish useful improvement over v1. Known calibration is iterative development. [Full v2 report](panda_review_v2_results.md).
+
+Full regression **204 passed** with warnings treated as errors. No new GPU/model/download, repeat S1/WSI/encoding/preflight, main merge or final test occurred. All rejected v1 evidence and 120-slide artifacts remain preserved. The PathGen-CLIP branch was reviewed read-only for [future research gates](../docs/panda_research_tracks_after_submission.md). All 24 test slides remain sealed; final detector evaluation remains blocked.
+
+Latest status: **2026-10-20, America/Chicago**. PANDA development review-policy v1 is frozen and rejected. The combined rule meets the user-confirmed ≤10% clean-slide alert / ≤0.5 components-per-slide budgets but detects 0/40 calibration fragments and recovers 0/8 induced-error instances. Decision-only recovers 8/8 instances across two hosts but alerts on 4/24 clean slides and hypothetically damages 3/20 originally correct clean predictions. No useful rule among the 81 preregistered candidates; no threshold relaxation or final-test launch. [Scientific audit and measured policy results](panda_review_results_v1.md).
+
+The preserved 120 slides and 50,729 CONCH embeddings support all current analysis. New RGB topology separates four of six formerly single-component calibration cases; boundaries remain approximate and sensitivity-limited. The new CPU measurement completed its records before a JSON serialization failure; checksum-pinned reporting resumed successfully without reprocessing. Read-only CPU preflight 23066843 completed 0:0 and verified 10,988 files / 24 held-out slides without label decoding or predictions. Frozen runtime source cde0e4a, blocked final command, uncertainty plan and output contract are [documented](../docs/panda_final_test_v1.md). All 24 test slides remain unscored. **192 software tests pass**; software fixtures do not count as real test evidence. [Reproducible figures and presentation outline](panda_presentation_v1.md).
+
+The sections below preserve the dated experiment history, including earlier TCGA smoke counts; they do not supersede the current PANDA status above. Initial implementation was 2026-10-17.
 
 ## Current state
 
@@ -227,3 +332,195 @@ GPU job `22994850` completed `0:0` in 71 seconds, producing two additional `[128
 The result is an honest limitation: at 10% requested contamination, combined mean AUROC is 0.949 but mean injected-tile detection is only 3.85%, with no original-host removal in that stratum. These means describe two evaluation hosts across five seeds; they are not a population estimate. Development thresholds use two other patients. Native contamination has not been reviewed; clean means no synthetic injection. The evaluation cases have not been used to retune the threshold.
 
 Retrieved 184 detector files and independently reproduced all 60 oracle trials, every variant flag and count metric. Standardized scores agree within 1.47e-6 across recorded NumPy versions. Saved validated reports, exact raw metric tables and two descriptive figures under `reports/`; raw tiles, arrays, WSIs and weights remain outside tracked artifacts. All six new jobs completed `0:0`, final queue empty; local **82 tests passed**. Further work needs representative development patients and fresh held-out cases, broader slide sampling, report/institution provenance and clinical review before stronger claims.
+
+
+## 2026-10-20 — PANDA scale-up checkpoint
+
+Read the expanded 60/120-slide request and preserved the original checkout/main. Kaggle catalog and selective streamed-header access passed after paced pagination; original metadata matched. Versioned balanced plans require 1,201,123,589 / 2,459,351,119 additional catalog TIFF bytes. Acquisition 23030528 remains pending with a missing collector and awaits explicit replacement approval.
+
+Bounded CPU profile 23051244 completed 0:0 in 41 seconds / 260 MB peak task RSS: 944 representative tiles and 19 separate donor tiles. High-grade representative sampling found 26 GP4-positive tiles; exact native GP4 area is 0.020806028382116183 mm². GG1 mask recovered from an existing ZIP, with no new TIFF download. All 963 tile hashes/geometry/fractions independently passed. Added checkpointable acquisition/tiling/embedding preparation, fixed candidate prompts, stage ledger and executed CPU charts. 165 local tests pass. No PANDA GPU inference, cancer baseline or contamination evaluation ran. [Full checkpoint and approval commands](panda_scale_checkpoint_20261020.md).
+
+User explicitly approved the 120-slide selective plan and replacement, plus the separate five-minute 944-tile GPU profile. Verified original acquisition 23030528 CANCELLED; submitted replacement **23051626** and GPU profile **23051627** once each. No completion/embedding claim is made at submission. Larger GPU batches require the measured profile and another approval.
+
+Acquisition 23051626 completed 0:0 in 3:42; all 240 files (2,490,697,994 bytes total, 234 new files) match catalog sizes with individual SHA256 receipts. Initial GPU profile 23051627 failed before inference because CONCH is a namespace package; corrected and regression-tested before bounded retry 23051673 (4:48 cap after the 12-second failure). Retry completed 0:0 in 54 seconds with 944 validated 512-dimensional image embeddings and matched four-class text prototypes. Retrieved artifacts independently pass hashes, unit normalization, IDs, coordinates, checkpoint/model identity and non-mask-enriched sampling checks. Total profile GPU elapsed including failure: 66 seconds.
+
+First ten-slide cohort CPU job 23051691 completed 0:0 in 2:17, 397,448 KiB task RSS, with 3,528 representative tiles and full native-mask audits. Input SHA256 values agree with acquisition receipts. The proposed remaining 110-slide array was rejected with `QOSMaxSubmitJobPerUserLimit`; no array job was created. Site limits are being inspected before choosing a smaller supported submission. No larger GPU batch or baseline evaluation has run.
+
+Verified the limiting partition QoS is `cpuintqos`, MaxSubmitJobsPU=1 and MaxJobsPU=1; the allocation QoS itself reports no such limit. A one-job/four-worker CPU plan passed scheduler test-only validation and was submitted once as **23051907** (4 CPUs total, 16 GB, 30 minutes). Its four disjoint worker schedules cover indices 10–119 exactly once, reusing the frozen native-audit/tiler source from the passing first ten. The rejected array produced no job and was not retried.
+
+Local suite now passes **168 tests**, including namespace-package provenance, slide-level baseline denominators, sealed test slides and rejection of mask-guided views as clean inputs. The development-only baseline implementation is prepared but has not evaluated any real cohort scores.
+
+Final CPU cohort gate: 120 slides / 40 per group / 50,729 tissue tiles; 119 usable native masks / 39 high-grade GP4/5-positive masks. The bulk CPU job retained 112 completed slides before one LZW annotation failed. Diagnostic/remaining job 23052637 completed the other seven; independent diagnostic 23052704 confirmed OpenSlide and Pillow decode errors without modifying inputs. Explicit SHA-bound annotation exclusion preserved the bad mask; RGB-only case job 23052852 completed 0:0 with 512 tiles and unknown annotation fractions. Original slide labels/splits remain intact. GG1 training case 3c685ed0f92e30f6ffeb5cea7cef5994 has no cancer annotations in its full native mask; all 100 tissue cells were sampled, so this is annotation/label disagreement rather than sampling miss.
+
+Created verified 120-slide manifest and exact GPU input mapping. Reused the three matching 944-embedding profile artifacts after data/geometry/model/prompt checks. Remaining 117 slides / 49,785 tiles require a separately approved 45-minute single-A100 batch, expected 25–30 minutes. Scheduler test-only passed; no batch submitted. Latest complete local suite: 171 passed. [Current checkpoint](panda_120_ready_20261020.md).
+
+
+## 2026-10-20 — Approved full PANDA embedding batch submitted
+
+The user explicitly approved 117 new slides / 49,785 tiles plus reuse of 944 existing embeddings, one A100 / 4 CPUs / 16 GB / 45 minutes. Verified shared SSH identity, empty own queue and no recorded duplicate, then submitted once as **23054910**, running on gpua018. CPU follow-up **23055022** depends on GPU success and verifies all current input/output hashes and artifact contracts before scoring only 72 training + 24 calibration slides. The 24 test slides remain sealed. No batch completion or disease-performance result is claimed yet. Added CPU artifact-verification checks; full local suite **172 passed**. [Current run](panda_120_embeddings_23054910.md).
+
+Shared SSH subsequently failed with broken control-master connection and permission denied. Stopped remote attempts immediately; requested manual Mac Terminal reconnection without credentials. Last verified progress: GPU 23054910 RUNNING on gpua018 at 9:27, 54 completed slides including reuse / 20,687 new features; CPU 23055022 PENDING (Dependency). No jobs cancelled/resubmitted. Completion and baseline metrics remain unverified pending reconnection. Baseline protocol was recorded before real prediction inspection.
+
+
+## 2026-10-20 — 120-slide GPU batch and clean baseline completed
+
+After manual reconnection verified mhoda on dt-login03. GPU 23054910 COMPLETED 0:0 in 21:46 (0.3628 GPU-hour), 117 new slides / 49,785 embeddings plus 944 reused. CPU 23055022 COMPLETED 0:0 in 3:04, verifying all 120 / 50,729 normalized 512D artifacts before scoring 96 development slides. All 24 final-test slides remain unscored. Top-5% benign/cancer calibration accuracy 83.3%, balanced accuracy 78.1%, confusion [[5,3],[1,15]]; this is descriptive development evidence, not clinical or final-test validation. All 480 raw rows and 12 metric groups independently checked locally; executed confusion plots saved. Patient independence remains unknown. [Complete results](panda_120_embeddings_23054910.md).
+
+
+## 2026-10-20 — Connected S1 stress and real piece counterfactuals
+
+CPU 23065666 completed 0:0 in 14 seconds: 192 S1 trials, 32 benign hosts, 21 donor slides, all six doses, zero capacity exclusions, 192 exact oracle passes. Donor subsets have >=10% native cancer annotation per tile and four-connected occupied geometry. Independently checked every trial against bounded donor coordinate/annotation metadata. No new GPU/downloads or final-test scoring. CPU 23065744 completed 0:0 in 11 seconds: 24 unmodified calibration cases and 40 mixtures analyzed with top-5% LOPO. Unmodified dependence is 7/18 evaluable; six single-component cases are explicitly unevaluable. Eight mixtures have a decisive pure-foreign component, matching S1 flips; genuine annotated cancer can also be decisive. No alert policy supplied, so review-alert rate is null and no foreignness/clinical claim is made. All 64 raw reports checked; representative JSON and verified spatial plots saved. [Current checkpoint](panda_s1_and_piece_results_20261020.md).
+
+Final checkpoint: 178 tests passed with warnings as errors; relevant Slurm scripts pass Bash syntax checks; whitespace checks pass. All four jobs completed successfully and own queue is empty. Protected original metadata/pilot/partial-manifest hashes match. Current per-slide ledger updated; no commit, push, merge, final-test scoring, calibrated alert-rate claim or clinical-validity claim. Latest rounded allocation balances: 5,516 CPU hours / 8 GPU hours.
+
+
+## 2026-10-21 — fresh Radboud60 approved CPU scope completed
+
+Acquisition 23070667 and all six serialized tiling jobs completed `0:0`. Full metadata checks passed 60 slides / 25,915 tiles / 60 masks. Group tile counts are 8,733 benign, 8,583 GG1 and 8,599 high-grade; all 40 nonbenign slides contain sampled annotated cancer, and all 20 high-grade slides contain GP4/5-positive tiles (4,209 distinct tiles). These are intake/annotation observations, not predictive results. Acquisition plus tiling used 0.7572 allocated CPU-hours under the five-hour cap. Shared-SSH interruptions were resolved through private manual authentication; completed jobs were inspected, not duplicated.
+
+All payloads and detailed reports remain on Delta. The frozen exact 60-directory encoding list and CPU-readiness receipt exist there. See [execution evidence and exact next commands](panda_fresh_cpu_execution_v1.md). No GPU/fresh prediction job was submitted. Existing models/protocols, original 120-slide artifacts, 33 legacy source hashes, main and 24 sealed final-test predictions remain preserved. Only documentation changes in this checkpoint; the unchanged prior suite passed 284 tests with warnings as errors. Next scope requires separate approval for one A100/30 minutes plus bounded CPU verification and frozen fresh-baseline scoring, without downloads, refitting or retuning.
+
+
+## 2026-10-21 — approved fresh CONCH encoding and frozen baseline completed
+
+GPU 23081929 completed 0:0 in 743 seconds using one GPU, 4 CPUs, 16 GB; CPU 23082231 completed 0:0 in 66 seconds using 2 CPUs, 8 GB, no GPU. All 60 slides / 25,915 real 512D embeddings and frozen source/model/text/sampling provenance verified before scoring. Primary benign/cancer BA 80.0% (95% slide-bootstrap 70.0–88.8%, supports 20 benign/40 cancer; recall 28/40 cancer); primary low/high BA 72.5% (60.0–85.0%, 20 low/20 high; recall 11/20 high). Frozen historical comparators are 75.0% and 65.0% BA. No refit, retuning, outcome-guided primary switch, repeated acquisition/tiling, extra jobs or original 24 final-test predictions.
+
+All payloads, raw predictions and detailed reports remain on Delta; local notes contain bounded aggregates only. [Full results, confusion matrices, per-class Wilson intervals, uncalibrated probability diagnostics, provenance and limitations](panda_fresh_baseline_results_v1.md). Patient independence and clinical/floater-policy validity remain unverified. These 60 slides are now evaluated, not fresh/unscored for future work. Source/protocol/main/legacy guards and whitespace checks pass; production code is unchanged and the prior software suite passed 284 tests.
+
+
+## 2026-10-21 — next S1 follow-up implemented, tested and staged
+
+Architecture 104dd31 adds immutable manifest/identity-bound follow-up membership without retagging engineering artifacts or weakening default development/test guards; legacy S1/S2 checks retain exact behavior. Preparation source `3a3faf199bf2a334648227281a685a999a60f7c9` adds the fixed S1 runner/protocol, existing shared append/replacement/oracle operations, native editing controls and genuine positive-region counterfactual diagnostics. All 297 tests passed in a clean offline environment; an initial worktree-venv run had 295 passes/two isolated import failures, with six CLI checks subsequently passing there. No application code changed for the transient install issue. All 33 frozen legacy hashes, the original protocol and main remain unchanged.
+
+Verified 233 staged source files and metadata/model preflight on Delta. Existing 60-slide / 25,915-vector receipts match; no slide-array processing or new prediction during staging, target output absent, own queue empty and CPU partition up. [Frozen design and exact command](../docs/panda_fresh_s1_v1.md), [bounded preparation receipt](panda_fresh_s1_preparation_v1.json). Source archive `510f6957213316167a3b1e8433a6215a655521de2b8760e08ca3f7388a5ecbe3`; protocol `d42332cc7950bb89d9ab779912f54e28a6b91114e2a6663ee34ccd15165c9594`. The proposed 2-CPU/8-GB/20-minute job is unsubmitted pending approval. No GPU, new acquisition, downloads, model fitting, detector thresholds, or original 24 test predictions. Raw artifacts remain on Delta.
+
+
+## 2026-10-21 — approved frozen S1 follow-up completed
+
+After the explicit “Approve CPU follow-up” response, source/input verification and an empty-queue check, CPU **23083320** was submitted once from `3a3faf1` on bfqi-delta-cpu/cpu-interactive (2 CPUs, 8 GB, 20-minute cap). It completed 0:0 in 148s /0.08222 allocated CPU-hours, with **1191 interventions, 2382/2382 exact restoration checks, nine retained capacity exclusions, 140 counterfactual bags /280 model reports**. The sealed registry has 1481 checkpoints /1484 verified events; no retry, GPU, download, fitting or alert-threshold selection. All raw artifacts stay on Delta.
+
+At 5% requested cancer editing, primary induced original-host-label errors are 9/54 initially correct repeated instances per mode (4/18 unique hosts); historical 17/39 (8/13). Historical prediction changes differ from new-error counts: 18 append and 19 replacement changes across all 60 eligible instances. Native replacement is an exact null; native append gives two historical changes on one host. Seventeen unmodified slides are unevaluable single components. Genuine cancer-containing component exclusion changes primary cancer to benign in 14 tests across 13 slides; dependence is not foreignness or a calibrated alert. [Results, exact denominators, uncertainty, safety controls and remote receipts](panda_fresh_s1_results_v1.md).
+
+The exact approval is consumed. Existing 120-slide/TCGA evidence, all fresh artifacts, original final-test seal, frozen source/protocol hashes and main are preserved. No final-test prediction was computed. Only documentation changed after the prior 297 passing software tests; further policy development or execution requires a separately concrete scope.
+
+
+## 2026-10-21 — S3 conservative review-transfer prepared
+
+Pushed prior S1 results through `3c8ad47`. The new S3 module reuses exactly 140 saved S1 bags, the old five training-clean robust-NN5 thresholds (strict unanimous score >9.32818765238456), unchanged cancer scorers and cached counterfactuals. Fixed comparisons are visual, dependence, combined and 32 random draws matched to combined component count per bag. No threshold search/fitting, hidden annotations, new topology, repeated contamination draws or extra encoding. Native-cancer flags, empty exclusions, hypothetical filtering damage and unique-slide versus repeated-control denominators remain explicit. The old RGB-to-current sampled-cell topology shift prevents assuming transferred burden calibration.
+
+All 306 tests pass with warnings as errors after the final code change; nine new fixture tests check truth separation, genuine-cancer harm, known-foreign recovery, initially incorrect denominators, strict thresholds, random-control units, empty exclusions and execution gates. No dependency added; original source/protocol/main guards preserved. [Protocol, limitations and bounded CPU scope](../docs/panda_fresh_review_transfer_v1.md). Latest user request to push and move forward supplies new-stage development authorization; planned resources 2 CPUs/8 GB/20 minutes on the verified CPU account/partition are chosen within the bounded research plan and will be shown with the staged command before submission. New real S3 outcomes remain pending.
+
+
+## 2026-10-21 — S3 transfer executed, frozen policy remains unsupported
+
+CPU **23101320 completed 0:0 in 35s** on bfqi-delta-cpu/cpu-interactive (2 CPUs, 8 GB, 20-minute cap, no GPU; 0.01944 allocated CPU-hours), from pushed immutable source `a5d819c`. All 140 saved S1 bags /9800 model-policy records and 141 checkpoints /144 events pass independent JSON/hash inspection. The 32 random controls per bag match combined component counts and retain unique-slide denominators. No repeated contamination draw, new encoding, threshold fitting, classifier fitting, download or original final-test prediction.
+
+Primary combined finds 0/20 foreign fragments in either mode, flags 4/60 unmodified slides, flags 4/90 genuine cancer-containing sampled components and hypothetically damages 4/46 initially correct predictions. Its one append label return deletes 507 native representations, deletes zero foreign tiles and retains all 26 foreign tiles; it is not decontamination evidence. The four genuine native carriers occupy 98.44–99.61% of their bags, leaving 2–8 tiles. Burden point estimates alone do not validate the rule. [Full comparisons, matched random controls, uncertainty, physical-context diagnosis and remote receipts](panda_fresh_review_transfer_results_v1.md).
+
+All 306 software tests passed before execution. Source/protocol/main/33 legacy guards and old S1 artifacts remain unchanged; original 24 tests stay sealed. The exact bounded next-stage scope is complete. A future truth-blind topology/context feasibility audit needs a new frozen development scope; do not retune the evaluated 60 and call it independent validation.
+
+
+## 2026-10-21 — original-training topology/context audit prepared
+
+New frozen diagnostic uses only the original 72 training slides, cached RGB membership/feature checkpoints and existing CONCH vectors. Compare memberships with the unchanged 8-neighbor/no-gap sample graph; retain unmapped RGB tiles and separate occupied versus observed areas. Fixed reference-support categories follow the existing algorithm: six remaining tiles are needed for both NN5 calculations to have five neighbors. Geometry-only largest-candidate selection and nested 2/5/6/16/32-tile references under three fixed seeds yield at most 2160 records, with exclusions and duplicate subsets explicit. No classifier call, WSI/PNG read, threshold/policy selection, fresh 60/calibration/test array or download.
+
+All 315 tests pass with warnings as errors, including nine new fixture checks for topology crosswalks, context support, cached-score reuse, physical area, nested/duplicate references, truth separation and execution guards. The protocol, original 33 legacy source files and main remain unchanged. [Fixed plan and bounded 2-CPU/8-GB/20-minute scope](../docs/panda_topology_context_v1.md). Latest “next” supplies ongoing-development direction; resource values are agent-selected and the exact staged command will be shown before submission. Scientific outcomes remain pending.
+
+
+## 2026-10-21 — training topology/context audit completed
+
+CPU **23101968 completed 0:0 in 27s** on bfqi-delta-cpu/cpu-interactive, node cn061, 2 CPUs/8 GB/20-minute cap, zero GPUs; 0.015 allocated CPU-hours. Source `a159769` was pushed and verified in a separate 246-file snapshot. All 72 training slides, 73 checkpoints /76 events and 2160 planned context records verify: 1347 reduced-context records, 24 cached full-context reuses, 789 explicit unavailable-size exclusions. No classifier prediction, WSI/PNG read, fresh 60/calibration/test arrays, model/threshold fitting, download, new review rule or retry. All 315 tests passed before execution.
+
+Sampled components span multiple cached RGB pieces on 60/72 slides and fragment a cached RGB piece on 21/72; groups overlap. Whole-bag sampled exclusions occur on 28 slides versus one RGB exclusion (unassigned RGB tiles can remain as context). Common-support comparisons on 39 RGB /31 sampled slides show mean absolute changes 10.14/12.80 with two reference tiles, versus 0.626/0.648 with 32. Common-support analysis was clarified after submission but before result inspection and is labeled secondary/descriptive. Six outside tiles supplies both NN5 neighbor counts; it does not calibrate a detector. [Findings, denominators, limitations and immutable remote receipts](panda_topology_context_results_v1.md).
+
+Source/configuration/main/33 legacy hashes, six original input receipts, and prior S1/S3 registry receipts remain unchanged. All raw artifacts stay on Delta; original final output remains absent and own queue empty. This bounded stage is complete; a future versioned eligibility/abstention contract needs genuine-tissue controls before another policy claim.
+
+
+## 2026-10-21 — numeric-context eligibility/native controls prepared
+
+New candidate v1 gates fewer than six reference tiles and candidates occupying more than half the sampled bag. These are fixed computational/conservative engineering requirements, not fitted or validated foreignness thresholds. Structured results preserve diagnostic scores and unknown mapping; review and foreignness remain null, no tissue action. The runner reuses the old sealed 72-training-slide JSON without arrays, images, prediction calls or repeated measurements. Annotation enters afterward for positive/unknown-control counts.
+
+All 336 tests pass with warnings as errors (30.99s), including 21 new artificial-fixture cases; original protocol/main and 33 legacy source hashes remain unchanged. The single bounded 2-CPU/4-GB/five-minute JSON-only Slurm run follows source freeze. [Frozen plan and limitations](../docs/panda_context_safety_v1.md). Latest “next” advances this new development scope; exact staged source/command will be shown before submission. New real coverage findings remain pending.
+
+
+## 2026-10-21 — numeric-context/native-control accounting completed
+
+CPU **23102229 completed 0:0 in 12s** from pushed `0340d60`, 2 CPUs/4 GB/five-minute cap on bfqi-delta-cpu/cpu-interactive, node cn095, zero GPUs (0.006667 allocated CPU-hours). All 72 original training slide records, 73 checkpoints /76 events and source/input/legacy hashes verify. No arrays/images, new scores or predictions, GPU/downloads, fitting, fresh60/calibration/test artifacts or retries. All 336 software tests passed before execution; subsequent changes are documentation only.
+
+The fixed six-reference/majority candidate gate leaves 325/389 RGB and 316/377 sampled comparisons numerically eligible; 8/72 versus 28/72 slides have no eligible comparison. Genuine annotation-positive components remain eligible in 44/88 RGB and 75/116 sampled components, so numeric support still cannot establish foreignness. Most eligible comparisons include unknown RGB reference assignments (320/325 and 299/316). Review/foreignness outputs and alert/recall/harm metrics remain null, automatic tissue action none. [Results, denominators, preserved receipts and limitations](panda_context_safety_results_v1.md). This bounded stage is complete. A future review-only dependence report may integrate the contract without claiming foreignness; original final-test gate remains closed and evaluated fresh60 remain evaluated. All raw results stay on Delta; main/old source/experiments preserved.
+
+
+## 2026-10-21 — saved-training dependence report integration prepared
+
+New report builder/runner joins matching historical CONCH zero-shot top5pct predictions with frozen RGB topology/context gates. Every component stays in original order; decision changes remain visible even with numeric abstention. Reviewer JSON/HTML omits annotation/grade/foreign truth, includes saved physical metadata and uncertainty, and preserves all tissue with no foreignness or alert decision. Separate native-control accounting follows report construction.
+
+All 350 tests pass with warnings as errors (40.88s), including fourteen new artificial-fixture tests; main and all 33 legacy source hashes remain unchanged. Source freezing precedes one bounded 2-CPU/4-GB/five-minute JSON-only Slurm export for original72 training slides /389 components. [Contract and immutable scope](../docs/panda_dependence_export_v1.md). Static HTML checks pass; browser policy blocked local-file visual preview, which remains unverified. No image/array/model calls, new scores, GPU/downloads, original final predictions or repeated experiment draws. New real export findings remain pending.
+
+
+## 2026-10-21 — review-only saved-training export completed
+
+CPU **23102479 completed 0:0 in 16s**, source `1a388ef`, 2 CPUs/4 GB/five-minute cap on bfqi-delta-cpu/cpu-interactive, node cn095, zero GPUs; 0.008889 allocated CPU-hours. All 72 original training slides /389 RGB components exported to 72 truth-free JSON +72 HTML +index; 145 rendered files, 73 checkpoints /76 events, 260 source files and eight pinned inputs verify. All 350 tests passed before execution; subsequent repository changes are documentation only. No new predictions/scores, images/arrays, GPU/downloads, fitting, original final/fresh/calibration predictions or job retry.
+
+Cached dependence comprises 25 changing components /388 evaluable (23 slides /72), including ten native annotation-positive components on ten slides. Twenty of the 25 decisive comparisons numerically abstain; dependence stays visible without becoming an alert or foreignness claim. No ranking/tissue action; hidden annotations join only in separate controls. [Findings, source and preserved hashes](panda_dependence_export_results_v1.md). Static HTML checks pass; browser policy blocked local-file visual preview. Optional owner-only inspection failed on actual 0660 project-group file modes; all hashes passed and permissions preserved. This bounded stage is complete. Future existing-tile previews require a new bounded version; original final gate remains closed and all raw artifacts stay on Delta.
+
+
+## 2026-10-21 — bounded saved-tile galleries prepared
+
+New preview helper/runner adds up to four geometry-selected component tiles and four outside tiles to every original-training RGB component. Original encoding-input PNG bytes are validated and copied unchanged on Delta, with recorded physical field/coordinates and unknown RGB assignments preserved. Gallery subsets do not redefine score context or physical boundaries; all saved predictions/gates, null review/foreignness and tissue action none remain. All old reports are preserved.
+
+Thirteen new artificial colored-PNG checks pass, including a 72-slide fixture. An initial test reference-count assertion was corrected from 1,152 to 576; no production logic changed for that correction. All 363 tests pass with warnings as errors (33.36s) before source freeze and one 2-CPU/4-GB/five-minute Slurm export, maximum 3,112 display references /512 MiB remote copies. [Frozen scope and provenance checks](../docs/panda_preview_export_v1.md). Existing three runtime freezes, main and 33 legacy source hashes remain unchanged. No local downloads, WSI/mask/NPZ/model calls, GPU, new fitting or final/fresh/calibration predictions. Scientific export counts remain pending; browser visual preview remains unverified.
+
+
+## 2026-10-21 — bounded saved-PNG galleries completed
+
+CPU **23102636 completed 0:0 in 23s**, source `ec5a71d`, 2 CPUs/4 GB/five-minute cap on bfqi-delta-cpu/cpu-interactive, node cn099, zero GPUs; 0.012778 allocated CPU-hours. Original 72 training slides /389 RGB components now have geometry-only image galleries: 1,638 unchanged PNG assets /2,605 references, 101,466,949 copied bytes under 512 MiB. All 1,783 output files /73 checkpoints /76 events and 72 source metadata groups verify. All 363 software tests passed before execution; subsequent changes are documentation only.
+
+All saved predictions, gates, controls, original report fields and 145 old rendered hashes remain unchanged. Recorded source fields are 111.82315650205668 µm per axis; 176 preview references keep unknown RGB assignment. These are separate examples, not spatial reconstructions or new scoring references. No WSI/mask/NPZ/model call, new class score/embedding, GPU/download, final/fresh/calibration evaluation, retry or new clinical/foreignness claim. [Actual receipts, counts and remaining visual limits](panda_preview_export_results_v1.md). Browser layout remains unverified; source PNG bytes/dimensions and static HTML links/captions verify. This bounded gallery scope is complete; all pixels and detailed outputs stay on Delta, with main/legacy/source and original test seal preserved.
+
+
+## 2026-10-21 — saved native/synthetic control audit prepared
+
+A separate truth-revealed audit joins all 24 original training 5%-dose append cases /16 reused donor slides to native source PNGs and cached component counterfactuals. Same donor examples appear in native and synthetic contexts; original reviewer reports remain untouched. Validates original oracle receipts, exact score-vector/annotation append provenance, selected connected donor cells, physical/annotated areas and saved placement. Native overlapping-component exclusion is not a fragment-only oracle; null review/foreignness and no tissue action remain. Initially incorrect host predictions stay separate from newly induced errors.
+
+All 386 tests pass with warnings as errors (33.90s), including 23 new artificial cases and a complete 24-pair fixture. No dependency added; main, 33 legacy files and four prior runtime freezes remain unchanged. One bounded CPU export follows pushed source freeze: 2 CPUs/4 GB/five minutes, no GPU; up to 384 display references /288 source PNGs /64 MiB. [Fixed provenance contract](../docs/panda_paired_control_audit_v1.md). Latest user “next” advances the proposed comparison, with resource values selected by the agent and exact command disclosed before submission. No new inference, stress draws, fitting, WSI/mask/NPZ processing, downloads or final/fresh/calibration evaluation. All pixels/detailed outputs remain on Delta. Real outcomes remain pending; browser layout remains unverified.
+
+
+## 2026-10-21 — saved native/synthetic control audit completed
+
+CPU **23104084 completed 0:0 in 21s** from pushed `24364b4`, 2 CPUs/4 GB/five-minute cap, zero GPUs, node cn137; 0.011667 allocated CPU-hours. All 24 original training 5%-dose pairs /16 reused donors, 250 unchanged source PNGs /384 references, 16,981,004 bytes, 299 files /25 checkpoints /28 events and 40 source receipt groups verify. The first source archive omitted the pinned old trial receipt and failed metadata preflight before submission; preserved, a complete archive verified, only one job submitted and no retry. All 386 software tests passed before source freeze; subsequent edits are documentation only.
+
+Saved outcomes are 12/24 prediction changes versus 12/18 newly induced errors among originally correct hosts; six hosts were initially incorrect. Three of 17 unique native cancer-containing components overlapping donor sets are decisive. The 167 saved mixture components include 17 decisive components, 11 with appended donor tiles and six without. Eight of 439 appended donor tile instances remain unmapped. These component/case counts are not detector recall or independent patients; native component exclusions are not fragment-only oracles. Review/foreignness and alert/recall metrics remain null, tissue action none. [Results, exact denominators, source/receipt hashes and limits](panda_paired_control_audit_results_v1.md).
+
+All 1,783 old native-gallery and 145 reviewer files, ten original input receipts, source freezes/main/33 legacy files and final-test seal remain intact. No WSI/mask/NPZ/model call, new prediction, embedding, intervention, oracle execution, fitting, GPU, download, original final/fresh60/calibration evaluation or duplicate job. Detailed artifacts remain on Delta, queue empty. This bounded audit is complete; browser layout/pathologist/clinical validity remains unverified, and a foreignness policy is still unsupported.
+
+
+## 2026-10-21 — qualitative expert-review worksheet implemented
+
+Added a metadata-only blank worksheet builder, recording validator and static rubric for all 24 original training pairs /16 reused donors. References bind existing audit JSON/HTML and sealed receipts; no images, arrays, scores or source labels generate human answers. The workflow is explicitly unblinded because known provenance/predictions are visible. Human fields start null, cannot-assess/context requests remain valid, physical isolation is unevaluable from unassembled galleries, and completed forms never promote detector/clinical validation or final readiness. Reviewer identity/role/exposure/attestation are self-reported, not expertise verification.
+
+All 408 tests pass with warnings as errors (33.68s), including 22 new artificial administrative checks. No dependency or existing runtime changed; main, 33 legacy files and five previous source freezes intact. [Protocol, pending staging, rubric and validation limits](panda_expert_review_preparation_v1.md). Latest user “next” advances only bounded source staging/blank metadata preparation here: no Slurm/GPU jobs, downloads, predictions, experiment draws, fitting, expert judgments or reviewer contact. All images and detailed responses stay on Delta. Real packet still pending preparation; human review and visual/clinical validity remain unverified.
+
+
+## 2026-10-21 — blank qualitative-review packet verified on Delta
+
+Pushed source `e29a7a3` was separately staged read-only, all 258 files verified. Metadata-only preparation created exactly three administrative files at `/work/nvme/bfqi/mhoda/floater-finder/panda-review/expert-review-worksheet-v1`: a 16,267-byte blank worksheet, 5,155-byte guide and 805-byte preparation receipt. All 24 original host references /16 reused donor IDs and case/page hashes match; read-only validation reports **0 recorded /24 pending**. All human judgments and reviewer metadata remain null. Zero recorded requests/cannot-assess answers is absence of review, not a scientific negative finding. No expert judgment or reviewer contact occurred.
+
+All 408 tests passed before source freeze; subsequent changes are documentation only. Three original audit receipts, 48 public case JSON/HTML files, source/legacy hashes and original final-test seal remain intact. No PNG/WSI/mask/NPZ/model opened, Slurm/GPU job, inference, experiment draw, fitting, threshold selection, final/fresh/calibration evaluation or local data/result download. [Packet paths, exact commands, recording-only validation limits and receipt hashes](panda_expert_review_preparation_v1.md). This bounded administrative preparation is complete. Actual human review, browser layout, visual validity and an effective foreignness policy remain pending; completing a form cannot establish clinical/detector validation or final readiness. All images/detailed response files stay on Delta; preserve the blank original and use separate reviewer copies.
+
+
+## 2026-10-21 — new fixed-support candidate implemented, remote authentication pending
+
+Latest “So do that to” advances remaining technical validation. Added a separate stable-context candidate: fixed32 outside tiles, minimum over three fixed-seed robust-NN5 scores, explicit context/majority/mapping abstention, and a matched full-context comparator. Host and reused-donor sources stay in the same fold; thresholds fit clean fitting folds only at unchanged burden targets. Genuine-cancer flags, clean damage and source-exact error recovery remain separate gates; removing native tissue while retaining donor tiles cannot count as recovery. Historical CONCH top5pct saved scores are pooled only for hypothetical diagnostics. No new model, feature space, draw, component rule or primary switch.
+
+All 416 tests pass with warnings as errors (18.86s), including eight new artificial tests, a complete 72-clean/24-mixture run and oracle-failure preservation. An initial artificial512D repeated-vector fixture triggered a local NumPy matmul warning; reducing only the fixture dimension resolved it without production changes or warning suppression. All six prior runtime freezes, main and 33 legacy hashes intact. [Frozen design, resource limits and pending execution](panda_stable_context_preparation_v1.md). Planned one bounded2-CPU/8-GB/ten-minute job on the verified CPU account/partition; exact staged command and current source/queue checks follow reconnection.
+
+The one shared SSH test returned Permission denied; no authentication retry, remote staging, Slurm/GPU submission or data download followed. Manual reconnection and human-review availability were requested while local work continued. Actual candidate results remain unexecuted, human review pending, final-test seal/readiness unchanged. All arrays and detailed results must stay on Delta. Do not infer real performance from software fixtures or bypass the rejected final protocol.
+
+
+## 2026-10-21 — fixed-support candidate executed, utility remains unsupported
+
+After confirmed manual reconnection, shared identity `mhoda` /dt-login04 verified once. Exact pushed runtime `204c194` was separately staged: 265 source files /seven input receipts match, own queue empty and output absent. CPU **23108680 completed 0:0 in 21s**, node cn137, 2 CPUs/8 GB/ten-minute cap, zero GPUs, 0.011667 allocated CPU-hours. All 72 original training slides /24 saved 5% trials /16 reused donors, 556 components /473 eligible /1419 estimates, 97 checkpoints /100 events verified. Source-connected folds exclude both held hosts and donors; clean-only cutoff fitting and all metrics/hypothetical pooling independently reproduced from saved JSON.
+
+Primary fixed32/min3 detects **3/24 fragments**, shortlists37/439 donor tile instances, recovers **1/12 induced errors** with all donor/no native tiles, and alerts **8/72 clean slides(11.1%)**. It flags 1/88 native annotation-positive components on 1/47 slides, with 0/61 observed historical clean-prediction damage and two native host tiles shortlisted in mixtures. Matched full context detects 2/24, recovers 1/12 and alerts 7/72. Both fail the frozen utility gate; no threshold/primary/budget/eligibility changes. Twelve induced errors come from 18 originally correct benign hosts; six were initially incorrect. [Full denominators, conditional cluster intervals, preserved receipts and limitations](panda_stable_context_results_v1.md).
+
+All 416 tests passed before execution; subsequent edits are documentation only. No new model/CONCH inference, GPU/download/donor draw, repeated oracle, fresh60/calibration/test prediction, duplicate submission or retry. Seven original receipts, source/main/legacy freezes and original test seal remain intact; own queue empty. The user confirmed no reviewer available: human packet unchanged at 0 reviewed/24 pending, with no fabricated expert judgments or contact. This bounded experiment is complete, but a useful foreignness policy is still unsupported. Final readiness false; original final test remains sealed, raw arrays/results stay on Delta.

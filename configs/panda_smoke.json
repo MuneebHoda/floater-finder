@@ -1,0 +1,19 @@
+{
+  "category": "PANDA engineering smoke; no cancer validation or training",
+  "source_kind": "real",
+  "root": "/work/nvme/bfqi/mhoda/panda",
+  "recorded_mpp_xy": [0.486, 0.486],
+  "checkpoint_config": "configs/ncsa_one_pair.json",
+  "prompts": "configs/panda_zero_shot_smoke.yaml",
+  "field_um": 112.0,
+  "export_pixels": 224,
+  "max_tiles_per_slide": 32,
+  "max_candidates_per_slide": 4096,
+  "min_tissue_fraction": 0.1,
+  "batch_size": 8,
+  "slides": [
+    {"image_id": "afe7eb15c8438861ca43f2b20dccf260", "isup_grade": 0, "mask_available": true},
+    {"image_id": "55d91c32710982de78a975ed0f45395c", "isup_grade": 1, "mask_available": false},
+    {"image_id": "dd1110c6430e3b1ac732be548a089886", "isup_grade": 4, "gleason_score": "4+4", "mask_available": true}
+  ]
+}

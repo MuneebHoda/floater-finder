@@ -1,0 +1,20 @@
+{
+  "manifest": "/work/nvme/bfqi/mhoda/panda/annotated_cohort_120_20261020_verified_v1.csv",
+  "sha256": "8f1550da2f9dbcc7e7463336f1f56f63b1cdff0b8615114378833f9609802b81",
+  "source_candidate_sha256": "3cd6e18678ad8fe0d207a72bc4354d371dc93003f515a53b8724867fc041b24d",
+  "cpu_verification_report_sha256": "92028bb0e6ce6bc1004e838d049c531c8fb8c9493fe8f50255a436270da35b22",
+  "slides": 120,
+  "groups": {
+    "benign": 40,
+    "gg1": 40,
+    "high_grade": 40
+  },
+  "usable_masks": 119,
+  "excluded_masks": 1,
+  "high_grade_gp45_positive_masks": 39,
+  "representative_tiles": 50729,
+  "original_partial_preserved_sha256": "9042c167c13a18da999e29a130dffb6495e32d102ade48fb79c28e53a69d00b7",
+  "patient_independence_verified": false,
+  "embedding_status": "Three profile slides encoded; full-cohort GPU approval pending",
+  "annotation_note": "GG1 training case 3c685ed0f92e30f6ffeb5cea7cef5994 has zero GP3/4/5 pixels in its full native mask. Original ISUP label retained; annotation absence is not attributed to the sampler."
+}

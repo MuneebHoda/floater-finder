@@ -1,0 +1,85 @@
+{
+  "source_kind": "real",
+  "category": "PANDA GPU engineering profile; no cancer performance evaluation",
+  "slurm_job_id": "23051673",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 54,
+  "task_peak_rss_kib": 4007116,
+  "slurm_gpu_peak_memory": "3130M",
+  "total_tiles": 944,
+  "embedding_dimensions": 512,
+  "classes": [
+    "benign",
+    "cancer",
+    "low_grade",
+    "high_grade"
+  ],
+  "text_fingerprint": "1af114595a1aa2657102590b31ab480c431b6b61e87882230791b98609e6ce46",
+  "model": {
+    "name": "conch_v1",
+    "revision": "package:0.1.0;source-sha256:e76180a4f49578ea3e6817fbf7d3e954bbba3a70d3055ca5cd8eeecb1532039a",
+    "checkpoint_sha256": "40a9644b9ba0e83a74576e0a5e5f7313599fa9c9cdaf3c20f8a3e271b0e9ae7c",
+    "projection": true,
+    "normalized": true,
+    "preprocessing": "Compose(\n    Resize(size=448, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(448, 448))\n    <function _convert_to_rgb>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+    "preprocessing_source_sha256": "9c0b06eb37f9d9b263ae460cfac552a4a61e98fbbee96be2dea0484a950b3095",
+    "tokenizer_source_sha256": "4b4a0ae3443c130aff0ccbb0c915abcf697c5bc2ea169e108ac914735e9d0f15",
+    "torch_version": "2.8.0+cu128",
+    "pillow_version": "12.3.0",
+    "encoder_weight_coverage_verified": true
+  },
+  "slides": [
+    {
+      "image_id": "55d91c32710982de78a975ed0f45395c",
+      "tiles": 301,
+      "image_encoding_seconds": 4.511261994950473,
+      "model_load_seconds": 3.82559690088965,
+      "tiles_per_second": 66.7219062729928,
+      "receipt_elapsed_seconds": 8.499911563936621,
+      "artifact_sha256": {
+        "slide.npz": "0081f2477c2b5d9bf49f861911c046a74bdaa8a379d66dddfcf734bc57e3bb39",
+        "text.npz": "701f3e814945c6953a7e3d0df44e888f87c6fa9aa057681a10dbda1a1958000e",
+        "timing.json": "e58678940cffd77330da0b73c8b8b2ed1deb81b0cef328b1bc52284639b81362"
+      }
+    },
+    {
+      "image_id": "afe7eb15c8438861ca43f2b20dccf260",
+      "tiles": 183,
+      "image_encoding_seconds": 3.466118674026802,
+      "model_load_seconds": 4.213217040989548,
+      "tiles_per_second": 52.79680738322722,
+      "receipt_elapsed_seconds": 15.923518768046051,
+      "artifact_sha256": {
+        "slide.npz": "2d7819b35260737540b5c44691a5cd779a702c8b34fbb00829befc6dd315dbd7",
+        "text.npz": "701f3e814945c6953a7e3d0df44e888f87c6fa9aa057681a10dbda1a1958000e",
+        "timing.json": "d413a77c462372e4d2126dc190e588ec913e0634387cc62dc9ffa351ff32699f"
+      }
+    },
+    {
+      "image_id": "dd1110c6430e3b1ac732be548a089886",
+      "tiles": 460,
+      "image_encoding_seconds": 6.962537324056029,
+      "model_load_seconds": 3.769774117041379,
+      "tiles_per_second": 66.06786844943285,
+      "receipt_elapsed_seconds": 10.927019622875378,
+      "artifact_sha256": {
+        "slide.npz": "8dfd13c3e6a23573b4eade700757d0bd79653e94ae9cfe89efc8890a2d429233",
+        "text.npz": "701f3e814945c6953a7e3d0df44e888f87c6fa9aa057681a10dbda1a1958000e",
+        "timing.json": "45a0e98c228930093bcd31288d1d048c5b5004663d68fe68af328dba8fd5bb42"
+      }
+    }
+  ],
+  "all_hashes_and_coordinates_independently_verified": true,
+  "initial_failed_job": {
+    "id": "23051627",
+    "elapsed_seconds": 12,
+    "exit": "1:0",
+    "reason": "CONCH namespace provenance check; no inference outputs"
+  },
+  "gpu_seconds_including_failed_attempt": 66,
+  "cancer_baseline_evaluated": false,
+  "source_snapshot": "/u/mhoda/floater-finder/releases/panda-scale-ready-20261020T180556Z-v3/source",
+  "source_archive_sha256": "f2986a39d7589f419e5fc963d01844d931d97a82a4cde0404f5ec930dd5ff9bb",
+  "all_three_text_fingerprints_identical": true
+}

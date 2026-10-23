@@ -1,0 +1,115 @@
+{
+  "image_id": "900ca15382fabf04c7b62af369e0b551",
+  "slurm_job_id": "23052704",
+  "mask_path": "/work/nvme/bfqi/mhoda/panda/train_label_masks/900ca15382fabf04c7b62af369e0b551_mask.tiff",
+  "mask_sha256": "0d915e9abb3aa4a20bd71a9981521725f388114b33895207ba9e04a4fb92cf6a",
+  "pillow_libtiff_version": "4.7.1",
+  "inputs_modified": false,
+  "max_independent_native_pixels": 200000000,
+  "header": {
+    "pyramid_dimensions": [
+      [
+        28416,
+        5632
+      ],
+      [
+        7104,
+        1408
+      ],
+      [
+        1776,
+        352
+      ]
+    ],
+    "pyramid_downsamples": [
+      1.0,
+      4.0,
+      16.0
+    ],
+    "measured_mpp_xy": [
+      0.4861876369654638,
+      0.4861876369654638
+    ],
+    "recorded_mpp_xy": null,
+    "scale_provenance": "Level-0 TIFF XResolution/YResolution/ResolutionUnit tags",
+    "image_header": {
+      "dimensions": [
+        28416,
+        5632
+      ],
+      "orientation": 1,
+      "resolution_tags": {
+        "XResolution": [
+          4294967295,
+          208816
+        ],
+        "YResolution": [
+          4294967295,
+          208816
+        ],
+        "ResolutionUnit": 3
+      },
+      "compression": 7,
+      "photometric": 2,
+      "samples_per_pixel": 3,
+      "bits_per_sample": 8
+    },
+    "mask_header": {
+      "dimensions": [
+        28416,
+        5632
+      ],
+      "orientation": 1,
+      "resolution_tags": {
+        "XResolution": [
+          4294967295,
+          206158
+        ],
+        "YResolution": [
+          4294967295,
+          206158
+        ],
+        "ResolutionUnit": 3
+      },
+      "compression": 5,
+      "photometric": 2,
+      "samples_per_pixel": 3,
+      "bits_per_sample": 8
+    },
+    "mask_available": true,
+    "mask_channel": 0,
+    "mask_label_mapping": {
+      "0": "background",
+      "1": "stroma",
+      "2": "benign",
+      "3": "gleason3",
+      "4": "gleason4",
+      "5": "gleason5"
+    },
+    "input_files": {
+      "image": {
+        "path": "/work/nvme/bfqi/mhoda/panda/train_images/900ca15382fabf04c7b62af369e0b551.tiff",
+        "bytes": 25107467,
+        "mtime_ns": 1792520117000000000,
+        "full_checksum_verified": false
+      },
+      "mask": {
+        "path": "/work/nvme/bfqi/mhoda/panda/train_label_masks/900ca15382fabf04c7b62af369e0b551_mask.tiff",
+        "bytes": 4304314,
+        "mtime_ns": 1792520117000000000,
+        "full_checksum_verified": false
+      }
+    },
+    "alignment_check": "matching dimensions/downsamples/orientation; not histological registration proof"
+  },
+  "openslide_error": {
+    "type": "OpenSlideError",
+    "message": "TIFFRGBAImageGet failed, last error: /work/nvme/bfqi/mhoda/panda/train_label_masks/900ca15382fabf04c7b62af369e0b551_mask.tiff: Using code not yet in table"
+  },
+  "pillow_native_decode_passed": false,
+  "pillow_error": {
+    "type": "OSError",
+    "message": "decoder error -2"
+  },
+  "mask_sha256_after": "0d915e9abb3aa4a20bd71a9981521725f388114b33895207ba9e04a4fb92cf6a"
+}

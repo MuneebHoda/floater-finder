@@ -1,0 +1,27 @@
+# Detector v2: preregistered ranked-review investigation
+
+This separate development protocol preserves rejected v1, its thresholds, source hashes, failed-job evidence and all scientific outputs. Version 2 reuses its SHA-256-pinned component measurements: 96 unmodified development slides and the same 160 positive-dose S1 mixtures. It does not repeat acquisition, tiling, encoding, S1 draws, WSI segmentation or component exclusions. No new model or GPU is used. The 24 final-test slides remain sealed.
+
+## Design declared before execution
+
+The configuration is `configs/panda_review_v2_development.json`. Five fixed scores compare visual anomaly, unsigned decision-margin influence, physical spatial anomaly, visual-plus-relevance, and a fixed weighted average. Influence measures relevance, not foreignness. Scores use empirical percentile normalization from unmodified **training** components only; spatial evidence uses observed area and bounding-box isolation lower bounds, without absolute position. These are untrained summaries of existing features, not learned cancer classifiers. Their fixed weights do not use calibration outcomes.
+
+Each strategy has review caps of one or three components, with four thresholds derived from training clean-slide maximum-score quantiles (0.90, 0.95, 0.975, 1.0; higher order statistic; strict exceedance), plus reject-all. Components with empty counterfactuals or unavailable required features are unevaluable. Slides below 90% tile-to-component mapping abstain. A tied score group that would cross the cap is not arbitrarily split. Unbudgeted top-one rankings are diagnostic trade-off comparisons, never a viable low-burden policy by themselves.
+
+Candidates are selected separately per strategy using **training** burden and safety constraints, then fragment recall, induced-error recovery, native-cancer flags and burden. A single primary strategy is selected by that same training-only order. The confirmed targets remain ≤10% unmodified-slide alerts and ≤0.5 flagged components/slide. Additional engineering gates remain ≤10% annotated-native-cancer slide flagging and ≤5% hypothetical damage among originally correct clean slides. Useful points must also recover at least 20% of fragments and 25% of newly induced error instances on train and calibration; zero denominators fail. No gate is relaxed if all candidates fail.
+
+Calibration results were already examined during v1. All new calibration measurements are **iterative development, not independent validation**, even though v2 normalization and threshold selection use train only. No test labels, predictions, normalization or tuning are authorized. A supported development result would still require a new frozen final protocol and explicit final-execution authorization.
+
+## Blinding and controls
+
+Ranking consumes only existing component visual anomaly, unsigned margin influence, observed physical area/isolation, evaluability and slide mapping quality. Injection labels, native annotation fractions, host/donor IDs, slide class labels, case type, component coordinates and absolute right-edge position do not enter a component score or review decision. Known clean training membership is used to fit the reference distribution; training annotations enter safety evaluation and candidate selection only. Source filenames identify records for provenance, not ranking.
+
+Evaluation alone uses injection truth to measure fragment/tile recall, component mixing and recovery, and native cancer annotations to identify negative controls for foreignness. Native cancer may influence a prediction legitimately. Every proposed alert remains review-only; filtering is hypothetical and never modifies saved tissue or predictions.
+
+Every selected strategy receives 20 size- and burden-matched random controls using the same area bins as v1. Count unique eligible pools and forced singleton matches; a matched control that must select the same component provides no independent evidence of superiority. Random draws and doses are repeated observations, not patients.
+
+## Failure decomposition and uncertainty
+
+Using saved measurements only, audit pure injected, mixed injected/native, annotated native-cancer and other native components: visual distributions; signed/absolute influence; area and isolation; single/multiple component fragment membership; unassigned donor tiles; and passage of each original v1 threshold and their intersections. Compare injected component bounding boxes with native observed extent only as an **evaluation diagnostic** of the artificial right-edge placement. Spatially translated fragments are engineered stresses, not natural floaters. No normalization, threshold or detector feature may exploit their absolute position. No alternative placement experiment is claimed without actually executing one.
+
+Report per-split, per-dose and per-strategy denominators, originally correct host error instances, unique affected host/donor slides, clean native-cancer flags, reviewer burden and hypothetical clean prediction damage. Wilson intervals use unique clean slides; host-cluster bootstrap intervals retain every dose within each unique host. They condition on fixed reused donor assignments, with unknown patient identities. They do not establish patient-level independence or clinical validity. Retain all negative results, candidate metrics and exact configuration/source/input hashes.
