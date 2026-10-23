@@ -1,154 +1,146 @@
 # Floater Finder
 
-Current software verification: **453 tests pass**. All four pixel-study jobs were still pending at the latest October 21 inspection; no new real pixel results are claimed. [Verified CPU-capacity and node-health constraints](docs/ncsa_setup.md).
+**Computational pathology research on how small tissue fragments influence AI predictions.**
 
-The approved [10k-benchmark GPU profile is queued as **23109849**](reports/panda_pixel_program_gpu_submission_v1.md), waiting for CPU **23109667** to succeed and the existing pilot GPU to terminate. The remaining encoding is conditional on profile verification and billing reconciliation.
+Built for the **2026 Ashby Hackathon** by [Muneeb Hoda](https://github.com/MuneebHoda).
+Floater Finder combines spatial whole-slide image processing, frozen CONCH
+representations, controlled contamination experiments and counterfactual analysis
+in a reproducible Python pipeline on NCSA Delta.
 
-The parallel [10,000-record CPU preparation is submitted as **23109667**](reports/panda_gpu_program_cpu_execution_v1.md), pending on priority. Its GPU profile is queued as **23109849**; remaining approved encoding awaits profile verification and billing reconciliation. Queue forecasts currently extend beyond the deadline.
+The central question: **which tissue pieces drive a biopsy prediction, and can
+we distinguish a consequential foreign fragment from genuine small cancer?**
+The software preserves the original tissue and prediction, then reports evidence
+for review. A decision-changing piece is not automatically labeled foreign.
 
-The [expanded GPU research plan](docs/panda_gpu_research_program_v1.md) prepares a separate 10,000-record pixel benchmark and audits exact billing. Later GPU workstreams remain separately gated; [CPU preparation history](reports/panda_gpu_research_program_preparation_v1.md).
+**Current status:** working research pipeline, **455 passing software tests**,
+verified real-data GPU execution, and documented positive and negative findings.
+A clinically useful floater detector has **not** been established.
 
-The [pixel GPU job is submitted as **23109340**](reports/panda_pixel_gpu_submission_v1.md), waiting for CPU preparation **23109277** to succeed. The one-A100/four-CPU/16GB/five-minute request preserves the frozen runtime,real-manifest checks and unchanged/null drift gates. **432 tests pass**. The96 real images and new GPU measurements remain unverified; leave the queued jobs in place. All data stay on Delta and original test predictions remain sealed.
+## What this project demonstrates
 
-The [four-pair pixel contamination study is prepared in code](reports/panda_pixel_contamination_preparation_v1.md), with **424 passing tests**. Real-data CPU preparation job **23109277 is pending** after a scheduler-prolog timeout on the first node; leave it queued. The 96 real composite/control images and exact GPU manifest remain unverified. No new CONCH inference or pixel-level scientific result exists; GPU submission requires separate approval after preparation passes. All data stay on Delta and original test predictions remain sealed.
+- **Spatial data engineering:** bounded PANDA pyramid-TIFF reads, aligned Radboud
+  grading masks, physical tile coordinates/areas and per-tile annotation fractions.
+- **ML systems:** canonical CONCH v1 image/text encoding, frozen linear and
+  zero-shot scorers, model/preprocessing fingerprints and embedding drift checks.
+- **Counterfactual analysis:** a model-agnostic leave-one-piece-out engine that
+  recomputes predictions and explicitly abstains when exclusion leaves no tissue.
+- **Experimental design:** source-disjoint splits, connected-fragment stress
+  tests, matched native/seam/null controls and genuine-cancer safety comparisons.
+- **HPC execution:** bounded Slurm CPU/GPU stages, dependency gates, actual charge
+  reconciliation and checksummed source/input/output receipts.
+- **Scientific reproducibility:** frozen protocols, exact oracle checks, explicit
+  metric denominators, preserved failures and an original final-test seal.
 
-The [fixed-support candidate was executed and failed its utility gate](reports/panda_stable_context_results_v1.md): **3/24 fragments detected, 1/12 source-exact hypothetical error recoveries, 8/72 clean slides alerted (11.1%)**. Both fixed-support and matched full-context methods remain unsupported at the frozen targets. **416 tests pass**; no new model inference, GPU or downloads. Human review remains pending (no reviewer available); the final test stays sealed.
+## Pipeline
 
-The [qualitative expert-review packet is verified on Delta](reports/panda_expert_review_preparation_v1.md): 24 blank original-training case records, an unblinded rubric and a provenance/completeness validator. **408 tests pass; 0/24 cases reviewed**. Human assessments remain pending; software cannot supply expert review or validate foreignness. No new inference, jobs or downloads occurred.
-
-The [saved native/synthetic control audit completed](reports/panda_paired_control_audit_results_v1.md): **24 original training pairs /16 reused donors, 250 unchanged PNGs, 386 passing tests**. Cached cases show 12 new host-label errors among 18 originally correct benign hosts; six hosts were already incorrect. Three genuine native cancer-containing components also change predictions on exclusion. Dependence does not establish foreignness; all tissue is preserved, no new inference/GPU/downloads or final-test access. Detailed comparisons remain on Delta; visual/clinical validity is unverified.
-
-The [bounded PNG galleries completed](reports/panda_preview_export_results_v1.md): **72 training slides /389 RGB components, 1,638 unchanged source images, 363 passing tests**. Geometry-selected component/outside examples retain recorded physical coordinates and uncertainty. Original predictions/reports are preserved; no new inference, GPU or local download. All galleries stay on Delta. Browser layout and visual/clinical validity remain unverified.
-
-The [review-only dependence export completed](reports/panda_dependence_export_results_v1.md): **72 training-slide JSON/HTML reports, 389 RGB components, 350 passing tests**. It preserves saved baseline/counterfactual evidence and explicit context abstentions, with no ranking, foreignness decisions or tissue removal. All detailed reports remain on Delta; no new predictions, GPU, downloads or final-test access. Visual layout remains unverified and image panels are not yet included.
-
-The [numeric-context/native-control audit completed](reports/panda_context_safety_results_v1.md): **72 training slides, 336 passing tests**. Explicit context abstentions leave 325/389 RGB and 316/377 sampled components eligible for numeric comparison, including 44 and 75 genuine cancer-containing components. Eligibility does not establish foreignness; all review decisions remain unset and tissue is preserved. No new predictions, GPU, downloads or final-test access.
-
-The [original-training topology/context audit completed](reports/panda_topology_context_results_v1.md): **72 slides, 2,160 planned context records, 315 passing software tests**. Sampled components disagree substantially with cached RGB membership. Sparse comparison context causes large morphology-score sensitivity without inserted foreign tissue; six outside tiles supplies NN5 neighbor counts but does not validate a review cutoff. No classifier predictions, GPU, downloads or final-test access. The floater review policy remains unsupported.
-
-The [S3 conservative review-transfer diagnostic completed](reports/panda_fresh_review_transfer_results_v1.md): 140 saved bags /9800 model-policy records, **306 passing software tests**. The primary combined rule detects **0/20 foreign fragments per edit mode** while flagging four genuine cancer-containing carriers and hypothetically damaging 4/46 initially correct unmodified predictions. Its apparent one-case label recovery retains all foreign tissue. No useful review policy follows; topology/native-context feasibility needs further development. All data/raw results stay on Delta and original final-test predictions remain sealed.
-
-The [frozen CPU S1 follow-up completed](reports/panda_fresh_s1_results_v1.md): **1,191 interventions /2,382 exact oracle passes**, nine capacity exclusions and 140 counterfactual bags. At 5% requested contamination, the fixed primary changes 9/54 initially correct host-trial decisions per edit mode (four unique hosts). Genuine cancer-containing pieces also influence predictions: excluding them changes primary cancer to benign in 14 component tests across 13 slides. This does not validate foreignness or a review alert. **297 software tests pass**; all raw artifacts stay on Delta and the original 24 test predictions remain sealed.
-
-Fresh Radboud60 [CONCH encoding and frozen baseline evaluation are complete](reports/panda_fresh_baseline_results_v1.md): **60 slides / 25,915 verified 512D embeddings**. The frozen primary reaches **80.0% benign/cancer balanced accuracy** (cancer recall 28/40) and **72.5% low/high** (high-grade recall 11/20); both have wide slide-bootstrap intervals. All files remain on Delta. No refitting, threshold changes or original 24 final-test predictions; no floater-policy validity follows. [CPU intake evidence](reports/panda_fresh_cpu_execution_v1.md); unchanged software suite 284 tests.
-
-The latest [paired-placement CPU audit](reports/panda_detector_placement_v1.md) is complete: the frozen primary detects **0/607 foreign-fragment instances**, recovers **0/39 induced-error instances**, and detects 0/59 in each common paired placement mode. This four-host training-only study does not establish a useful review policy. **272 software tests pass**; all final-test predictions remain sealed.
-
-Research now uses training-only frozen-CONCH linear probes, a shared intervention/registry engine and context-aware detector v3. Grade prediction has promising development point estimates but no established independent improvement; v3 remains ineffective at low review burden. The [research checkpoint](reports/panda_research_checkpoint_v1.md) records all candidates, failures, S2 v2 engineering scope, fresh-cohort metadata and resource gates. Historical evidence below is retained; all 24 final-test predictions remain sealed.
-
-The **[19-slide submission package](submission/ashby_20261021_v2/)** contains the standalone PowerPoint/PDF, abstract, eight-minute script, Q&A and checklist. Completed CPU S2 stress preserves **760/760 exact oracle recoveries**; its preselected mean scorer has **0/8 calibration low-to-high errors at every primary dose**. Ranked detector v2 also remains unsupported: **0/40 calibration fragment hits**, with **1/24 unmodified slides alerted**. [Current execution checkpoint](reports/submission_execution_checkpoint_20261020.md), [S2 results](reports/panda_s2_results_v1.md), [ranked v2 results](reports/panda_review_v2_results.md). All 24 final-test slides remain unscored; **204 software tests pass**.
-
-PANDA has **120 slides / 50,729 verified CONCH embeddings**. Development review-policy v1 is now **frozen and rejected**: the combined policy flags 0/24 unmodified calibration slides but detects 0/40 injected fragments. Decision dependence alone detects more but exceeds the clean-alert/harm targets. The 24 final-test slides remain unscored; CPU preflight verified 10,988 input files without decoding labels or computing predictions. [Current scientific findings](reports/panda_review_results_v1.md), [presentation figures and outline](reports/panda_presentation_v1.md), [frozen protocol and blocked final command](docs/panda_final_test_v1.md).
-
-Floater Finder now targets a CONCH-only **prostate-biopsy fragment-dependence safety check**: identify pieces whose exclusion changes a supplied slide scorer's decision, while preserving all tissue and the original prediction. The immediate target is benign-versus-cancer S1. A decisive piece may be genuine small cancer; this check does not establish foreign tissue.
-
-The PANDA adapter provides bounded pyramid-region tiling, physical coordinates and native-mask label fractions with the existing CONCH encoder. Real clean development scoring, 192 connected-fragment S1 trials and component-review comparisons have run; all original 192 oracle checks pass. The earlier [implementation status](reports/panda_implementation_status.md) and [artifact audit](docs/panda_integration.md) preserve the initial smoke-stage history. The current software suite passes **192 tests**. These development observations do not establish a clinically useful cancer or floater detector.
-
-```sh
-uv sync --locked --no-editable --reinstall-package floater-finder --extra test
-.venv/bin/python scripts/fragment_dependence_demo.py --output results/fixtures/fragment-dependence/new-run
+```mermaid
+flowchart LR
+    A[PANDA TIFFs and masks] --> B[Spatial tissue tiles]
+    B --> C[Canonical CONCH v1 embeddings]
+    B --> D[Controlled pixel edits and matched controls]
+    D --> C
+    C --> E[Frozen slide scorers]
+    C --> F[Component and context mapping]
+    E --> G[Leave-one-piece-out analysis]
+    F --> G
+    G --> H[Structured review evidence and safety metrics]
 ```
 
-The demo saves/reloads artificial embeddings and emits baseline/counterfactual predictions, piece geometry and [fixture alert JSON](examples/fragment_dependence/alert.fixture.json). Its scorer and thresholds are artificial and uncalibrated. `analyze_saved_slide()` now accepts saved NPZ artifacts plus a prediction callable and requires recorded physical geometry. Existing CLI commands and the CONCH/NCSA pipeline remain available below; the earlier TCGA experiments are historical **organ-classification evidence only**, not evidence of cancer detection.
+Clean sampling does not use grading masks to select tissue; annotation-guided
+donor extraction is kept separate. Saved embeddings let most scoring and
+counterfactual experiments run on CPUs without repeating GPU inference.
 
-For PANDA TIFF integration tests, install the optional region-reader dependencies:
+## Verified results
+
+These studies have different cohorts and denominators. Classification,
+dependence and foreign-fragment detection are separate outcomes.
+
+| Study | Observed result | Evidence |
+| --- | --- | --- |
+| Initial PANDA pipeline | **120 slides / 50,729** verified 512D CONCH embeddings; 72/24/24 train/calibration/test split | [Pipeline and development results](reports/panda_s1_and_piece_results_20261020.md) |
+| Separate frozen cancer baseline | **80.0% balanced accuracy** on 60 Radboud slides; slide-bootstrap 95% interval 70.0–88.75%; cancer recall **28/40** | [Baseline report and confusion matrices](reports/panda_fresh_baseline_results_v1.md) |
+| Connected-fragment S1 development stress | **192/192 exact oracle recoveries**; verifies restoration of original inputs/predictions, not learned detection | [S1 protocol and outcomes](reports/panda_s1_and_piece_results_20261020.md) |
+| Fixed-support review candidate | **3/24** foreign fragments detected; **8/72** unmodified slides alerted; **failed** the frozen utility gate | [Negative detector findings](reports/panda_stable_context_results_v1.md) |
+| Real pixel-level CONCH pilot | **96 images**, four repeated training pairs; source/null drift checks passed; **0/24** foreign edits changed slide predictions | [Pixel pilot measurements](reports/panda_pixel_results_20261022.md) |
+
+In the pixel pilot, foreign edits had higher NN5 anomaly scores than matched
+native edits in 8/8 comparisons at 5% patch area and 7/8 at 10%. Those percentages
+describe a patch **within one tile**, not a slide. Rectangular editing artifacts
+remain a confounder; the observation does not validate a foreignness detector.
+
+### Why genuine-cancer controls matter
+
+![Measured PANDA tile-footprint examples: both native cancer and a known synthetic fragment can change a prediction on component exclusion.](reports/figures/panda_piece_development_23065744/piece_examples.png)
+
+These are measured sampled-tile footprints, not whole-slide tissue photographs.
+Both a genuine annotated cancer-containing component and a known synthetic
+foreign component change cancer to benign when excluded. **Dependence alone
+cannot justify tissue removal.** [Example provenance and reproduction](reports/panda_s1_and_piece_results_20261020.md#real-leave-one-piece-out-diagnostic).
+
+## Try the software locally
+
+Requires Python **3.11–3.12** and `uv`. The following installs the locked software
+dependencies, runs the tests and executes an **artificial software fixture**.
+It requires no pathology images, model checkpoint, NCSA account or GPU.
 
 ```sh
-uv sync --locked --no-editable --reinstall-package floater-finder --extra test --extra panda
-.venv/bin/python -m pytest tests/test_panda.py tests/test_fragment_dependence.py -q -W error
-```
-
-This is a research prototype. Synthetic contamination is not verified real contamination; image-text similarity is not a clinically validated diagnosis. The historical CONCH v1 organ workflow passed a four-patient smoke through patient-separated detector calibration and evaluation. The fixed detector threshold missed most injected tiles; the subsequent development cutoff gate failed. Those observations are preserved below and in the experiment reports.
-
-## Run locally
-
-From this checkout, install the locked CPU/test dependencies into the project environment:
-
-```sh
-uv sync --locked --no-editable --reinstall-package floater-finder --extra test
+git clone https://github.com/MuneebHoda/floater-finder.git
+cd floater-finder
+uv sync --locked --no-editable --reinstall-package floater-finder \
+  --extra test --extra panda --extra research
 .venv/bin/python -m pytest -q -W error
 .venv/bin/floater-finder --help
-bash scripts/run_fixture_checks.sh results/fixtures/new-run
+.venv/bin/python scripts/fragment_dependence_demo.py \
+  --output results/fixtures/portfolio-demo
 ```
 
-Use a fresh output directory for each run. Commands refuse to overwrite existing artifacts. The normal installation avoids an observed local editable-install import problem; use the reinstall command above after source changes. Tests check that the installed package matches the source.
+The fixture saves/reloads embeddings and writes `alert.fixture.json` with baseline
+and counterfactual predictions, component geometry and artificial review alerts.
+Its invented scorer and arrays are **software checks, not scientific results**.
+Choose a fresh output directory; existing artifacts are not overwritten.
+[Example fixture JSON](examples/fragment_dependence/alert.fixture.json).
 
-The fixture command creates artificial arrays and independent fixture development/evaluation identities. It exercises scoring, all requested contamination levels, oracle recovery, detector calibration, detector ablations, random-removal and clean-control comparisons. All outputs remain labeled `fixture`; they support software checks only.
+Real encoding uses a separately prepared Delta environment, an authorized local
+CONCH checkpoint and scheduled CUDA resources. Whole-slide datasets and model
+weights are not bundled; the encoder disables implicit model downloads.
+See the [PANDA integration guide](docs/panda_integration.md) and
+[verified Delta setup](docs/ncsa_setup.md) for research execution.
 
-## Inspect and inventory
+## Explore the implementation
 
-```sh
-.venv/bin/floater-finder inspect
-.venv/bin/floater-finder inventory --root data --manifest configs/cohort_manifest.example.csv --output results/inventory/new-run
-```
-
-Supply only relevant accessible roots. If a root is missing, the inventory records an error rather than claiming that data exists. CSV templates are header-only; fill them with verified records. An inventory is not an extraction or download operation. The current local inventory found zero slides.
-
-`configs/cohort_manifest.example.csv` includes participant/project, source site, diagnostic status/provenance, organ, label, split, report linkage and spatial metadata. `configs/institution_map.example.csv` requires verified normalized institution mapping provenance. `configs/tile_manifest.example.csv` expects `tile_id,path,x,y`. Unknown metadata must stay unknown.
-
-## Real CONCH workflow
-
-1. Verify patient-attributed PRAD/BLCA diagnostic slides or existing tile exports, report linkage and coordinate scale. Assign disjoint development/evaluation patients.
-2. Confirm an already-local, authorized CONCH checkpoint and an installed compatible environment. The encoder uses an existing local checkpoint and performs no automatic model download or credential read.
-3. Review the resource request and use the recorded authorization for bounded CONCH plan jobs. Encode tiles with `encode` inside a CUDA allocation. The command requires a tile CSV, slide-metadata JSON, prompt YAML, local checkpoint and new output directory; see `encode --help`.
-4. Validate resulting `slide.npz`/`text.npz`. Populate the null paths and empty pairs in `configs/conch_smoke.yaml`; keep the fixed prompts. Start with one pair before populating `conch_pilot.yaml`.
-5. Run `stress --config <populated-config> --output <new-results-directory>`. Oracle verification runs for every successful trial. Raw scores, exclusions, denominators, configuration and input/source hashes are saved.
-6. Calibrate on unmodified development artifacts with `calibrate`, then evaluate independent held-out hosts/donors with `detect`. Use `plot` only when sufficient real observations exist; install the locked `plots` extra then.
-
-A scheduled one-pair wrapper now extracts raw pixels at verified existing tissue coordinates, resampling both scanners to common 256-micron tiles before encoding. The encoder also accepts pre-extracted tiles. A 128-tile cap is recorded as a subset, not a full-slide experiment. The pinned checkpoint, real image/text encoding and capped throughput are now verified on a scheduled A100. These measurements are not a full-slide throughput benchmark.
-
-## Commands
-
-| Command | Purpose |
+| Area | Entry point |
 | --- | --- |
-| `inspect`, `inventory` | Local package/cache availability and bounded cohort inventory. |
-| `validate`, `encode` | Artifact checks and optional scheduled real CONCH tile/text encoding. |
-| `score`, `inject` | Mean/top-1%/top-5% scoring and connected synthetic contamination. |
-| `stress`, `oracle` | Reproducible sweeps, explicit eligibility denominators and mandatory recovery. |
-| `calibrate`, `detect` | Separate-patient clean calibration, organ/visual/combined scores and controls. |
-| `summarize`, `plot` | Recompute metrics or export a real-data contamination curve. |
-| `fixture` | Artificial-array software checks, never research evidence. |
+| TIFF tiling, mask alignment and physical geometry | [`panda.py`](src/floater_finder/panda.py) |
+| CONCH adapter and artifact validation | [`conch.py`](src/floater_finder/conch.py), [`panda_encoding.py`](src/floater_finder/panda_encoding.py) |
+| Scorer-independent piece counterfactuals | [`fragment_dependence.py`](src/floater_finder/fragment_dependence.py) |
+| Frozen predictors and grouped evaluation | [`predictors/`](src/floater_finder/predictors/) |
+| Controls, shared interventions and experiment registry | [`research/`](src/floater_finder/research/) |
+| Cluster execution | [`scripts/slurm/`](scripts/slurm/) |
+| Protocols, measured results and regression tests | [`docs/`](docs/), [`reports/`](reports/), [`tests/`](tests/) |
 
-## NCSA and resource approval
+The original TCGA organ-classification workflow is preserved as historical work;
+its results are not reused as evidence of prostate cancer or floater detection.
+[Detailed workflow/history](docs/research_history.md) · [Progress log](reports/progress.md).
 
-Use SSH alias `ncsa-floater`. Heavy processing and GPU inference belong in approved Slurm jobs. Approved job `22957101` completed on an A100 node with exit code `0:0` in five seconds, verifying scheduled GPU allocation and driver visibility. Hosted two-tile CONCH image-encoding tests passed on October 17 and 18; both runs' saved outputs have now been retrieved and independently validated. See the [GPU smoke evidence](reports/gpu_smoke_22957101.json) and [NCSA setup](docs/ncsa_setup.md).
+## Limits and next steps
 
-| Job script | Account / partition | GPU / CPU / memory | Wall time |
-| --- | --- | --- | --- |
-| [Driver visibility](scripts/ncsa_smoke.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 1 / 2 GB | 2 minutes |
-| [Pre-extracted tile draft](scripts/slurm/conch_encode.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 4 / 16 GB | 5 minutes |
-| [Physical WSI pair encoding](scripts/slurm/conch_one_pair.sbatch) | `bfqi-delta-gpu` / `gpuA100x4` | 1 / 4 / 16 GB | 10 minutes |
-| [Patient-separated detector](scripts/slurm/conch_detector.sbatch) | `bfqi-delta-cpu` / `cpu` | 0 / 2 / 4 GB | 5 minutes |
+- The original **24 final-test slides remain unscored**. No failed development
+  detector was promoted by inspecting or tuning on those outcomes.
+- PANDA source-slide separation is recorded, but patient independence is not
+  verified. Findings use bounded tissue sampling and synthetic contamination;
+  natural floaters and clinical utility have not been adjudicated.
+- Genuine annotated cancer may be decisive. No automatic tissue deletion occurs,
+  and no expert-review judgments are fabricated.
+- A **10,000-candidate** image/control benchmark is prepared. Its first CPU run
+  failed a source-metadata check; a versioned correction now passes 57/57
+  metadata checks. Replacement preparation and large-benchmark GPU results
+  remain pending. [Correction and execution gates](docs/panda_pixel_program_v2.md).
 
-The driver-visibility script completed as job `22957101`; the CONCH encoding draft remains unsubmitted. Both use the verified GPU sub-allocation QoS. Password/Duo prompts belong in your own Terminal. Do not put credentials or private keys in project files or logs.
+## License and acknowledgments
 
-The next-stage preflight verified the hosted CONCH service's health and located 208 existing prostate tiles with public GDC project/patient metadata. After initial 401 responses, authenticated tests produced two finite, unit-normalized, 512-dimensional image embeddings, with identical vectors across both runs. The latest two-image HTTP round trip took about 0.14 seconds; this is not a GPU throughput benchmark. See the [latest smoke evidence](reports/conch_service_smoke_20261018T205624Z.json) and [setup notes and limitations](docs/ncsa_setup.md#next-stage-conch-service-preflight). This is a connectivity check; the hosted API does not supply all vectors/provenance required by the full experiment.
-
-A subsequent search found full shared PRAD/BLCA feature cohorts, but their sampled headers identify **CONCH v1.5 / 768 dimensions**. They cannot be mixed with the tested v1 service. The user approved the 4.80 GB CONCH v1 input plan: both diagnostic WSIs and the pinned original checkpoint are now checksum-verified in personal Delta storage. The [next-experiment plan](docs/next_experiment.md) records paths and evidence. CPU job `22994404` prepared the runtime and verified input checksums, measured slide calibration and the tokenizer. GPU smoke `22994635` completed successfully, reproducing the first run after a provenance fix; 128 tiles per slide yield matched 512-dimensional vectors and pass six oracle checks. See the [verified result](reports/conch_one_pair_smoke_22994635.json).
-
-## Real-data smoke outcome
-
-Six initial Delta jobs completed successfully. The [contamination results](reports/conch_smoke_results.md) and [detector results](reports/conch_detector_results.md) include verified plots, raw metrics and explicit denominators. There are two development and two evaluation patients, each represented by a connected 128-tile subset, for **512 real image embeddings with 512 features each**, plus matched text prototypes. The local suite passes **91 tests**.
-
-The combined detector ranks synthetic donor tiles with mean AUROC 0.949 at 10% requested contamination, but its frozen 99th-percentile development threshold detects only 3.85% of donor tiles in that descriptive stratum. The next study needs representative calibration and a fresh held-out cohort. These observations do not establish clinical floater detection or population performance.
-
-A subsequent [development-only cutoff diagnostic](reports/conch_threshold_results.md) completed as CPU job `22995268`, reusing existing vectors with no new inference or download. It reports five cutoff levels, 60 oracle passes and 900 rows. It shows the detection/original-host-removal tradeoff on reused calibration patients; no revised cutoff or new evaluation claim follows from it. [Next study and dependency maintenance](docs/next_experiment.md).
-
-New image work uses Pillow 12.3.0 and records that version in artifact provenance; local tests use pytest 9.0.3. A separate private Delta runtime passed scheduled A100 compatibility job `22995434`: all 256 regenerated development tiles and image/text vectors exactly matched the preserved baseline. The generic pre-extracted-tile wrapper now takes the private environment as its first argument. [Verified setup](docs/ncsa_setup.md).
-
-The [expanded feasibility-pilot plan](docs/expanded_pilot_plan.md) contains 16 new public slides totaling 21.24 GB, with eight new development and eight fresh evaluation patients. Acquisition and all-18-patient technical preflight passed; the [study design is frozen](docs/expanded_pilot_protocol.md) at four × 96 tiles per patient. GPU job `23028013` then produced **3,840 development embeddings** from the ten development patients. CPU job `23028265` completed all ten leave-one-patient-out folds, but **no frozen candidate satisfied the 1% removal budget**; the most conservative candidate's worst case removed 19/384 original-host tiles. No final numerical calibration or held-out evaluation followed. [Observed development results and evidence](reports/conch_development_results.md). The local suite passes **105 tests**.
-
-## Evidence and outputs
-
-- [Progress and executed commands](reports/progress.md).
-- [Methodology, schemas, scientific limits and source references](docs/methodology.md).
-- [NCSA CONCH preflight](reports/ncsa_preflight_20261017.json) and [public PathGen metadata inventory](reports/ncsa_pathgen_inventory_20261017.csv).
-- Local environment snapshot: `reports/environment.json`.
-- Local inventory/missing data: `results/inventory/local/`.
-- Validated fixture run: `results/fixtures/final_validation/` (ignored by git).
-
-Real-data smoke, pilot and benchmark results must use separate directories and explicit categories. Requests to relabel fixture artifacts as real results are rejected. No MUSK/PathGen adapter, clinical validation, or real-slide floater claim is included.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+Code is available under the [MIT License](LICENSE). PANDA data and CONCH model
+weights have their own access and licensing requirements. Full datasets and
+checkpoint files are not distributed with the code; committed research and
+presentation figures retain their recorded provenance. Research execution used
+**NCSA Delta**. See the linked protocols and reports for dataset/model provenance
+and scientific references.
