@@ -1,5 +1,27 @@
 # Floater Finder progress
 
+## Visual portfolio README — October 22
+
+Reorganized the front page around a conceptual workflow banner, two unchanged
+PANDA reference tiles and two reproducible evidence panels. The cancer confusion
+matrix uses the committed60-slide baseline report. The contamination curve is
+recomputed from saved S1 trials for the five initially correct calibration hosts
+under the historical top5pct scorer (0,1,1,2,2,2 new errors); the three initially
+incorrect hosts are excluded from that error denominator. Cohorts/scorers,
+within-study repeated hosts, confidence interval and detector limitations remain
+explicit. Source/output hashes and computed values are in
+`docs/assets/readme/provenance.json`; `scripts/build_readme_assets.py` rebuilds
+the artwork and plots using only committed aggregate evidence. Original figures
+and scientific artifacts are unchanged. Banner geometry is labeled conceptual.
+
+GitHub description and15 relevant repository topics were updated and verified.
+GitHub's Markdown renderer accepts all9 images (including four status badges),
+four sections and two collapsed detail blocks; all images have alt text and
+local links resolve. Newly rendered plots were visually checked. No model call,
+Slurm submission, download, refitting, threshold change or final-test access.
+The455-test runtime checkpoint remains unchanged; the standalone figure builder
+passed its source/count/denominator assertions without rerunning the full suite.
+
 ## Pixel pilot complete; benchmark provenance corrected — October 22
 
 Scheduled CPU23109277 completed0:0 in13s; GPU23109340 completed0:0 in43s.

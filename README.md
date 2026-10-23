@@ -1,146 +1,133 @@
-# Floater Finder
+<p align="center">
+  <img src="docs/assets/readme/hero.png" alt="Floater Finder: which tissue piece drives the AI prediction? Read tissue, encode with CONCH, test piece influence, review evidence. Concept illustration." width="100%">
+</p>
 
-**Computational pathology research on how small tissue fragments influence AI predictions.**
+<p align="center">
+  <a href="https://www.python.org/"><img alt="Python 3.11–3.12" src="https://img.shields.io/badge/Python-3.11–3.12-17313b?style=flat-square&logo=python&logoColor=white"></a>
+  <a href="docs/panda_integration.md"><img alt="CONCH v1" src="https://img.shields.io/badge/Encoder-CONCH_v1-087f8c?style=flat-square"></a>
+  <a href="tests/"><img alt="455 tests passed at the October 22 checkpoint" src="https://img.shields.io/badge/Tests-455_passed-087f8c?style=flat-square"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/License-MIT-607981?style=flat-square"></a>
+</p>
 
-Built for the **2026 Ashby Hackathon** by [Muneeb Hoda](https://github.com/MuneebHoda).
-Floater Finder combines spatial whole-slide image processing, frozen CONCH
-representations, controlled contamination experiments and counterfactual analysis
-in a reproducible Python pipeline on NCSA Delta.
+<p align="center">
+  <a href="#start-with-the-tissue">The idea</a> ·
+  <a href="#what-the-experiments-show">Results</a> ·
+  <a href="#try-it-without-a-gpu">Try it</a> ·
+  <a href="docs/panda_integration.md">Technical guide</a>
+</p>
 
-The central question: **which tissue pieces drive a biopsy prediction, and can
-we distinguish a consequential foreign fragment from genuine small cancer?**
-The software preserves the original tissue and prediction, then reports evidence
-for review. A decision-changing piece is not automatically labeled foreign.
+Floater Finder explores whether a small tissue fragment can disproportionately
+influence a prostate-biopsy AI prediction. It combines real pathology images,
+CONCH embeddings and **leave-one-piece-out analysis** to trace that influence.
+Built by [Muneeb Hoda](https://github.com/MuneebHoda) for the **2026 Ashby Hackathon**.
 
-**Current status:** working research pipeline, **455 passing software tests**,
-verified real-data GPU execution, and documented positive and negative findings.
-A clinically useful floater detector has **not** been established.
+> **Research prototype.** A decisive fragment may be genuine cancer. The system
+> preserves tissue and reports evidence; a useful foreign-tissue detector has
+> not yet been established.
 
-## What this project demonstrates
+## Start with the tissue
 
-- **Spatial data engineering:** bounded PANDA pyramid-TIFF reads, aligned Radboud
-  grading masks, physical tile coordinates/areas and per-tile annotation fractions.
-- **ML systems:** canonical CONCH v1 image/text encoding, frozen linear and
-  zero-shot scorers, model/preprocessing fingerprints and embedding drift checks.
-- **Counterfactual analysis:** a model-agnostic leave-one-piece-out engine that
-  recomputes predictions and explicitly abstains when exclusion leaves no tissue.
-- **Experimental design:** source-disjoint splits, connected-fragment stress
-  tests, matched native/seam/null controls and genuine-cancer safety comparisons.
-- **HPC execution:** bounded Slurm CPU/GPU stages, dependency gates, actual charge
-  reconciliation and checksummed source/input/output receipts.
-- **Scientific reproducibility:** frozen protocols, exact oracle checks, explicit
-  metric denominators, preserved failures and an original final-test seal.
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="submission/ashby_20261021_v2/media/benign_native.png" width="224" alt="Real PANDA tile from a benign slide, with benign epithelium and stroma annotations"><br><b>Native tissue from a benign slide</b></td>
+    <td align="center" width="50%"><img src="submission/ashby_20261021_v2/media/gp4_native.png" width="224" alt="Real PANDA tile containing native Gleason pattern 4 annotation"><br><b>Native tissue containing annotated cancer</b></td>
+  </tr>
+</table>
 
-## Pipeline
+These are real PANDA reference tiles, not detected floaters.
+[Image provenance](submission/ashby_20261021_v2/media/provenance.json).
 
-```mermaid
-flowchart LR
-    A[PANDA TIFFs and masks] --> B[Spatial tissue tiles]
-    B --> C[Canonical CONCH v1 embeddings]
-    B --> D[Controlled pixel edits and matched controls]
-    D --> C
-    C --> E[Frozen slide scorers]
-    C --> F[Component and context mapping]
-    E --> G[Leave-one-piece-out analysis]
-    F --> G
-    G --> H[Structured review evidence and safety metrics]
-```
+The pipeline reads spatial tissue tiles, encodes them with **CONCH**, and asks:
+**“Does the prediction change if this piece is excluded?”** It then checks native
+cancer controls and known synthetic insertions to separate decision influence
+from evidence of foreignness. An empty counterfactual is reported as unevaluable.
 
-Clean sampling does not use grading masks to select tissue; annotation-guided
-donor extraction is kept separate. Saved embeddings let most scoring and
-counterfactual experiments run on CPUs without repeating GPU inference.
+## What the experiments show
 
-## Verified results
+<table>
+  <tr>
+    <td align="center" width="33%"><b>120</b><br>PANDA slides in the initial cohort</td>
+    <td align="center" width="34%"><b>50,729</b><br>verified CONCH embeddings</td>
+    <td align="center" width="33%"><b>455</b><br>passing software tests</td>
+  </tr>
+</table>
 
-These studies have different cohorts and denominators. Classification,
-dependence and foreign-fragment detection are separate outcomes.
+![Two measured experiments: a 60-slide cancer-classification confusion matrix and contamination-induced errors among five initially correct development hosts. These are separate cohorts and scorers.](docs/assets/readme/evidence.png)
 
-| Study | Observed result | Evidence |
-| --- | --- | --- |
-| Initial PANDA pipeline | **120 slides / 50,729** verified 512D CONCH embeddings; 72/24/24 train/calibration/test split | [Pipeline and development results](reports/panda_s1_and_piece_results_20261020.md) |
-| Separate frozen cancer baseline | **80.0% balanced accuracy** on 60 Radboud slides; slide-bootstrap 95% interval 70.0–88.75%; cancer recall **28/40** | [Baseline report and confusion matrices](reports/panda_fresh_baseline_results_v1.md) |
-| Connected-fragment S1 development stress | **192/192 exact oracle recoveries**; verifies restoration of original inputs/predictions, not learned detection | [S1 protocol and outcomes](reports/panda_s1_and_piece_results_20261020.md) |
-| Fixed-support review candidate | **3/24** foreign fragments detected; **8/72** unmodified slides alerted; **failed** the frozen utility gate | [Negative detector findings](reports/panda_stable_context_results_v1.md) |
-| Real pixel-level CONCH pilot | **96 images**, four repeated training pairs; source/null drift checks passed; **0/24** foreign edits changed slide predictions | [Pixel pilot measurements](reports/panda_pixel_results_20261022.md) |
+**A working pipeline, with an important limit.** Classification and fragment
+influence are measurable, but influence alone does not identify foreign tissue.
+The fixed-support review candidate detected **3/24** foreign fragments while
+alerting on **8/72** unmodified slides—failing its predefined utility targets.
 
-In the pixel pilot, foreign edits had higher NN5 anomaly scores than matched
-native edits in 8/8 comparisons at 5% patch area and 7/8 at 10%. Those percentages
-describe a patch **within one tile**, not a slide. Rectangular editing artifacts
-remain a confounder; the observation does not validate a foreignness detector.
+[Baseline results and uncertainty](reports/panda_fresh_baseline_results_v1.md) ·
+[Contamination experiment](reports/panda_s1_and_piece_results_20261020.md) ·
+[Detector findings](reports/panda_stable_context_results_v1.md)
 
-### Why genuine-cancer controls matter
+<details>
+<summary><b>See why automatic tissue removal would be unsafe</b></summary>
 
-![Measured PANDA tile-footprint examples: both native cancer and a known synthetic fragment can change a prediction on component exclusion.](reports/figures/panda_piece_development_23065744/piece_examples.png)
+![Measured tile footprints: both genuine native cancer and a known synthetic donor component change cancer to benign when excluded.](reports/figures/panda_piece_development_23065744/piece_examples.png)
 
-These are measured sampled-tile footprints, not whole-slide tissue photographs.
-Both a genuine annotated cancer-containing component and a known synthetic
-foreign component change cancer to benign when excluded. **Dependence alone
-cannot justify tissue removal.** [Example provenance and reproduction](reports/panda_s1_and_piece_results_20261020.md#real-leave-one-piece-out-diagnostic).
+These are sampled tile footprints, not complete tissue boundaries. Both native
+annotated cancer and a known synthetic insertion can drive the same decision
+change. **The counterfactual explains dependence; it does not diagnose a floater.**
+[Measured examples and reproduction](reports/panda_s1_and_piece_results_20261020.md#real-leave-one-piece-out-diagnostic).
 
-## Try the software locally
+</details>
 
-Requires Python **3.11–3.12** and `uv`. The following installs the locked software
-dependencies, runs the tests and executes an **artificial software fixture**.
-It requires no pathology images, model checkpoint, NCSA account or GPU.
+## Under the hood
+
+**Python · PyTorch / CONCH · OpenSlide · NumPy · scikit-learn · Slurm**
+
+- **Spatial processing:** bounded TIFF-pyramid reads, mask alignment, physical
+  coordinates and annotation fractions. [Tiler](src/floater_finder/panda.py)
+- **Model-independent analysis:** saved embeddings plus a supplied prediction
+  callable. [Counterfactual engine](src/floater_finder/fragment_dependence.py)
+- **Reproducible experiments:** frozen scorers, source-separated controls, exact
+  oracle recovery and checksummed Slurm runs on NCSA Delta.
+  [Research modules](src/floater_finder/research/) · [Job scripts](scripts/slurm/)
+
+## Try it without a GPU
+
+This small **artificial fixture** demonstrates the JSON output without pathology
+data or model weights. Requires Python 3.11–3.12 and `uv`.
 
 ```sh
 git clone https://github.com/MuneebHoda/floater-finder.git
 cd floater-finder
+uv sync --locked --no-editable --reinstall-package floater-finder
+.venv/bin/python scripts/fragment_dependence_demo.py \
+  --output results/fixtures/my-first-run
+```
+
+Open `results/fixtures/my-first-run/alert.fixture.json` for the baseline,
+counterfactual predictions and piece geometry. Use a fresh output directory.
+Fixture alerts are software examples, not research results.
+
+<details>
+<summary><b>Tests, full evidence and current research status</b></summary>
+
+```sh
 uv sync --locked --no-editable --reinstall-package floater-finder \
   --extra test --extra panda --extra research
 .venv/bin/python -m pytest -q -W error
-.venv/bin/floater-finder --help
-.venv/bin/python scripts/fragment_dependence_demo.py \
-  --output results/fixtures/portfolio-demo
 ```
 
-The fixture saves/reloads embeddings and writes `alert.fixture.json` with baseline
-and counterfactual predictions, component geometry and artificial review alerts.
-Its invented scorer and arrays are **software checks, not scientific results**.
-Choose a fresh output directory; existing artifacts are not overwritten.
-[Example fixture JSON](examples/fragment_dependence/alert.fixture.json).
+- [96-image pixel pilot](reports/panda_pixel_results_20261022.md): canonical
+  CONCH re-encoding passed; no slide-prediction changes in 24 foreign edits.
+- [10,000-candidate benchmark](docs/panda_pixel_program_v2.md): source-path
+  correction passes 57/57 metadata checks; replacement CPU/GPU execution is pending.
+- The original 24 final-test slides remain unscored. Patient independence and
+  clinical utility are unverified; no pathologist review is claimed.
+- [Progress log](reports/progress.md) · [Delta setup](docs/ncsa_setup.md) ·
+  [Historical workflows](docs/research_history.md).
+- Rebuild the two overview panels with `python scripts/build_readme_assets.py`
+  using the optional `plots` dependencies. [Figure inputs and hashes](docs/assets/readme/provenance.json).
 
-Real encoding uses a separately prepared Delta environment, an authorized local
-CONCH checkpoint and scheduled CUDA resources. Whole-slide datasets and model
-weights are not bundled; the encoder disables implicit model downloads.
-See the [PANDA integration guide](docs/panda_integration.md) and
-[verified Delta setup](docs/ncsa_setup.md) for research execution.
+</details>
 
-## Explore the implementation
+---
 
-| Area | Entry point |
-| --- | --- |
-| TIFF tiling, mask alignment and physical geometry | [`panda.py`](src/floater_finder/panda.py) |
-| CONCH adapter and artifact validation | [`conch.py`](src/floater_finder/conch.py), [`panda_encoding.py`](src/floater_finder/panda_encoding.py) |
-| Scorer-independent piece counterfactuals | [`fragment_dependence.py`](src/floater_finder/fragment_dependence.py) |
-| Frozen predictors and grouped evaluation | [`predictors/`](src/floater_finder/predictors/) |
-| Controls, shared interventions and experiment registry | [`research/`](src/floater_finder/research/) |
-| Cluster execution | [`scripts/slurm/`](scripts/slurm/) |
-| Protocols, measured results and regression tests | [`docs/`](docs/), [`reports/`](reports/), [`tests/`](tests/) |
-
-The original TCGA organ-classification workflow is preserved as historical work;
-its results are not reused as evidence of prostate cancer or floater detection.
-[Detailed workflow/history](docs/research_history.md) · [Progress log](reports/progress.md).
-
-## Limits and next steps
-
-- The original **24 final-test slides remain unscored**. No failed development
-  detector was promoted by inspecting or tuning on those outcomes.
-- PANDA source-slide separation is recorded, but patient independence is not
-  verified. Findings use bounded tissue sampling and synthetic contamination;
-  natural floaters and clinical utility have not been adjudicated.
-- Genuine annotated cancer may be decisive. No automatic tissue deletion occurs,
-  and no expert-review judgments are fabricated.
-- A **10,000-candidate** image/control benchmark is prepared. Its first CPU run
-  failed a source-metadata check; a versioned correction now passes 57/57
-  metadata checks. Replacement preparation and large-benchmark GPU results
-  remain pending. [Correction and execution gates](docs/panda_pixel_program_v2.md).
-
-## License and acknowledgments
-
-Code is available under the [MIT License](LICENSE). PANDA data and CONCH model
-weights have their own access and licensing requirements. Full datasets and
-checkpoint files are not distributed with the code; committed research and
-presentation figures retain their recorded provenance. Research execution used
-**NCSA Delta**. See the linked protocols and reports for dataset/model provenance
-and scientific references.
+[MIT License](LICENSE) · Code by [Muneeb Hoda](https://github.com/MuneebHoda) ·
+Research execution on **NCSA Delta**. PANDA data and CONCH weights retain their
+own access and licensing terms. Full datasets and checkpoints are not bundled.

@@ -1,0 +1,44 @@
+{
+  "baseline_confusion_matrix": [
+    [
+      18,
+      2
+    ],
+    [
+      12,
+      28
+    ]
+  ],
+  "baseline_slides": 60,
+  "stress_requested_percent": [
+    0,
+    0.5,
+    1,
+    2,
+    5,
+    10
+  ],
+  "stress_new_errors": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "stress_originally_correct_unique_hosts": 5,
+  "stress_all_calibration_hosts": 8,
+  "stress_prediction_role": "historical top5pct; not the later frozen linear primary",
+  "stress_dose_denominator": "foreign tiles / original host tiles; ceil-rounded",
+  "independent_patients_verified": false,
+  "inputs": {
+    "reports/panda_fresh_baseline_results_v1.md": "18851a95d614893b6759f17411f2a5eb296aaa255911b0582ea1fbad2b2af8a1",
+    "reports/panda_s1_trials_23065666.json": "e8b1d24fe2b77465dae2bc6d79fabd66de221c8cdd3932a1070bea537cf54c84"
+  },
+  "hero": "Concept artwork only; no patient pixels or model predictions",
+  "build_script_sha256": "aa38ff6b6dd1c906575f74b8cb638d9fb078a4c0ed98856243714c3646872b36",
+  "outputs": {
+    "hero.png": "29473dbd3247612ffee9bb627ebedecef07e45d37a3d86731cc2db8633d8ce64",
+    "evidence.png": "f7200a79acc1a82958cacd3251f5696f06db29e65b6a0e6fa4f2936e48faf06c"
+  }
+}
