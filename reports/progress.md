@@ -1,5 +1,24 @@
 # Floater Finder progress
 
+## Pixel pilot complete; benchmark provenance corrected — October 22
+
+Scheduled CPU23109277 completed0:0 in13s; GPU23109340 completed0:0 in43s.
+The96 real composite/control embeddings pass canonical checkpoint/preprocessing,
+eight-anchor and48-null drift gates; all404 receipt-file hashes verify. Foreign
+NN5 exceeds native sham3/8,8/8,7/8 at1%,5%,10% within-tile patch area, but
+both frozen scorers have0/24 foreign mixed-image decision changes. Four repeated
+training pairs do not establish independent detector performance.
+
+10k CPU23109667 failed1:0; GPU23109849 was cancelled before allocation. The
+three reused profile sources have cohort metadata copies with different
+selection-manifest provenance. V2 points to their exact original profile metadata;
+57/57 source metadata/CSV checks pass. Original code/hash guards, v1 files and
+failed outputs remain unchanged. A separate CPU launcher/output is prepared;
+no replacement job or10k scientific result is claimed. Tests distinguish this
+metadata correction from real image preparation. All455 software tests pass with
+warnings treated as errors; Slurm syntax and source pins pass. [Pilot/failure evidence](panda_pixel_results_20261022.md),
+[v2 configuration and pending execution](../docs/panda_pixel_program_v2.md).
+
 ## Stage B GPU approval and dependent profile submitted — October 21, 19:39 CDT
 
 User approved the bounded 10,000-candidate CONCH benchmark GPU stage. Profile **23109849** is submitted once, PENDING (Dependency): afterok CPU23109667 AND afterany pilot GPU23109340, invalid-dependency cancellation requested. One A100/4 CPUs/16 GiB/15 min on normal `gpuA100x4`, up to512 actual deduplicated fit-source images, preserving the unchanged73-file runtime. Five new launcher/authorization files verified; all453 tests pass. Actual successful CPU hash/count/range is frozen only at launch before canonical drift/encoding gates. Remaining exact ranges are conditionally approved within30 additional batch minutes (≤0.75 billed equivalents total) but not submitted before profile artifact and charge inspection. Other research GPU scopes remain gated; no downloads, new models, original final-test predictions, duplicates, commit/push or scientific successes. Current balance8.4083 equivalents; queue forecast remains beyond deadline. [Exact command, guards and receipts](panda_pixel_program_gpu_submission_v1.md).

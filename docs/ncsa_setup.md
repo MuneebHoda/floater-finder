@@ -1,5 +1,41 @@
 # Floater Finder: NCSA setup
 
+## Source-path correction prepared — October 22
+
+The original profile metadata for the three reused smoke slides matches the
+existing embedding receipts exactly. Only `selection_manifest` and its SHA256
+differ in the cohort copies. A new v2 source list points to the verified original
+profile directories; the metadata/CSV/unbiased-training checks now pass57/57.
+No hash guard, source ID, fold, scientific parameter or historical file changes.
+The new versioned CPU configuration/launcher is prepared and tested locally;
+no replacement job has run. WSI/PNG/native-mask and feasibility gates still need
+scheduled execution. [Correction, pins and pending CPU command](panda_pixel_program_v2.md).
+
+## Pixel results inspection — October 22, 20:33 CDT
+
+Shared SSH verified `mhoda` / `dt-login03.delta.ncsa.illinois.edu` from Darwin.
+CPU23109277 completed0:0 in13s and GPU23109340 completed0:0 in43s this morning.
+The real96-image pilot has all399 prepared and five encoded receipt-file hashes
+verified; both source-anchor and null drift gates pass. Across four repeated
+training pairs, foreign NN5 exceeds its matched native sham in3/8,8/8,7/8
+comparisons at1%,5%,10% within-tile patch area. Both frozen scorers have0/24
+foreign mixed-image prediction changes; this is descriptive engineering evidence,
+not a calibrated detector or independent clinical validation.
+
+10k CPU23109667 failed1:0 in15s on a provenance check; its dependent GPU23109849
+was cancelled before starting. Read-only metadata checks identify three reused
+smoke sources whose current cohort metadata SHA256 differs from their original
+embedding receipts. Five partial source facts, zero images/masks, no successful
+record manifest/profile. Exact field differences remain unresolved; preserve
+failures and reconcile provenance before a versioned correction or retry.
+
+Own-QoS raw GPU usage5,816,000 billing-TRES seconds leaves8.3844444 normal-batch
+A100-hour equivalents, reconciling exactly with the43-second interactive pilot
+at billing2000. User queue empty. No new jobs/downloads/model calls or final-test
+access during inspection. [Observed metrics, paths, hashes and limitations](../reports/panda_pixel_results_20261022.md).
+
+The dated sections below preserve earlier submission states.
+
 ## Approved pixel GPU submission — October 21
 
 User explicitly requested GPU submission and code commit. GPU23109340 is
