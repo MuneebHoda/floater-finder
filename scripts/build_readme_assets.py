@@ -19,6 +19,23 @@ INK, MUTED, TEAL, PINK = "#17313b", "#607981", "#087f8c", "#bd597d"
 PAPER = "#f5f8f8"
 
 
+def badges(output):
+    for name, label, value, left, right in (
+            ("python", "Python", "3.11-3.12", 53, 76),
+            ("encoder", "Encoder", "CONCH v1", 64, 77),
+            ("tests", "Tests", "455 passed", 49, 88),
+            ("license", "License", "MIT", 63, 40)):
+        width = left + right
+        (output / f"{name}.svg").write_text(
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="22" '
+            f'role="img" aria-label="{label}: {value}"><title>{label}: {value}</title>'
+            f'<path fill="{INK}" d="M0 0h{left}v22H0z"/>'
+            f'<path fill="{TEAL}" d="M{left} 0h{right}v22H{left}z"/>'
+            '<g fill="white" font-family="Verdana,DejaVu Sans,sans-serif" font-size="11" text-anchor="middle">'
+            f'<text x="{left/2}" y="15">{label}</text>'
+            f'<text x="{left+right/2}" y="15">{value}</text></g></svg>\n')
+
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -129,11 +146,14 @@ def main():
     parser.add_argument("--output", type=Path, default=ROOT / "docs/assets/readme")
     output = parser.parse_args().output
     output.mkdir(parents=True, exist_ok=True)
+    badges(output)
     hero(output)
     facts = evidence(output)
     facts.update(hero="Concept artwork only; no patient pixels or model predictions",
                  build_script_sha256=digest(Path(__file__)),
-                 outputs={p.name: digest(p) for p in (output/"hero.png", output/"evidence.png")})
+                 outputs={p.name: digest(p) for p in (
+                     output/"hero.png", output/"evidence.png", output/"python.svg",
+                     output/"encoder.svg", output/"tests.svg", output/"license.svg")})
     (output / "provenance.json").write_text(json.dumps(facts, indent=2, allow_nan=False)+"\n")
     print(f"Rendered README artwork and two evidence panels to {output}")
 

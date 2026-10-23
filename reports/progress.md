@@ -17,7 +17,8 @@ and scientific artifacts are unchanged. Banner geometry is labeled conceptual.
 GitHub description and15 relevant repository topics were updated and verified.
 GitHub's Markdown renderer accepts all9 images (including four status badges),
 four sections and two collapsed detail blocks; all images have alt text and
-local links resolve. Newly rendered plots were visually checked. No model call,
+local links resolve. All four status badges are bundled SVGs, avoiding an external
+badge-service dependency. Newly rendered plots were visually checked. No model call,
 Slurm submission, download, refitting, threshold change or final-test access.
 The455-test runtime checkpoint remains unchanged; the standalone figure builder
 passed its source/count/denominator assertions without rerunning the full suite.

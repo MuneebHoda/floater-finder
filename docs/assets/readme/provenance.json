@@ -36,9 +36,13 @@
     "reports/panda_s1_trials_23065666.json": "e8b1d24fe2b77465dae2bc6d79fabd66de221c8cdd3932a1070bea537cf54c84"
   },
   "hero": "Concept artwork only; no patient pixels or model predictions",
-  "build_script_sha256": "aa38ff6b6dd1c906575f74b8cb638d9fb078a4c0ed98856243714c3646872b36",
+  "build_script_sha256": "f41006dc214afd4f2076fccbc7c2e99eaad1712df07d956315e2e6f912b2327c",
   "outputs": {
     "hero.png": "29473dbd3247612ffee9bb627ebedecef07e45d37a3d86731cc2db8633d8ce64",
-    "evidence.png": "f7200a79acc1a82958cacd3251f5696f06db29e65b6a0e6fa4f2936e48faf06c"
+    "evidence.png": "f7200a79acc1a82958cacd3251f5696f06db29e65b6a0e6fa4f2936e48faf06c",
+    "python.svg": "e23c0dd5ed6fef3a4238b376b2412d37edbb16b62e8356d041bfd48e186b5d4d",
+    "encoder.svg": "cc9fa7f12d9a0020895717b657de21fa422d64244be4e27a4f735e0011133bb6",
+    "tests.svg": "0af00764759d22e6b93ba1c40de6d7537e41c47c09d3fc2bbcb7f5782d7b7fec",
+    "license.svg": "351cfb36ba97cf8bad6a5fd02c54c1bbf3ecf5219e57dbcf314cf813767ff64b"
   }
 }

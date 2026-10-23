@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.python.org/"><img alt="Python 3.11–3.12" src="https://img.shields.io/badge/Python-3.11–3.12-17313b?style=flat-square&logo=python&logoColor=white"></a>
-  <a href="docs/panda_integration.md"><img alt="CONCH v1" src="https://img.shields.io/badge/Encoder-CONCH_v1-087f8c?style=flat-square"></a>
-  <a href="tests/"><img alt="455 tests passed at the October 22 checkpoint" src="https://img.shields.io/badge/Tests-455_passed-087f8c?style=flat-square"></a>
-  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/License-MIT-607981?style=flat-square"></a>
+  <a href="https://www.python.org/"><img alt="Python 3.11–3.12" src="docs/assets/readme/python.svg"></a>
+  <a href="docs/panda_integration.md"><img alt="CONCH v1" src="docs/assets/readme/encoder.svg"></a>
+  <a href="tests/"><img alt="455 tests passed at the October 22 checkpoint" src="docs/assets/readme/tests.svg"></a>
+  <a href="LICENSE"><img alt="MIT license" src="docs/assets/readme/license.svg"></a>
 </p>
 
 <p align="center">
